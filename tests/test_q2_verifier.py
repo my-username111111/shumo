@@ -12,6 +12,8 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from model import Scenario  # noqa: E402
 from q2 import Dispatch, solve  # noqa: E402
+from q2 import Job  # noqa: E402
+from q2_alns import solve_two_stage_alns  # noqa: E402
 from verify import verify_q2  # noqa: E402
 
 
@@ -37,6 +39,40 @@ class Q2VerifierFaults(unittest.TestCase):
     def test_baseline_can_be_exported_with_alternatives(self) -> None:
         restored = json.loads(json.dumps(self.answer, allow_nan=False))
         verify_q2(self.scenario, restored)
+
+    def test_relocate_candidates_do_not_duplicate_boxes(self) -> None:
+        dispatcher = Dispatch(self.scenario)
+        jobs = dispatcher.initial_jobs()
+        baseline = dispatcher.schedule(jobs)
+        original = dispatcher.evaluate
+        duplicated = []
+
+        def checked_evaluate(job, model):
+            if len(job.box_ids) != len(set(job.box_ids)):
+                duplicated.append(job.visits)
+            return original(job, model)
+
+        dispatcher.evaluate = checked_evaluate
+        dispatcher.improve_routes(jobs, baseline, rounds=1, max_trials=80)
+        self.assertEqual(duplicated, [])
+
+    def test_joint_resource_beam_is_fully_verifiable(self) -> None:
+        dispatcher = Dispatch(self.scenario)
+        jobs = dispatcher.initial_jobs()
+        plan, search = dispatcher.schedule_beam(jobs, beam_width=12,
+                                                job_branches=3, assignment_branches=3)
+        self.assertIsNotNone(plan)
+        self.assertGreater(search["complete"], 0)
+        verify_q2(self.scenario, plan)
+
+    def test_two_stage_alns_keeps_complete_verified_plans(self) -> None:
+        dispatcher = Dispatch(self.scenario)
+        stage1, stage2, search = solve_two_stage_alns(
+            dispatcher, self.answer, self.answer, Job,
+            stage1_iterations=10, stage2_iterations=15, seeds=(7,), delivery_ratio=1.20)
+        verify_q2(self.scenario, stage1)
+        verify_q2(self.scenario, stage2)
+        self.assertEqual(search["policy"], "stage1_service_then_stage2_zero_delay_energy")
 
     def test_unknown_aircraft(self) -> None:
         self.assert_rejected(lambda q: q["sorties"][0].__setitem__("drone", "U_FAKE"))

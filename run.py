@@ -228,7 +228,8 @@ def main() -> None:
     parser.add_argument("--no-coordination", action="store_true", help="Use the original fixed-Q2 relay plan")
     parser.add_argument("--q3-seed", choices=("soft_delay_priority", "zero_delay_efficient",
                                               "delivery_priority", "energy_guarded",
-                                              "energy_guarded_timely"),
+                                              "energy_guarded_timely",
+                                              "alns_zero_delay_efficient"),
                         default="energy_guarded", help="Q2 candidate used to initialize Q3")
     parser.add_argument("--coordination-rounds", type=int, default=2,
                         help="Communication-guided search rounds (default: 2)")
@@ -241,7 +242,7 @@ def main() -> None:
     scenario = Scenario()
     if args.only_q2:
         if args.output == default_output:
-            args.output = default_output / "q2_only"
+            args.output = Path(__file__).resolve().parent / "results_q2"
         print("Q2: transport and shared batteries", flush=True)
         q2 = solve_q2(scenario, improve=not args.no_merge)
         checked = verify_q2(scenario, q2)
