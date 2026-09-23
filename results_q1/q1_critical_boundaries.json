@@ -1,0 +1,3621 @@
+[
+  {
+    "reserve": 0.22788615720254468,
+    "just_above": 0.22788625720254468,
+    "at_boundary_sorties": 18,
+    "above_boundary_sorties": 19,
+    "affected_zones": [
+      "S004"
+    ],
+    "at_boundary_plan": {
+      "S001": {
+        "zone": "S001",
+        "batches": [
+          {
+            "model": "C",
+            "box_ids": [
+              "S001-MED-01",
+              "S001-MED-02",
+              "S001-WAT-01",
+              "S001-WAT-02",
+              "S001-WAT-03",
+              "S001-WAT-04",
+              "S001-WAT-05"
+            ],
+            "kg": 76.0,
+            "volume": 0.159,
+            "energy": 2.92626894731049,
+            "duration": 1561.4261775174655,
+            "return_soc": 0.6342163815861888
+          },
+          {
+            "model": "C",
+            "box_ids": [
+              "S001-FOD-01",
+              "S001-FOD-02",
+              "S001-FOD-03",
+              "S001-HYG-01",
+              "S001-HYG-02",
+              "S001-WAT-06",
+              "S001-WAT-07",
+              "S001-WAT-08"
+            ],
+            "kg": 78.0,
+            "volume": 0.23500000000000001,
+            "energy": 3.0046938846697038,
+            "duration": 1627.4261775174655,
+            "return_soc": 0.624413264416287
+          }
+        ],
+        "sorties": 2,
+        "energy_kwh": 5.930962831980194,
+        "work_seconds": 3188.852355034931
+      },
+      "S002": {
+        "zone": "S002",
+        "batches": [
+          {
+            "model": "B",
+            "box_ids": [
+              "S002-FOD-01",
+              "S002-MED-01",
+              "S002-WAT-01"
+            ],
+            "kg": 25.0,
+            "volume": 0.067,
+            "energy": 2.723251007257851,
+            "duration": 1823.208948407359,
+            "return_soc": 0.31918724818553723
+          },
+          {
+            "model": "C",
+            "box_ids": [
+              "S002-FOD-02",
+              "S002-HYG-01",
+              "S002-WAT-02",
+              "S002-WAT-03",
+              "S002-WAT-04"
+            ],
+            "kg": 56.0,
+            "volume": 0.14400000000000002,
+            "energy": 5.741041008408375,
+            "duration": 2049.081641278453,
+            "return_soc": 0.2823698739489531
+          }
+        ],
+        "sorties": 2,
+        "energy_kwh": 8.464292015666226,
+        "work_seconds": 3872.290589685812
+      },
+      "S003": {
+        "zone": "S003",
+        "batches": [
+          {
+            "model": "B",
+            "box_ids": [
+              "S003-FOD-01",
+              "S003-MED-01",
+              "S003-WAT-01"
+            ],
+            "kg": 25.0,
+            "volume": 0.067,
+            "energy": 2.7791674808241336,
+            "duration": 2080.2414747964503,
+            "return_soc": 0.3052081297939666
+          },
+          {
+            "model": "C",
+            "box_ids": [
+              "S003-FOD-02",
+              "S003-HYG-01",
+              "S003-WAT-02",
+              "S003-WAT-03",
+              "S003-WAT-04"
+            ],
+            "kg": 56.0,
+            "volume": 0.14400000000000002,
+            "energy": 5.763364795675429,
+            "duration": 2369.8095208576483,
+            "return_soc": 0.2795794005405714
+          }
+        ],
+        "sorties": 2,
+        "energy_kwh": 8.542532276499562,
+        "work_seconds": 4450.050995654099
+      },
+      "S004": {
+        "zone": "S004",
+        "batches": [
+          {
+            "model": "C",
+            "box_ids": [
+              "S004-FOD-01",
+              "S004-HYG-01",
+              "S004-MED-01",
+              "S004-WAT-01",
+              "S004-WAT-02",
+              "S004-WAT-03"
+            ],
+            "kg": 59.0,
+            "volume": 0.156,
+            "energy": 6.1769107423796425,
+            "duration": 2305.184064967841,
+            "return_soc": 0.22788615720254468
+          }
+        ],
+        "sorties": 1,
+        "energy_kwh": 6.1769107423796425,
+        "work_seconds": 2305.184064967841
+      },
+      "S005": {
+        "zone": "S005",
+        "batches": [
+          {
+            "model": "C",
+            "box_ids": [
+              "S005-FOD-01",
+              "S005-HYG-01",
+              "S005-MED-01",
+              "S005-WAT-01",
+              "S005-WAT-02",
+              "S005-WAT-03"
+            ],
+            "kg": 59.0,
+            "volume": 0.156,
+            "energy": 4.2387743677705485,
+            "duration": 1880.044640635813,
+            "return_soc": 0.47015320402868144
+          }
+        ],
+        "sorties": 1,
+        "energy_kwh": 4.2387743677705485,
+        "work_seconds": 1880.044640635813
+      },
+      "S006": {
+        "zone": "S006",
+        "batches": [
+          {
+            "model": "C",
+            "box_ids": [
+              "S006-FOD-01",
+              "S006-HYG-01",
+              "S006-MED-01",
+              "S006-WAT-01",
+              "S006-WAT-02",
+              "S006-WAT-03"
+            ],
+            "kg": 59.0,
+            "volume": 0.156,
+            "energy": 2.595719692959075,
+            "duration": 1565.0350828779922,
+            "return_soc": 0.6755350383801156
+          }
+        ],
+        "sorties": 1,
+        "energy_kwh": 2.595719692959075,
+        "work_seconds": 1565.0350828779922
+      },
+      "S007": {
+        "zone": "S007",
+        "batches": [
+          {
+            "model": "C",
+            "box_ids": [
+              "S007-FOD-01",
+              "S007-HYG-01",
+              "S007-MED-01",
+              "S007-WAT-01",
+              "S007-WAT-02"
+            ],
+            "kg": 45.0,
+            "volume": 0.129,
+            "energy": 3.403349432146772,
+            "duration": 1889.224406150507,
+            "return_soc": 0.5745813209816535
+          }
+        ],
+        "sorties": 1,
+        "energy_kwh": 3.403349432146772,
+        "work_seconds": 1889.224406150507
+      },
+      "S008": {
+        "zone": "S008",
+        "batches": [
+          {
+            "model": "C",
+            "box_ids": [
+              "S008-FOD-01",
+              "S008-HYG-01",
+              "S008-MED-01",
+              "S008-WAT-01",
+              "S008-WAT-02"
+            ],
+            "kg": 45.0,
+            "volume": 0.129,
+            "energy": 5.853746998048225,
+            "duration": 2194.1275609563954,
+            "return_soc": 0.2682816252439719
+          }
+        ],
+        "sorties": 1,
+        "energy_kwh": 5.853746998048225,
+        "work_seconds": 2194.1275609563954
+      },
+      "S009": {
+        "zone": "S009",
+        "batches": [
+          {
+            "model": "B",
+            "box_ids": [
+              "S009-FOD-01",
+              "S009-MED-01",
+              "S009-WAT-01"
+            ],
+            "kg": 25.0,
+            "volume": 0.067,
+            "energy": 2.1024528395672246,
+            "duration": 1560.7787366148573,
+            "return_soc": 0.47438679010819385
+          }
+        ],
+        "sorties": 1,
+        "energy_kwh": 2.1024528395672246,
+        "work_seconds": 1560.7787366148573
+      },
+      "S010": {
+        "zone": "S010",
+        "batches": [
+          {
+            "model": "B",
+            "box_ids": [
+              "S010-FOD-01",
+              "S010-MED-01",
+              "S010-WAT-01"
+            ],
+            "kg": 25.0,
+            "volume": 0.067,
+            "energy": 1.8210449428989826,
+            "duration": 1554.5713591276817,
+            "return_soc": 0.5447387642752544
+          }
+        ],
+        "sorties": 1,
+        "energy_kwh": 1.8210449428989826,
+        "work_seconds": 1554.5713591276817
+      },
+      "S011": {
+        "zone": "S011",
+        "batches": [
+          {
+            "model": "B",
+            "box_ids": [
+              "S011-FOD-01",
+              "S011-MED-01",
+              "S011-WAT-01"
+            ],
+            "kg": 25.0,
+            "volume": 0.067,
+            "energy": 1.077171254529726,
+            "duration": 1189.630285736439,
+            "return_soc": 0.7307071863675685
+          }
+        ],
+        "sorties": 1,
+        "energy_kwh": 1.077171254529726,
+        "work_seconds": 1189.630285736439
+      },
+      "S012": {
+        "zone": "S012",
+        "batches": [
+          {
+            "model": "B",
+            "box_ids": [
+              "S012-FOD-01",
+              "S012-MED-01",
+              "S012-WAT-01"
+            ],
+            "kg": 25.0,
+            "volume": 0.067,
+            "energy": 2.763323564027206,
+            "duration": 1944.0244440219892,
+            "return_soc": 0.3091691089931985
+          }
+        ],
+        "sorties": 1,
+        "energy_kwh": 2.763323564027206,
+        "work_seconds": 1944.0244440219892
+      },
+      "S013": {
+        "zone": "S013",
+        "batches": [
+          {
+            "model": "B",
+            "box_ids": [
+              "S013-FOD-01",
+              "S013-MED-01",
+              "S013-WAT-01"
+            ],
+            "kg": 25.0,
+            "volume": 0.067,
+            "energy": 1.82079489466599,
+            "duration": 1500.9693925601796,
+            "return_soc": 0.5448012763335025
+          }
+        ],
+        "sorties": 1,
+        "energy_kwh": 1.82079489466599,
+        "work_seconds": 1500.9693925601796
+      },
+      "S014": {
+        "zone": "S014",
+        "batches": [
+          {
+            "model": "B",
+            "box_ids": [
+              "S014-FOD-01",
+              "S014-MED-01",
+              "S014-WAT-01"
+            ],
+            "kg": 25.0,
+            "volume": 0.067,
+            "energy": 2.127681453260112,
+            "duration": 1844.5388901555675,
+            "return_soc": 0.468079636684972
+          }
+        ],
+        "sorties": 1,
+        "energy_kwh": 2.127681453260112,
+        "work_seconds": 1844.5388901555675
+      },
+      "S015": {
+        "zone": "S015",
+        "batches": [
+          {
+            "model": "B",
+            "box_ids": [
+              "S015-FOD-01",
+              "S015-MED-01",
+              "S015-WAT-01"
+            ],
+            "kg": 25.0,
+            "volume": 0.067,
+            "energy": 2.310902613019529,
+            "duration": 1829.5729924903098,
+            "return_soc": 0.42227434674511777
+          }
+        ],
+        "sorties": 1,
+        "energy_kwh": 2.310902613019529,
+        "work_seconds": 1829.5729924903098
+      }
+    },
+    "limiting_patterns": [
+      {
+        "zone": "S004",
+        "pattern_id": 50,
+        "model": "C",
+        "counts": [
+          1,
+          1,
+          1,
+          3
+        ],
+        "kg": 59.0,
+        "volume": 0.156,
+        "energy_kwh": 6.1769107423796425,
+        "critical_reserve": 0.22788615720254468
+      }
+    ]
+  },
+  {
+    "reserve": 0.2682816252439719,
+    "just_above": 0.2682817252439719,
+    "at_boundary_sorties": 19,
+    "above_boundary_sorties": 20,
+    "affected_zones": [
+      "S008"
+    ],
+    "at_boundary_plan": {
+      "S001": {
+        "zone": "S001",
+        "batches": [
+          {
+            "model": "C",
+            "box_ids": [
+              "S001-MED-01",
+              "S001-MED-02",
+              "S001-WAT-01",
+              "S001-WAT-02",
+              "S001-WAT-03",
+              "S001-WAT-04",
+              "S001-WAT-05"
+            ],
+            "kg": 76.0,
+            "volume": 0.159,
+            "energy": 2.92626894731049,
+            "duration": 1561.4261775174655,
+            "return_soc": 0.6342163815861888
+          },
+          {
+            "model": "C",
+            "box_ids": [
+              "S001-FOD-01",
+              "S001-FOD-02",
+              "S001-FOD-03",
+              "S001-HYG-01",
+              "S001-HYG-02",
+              "S001-WAT-06",
+              "S001-WAT-07",
+              "S001-WAT-08"
+            ],
+            "kg": 78.0,
+            "volume": 0.23500000000000001,
+            "energy": 3.0046938846697038,
+            "duration": 1627.4261775174655,
+            "return_soc": 0.624413264416287
+          }
+        ],
+        "sorties": 2,
+        "energy_kwh": 5.930962831980194,
+        "work_seconds": 3188.852355034931
+      },
+      "S002": {
+        "zone": "S002",
+        "batches": [
+          {
+            "model": "B",
+            "box_ids": [
+              "S002-FOD-01",
+              "S002-MED-01",
+              "S002-WAT-01"
+            ],
+            "kg": 25.0,
+            "volume": 0.067,
+            "energy": 2.723251007257851,
+            "duration": 1823.208948407359,
+            "return_soc": 0.31918724818553723
+          },
+          {
+            "model": "C",
+            "box_ids": [
+              "S002-FOD-02",
+              "S002-HYG-01",
+              "S002-WAT-02",
+              "S002-WAT-03",
+              "S002-WAT-04"
+            ],
+            "kg": 56.0,
+            "volume": 0.14400000000000002,
+            "energy": 5.741041008408375,
+            "duration": 2049.081641278453,
+            "return_soc": 0.2823698739489531
+          }
+        ],
+        "sorties": 2,
+        "energy_kwh": 8.464292015666226,
+        "work_seconds": 3872.290589685812
+      },
+      "S003": {
+        "zone": "S003",
+        "batches": [
+          {
+            "model": "B",
+            "box_ids": [
+              "S003-FOD-01",
+              "S003-MED-01",
+              "S003-WAT-01"
+            ],
+            "kg": 25.0,
+            "volume": 0.067,
+            "energy": 2.7791674808241336,
+            "duration": 2080.2414747964503,
+            "return_soc": 0.3052081297939666
+          },
+          {
+            "model": "C",
+            "box_ids": [
+              "S003-FOD-02",
+              "S003-HYG-01",
+              "S003-WAT-02",
+              "S003-WAT-03",
+              "S003-WAT-04"
+            ],
+            "kg": 56.0,
+            "volume": 0.14400000000000002,
+            "energy": 5.763364795675429,
+            "duration": 2369.8095208576483,
+            "return_soc": 0.2795794005405714
+          }
+        ],
+        "sorties": 2,
+        "energy_kwh": 8.542532276499562,
+        "work_seconds": 4450.050995654099
+      },
+      "S004": {
+        "zone": "S004",
+        "batches": [
+          {
+            "model": "B",
+            "box_ids": [
+              "S004-MED-01",
+              "S004-WAT-01"
+            ],
+            "kg": 17.0,
+            "volume": 0.039,
+            "energy": 2.586356071937873,
+            "duration": 1925.7710095479192,
+            "return_soc": 0.3534109820155318
+          },
+          {
+            "model": "C",
+            "box_ids": [
+              "S004-FOD-01",
+              "S004-HYG-01",
+              "S004-WAT-02",
+              "S004-WAT-03"
+            ],
+            "kg": 42.0,
+            "volume": 0.117,
+            "energy": 5.540003886232419,
+            "duration": 2173.184064967841,
+            "return_soc": 0.3074995142209477
+          }
+        ],
+        "sorties": 2,
+        "energy_kwh": 8.12635995817029,
+        "work_seconds": 4098.95507451576
+      },
+      "S005": {
+        "zone": "S005",
+        "batches": [
+          {
+            "model": "C",
+            "box_ids": [
+              "S005-FOD-01",
+              "S005-HYG-01",
+              "S005-MED-01",
+              "S005-WAT-01",
+              "S005-WAT-02",
+              "S005-WAT-03"
+            ],
+            "kg": 59.0,
+            "volume": 0.156,
+            "energy": 4.2387743677705485,
+            "duration": 1880.044640635813,
+            "return_soc": 0.47015320402868144
+          }
+        ],
+        "sorties": 1,
+        "energy_kwh": 4.2387743677705485,
+        "work_seconds": 1880.044640635813
+      },
+      "S006": {
+        "zone": "S006",
+        "batches": [
+          {
+            "model": "C",
+            "box_ids": [
+              "S006-FOD-01",
+              "S006-HYG-01",
+              "S006-MED-01",
+              "S006-WAT-01",
+              "S006-WAT-02",
+              "S006-WAT-03"
+            ],
+            "kg": 59.0,
+            "volume": 0.156,
+            "energy": 2.595719692959075,
+            "duration": 1565.0350828779922,
+            "return_soc": 0.6755350383801156
+          }
+        ],
+        "sorties": 1,
+        "energy_kwh": 2.595719692959075,
+        "work_seconds": 1565.0350828779922
+      },
+      "S007": {
+        "zone": "S007",
+        "batches": [
+          {
+            "model": "C",
+            "box_ids": [
+              "S007-FOD-01",
+              "S007-HYG-01",
+              "S007-MED-01",
+              "S007-WAT-01",
+              "S007-WAT-02"
+            ],
+            "kg": 45.0,
+            "volume": 0.129,
+            "energy": 3.403349432146772,
+            "duration": 1889.224406150507,
+            "return_soc": 0.5745813209816535
+          }
+        ],
+        "sorties": 1,
+        "energy_kwh": 3.403349432146772,
+        "work_seconds": 1889.224406150507
+      },
+      "S008": {
+        "zone": "S008",
+        "batches": [
+          {
+            "model": "C",
+            "box_ids": [
+              "S008-FOD-01",
+              "S008-HYG-01",
+              "S008-MED-01",
+              "S008-WAT-01",
+              "S008-WAT-02"
+            ],
+            "kg": 45.0,
+            "volume": 0.129,
+            "energy": 5.853746998048225,
+            "duration": 2194.1275609563954,
+            "return_soc": 0.2682816252439719
+          }
+        ],
+        "sorties": 1,
+        "energy_kwh": 5.853746998048225,
+        "work_seconds": 2194.1275609563954
+      },
+      "S009": {
+        "zone": "S009",
+        "batches": [
+          {
+            "model": "B",
+            "box_ids": [
+              "S009-FOD-01",
+              "S009-MED-01",
+              "S009-WAT-01"
+            ],
+            "kg": 25.0,
+            "volume": 0.067,
+            "energy": 2.1024528395672246,
+            "duration": 1560.7787366148573,
+            "return_soc": 0.47438679010819385
+          }
+        ],
+        "sorties": 1,
+        "energy_kwh": 2.1024528395672246,
+        "work_seconds": 1560.7787366148573
+      },
+      "S010": {
+        "zone": "S010",
+        "batches": [
+          {
+            "model": "B",
+            "box_ids": [
+              "S010-FOD-01",
+              "S010-MED-01",
+              "S010-WAT-01"
+            ],
+            "kg": 25.0,
+            "volume": 0.067,
+            "energy": 1.8210449428989826,
+            "duration": 1554.5713591276817,
+            "return_soc": 0.5447387642752544
+          }
+        ],
+        "sorties": 1,
+        "energy_kwh": 1.8210449428989826,
+        "work_seconds": 1554.5713591276817
+      },
+      "S011": {
+        "zone": "S011",
+        "batches": [
+          {
+            "model": "B",
+            "box_ids": [
+              "S011-FOD-01",
+              "S011-MED-01",
+              "S011-WAT-01"
+            ],
+            "kg": 25.0,
+            "volume": 0.067,
+            "energy": 1.077171254529726,
+            "duration": 1189.630285736439,
+            "return_soc": 0.7307071863675685
+          }
+        ],
+        "sorties": 1,
+        "energy_kwh": 1.077171254529726,
+        "work_seconds": 1189.630285736439
+      },
+      "S012": {
+        "zone": "S012",
+        "batches": [
+          {
+            "model": "B",
+            "box_ids": [
+              "S012-FOD-01",
+              "S012-MED-01",
+              "S012-WAT-01"
+            ],
+            "kg": 25.0,
+            "volume": 0.067,
+            "energy": 2.763323564027206,
+            "duration": 1944.0244440219892,
+            "return_soc": 0.3091691089931985
+          }
+        ],
+        "sorties": 1,
+        "energy_kwh": 2.763323564027206,
+        "work_seconds": 1944.0244440219892
+      },
+      "S013": {
+        "zone": "S013",
+        "batches": [
+          {
+            "model": "B",
+            "box_ids": [
+              "S013-FOD-01",
+              "S013-MED-01",
+              "S013-WAT-01"
+            ],
+            "kg": 25.0,
+            "volume": 0.067,
+            "energy": 1.82079489466599,
+            "duration": 1500.9693925601796,
+            "return_soc": 0.5448012763335025
+          }
+        ],
+        "sorties": 1,
+        "energy_kwh": 1.82079489466599,
+        "work_seconds": 1500.9693925601796
+      },
+      "S014": {
+        "zone": "S014",
+        "batches": [
+          {
+            "model": "B",
+            "box_ids": [
+              "S014-FOD-01",
+              "S014-MED-01",
+              "S014-WAT-01"
+            ],
+            "kg": 25.0,
+            "volume": 0.067,
+            "energy": 2.127681453260112,
+            "duration": 1844.5388901555675,
+            "return_soc": 0.468079636684972
+          }
+        ],
+        "sorties": 1,
+        "energy_kwh": 2.127681453260112,
+        "work_seconds": 1844.5388901555675
+      },
+      "S015": {
+        "zone": "S015",
+        "batches": [
+          {
+            "model": "B",
+            "box_ids": [
+              "S015-FOD-01",
+              "S015-MED-01",
+              "S015-WAT-01"
+            ],
+            "kg": 25.0,
+            "volume": 0.067,
+            "energy": 2.310902613019529,
+            "duration": 1829.5729924903098,
+            "return_soc": 0.42227434674511777
+          }
+        ],
+        "sorties": 1,
+        "energy_kwh": 2.310902613019529,
+        "work_seconds": 1829.5729924903098
+      }
+    },
+    "limiting_patterns": [
+      {
+        "zone": "S008",
+        "pattern_id": 42,
+        "model": "C",
+        "counts": [
+          1,
+          1,
+          1,
+          2
+        ],
+        "kg": 45.0,
+        "volume": 0.129,
+        "energy_kwh": 5.853746998048225,
+        "critical_reserve": 0.2682816252439719
+      }
+    ]
+  },
+  {
+    "reserve": 0.3342235579608195,
+    "just_above": 0.3342236579608195,
+    "at_boundary_sorties": 20,
+    "above_boundary_sorties": 21,
+    "affected_zones": [
+      "S008"
+    ],
+    "at_boundary_plan": {
+      "S001": {
+        "zone": "S001",
+        "batches": [
+          {
+            "model": "C",
+            "box_ids": [
+              "S001-MED-01",
+              "S001-MED-02",
+              "S001-WAT-01",
+              "S001-WAT-02",
+              "S001-WAT-03",
+              "S001-WAT-04",
+              "S001-WAT-05"
+            ],
+            "kg": 76.0,
+            "volume": 0.159,
+            "energy": 2.92626894731049,
+            "duration": 1561.4261775174655,
+            "return_soc": 0.6342163815861888
+          },
+          {
+            "model": "C",
+            "box_ids": [
+              "S001-FOD-01",
+              "S001-FOD-02",
+              "S001-FOD-03",
+              "S001-HYG-01",
+              "S001-HYG-02",
+              "S001-WAT-06",
+              "S001-WAT-07",
+              "S001-WAT-08"
+            ],
+            "kg": 78.0,
+            "volume": 0.23500000000000001,
+            "energy": 3.0046938846697038,
+            "duration": 1627.4261775174655,
+            "return_soc": 0.624413264416287
+          }
+        ],
+        "sorties": 2,
+        "energy_kwh": 5.930962831980194,
+        "work_seconds": 3188.852355034931
+      },
+      "S002": {
+        "zone": "S002",
+        "batches": [
+          {
+            "model": "C",
+            "box_ids": [
+              "S002-FOD-01",
+              "S002-MED-01",
+              "S002-WAT-01",
+              "S002-WAT-02"
+            ],
+            "kg": 39.0,
+            "volume": 0.094,
+            "energy": 5.1888534288543084,
+            "duration": 1983.081641278453,
+            "return_soc": 0.35139332139321144
+          },
+          {
+            "model": "C",
+            "box_ids": [
+              "S002-FOD-02",
+              "S002-HYG-01",
+              "S002-WAT-03",
+              "S002-WAT-04"
+            ],
+            "kg": 42.0,
+            "volume": 0.117,
+            "energy": 5.266849986910413,
+            "duration": 1983.081641278453,
+            "return_soc": 0.3416437516361984
+          }
+        ],
+        "sorties": 2,
+        "energy_kwh": 10.45570341576472,
+        "work_seconds": 3966.163282556906
+      },
+      "S003": {
+        "zone": "S003",
+        "batches": [
+          {
+            "model": "C",
+            "box_ids": [
+              "S003-FOD-01",
+              "S003-MED-01",
+              "S003-WAT-01",
+              "S003-WAT-02"
+            ],
+            "kg": 39.0,
+            "volume": 0.094,
+            "energy": 5.207715133255133,
+            "duration": 2303.8095208576483,
+            "return_soc": 0.3490356083431084
+          },
+          {
+            "model": "C",
+            "box_ids": [
+              "S003-FOD-02",
+              "S003-HYG-01",
+              "S003-WAT-03",
+              "S003-WAT-04"
+            ],
+            "kg": 42.0,
+            "volume": 0.117,
+            "energy": 5.28677830626896,
+            "duration": 2303.8095208576483,
+            "return_soc": 0.33915271171637995
+          }
+        ],
+        "sorties": 2,
+        "energy_kwh": 10.494493439524092,
+        "work_seconds": 4607.619041715297
+      },
+      "S004": {
+        "zone": "S004",
+        "batches": [
+          {
+            "model": "C",
+            "box_ids": [
+              "S004-MED-01",
+              "S004-WAT-01",
+              "S004-WAT-02"
+            ],
+            "kg": 31.0,
+            "volume": 0.066,
+            "energy": 5.2705886841604475,
+            "duration": 2107.184064967841,
+            "return_soc": 0.34117641447994407
+          },
+          {
+            "model": "C",
+            "box_ids": [
+              "S004-FOD-01",
+              "S004-HYG-01",
+              "S004-WAT-03"
+            ],
+            "kg": 28.0,
+            "volume": 0.09,
+            "energy": 5.210823192106296,
+            "duration": 2107.184064967841,
+            "return_soc": 0.34864710098671303
+          }
+        ],
+        "sorties": 2,
+        "energy_kwh": 10.481411876266744,
+        "work_seconds": 4214.368129935682
+      },
+      "S005": {
+        "zone": "S005",
+        "batches": [
+          {
+            "model": "C",
+            "box_ids": [
+              "S005-FOD-01",
+              "S005-HYG-01",
+              "S005-MED-01",
+              "S005-WAT-01",
+              "S005-WAT-02",
+              "S005-WAT-03"
+            ],
+            "kg": 59.0,
+            "volume": 0.156,
+            "energy": 4.2387743677705485,
+            "duration": 1880.044640635813,
+            "return_soc": 0.47015320402868144
+          }
+        ],
+        "sorties": 1,
+        "energy_kwh": 4.2387743677705485,
+        "work_seconds": 1880.044640635813
+      },
+      "S006": {
+        "zone": "S006",
+        "batches": [
+          {
+            "model": "C",
+            "box_ids": [
+              "S006-FOD-01",
+              "S006-HYG-01",
+              "S006-MED-01",
+              "S006-WAT-01",
+              "S006-WAT-02",
+              "S006-WAT-03"
+            ],
+            "kg": 59.0,
+            "volume": 0.156,
+            "energy": 2.595719692959075,
+            "duration": 1565.0350828779922,
+            "return_soc": 0.6755350383801156
+          }
+        ],
+        "sorties": 1,
+        "energy_kwh": 2.595719692959075,
+        "work_seconds": 1565.0350828779922
+      },
+      "S007": {
+        "zone": "S007",
+        "batches": [
+          {
+            "model": "C",
+            "box_ids": [
+              "S007-FOD-01",
+              "S007-HYG-01",
+              "S007-MED-01",
+              "S007-WAT-01",
+              "S007-WAT-02"
+            ],
+            "kg": 45.0,
+            "volume": 0.129,
+            "energy": 3.403349432146772,
+            "duration": 1889.224406150507,
+            "return_soc": 0.5745813209816535
+          }
+        ],
+        "sorties": 1,
+        "energy_kwh": 3.403349432146772,
+        "work_seconds": 1889.224406150507
+      },
+      "S008": {
+        "zone": "S008",
+        "batches": [
+          {
+            "model": "C",
+            "box_ids": [
+              "S008-HYG-01",
+              "S008-MED-01",
+              "S008-WAT-01"
+            ],
+            "kg": 23.0,
+            "volume": 0.07400000000000001,
+            "energy": 5.326211536313444,
+            "duration": 2062.1275609563954,
+            "return_soc": 0.3342235579608195
+          },
+          {
+            "model": "C",
+            "box_ids": [
+              "S008-FOD-01",
+              "S008-WAT-02"
+            ],
+            "kg": 22.0,
+            "volume": 0.055,
+            "energy": 5.3095079622628845,
+            "duration": 1996.1275609563957,
+            "return_soc": 0.33631150471713944
+          }
+        ],
+        "sorties": 2,
+        "energy_kwh": 10.635719498576329,
+        "work_seconds": 4058.255121912791
+      },
+      "S009": {
+        "zone": "S009",
+        "batches": [
+          {
+            "model": "B",
+            "box_ids": [
+              "S009-FOD-01",
+              "S009-MED-01",
+              "S009-WAT-01"
+            ],
+            "kg": 25.0,
+            "volume": 0.067,
+            "energy": 2.1024528395672246,
+            "duration": 1560.7787366148573,
+            "return_soc": 0.47438679010819385
+          }
+        ],
+        "sorties": 1,
+        "energy_kwh": 2.1024528395672246,
+        "work_seconds": 1560.7787366148573
+      },
+      "S010": {
+        "zone": "S010",
+        "batches": [
+          {
+            "model": "B",
+            "box_ids": [
+              "S010-FOD-01",
+              "S010-MED-01",
+              "S010-WAT-01"
+            ],
+            "kg": 25.0,
+            "volume": 0.067,
+            "energy": 1.8210449428989826,
+            "duration": 1554.5713591276817,
+            "return_soc": 0.5447387642752544
+          }
+        ],
+        "sorties": 1,
+        "energy_kwh": 1.8210449428989826,
+        "work_seconds": 1554.5713591276817
+      },
+      "S011": {
+        "zone": "S011",
+        "batches": [
+          {
+            "model": "B",
+            "box_ids": [
+              "S011-FOD-01",
+              "S011-MED-01",
+              "S011-WAT-01"
+            ],
+            "kg": 25.0,
+            "volume": 0.067,
+            "energy": 1.077171254529726,
+            "duration": 1189.630285736439,
+            "return_soc": 0.7307071863675685
+          }
+        ],
+        "sorties": 1,
+        "energy_kwh": 1.077171254529726,
+        "work_seconds": 1189.630285736439
+      },
+      "S012": {
+        "zone": "S012",
+        "batches": [
+          {
+            "model": "C",
+            "box_ids": [
+              "S012-FOD-01",
+              "S012-MED-01",
+              "S012-WAT-01"
+            ],
+            "kg": 25.0,
+            "volume": 0.067,
+            "energy": 4.935752305577522,
+            "duration": 2066.4712315382653,
+            "return_soc": 0.3830309618028097
+          }
+        ],
+        "sorties": 1,
+        "energy_kwh": 4.935752305577522,
+        "work_seconds": 2066.4712315382653
+      },
+      "S013": {
+        "zone": "S013",
+        "batches": [
+          {
+            "model": "B",
+            "box_ids": [
+              "S013-FOD-01",
+              "S013-MED-01",
+              "S013-WAT-01"
+            ],
+            "kg": 25.0,
+            "volume": 0.067,
+            "energy": 1.82079489466599,
+            "duration": 1500.9693925601796,
+            "return_soc": 0.5448012763335025
+          }
+        ],
+        "sorties": 1,
+        "energy_kwh": 1.82079489466599,
+        "work_seconds": 1500.9693925601796
+      },
+      "S014": {
+        "zone": "S014",
+        "batches": [
+          {
+            "model": "B",
+            "box_ids": [
+              "S014-FOD-01",
+              "S014-MED-01",
+              "S014-WAT-01"
+            ],
+            "kg": 25.0,
+            "volume": 0.067,
+            "energy": 2.127681453260112,
+            "duration": 1844.5388901555675,
+            "return_soc": 0.468079636684972
+          }
+        ],
+        "sorties": 1,
+        "energy_kwh": 2.127681453260112,
+        "work_seconds": 1844.5388901555675
+      },
+      "S015": {
+        "zone": "S015",
+        "batches": [
+          {
+            "model": "B",
+            "box_ids": [
+              "S015-FOD-01",
+              "S015-MED-01",
+              "S015-WAT-01"
+            ],
+            "kg": 25.0,
+            "volume": 0.067,
+            "energy": 2.310902613019529,
+            "duration": 1829.5729924903098,
+            "return_soc": 0.42227434674511777
+          }
+        ],
+        "sorties": 1,
+        "energy_kwh": 2.310902613019529,
+        "work_seconds": 1829.5729924903098
+      }
+    },
+    "limiting_patterns": [
+      {
+        "zone": "S008",
+        "pattern_id": 38,
+        "model": "C",
+        "counts": [
+          1,
+          1,
+          0,
+          1
+        ],
+        "kg": 23.0,
+        "volume": 0.07400000000000001,
+        "energy_kwh": 5.326211536313444,
+        "critical_reserve": 0.3342235579608195
+      }
+    ]
+  },
+  {
+    "reserve": 0.33915271171637995,
+    "just_above": 0.33915281171637995,
+    "at_boundary_sorties": 21,
+    "above_boundary_sorties": 22,
+    "affected_zones": [
+      "S003"
+    ],
+    "at_boundary_plan": {
+      "S001": {
+        "zone": "S001",
+        "batches": [
+          {
+            "model": "C",
+            "box_ids": [
+              "S001-MED-01",
+              "S001-MED-02",
+              "S001-WAT-01",
+              "S001-WAT-02",
+              "S001-WAT-03",
+              "S001-WAT-04",
+              "S001-WAT-05"
+            ],
+            "kg": 76.0,
+            "volume": 0.159,
+            "energy": 2.92626894731049,
+            "duration": 1561.4261775174655,
+            "return_soc": 0.6342163815861888
+          },
+          {
+            "model": "C",
+            "box_ids": [
+              "S001-FOD-01",
+              "S001-FOD-02",
+              "S001-FOD-03",
+              "S001-HYG-01",
+              "S001-HYG-02",
+              "S001-WAT-06",
+              "S001-WAT-07",
+              "S001-WAT-08"
+            ],
+            "kg": 78.0,
+            "volume": 0.23500000000000001,
+            "energy": 3.0046938846697038,
+            "duration": 1627.4261775174655,
+            "return_soc": 0.624413264416287
+          }
+        ],
+        "sorties": 2,
+        "energy_kwh": 5.930962831980194,
+        "work_seconds": 3188.852355034931
+      },
+      "S002": {
+        "zone": "S002",
+        "batches": [
+          {
+            "model": "C",
+            "box_ids": [
+              "S002-FOD-01",
+              "S002-MED-01",
+              "S002-WAT-01",
+              "S002-WAT-02"
+            ],
+            "kg": 39.0,
+            "volume": 0.094,
+            "energy": 5.1888534288543084,
+            "duration": 1983.081641278453,
+            "return_soc": 0.35139332139321144
+          },
+          {
+            "model": "C",
+            "box_ids": [
+              "S002-FOD-02",
+              "S002-HYG-01",
+              "S002-WAT-03",
+              "S002-WAT-04"
+            ],
+            "kg": 42.0,
+            "volume": 0.117,
+            "energy": 5.266849986910413,
+            "duration": 1983.081641278453,
+            "return_soc": 0.3416437516361984
+          }
+        ],
+        "sorties": 2,
+        "energy_kwh": 10.45570341576472,
+        "work_seconds": 3966.163282556906
+      },
+      "S003": {
+        "zone": "S003",
+        "batches": [
+          {
+            "model": "C",
+            "box_ids": [
+              "S003-FOD-01",
+              "S003-MED-01",
+              "S003-WAT-01",
+              "S003-WAT-02"
+            ],
+            "kg": 39.0,
+            "volume": 0.094,
+            "energy": 5.207715133255133,
+            "duration": 2303.8095208576483,
+            "return_soc": 0.3490356083431084
+          },
+          {
+            "model": "C",
+            "box_ids": [
+              "S003-FOD-02",
+              "S003-HYG-01",
+              "S003-WAT-03",
+              "S003-WAT-04"
+            ],
+            "kg": 42.0,
+            "volume": 0.117,
+            "energy": 5.28677830626896,
+            "duration": 2303.8095208576483,
+            "return_soc": 0.33915271171637995
+          }
+        ],
+        "sorties": 2,
+        "energy_kwh": 10.494493439524092,
+        "work_seconds": 4607.619041715297
+      },
+      "S004": {
+        "zone": "S004",
+        "batches": [
+          {
+            "model": "C",
+            "box_ids": [
+              "S004-MED-01",
+              "S004-WAT-01",
+              "S004-WAT-02"
+            ],
+            "kg": 31.0,
+            "volume": 0.066,
+            "energy": 5.2705886841604475,
+            "duration": 2107.184064967841,
+            "return_soc": 0.34117641447994407
+          },
+          {
+            "model": "C",
+            "box_ids": [
+              "S004-FOD-01",
+              "S004-HYG-01",
+              "S004-WAT-03"
+            ],
+            "kg": 28.0,
+            "volume": 0.09,
+            "energy": 5.210823192106296,
+            "duration": 2107.184064967841,
+            "return_soc": 0.34864710098671303
+          }
+        ],
+        "sorties": 2,
+        "energy_kwh": 10.481411876266744,
+        "work_seconds": 4214.368129935682
+      },
+      "S005": {
+        "zone": "S005",
+        "batches": [
+          {
+            "model": "C",
+            "box_ids": [
+              "S005-FOD-01",
+              "S005-HYG-01",
+              "S005-MED-01",
+              "S005-WAT-01",
+              "S005-WAT-02",
+              "S005-WAT-03"
+            ],
+            "kg": 59.0,
+            "volume": 0.156,
+            "energy": 4.2387743677705485,
+            "duration": 1880.044640635813,
+            "return_soc": 0.47015320402868144
+          }
+        ],
+        "sorties": 1,
+        "energy_kwh": 4.2387743677705485,
+        "work_seconds": 1880.044640635813
+      },
+      "S006": {
+        "zone": "S006",
+        "batches": [
+          {
+            "model": "C",
+            "box_ids": [
+              "S006-FOD-01",
+              "S006-HYG-01",
+              "S006-MED-01",
+              "S006-WAT-01",
+              "S006-WAT-02",
+              "S006-WAT-03"
+            ],
+            "kg": 59.0,
+            "volume": 0.156,
+            "energy": 2.595719692959075,
+            "duration": 1565.0350828779922,
+            "return_soc": 0.6755350383801156
+          }
+        ],
+        "sorties": 1,
+        "energy_kwh": 2.595719692959075,
+        "work_seconds": 1565.0350828779922
+      },
+      "S007": {
+        "zone": "S007",
+        "batches": [
+          {
+            "model": "C",
+            "box_ids": [
+              "S007-FOD-01",
+              "S007-HYG-01",
+              "S007-MED-01",
+              "S007-WAT-01",
+              "S007-WAT-02"
+            ],
+            "kg": 45.0,
+            "volume": 0.129,
+            "energy": 3.403349432146772,
+            "duration": 1889.224406150507,
+            "return_soc": 0.5745813209816535
+          }
+        ],
+        "sorties": 1,
+        "energy_kwh": 3.403349432146772,
+        "work_seconds": 1889.224406150507
+      },
+      "S008": {
+        "zone": "S008",
+        "batches": [
+          {
+            "model": "B",
+            "box_ids": [
+              "S008-FOD-01",
+              "S008-MED-01"
+            ],
+            "kg": 11.0,
+            "volume": 0.04,
+            "energy": 2.5315894500457437,
+            "duration": 1898.0412714869947,
+            "return_soc": 0.3671026374885641
+          },
+          {
+            "model": "C",
+            "box_ids": [
+              "S008-HYG-01",
+              "S008-WAT-01"
+            ],
+            "kg": 20.0,
+            "volume": 0.062,
+            "energy": 5.277687951638609,
+            "duration": 1996.1275609563957,
+            "return_soc": 0.34028900604517387
+          },
+          {
+            "model": "B",
+            "box_ids": [
+              "S008-WAT-02"
+            ],
+            "kg": 14.0,
+            "volume": 0.027,
+            "energy": 2.595811869539141,
+            "duration": 1838.0412714869947,
+            "return_soc": 0.35104703261521475
+          }
+        ],
+        "sorties": 3,
+        "energy_kwh": 10.405089271223494,
+        "work_seconds": 5732.210103930385
+      },
+      "S009": {
+        "zone": "S009",
+        "batches": [
+          {
+            "model": "B",
+            "box_ids": [
+              "S009-FOD-01",
+              "S009-MED-01",
+              "S009-WAT-01"
+            ],
+            "kg": 25.0,
+            "volume": 0.067,
+            "energy": 2.1024528395672246,
+            "duration": 1560.7787366148573,
+            "return_soc": 0.47438679010819385
+          }
+        ],
+        "sorties": 1,
+        "energy_kwh": 2.1024528395672246,
+        "work_seconds": 1560.7787366148573
+      },
+      "S010": {
+        "zone": "S010",
+        "batches": [
+          {
+            "model": "B",
+            "box_ids": [
+              "S010-FOD-01",
+              "S010-MED-01",
+              "S010-WAT-01"
+            ],
+            "kg": 25.0,
+            "volume": 0.067,
+            "energy": 1.8210449428989826,
+            "duration": 1554.5713591276817,
+            "return_soc": 0.5447387642752544
+          }
+        ],
+        "sorties": 1,
+        "energy_kwh": 1.8210449428989826,
+        "work_seconds": 1554.5713591276817
+      },
+      "S011": {
+        "zone": "S011",
+        "batches": [
+          {
+            "model": "B",
+            "box_ids": [
+              "S011-FOD-01",
+              "S011-MED-01",
+              "S011-WAT-01"
+            ],
+            "kg": 25.0,
+            "volume": 0.067,
+            "energy": 1.077171254529726,
+            "duration": 1189.630285736439,
+            "return_soc": 0.7307071863675685
+          }
+        ],
+        "sorties": 1,
+        "energy_kwh": 1.077171254529726,
+        "work_seconds": 1189.630285736439
+      },
+      "S012": {
+        "zone": "S012",
+        "batches": [
+          {
+            "model": "C",
+            "box_ids": [
+              "S012-FOD-01",
+              "S012-MED-01",
+              "S012-WAT-01"
+            ],
+            "kg": 25.0,
+            "volume": 0.067,
+            "energy": 4.935752305577522,
+            "duration": 2066.4712315382653,
+            "return_soc": 0.3830309618028097
+          }
+        ],
+        "sorties": 1,
+        "energy_kwh": 4.935752305577522,
+        "work_seconds": 2066.4712315382653
+      },
+      "S013": {
+        "zone": "S013",
+        "batches": [
+          {
+            "model": "B",
+            "box_ids": [
+              "S013-FOD-01",
+              "S013-MED-01",
+              "S013-WAT-01"
+            ],
+            "kg": 25.0,
+            "volume": 0.067,
+            "energy": 1.82079489466599,
+            "duration": 1500.9693925601796,
+            "return_soc": 0.5448012763335025
+          }
+        ],
+        "sorties": 1,
+        "energy_kwh": 1.82079489466599,
+        "work_seconds": 1500.9693925601796
+      },
+      "S014": {
+        "zone": "S014",
+        "batches": [
+          {
+            "model": "B",
+            "box_ids": [
+              "S014-FOD-01",
+              "S014-MED-01",
+              "S014-WAT-01"
+            ],
+            "kg": 25.0,
+            "volume": 0.067,
+            "energy": 2.127681453260112,
+            "duration": 1844.5388901555675,
+            "return_soc": 0.468079636684972
+          }
+        ],
+        "sorties": 1,
+        "energy_kwh": 2.127681453260112,
+        "work_seconds": 1844.5388901555675
+      },
+      "S015": {
+        "zone": "S015",
+        "batches": [
+          {
+            "model": "B",
+            "box_ids": [
+              "S015-FOD-01",
+              "S015-MED-01",
+              "S015-WAT-01"
+            ],
+            "kg": 25.0,
+            "volume": 0.067,
+            "energy": 2.310902613019529,
+            "duration": 1829.5729924903098,
+            "return_soc": 0.42227434674511777
+          }
+        ],
+        "sorties": 1,
+        "energy_kwh": 2.310902613019529,
+        "work_seconds": 1829.5729924903098
+      }
+    },
+    "limiting_patterns": [
+      {
+        "zone": "S003",
+        "pattern_id": 5,
+        "model": "C",
+        "counts": [
+          0,
+          0,
+          0,
+          3
+        ],
+        "kg": 42.0,
+        "volume": 0.081,
+        "energy_kwh": 5.28677830626896,
+        "critical_reserve": 0.33915271171637995
+      },
+      {
+        "zone": "S003",
+        "pattern_id": 34,
+        "model": "C",
+        "counts": [
+          0,
+          1,
+          1,
+          2
+        ],
+        "kg": 42.0,
+        "volume": 0.117,
+        "energy_kwh": 5.28677830626896,
+        "critical_reserve": 0.33915271171637995
+      }
+    ]
+  },
+  {
+    "reserve": 0.34117641447994407,
+    "just_above": 0.34117651447994407,
+    "at_boundary_sorties": 22,
+    "above_boundary_sorties": 23,
+    "affected_zones": [
+      "S004"
+    ],
+    "at_boundary_plan": {
+      "S001": {
+        "zone": "S001",
+        "batches": [
+          {
+            "model": "C",
+            "box_ids": [
+              "S001-MED-01",
+              "S001-MED-02",
+              "S001-WAT-01",
+              "S001-WAT-02",
+              "S001-WAT-03",
+              "S001-WAT-04",
+              "S001-WAT-05"
+            ],
+            "kg": 76.0,
+            "volume": 0.159,
+            "energy": 2.92626894731049,
+            "duration": 1561.4261775174655,
+            "return_soc": 0.6342163815861888
+          },
+          {
+            "model": "C",
+            "box_ids": [
+              "S001-FOD-01",
+              "S001-FOD-02",
+              "S001-FOD-03",
+              "S001-HYG-01",
+              "S001-HYG-02",
+              "S001-WAT-06",
+              "S001-WAT-07",
+              "S001-WAT-08"
+            ],
+            "kg": 78.0,
+            "volume": 0.23500000000000001,
+            "energy": 3.0046938846697038,
+            "duration": 1627.4261775174655,
+            "return_soc": 0.624413264416287
+          }
+        ],
+        "sorties": 2,
+        "energy_kwh": 5.930962831980194,
+        "work_seconds": 3188.852355034931
+      },
+      "S002": {
+        "zone": "S002",
+        "batches": [
+          {
+            "model": "C",
+            "box_ids": [
+              "S002-FOD-01",
+              "S002-MED-01",
+              "S002-WAT-01",
+              "S002-WAT-02"
+            ],
+            "kg": 39.0,
+            "volume": 0.094,
+            "energy": 5.1888534288543084,
+            "duration": 1983.081641278453,
+            "return_soc": 0.35139332139321144
+          },
+          {
+            "model": "C",
+            "box_ids": [
+              "S002-FOD-02",
+              "S002-HYG-01",
+              "S002-WAT-03",
+              "S002-WAT-04"
+            ],
+            "kg": 42.0,
+            "volume": 0.117,
+            "energy": 5.266849986910413,
+            "duration": 1983.081641278453,
+            "return_soc": 0.3416437516361984
+          }
+        ],
+        "sorties": 2,
+        "energy_kwh": 10.45570341576472,
+        "work_seconds": 3966.163282556906
+      },
+      "S003": {
+        "zone": "S003",
+        "batches": [
+          {
+            "model": "C",
+            "box_ids": [
+              "S003-FOD-01",
+              "S003-FOD-02",
+              "S003-MED-01",
+              "S003-WAT-01"
+            ],
+            "kg": 33.0,
+            "volume": 0.095,
+            "energy": 5.068235937813064,
+            "duration": 2303.8095208576483,
+            "return_soc": 0.366470507773367
+          },
+          {
+            "model": "C",
+            "box_ids": [
+              "S003-HYG-01",
+              "S003-WAT-02",
+              "S003-WAT-03"
+            ],
+            "kg": 34.0,
+            "volume": 0.089,
+            "energy": 5.089889424657498,
+            "duration": 2237.8095208576483,
+            "return_soc": 0.36376382191781276
+          },
+          {
+            "model": "B",
+            "box_ids": [
+              "S003-WAT-04"
+            ],
+            "kg": 14.0,
+            "volume": 0.027,
+            "energy": 2.4234670793332462,
+            "duration": 1960.2414747964503,
+            "return_soc": 0.39413323016668844
+          }
+        ],
+        "sorties": 3,
+        "energy_kwh": 12.581592441803808,
+        "work_seconds": 6501.860516511747
+      },
+      "S004": {
+        "zone": "S004",
+        "batches": [
+          {
+            "model": "C",
+            "box_ids": [
+              "S004-MED-01",
+              "S004-WAT-01",
+              "S004-WAT-02"
+            ],
+            "kg": 31.0,
+            "volume": 0.066,
+            "energy": 5.2705886841604475,
+            "duration": 2107.184064967841,
+            "return_soc": 0.34117641447994407
+          },
+          {
+            "model": "C",
+            "box_ids": [
+              "S004-FOD-01",
+              "S004-HYG-01",
+              "S004-WAT-03"
+            ],
+            "kg": 28.0,
+            "volume": 0.09,
+            "energy": 5.210823192106296,
+            "duration": 2107.184064967841,
+            "return_soc": 0.34864710098671303
+          }
+        ],
+        "sorties": 2,
+        "energy_kwh": 10.481411876266744,
+        "work_seconds": 4214.368129935682
+      },
+      "S005": {
+        "zone": "S005",
+        "batches": [
+          {
+            "model": "C",
+            "box_ids": [
+              "S005-FOD-01",
+              "S005-HYG-01",
+              "S005-MED-01",
+              "S005-WAT-01",
+              "S005-WAT-02",
+              "S005-WAT-03"
+            ],
+            "kg": 59.0,
+            "volume": 0.156,
+            "energy": 4.2387743677705485,
+            "duration": 1880.044640635813,
+            "return_soc": 0.47015320402868144
+          }
+        ],
+        "sorties": 1,
+        "energy_kwh": 4.2387743677705485,
+        "work_seconds": 1880.044640635813
+      },
+      "S006": {
+        "zone": "S006",
+        "batches": [
+          {
+            "model": "C",
+            "box_ids": [
+              "S006-FOD-01",
+              "S006-HYG-01",
+              "S006-MED-01",
+              "S006-WAT-01",
+              "S006-WAT-02",
+              "S006-WAT-03"
+            ],
+            "kg": 59.0,
+            "volume": 0.156,
+            "energy": 2.595719692959075,
+            "duration": 1565.0350828779922,
+            "return_soc": 0.6755350383801156
+          }
+        ],
+        "sorties": 1,
+        "energy_kwh": 2.595719692959075,
+        "work_seconds": 1565.0350828779922
+      },
+      "S007": {
+        "zone": "S007",
+        "batches": [
+          {
+            "model": "C",
+            "box_ids": [
+              "S007-FOD-01",
+              "S007-HYG-01",
+              "S007-MED-01",
+              "S007-WAT-01",
+              "S007-WAT-02"
+            ],
+            "kg": 45.0,
+            "volume": 0.129,
+            "energy": 3.403349432146772,
+            "duration": 1889.224406150507,
+            "return_soc": 0.5745813209816535
+          }
+        ],
+        "sorties": 1,
+        "energy_kwh": 3.403349432146772,
+        "work_seconds": 1889.224406150507
+      },
+      "S008": {
+        "zone": "S008",
+        "batches": [
+          {
+            "model": "C",
+            "box_ids": [
+              "S008-MED-01",
+              "S008-WAT-01"
+            ],
+            "kg": 17.0,
+            "volume": 0.039,
+            "energy": 5.233839830157045,
+            "duration": 1996.1275609563957,
+            "return_soc": 0.3457700212303694
+          },
+          {
+            "model": "B",
+            "box_ids": [
+              "S008-FOD-01",
+              "S008-HYG-01"
+            ],
+            "kg": 14.0,
+            "volume": 0.063,
+            "energy": 2.595811869539141,
+            "duration": 1898.0412714869947,
+            "return_soc": 0.35104703261521475
+          },
+          {
+            "model": "B",
+            "box_ids": [
+              "S008-WAT-02"
+            ],
+            "kg": 14.0,
+            "volume": 0.027,
+            "energy": 2.595811869539141,
+            "duration": 1838.0412714869947,
+            "return_soc": 0.35104703261521475
+          }
+        ],
+        "sorties": 3,
+        "energy_kwh": 10.425463569235326,
+        "work_seconds": 5732.210103930385
+      },
+      "S009": {
+        "zone": "S009",
+        "batches": [
+          {
+            "model": "B",
+            "box_ids": [
+              "S009-FOD-01",
+              "S009-MED-01",
+              "S009-WAT-01"
+            ],
+            "kg": 25.0,
+            "volume": 0.067,
+            "energy": 2.1024528395672246,
+            "duration": 1560.7787366148573,
+            "return_soc": 0.47438679010819385
+          }
+        ],
+        "sorties": 1,
+        "energy_kwh": 2.1024528395672246,
+        "work_seconds": 1560.7787366148573
+      },
+      "S010": {
+        "zone": "S010",
+        "batches": [
+          {
+            "model": "B",
+            "box_ids": [
+              "S010-FOD-01",
+              "S010-MED-01",
+              "S010-WAT-01"
+            ],
+            "kg": 25.0,
+            "volume": 0.067,
+            "energy": 1.8210449428989826,
+            "duration": 1554.5713591276817,
+            "return_soc": 0.5447387642752544
+          }
+        ],
+        "sorties": 1,
+        "energy_kwh": 1.8210449428989826,
+        "work_seconds": 1554.5713591276817
+      },
+      "S011": {
+        "zone": "S011",
+        "batches": [
+          {
+            "model": "B",
+            "box_ids": [
+              "S011-FOD-01",
+              "S011-MED-01",
+              "S011-WAT-01"
+            ],
+            "kg": 25.0,
+            "volume": 0.067,
+            "energy": 1.077171254529726,
+            "duration": 1189.630285736439,
+            "return_soc": 0.7307071863675685
+          }
+        ],
+        "sorties": 1,
+        "energy_kwh": 1.077171254529726,
+        "work_seconds": 1189.630285736439
+      },
+      "S012": {
+        "zone": "S012",
+        "batches": [
+          {
+            "model": "C",
+            "box_ids": [
+              "S012-FOD-01",
+              "S012-MED-01",
+              "S012-WAT-01"
+            ],
+            "kg": 25.0,
+            "volume": 0.067,
+            "energy": 4.935752305577522,
+            "duration": 2066.4712315382653,
+            "return_soc": 0.3830309618028097
+          }
+        ],
+        "sorties": 1,
+        "energy_kwh": 4.935752305577522,
+        "work_seconds": 2066.4712315382653
+      },
+      "S013": {
+        "zone": "S013",
+        "batches": [
+          {
+            "model": "B",
+            "box_ids": [
+              "S013-FOD-01",
+              "S013-MED-01",
+              "S013-WAT-01"
+            ],
+            "kg": 25.0,
+            "volume": 0.067,
+            "energy": 1.82079489466599,
+            "duration": 1500.9693925601796,
+            "return_soc": 0.5448012763335025
+          }
+        ],
+        "sorties": 1,
+        "energy_kwh": 1.82079489466599,
+        "work_seconds": 1500.9693925601796
+      },
+      "S014": {
+        "zone": "S014",
+        "batches": [
+          {
+            "model": "B",
+            "box_ids": [
+              "S014-FOD-01",
+              "S014-MED-01",
+              "S014-WAT-01"
+            ],
+            "kg": 25.0,
+            "volume": 0.067,
+            "energy": 2.127681453260112,
+            "duration": 1844.5388901555675,
+            "return_soc": 0.468079636684972
+          }
+        ],
+        "sorties": 1,
+        "energy_kwh": 2.127681453260112,
+        "work_seconds": 1844.5388901555675
+      },
+      "S015": {
+        "zone": "S015",
+        "batches": [
+          {
+            "model": "B",
+            "box_ids": [
+              "S015-FOD-01",
+              "S015-MED-01",
+              "S015-WAT-01"
+            ],
+            "kg": 25.0,
+            "volume": 0.067,
+            "energy": 2.310902613019529,
+            "duration": 1829.5729924903098,
+            "return_soc": 0.42227434674511777
+          }
+        ],
+        "sorties": 1,
+        "energy_kwh": 2.310902613019529,
+        "work_seconds": 1829.5729924903098
+      }
+    },
+    "limiting_patterns": [
+      {
+        "zone": "S004",
+        "pattern_id": 32,
+        "model": "C",
+        "counts": [
+          1,
+          0,
+          0,
+          2
+        ],
+        "kg": 31.0,
+        "volume": 0.066,
+        "energy_kwh": 5.2705886841604475,
+        "critical_reserve": 0.34117641447994407
+      },
+      {
+        "zone": "S004",
+        "pattern_id": 48,
+        "model": "C",
+        "counts": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "kg": 31.0,
+        "volume": 0.10200000000000001,
+        "energy_kwh": 5.2705886841604475,
+        "critical_reserve": 0.34117641447994407
+      }
+    ]
+  },
+  {
+    "reserve": 0.3416437516361984,
+    "just_above": 0.3416438516361984,
+    "at_boundary_sorties": 23,
+    "above_boundary_sorties": 24,
+    "affected_zones": [
+      "S002"
+    ],
+    "at_boundary_plan": {
+      "S001": {
+        "zone": "S001",
+        "batches": [
+          {
+            "model": "C",
+            "box_ids": [
+              "S001-MED-01",
+              "S001-MED-02",
+              "S001-WAT-01",
+              "S001-WAT-02",
+              "S001-WAT-03",
+              "S001-WAT-04",
+              "S001-WAT-05"
+            ],
+            "kg": 76.0,
+            "volume": 0.159,
+            "energy": 2.92626894731049,
+            "duration": 1561.4261775174655,
+            "return_soc": 0.6342163815861888
+          },
+          {
+            "model": "C",
+            "box_ids": [
+              "S001-FOD-01",
+              "S001-FOD-02",
+              "S001-FOD-03",
+              "S001-HYG-01",
+              "S001-HYG-02",
+              "S001-WAT-06",
+              "S001-WAT-07",
+              "S001-WAT-08"
+            ],
+            "kg": 78.0,
+            "volume": 0.23500000000000001,
+            "energy": 3.0046938846697038,
+            "duration": 1627.4261775174655,
+            "return_soc": 0.624413264416287
+          }
+        ],
+        "sorties": 2,
+        "energy_kwh": 5.930962831980194,
+        "work_seconds": 3188.852355034931
+      },
+      "S002": {
+        "zone": "S002",
+        "batches": [
+          {
+            "model": "C",
+            "box_ids": [
+              "S002-FOD-01",
+              "S002-MED-01",
+              "S002-WAT-01",
+              "S002-WAT-02"
+            ],
+            "kg": 39.0,
+            "volume": 0.094,
+            "energy": 5.1888534288543084,
+            "duration": 1983.081641278453,
+            "return_soc": 0.35139332139321144
+          },
+          {
+            "model": "C",
+            "box_ids": [
+              "S002-FOD-02",
+              "S002-HYG-01",
+              "S002-WAT-03",
+              "S002-WAT-04"
+            ],
+            "kg": 42.0,
+            "volume": 0.117,
+            "energy": 5.266849986910413,
+            "duration": 1983.081641278453,
+            "return_soc": 0.3416437516361984
+          }
+        ],
+        "sorties": 2,
+        "energy_kwh": 10.45570341576472,
+        "work_seconds": 3966.163282556906
+      },
+      "S003": {
+        "zone": "S003",
+        "batches": [
+          {
+            "model": "C",
+            "box_ids": [
+              "S003-FOD-01",
+              "S003-FOD-02",
+              "S003-MED-01",
+              "S003-WAT-01"
+            ],
+            "kg": 33.0,
+            "volume": 0.095,
+            "energy": 5.068235937813064,
+            "duration": 2303.8095208576483,
+            "return_soc": 0.366470507773367
+          },
+          {
+            "model": "C",
+            "box_ids": [
+              "S003-HYG-01",
+              "S003-WAT-02",
+              "S003-WAT-03"
+            ],
+            "kg": 34.0,
+            "volume": 0.089,
+            "energy": 5.089889424657498,
+            "duration": 2237.8095208576483,
+            "return_soc": 0.36376382191781276
+          },
+          {
+            "model": "B",
+            "box_ids": [
+              "S003-WAT-04"
+            ],
+            "kg": 14.0,
+            "volume": 0.027,
+            "energy": 2.4234670793332462,
+            "duration": 1960.2414747964503,
+            "return_soc": 0.39413323016668844
+          }
+        ],
+        "sorties": 3,
+        "energy_kwh": 12.581592441803808,
+        "work_seconds": 6501.860516511747
+      },
+      "S004": {
+        "zone": "S004",
+        "batches": [
+          {
+            "model": "B",
+            "box_ids": [
+              "S004-MED-01",
+              "S004-WAT-01"
+            ],
+            "kg": 17.0,
+            "volume": 0.039,
+            "energy": 2.586356071937873,
+            "duration": 1925.7710095479192,
+            "return_soc": 0.3534109820155318
+          },
+          {
+            "model": "B",
+            "box_ids": [
+              "S004-FOD-01",
+              "S004-HYG-01"
+            ],
+            "kg": 14.0,
+            "volume": 0.063,
+            "energy": 2.5108422104926804,
+            "duration": 1925.7710095479192,
+            "return_soc": 0.3722894473768299
+          },
+          {
+            "model": "C",
+            "box_ids": [
+              "S004-WAT-02",
+              "S004-WAT-03"
+            ],
+            "kg": 28.0,
+            "volume": 0.054,
+            "energy": 5.210823192106296,
+            "duration": 2041.184064967841,
+            "return_soc": 0.34864710098671303
+          }
+        ],
+        "sorties": 3,
+        "energy_kwh": 10.308021474536849,
+        "work_seconds": 5892.726084063679
+      },
+      "S005": {
+        "zone": "S005",
+        "batches": [
+          {
+            "model": "C",
+            "box_ids": [
+              "S005-FOD-01",
+              "S005-HYG-01",
+              "S005-MED-01",
+              "S005-WAT-01",
+              "S005-WAT-02",
+              "S005-WAT-03"
+            ],
+            "kg": 59.0,
+            "volume": 0.156,
+            "energy": 4.2387743677705485,
+            "duration": 1880.044640635813,
+            "return_soc": 0.47015320402868144
+          }
+        ],
+        "sorties": 1,
+        "energy_kwh": 4.2387743677705485,
+        "work_seconds": 1880.044640635813
+      },
+      "S006": {
+        "zone": "S006",
+        "batches": [
+          {
+            "model": "C",
+            "box_ids": [
+              "S006-FOD-01",
+              "S006-HYG-01",
+              "S006-MED-01",
+              "S006-WAT-01",
+              "S006-WAT-02",
+              "S006-WAT-03"
+            ],
+            "kg": 59.0,
+            "volume": 0.156,
+            "energy": 2.595719692959075,
+            "duration": 1565.0350828779922,
+            "return_soc": 0.6755350383801156
+          }
+        ],
+        "sorties": 1,
+        "energy_kwh": 2.595719692959075,
+        "work_seconds": 1565.0350828779922
+      },
+      "S007": {
+        "zone": "S007",
+        "batches": [
+          {
+            "model": "C",
+            "box_ids": [
+              "S007-FOD-01",
+              "S007-HYG-01",
+              "S007-MED-01",
+              "S007-WAT-01",
+              "S007-WAT-02"
+            ],
+            "kg": 45.0,
+            "volume": 0.129,
+            "energy": 3.403349432146772,
+            "duration": 1889.224406150507,
+            "return_soc": 0.5745813209816535
+          }
+        ],
+        "sorties": 1,
+        "energy_kwh": 3.403349432146772,
+        "work_seconds": 1889.224406150507
+      },
+      "S008": {
+        "zone": "S008",
+        "batches": [
+          {
+            "model": "C",
+            "box_ids": [
+              "S008-MED-01",
+              "S008-WAT-01"
+            ],
+            "kg": 17.0,
+            "volume": 0.039,
+            "energy": 5.233839830157045,
+            "duration": 1996.1275609563957,
+            "return_soc": 0.3457700212303694
+          },
+          {
+            "model": "B",
+            "box_ids": [
+              "S008-FOD-01",
+              "S008-HYG-01"
+            ],
+            "kg": 14.0,
+            "volume": 0.063,
+            "energy": 2.595811869539141,
+            "duration": 1898.0412714869947,
+            "return_soc": 0.35104703261521475
+          },
+          {
+            "model": "B",
+            "box_ids": [
+              "S008-WAT-02"
+            ],
+            "kg": 14.0,
+            "volume": 0.027,
+            "energy": 2.595811869539141,
+            "duration": 1838.0412714869947,
+            "return_soc": 0.35104703261521475
+          }
+        ],
+        "sorties": 3,
+        "energy_kwh": 10.425463569235326,
+        "work_seconds": 5732.210103930385
+      },
+      "S009": {
+        "zone": "S009",
+        "batches": [
+          {
+            "model": "B",
+            "box_ids": [
+              "S009-FOD-01",
+              "S009-MED-01",
+              "S009-WAT-01"
+            ],
+            "kg": 25.0,
+            "volume": 0.067,
+            "energy": 2.1024528395672246,
+            "duration": 1560.7787366148573,
+            "return_soc": 0.47438679010819385
+          }
+        ],
+        "sorties": 1,
+        "energy_kwh": 2.1024528395672246,
+        "work_seconds": 1560.7787366148573
+      },
+      "S010": {
+        "zone": "S010",
+        "batches": [
+          {
+            "model": "B",
+            "box_ids": [
+              "S010-FOD-01",
+              "S010-MED-01",
+              "S010-WAT-01"
+            ],
+            "kg": 25.0,
+            "volume": 0.067,
+            "energy": 1.8210449428989826,
+            "duration": 1554.5713591276817,
+            "return_soc": 0.5447387642752544
+          }
+        ],
+        "sorties": 1,
+        "energy_kwh": 1.8210449428989826,
+        "work_seconds": 1554.5713591276817
+      },
+      "S011": {
+        "zone": "S011",
+        "batches": [
+          {
+            "model": "B",
+            "box_ids": [
+              "S011-FOD-01",
+              "S011-MED-01",
+              "S011-WAT-01"
+            ],
+            "kg": 25.0,
+            "volume": 0.067,
+            "energy": 1.077171254529726,
+            "duration": 1189.630285736439,
+            "return_soc": 0.7307071863675685
+          }
+        ],
+        "sorties": 1,
+        "energy_kwh": 1.077171254529726,
+        "work_seconds": 1189.630285736439
+      },
+      "S012": {
+        "zone": "S012",
+        "batches": [
+          {
+            "model": "C",
+            "box_ids": [
+              "S012-FOD-01",
+              "S012-MED-01",
+              "S012-WAT-01"
+            ],
+            "kg": 25.0,
+            "volume": 0.067,
+            "energy": 4.935752305577522,
+            "duration": 2066.4712315382653,
+            "return_soc": 0.3830309618028097
+          }
+        ],
+        "sorties": 1,
+        "energy_kwh": 4.935752305577522,
+        "work_seconds": 2066.4712315382653
+      },
+      "S013": {
+        "zone": "S013",
+        "batches": [
+          {
+            "model": "B",
+            "box_ids": [
+              "S013-FOD-01",
+              "S013-MED-01",
+              "S013-WAT-01"
+            ],
+            "kg": 25.0,
+            "volume": 0.067,
+            "energy": 1.82079489466599,
+            "duration": 1500.9693925601796,
+            "return_soc": 0.5448012763335025
+          }
+        ],
+        "sorties": 1,
+        "energy_kwh": 1.82079489466599,
+        "work_seconds": 1500.9693925601796
+      },
+      "S014": {
+        "zone": "S014",
+        "batches": [
+          {
+            "model": "B",
+            "box_ids": [
+              "S014-FOD-01",
+              "S014-MED-01",
+              "S014-WAT-01"
+            ],
+            "kg": 25.0,
+            "volume": 0.067,
+            "energy": 2.127681453260112,
+            "duration": 1844.5388901555675,
+            "return_soc": 0.468079636684972
+          }
+        ],
+        "sorties": 1,
+        "energy_kwh": 2.127681453260112,
+        "work_seconds": 1844.5388901555675
+      },
+      "S015": {
+        "zone": "S015",
+        "batches": [
+          {
+            "model": "B",
+            "box_ids": [
+              "S015-FOD-01",
+              "S015-MED-01",
+              "S015-WAT-01"
+            ],
+            "kg": 25.0,
+            "volume": 0.067,
+            "energy": 2.310902613019529,
+            "duration": 1829.5729924903098,
+            "return_soc": 0.42227434674511777
+          }
+        ],
+        "sorties": 1,
+        "energy_kwh": 2.310902613019529,
+        "work_seconds": 1829.5729924903098
+      }
+    },
+    "limiting_patterns": [
+      {
+        "zone": "S002",
+        "pattern_id": 5,
+        "model": "C",
+        "counts": [
+          0,
+          0,
+          0,
+          3
+        ],
+        "kg": 42.0,
+        "volume": 0.081,
+        "energy_kwh": 5.266849986910413,
+        "critical_reserve": 0.3416437516361984
+      },
+      {
+        "zone": "S002",
+        "pattern_id": 34,
+        "model": "C",
+        "counts": [
+          0,
+          1,
+          1,
+          2
+        ],
+        "kg": 42.0,
+        "volume": 0.117,
+        "energy_kwh": 5.266849986910413,
+        "critical_reserve": 0.3416437516361984
+      }
+    ]
+  },
+  {
+    "reserve": 0.3457700212303694,
+    "just_above": 0.3457701212303694,
+    "at_boundary_sorties": 24,
+    "above_boundary_sorties": 25,
+    "affected_zones": [
+      "S008"
+    ],
+    "at_boundary_plan": {
+      "S001": {
+        "zone": "S001",
+        "batches": [
+          {
+            "model": "C",
+            "box_ids": [
+              "S001-MED-01",
+              "S001-MED-02",
+              "S001-WAT-01",
+              "S001-WAT-02",
+              "S001-WAT-03",
+              "S001-WAT-04",
+              "S001-WAT-05"
+            ],
+            "kg": 76.0,
+            "volume": 0.159,
+            "energy": 2.92626894731049,
+            "duration": 1561.4261775174655,
+            "return_soc": 0.6342163815861888
+          },
+          {
+            "model": "C",
+            "box_ids": [
+              "S001-FOD-01",
+              "S001-FOD-02",
+              "S001-FOD-03",
+              "S001-HYG-01",
+              "S001-HYG-02",
+              "S001-WAT-06",
+              "S001-WAT-07",
+              "S001-WAT-08"
+            ],
+            "kg": 78.0,
+            "volume": 0.23500000000000001,
+            "energy": 3.0046938846697038,
+            "duration": 1627.4261775174655,
+            "return_soc": 0.624413264416287
+          }
+        ],
+        "sorties": 2,
+        "energy_kwh": 5.930962831980194,
+        "work_seconds": 3188.852355034931
+      },
+      "S002": {
+        "zone": "S002",
+        "batches": [
+          {
+            "model": "C",
+            "box_ids": [
+              "S002-FOD-01",
+              "S002-MED-01",
+              "S002-WAT-01",
+              "S002-WAT-02"
+            ],
+            "kg": 39.0,
+            "volume": 0.094,
+            "energy": 5.1888534288543084,
+            "duration": 1983.081641278453,
+            "return_soc": 0.35139332139321144
+          },
+          {
+            "model": "B",
+            "box_ids": [
+              "S002-HYG-01",
+              "S002-WAT-03"
+            ],
+            "kg": 20.0,
+            "volume": 0.062,
+            "energy": 2.5291483814525018,
+            "duration": 1763.208948407359,
+            "return_soc": 0.36771290463687456
+          },
+          {
+            "model": "B",
+            "box_ids": [
+              "S002-FOD-02",
+              "S002-WAT-04"
+            ],
+            "kg": 22.0,
+            "volume": 0.055,
+            "energy": 2.5984986138748765,
+            "duration": 1763.208948407359,
+            "return_soc": 0.3503753465312809
+          }
+        ],
+        "sorties": 3,
+        "energy_kwh": 10.316500424181687,
+        "work_seconds": 5509.4995380931705
+      },
+      "S003": {
+        "zone": "S003",
+        "batches": [
+          {
+            "model": "C",
+            "box_ids": [
+              "S003-FOD-01",
+              "S003-FOD-02",
+              "S003-MED-01",
+              "S003-WAT-01"
+            ],
+            "kg": 33.0,
+            "volume": 0.095,
+            "energy": 5.068235937813064,
+            "duration": 2303.8095208576483,
+            "return_soc": 0.366470507773367
+          },
+          {
+            "model": "C",
+            "box_ids": [
+              "S003-HYG-01",
+              "S003-WAT-02",
+              "S003-WAT-03"
+            ],
+            "kg": 34.0,
+            "volume": 0.089,
+            "energy": 5.089889424657498,
+            "duration": 2237.8095208576483,
+            "return_soc": 0.36376382191781276
+          },
+          {
+            "model": "B",
+            "box_ids": [
+              "S003-WAT-04"
+            ],
+            "kg": 14.0,
+            "volume": 0.027,
+            "energy": 2.4234670793332462,
+            "duration": 1960.2414747964503,
+            "return_soc": 0.39413323016668844
+          }
+        ],
+        "sorties": 3,
+        "energy_kwh": 12.581592441803808,
+        "work_seconds": 6501.860516511747
+      },
+      "S004": {
+        "zone": "S004",
+        "batches": [
+          {
+            "model": "B",
+            "box_ids": [
+              "S004-MED-01",
+              "S004-WAT-01"
+            ],
+            "kg": 17.0,
+            "volume": 0.039,
+            "energy": 2.586356071937873,
+            "duration": 1925.7710095479192,
+            "return_soc": 0.3534109820155318
+          },
+          {
+            "model": "B",
+            "box_ids": [
+              "S004-FOD-01",
+              "S004-HYG-01"
+            ],
+            "kg": 14.0,
+            "volume": 0.063,
+            "energy": 2.5108422104926804,
+            "duration": 1925.7710095479192,
+            "return_soc": 0.3722894473768299
+          },
+          {
+            "model": "C",
+            "box_ids": [
+              "S004-WAT-02",
+              "S004-WAT-03"
+            ],
+            "kg": 28.0,
+            "volume": 0.054,
+            "energy": 5.210823192106296,
+            "duration": 2041.184064967841,
+            "return_soc": 0.34864710098671303
+          }
+        ],
+        "sorties": 3,
+        "energy_kwh": 10.308021474536849,
+        "work_seconds": 5892.726084063679
+      },
+      "S005": {
+        "zone": "S005",
+        "batches": [
+          {
+            "model": "C",
+            "box_ids": [
+              "S005-FOD-01",
+              "S005-HYG-01",
+              "S005-MED-01",
+              "S005-WAT-01",
+              "S005-WAT-02",
+              "S005-WAT-03"
+            ],
+            "kg": 59.0,
+            "volume": 0.156,
+            "energy": 4.2387743677705485,
+            "duration": 1880.044640635813,
+            "return_soc": 0.47015320402868144
+          }
+        ],
+        "sorties": 1,
+        "energy_kwh": 4.2387743677705485,
+        "work_seconds": 1880.044640635813
+      },
+      "S006": {
+        "zone": "S006",
+        "batches": [
+          {
+            "model": "C",
+            "box_ids": [
+              "S006-FOD-01",
+              "S006-HYG-01",
+              "S006-MED-01",
+              "S006-WAT-01",
+              "S006-WAT-02",
+              "S006-WAT-03"
+            ],
+            "kg": 59.0,
+            "volume": 0.156,
+            "energy": 2.595719692959075,
+            "duration": 1565.0350828779922,
+            "return_soc": 0.6755350383801156
+          }
+        ],
+        "sorties": 1,
+        "energy_kwh": 2.595719692959075,
+        "work_seconds": 1565.0350828779922
+      },
+      "S007": {
+        "zone": "S007",
+        "batches": [
+          {
+            "model": "C",
+            "box_ids": [
+              "S007-FOD-01",
+              "S007-HYG-01",
+              "S007-MED-01",
+              "S007-WAT-01",
+              "S007-WAT-02"
+            ],
+            "kg": 45.0,
+            "volume": 0.129,
+            "energy": 3.403349432146772,
+            "duration": 1889.224406150507,
+            "return_soc": 0.5745813209816535
+          }
+        ],
+        "sorties": 1,
+        "energy_kwh": 3.403349432146772,
+        "work_seconds": 1889.224406150507
+      },
+      "S008": {
+        "zone": "S008",
+        "batches": [
+          {
+            "model": "C",
+            "box_ids": [
+              "S008-MED-01",
+              "S008-WAT-01"
+            ],
+            "kg": 17.0,
+            "volume": 0.039,
+            "energy": 5.233839830157045,
+            "duration": 1996.1275609563957,
+            "return_soc": 0.3457700212303694
+          },
+          {
+            "model": "B",
+            "box_ids": [
+              "S008-FOD-01",
+              "S008-HYG-01"
+            ],
+            "kg": 14.0,
+            "volume": 0.063,
+            "energy": 2.595811869539141,
+            "duration": 1898.0412714869947,
+            "return_soc": 0.35104703261521475
+          },
+          {
+            "model": "B",
+            "box_ids": [
+              "S008-WAT-02"
+            ],
+            "kg": 14.0,
+            "volume": 0.027,
+            "energy": 2.595811869539141,
+            "duration": 1838.0412714869947,
+            "return_soc": 0.35104703261521475
+          }
+        ],
+        "sorties": 3,
+        "energy_kwh": 10.425463569235326,
+        "work_seconds": 5732.210103930385
+      },
+      "S009": {
+        "zone": "S009",
+        "batches": [
+          {
+            "model": "B",
+            "box_ids": [
+              "S009-FOD-01",
+              "S009-MED-01",
+              "S009-WAT-01"
+            ],
+            "kg": 25.0,
+            "volume": 0.067,
+            "energy": 2.1024528395672246,
+            "duration": 1560.7787366148573,
+            "return_soc": 0.47438679010819385
+          }
+        ],
+        "sorties": 1,
+        "energy_kwh": 2.1024528395672246,
+        "work_seconds": 1560.7787366148573
+      },
+      "S010": {
+        "zone": "S010",
+        "batches": [
+          {
+            "model": "B",
+            "box_ids": [
+              "S010-FOD-01",
+              "S010-MED-01",
+              "S010-WAT-01"
+            ],
+            "kg": 25.0,
+            "volume": 0.067,
+            "energy": 1.8210449428989826,
+            "duration": 1554.5713591276817,
+            "return_soc": 0.5447387642752544
+          }
+        ],
+        "sorties": 1,
+        "energy_kwh": 1.8210449428989826,
+        "work_seconds": 1554.5713591276817
+      },
+      "S011": {
+        "zone": "S011",
+        "batches": [
+          {
+            "model": "B",
+            "box_ids": [
+              "S011-FOD-01",
+              "S011-MED-01",
+              "S011-WAT-01"
+            ],
+            "kg": 25.0,
+            "volume": 0.067,
+            "energy": 1.077171254529726,
+            "duration": 1189.630285736439,
+            "return_soc": 0.7307071863675685
+          }
+        ],
+        "sorties": 1,
+        "energy_kwh": 1.077171254529726,
+        "work_seconds": 1189.630285736439
+      },
+      "S012": {
+        "zone": "S012",
+        "batches": [
+          {
+            "model": "C",
+            "box_ids": [
+              "S012-FOD-01",
+              "S012-MED-01",
+              "S012-WAT-01"
+            ],
+            "kg": 25.0,
+            "volume": 0.067,
+            "energy": 4.935752305577522,
+            "duration": 2066.4712315382653,
+            "return_soc": 0.3830309618028097
+          }
+        ],
+        "sorties": 1,
+        "energy_kwh": 4.935752305577522,
+        "work_seconds": 2066.4712315382653
+      },
+      "S013": {
+        "zone": "S013",
+        "batches": [
+          {
+            "model": "B",
+            "box_ids": [
+              "S013-FOD-01",
+              "S013-MED-01",
+              "S013-WAT-01"
+            ],
+            "kg": 25.0,
+            "volume": 0.067,
+            "energy": 1.82079489466599,
+            "duration": 1500.9693925601796,
+            "return_soc": 0.5448012763335025
+          }
+        ],
+        "sorties": 1,
+        "energy_kwh": 1.82079489466599,
+        "work_seconds": 1500.9693925601796
+      },
+      "S014": {
+        "zone": "S014",
+        "batches": [
+          {
+            "model": "B",
+            "box_ids": [
+              "S014-FOD-01",
+              "S014-MED-01",
+              "S014-WAT-01"
+            ],
+            "kg": 25.0,
+            "volume": 0.067,
+            "energy": 2.127681453260112,
+            "duration": 1844.5388901555675,
+            "return_soc": 0.468079636684972
+          }
+        ],
+        "sorties": 1,
+        "energy_kwh": 2.127681453260112,
+        "work_seconds": 1844.5388901555675
+      },
+      "S015": {
+        "zone": "S015",
+        "batches": [
+          {
+            "model": "B",
+            "box_ids": [
+              "S015-FOD-01",
+              "S015-MED-01",
+              "S015-WAT-01"
+            ],
+            "kg": 25.0,
+            "volume": 0.067,
+            "energy": 2.310902613019529,
+            "duration": 1829.5729924903098,
+            "return_soc": 0.42227434674511777
+          }
+        ],
+        "sorties": 1,
+        "energy_kwh": 2.310902613019529,
+        "work_seconds": 1829.5729924903098
+      }
+    },
+    "limiting_patterns": [
+      {
+        "zone": "S008",
+        "pattern_id": 27,
+        "model": "C",
+        "counts": [
+          1,
+          0,
+          0,
+          1
+        ],
+        "kg": 17.0,
+        "volume": 0.039,
+        "energy_kwh": 5.233839830157045,
+        "critical_reserve": 0.3457700212303694
+      },
+      {
+        "zone": "S008",
+        "pattern_id": 40,
+        "model": "C",
+        "counts": [
+          1,
+          1,
+          1,
+          0
+        ],
+        "kg": 17.0,
+        "volume": 0.07500000000000001,
+        "energy_kwh": 5.233839830157045,
+        "critical_reserve": 0.3457700212303694
+      }
+    ]
+  },
+  {
+    "reserve": 0.35104703261521475,
+    "just_above": 0.35104713261521475,
+    "at_boundary_sorties": 25,
+    "above_boundary_sorties": null,
+    "affected_zones": [
+      "S008"
+    ],
+    "at_boundary_plan": {
+      "S001": {
+        "zone": "S001",
+        "batches": [
+          {
+            "model": "C",
+            "box_ids": [
+              "S001-MED-01",
+              "S001-MED-02",
+              "S001-WAT-01",
+              "S001-WAT-02",
+              "S001-WAT-03",
+              "S001-WAT-04",
+              "S001-WAT-05"
+            ],
+            "kg": 76.0,
+            "volume": 0.159,
+            "energy": 2.92626894731049,
+            "duration": 1561.4261775174655,
+            "return_soc": 0.6342163815861888
+          },
+          {
+            "model": "C",
+            "box_ids": [
+              "S001-FOD-01",
+              "S001-FOD-02",
+              "S001-FOD-03",
+              "S001-HYG-01",
+              "S001-HYG-02",
+              "S001-WAT-06",
+              "S001-WAT-07",
+              "S001-WAT-08"
+            ],
+            "kg": 78.0,
+            "volume": 0.23500000000000001,
+            "energy": 3.0046938846697038,
+            "duration": 1627.4261775174655,
+            "return_soc": 0.624413264416287
+          }
+        ],
+        "sorties": 2,
+        "energy_kwh": 5.930962831980194,
+        "work_seconds": 3188.852355034931
+      },
+      "S002": {
+        "zone": "S002",
+        "batches": [
+          {
+            "model": "C",
+            "box_ids": [
+              "S002-FOD-01",
+              "S002-FOD-02",
+              "S002-MED-01",
+              "S002-WAT-01"
+            ],
+            "kg": 33.0,
+            "volume": 0.095,
+            "energy": 5.051954833496453,
+            "duration": 1983.081641278453,
+            "return_soc": 0.3685056458129434
+          },
+          {
+            "model": "C",
+            "box_ids": [
+              "S002-HYG-01",
+              "S002-WAT-02",
+              "S002-WAT-03"
+            ],
+            "kg": 34.0,
+            "volume": 0.089,
+            "energy": 5.073140001021789,
+            "duration": 1917.081641278453,
+            "return_soc": 0.36585749987227634
+          },
+          {
+            "model": "B",
+            "box_ids": [
+              "S002-WAT-04"
+            ],
+            "kg": 14.0,
+            "volume": 0.027,
+            "energy": 2.3698828465764947,
+            "duration": 1703.208948407359,
+            "return_soc": 0.4075292883558763
+          }
+        ],
+        "sorties": 3,
+        "energy_kwh": 12.494977681094737,
+        "work_seconds": 5603.372230964265
+      },
+      "S003": {
+        "zone": "S003",
+        "batches": [
+          {
+            "model": "C",
+            "box_ids": [
+              "S003-FOD-01",
+              "S003-FOD-02",
+              "S003-MED-01",
+              "S003-WAT-01"
+            ],
+            "kg": 33.0,
+            "volume": 0.095,
+            "energy": 5.068235937813064,
+            "duration": 2303.8095208576483,
+            "return_soc": 0.366470507773367
+          },
+          {
+            "model": "C",
+            "box_ids": [
+              "S003-HYG-01",
+              "S003-WAT-02",
+              "S003-WAT-03"
+            ],
+            "kg": 34.0,
+            "volume": 0.089,
+            "energy": 5.089889424657498,
+            "duration": 2237.8095208576483,
+            "return_soc": 0.36376382191781276
+          },
+          {
+            "model": "B",
+            "box_ids": [
+              "S003-WAT-04"
+            ],
+            "kg": 14.0,
+            "volume": 0.027,
+            "energy": 2.4234670793332462,
+            "duration": 1960.2414747964503,
+            "return_soc": 0.39413323016668844
+          }
+        ],
+        "sorties": 3,
+        "energy_kwh": 12.581592441803808,
+        "work_seconds": 6501.860516511747
+      },
+      "S004": {
+        "zone": "S004",
+        "batches": [
+          {
+            "model": "C",
+            "box_ids": [
+              "S004-HYG-01",
+              "S004-MED-01",
+              "S004-WAT-01"
+            ],
+            "kg": 23.0,
+            "volume": 0.07400000000000001,
+            "energy": 5.122369011844724,
+            "duration": 2107.184064967841,
+            "return_soc": 0.35970387351940947
+          },
+          {
+            "model": "C",
+            "box_ids": [
+              "S004-FOD-01",
+              "S004-WAT-02"
+            ],
+            "kg": 22.0,
+            "volume": 0.055,
+            "energy": 5.106257958370094,
+            "duration": 2041.184064967841,
+            "return_soc": 0.3617177552037383
+          },
+          {
+            "model": "B",
+            "box_ids": [
+              "S004-WAT-03"
+            ],
+            "kg": 14.0,
+            "volume": 0.027,
+            "energy": 2.5108422104926804,
+            "duration": 1865.7710095479192,
+            "return_soc": 0.3722894473768299
+          }
+        ],
+        "sorties": 3,
+        "energy_kwh": 12.739469180707498,
+        "work_seconds": 6014.139139483601
+      },
+      "S005": {
+        "zone": "S005",
+        "batches": [
+          {
+            "model": "C",
+            "box_ids": [
+              "S005-FOD-01",
+              "S005-HYG-01",
+              "S005-MED-01",
+              "S005-WAT-01",
+              "S005-WAT-02",
+              "S005-WAT-03"
+            ],
+            "kg": 59.0,
+            "volume": 0.156,
+            "energy": 4.2387743677705485,
+            "duration": 1880.044640635813,
+            "return_soc": 0.47015320402868144
+          }
+        ],
+        "sorties": 1,
+        "energy_kwh": 4.2387743677705485,
+        "work_seconds": 1880.044640635813
+      },
+      "S006": {
+        "zone": "S006",
+        "batches": [
+          {
+            "model": "C",
+            "box_ids": [
+              "S006-FOD-01",
+              "S006-HYG-01",
+              "S006-MED-01",
+              "S006-WAT-01",
+              "S006-WAT-02",
+              "S006-WAT-03"
+            ],
+            "kg": 59.0,
+            "volume": 0.156,
+            "energy": 2.595719692959075,
+            "duration": 1565.0350828779922,
+            "return_soc": 0.6755350383801156
+          }
+        ],
+        "sorties": 1,
+        "energy_kwh": 2.595719692959075,
+        "work_seconds": 1565.0350828779922
+      },
+      "S007": {
+        "zone": "S007",
+        "batches": [
+          {
+            "model": "C",
+            "box_ids": [
+              "S007-FOD-01",
+              "S007-HYG-01",
+              "S007-MED-01",
+              "S007-WAT-01",
+              "S007-WAT-02"
+            ],
+            "kg": 45.0,
+            "volume": 0.129,
+            "energy": 3.403349432146772,
+            "duration": 1889.224406150507,
+            "return_soc": 0.5745813209816535
+          }
+        ],
+        "sorties": 1,
+        "energy_kwh": 3.403349432146772,
+        "work_seconds": 1889.224406150507
+      },
+      "S008": {
+        "zone": "S008",
+        "batches": [
+          {
+            "model": "B",
+            "box_ids": [
+              "S008-HYG-01",
+              "S008-MED-01"
+            ],
+            "kg": 9.0,
+            "volume": 0.047,
+            "energy": 2.4957083453159146,
+            "duration": 1898.0412714869947,
+            "return_soc": 0.37607291367102136
+          },
+          {
+            "model": "B",
+            "box_ids": [
+              "S008-FOD-01"
+            ],
+            "kg": 8.0,
+            "volume": 0.028,
+            "energy": 2.479696076344567,
+            "duration": 1838.0412714869947,
+            "return_soc": 0.3800759809138583
+          },
+          {
+            "model": "B",
+            "box_ids": [
+              "S008-WAT-01"
+            ],
+            "kg": 14.0,
+            "volume": 0.027,
+            "energy": 2.595811869539141,
+            "duration": 1838.0412714869947,
+            "return_soc": 0.35104703261521475
+          },
+          {
+            "model": "B",
+            "box_ids": [
+              "S008-WAT-02"
+            ],
+            "kg": 14.0,
+            "volume": 0.027,
+            "energy": 2.595811869539141,
+            "duration": 1838.0412714869947,
+            "return_soc": 0.35104703261521475
+          }
+        ],
+        "sorties": 4,
+        "energy_kwh": 10.167028160738763,
+        "work_seconds": 7412.165085947979
+      },
+      "S009": {
+        "zone": "S009",
+        "batches": [
+          {
+            "model": "B",
+            "box_ids": [
+              "S009-FOD-01",
+              "S009-MED-01",
+              "S009-WAT-01"
+            ],
+            "kg": 25.0,
+            "volume": 0.067,
+            "energy": 2.1024528395672246,
+            "duration": 1560.7787366148573,
+            "return_soc": 0.47438679010819385
+          }
+        ],
+        "sorties": 1,
+        "energy_kwh": 2.1024528395672246,
+        "work_seconds": 1560.7787366148573
+      },
+      "S010": {
+        "zone": "S010",
+        "batches": [
+          {
+            "model": "B",
+            "box_ids": [
+              "S010-FOD-01",
+              "S010-MED-01",
+              "S010-WAT-01"
+            ],
+            "kg": 25.0,
+            "volume": 0.067,
+            "energy": 1.8210449428989826,
+            "duration": 1554.5713591276817,
+            "return_soc": 0.5447387642752544
+          }
+        ],
+        "sorties": 1,
+        "energy_kwh": 1.8210449428989826,
+        "work_seconds": 1554.5713591276817
+      },
+      "S011": {
+        "zone": "S011",
+        "batches": [
+          {
+            "model": "B",
+            "box_ids": [
+              "S011-FOD-01",
+              "S011-MED-01",
+              "S011-WAT-01"
+            ],
+            "kg": 25.0,
+            "volume": 0.067,
+            "energy": 1.077171254529726,
+            "duration": 1189.630285736439,
+            "return_soc": 0.7307071863675685
+          }
+        ],
+        "sorties": 1,
+        "energy_kwh": 1.077171254529726,
+        "work_seconds": 1189.630285736439
+      },
+      "S012": {
+        "zone": "S012",
+        "batches": [
+          {
+            "model": "C",
+            "box_ids": [
+              "S012-FOD-01",
+              "S012-MED-01",
+              "S012-WAT-01"
+            ],
+            "kg": 25.0,
+            "volume": 0.067,
+            "energy": 4.935752305577522,
+            "duration": 2066.4712315382653,
+            "return_soc": 0.3830309618028097
+          }
+        ],
+        "sorties": 1,
+        "energy_kwh": 4.935752305577522,
+        "work_seconds": 2066.4712315382653
+      },
+      "S013": {
+        "zone": "S013",
+        "batches": [
+          {
+            "model": "B",
+            "box_ids": [
+              "S013-FOD-01",
+              "S013-MED-01",
+              "S013-WAT-01"
+            ],
+            "kg": 25.0,
+            "volume": 0.067,
+            "energy": 1.82079489466599,
+            "duration": 1500.9693925601796,
+            "return_soc": 0.5448012763335025
+          }
+        ],
+        "sorties": 1,
+        "energy_kwh": 1.82079489466599,
+        "work_seconds": 1500.9693925601796
+      },
+      "S014": {
+        "zone": "S014",
+        "batches": [
+          {
+            "model": "B",
+            "box_ids": [
+              "S014-FOD-01",
+              "S014-MED-01",
+              "S014-WAT-01"
+            ],
+            "kg": 25.0,
+            "volume": 0.067,
+            "energy": 2.127681453260112,
+            "duration": 1844.5388901555675,
+            "return_soc": 0.468079636684972
+          }
+        ],
+        "sorties": 1,
+        "energy_kwh": 2.127681453260112,
+        "work_seconds": 1844.5388901555675
+      },
+      "S015": {
+        "zone": "S015",
+        "batches": [
+          {
+            "model": "B",
+            "box_ids": [
+              "S015-FOD-01",
+              "S015-MED-01",
+              "S015-WAT-01"
+            ],
+            "kg": 25.0,
+            "volume": 0.067,
+            "energy": 2.310902613019529,
+            "duration": 1829.5729924903098,
+            "return_soc": 0.42227434674511777
+          }
+        ],
+        "sorties": 1,
+        "energy_kwh": 2.310902613019529,
+        "work_seconds": 1829.5729924903098
+      }
+    },
+    "limiting_patterns": [
+      {
+        "zone": "S008",
+        "pattern_id": 1,
+        "model": "B",
+        "counts": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "kg": 14.0,
+        "volume": 0.027,
+        "energy_kwh": 2.595811869539141,
+        "critical_reserve": 0.35104703261521475
+      },
+      {
+        "zone": "S008",
+        "pattern_id": 18,
+        "model": "B",
+        "counts": [
+          0,
+          1,
+          1,
+          0
+        ],
+        "kg": 14.0,
+        "volume": 0.063,
+        "energy_kwh": 2.595811869539141,
+        "critical_reserve": 0.35104703261521475
+      }
+    ]
+  }
+]

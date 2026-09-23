@@ -1,0 +1,146 @@
+{
+  "scope": "Q1: each sortie serves one zone; indivisible boxes; no fleet/time-window constraints",
+  "maximum_aircraft_payload_kg": 80.0,
+  "maximum_aircraft_volume_m3": 0.25,
+  "lower_bound": 18,
+  "feasible_upper_bound": 18,
+  "gap": 0,
+  "globally_optimal_count": true,
+  "zones": [
+    {
+      "zone": "S001",
+      "demand_kg": 154.0,
+      "demand_m3": 0.394,
+      "mass_lower_bound": 2,
+      "volume_lower_bound": 2,
+      "lower_bound": 2,
+      "feasible_sorties": 2
+    },
+    {
+      "zone": "S002",
+      "demand_kg": 81.0,
+      "demand_m3": 0.211,
+      "mass_lower_bound": 2,
+      "volume_lower_bound": 1,
+      "lower_bound": 2,
+      "feasible_sorties": 2
+    },
+    {
+      "zone": "S003",
+      "demand_kg": 81.0,
+      "demand_m3": 0.211,
+      "mass_lower_bound": 2,
+      "volume_lower_bound": 1,
+      "lower_bound": 2,
+      "feasible_sorties": 2
+    },
+    {
+      "zone": "S004",
+      "demand_kg": 59.0,
+      "demand_m3": 0.156,
+      "mass_lower_bound": 1,
+      "volume_lower_bound": 1,
+      "lower_bound": 1,
+      "feasible_sorties": 1
+    },
+    {
+      "zone": "S005",
+      "demand_kg": 59.0,
+      "demand_m3": 0.156,
+      "mass_lower_bound": 1,
+      "volume_lower_bound": 1,
+      "lower_bound": 1,
+      "feasible_sorties": 1
+    },
+    {
+      "zone": "S006",
+      "demand_kg": 59.0,
+      "demand_m3": 0.156,
+      "mass_lower_bound": 1,
+      "volume_lower_bound": 1,
+      "lower_bound": 1,
+      "feasible_sorties": 1
+    },
+    {
+      "zone": "S007",
+      "demand_kg": 45.0,
+      "demand_m3": 0.129,
+      "mass_lower_bound": 1,
+      "volume_lower_bound": 1,
+      "lower_bound": 1,
+      "feasible_sorties": 1
+    },
+    {
+      "zone": "S008",
+      "demand_kg": 45.0,
+      "demand_m3": 0.129,
+      "mass_lower_bound": 1,
+      "volume_lower_bound": 1,
+      "lower_bound": 1,
+      "feasible_sorties": 1
+    },
+    {
+      "zone": "S009",
+      "demand_kg": 25.0,
+      "demand_m3": 0.067,
+      "mass_lower_bound": 1,
+      "volume_lower_bound": 1,
+      "lower_bound": 1,
+      "feasible_sorties": 1
+    },
+    {
+      "zone": "S010",
+      "demand_kg": 25.0,
+      "demand_m3": 0.067,
+      "mass_lower_bound": 1,
+      "volume_lower_bound": 1,
+      "lower_bound": 1,
+      "feasible_sorties": 1
+    },
+    {
+      "zone": "S011",
+      "demand_kg": 25.0,
+      "demand_m3": 0.067,
+      "mass_lower_bound": 1,
+      "volume_lower_bound": 1,
+      "lower_bound": 1,
+      "feasible_sorties": 1
+    },
+    {
+      "zone": "S012",
+      "demand_kg": 25.0,
+      "demand_m3": 0.067,
+      "mass_lower_bound": 1,
+      "volume_lower_bound": 1,
+      "lower_bound": 1,
+      "feasible_sorties": 1
+    },
+    {
+      "zone": "S013",
+      "demand_kg": 25.0,
+      "demand_m3": 0.067,
+      "mass_lower_bound": 1,
+      "volume_lower_bound": 1,
+      "lower_bound": 1,
+      "feasible_sorties": 1
+    },
+    {
+      "zone": "S014",
+      "demand_kg": 25.0,
+      "demand_m3": 0.067,
+      "mass_lower_bound": 1,
+      "volume_lower_bound": 1,
+      "lower_bound": 1,
+      "feasible_sorties": 1
+    },
+    {
+      "zone": "S015",
+      "demand_kg": 25.0,
+      "demand_m3": 0.067,
+      "mass_lower_bound": 1,
+      "volume_lower_bound": 1,
+      "lower_bound": 1,
+      "feasible_sorties": 1
+    }
+  ]
+}

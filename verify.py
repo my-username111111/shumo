@@ -7,6 +7,7 @@ from math import ceil, isclose
 
 from model import Scenario, phase_position
 from q4 import coupled_components, resource_need
+from transport_check import TransportReplay, close as independent_close
 
 
 def _close(actual: float, expected: float, label: str, tolerance: float = 1e-5) -> None:
@@ -26,6 +27,9 @@ def _no_overlap(rows: list[dict], key: str, start_key: str, end_key: str, label:
 
 
 def verify_q1(s: Scenario, q1: dict) -> dict:
+    independent = TransportReplay(s).check_q1(q1["zone_plans"])
+    for key in ("sorties", "energy_kwh", "work_seconds"):
+        independent_close(independent[key], q1["totals"][key], f"Q1 total {key}")
     seen = []
     for zone, plan in q1["zone_plans"].items():
         for batch in plan["batches"]:
@@ -43,8 +47,45 @@ def verify_q1(s: Scenario, q1: dict) -> dict:
 def _verify_transport(s: Scenario, rows: list[dict], deliveries: dict, label: str) -> dict:
     seen = []
     rebuilt_delivery = {}
+    independent = TransportReplay(s)
+    if len({r["id"] for r in rows}) != len(rows):
+        raise AssertionError(f"{label} duplicate sortie identifiers")
+    allowed_batteries = {g: {f"{g}{i:02d}" for i in range(1, n + 1)} for g, n in s.battery_count.items()}
     for row in rows:
+        if s.aircraft.get(row["drone"]) != row["model"]:
+            raise AssertionError(f"{label} unknown or wrong-model aircraft")
+        if row["battery"] not in allowed_batteries.get(row["model"], set()):
+            raise AssertionError(f"{label} unknown or wrong-model battery")
+        if row["start"] < 0:
+            raise AssertionError(f"{label} negative sortie start")
+        audited = independent.evaluate(row["model"], [(z, list(bs)) for z, bs in row["visits"]])
+        independent_close(audited["energy_kwh"], row["energy_kwh"], f"{label} independent energy")
+        independent_close(audited["duration"] + row["start"], row["return_time"], f"{label} independent duration")
+        independent_close(audited["return_soc"], row["return_soc"], f"{label} independent SOC")
+        soc, full = audited["return_soc"], s.battery_charge[row["model"]]
+        charging = (full * (0.65 * (0.9 - soc) / 0.9 + 0.35) if soc < 0.9
+                    else full * 0.35 * (1 - soc) / 0.1)
+        independent_close(row["return_time"] + charging, row["battery_ready"], f"{label} independent charge")
         replay = s.route(row["model"], [(z, list(boxes)) for z, boxes in row["visits"]])
+        for key in ("load_kg", "load_m3"):
+            if key in row:
+                independent_close(audited[key], row[key], f"{label} independent {key}")
+        if "route" in row:
+            stored = row["route"]
+            if stored["box_ids"] != replay["box_ids"] or len(stored["phases"]) != len(replay["phases"]):
+                raise AssertionError(f"{label} stored route structure mismatch")
+            for key in ("energy_kwh", "duration", "return_soc", "load_kg", "load_m3"):
+                independent_close(audited[key], stored[key], f"{label} stored route {key}")
+            for old, expected in zip(stored["phases"], replay["phases"]):
+                if old["kind"] != expected["kind"]:
+                    raise AssertionError(f"{label} stored phase type mismatch")
+                for key in ("t0", "t1"):
+                    independent_close(old[key], expected[key], f"{label} phase {key}")
+                for key in ("a", "b"):
+                    if len(old[key]) != 3:
+                        raise AssertionError(f"{label} invalid phase coordinates")
+                    for axis in range(3):
+                        independent_close(old[key][axis], expected[key][axis], f"{label} phase position", 1e-9)
         _close(replay["energy_kwh"], row["energy_kwh"], f"{label} energy {row['id']}")
         _close(row["start"] + replay["duration"], row["return_time"], f"{label} return {row['id']}")
         _close(replay["return_soc"], row["return_soc"], f"{label} SOC {row['id']}")
@@ -52,6 +93,7 @@ def _verify_transport(s: Scenario, rows: list[dict], deliveries: dict, label: st
         _close(expected_ready, row["battery_ready"], f"{label} battery recharge {row['id']}")
         seen.extend(replay["box_ids"])
         for bid, relative in replay["delivery"].items():
+            independent_close(relative, audited["delivery"][bid], f"{label} independent delivery")
             rebuilt_delivery[bid] = row["start"] + relative
     counts = Counter(seen)
     if set(counts) != set(s.boxes) or any(n != 1 for n in counts.values()):

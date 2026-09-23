@@ -10,7 +10,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 from functools import lru_cache
-from math import asin, cos, floor, log10, radians, sin, sqrt
+from math import asin, cos, floor, isfinite, log10, radians, sin, sqrt
 from pathlib import Path
 from typing import Iterable
 
@@ -133,50 +133,38 @@ class DEM:
         return z
 
     def crossed_pixels(self, a: tuple[float, float], b: tuple[float, float]) -> list[tuple[int, int]]:
-        """Raster supercover for a straight lon/lat segment (including corners)."""
+        """Closed-cell supercover, including BOTH sides of grid edges.
+
+        Partition the segment at all grid crossings; sample crossings and open
+        intervals. Touching a corner includes every incident in-domain cell.
+        Coordinates within 1e-9 pixel of a grid line are conservatively snapped.
+        """
         x0, y0 = self.pixel(*a)
         x1, y1 = self.pixel(*b)
-        dx, dy = x1 - x0, y1 - y0
-        ix, iy = floor(x0), floor(y0)
-        ex, ey = floor(x1), floor(y1)
-        sx = 1 if dx > 0 else -1 if dx < 0 else 0
-        sy = 1 if dy > 0 else -1 if dy < 0 else 0
-        tx = ((ix + 1 - x0) / dx) if dx > 0 else ((ix - x0) / dx) if dx < 0 else float("inf")
-        ty = ((iy + 1 - y0) / dy) if dy > 0 else ((iy - y0) / dy) if dy < 0 else float("inf")
-        stepx = abs(1 / dx) if dx else float("inf")
-        stepy = abs(1 / dy) if dy else float("inf")
-        result: list[tuple[int, int]] = []
-        seen = set()
-
-        def add(x: int, y: int) -> None:
-            if not (0 <= x < self.width and 0 <= y < self.nrows):
+        for x, y in ((x0, y0), (x1, y1)):
+            if not (isfinite(x) and isfinite(y) and 0 <= x < self.width and 0 <= y < self.nrows):
                 raise ValueError("Flight segment exits the DEM coverage")
-            if (x, y) not in seen:
-                seen.add((x, y))
-                result.append((x, y))
-
-        add(ix, iy)
-        while (ix, iy) != (ex, ey):
-            if abs(tx - ty) < 1e-12:
-                add(ix + sx, iy)
-                add(ix, iy + sy)
-                ix, iy = ix + sx, iy + sy
-                tx += stepx
-                ty += stepy
-            elif tx < ty:
-                ix += sx
-                tx += stepx
-            else:
-                iy += sy
-                ty += stepy
-            add(ix, iy)
-        return result
+        events = {0.0, 1.0}
+        for v0, v1 in ((x0, x1), (y0, y1)):
+            if v0 != v1:
+                events.update((k - v0) / (v1 - v0)
+                              for k in range(floor(min(v0, v1)) + 1, floor(max(v0, v1)) + 1)
+                              if 0 < (k - v0) / (v1 - v0) < 1)
+        ordered = sorted(events)
+        samples = ordered + [(p + q) / 2 for p, q in zip(ordered, ordered[1:])]
+        def cells(v: float) -> tuple[int, ...]:
+            k = round(v)
+            return (k - 1, k) if abs(v - k) <= 1e-9 else (floor(v),)
+        seen = {(x, y) for u in samples
+                for x in cells(x0 + u * (x1 - x0))
+                for y in cells(y0 + u * (y1 - y0))
+                if 0 <= x < self.width and 0 <= y < self.nrows}
+        return sorted(seen)
 
     def peak(self, a: tuple[float, float], b: tuple[float, float]) -> float:
         vals = [float(self.values[y, x]) for x, y in self.crossed_pixels(a, b)]
-        vals = [v for v in vals if v != self.nodata and np.isfinite(v)]
-        if not vals:
-            raise ValueError("Flight segment has no DEM data")
+        if not vals or any(v == self.nodata or not np.isfinite(v) for v in vals):
+            raise ValueError("Flight segment intersects missing DEM data")
         return max(vals)
 
 
@@ -200,15 +188,20 @@ class Scenario:
         self.dem = DEM(dem_files[0])
 
         node_rows = list(load_workbook(data_dir / "调度中心与服务区.xlsx", read_only=True, data_only=True).active.values)
+        self._unique_ids([node_rows[2], *node_rows[6:21]], "nodes")
         self.nodes = {r[0]: Node(r[0], float(r[2]), float(r[3]), float(r[4]))
                       for r in [node_rows[2], *node_rows[6:21]]}
         demand_rows = list(load_workbook(data_dir / "物资需求与配送时限.xlsx", read_only=True, data_only=True)["逐箱货箱清单"].values)[1:]
+        self._unique_ids(demand_rows, "boxes")
         self.boxes = {r[0]: Box(r[0], r[1], r[2], float(r[3]), float(r[4]), r[5] == "是",
                                 int(r[6]) if r[6] is not None else None, int(r[7]), int(r[8]))
                       for r in demand_rows}
         self.zone_boxes = {z: [b for b in self.boxes.values() if b.zone == z]
                            for z in self.nodes if z != "O01"}
         transport_rows = list(load_workbook(data_dir / "运输无人机数据.xlsx", read_only=True, data_only=True).active.values)
+        self._unique_ids(transport_rows[2:5], "transport types")
+        self._unique_ids(transport_rows[8:16], "aircraft")
+        self._unique_ids(transport_rows[19:22], "battery types")
         self.transport = {
             r[0]: TransportType(r[0], float(r[2]), float(r[3]), float(r[4]), float(r[5]),
                                 float(r[6]), float(r[7]), float(r[8]), float(r[9]) / 100,
@@ -219,6 +212,7 @@ class Scenario:
         self.aircraft = {r[0]: r[1] for r in transport_rows[8:16]}
         self.battery_count = {r[0]: int(r[1]) for r in transport_rows[19:22]}
         self.battery_charge = {r[0]: int(r[2]) for r in transport_rows[19:22]}
+        self.validate_transport_data()
 
         relay_rows = list(load_workbook(data_dir / "中继无人机数据.xlsx", read_only=True, data_only=True).active.values)
         r = relay_rows[2]
@@ -241,6 +235,36 @@ class Scenario:
             "relay_backhaul": (float(radio_rows[11][4]), float(radio_rows[12][4])),
             "gateway": (float(radio_rows[13][4]), float(radio_rows[14][4])),
         }
+
+    @staticmethod
+    def _unique_ids(rows: list, label: str) -> None:
+        ids = [r[0] for r in rows]
+        if any(not isinstance(i, str) or not i.strip() for i in ids) or len(ids) != len(set(ids)):
+            raise ValueError(f"Missing or duplicate {label} identifiers")
+
+    def validate_transport_data(self) -> None:
+        """Fail early on malformed inputs; no silent dictionary overwrites."""
+        if "O01" not in self.nodes or not self.boxes or not self.transport:
+            raise ValueError("Missing depot, boxes or transport models")
+        for n in self.nodes.values():
+            if not all(isfinite(v) for v in (n.lon, n.lat, n.ground)) or not self.dem.inside(n.lon, n.lat):
+                raise ValueError(f"Invalid node {n.id}")
+            self.dem.height(n.lon, n.lat)
+        for b in self.boxes.values():
+            if b.zone not in self.zone_boxes or not all(isfinite(v) and v > 0 for v in (b.kg, b.volume)):
+                raise ValueError(f"Invalid cargo {b.id}")
+        for g, t in self.transport.items():
+            positive = (t.empty_kg, t.max_kg, t.max_volume, t.speed, t.empty_range,
+                        t.full_range, t.battery_kwh, t.climb_speed, t.descend_speed, t.climb_efficiency)
+            if (not all(isfinite(v) and v > 0 for v in positive) or
+                t.full_range > t.empty_range or not 0 < t.climb_efficiency <= 1 or
+                not 0 <= t.reserve < 1 or
+                any(not isfinite(v) or v < 0 for v in (t.prepare, t.load_each, t.handoff, t.handoff_each))):
+                raise ValueError(f"Invalid transport parameters {g}")
+            if self.battery_count.get(g, 0) <= 0 or self.battery_charge.get(g, 0) <= 0:
+                raise ValueError(f"Missing battery inventory/charge time for {g}")
+        if any(g not in self.transport for g in self.aircraft.values()):
+            raise ValueError("Aircraft refers to unknown transport model")
 
     @lru_cache(maxsize=None)
     def node_leg(self, origin: str, destination: str) -> Leg:

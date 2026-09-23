@@ -1,0 +1,33 @@
+{
+  "python": "3.12.14",
+  "elapsed_seconds": 24.377014899626374,
+  "data_directory_label": "数据",
+  "reserve_range": [
+    0.0,
+    1.0
+  ],
+  "input_sha256": {
+    "无人机应急物资运输基础数据\\中继无人机数据.xlsx": "be52643ff29419233e6a141dca03a04160a8af551cab36d8c49b51bb836bea04",
+    "无人机应急物资运输基础数据\\物资需求与配送时限.xlsx": "5a3346159ceddcf585859d270b8f62114b388a1f737fbe64ffde0ee1fdc8170a",
+    "无人机应急物资运输基础数据\\调度中心与服务区.xlsx": "541a7af1ded08c9a3ff448480332cb5f6a54902f0afa6e9bcd50c1d2b2b34e38",
+    "无人机应急物资运输基础数据\\运输无人机数据.xlsx": "9296a657c07e042afba6aeea7999665d9cd24e00b592fd6c269de6e338480dcb",
+    "无人机应急物资运输基础数据\\通信链路参数.xlsx": "1860d153199e7ae460ba36e83b673374e640e19de91ea167f2877271001f5f81",
+    "镇龙乡地理空间数据\\镇龙乡及周边地理数据\\数字高程模型数据（DEM）\\镇龙乡及周边30米DEM.tif": "741fe6de0b2bcaffd0f4007f574ee698d46197094f52cc954b532c4f90fc7c03"
+  },
+  "code_sha256": {
+    "coordination.py": "57f15cdbdf47a5613010dc5dc0046534d0a32d02f0d7b813e027cfd93a3e8d07",
+    "figures.py": "458d27bde4cdcbf2ce8f9e002bda94ebbe65bbc6a24a4ecd3216289260ea8165",
+    "model.py": "642649586fb755593f674dc4e070779a9aeb05a11cf9ce87ae3c23e389fbd20b",
+    "q1.py": "d6c2c74977252e85e92f98d13b13cda5089c5e3b0ec4265726b48f067bbf8e2a",
+    "q1_frontier.py": "54efb4c10eb56fe35ed56c0bb5235d8b69d616028ae13ee7e8998221e41b7fc4",
+    "q1_reference.py": "eda451a78aa5137c4f77a6f67261def6d4b4645ffdcd8dde25456a097d5f9a2d",
+    "q2.py": "5235c8d1a5f06c57edcabcd284ece85aed4f631c0c8d3267e3a657b8506bfc83",
+    "q3.py": "010f3511e1e6ed05a091f91b295719054ab075709d5fd8ba098480c729d76396",
+    "q4.py": "49b744a85c3ca59f4a8e79e02df51e52d684946512aadfd7429a9df0ad258e90",
+    "run.py": "bd94e5376478d942fb1fc54057bfa463855c434fe795442783cfc528806d5801",
+    "run_q1.py": "b806989a2f2011d6b9d3f9bdc1c71782cf62e7a53275b32df7d2a8ec59766a8f",
+    "tests\\test_q1_upgrade.py": "bbcc0ea84e16a97ad7d94d6f11b3e6f19435fbf65ef587a612d6312c81586468",
+    "transport_check.py": "b0ac958934bccf52fbdeedadc0b45a6d7910b2cc4139fd0d62b02dd5acdcf9a9",
+    "verify.py": "66955d95b518ec250b9601d66d6e347871a4818cf5e576adb249df30b93e5257"
+  }
+}

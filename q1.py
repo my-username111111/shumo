@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
+from math import isfinite
 
 from model import Box, Scenario
 
@@ -27,6 +28,8 @@ def direct_energy(s: Scenario, zone: str, model: str, payload: float) -> float:
 def safe_payload(s: Scenario, zone: str, model: str, reserve: float | None = None) -> float:
     t = s.transport[model]
     rho = t.reserve if reserve is None else reserve
+    if not isfinite(rho) or not 0 <= rho <= 1:
+        raise ValueError("Reserve must be finite and in [0, 1]")
     limit = (1 - rho) * t.battery_kwh
     if direct_energy(s, zone, model, 0.0) > limit + 1e-10:
         return 0.0
@@ -42,8 +45,27 @@ def safe_payload(s: Scenario, zone: str, model: str, reserve: float | None = Non
     return lo
 
 
+def safe_payload_status(s: Scenario, zone: str, model: str, reserve: float | None = None) -> dict:
+    """Distinguish an infeasible empty round trip from a zero payload limit."""
+    t = s.transport[model]
+    rho = t.reserve if reserve is None else reserve
+    payload = safe_payload(s, zone, model, rho)
+    empty = direct_energy(s, zone, model, 0.0)
+    feasible = empty <= (1 - rho) * t.battery_kwh + 1e-10
+    return dict(empty_round_trip_feasible=feasible, max_payload_kg=payload if feasible else None,
+                empty_energy_kwh=empty, reserve=rho,
+                status="infeasible_empty_round_trip" if not feasible else
+                       "nameplate_limited" if payload == t.max_kg else "energy_limited")
+
+
 def enumerate_batches(s: Scenario, zone: str, reserve: float | None = None,
-                      box_ids: set[str] | None = None) -> tuple[list[Box], list[Batch | None]]:
+                      box_ids: set[str] | None = None, objective: str = "energy") -> tuple[list[Box], list[Batch | None]]:
+    if objective not in ("energy", "time"):
+        raise ValueError("objective must be energy or time")
+    if reserve is not None and (not isfinite(reserve) or not 0 <= reserve <= 1):
+        raise ValueError("Reserve must be finite and in [0, 1]")
+    if box_ids is not None and not box_ids <= {b.id for b in s.zone_boxes[zone]}:
+        raise ValueError("Unknown or wrong-zone cargo subset")
     boxes = sorted((b for b in s.zone_boxes[zone] if box_ids is None or b.id in box_ids), key=lambda b: b.id)
     n = len(boxes)
     total = 1 << n
@@ -74,15 +96,17 @@ def enumerate_batches(s: Scenario, zone: str, reserve: float | None = None,
                         t.handoff + count[mask] * t.handoff_each)
             batch = Batch(model, tuple(boxes[i].id for i in range(n) if mask & (1 << i)),
                           mass[mask], volume[mask], duration, energy, 1 - energy / t.battery_kwh)
-            if best is None or (batch.energy, batch.duration, model) < (best.energy, best.duration, best.model):
+            key = lambda b: ((b.energy, b.duration, b.model) if objective == "energy"
+                             else (b.duration, b.energy, b.model))
+            if best is None or key(batch) < key(best):
                 best = batch
         candidates[mask] = best
     return boxes, candidates
 
 
 def solve_zone(s: Scenario, zone: str, reserve: float | None = None,
-               box_ids: set[str] | None = None) -> dict:
-    boxes, candidates = enumerate_batches(s, zone, reserve, box_ids)
+               box_ids: set[str] | None = None, objective: str = "energy") -> dict:
+    boxes, candidates = enumerate_batches(s, zone, reserve, box_ids, objective)
     total = 1 << len(boxes)
     # Each chosen subset includes the least significant unsatisfied box. This
     # removes duplicate ordering of the same partition and remains exact.
@@ -99,7 +123,9 @@ def solve_zone(s: Scenario, zone: str, reserve: float | None = None,
             if sub & anchor and candidate is not None:
                 prior = dp[mask ^ sub]
                 if prior is not None:
-                    value = (prior[0] + 1, prior[1] + candidate.energy, prior[2] + candidate.duration)
+                    increments = ((candidate.energy, candidate.duration) if objective == "energy"
+                                  else (candidate.duration, candidate.energy))
+                    value = (prior[0] + 1, prior[1] + increments[0], prior[2] + increments[1])
                     if best is None or value < best:
                         best, best_sub = value, sub
             sub = (sub - 1) & mask
@@ -117,7 +143,8 @@ def solve_zone(s: Scenario, zone: str, reserve: float | None = None,
         result.append(batch)
         mask ^= sub
     return dict(zone=zone, batches=[vars(b) for b in result],
-                sorties=dp[full][0], energy_kwh=dp[full][1], work_seconds=dp[full][2])
+                sorties=dp[full][0], energy_kwh=sum(b.energy for b in result),
+                work_seconds=sum(b.duration for b in result))
 
 
 def solve_all(s: Scenario, sensitivity: bool = True) -> dict:
