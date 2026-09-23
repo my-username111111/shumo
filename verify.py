@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 from collections import Counter, defaultdict
-from math import ceil, isclose
+from math import ceil, isclose, isfinite
 
 from model import Scenario, phase_position
 from q4 import coupled_components, resource_need
@@ -11,8 +11,13 @@ from transport_check import TransportReplay, close as independent_close
 
 
 def _close(actual: float, expected: float, label: str, tolerance: float = 1e-5) -> None:
-    if not isclose(actual, expected, rel_tol=tolerance, abs_tol=tolerance):
+    if not (isfinite(actual) and isfinite(expected)) or not isclose(actual, expected, rel_tol=tolerance, abs_tol=tolerance):
         raise AssertionError(f"{label}: {actual} != {expected}")
+
+
+def _nonnegative(value: float, label: str) -> None:
+    if not isfinite(value) or value < -1e-8:
+        raise AssertionError(f"{label} must be finite and nonnegative: {value}")
 
 
 def _no_overlap(rows: list[dict], key: str, start_key: str, end_key: str, label: str) -> None:
@@ -47,17 +52,23 @@ def verify_q1(s: Scenario, q1: dict) -> dict:
 def _verify_transport(s: Scenario, rows: list[dict], deliveries: dict, label: str) -> dict:
     seen = []
     rebuilt_delivery = {}
+    rebuilt_source = {}
     independent = TransportReplay(s)
     if len({r["id"] for r in rows}) != len(rows):
         raise AssertionError(f"{label} duplicate sortie identifiers")
     allowed_batteries = {g: {f"{g}{i:02d}" for i in range(1, n + 1)} for g, n in s.battery_count.items()}
     for row in rows:
-        if s.aircraft.get(row["drone"]) != row["model"]:
+        sid = row["id"]
+        if not isinstance(sid, str) or not sid:
+            raise AssertionError(f"{label} invalid sortie identifier")
+        if row["model"] not in s.transport or s.aircraft.get(row["drone"]) != row["model"]:
             raise AssertionError(f"{label} unknown or wrong-model aircraft")
         if row["battery"] not in allowed_batteries.get(row["model"], set()):
             raise AssertionError(f"{label} unknown or wrong-model battery")
-        if row["start"] < 0:
-            raise AssertionError(f"{label} negative sortie start")
+        for field in ("start", "return_time", "battery_ready"):
+            _nonnegative(row[field], f"{label} {field} {sid}")
+        if row["return_time"] <= row["start"]:
+            raise AssertionError(f"{label} invalid sortie interval: {sid}")
         audited = independent.evaluate(row["model"], [(z, list(bs)) for z, bs in row["visits"]])
         independent_close(audited["energy_kwh"], row["energy_kwh"], f"{label} independent energy")
         independent_close(audited["duration"] + row["start"], row["return_time"], f"{label} independent duration")
@@ -86,15 +97,34 @@ def _verify_transport(s: Scenario, rows: list[dict], deliveries: dict, label: st
                         raise AssertionError(f"{label} invalid phase coordinates")
                     for axis in range(3):
                         independent_close(old[key][axis], expected[key][axis], f"{label} phase position", 1e-9)
+        _close(replay["load_kg"], row["load_kg"], f"{label} load mass {sid}")
+        _close(replay["load_m3"], row["load_m3"], f"{label} load volume {sid}")
         _close(replay["energy_kwh"], row["energy_kwh"], f"{label} energy {row['id']}")
         _close(row["start"] + replay["duration"], row["return_time"], f"{label} return {row['id']}")
         _close(replay["return_soc"], row["return_soc"], f"{label} SOC {row['id']}")
         expected_ready = row["return_time"] + s.charge_time(row["return_soc"], s.battery_charge[row["model"]])
         _close(expected_ready, row["battery_ready"], f"{label} battery recharge {row['id']}")
+        stored_route = row["route"]
+        stored_visits = [(z, list(boxes)) for z, boxes in stored_route["visits"]]
+        if stored_visits != replay["visits"] or stored_route["box_ids"] != replay["box_ids"]:
+            raise AssertionError(f"{label} stored route differs from visits: {sid}")
+        if len(stored_route["phases"]) != len(replay["phases"]):
+            raise AssertionError(f"{label} stored route phase count differs: {sid}")
+        for actual, expected in zip(stored_route["phases"], replay["phases"]):
+            if actual["kind"] != expected["kind"]:
+                raise AssertionError(f"{label} stored route phase differs: {sid}")
+            for field in ("t0", "t1"):
+                _close(actual[field], expected[field], f"{label} phase {field} {sid}")
+            for field in ("a", "b"):
+                if len(actual[field]) != len(expected[field]):
+                    raise AssertionError(f"{label} phase {field} dimension differs: {sid}")
+                for coordinate, expected_coordinate in zip(actual[field], expected[field]):
+                    _close(coordinate, expected_coordinate, f"{label} phase {field} {sid}")
         seen.extend(replay["box_ids"])
         for bid, relative in replay["delivery"].items():
             independent_close(relative, audited["delivery"][bid], f"{label} independent delivery")
             rebuilt_delivery[bid] = row["start"] + relative
+            rebuilt_source[bid] = (sid, s.boxes[bid].zone)
     counts = Counter(seen)
     if set(counts) != set(s.boxes) or any(n != 1 for n in counts.values()):
         raise AssertionError(f"{label} does not deliver every box exactly once")
@@ -102,6 +132,8 @@ def _verify_transport(s: Scenario, rows: list[dict], deliveries: dict, label: st
         raise AssertionError(f"{label} delivery table does not cover every box")
     for bid, expected in rebuilt_delivery.items():
         _close(expected, deliveries[bid]["time"], f"{label} box time {bid}")
+        if (deliveries[bid]["sortie"], deliveries[bid]["zone"]) != rebuilt_source[bid]:
+            raise AssertionError(f"{label} delivery source mismatch: {bid}")
         hard = s.boxes[bid].hard_deadline
         if hard is not None and expected > hard + 1e-6:
             raise AssertionError(f"{label} hard deadline exceeded: {bid}")
@@ -110,8 +142,35 @@ def _verify_transport(s: Scenario, rows: list[dict], deliveries: dict, label: st
     return dict(boxes=len(seen), sorties=len(rows), hard_boxes=sum(b.hard_deadline is not None for b in s.boxes.values()))
 
 
+def _verify_q2_plan(s: Scenario, plan: dict, label: str) -> dict:
+    checked = _verify_transport(s, plan["sorties"], plan["deliveries"], label)
+    # Legacy callers may supply only routes and deliveries for a transport
+    # feasibility check; exported Q2 plans include an objective to audit.
+    if "objective" not in plan:
+        return checked
+    rows = plan["sorties"]
+    deliveries = plan["deliveries"]
+    objective = plan["objective"]
+    expected = dict(
+        weighted_delivery_seconds=sum(s.boxes[bid].priority * row["time"]
+                                      for bid, row in deliveries.items()),
+        weighted_soft_delay_seconds=sum(s.boxes[bid].priority * max(0.0, row["time"] - s.boxes[bid].desired)
+                                        for bid, row in deliveries.items()
+                                        if s.boxes[bid].hard_deadline is None),
+        makespan=max(row["return_time"] for row in rows),
+        energy_kwh=sum(row["energy_kwh"] for row in rows),
+        sortie_count=len(rows),
+    )
+    for key, value in expected.items():
+        _close(objective[key], value, f"{label} objective {key}")
+    return checked
+
+
 def verify_q2(s: Scenario, q2: dict) -> dict:
-    return _verify_transport(s, q2["sorties"], q2["deliveries"], "Q2")
+    checked = _verify_q2_plan(s, q2, "Q2")
+    for name, alternative in q2.get("alternatives", {}).items():
+        _verify_q2_plan(s, alternative, f"Q2 alternative {name}")
+    return dict(**checked, alternatives_checked=len(q2.get("alternatives", {})))
 
 
 def verify_q3(s: Scenario, q3: dict, sample_seconds: float = 1.0) -> dict:

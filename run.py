@@ -5,7 +5,10 @@ from __future__ import annotations
 import argparse
 import csv
 import json
+from copy import copy
 from pathlib import Path
+
+from openpyxl import load_workbook
 
 from figures import create_all
 from coordination import solve as solve_coordination
@@ -14,7 +17,7 @@ from q1 import solve_all as solve_q1
 from q2 import solve as solve_q2
 from q3 import solve as solve_q3
 from q4 import RESOURCE_KEYS, solve as solve_q4
-from verify import verify_all
+from verify import verify_all, verify_q2
 
 
 def save_json(path: Path, obj: object) -> None:
@@ -42,10 +45,91 @@ def delivery_rows(deliveries: dict) -> list[dict]:
             for bid, x in sorted(deliveries.items())]
 
 
+def write_q2_workbook(path: Path, q2: dict) -> None:
+    """Fill only Q2 sheets in a copy of the supplied result template."""
+    template = Path(__file__).resolve().parent.parent / "结果提交模板.xlsx"
+    workbook = load_workbook(template)
+    rows_by_sheet = {
+        "Q2_运输架次": [
+            (r["id"], r["drone"], r["model"], r["battery"], round(r["start"], 6),
+             "→".join(zone for zone, _ in r["visits"]), round(r["return_time"], 6),
+             round(r["energy_kwh"], 6))
+            for r in q2["sorties"]
+        ],
+        "Q2_逐箱交付": [
+            (bid, item["sortie"], item["zone"], round(item["time"], 6))
+            for bid, item in sorted(q2["deliveries"].items())
+        ],
+    }
+    for sheet_name, rows in rows_by_sheet.items():
+        sheet = workbook[sheet_name]
+        for row_number, values in enumerate(rows, 2):
+            for column, value in enumerate(values, 1):
+                target = sheet.cell(row_number, column, value)
+                if row_number > 2:
+                    source = sheet.cell(2, column)
+                    target._style = copy(source._style)
+                    target.alignment = copy(source.alignment)
+                    target.protection = copy(source.protection)
+    workbook.save(path)
+
+
+def export_q2(output: Path, s: Scenario, q2: dict, checked: dict) -> None:
+    output.mkdir(parents=True, exist_ok=True)
+    save_json(output / "q2.json", q2)
+    save_json(output / "q2_validation.json", checked)
+    transport_fields = ["sortie", "drone", "model", "battery", "start_s", "visits", "return_s",
+                        "energy_kwh", "return_soc_pct", "boxes"]
+    delivery_fields = ["box", "sortie", "zone", "delivered_s"]
+    save_csv(output / "q2_transport_sorties.csv", transport_fields, transport_rows(q2["sorties"]))
+    save_csv(output / "q2_box_deliveries.csv", delivery_fields, delivery_rows(q2["deliveries"]))
+    plans = {"soft_delay_priority": q2, **q2.get("alternatives", {})}
+    tradeoff = []
+    resource_rows = []
+    deadline_rows = []
+    for name, alternative in plans.items():
+        tradeoff.append(dict(scheme=name, **alternative["objective"]))
+        for row in alternative["sorties"]:
+            common = dict(scheme=name, sortie=row["id"], model=row["model"])
+            resource_rows.extend((
+                dict(**common, resource_type="aircraft", resource_id=row["drone"],
+                     activity="flight", start_s=row["start"], end_s=row["return_time"]),
+                dict(**common, resource_type="battery", resource_id=row["battery"],
+                     activity="flight", start_s=row["start"], end_s=row["return_time"]),
+                dict(**common, resource_type="battery", resource_id=row["battery"],
+                     activity="charging", start_s=row["return_time"], end_s=row["battery_ready"]),
+            ))
+        for bid, item in sorted(alternative["deliveries"].items()):
+            box = s.boxes[bid]
+            deadline_rows.append(dict(
+                scheme=name, box=bid, kind=box.kind, priority=box.priority,
+                desired_s=box.desired, hard_deadline_s=box.hard_deadline,
+                delivered_s=item["time"], hard_slack_s=(box.hard_deadline - item["time"]
+                                                         if box.hard_deadline is not None else ""),
+                soft_delay_s=(max(0.0, item["time"] - box.desired)
+                              if box.hard_deadline is None else "")))
+    for name, alternative in q2.get("alternatives", {}).items():
+        save_csv(output / f"q2_{name}_transport_sorties.csv", transport_fields,
+                 transport_rows(alternative["sorties"]))
+        save_csv(output / f"q2_{name}_box_deliveries.csv", delivery_fields,
+                 delivery_rows(alternative["deliveries"]))
+    save_csv(output / "q2_tradeoff.csv",
+             ["scheme", "weighted_delivery_seconds", "weighted_soft_delay_seconds",
+              "makespan", "energy_kwh", "sortie_count"], tradeoff)
+    save_csv(output / "q2_resource_timeline.csv",
+             ["scheme", "sortie", "model", "resource_type", "resource_id",
+              "activity", "start_s", "end_s"], resource_rows)
+    save_csv(output / "q2_deadline_audit.csv",
+             ["scheme", "box", "kind", "priority", "desired_s", "hard_deadline_s",
+              "delivered_s", "hard_slack_s", "soft_delay_s"], deadline_rows)
+    write_q2_workbook(output / "q2_result_template.xlsx", q2)
+
+
 def export(output: Path, s: Scenario, q1: dict, q2: dict, q3: dict, q4: dict, checks: dict) -> None:
     output.mkdir(parents=True, exist_ok=True)
-    for name, obj in (("q1", q1), ("q2", q2), ("q3", q3), ("q4", q4), ("validation", checks)):
+    for name, obj in (("q1", q1), ("q3", q3), ("q4", q4), ("validation", checks)):
         save_json(output / f"{name}.json", obj)
+    export_q2(output, s, q2, checks["q2"])
 
     payload = [dict(zone=z, model=g, safe_payload_kg=round(value, 6))
                for z, values in q1["max_safe_payload_kg"].items() for g, value in values.items()]
@@ -72,8 +156,6 @@ def export(output: Path, s: Scenario, q1: dict, q2: dict, q3: dict, q4: dict, ch
     transport_fields = ["sortie", "drone", "model", "battery", "start_s", "visits", "return_s",
                         "energy_kwh", "return_soc_pct", "boxes"]
     delivery_fields = ["box", "sortie", "zone", "delivered_s"]
-    save_csv(output / "q2_transport_sorties.csv", transport_fields, transport_rows(q2["sorties"]))
-    save_csv(output / "q2_box_deliveries.csv", delivery_fields, delivery_rows(q2["deliveries"]))
     save_csv(output / "q3_transport_sorties.csv", transport_fields, transport_rows(q3["transport_sorties"]))
     save_csv(output / "q3_box_deliveries.csv", delivery_fields, delivery_rows(q3["deliveries"]))
 
@@ -138,10 +220,16 @@ def export(output: Path, s: Scenario, q1: dict, q2: dict, q3: dict, q4: dict, ch
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="Solve the D problem with the supplied data folder")
-    parser.add_argument("--output", type=Path, default=Path(__file__).resolve().parent / "results")
+    default_output = Path(__file__).resolve().parent / "results"
+    parser.add_argument("--output", type=Path, default=default_output)
     parser.add_argument("--no-sensitivity", action="store_true", help="Skip Q1 reserve sensitivity")
     parser.add_argument("--no-merge", action="store_true", help="Keep initial single-zone Q2 jobs")
+    parser.add_argument("--only-q2", action="store_true", help="Solve and verify Q2, then fill its result-template sheets")
     parser.add_argument("--no-coordination", action="store_true", help="Use the original fixed-Q2 relay plan")
+    parser.add_argument("--q3-seed", choices=("soft_delay_priority", "zero_delay_efficient",
+                                              "delivery_priority", "energy_guarded",
+                                              "energy_guarded_timely"),
+                        default="energy_guarded", help="Q2 candidate used to initialize Q3")
     parser.add_argument("--coordination-rounds", type=int, default=2,
                         help="Communication-guided search rounds (default: 2)")
     parser.add_argument("--coordination-trials", type=int, default=3,
@@ -151,17 +239,30 @@ def main() -> None:
     parser.add_argument("--no-figures", action="store_true", help="Skip static result figures")
     args = parser.parse_args()
     scenario = Scenario()
+    if args.only_q2:
+        if args.output == default_output:
+            args.output = default_output / "q2_only"
+        print("Q2: transport and shared batteries", flush=True)
+        q2 = solve_q2(scenario, improve=not args.no_merge)
+        checked = verify_q2(scenario, q2)
+        export_q2(args.output, scenario, q2, checked)
+        print(json.dumps(dict(primary=q2["objective"],
+                              alternatives={name: plan["objective"] for name, plan in q2["alternatives"].items()},
+                              validation=checked), ensure_ascii=False, indent=2), flush=True)
+        return
     print("Q1: exact per-zone partition", flush=True)
     q1 = solve_q1(scenario, sensitivity=not args.no_sensitivity)
     print("Q2: transport and shared batteries", flush=True)
     q2 = solve_q2(scenario, improve=not args.no_merge)
     print("Q3: communication-guided transport and relay search", flush=True)
+    q3_seed = q2 if args.q3_seed == "soft_delay_priority" else q2["alternatives"][args.q3_seed]
     if args.no_coordination:
-        q3 = solve_q3(scenario, q2)
+        q3 = solve_q3(scenario, q3_seed)
     else:
-        q3 = solve_coordination(scenario, q2, rounds=args.coordination_rounds,
+        q3 = solve_coordination(scenario, q3_seed, rounds=args.coordination_rounds,
                                 trials_per_round=args.coordination_trials,
                                 promotion_trials=args.promotion_trials)
+    q3.setdefault("search", {})["q2_seed_policy"] = args.q3_seed
     print("Q4: independent task-group resources", flush=True)
     q4 = solve_q4(scenario, q3)
     print("Replay verification", flush=True)
