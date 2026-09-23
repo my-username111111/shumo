@@ -8,6 +8,7 @@ import json
 from pathlib import Path
 
 from figures import create_all
+from coordination import solve as solve_coordination
 from model import Scenario
 from q1 import solve_all as solve_q1
 from q2 import solve as solve_q2
@@ -127,6 +128,11 @@ def export(output: Path, s: Scenario, q1: dict, q2: dict, q3: dict, q4: dict, ch
                                                         groups=[g["zones"] for g in a["groups"]])
                                              for name, a in v["alternatives"].items()})
                        for k, v in q4["partitions"].items() if v["feasible"]})
+    coordination = q3.get("search", {}).get("coordination")
+    if coordination:
+        summary["q3_coordination"] = {key: coordination[key] for key in (
+            "baseline_objective", "selected_promotion", "candidates_evaluated",
+            "feasible_candidates", "improvement_weighted_delivery_seconds")}
     save_json(output / "summary.json", summary)
 
 
@@ -135,6 +141,13 @@ def main() -> None:
     parser.add_argument("--output", type=Path, default=Path(__file__).resolve().parent / "results")
     parser.add_argument("--no-sensitivity", action="store_true", help="Skip Q1 reserve sensitivity")
     parser.add_argument("--no-merge", action="store_true", help="Keep initial single-zone Q2 jobs")
+    parser.add_argument("--no-coordination", action="store_true", help="Use the original fixed-Q2 relay plan")
+    parser.add_argument("--coordination-rounds", type=int, default=2,
+                        help="Communication-guided search rounds (default: 2)")
+    parser.add_argument("--coordination-trials", type=int, default=3,
+                        help="Full relay evaluations per round (default: 3)")
+    parser.add_argument("--promotion-trials", type=int, default=12,
+                        help="Soft-sortie insertion trials (default: 12)")
     parser.add_argument("--no-figures", action="store_true", help="Skip static result figures")
     args = parser.parse_args()
     scenario = Scenario()
@@ -142,8 +155,13 @@ def main() -> None:
     q1 = solve_q1(scenario, sensitivity=not args.no_sensitivity)
     print("Q2: transport and shared batteries", flush=True)
     q2 = solve_q2(scenario, improve=not args.no_merge)
-    print("Q3: relay coverage and joint schedule", flush=True)
-    q3 = solve_q3(scenario, q2)
+    print("Q3: communication-guided transport and relay search", flush=True)
+    if args.no_coordination:
+        q3 = solve_q3(scenario, q2)
+    else:
+        q3 = solve_coordination(scenario, q2, rounds=args.coordination_rounds,
+                                trials_per_round=args.coordination_trials,
+                                promotion_trials=args.promotion_trials)
     print("Q4: independent task-group resources", flush=True)
     q4 = solve_q4(scenario, q3)
     print("Replay verification", flush=True)

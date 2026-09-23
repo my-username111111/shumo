@@ -1,6 +1,6 @@
 # 山区洪涝无人机运输与通信协同优化求解代码
 
-本目录读取上一级 `数据` 文件夹中的原始 Excel 和 30 米 DEM，不修改原始附件。Git 仓库不包含题目原始数据及生成的 `results` 文件夹。运行 `run.py` 后，四问的结果、逐箱交付记录、资源时序和独立复算报告写入 `results`。
+本目录读取上一级 `数据` 文件夹中的原始 Excel 和 30 米 DEM，不修改原始附件。Git 仓库不包含题目原始数据及生成的 `results` 文件夹。运行 `run.py` 后，四问的结果、逐箱交付记录、资源时序和独立复算报告写入 `results`。当前默认方案的交付记录见 `交付说明_v2.md`；`交付说明.md` 保留此前固定运输方案的 v1 记录。
 
 ## 运行
 
@@ -11,7 +11,7 @@ python -m pip install -r .\requirements.txt
 python .\run.py
 ```
 
-`--no-sensitivity` 跳过问题一的返航余量敏感性；`--no-merge` 保留问题二初始单服务区架次，用于诊断；`--no-figures` 跳过绘图。默认执行完整流程。可以用 `--output 绝对目录` 指定结果目录。
+`--no-sensitivity` 跳过问题一的返航余量敏感性；`--no-merge` 保留问题二初始单服务区架次；`--no-coordination` 使用原来的固定运输方案求中继，便于作消融对照；`--no-figures` 跳过绘图。默认执行完整流程。可以用 `--output 绝对目录` 指定结果目录。`--promotion-trials`、`--coordination-rounds`、`--coordination-trials` 控制联合搜索预算；结果固定随机种子 2026，可复现。
 
 ## 文件与算法
 
@@ -20,13 +20,20 @@ python .\run.py
 | `model.py` | 读取附件；DEM 栅格穿越、航段净空、时间和能耗、电池充电、双向链路预算与 DSM 遮挡。四问共用。 |
 | `q1.py` | 二分求 15×3 最大安全载荷；逐服务区枚举可行货箱集合并用精确动态规划求字典序最优组批；返航余量敏感性。 |
 | `q2.py` | 先保障硬时限货箱，对剩余货箱用问题一的精确组批；显式分配实体运输机和同型共享电池；再尝试多点或同点架次合并并重排。 |
-| `q3.py` | 从 DEM 内生成中继悬停候选；用链路预算筛选任务覆盖；按硬时限形成任务波次，安排两架中继机和能源组件的往返、建链与充电；对通信逐段采样复核。 |
+| `q3.py` | 从 DEM 内生成中继悬停候选；用链路预算筛选任务覆盖；允许把软时限架次插入较早的硬时限波次；安排两架中继机和能源组件的往返、建链与充电；对通信逐段采样复核。 |
+| `coordination.py` | 问题三的通信反馈搜索：以问题二的运输解为基线，试算软时限架次提前插入、整箱移位、架次拆并、访问和执行顺序变化；每个候选重新运行运输资源调度和完整中继求解，仅保留可行且联合目标更好的解。 |
 | `q4.py` | 根据多点运输和实际中继保障关系形成不可拆的服务区连通分量；穷举两组、三组分区并核算设备缺口与工作量平衡。 |
 | `verify.py` | 独立重算所有架次的载荷、时间、能耗、SOC、硬时限、资源占用与通信。 |
 | `figures.py` | 绘制 DEM 背景航线图、运输与中继甘特图、两组和三组分区图。 |
 | `run.py` | 串联计算并输出 JSON、CSV。 |
 
-问题一在已定义的物理模型和目标顺序下为精确解。问题二、三为可行方案搜索，不宣称全局最优。问题四对问题三形成的不可拆任务单元穷举全部 2 组和 3 组分区；同时输出“严格沿用原设备编号”和“保持任务时序、允许组内重新编号”的资源口径。
+问题一在已定义的物理模型和目标顺序下为精确解。问题二是独立的运输方案；问题三以它为基线搜索运输与通信的联合方案，因此两问的运输架次可以不同。问题二、三为可行方案搜索，不宣称全局最优。问题四对问题三形成的不可拆任务单元穷举全部 2 组和 3 组分区；同时输出“严格沿用原设备编号”和“保持任务时序、允许组内重新编号”的资源口径。
+
+联合搜索的设计参考 Meng 等（2024）的自适应大邻域搜索思路、Rottondi 等（2021）的灾后多任务联合调度，以及 Yanmaz（2022）的任务轨迹与中继配置模块化方法。这里的算子、时间波次插入和物理校验均针对本题重新实现，并非复现论文数值。参考文献：
+
+* Meng, S., Chen, Y., Li, D. *The multi-visit drone-assisted pickup and delivery problem with time windows*. European Journal of Operational Research 314(2), 2024. https://eprints.lancs.ac.uk/id/eprint/207820/
+* Rottondi, C. et al. *Scheduling of Emergency Tasks for Multiservice UAVs in Post-Disaster Scenarios*. Computer Networks, 2021. https://arxiv.org/abs/2010.10939
+* Yanmaz, E. *Positioning aerial relays to maintain connectivity during drone team missions*. Ad Hoc Networks 128, 2022. https://doi.org/10.1016/j.adhoc.2022.102800
 
 ## 统一计算口径与显式假设
 
@@ -39,7 +46,7 @@ python .\run.py
 
 ## 结果与核验
 
-`results/summary.json` 给出四问指标。`q1.json` 至 `q4.json` 保留完整模型结果和资源时间；同名 CSV 便于填入结果提交模板。`validation.json` 给出独立复算数量与通信采样检查。`q3_route_map.png`、`q3_resource_timeline.png` 和 `q4_partition_map.png` 可用于检查空间和时间安排；论文定稿前可按版式再绘制。
+`results/summary.json` 给出四问指标。`q1.json` 至 `q4.json` 保留完整模型结果和资源时间；`q3.json` 的 `search.coordination` 记录原固定 Q2 基线、各候选可行性、最终改进值与选用的波次插入。同名 CSV 便于填入结果提交模板。`validation.json` 给出独立复算数量与通信采样检查。`q3_route_map.png`、`q3_resource_timeline.png` 和 `q4_partition_map.png` 可用于检查空间和时间安排；论文定稿前可按版式再绘制。
 
 问题三的中继候选要求接入和回传链路至少有 2 dB 余量，通信缺口前后各预留 90 秒覆盖。覆盖计算采用时间采样，结果再以 2 秒和 1 秒步长分别复核。它是**数值可行性检查**；若论文要使用严格的“连续通信保证”表述，还需增加时间区间上的地形视线界限证明或保守的连续区间证书。最终逐秒复核的最小余量可能略低于候选点的 2 dB 门槛，因为沿航线的位置会变化；实际部署还应做链路参数扰动分析。
 

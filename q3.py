@@ -12,7 +12,7 @@ from __future__ import annotations
 from dataclasses import dataclass
 from math import ceil, floor
 
-from model import Scenario, phase_position, route_position
+from model import Scenario, phase_position
 
 
 @dataclass(frozen=True)
@@ -302,12 +302,29 @@ def _verify_communication(s: Scenario, transports: list[dict], relays: list[dict
     return phase_rows, gaps
 
 
-def solve(s: Scenario, q2: dict, spacing: float = 0.005) -> dict:
+def solve(s: Scenario, q2: dict, spacing: float = 0.005,
+          promotion: tuple[str, int] | tuple[tuple[str, int], ...] | None = None) -> dict:
     rows = q2["sorties"]
     sites = candidate_sites(s, spacing)
     gaps = [route_gaps(s, row["route"]) for row in rows]
     coverage = site_coverage(s, sites, rows, gaps)
-    waves = split_groups_for_coverage(sites, coverage, wave_groups(s, rows), gaps)
+    groups = wave_groups(s, rows)
+    promotions = (promotion,) if promotion and isinstance(promotion[0], str) else (promotion or ())
+    for sortie_id, due_class in promotions:
+        promoted = next((i for i, row in enumerate(rows) if row["id"] == sortie_id), None)
+        if promoted is None or deadline_group(s, rows[promoted]) < 1_000_000:
+            raise ValueError("Only an existing soft-deadline sortie can be promoted")
+        destination = next((group for group in groups
+                            if deadline_group(s, rows[group[0]]) == due_class), None)
+        if destination is None:
+            raise ValueError("Promotion target deadline class does not exist")
+        for group in groups:
+            if promoted in group:
+                group.remove(promoted)
+                break
+        destination.append(promoted)
+        groups = [group for group in groups if group]
+    waves = split_groups_for_coverage(sites, coverage, groups, gaps)
     state = dict(aircraft_ready={u: 0.0 for u in s.aircraft},
                  battery_ready={f"{g}{i:02d}": 0.0 for g, n in s.battery_count.items() for i in range(1, n + 1)},
                  relay_ready={rid: 0.0 for rid in s.relays},
@@ -372,5 +389,6 @@ def solve(s: Scenario, q2: dict, spacing: float = 0.005) -> dict:
     if not complete:
         raise ValueError("No beam candidate has full sampled communication and three partitionable components")
     selected = min(complete, key=lambda x: x[0])[1]
-    selected["search"] = dict(beam_width=beam_width, complete_candidates=len(complete))
+    selected["search"] = dict(beam_width=beam_width, complete_candidates=len(complete),
+                              promotion=promotion)
     return selected

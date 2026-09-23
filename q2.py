@@ -143,6 +143,10 @@ class Dispatch:
             raise ValueError("Unable to schedule all hard-deadline cargo with current route set")
         return best[1]
 
+    def schedule_in_order(self, jobs: list[Job]) -> dict | None:
+        """Replay a proposed job order with the same aircraft/battery feasibility check."""
+        return self._schedule_order(jobs)
+
     def merge(self, a: Job, b: Job, reverse: bool = False) -> Job:
         visits = list(b.visits if reverse else a.visits) + list(a.visits if reverse else b.visits)
         merged: list[tuple[str, tuple[str, ...]]] = []
