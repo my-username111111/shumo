@@ -1,0 +1,24 @@
+{
+  "case": "makespan",
+  "status": "UNKNOWN",
+  "time_limit_seconds": 100.0,
+  "elapsed_seconds": 100.07695780001814,
+  "workers": 8,
+  "seed": 2036,
+  "scale": 1,
+  "model_options": 61,
+  "fixed_sorties": 26,
+  "weighted_cap_seconds": 2662962.48029191,
+  "makespan_cap_seconds": 6404.0,
+  "energy_cap_kwh": 77.0594590163904,
+  "objective_bound": 6075.0,
+  "objective_value": null,
+  "source": "results_q2_time\\tail_repack_26\\dominance_plan.json",
+  "source_objective": {
+    "weighted_delivery_seconds": 2661127.2510530576,
+    "weighted_soft_delay_seconds": 0,
+    "makespan": 6403.493783501445,
+    "energy_kwh": 72.32805782502476,
+    "sortie_count": 26
+  }
+}

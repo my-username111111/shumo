@@ -1,0 +1,51 @@
+[
+  {
+    "name": "s013_fod_to_j003",
+    "moves": [
+      [
+        "S013-FOD-01",
+        "J003"
+      ]
+    ],
+    "status": "OPTIMAL",
+    "objective": {
+      "weighted_delivery_seconds": 2781778.4977235245,
+      "weighted_soft_delay_seconds": 0,
+      "makespan": 6794.326506189946,
+      "energy_kwh": 69.51276092362319,
+      "sortie_count": 24
+    }
+  },
+  {
+    "name": "s012_fod_to_j006",
+    "moves": [
+      [
+        "S012-FOD-01",
+        "J006"
+      ]
+    ],
+    "status": "OPTIMAL",
+    "objective": {
+      "weighted_delivery_seconds": 2886203.8605655497,
+      "weighted_soft_delay_seconds": 0,
+      "makespan": 7070.086904265247,
+      "energy_kwh": 68.46652969346931,
+      "sortie_count": 24
+    }
+  },
+  {
+    "name": "both_fod_remove_j017",
+    "moves": [
+      [
+        "S013-FOD-01",
+        "J003"
+      ],
+      [
+        "S012-FOD-01",
+        "J006"
+      ]
+    ],
+    "status": "INFEASIBLE",
+    "objective": null
+  }
+]

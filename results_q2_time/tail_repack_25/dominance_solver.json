@@ -1,0 +1,22 @@
+{
+  "case": "makespan",
+  "status": "OPTIMAL",
+  "time_limit_seconds": 45.0,
+  "elapsed_seconds": 9.92825980001362,
+  "workers": 8,
+  "seed": 2026,
+  "scale": 1,
+  "model_options": 58,
+  "fixed_sorties": 25,
+  "weighted_cap_seconds": 2662962.4802919086,
+  "makespan_cap_seconds": 7351.4068166783945,
+  "energy_cap_kwh": null,
+  "objective_bound": 6207.0,
+  "objective_value": 6207.0,
+  "verification": {
+    "boxes": 80,
+    "sorties": 25,
+    "hard_boxes": 31,
+    "alternatives_checked": 0
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "case": "main",
+  "status": "FEASIBLE",
+  "time_limit_seconds": 90.0,
+  "elapsed_seconds": 90.07209809997585,
+  "workers": 8,
+  "seed": 2040,
+  "scale": 1,
+  "model_options": 58,
+  "fixed_sorties": 25,
+  "weighted_cap_seconds": null,
+  "makespan_cap_seconds": 6207.0,
+  "energy_cap_kwh": 69.910301,
+  "objective_bound": 1889508.0,
+  "objective_value": 2609160.0,
+  "verification": {
+    "boxes": 80,
+    "sorties": 25,
+    "hard_boxes": 31,
+    "alternatives_checked": 0
+  },
+  "source": "results_q2_time\\tail_repack_25\\dominance_plan.json",
+  "source_objective": {
+    "weighted_delivery_seconds": 2654488.717084928,
+    "weighted_soft_delay_seconds": 0,
+    "makespan": 6205.208125395588,
+    "energy_kwh": 69.91030074978733,
+    "sortie_count": 25
+  },
+  "candidate_objective": {
+    "weighted_delivery_seconds": 2608359.3532615486,
+    "weighted_soft_delay_seconds": 0,
+    "makespan": 6205.208125395588,
+    "energy_kwh": 69.91030074978733,
+    "sortie_count": 25
+  }
+}

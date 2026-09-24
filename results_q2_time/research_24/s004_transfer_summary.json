@@ -1,0 +1,191 @@
+[
+  {
+    "name": "med_to_j005",
+    "target": "J005",
+    "boxes": [
+      "S004-MED-01"
+    ],
+    "status": "OPTIMAL",
+    "target_options": [
+      [
+        "B",
+        2554.8
+      ],
+      [
+        "C",
+        2760.1
+      ]
+    ],
+    "tail_options": [
+      [
+        "C",
+        2239.2
+      ]
+    ],
+    "objective": {
+      "weighted_delivery_seconds": 2775382.1603853507,
+      "weighted_soft_delay_seconds": 0,
+      "makespan": 6713.976874657115,
+      "energy_kwh": 69.1338483017288,
+      "sortie_count": 24
+    }
+  },
+  {
+    "name": "med_hyg_to_j005",
+    "target": "J005",
+    "boxes": [
+      "S004-MED-01",
+      "S004-HYG-01"
+    ],
+    "status": "INFEASIBLE",
+    "target_options": [
+      [
+        "C",
+        2826.1
+      ]
+    ],
+    "tail_options": [
+      [
+        "C",
+        2173.2
+      ]
+    ],
+    "objective": null
+  },
+  {
+    "name": "fod_to_j015",
+    "target": "J015",
+    "boxes": [
+      "S004-FOD-01"
+    ],
+    "status": "OPTIMAL",
+    "target_options": [
+      [
+        "B",
+        2219.9
+      ],
+      [
+        "C",
+        2387.8
+      ]
+    ],
+    "tail_options": [
+      [
+        "C",
+        2239.2
+      ]
+    ],
+    "objective": {
+      "weighted_delivery_seconds": 2727646.31090261,
+      "weighted_soft_delay_seconds": 0,
+      "makespan": 6564.737173122283,
+      "energy_kwh": 69.52998948937868,
+      "sortie_count": 24
+    }
+  },
+  {
+    "name": "med_to_j015",
+    "target": "J015",
+    "boxes": [
+      "S004-MED-01"
+    ],
+    "status": "OPTIMAL",
+    "target_options": [
+      [
+        "A",
+        2480.9
+      ],
+      [
+        "B",
+        2219.9
+      ],
+      [
+        "C",
+        2387.8
+      ]
+    ],
+    "tail_options": [
+      [
+        "C",
+        2239.2
+      ]
+    ],
+    "objective": {
+      "weighted_delivery_seconds": 2722178.874913066,
+      "weighted_soft_delay_seconds": 0,
+      "makespan": 6139.208125395588,
+      "energy_kwh": 69.9006368859487,
+      "sortie_count": 24
+    }
+  },
+  {
+    "name": "med_fod_to_j015",
+    "target": "J015",
+    "boxes": [
+      "S004-MED-01",
+      "S004-FOD-01"
+    ],
+    "status": "INFEASIBLE",
+    "target_options": [
+      [
+        "C",
+        2453.8
+      ]
+    ],
+    "tail_options": [
+      [
+        "C",
+        2173.2
+      ]
+    ],
+    "objective": null
+  },
+  {
+    "name": "fod_to_j020",
+    "target": "J020",
+    "boxes": [
+      "S004-FOD-01"
+    ],
+    "status": "OPTIMAL",
+    "target_options": [
+      [
+        "C",
+        2387.8
+      ]
+    ],
+    "tail_options": [
+      [
+        "C",
+        2239.2
+      ]
+    ],
+    "objective": {
+      "weighted_delivery_seconds": 2751024.569950517,
+      "weighted_soft_delay_seconds": 0,
+      "makespan": 8237.481161199572,
+      "energy_kwh": 71.7171794167202,
+      "sortie_count": 24
+    }
+  },
+  {
+    "name": "wat_to_j005",
+    "target": "J005",
+    "boxes": [
+      "S004-WAT-02"
+    ],
+    "status": "INFEASIBLE",
+    "target_options": [
+      [
+        "C",
+        2760.1
+      ]
+    ],
+    "tail_options": [
+      [
+        "C",
+        2239.2
+      ]
+    ],
+    "objective": null
+  }
+]

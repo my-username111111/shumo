@@ -1,0 +1,188 @@
+{
+  "28_earliest": {
+    "boxes": 80,
+    "sorties": 28,
+    "hard_boxes": 31,
+    "alternatives_checked": 0
+  },
+  "fast26_research__plan": {
+    "boxes": 80,
+    "sorties": 26,
+    "hard_boxes": 31,
+    "alternatives_checked": 0
+  },
+  "fixed28_seed2026__plan": {
+    "boxes": 80,
+    "sorties": 28,
+    "hard_boxes": 31,
+    "alternatives_checked": 0
+  },
+  "research_24__both_food_plan": {
+    "boxes": 80,
+    "sorties": 24,
+    "hard_boxes": 31,
+    "alternatives_checked": 0
+  },
+  "research_24__fod_to_j015_plan": {
+    "boxes": 80,
+    "sorties": 24,
+    "hard_boxes": 31,
+    "alternatives_checked": 0
+  },
+  "research_24__fod_to_j020_plan": {
+    "boxes": 80,
+    "sorties": 24,
+    "hard_boxes": 31,
+    "alternatives_checked": 0
+  },
+  "research_24__med_to_j005_plan": {
+    "boxes": 80,
+    "sorties": 24,
+    "hard_boxes": 31,
+    "alternatives_checked": 0
+  },
+  "research_24__med_to_j015_plan": {
+    "boxes": 80,
+    "sorties": 24,
+    "hard_boxes": 31,
+    "alternatives_checked": 0
+  },
+  "research_24__s005_med_food_plan": {
+    "boxes": 80,
+    "sorties": 24,
+    "hard_boxes": 31,
+    "alternatives_checked": 0
+  },
+  "research_24__s005_med_hyg_plan": {
+    "boxes": 80,
+    "sorties": 24,
+    "hard_boxes": 31,
+    "alternatives_checked": 0
+  },
+  "research_24__s006_food_to_j002_plan": {
+    "boxes": 80,
+    "sorties": 24,
+    "hard_boxes": 31,
+    "alternatives_checked": 0
+  },
+  "research_24__s006_food_to_j002_weighted_plan": {
+    "boxes": 80,
+    "sorties": 24,
+    "hard_boxes": 31,
+    "alternatives_checked": 0
+  },
+  "research_24__s007_food_to_j011_plan": {
+    "boxes": 80,
+    "sorties": 24,
+    "hard_boxes": 31,
+    "alternatives_checked": 0
+  },
+  "research_24__s011_merge_plan": {
+    "boxes": 80,
+    "sorties": 24,
+    "hard_boxes": 31,
+    "alternatives_checked": 0
+  },
+  "research_24__s011_merge_weighted_plan": {
+    "boxes": 80,
+    "sorties": 24,
+    "hard_boxes": 31,
+    "alternatives_checked": 0
+  },
+  "research_24__s012_fod_to_j006_plan": {
+    "boxes": 80,
+    "sorties": 24,
+    "hard_boxes": 31,
+    "alternatives_checked": 0
+  },
+  "research_24__s013_fod_to_j003_plan": {
+    "boxes": 80,
+    "sorties": 24,
+    "hard_boxes": 31,
+    "alternatives_checked": 0
+  },
+  "tail_repack_24__dominance_plan": {
+    "boxes": 80,
+    "sorties": 24,
+    "hard_boxes": 31,
+    "alternatives_checked": 0
+  },
+  "tail_repack_24__fastest_plan": {
+    "boxes": 80,
+    "sorties": 24,
+    "hard_boxes": 31,
+    "alternatives_checked": 0
+  },
+  "tail_repack_24_early__dominance_plan": {
+    "boxes": 80,
+    "sorties": 24,
+    "hard_boxes": 31,
+    "alternatives_checked": 0
+  },
+  "tail_repack_24_early__fastest_plan": {
+    "boxes": 80,
+    "sorties": 24,
+    "hard_boxes": 31,
+    "alternatives_checked": 0
+  },
+  "tail_repack_24_time__dominance_plan": {
+    "boxes": 80,
+    "sorties": 24,
+    "hard_boxes": 31,
+    "alternatives_checked": 0
+  },
+  "tail_repack_24_time__fastest_plan": {
+    "boxes": 80,
+    "sorties": 24,
+    "hard_boxes": 31,
+    "alternatives_checked": 0
+  },
+  "tail_repack_25__dominance_plan": {
+    "boxes": 80,
+    "sorties": 25,
+    "hard_boxes": 31,
+    "alternatives_checked": 0
+  },
+  "tail_repack_25__fastest_plan": {
+    "boxes": 80,
+    "sorties": 25,
+    "hard_boxes": 31,
+    "alternatives_checked": 0
+  },
+  "tail_repack_25__weighted_same_finish__plan": {
+    "boxes": 80,
+    "sorties": 25,
+    "hard_boxes": 31,
+    "alternatives_checked": 0
+  },
+  "tail_repack_26__dominance_plan": {
+    "boxes": 80,
+    "sorties": 26,
+    "hard_boxes": 31,
+    "alternatives_checked": 0
+  },
+  "tail_repack_26__fastest_plan": {
+    "boxes": 80,
+    "sorties": 26,
+    "hard_boxes": 31,
+    "alternatives_checked": 0
+  },
+  "tail_repack_27__dominance_plan": {
+    "boxes": 80,
+    "sorties": 27,
+    "hard_boxes": 31,
+    "alternatives_checked": 0
+  },
+  "tail_repack_27__fastest_plan": {
+    "boxes": 80,
+    "sorties": 27,
+    "hard_boxes": 31,
+    "alternatives_checked": 0
+  },
+  "tail_repack_27__refined_dom_90s__plan": {
+    "boxes": 80,
+    "sorties": 27,
+    "hard_boxes": 31,
+    "alternatives_checked": 0
+  }
+}

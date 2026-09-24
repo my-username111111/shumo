@@ -1,0 +1,37 @@
+{
+  "case": "makespan",
+  "status": "FEASIBLE",
+  "time_limit_seconds": 75.0,
+  "elapsed_seconds": 75.04982620000374,
+  "workers": 8,
+  "seed": 2026,
+  "scale": 1,
+  "model_options": 66,
+  "fixed_sorties": 28,
+  "weighted_cap_seconds": null,
+  "makespan_cap_seconds": null,
+  "energy_cap_kwh": null,
+  "objective_bound": 6078.0,
+  "objective_value": 6934.0,
+  "verification": {
+    "boxes": 80,
+    "sorties": 28,
+    "hard_boxes": 31,
+    "alternatives_checked": 0
+  },
+  "source": "results_q2_extended\\plans\\28_earliest.json",
+  "source_objective": {
+    "weighted_delivery_seconds": 2662962.4802919086,
+    "weighted_soft_delay_seconds": 0,
+    "makespan": 7350.4068166783945,
+    "energy_kwh": 77.05945901639045,
+    "sortie_count": 28
+  },
+  "candidate_objective": {
+    "weighted_delivery_seconds": 2998602.7099928074,
+    "weighted_soft_delay_seconds": 0,
+    "makespan": 6931.1427546238965,
+    "energy_kwh": 77.91428518024597,
+    "sortie_count": 28
+  }
+}

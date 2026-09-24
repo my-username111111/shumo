@@ -1,0 +1,104 @@
+[
+  {
+    "name": "s011_merge",
+    "merge": [
+      "J008",
+      "J023"
+    ],
+    "model": "B",
+    "duration": 1189.630285736439,
+    "load_kg": 25.0,
+    "status": "OPTIMAL",
+    "objective": {
+      "weighted_delivery_seconds": 2911002.686737226,
+      "weighted_soft_delay_seconds": 0,
+      "makespan": 6205.208125395588,
+      "energy_kwh": 68.86581224500026,
+      "sortie_count": 24
+    }
+  },
+  {
+    "name": "s008_merge",
+    "merge": [
+      "J016",
+      "J022"
+    ],
+    "model": "C",
+    "duration": 2194.1275609563954,
+    "load_kg": 45.0,
+    "status": "INFEASIBLE",
+    "objective": null
+  },
+  {
+    "name": "s005_med_hyg",
+    "merge": [
+      "J015",
+      "J018"
+    ],
+    "model": "C",
+    "duration": 1748.0446406358128,
+    "load_kg": 37.0,
+    "status": "OPTIMAL",
+    "objective": {
+      "weighted_delivery_seconds": 3117851.414678847,
+      "weighted_soft_delay_seconds": 0,
+      "makespan": 7663.736524399572,
+      "energy_kwh": 69.93177019254288,
+      "sortie_count": 24
+    }
+  },
+  {
+    "name": "s005_med_food",
+    "merge": [
+      "J015",
+      "J020"
+    ],
+    "model": "C",
+    "duration": 1748.0446406358128,
+    "load_kg": 39.0,
+    "status": "OPTIMAL",
+    "objective": {
+      "weighted_delivery_seconds": 2977560.777044417,
+      "weighted_soft_delay_seconds": 0,
+      "makespan": 7663.736524399572,
+      "energy_kwh": 69.39431995347961,
+      "sortie_count": 24
+    }
+  },
+  {
+    "name": "s015_merge",
+    "merge": [
+      "J010",
+      "J021"
+    ],
+    "model": "C",
+    "duration": 2965.3169402327717,
+    "load_kg": 42.0,
+    "status": "INFEASIBLE",
+    "objective": null
+  },
+  {
+    "name": "s013_merge",
+    "merge": [
+      "J003",
+      "J017"
+    ],
+    "model": "C",
+    "duration": 2378.8571421507622,
+    "load_kg": 33.0,
+    "status": "INFEASIBLE",
+    "objective": null
+  },
+  {
+    "name": "s012_merge",
+    "merge": [
+      "J006",
+      "J017"
+    ],
+    "model": "C",
+    "duration": 2378.8571421507622,
+    "load_kg": 33.0,
+    "status": "INFEASIBLE",
+    "objective": null
+  }
+]

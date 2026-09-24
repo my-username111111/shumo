@@ -1,0 +1,37 @@
+{
+  "case": "makespan",
+  "status": "FEASIBLE",
+  "time_limit_seconds": 90.0,
+  "elapsed_seconds": 90.05004420003388,
+  "workers": 8,
+  "seed": 2027,
+  "scale": 1,
+  "model_options": 61,
+  "fixed_sorties": 26,
+  "weighted_cap_seconds": null,
+  "makespan_cap_seconds": null,
+  "energy_cap_kwh": null,
+  "objective_bound": 6075.0,
+  "objective_value": 6285.0,
+  "verification": {
+    "boxes": 80,
+    "sorties": 26,
+    "hard_boxes": 31,
+    "alternatives_checked": 0
+  },
+  "source": "results_q2_time\\tail_repack_26\\fastest_plan.json",
+  "source_objective": {
+    "weighted_delivery_seconds": 2887502.670748897,
+    "weighted_soft_delay_seconds": 0,
+    "makespan": 6316.268894125598,
+    "energy_kwh": 72.31883320728826,
+    "sortie_count": 26
+  },
+  "candidate_objective": {
+    "weighted_delivery_seconds": 2837891.3540697526,
+    "weighted_soft_delay_seconds": 0,
+    "makespan": 6283.471463761493,
+    "energy_kwh": 72.33882935820503,
+    "sortie_count": 26
+  }
+}

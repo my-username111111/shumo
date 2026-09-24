@@ -1,0 +1,104 @@
+{
+  "source": "F:\\数学建模2026\\shumo_sync\\results_q2_extended\\plans\\28_earliest.json",
+  "source_objective": {
+    "weighted_delivery_seconds": 2662962.4802919086,
+    "weighted_soft_delay_seconds": 0,
+    "makespan": 7350.4068166783945,
+    "energy_kwh": 77.05945901639045,
+    "sortie_count": 28
+  },
+  "source_verification": {
+    "boxes": 80,
+    "sorties": 28,
+    "hard_boxes": 31,
+    "alternatives_checked": 0
+  },
+  "repacking": {
+    "removed_original_sorties": [
+      "T020",
+      "T027",
+      "T017"
+    ],
+    "S003-WAT-01": "moved from original T020 to T018",
+    "S015-WAT-01": "moved from original T020 to T026",
+    "S009-WAT-01_and_S009-FOD-01": "combined into one S009 job",
+    "S004-MED-01_and_S004-WAT-01": "absorbed into original four-box S004 C job",
+    "new_job_count": 25
+  },
+  "experiments": {
+    "dominance": {
+      "objective": {
+        "weighted_delivery_seconds": 2654488.717084928,
+        "weighted_soft_delay_seconds": 0,
+        "makespan": 6205.208125395588,
+        "energy_kwh": 69.91030074978733,
+        "sortie_count": 25
+      },
+      "solver": {
+        "case": "makespan",
+        "status": "OPTIMAL",
+        "time_limit_seconds": 45.0,
+        "elapsed_seconds": 9.92825980001362,
+        "workers": 8,
+        "seed": 2026,
+        "scale": 1,
+        "model_options": 58,
+        "fixed_sorties": 25,
+        "weighted_cap_seconds": 2662962.4802919086,
+        "makespan_cap_seconds": 7351.4068166783945,
+        "energy_cap_kwh": null,
+        "objective_bound": 6207.0,
+        "objective_value": 6207.0,
+        "verification": {
+          "boxes": 80,
+          "sorties": 25,
+          "hard_boxes": 31,
+          "alternatives_checked": 0
+        }
+      },
+      "verification": {
+        "boxes": 80,
+        "sorties": 25,
+        "hard_boxes": 31,
+        "alternatives_checked": 0
+      }
+    },
+    "fastest": {
+      "objective": {
+        "weighted_delivery_seconds": 2928503.0224263635,
+        "weighted_soft_delay_seconds": 0,
+        "makespan": 6205.208125395588,
+        "energy_kwh": 69.8410769885944,
+        "sortie_count": 25
+      },
+      "solver": {
+        "case": "makespan",
+        "status": "OPTIMAL",
+        "time_limit_seconds": 45.0,
+        "elapsed_seconds": 0.2978055999847129,
+        "workers": 8,
+        "seed": 2026,
+        "scale": 1,
+        "model_options": 58,
+        "fixed_sorties": 25,
+        "weighted_cap_seconds": null,
+        "makespan_cap_seconds": 7351.4068166783945,
+        "energy_cap_kwh": null,
+        "objective_bound": 6207.0,
+        "objective_value": 6207.0,
+        "verification": {
+          "boxes": 80,
+          "sorties": 25,
+          "hard_boxes": 31,
+          "alternatives_checked": 0
+        }
+      },
+      "verification": {
+        "boxes": 80,
+        "sorties": 25,
+        "hard_boxes": 31,
+        "alternatives_checked": 0
+      }
+    }
+  }
+}

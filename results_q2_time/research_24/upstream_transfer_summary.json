@@ -1,0 +1,57 @@
+[
+  {
+    "name": "s006_food_to_j002",
+    "moves": [
+      [
+        "S006-FOD-01",
+        "J002"
+      ]
+    ],
+    "status": "OPTIMAL",
+    "objective": {
+      "weighted_delivery_seconds": 2727542.4792099413,
+      "weighted_soft_delay_seconds": 0,
+      "makespan": 6085.915520439389,
+      "energy_kwh": 69.79428389117717,
+      "sortie_count": 24
+    }
+  },
+  {
+    "name": "s007_food_to_j011",
+    "moves": [
+      [
+        "S007-FOD-01",
+        "J011"
+      ]
+    ],
+    "status": "OPTIMAL",
+    "objective": {
+      "weighted_delivery_seconds": 2821867.047256644,
+      "weighted_soft_delay_seconds": 0,
+      "makespan": 6228.010149501291,
+      "energy_kwh": 69.7065868683991,
+      "sortie_count": 24
+    }
+  },
+  {
+    "name": "both_food",
+    "moves": [
+      [
+        "S006-FOD-01",
+        "J002"
+      ],
+      [
+        "S007-FOD-01",
+        "J011"
+      ]
+    ],
+    "status": "OPTIMAL",
+    "objective": {
+      "weighted_delivery_seconds": 2839302.371516384,
+      "weighted_soft_delay_seconds": 0,
+      "makespan": 6854.326506189946,
+      "energy_kwh": 69.46053839627237,
+      "sortie_count": 24
+    }
+  }
+]
