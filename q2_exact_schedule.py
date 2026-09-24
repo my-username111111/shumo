@@ -169,10 +169,18 @@ def build_model(s: Scenario, baseline: dict, jobs: list[Job],
     # is free to replace every hint, including routes' model and resource IDs.
     drone_ready = {u: 0 for u in s.aircraft}
     battery_ready = {b: 0 for b in batteries}
-    for j, row in enumerate(baseline["sorties"]):
+    # Saved feasible plans are not necessarily stored in launch order.  Hint
+    # resources in actual chronological order so a late row cannot push an
+    # earlier launch to the end of its aircraft/battery chain.  Dummy route
+    # collections without start times retain their original order.
+    hint_order = sorted(range(len(baseline["sorties"])),
+                        key=lambda j: (baseline["sorties"][j].get("start", 0.0), j))
+    for j in hint_order:
+        row = baseline["sorties"][j]
         g, u, b = row["model"], row["drone"], row["battery"]
         opt = options[j][g]
-        start = max(drone_ready[u], battery_ready[b])
+        start = max(drone_ready[u], battery_ready[b],
+                    up(row.get("start", 0.0), scale))
         model.AddHint(starts[j], start)
         model.AddHint(ends[j], start + opt.duration)
         for name, variable in choices[j].items():

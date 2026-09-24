@@ -1,0 +1,2457 @@
+{
+  "source": "F:\\数学建模2026\\shumo_sync\\results_q2_time\\zone_fod_repair_24\\fastest_plan.json",
+  "source_objective": {
+    "weighted_delivery_seconds": 2597110.0493098567,
+    "weighted_soft_delay_seconds": 0,
+    "makespan": 6073.208125395588,
+    "energy_kwh": 69.15451555444506,
+    "sortie_count": 24
+  },
+  "source_verification": {
+    "boxes": 80,
+    "sorties": 24,
+    "hard_boxes": 31,
+    "alternatives_checked": 0
+  },
+  "critical_tail": [
+    [
+      "S004",
+      [
+        "S004-FOD-01",
+        "S004-HYG-01",
+        "S004-WAT-01",
+        "S004-WAT-02",
+        "S004-WAT-03"
+      ]
+    ]
+  ],
+  "integer_makespan_cap": 6074,
+  "physical_candidates": 96,
+  "tested": 96,
+  "feasible": 0,
+  "cases": [
+    {
+      "box": "S004-FOD-01",
+      "target_source_sortie": "T001",
+      "target_visits": [
+        [
+          "S001",
+          [
+            "S001-FOD-01",
+            "S001-FOD-02",
+            "S001-FOD-03",
+            "S001-WAT-06",
+            "S001-WAT-07",
+            "S001-WAT-08"
+          ]
+        ],
+        [
+          "S004",
+          [
+            "S004-FOD-01"
+          ]
+        ]
+      ],
+      "target_models": [
+        "C"
+      ],
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "box": "S004-FOD-01",
+      "target_source_sortie": "T003",
+      "target_visits": [
+        [
+          "S004",
+          [
+            "S004-FOD-01"
+          ]
+        ],
+        [
+          "S013",
+          [
+            "S013-MED-01",
+            "S013-WAT-01"
+          ]
+        ]
+      ],
+      "target_models": [
+        "C"
+      ],
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "box": "S004-FOD-01",
+      "target_source_sortie": "T003",
+      "target_visits": [
+        [
+          "S013",
+          [
+            "S013-MED-01",
+            "S013-WAT-01"
+          ]
+        ],
+        [
+          "S004",
+          [
+            "S004-FOD-01"
+          ]
+        ]
+      ],
+      "target_models": [
+        "C"
+      ],
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "box": "S004-FOD-01",
+      "target_source_sortie": "T004",
+      "target_visits": [
+        [
+          "S001",
+          [
+            "S001-HYG-01",
+            "S001-HYG-02",
+            "S001-WAT-02",
+            "S001-WAT-03",
+            "S001-WAT-04",
+            "S001-WAT-05"
+          ]
+        ],
+        [
+          "S004",
+          [
+            "S004-FOD-01"
+          ]
+        ]
+      ],
+      "target_models": [
+        "C"
+      ],
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "box": "S004-FOD-01",
+      "target_source_sortie": "T007",
+      "target_visits": [
+        [
+          "S004",
+          [
+            "S004-FOD-01"
+          ]
+        ],
+        [
+          "S001",
+          [
+            "S001-MED-01",
+            "S001-MED-02",
+            "S001-WAT-01"
+          ]
+        ]
+      ],
+      "target_models": [
+        "C"
+      ],
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "box": "S004-FOD-01",
+      "target_source_sortie": "T007",
+      "target_visits": [
+        [
+          "S001",
+          [
+            "S001-MED-01",
+            "S001-MED-02",
+            "S001-WAT-01"
+          ]
+        ],
+        [
+          "S004",
+          [
+            "S004-FOD-01"
+          ]
+        ]
+      ],
+      "target_models": [
+        "C"
+      ],
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "box": "S004-FOD-01",
+      "target_source_sortie": "T014",
+      "target_visits": [
+        [
+          "S005",
+          [
+            "S005-MED-01",
+            "S005-WAT-01"
+          ]
+        ],
+        [
+          "S004",
+          [
+            "S004-FOD-01",
+            "S004-MED-01"
+          ]
+        ]
+      ],
+      "target_models": [
+        "C"
+      ],
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "box": "S004-FOD-01",
+      "target_source_sortie": "T024",
+      "target_visits": [
+        [
+          "S004",
+          [
+            "S004-FOD-01"
+          ]
+        ],
+        [
+          "S011",
+          [
+            "S011-FOD-01",
+            "S011-MED-01",
+            "S011-WAT-01"
+          ]
+        ]
+      ],
+      "target_models": [
+        "C"
+      ],
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "box": "S004-FOD-01",
+      "target_source_sortie": "T024",
+      "target_visits": [
+        [
+          "S011",
+          [
+            "S011-FOD-01",
+            "S011-MED-01",
+            "S011-WAT-01"
+          ]
+        ],
+        [
+          "S004",
+          [
+            "S004-FOD-01"
+          ]
+        ]
+      ],
+      "target_models": [
+        "C"
+      ],
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "box": "S004-FOD-01",
+      "target_source_sortie": "T019",
+      "target_visits": [
+        [
+          "S004",
+          [
+            "S004-FOD-01"
+          ]
+        ],
+        [
+          "S005",
+          [
+            "S005-FOD-01",
+            "S005-WAT-02"
+          ]
+        ]
+      ],
+      "target_models": [
+        "C"
+      ],
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "box": "S004-FOD-01",
+      "target_source_sortie": "T019",
+      "target_visits": [
+        [
+          "S005",
+          [
+            "S005-FOD-01",
+            "S005-WAT-02"
+          ]
+        ],
+        [
+          "S004",
+          [
+            "S004-FOD-01"
+          ]
+        ]
+      ],
+      "target_models": [
+        "C"
+      ],
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "box": "S004-FOD-01",
+      "target_source_sortie": "T005",
+      "target_visits": [
+        [
+          "S009",
+          [
+            "S009-MED-01"
+          ]
+        ],
+        [
+          "S004",
+          [
+            "S004-FOD-01"
+          ]
+        ],
+        [
+          "S002",
+          [
+            "S002-MED-01",
+            "S002-WAT-01"
+          ]
+        ]
+      ],
+      "target_models": [
+        "C"
+      ],
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "box": "S004-FOD-01",
+      "target_source_sortie": "T005",
+      "target_visits": [
+        [
+          "S009",
+          [
+            "S009-MED-01"
+          ]
+        ],
+        [
+          "S002",
+          [
+            "S002-MED-01",
+            "S002-WAT-01"
+          ]
+        ],
+        [
+          "S004",
+          [
+            "S004-FOD-01"
+          ]
+        ]
+      ],
+      "target_models": [
+        "C"
+      ],
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "box": "S004-FOD-01",
+      "target_source_sortie": "T010",
+      "target_visits": [
+        [
+          "S007",
+          [
+            "S007-MED-01",
+            "S007-WAT-01"
+          ]
+        ],
+        [
+          "S004",
+          [
+            "S004-FOD-01"
+          ]
+        ]
+      ],
+      "target_models": [
+        "C"
+      ],
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "box": "S004-FOD-01",
+      "target_source_sortie": "T021",
+      "target_visits": [
+        [
+          "S004",
+          [
+            "S004-FOD-01"
+          ]
+        ],
+        [
+          "S008",
+          [
+            "S008-HYG-01",
+            "S008-WAT-02"
+          ]
+        ]
+      ],
+      "target_models": [
+        "C"
+      ],
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "box": "S004-FOD-01",
+      "target_source_sortie": "T021",
+      "target_visits": [
+        [
+          "S008",
+          [
+            "S008-HYG-01",
+            "S008-WAT-02"
+          ]
+        ],
+        [
+          "S004",
+          [
+            "S004-FOD-01"
+          ]
+        ]
+      ],
+      "target_models": [
+        "C"
+      ],
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "box": "S004-FOD-01",
+      "target_source_sortie": "T015",
+      "target_visits": [
+        [
+          "S004",
+          [
+            "S004-FOD-01"
+          ]
+        ],
+        [
+          "S008",
+          [
+            "S008-FOD-01",
+            "S008-MED-01",
+            "S008-WAT-01"
+          ]
+        ]
+      ],
+      "target_models": [
+        "C"
+      ],
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "box": "S004-FOD-01",
+      "target_source_sortie": "T015",
+      "target_visits": [
+        [
+          "S008",
+          [
+            "S008-FOD-01",
+            "S008-MED-01",
+            "S008-WAT-01"
+          ]
+        ],
+        [
+          "S004",
+          [
+            "S004-FOD-01"
+          ]
+        ]
+      ],
+      "target_models": [
+        "C"
+      ],
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "box": "S004-FOD-01",
+      "target_source_sortie": "T022",
+      "target_visits": [
+        [
+          "S004",
+          [
+            "S004-FOD-01"
+          ]
+        ],
+        [
+          "S009",
+          [
+            "S009-FOD-01",
+            "S009-WAT-01"
+          ]
+        ]
+      ],
+      "target_models": [
+        "C"
+      ],
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "box": "S004-FOD-01",
+      "target_source_sortie": "T022",
+      "target_visits": [
+        [
+          "S009",
+          [
+            "S009-FOD-01",
+            "S009-WAT-01"
+          ]
+        ],
+        [
+          "S004",
+          [
+            "S004-FOD-01"
+          ]
+        ]
+      ],
+      "target_models": [
+        "C"
+      ],
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "box": "S004-FOD-01",
+      "target_source_sortie": "T017",
+      "target_visits": [
+        [
+          "S004",
+          [
+            "S004-FOD-01"
+          ]
+        ],
+        [
+          "S005",
+          [
+            "S005-HYG-01",
+            "S005-WAT-03"
+          ]
+        ]
+      ],
+      "target_models": [
+        "C"
+      ],
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "box": "S004-FOD-01",
+      "target_source_sortie": "T017",
+      "target_visits": [
+        [
+          "S005",
+          [
+            "S005-HYG-01",
+            "S005-WAT-03"
+          ]
+        ],
+        [
+          "S004",
+          [
+            "S004-FOD-01"
+          ]
+        ]
+      ],
+      "target_models": [
+        "C"
+      ],
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "box": "S004-HYG-01",
+      "target_source_sortie": "T001",
+      "target_visits": [
+        [
+          "S001",
+          [
+            "S001-FOD-01",
+            "S001-FOD-02",
+            "S001-FOD-03",
+            "S001-WAT-06",
+            "S001-WAT-07",
+            "S001-WAT-08"
+          ]
+        ],
+        [
+          "S004",
+          [
+            "S004-HYG-01"
+          ]
+        ]
+      ],
+      "target_models": [
+        "C"
+      ],
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "box": "S004-HYG-01",
+      "target_source_sortie": "T002",
+      "target_visits": [
+        [
+          "S006",
+          [
+            "S006-FOD-01",
+            "S006-MED-01",
+            "S006-WAT-01"
+          ]
+        ],
+        [
+          "S004",
+          [
+            "S004-HYG-01"
+          ]
+        ]
+      ],
+      "target_models": [
+        "C"
+      ],
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "box": "S004-HYG-01",
+      "target_source_sortie": "T003",
+      "target_visits": [
+        [
+          "S004",
+          [
+            "S004-HYG-01"
+          ]
+        ],
+        [
+          "S013",
+          [
+            "S013-MED-01",
+            "S013-WAT-01"
+          ]
+        ]
+      ],
+      "target_models": [
+        "C"
+      ],
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "box": "S004-HYG-01",
+      "target_source_sortie": "T003",
+      "target_visits": [
+        [
+          "S013",
+          [
+            "S013-MED-01",
+            "S013-WAT-01"
+          ]
+        ],
+        [
+          "S004",
+          [
+            "S004-HYG-01"
+          ]
+        ]
+      ],
+      "target_models": [
+        "C"
+      ],
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "box": "S004-HYG-01",
+      "target_source_sortie": "T004",
+      "target_visits": [
+        [
+          "S001",
+          [
+            "S001-HYG-01",
+            "S001-HYG-02",
+            "S001-WAT-02",
+            "S001-WAT-03",
+            "S001-WAT-04",
+            "S001-WAT-05"
+          ]
+        ],
+        [
+          "S004",
+          [
+            "S004-HYG-01"
+          ]
+        ]
+      ],
+      "target_models": [
+        "C"
+      ],
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "box": "S004-HYG-01",
+      "target_source_sortie": "T007",
+      "target_visits": [
+        [
+          "S004",
+          [
+            "S004-HYG-01"
+          ]
+        ],
+        [
+          "S001",
+          [
+            "S001-MED-01",
+            "S001-MED-02",
+            "S001-WAT-01"
+          ]
+        ]
+      ],
+      "target_models": [
+        "C"
+      ],
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "box": "S004-HYG-01",
+      "target_source_sortie": "T007",
+      "target_visits": [
+        [
+          "S001",
+          [
+            "S001-MED-01",
+            "S001-MED-02",
+            "S001-WAT-01"
+          ]
+        ],
+        [
+          "S004",
+          [
+            "S004-HYG-01"
+          ]
+        ]
+      ],
+      "target_models": [
+        "C"
+      ],
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "box": "S004-HYG-01",
+      "target_source_sortie": "T014",
+      "target_visits": [
+        [
+          "S005",
+          [
+            "S005-MED-01",
+            "S005-WAT-01"
+          ]
+        ],
+        [
+          "S004",
+          [
+            "S004-HYG-01",
+            "S004-MED-01"
+          ]
+        ]
+      ],
+      "target_models": [
+        "C"
+      ],
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "box": "S004-HYG-01",
+      "target_source_sortie": "T024",
+      "target_visits": [
+        [
+          "S004",
+          [
+            "S004-HYG-01"
+          ]
+        ],
+        [
+          "S011",
+          [
+            "S011-FOD-01",
+            "S011-MED-01",
+            "S011-WAT-01"
+          ]
+        ]
+      ],
+      "target_models": [
+        "C"
+      ],
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "box": "S004-HYG-01",
+      "target_source_sortie": "T024",
+      "target_visits": [
+        [
+          "S011",
+          [
+            "S011-FOD-01",
+            "S011-MED-01",
+            "S011-WAT-01"
+          ]
+        ],
+        [
+          "S004",
+          [
+            "S004-HYG-01"
+          ]
+        ]
+      ],
+      "target_models": [
+        "C"
+      ],
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "box": "S004-HYG-01",
+      "target_source_sortie": "T019",
+      "target_visits": [
+        [
+          "S004",
+          [
+            "S004-HYG-01"
+          ]
+        ],
+        [
+          "S005",
+          [
+            "S005-FOD-01",
+            "S005-WAT-02"
+          ]
+        ]
+      ],
+      "target_models": [
+        "C"
+      ],
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "box": "S004-HYG-01",
+      "target_source_sortie": "T019",
+      "target_visits": [
+        [
+          "S005",
+          [
+            "S005-FOD-01",
+            "S005-WAT-02"
+          ]
+        ],
+        [
+          "S004",
+          [
+            "S004-HYG-01"
+          ]
+        ]
+      ],
+      "target_models": [
+        "C"
+      ],
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "box": "S004-HYG-01",
+      "target_source_sortie": "T005",
+      "target_visits": [
+        [
+          "S009",
+          [
+            "S009-MED-01"
+          ]
+        ],
+        [
+          "S004",
+          [
+            "S004-HYG-01"
+          ]
+        ],
+        [
+          "S002",
+          [
+            "S002-MED-01",
+            "S002-WAT-01"
+          ]
+        ]
+      ],
+      "target_models": [
+        "C"
+      ],
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "box": "S004-HYG-01",
+      "target_source_sortie": "T005",
+      "target_visits": [
+        [
+          "S009",
+          [
+            "S009-MED-01"
+          ]
+        ],
+        [
+          "S002",
+          [
+            "S002-MED-01",
+            "S002-WAT-01"
+          ]
+        ],
+        [
+          "S004",
+          [
+            "S004-HYG-01"
+          ]
+        ]
+      ],
+      "target_models": [
+        "C"
+      ],
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "box": "S004-HYG-01",
+      "target_source_sortie": "T010",
+      "target_visits": [
+        [
+          "S007",
+          [
+            "S007-MED-01",
+            "S007-WAT-01"
+          ]
+        ],
+        [
+          "S004",
+          [
+            "S004-HYG-01"
+          ]
+        ]
+      ],
+      "target_models": [
+        "C"
+      ],
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "box": "S004-HYG-01",
+      "target_source_sortie": "T021",
+      "target_visits": [
+        [
+          "S004",
+          [
+            "S004-HYG-01"
+          ]
+        ],
+        [
+          "S008",
+          [
+            "S008-HYG-01",
+            "S008-WAT-02"
+          ]
+        ]
+      ],
+      "target_models": [
+        "C"
+      ],
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "box": "S004-HYG-01",
+      "target_source_sortie": "T021",
+      "target_visits": [
+        [
+          "S008",
+          [
+            "S008-HYG-01",
+            "S008-WAT-02"
+          ]
+        ],
+        [
+          "S004",
+          [
+            "S004-HYG-01"
+          ]
+        ]
+      ],
+      "target_models": [
+        "C"
+      ],
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "box": "S004-HYG-01",
+      "target_source_sortie": "T015",
+      "target_visits": [
+        [
+          "S004",
+          [
+            "S004-HYG-01"
+          ]
+        ],
+        [
+          "S008",
+          [
+            "S008-FOD-01",
+            "S008-MED-01",
+            "S008-WAT-01"
+          ]
+        ]
+      ],
+      "target_models": [
+        "C"
+      ],
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "box": "S004-HYG-01",
+      "target_source_sortie": "T015",
+      "target_visits": [
+        [
+          "S008",
+          [
+            "S008-FOD-01",
+            "S008-MED-01",
+            "S008-WAT-01"
+          ]
+        ],
+        [
+          "S004",
+          [
+            "S004-HYG-01"
+          ]
+        ]
+      ],
+      "target_models": [
+        "C"
+      ],
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "box": "S004-HYG-01",
+      "target_source_sortie": "T022",
+      "target_visits": [
+        [
+          "S004",
+          [
+            "S004-HYG-01"
+          ]
+        ],
+        [
+          "S009",
+          [
+            "S009-FOD-01",
+            "S009-WAT-01"
+          ]
+        ]
+      ],
+      "target_models": [
+        "C"
+      ],
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "box": "S004-HYG-01",
+      "target_source_sortie": "T022",
+      "target_visits": [
+        [
+          "S009",
+          [
+            "S009-FOD-01",
+            "S009-WAT-01"
+          ]
+        ],
+        [
+          "S004",
+          [
+            "S004-HYG-01"
+          ]
+        ]
+      ],
+      "target_models": [
+        "C"
+      ],
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "box": "S004-HYG-01",
+      "target_source_sortie": "T017",
+      "target_visits": [
+        [
+          "S004",
+          [
+            "S004-HYG-01"
+          ]
+        ],
+        [
+          "S005",
+          [
+            "S005-HYG-01",
+            "S005-WAT-03"
+          ]
+        ]
+      ],
+      "target_models": [
+        "C"
+      ],
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "box": "S004-HYG-01",
+      "target_source_sortie": "T017",
+      "target_visits": [
+        [
+          "S005",
+          [
+            "S005-HYG-01",
+            "S005-WAT-03"
+          ]
+        ],
+        [
+          "S004",
+          [
+            "S004-HYG-01"
+          ]
+        ]
+      ],
+      "target_models": [
+        "C"
+      ],
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "box": "S004-WAT-01",
+      "target_source_sortie": "T001",
+      "target_visits": [
+        [
+          "S001",
+          [
+            "S001-FOD-01",
+            "S001-FOD-02",
+            "S001-FOD-03",
+            "S001-WAT-06",
+            "S001-WAT-07",
+            "S001-WAT-08"
+          ]
+        ],
+        [
+          "S004",
+          [
+            "S004-WAT-01"
+          ]
+        ]
+      ],
+      "target_models": [
+        "C"
+      ],
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "box": "S004-WAT-01",
+      "target_source_sortie": "T003",
+      "target_visits": [
+        [
+          "S013",
+          [
+            "S013-MED-01",
+            "S013-WAT-01"
+          ]
+        ],
+        [
+          "S004",
+          [
+            "S004-WAT-01"
+          ]
+        ]
+      ],
+      "target_models": [
+        "C"
+      ],
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "box": "S004-WAT-01",
+      "target_source_sortie": "T007",
+      "target_visits": [
+        [
+          "S004",
+          [
+            "S004-WAT-01"
+          ]
+        ],
+        [
+          "S001",
+          [
+            "S001-MED-01",
+            "S001-MED-02",
+            "S001-WAT-01"
+          ]
+        ]
+      ],
+      "target_models": [
+        "C"
+      ],
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "box": "S004-WAT-01",
+      "target_source_sortie": "T007",
+      "target_visits": [
+        [
+          "S001",
+          [
+            "S001-MED-01",
+            "S001-MED-02",
+            "S001-WAT-01"
+          ]
+        ],
+        [
+          "S004",
+          [
+            "S004-WAT-01"
+          ]
+        ]
+      ],
+      "target_models": [
+        "C"
+      ],
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "box": "S004-WAT-01",
+      "target_source_sortie": "T014",
+      "target_visits": [
+        [
+          "S005",
+          [
+            "S005-MED-01",
+            "S005-WAT-01"
+          ]
+        ],
+        [
+          "S004",
+          [
+            "S004-MED-01",
+            "S004-WAT-01"
+          ]
+        ]
+      ],
+      "target_models": [
+        "C"
+      ],
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "box": "S004-WAT-01",
+      "target_source_sortie": "T024",
+      "target_visits": [
+        [
+          "S004",
+          [
+            "S004-WAT-01"
+          ]
+        ],
+        [
+          "S011",
+          [
+            "S011-FOD-01",
+            "S011-MED-01",
+            "S011-WAT-01"
+          ]
+        ]
+      ],
+      "target_models": [
+        "C"
+      ],
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "box": "S004-WAT-01",
+      "target_source_sortie": "T024",
+      "target_visits": [
+        [
+          "S011",
+          [
+            "S011-FOD-01",
+            "S011-MED-01",
+            "S011-WAT-01"
+          ]
+        ],
+        [
+          "S004",
+          [
+            "S004-WAT-01"
+          ]
+        ]
+      ],
+      "target_models": [
+        "C"
+      ],
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "box": "S004-WAT-01",
+      "target_source_sortie": "T019",
+      "target_visits": [
+        [
+          "S004",
+          [
+            "S004-WAT-01"
+          ]
+        ],
+        [
+          "S005",
+          [
+            "S005-FOD-01",
+            "S005-WAT-02"
+          ]
+        ]
+      ],
+      "target_models": [
+        "C"
+      ],
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "box": "S004-WAT-01",
+      "target_source_sortie": "T019",
+      "target_visits": [
+        [
+          "S005",
+          [
+            "S005-FOD-01",
+            "S005-WAT-02"
+          ]
+        ],
+        [
+          "S004",
+          [
+            "S004-WAT-01"
+          ]
+        ]
+      ],
+      "target_models": [
+        "C"
+      ],
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "box": "S004-WAT-01",
+      "target_source_sortie": "T005",
+      "target_visits": [
+        [
+          "S009",
+          [
+            "S009-MED-01"
+          ]
+        ],
+        [
+          "S004",
+          [
+            "S004-WAT-01"
+          ]
+        ],
+        [
+          "S002",
+          [
+            "S002-MED-01",
+            "S002-WAT-01"
+          ]
+        ]
+      ],
+      "target_models": [
+        "C"
+      ],
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "box": "S004-WAT-01",
+      "target_source_sortie": "T005",
+      "target_visits": [
+        [
+          "S009",
+          [
+            "S009-MED-01"
+          ]
+        ],
+        [
+          "S002",
+          [
+            "S002-MED-01",
+            "S002-WAT-01"
+          ]
+        ],
+        [
+          "S004",
+          [
+            "S004-WAT-01"
+          ]
+        ]
+      ],
+      "target_models": [
+        "C"
+      ],
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "box": "S004-WAT-01",
+      "target_source_sortie": "T021",
+      "target_visits": [
+        [
+          "S004",
+          [
+            "S004-WAT-01"
+          ]
+        ],
+        [
+          "S008",
+          [
+            "S008-HYG-01",
+            "S008-WAT-02"
+          ]
+        ]
+      ],
+      "target_models": [
+        "C"
+      ],
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "box": "S004-WAT-01",
+      "target_source_sortie": "T021",
+      "target_visits": [
+        [
+          "S008",
+          [
+            "S008-HYG-01",
+            "S008-WAT-02"
+          ]
+        ],
+        [
+          "S004",
+          [
+            "S004-WAT-01"
+          ]
+        ]
+      ],
+      "target_models": [
+        "C"
+      ],
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "box": "S004-WAT-01",
+      "target_source_sortie": "T022",
+      "target_visits": [
+        [
+          "S004",
+          [
+            "S004-WAT-01"
+          ]
+        ],
+        [
+          "S009",
+          [
+            "S009-FOD-01",
+            "S009-WAT-01"
+          ]
+        ]
+      ],
+      "target_models": [
+        "C"
+      ],
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "box": "S004-WAT-01",
+      "target_source_sortie": "T022",
+      "target_visits": [
+        [
+          "S009",
+          [
+            "S009-FOD-01",
+            "S009-WAT-01"
+          ]
+        ],
+        [
+          "S004",
+          [
+            "S004-WAT-01"
+          ]
+        ]
+      ],
+      "target_models": [
+        "C"
+      ],
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "box": "S004-WAT-01",
+      "target_source_sortie": "T017",
+      "target_visits": [
+        [
+          "S004",
+          [
+            "S004-WAT-01"
+          ]
+        ],
+        [
+          "S005",
+          [
+            "S005-HYG-01",
+            "S005-WAT-03"
+          ]
+        ]
+      ],
+      "target_models": [
+        "C"
+      ],
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "box": "S004-WAT-01",
+      "target_source_sortie": "T017",
+      "target_visits": [
+        [
+          "S005",
+          [
+            "S005-HYG-01",
+            "S005-WAT-03"
+          ]
+        ],
+        [
+          "S004",
+          [
+            "S004-WAT-01"
+          ]
+        ]
+      ],
+      "target_models": [
+        "C"
+      ],
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "box": "S004-WAT-02",
+      "target_source_sortie": "T001",
+      "target_visits": [
+        [
+          "S001",
+          [
+            "S001-FOD-01",
+            "S001-FOD-02",
+            "S001-FOD-03",
+            "S001-WAT-06",
+            "S001-WAT-07",
+            "S001-WAT-08"
+          ]
+        ],
+        [
+          "S004",
+          [
+            "S004-WAT-02"
+          ]
+        ]
+      ],
+      "target_models": [
+        "C"
+      ],
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "box": "S004-WAT-02",
+      "target_source_sortie": "T003",
+      "target_visits": [
+        [
+          "S013",
+          [
+            "S013-MED-01",
+            "S013-WAT-01"
+          ]
+        ],
+        [
+          "S004",
+          [
+            "S004-WAT-02"
+          ]
+        ]
+      ],
+      "target_models": [
+        "C"
+      ],
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "box": "S004-WAT-02",
+      "target_source_sortie": "T007",
+      "target_visits": [
+        [
+          "S004",
+          [
+            "S004-WAT-02"
+          ]
+        ],
+        [
+          "S001",
+          [
+            "S001-MED-01",
+            "S001-MED-02",
+            "S001-WAT-01"
+          ]
+        ]
+      ],
+      "target_models": [
+        "C"
+      ],
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "box": "S004-WAT-02",
+      "target_source_sortie": "T007",
+      "target_visits": [
+        [
+          "S001",
+          [
+            "S001-MED-01",
+            "S001-MED-02",
+            "S001-WAT-01"
+          ]
+        ],
+        [
+          "S004",
+          [
+            "S004-WAT-02"
+          ]
+        ]
+      ],
+      "target_models": [
+        "C"
+      ],
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "box": "S004-WAT-02",
+      "target_source_sortie": "T014",
+      "target_visits": [
+        [
+          "S005",
+          [
+            "S005-MED-01",
+            "S005-WAT-01"
+          ]
+        ],
+        [
+          "S004",
+          [
+            "S004-MED-01",
+            "S004-WAT-02"
+          ]
+        ]
+      ],
+      "target_models": [
+        "C"
+      ],
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "box": "S004-WAT-02",
+      "target_source_sortie": "T024",
+      "target_visits": [
+        [
+          "S004",
+          [
+            "S004-WAT-02"
+          ]
+        ],
+        [
+          "S011",
+          [
+            "S011-FOD-01",
+            "S011-MED-01",
+            "S011-WAT-01"
+          ]
+        ]
+      ],
+      "target_models": [
+        "C"
+      ],
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "box": "S004-WAT-02",
+      "target_source_sortie": "T024",
+      "target_visits": [
+        [
+          "S011",
+          [
+            "S011-FOD-01",
+            "S011-MED-01",
+            "S011-WAT-01"
+          ]
+        ],
+        [
+          "S004",
+          [
+            "S004-WAT-02"
+          ]
+        ]
+      ],
+      "target_models": [
+        "C"
+      ],
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "box": "S004-WAT-02",
+      "target_source_sortie": "T019",
+      "target_visits": [
+        [
+          "S004",
+          [
+            "S004-WAT-02"
+          ]
+        ],
+        [
+          "S005",
+          [
+            "S005-FOD-01",
+            "S005-WAT-02"
+          ]
+        ]
+      ],
+      "target_models": [
+        "C"
+      ],
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "box": "S004-WAT-02",
+      "target_source_sortie": "T019",
+      "target_visits": [
+        [
+          "S005",
+          [
+            "S005-FOD-01",
+            "S005-WAT-02"
+          ]
+        ],
+        [
+          "S004",
+          [
+            "S004-WAT-02"
+          ]
+        ]
+      ],
+      "target_models": [
+        "C"
+      ],
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "box": "S004-WAT-02",
+      "target_source_sortie": "T005",
+      "target_visits": [
+        [
+          "S009",
+          [
+            "S009-MED-01"
+          ]
+        ],
+        [
+          "S004",
+          [
+            "S004-WAT-02"
+          ]
+        ],
+        [
+          "S002",
+          [
+            "S002-MED-01",
+            "S002-WAT-01"
+          ]
+        ]
+      ],
+      "target_models": [
+        "C"
+      ],
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "box": "S004-WAT-02",
+      "target_source_sortie": "T005",
+      "target_visits": [
+        [
+          "S009",
+          [
+            "S009-MED-01"
+          ]
+        ],
+        [
+          "S002",
+          [
+            "S002-MED-01",
+            "S002-WAT-01"
+          ]
+        ],
+        [
+          "S004",
+          [
+            "S004-WAT-02"
+          ]
+        ]
+      ],
+      "target_models": [
+        "C"
+      ],
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "box": "S004-WAT-02",
+      "target_source_sortie": "T021",
+      "target_visits": [
+        [
+          "S004",
+          [
+            "S004-WAT-02"
+          ]
+        ],
+        [
+          "S008",
+          [
+            "S008-HYG-01",
+            "S008-WAT-02"
+          ]
+        ]
+      ],
+      "target_models": [
+        "C"
+      ],
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "box": "S004-WAT-02",
+      "target_source_sortie": "T021",
+      "target_visits": [
+        [
+          "S008",
+          [
+            "S008-HYG-01",
+            "S008-WAT-02"
+          ]
+        ],
+        [
+          "S004",
+          [
+            "S004-WAT-02"
+          ]
+        ]
+      ],
+      "target_models": [
+        "C"
+      ],
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "box": "S004-WAT-02",
+      "target_source_sortie": "T022",
+      "target_visits": [
+        [
+          "S004",
+          [
+            "S004-WAT-02"
+          ]
+        ],
+        [
+          "S009",
+          [
+            "S009-FOD-01",
+            "S009-WAT-01"
+          ]
+        ]
+      ],
+      "target_models": [
+        "C"
+      ],
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "box": "S004-WAT-02",
+      "target_source_sortie": "T022",
+      "target_visits": [
+        [
+          "S009",
+          [
+            "S009-FOD-01",
+            "S009-WAT-01"
+          ]
+        ],
+        [
+          "S004",
+          [
+            "S004-WAT-02"
+          ]
+        ]
+      ],
+      "target_models": [
+        "C"
+      ],
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "box": "S004-WAT-02",
+      "target_source_sortie": "T017",
+      "target_visits": [
+        [
+          "S004",
+          [
+            "S004-WAT-02"
+          ]
+        ],
+        [
+          "S005",
+          [
+            "S005-HYG-01",
+            "S005-WAT-03"
+          ]
+        ]
+      ],
+      "target_models": [
+        "C"
+      ],
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "box": "S004-WAT-02",
+      "target_source_sortie": "T017",
+      "target_visits": [
+        [
+          "S005",
+          [
+            "S005-HYG-01",
+            "S005-WAT-03"
+          ]
+        ],
+        [
+          "S004",
+          [
+            "S004-WAT-02"
+          ]
+        ]
+      ],
+      "target_models": [
+        "C"
+      ],
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "box": "S004-WAT-03",
+      "target_source_sortie": "T001",
+      "target_visits": [
+        [
+          "S001",
+          [
+            "S001-FOD-01",
+            "S001-FOD-02",
+            "S001-FOD-03",
+            "S001-WAT-06",
+            "S001-WAT-07",
+            "S001-WAT-08"
+          ]
+        ],
+        [
+          "S004",
+          [
+            "S004-WAT-03"
+          ]
+        ]
+      ],
+      "target_models": [
+        "C"
+      ],
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "box": "S004-WAT-03",
+      "target_source_sortie": "T003",
+      "target_visits": [
+        [
+          "S013",
+          [
+            "S013-MED-01",
+            "S013-WAT-01"
+          ]
+        ],
+        [
+          "S004",
+          [
+            "S004-WAT-03"
+          ]
+        ]
+      ],
+      "target_models": [
+        "C"
+      ],
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "box": "S004-WAT-03",
+      "target_source_sortie": "T007",
+      "target_visits": [
+        [
+          "S004",
+          [
+            "S004-WAT-03"
+          ]
+        ],
+        [
+          "S001",
+          [
+            "S001-MED-01",
+            "S001-MED-02",
+            "S001-WAT-01"
+          ]
+        ]
+      ],
+      "target_models": [
+        "C"
+      ],
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "box": "S004-WAT-03",
+      "target_source_sortie": "T007",
+      "target_visits": [
+        [
+          "S001",
+          [
+            "S001-MED-01",
+            "S001-MED-02",
+            "S001-WAT-01"
+          ]
+        ],
+        [
+          "S004",
+          [
+            "S004-WAT-03"
+          ]
+        ]
+      ],
+      "target_models": [
+        "C"
+      ],
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "box": "S004-WAT-03",
+      "target_source_sortie": "T014",
+      "target_visits": [
+        [
+          "S005",
+          [
+            "S005-MED-01",
+            "S005-WAT-01"
+          ]
+        ],
+        [
+          "S004",
+          [
+            "S004-MED-01",
+            "S004-WAT-03"
+          ]
+        ]
+      ],
+      "target_models": [
+        "C"
+      ],
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "box": "S004-WAT-03",
+      "target_source_sortie": "T024",
+      "target_visits": [
+        [
+          "S004",
+          [
+            "S004-WAT-03"
+          ]
+        ],
+        [
+          "S011",
+          [
+            "S011-FOD-01",
+            "S011-MED-01",
+            "S011-WAT-01"
+          ]
+        ]
+      ],
+      "target_models": [
+        "C"
+      ],
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "box": "S004-WAT-03",
+      "target_source_sortie": "T024",
+      "target_visits": [
+        [
+          "S011",
+          [
+            "S011-FOD-01",
+            "S011-MED-01",
+            "S011-WAT-01"
+          ]
+        ],
+        [
+          "S004",
+          [
+            "S004-WAT-03"
+          ]
+        ]
+      ],
+      "target_models": [
+        "C"
+      ],
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "box": "S004-WAT-03",
+      "target_source_sortie": "T019",
+      "target_visits": [
+        [
+          "S004",
+          [
+            "S004-WAT-03"
+          ]
+        ],
+        [
+          "S005",
+          [
+            "S005-FOD-01",
+            "S005-WAT-02"
+          ]
+        ]
+      ],
+      "target_models": [
+        "C"
+      ],
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "box": "S004-WAT-03",
+      "target_source_sortie": "T019",
+      "target_visits": [
+        [
+          "S005",
+          [
+            "S005-FOD-01",
+            "S005-WAT-02"
+          ]
+        ],
+        [
+          "S004",
+          [
+            "S004-WAT-03"
+          ]
+        ]
+      ],
+      "target_models": [
+        "C"
+      ],
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "box": "S004-WAT-03",
+      "target_source_sortie": "T005",
+      "target_visits": [
+        [
+          "S009",
+          [
+            "S009-MED-01"
+          ]
+        ],
+        [
+          "S004",
+          [
+            "S004-WAT-03"
+          ]
+        ],
+        [
+          "S002",
+          [
+            "S002-MED-01",
+            "S002-WAT-01"
+          ]
+        ]
+      ],
+      "target_models": [
+        "C"
+      ],
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "box": "S004-WAT-03",
+      "target_source_sortie": "T005",
+      "target_visits": [
+        [
+          "S009",
+          [
+            "S009-MED-01"
+          ]
+        ],
+        [
+          "S002",
+          [
+            "S002-MED-01",
+            "S002-WAT-01"
+          ]
+        ],
+        [
+          "S004",
+          [
+            "S004-WAT-03"
+          ]
+        ]
+      ],
+      "target_models": [
+        "C"
+      ],
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "box": "S004-WAT-03",
+      "target_source_sortie": "T021",
+      "target_visits": [
+        [
+          "S004",
+          [
+            "S004-WAT-03"
+          ]
+        ],
+        [
+          "S008",
+          [
+            "S008-HYG-01",
+            "S008-WAT-02"
+          ]
+        ]
+      ],
+      "target_models": [
+        "C"
+      ],
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "box": "S004-WAT-03",
+      "target_source_sortie": "T021",
+      "target_visits": [
+        [
+          "S008",
+          [
+            "S008-HYG-01",
+            "S008-WAT-02"
+          ]
+        ],
+        [
+          "S004",
+          [
+            "S004-WAT-03"
+          ]
+        ]
+      ],
+      "target_models": [
+        "C"
+      ],
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "box": "S004-WAT-03",
+      "target_source_sortie": "T022",
+      "target_visits": [
+        [
+          "S004",
+          [
+            "S004-WAT-03"
+          ]
+        ],
+        [
+          "S009",
+          [
+            "S009-FOD-01",
+            "S009-WAT-01"
+          ]
+        ]
+      ],
+      "target_models": [
+        "C"
+      ],
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "box": "S004-WAT-03",
+      "target_source_sortie": "T022",
+      "target_visits": [
+        [
+          "S009",
+          [
+            "S009-FOD-01",
+            "S009-WAT-01"
+          ]
+        ],
+        [
+          "S004",
+          [
+            "S004-WAT-03"
+          ]
+        ]
+      ],
+      "target_models": [
+        "C"
+      ],
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "box": "S004-WAT-03",
+      "target_source_sortie": "T017",
+      "target_visits": [
+        [
+          "S004",
+          [
+            "S004-WAT-03"
+          ]
+        ],
+        [
+          "S005",
+          [
+            "S005-HYG-01",
+            "S005-WAT-03"
+          ]
+        ]
+      ],
+      "target_models": [
+        "C"
+      ],
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "box": "S004-WAT-03",
+      "target_source_sortie": "T017",
+      "target_visits": [
+        [
+          "S005",
+          [
+            "S005-HYG-01",
+            "S005-WAT-03"
+          ]
+        ],
+        [
+          "S004",
+          [
+            "S004-WAT-03"
+          ]
+        ]
+      ],
+      "target_models": [
+        "C"
+      ],
+      "status": "INFEASIBLE",
+      "objective": null
+    }
+  ],
+  "best_objective": null
+}

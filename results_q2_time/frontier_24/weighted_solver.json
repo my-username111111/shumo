@@ -1,0 +1,37 @@
+{
+  "case": "main",
+  "status": "FEASIBLE",
+  "time_limit_seconds": 90.0,
+  "elapsed_seconds": 90.0948003999656,
+  "workers": 8,
+  "seed": 2029,
+  "scale": 1,
+  "model_options": 53,
+  "fixed_sorties": 24,
+  "weighted_cap_seconds": null,
+  "makespan_cap_seconds": 6075.0,
+  "energy_cap_kwh": 69.155,
+  "objective_bound": 1807810.0,
+  "objective_value": 2501570.0,
+  "verification": {
+    "boxes": 80,
+    "sorties": 24,
+    "hard_boxes": 31,
+    "alternatives_checked": 0
+  },
+  "source": "results_q2_time\\zone_fod_repair_24\\fastest_plan.json",
+  "source_objective": {
+    "weighted_delivery_seconds": 2597110.0493098567,
+    "weighted_soft_delay_seconds": 0,
+    "makespan": 6073.208125395588,
+    "energy_kwh": 69.15451555444506,
+    "sortie_count": 24
+  },
+  "candidate_objective": {
+    "weighted_delivery_seconds": 2500844.9032504223,
+    "weighted_soft_delay_seconds": 0,
+    "makespan": 6073.208125395588,
+    "energy_kwh": 69.15451555444506,
+    "sortie_count": 24
+  }
+}

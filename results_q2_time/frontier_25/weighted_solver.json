@@ -1,0 +1,37 @@
+{
+  "case": "main",
+  "status": "OPTIMAL",
+  "time_limit_seconds": 90.0,
+  "elapsed_seconds": 69.04352860001381,
+  "workers": 8,
+  "seed": 2029,
+  "scale": 1,
+  "model_options": 56,
+  "fixed_sorties": 25,
+  "weighted_cap_seconds": null,
+  "makespan_cap_seconds": 6056.0,
+  "energy_cap_kwh": 70.192,
+  "objective_bound": 2595498.0,
+  "objective_value": 2595498.0,
+  "verification": {
+    "boxes": 80,
+    "sorties": 25,
+    "hard_boxes": 31,
+    "alternatives_checked": 0
+  },
+  "source": "results_q2_time\\s001_extra_probe\\refined_makespan\\plan.json",
+  "source_objective": {
+    "weighted_delivery_seconds": 2630187.403285887,
+    "weighted_soft_delay_seconds": 0,
+    "makespan": 6054.352488604271,
+    "energy_kwh": 70.19198829395475,
+    "sortie_count": 25
+  },
+  "candidate_objective": {
+    "weighted_delivery_seconds": 2594765.178508154,
+    "weighted_soft_delay_seconds": 0,
+    "makespan": 6054.352488604271,
+    "energy_kwh": 70.19198829395475,
+    "sortie_count": 25
+  }
+}

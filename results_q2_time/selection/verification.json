@@ -184,5 +184,29 @@
     "sorties": 27,
     "hard_boxes": 31,
     "alternatives_checked": 0
+  },
+  "frontier_23__weighted_plan": {
+    "boxes": 80,
+    "sorties": 23,
+    "hard_boxes": 31,
+    "alternatives_checked": 0
+  },
+  "frontier_24__makespan_plan": {
+    "boxes": 80,
+    "sorties": 24,
+    "hard_boxes": 31,
+    "alternatives_checked": 0
+  },
+  "frontier_24__weighted_plan": {
+    "boxes": 80,
+    "sorties": 24,
+    "hard_boxes": 31,
+    "alternatives_checked": 0
+  },
+  "frontier_25__weighted_plan": {
+    "boxes": 80,
+    "sorties": 25,
+    "hard_boxes": 31,
+    "alternatives_checked": 0
   }
 }

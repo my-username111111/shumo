@@ -1,0 +1,45 @@
+{
+  "source": "F:\\数学建模2026\\shumo_sync\\results_q2_time\\zone_fod_repair_24\\fastest_plan.json",
+  "source_verification": {
+    "boxes": 80,
+    "sorties": 24,
+    "hard_boxes": 31,
+    "alternatives_checked": 0
+  },
+  "variant": "23",
+  "solver": {
+    "case": "makespan",
+    "status": "OPTIMAL",
+    "time_limit_seconds": 20.0,
+    "elapsed_seconds": 0.2877169999992475,
+    "workers": 4,
+    "seed": 2026,
+    "scale": 1,
+    "model_options": 50,
+    "fixed_sorties": 23,
+    "weighted_cap_seconds": null,
+    "makespan_cap_seconds": null,
+    "energy_cap_kwh": null,
+    "objective_bound": 6114.0,
+    "objective_value": 6114.0,
+    "verification": {
+      "boxes": 80,
+      "sorties": 23,
+      "hard_boxes": 31,
+      "alternatives_checked": 0
+    }
+  },
+  "objective": {
+    "weighted_delivery_seconds": 2645546.0234065666,
+    "weighted_soft_delay_seconds": 0,
+    "makespan": 6112.317339653567,
+    "energy_kwh": 69.30723683159759,
+    "sortie_count": 23
+  },
+  "verification": {
+    "boxes": 80,
+    "sorties": 23,
+    "hard_boxes": 31,
+    "alternatives_checked": 0
+  }
+}

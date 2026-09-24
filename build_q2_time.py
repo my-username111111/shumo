@@ -1,11 +1,10 @@
 """Compare verified Q2 time-search plans and package useful choices.
 
 The fastest plan minimizes the last return time among the saved candidates.
-The balanced plan also improves the former 28-sortie time baseline on weighted
-delivery, energy, sortie count and zero soft lateness.  Selection is over the
-saved, independently verified candidates; it is not an optimality claim.  The
-delivery plan minimizes weighted delivery among plans that dominate that
-baseline.
+The balanced plan dominates the previously delivered 24-sortie plan on the
+same five axes.  The delivery plan minimizes weighted delivery among plans
+that dominate the original 28-sortie baseline.  Selection is over curated,
+independently verified candidates; it is not an optimality claim.
 """
 
 from __future__ import annotations
@@ -23,17 +22,23 @@ from verify import verify_q2
 
 ROOT = Path(__file__).resolve().parent
 BASELINE = ROOT / "results_q2_extended" / "plans" / "28_earliest.json"
+PREVIOUS_24 = ROOT / "results_q2_time" / "research_24" / "s006_food_to_j002_weighted_plan.json"
 DEFAULT_SEARCH = ROOT / "results_q2_time"
+CURATED_DIRS = (
+    "fast26_research", "fixed28_seed2026", "research_24",
+    "tail_repack_24", "tail_repack_24_early", "tail_repack_24_time",
+    "tail_repack_25", "tail_repack_26", "tail_repack_27",
+    "frontier_23", "frontier_24", "frontier_25",
+)
 
 
 def candidate_files(search_dir: Path) -> list[tuple[str, Path]]:
-    """Find solver outputs while excluding copies made by this packager."""
+    """Find saved candidates, excluding temporary experiments and copies."""
     candidates = [("28_earliest", BASELINE)]
-    for path in sorted(search_dir.rglob("*plan.json")):
-        if "selection" in path.relative_to(search_dir).parts:
-            continue
-        label = "__".join(path.relative_to(search_dir).with_suffix("").parts)
-        candidates.append((label, path))
+    for dirname in CURATED_DIRS:
+        for path in sorted((search_dir / dirname).rglob("*plan.json")):
+            label = "__".join(path.relative_to(search_dir).with_suffix("").parts)
+            candidates.append((label, path))
     if len(candidates) == 1:
         raise ValueError(f"No time-search plans found under {search_dir}")
     return candidates
@@ -97,8 +102,12 @@ def main() -> None:
         rows.append(row)
         sources[name] = str(path.relative_to(ROOT))
     baseline = rows[0]
+    previous_24_source = str(PREVIOUS_24.relative_to(ROOT))
+    previous_24 = next(row for row in rows
+                       if sources[row["scheme"]] == previous_24_source)
     for row in rows:
         row["dominates_28_earliest"] = dominates(row, baseline)
+        row["dominates_previous_24"] = dominates(row, previous_24)
         row["pareto_efficient_5_metrics"] = not any(
             dominates(other, row) for other in rows if other is not row)
         row["source_file"] = sources[row["scheme"]]
@@ -106,12 +115,15 @@ def main() -> None:
                                row["weighted_delivery_seconds"]))
     fastest = rows[0]
     balanced_options = [row for row in rows
-                        if row["dominates_28_earliest"]
+                        if row["dominates_previous_24"]
                         and row["weighted_soft_delay_seconds"] <= 1e-7]
     if not balanced_options:
-        raise ValueError("No saved plan dominates the 28-sortie time baseline")
+        raise ValueError("No saved plan dominates the previous 24-sortie plan")
     balanced = balanced_options[0]
-    delivery = min(balanced_options,
+    delivery_options = [row for row in rows
+                        if row["dominates_28_earliest"]
+                        and row["weighted_soft_delay_seconds"] <= 1e-7]
+    delivery = min(delivery_options,
                    key=lambda row: (row["weighted_delivery_seconds"],
                                     row["makespan_seconds"],
                                     row["energy_kwh"], row["sorties"]))
@@ -129,6 +141,9 @@ def main() -> None:
         export_plan(s, choice, plans[name], args.output)
     report = {
         "baseline": {key: baseline[key] for key in (
+            "scheme", "weighted_soft_delay_seconds", "weighted_delivery_seconds",
+            "makespan_seconds", "energy_kwh", "sorties")},
+        "previous_24": {key: previous_24[key] for key in (
             "scheme", "weighted_soft_delay_seconds", "weighted_delivery_seconds",
             "makespan_seconds", "energy_kwh", "sorties")},
         "balanced": balanced,
