@@ -14,6 +14,7 @@ from model import Scenario  # noqa: E402
 from q2 import Dispatch, solve  # noqa: E402
 from q2 import Job  # noqa: E402
 from q2_alns import solve_two_stage_alns  # noqa: E402
+from q2_refinement import _candidate_pool  # noqa: E402
 from verify import verify_q2  # noqa: E402
 
 
@@ -73,6 +74,23 @@ class Q2VerifierFaults(unittest.TestCase):
         verify_q2(self.scenario, stage1)
         verify_q2(self.scenario, stage2)
         self.assertEqual(search["policy"], "stage1_service_then_stage2_zero_delay_energy")
+
+    def test_incremental_repair_preserves_each_box_and_replays(self) -> None:
+        dispatcher = Dispatch(self.scenario)
+        candidates, evaluated = _candidate_pool(dispatcher, self.answer, Job,
+                                                max_targets=3)
+        self.assertGreater(evaluated, 0)
+        self.assertGreater(len(candidates), 0)
+        verified = 0
+        for _, _, jobs, _ in candidates[:40]:
+            ids = [bid for job in jobs for bid in job.box_ids]
+            self.assertEqual(len(ids), len(self.scenario.boxes))
+            self.assertEqual(set(ids), set(self.scenario.boxes))
+            plan = dispatcher._schedule_order(jobs)
+            if plan is not None:
+                verify_q2(self.scenario, plan)
+                verified += 1
+        self.assertGreater(verified, 0)
 
     def test_unknown_aircraft(self) -> None:
         self.assert_rejected(lambda q: q["sorties"][0].__setitem__("drone", "U_FAKE"))
