@@ -1,10 +1,10 @@
 """Question 2: multi-sortie dispatch with explicit aircraft and battery events.
 
 This is a feasible-solution search, not a claim of global optimality. The main
-policy minimizes weighted tardiness against soft expected times, then weighted
-delivery time, completion time, energy and sortie count. Two complete alternative
-plans expose the timing/energy tradeoff. Every candidate is rescheduled against
-the physical aircraft, type-specific batteries, charging and hard deadlines.
+policy minimizes weighted soft delay, then weighted delivery time, completion
+time, energy and sortie count. Complete alternatives show the timing/energy
+tradeoff. Every accepted candidate is replayed with physical aircraft,
+type-specific batteries, charging and hard deadlines.
 """
 
 from __future__ import annotations
@@ -17,6 +17,7 @@ from random import Random
 from model import Scenario, distance_m
 from q1 import solve_zone
 from q2_alns import solve_two_stage_alns
+from q2_refinement import solve_refinements
 
 
 @dataclass(frozen=True)
@@ -584,6 +585,11 @@ def solve(s: Scenario, improve: bool = True) -> dict:
             dispatcher, result, zero_delay_efficient, Job)
         if dispatcher.objective_key(alns_main) < dispatcher.objective_key(result):
             result = alns_main
+        previous_main = result
+        quick_refined, timely_refined, energy_refined, refinement_search = solve_refinements(
+            dispatcher, previous_main, alns_zero_delay, Job)
+        result = min((previous_main, quick_refined, timely_refined, energy_refined),
+                     key=dispatcher.objective_key)
     else:
         result = base
         merged = base
@@ -605,6 +611,9 @@ def solve(s: Scenario, improve: bool = True) -> dict:
         alns_search = dict(policy="disabled", delivery_ratio=1.03,
                            delivery_cap=base["objective"]["weighted_delivery_seconds"],
                            stage1={}, stage2_selected={}, stage2_runs=[])
+        previous_main = base
+        quick_refined = timely_refined = energy_refined = base
+        refinement_search = dict(policy="disabled")
     result["search"] = dict(policy="weighted_soft_delay_then_weighted_delivery_then_makespan_then_energy_then_sorties",
                             initial_objective=base["objective"],
                             merged_objective=merged["objective"],
@@ -614,6 +623,7 @@ def solve(s: Scenario, improve: bool = True) -> dict:
                             neighborhood=neighborhood,
                             joint_resource_beam=beam_search,
                             alns=alns_search,
+                            refinement=refinement_search,
                             fast_split_search=fast_split_search,
                             fast_order_search=fast_order_search,
                             energy_order_search=energy_order_search,
@@ -628,7 +638,13 @@ def solve(s: Scenario, improve: bool = True) -> dict:
             timing_alternative = ("fast_zero_delay", fast_zero_delay)
         alternatives = {timing_alternative[0]: timing_alternative[1], **alternatives,
                         "energy_guarded_timely": energy_guarded_timely,
-                        "alns_zero_delay_efficient": alns_zero_delay}
+                        "alns_zero_delay_efficient": alns_zero_delay,
+                        "quick_24": quick_refined,
+                        "energy_22": energy_refined}
+        if result is not previous_main:
+            alternatives["prior_soft_delay_priority"] = previous_main
+        if result is not timely_refined:
+            alternatives["timely_22"] = timely_refined
     # A search can keep the baseline as both the primary and an alternative.
     # Store only independent plan containers so JSON export cannot self-reference.
     result["alternatives"] = {

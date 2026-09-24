@@ -232,7 +232,9 @@ def main() -> None:
     parser.add_argument("--q3-seed", choices=("soft_delay_priority", "zero_delay_efficient",
                                               "delivery_priority", "energy_guarded",
                                               "energy_guarded_timely",
-                                              "alns_zero_delay_efficient"),
+                                              "alns_zero_delay_efficient", "quick_24",
+                                              "energy_22", "prior_soft_delay_priority",
+                                              "timely_22"),
                         default="energy_guarded", help="Q2 candidate used to initialize Q3")
     parser.add_argument("--coordination-rounds", type=int, default=2,
                         help="Communication-guided search rounds (default: 2)")
@@ -259,7 +261,8 @@ def main() -> None:
     print("Q2: transport and shared batteries", flush=True)
     q2 = solve_q2(scenario, improve=not args.no_merge)
     print("Q3: communication-guided transport and relay search", flush=True)
-    q3_seed = q2 if args.q3_seed == "soft_delay_priority" else q2["alternatives"][args.q3_seed]
+    q3_seed = (q2 if args.q3_seed in {"soft_delay_priority", "timely_22"}
+               else q2["alternatives"][args.q3_seed])
     if args.no_coordination:
         q3 = solve_q3(scenario, q3_seed)
     else:
