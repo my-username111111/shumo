@@ -1,0 +1,172 @@
+{
+  "selected": {
+    "coupled_components": [
+      [
+        "S001"
+      ],
+      [
+        "S002",
+        "S003",
+        "S004",
+        "S005",
+        "S006",
+        "S007",
+        "S008",
+        "S009",
+        "S010",
+        "S012",
+        "S013",
+        "S014",
+        "S015"
+      ],
+      [
+        "S011"
+      ]
+    ],
+    "component_count": 3,
+    "relay_service_zones": {
+      "R001": [
+        "S003",
+        "S004",
+        "S005",
+        "S006",
+        "S007",
+        "S013",
+        "S015"
+      ],
+      "R002": [
+        "S002",
+        "S004",
+        "S005",
+        "S007",
+        "S008",
+        "S009",
+        "S012",
+        "S013"
+      ],
+      "R003": [
+        "S002",
+        "S009",
+        "S010",
+        "S012",
+        "S013",
+        "S014"
+      ]
+    },
+    "constraint_imposed_during_q3": false
+  },
+  "compatible_label": "q4_compatible",
+  "compatible_objective": {
+    "weighted_soft_delay": 0,
+    "weighted_delivery_seconds": 2688138.5076264874,
+    "makespan": 7880.847074711972,
+    "energy_kwh": 72.83838994571158,
+    "transport_energy_kwh": 69.15451555444506,
+    "relay_energy_kwh": 3.6838743912665226,
+    "transport_sorties": 24,
+    "relay_sorties": 5,
+    "total_sorties": 29
+  },
+  "delta_from_selected": {
+    "weighted_soft_delay": 0,
+    "weighted_delivery_seconds": 53864.50433712965,
+    "makespan": 1490.3124213310894,
+    "energy_kwh": 0.04036413799425986,
+    "total_sorties": 3
+  },
+  "compatible_components": {
+    "coupled_components": [
+      [
+        "S001"
+      ],
+      [
+        "S002",
+        "S003",
+        "S004",
+        "S005",
+        "S006",
+        "S007",
+        "S008",
+        "S009",
+        "S010",
+        "S012",
+        "S013",
+        "S014",
+        "S015"
+      ],
+      [
+        "S011"
+      ]
+    ],
+    "component_count": 3,
+    "relay_service_zones": {
+      "R001": [
+        "S002",
+        "S003",
+        "S004",
+        "S005",
+        "S006",
+        "S007",
+        "S008",
+        "S009",
+        "S015"
+      ],
+      "R002": [
+        "S002",
+        "S003",
+        "S005",
+        "S006",
+        "S007",
+        "S009",
+        "S010",
+        "S012",
+        "S013",
+        "S015"
+      ],
+      "R003": [
+        "S012",
+        "S013"
+      ],
+      "R004": [
+        "S002",
+        "S009",
+        "S010",
+        "S012",
+        "S013",
+        "S014"
+      ],
+      "R005": [
+        "S004",
+        "S005",
+        "S008",
+        "S009",
+        "S012",
+        "S013"
+      ]
+    },
+    "constraint_imposed_during_q3": true
+  },
+  "selected_already_supports_three_groups": true,
+  "best_observed_compatible": {
+    "label": "delivery_23_2026",
+    "objective": {
+      "weighted_soft_delay": 0,
+      "weighted_delivery_seconds": 2634274.0032893578,
+      "makespan": 6390.534653380882,
+      "energy_kwh": 72.79802580771732,
+      "transport_energy_kwh": 69.30723683159759,
+      "relay_energy_kwh": 3.4907889761197355,
+      "transport_sorties": 23,
+      "relay_sorties": 3,
+      "total_sorties": 26
+    },
+    "delta_from_selected": {
+      "weighted_soft_delay": 0,
+      "weighted_delivery_seconds": 0.0,
+      "makespan": 0.0,
+      "energy_kwh": 0.0,
+      "total_sorties": 0
+    }
+  },
+  "comparison_note": "The separately constrained branch is a controlled experiment, not the minimum necessary compatibility cost."
+}

@@ -133,12 +133,15 @@ def main() -> None:
                    certificate=result["certificate"]["status"])
               for label, _, result, _ in results]
     write_csv(output / "q3_pareto.csv", pareto)
-    # Fixed-plan robustness audit.  Positive minimum margin is the exact extra
-    # loss tolerated without changing any route, site or time assignment.
-    margin = selected["communication"]["minimum_certified_margin_db"]
-    robust = [dict(extra_loss_db=x, fixed_plan_pass=(margin + 1e-9 >= x),
-                   residual_minimum_margin_db=margin - x,
-                   reoptimization_run=False) for x in (0, 1, 2, 3)]
+    # A failed conservative bound is UNKNOWN, not an outage proof. Recompute
+    # the path selection and subdivisions under each loss perturbation.
+    from q3_certificate import certify
+    robust = []
+    for extra in (0, 1, 2, 3):
+        _, communication, certificate = certify(scenario, selected, extra, stop_on_failure=True)
+        robust.append(dict(extra_loss_db=extra, fixed_plan_status=certificate["status"],
+                           unknown_seconds=communication["unknown_seconds"],
+                           reoptimization_run=False))
     write_csv(output / "q3_robustness.csv", robust)
     manifest_files = [p for p in output.iterdir() if p.is_file() and p.name != "manifest.json"]
     dump_json(output / "manifest.json", {

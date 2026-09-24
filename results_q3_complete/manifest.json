@@ -1,0 +1,87 @@
+{
+  "selected": "delivery_23_2026",
+  "policy": [
+    "weighted_soft_delay",
+    "weighted_delivery_seconds",
+    "makespan",
+    "energy_kwh",
+    "total_sorties"
+  ],
+  "args": {
+    "output": "D:\\建模\\shumo\\results_q3_complete",
+    "warm_start": "q3_joint_feasible_seed.json",
+    "data": "D:\\建模\\数据",
+    "seconds": 20.0,
+    "iterations": 8,
+    "seeds": [
+      2026,
+      2027
+    ],
+    "skip_robust": false,
+    "skip_refine": false
+  },
+  "input_fingerprint": "8b318a9045d58f13b75e945b88ac406c28444aa986dfed4cc92f08b05d5fc6f0",
+  "elapsed_seconds": 2479.0742257999955,
+  "sources": {
+    "results_q2_time\\frontier_24\\weighted_plan.json": "48aad6dc2b3b6c19e5b04454ada029ca5d022cbf947034c1d9e08d5f2cb49eb0",
+    "results_q2_time\\frontier_23\\weighted_plan.json": "62b4565327d87f63c5c35930501e87c0f453d711fc631b327aecff78d3225a62",
+    "results_q2_time\\frontier_25\\weighted_plan.json": "1e11205c1dd6ed1fedc2e0b3d4941babef9f60e5563dd016c4414ddeffc3179c",
+    "results_q3_upgrade/q3_plan.json": "71819fa07055ffd3a7b5a48af09d816af627289390822ac0f58f10b429dbc7f7"
+  },
+  "code": {
+    "q3_joint.py": "02ef3e031185503e6e5f28f79d9ad90c17a421b4a75d865bd53d996a0f90bd6a",
+    "q3_certificate.py": "0ea376c73de64bb67d8bfa460d19a1c8518a49c62fe0c8b09f671a2b0d909157",
+    "run_q3_joint.py": "587a69474f47fcf8db7eabe1ad676e103d7e3fe53a7ad500bdcb186641fdc4f5",
+    "q3_upgrade.py": "120807ec696692915f184f2553d38538a5e8a721325056003553ed6cf78dd7bb",
+    "q3_deliver.py": "aeafa2feaa9c30b53c6158c3704d94b3b29781189019dbef38a2e15d09231981",
+    "model.py": "937e72637b41764f75e9c471d6a34dc8fb2600beb69e0963862b9fe2128b7fcb",
+    "verify.py": "bd0606376bc52f83e791b493daca57e6dd9cd896355f0e6e4f28473c5f8b8e07",
+    "transport_check.py": "e2a7725e9cdc29728b54db7e1a62057d5ee169dc4145f04a31e2bd7476e593f9",
+    "run_q3_upgrade.py": "1403346dd92482d10c6353a11a0a337e3cc2c142b0b4d006536234f5265bd506"
+  },
+  "files": {
+    "plans\\alns_002_merge.json": "e7fc3e3c6a32bf4c4b375b598b2b31e45cb8d37848e0a90ad2145e3193080bbc",
+    "plans\\balanced_24_2026.json": "badf737e0f99e788e90cb55dd83289f48b637d8293cb73226b18e4e14882056b",
+    "plans\\balanced_24_2027.json": "00d8830c354bb5dc0626471a5f5aba59f99eb1a484b3763da067d753b0cc8d87",
+    "plans\\baseline_recertified.json": "c65e8df088167c6a5bbe04251f29127305bb22e7f48693a7f0eab570b8236e90",
+    "plans\\baseline_routes_2026.json": "846880464e380f2e0bfc9faaf8d1a3750c7ccd2149780293a7f7103187560bb0",
+    "plans\\baseline_routes_2027.json": "48fe4a9f802d132604965b7207f703abcd6d02628d66d1c3c8a32fc091e388a9",
+    "plans\\delivery_23_2026.json": "df5dbf182cea219a3eb173d86ce411acd339ad7b9ed93bb1b4d0f5bc23f0f181",
+    "plans\\fastest_25_2026.json": "6ba62273729d4ea844d3535bc6840d0cb22d839c85d48f17d891699818b00b58",
+    "plans\\fastest_25_2027.json": "61475cc6fafc28904b0824e62b3d06e7c2414a3aab1845b5dba60780e6aeb0e6",
+    "plans\\q4_compatible.json": "cc3c685b6f4a00607f188c310c95d54fa2e83fa4ced85f8535a7e6e6e47aacfa",
+    "plans\\warm_start.json": "adebd5de1261a4c4781ca35ae74b2b1eeb5151749526fa348c85f4dd5d8d46dd",
+    "q3_all_candidates.csv": "032025a7164f26c22f4939582d30aca5fe7d6d0357c1961b94f2d20664b241aa",
+    "q3_archive_validation.json": "312a43abd8330336c831913ef782235172d6dc57e8f940450a3c096083b9e454",
+    "q3_bound_report.json": "b7cf3260617b81e19a568eb757ac54c4656c2594428771c15c3658acae8b8ddc",
+    "q3_communication_intervals.csv": "03b0c445324cd722e154e0bd1c2077daa4dcac1eac30a44d2dc73290ca824347",
+    "q3_continuity_certificate.json": "a6fe09c612d1558a2dab0795a38666e7f273ff811c421d50b4b0b184c9573308",
+    "q3_deadline_audit.csv": "43ea3974c9f6fd316d6f5e0891a064f136996b0ded9364663136dad1d7953ce1",
+    "q3_deliveries.csv": "29c09d63febf5e6d7c71f316da0b309ed60136d3a4ae5dfc9061c46b270846c3",
+    "q3_fixed_plan_robustness.json": "8da7098a3b10ca236d4e4bea166fef5e6b48947ea0d833106243137dd9a879ea",
+    "q3_independent_replay.json": "ca0f1287a7b82c25796bdc1dc1c63a02b73058212ff956179614790cff304b37",
+    "q3_multiseed_summary.csv": "0ec24aea0e0c88af59cc834092ebee17e9f6a0b7215f024894479c027e295d72",
+    "q3_pareto.csv": "008d760ea87dde4f9eca9bbc86b6cd8ece87c9a426b62a39172ed7ba4344ab74",
+    "q3_plan.json": "df5dbf182cea219a3eb173d86ce411acd339ad7b9ed93bb1b4d0f5bc23f0f181",
+    "q3_q4_compatibility.json": "37afaa20fcbc1a3ca7ee2d9de63b32bef29e1e0ecf77a3cb676ad6b39f185173",
+    "q3_q4_partition_preview.json": "113533d7ef1a034199c93d640288dc385596f723d34246b5ef6f587920b49bcf",
+    "q3_resource_summary.csv": "11f3d2ab7879f05d7c2179edd6cae32bc2312ff137fff5eed03f62206b9ffd4e",
+    "q3_resource_timeline.csv": "65bba6f974d75d0c3b4fbcf60c4929962f87ac8f1b0df2c69cf8a7001159920e",
+    "q3_resource_timeline.png": "5ce83014cdfc91bd2ab80b597303943134ed93b97b6dd77b1aea05f8e9869d14",
+    "q3_robustness.csv": "bb3245becee38565d117f4321132906bf921eb1fcf53d5dce56f9b51aa9a51d4",
+    "q3_route_map.png": "1e22763cef232c78acde22681ab0491ed691f2fc0fdf70c9913f319fbbe90b6c",
+    "q3_sample_diagnostics.json": "e6eb8532532a607c0cdb924aa0bd72d279cc94a6dc4f66d2f660a6de42803e6c",
+    "q3_search_history.json": "b0548c09e134cd7f754b7eaf9be849f52fdcc91936903feaf77b3e38bff67176",
+    "run.log": "4c8f67705b9ebdfef4037e5cbc77e84efb830c5a31d0ab8efcd84f91d08be2fd",
+    "test_results.log": "622073ddb11cad23212289978b7b87d6c58e249a60fa7cbfcd76f7437cb04746"
+  },
+  "warm_start_sha256": "a195f130ebf69f776e5ec782b6f91d30d6aef03bf0f46c0777c63443af30e8c8",
+  "input_files": {
+    "无人机应急物资运输基础数据\\中继无人机数据.xlsx": "be52643ff29419233e6a141dca03a04160a8af551cab36d8c49b51bb836bea04",
+    "无人机应急物资运输基础数据\\物资需求与配送时限.xlsx": "5a3346159ceddcf585859d270b8f62114b388a1f737fbe64ffde0ee1fdc8170a",
+    "无人机应急物资运输基础数据\\调度中心与服务区.xlsx": "541a7af1ded08c9a3ff448480332cb5f6a54902f0afa6e9bcd50c1d2b2b34e38",
+    "无人机应急物资运输基础数据\\运输无人机数据.xlsx": "9296a657c07e042afba6aeea7999665d9cd24e00b592fd6c269de6e338480dcb",
+    "无人机应急物资运输基础数据\\通信链路参数.xlsx": "1860d153199e7ae460ba36e83b673374e640e19de91ea167f2877271001f5f81",
+    "镇龙乡地理空间数据\\镇龙乡及周边地理数据\\数字高程模型数据（DEM）\\镇龙乡及周边30米DEM.tif": "741fe6de0b2bcaffd0f4007f574ee698d46197094f52cc954b532c4f90fc7c03"
+  }
+}

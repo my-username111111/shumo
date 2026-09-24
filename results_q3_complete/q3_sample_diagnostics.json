@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "scope": "independent one-second diagnostic replay; continuous proof is separate",
+  "sample_step_seconds": 1.0,
+  "sample_count": 35340,
+  "direct_sample_count": 21144,
+  "relay_sample_count": 14196,
+  "outage_sample_count": 0,
+  "minimum_sampled_margin_db": 0.0013285102831446238,
+  "deadline_errors": [],
+  "coverage_errors": [],
+  "resource_errors": [],
+  "relay_energy_errors": [],
+  "outages_first_20": []
+}

@@ -1,0 +1,49 @@
+test_edge_corner_and_reversal (test_q1_upgrade.GeometryTests.test_edge_corner_and_reversal) ... ok
+test_partial_nodata_must_fail (test_q1_upgrade.GeometryTests.test_partial_nodata_must_fail) ... ok
+test_random_supercover_independent_rectangles (test_q1_upgrade.GeometryTests.test_random_supercover_independent_rectangles) ... ok
+test_both_dps_against_exhaustive_partitions (test_q1_upgrade.OptimizationTests.test_both_dps_against_exhaustive_partitions) ... ok
+test_corrupted_export_is_rejected (test_q1_upgrade.OptimizationTests.test_corrupted_export_is_rejected) ... ok
+test_critical_thresholds_against_bruteforce (test_q1_upgrade.OptimizationTests.test_critical_thresholds_against_bruteforce) ... ok
+test_fake_aircraft_and_battery_are_rejected (test_q1_upgrade.OptimizationTests.test_fake_aircraft_and_battery_are_rejected) ... ok
+test_global_budget_is_not_per_zone_budget (test_q1_upgrade.OptimizationTests.test_global_budget_is_not_per_zone_budget) ... ok
+test_duplicates_invalid_parameters_and_cargo (test_q1_upgrade.PhysicsTests.test_duplicates_invalid_parameters_and_cargo) ... ok
+test_hand_calculated_energy_time (test_q1_upgrade.PhysicsTests.test_hand_calculated_energy_time) ... ok
+test_invalid_reserve_and_infeasible_empty (test_q1_upgrade.PhysicsTests.test_invalid_reserve_and_infeasible_empty) ... ok
+test_replay_does_not_call_shared_physics (test_q1_upgrade.PhysicsTests.test_replay_does_not_call_shared_physics) ... ok
+test_baseline_can_be_exported_with_alternatives (test_q2_verifier.Q2VerifierFaults.test_baseline_can_be_exported_with_alternatives) ... ok
+test_duplicate_sortie_id (test_q2_verifier.Q2VerifierFaults.test_duplicate_sortie_id) ... ok
+test_incremental_repair_preserves_each_box_and_replays (test_q2_verifier.Q2VerifierFaults.test_incremental_repair_preserves_each_box_and_replays) ... D:\建模\shumo\model.py:337: ResourceWarning: unclosed file <_io.BufferedReader name='D:\\建模\\数据\\无人机应急物资运输基础数据\\物资需求与配送时限.xlsx'>
+  dict(kind="cruise", t0=clock + up, t1=clock + up + cruise,
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_joint_resource_beam_is_fully_verifiable (test_q2_verifier.Q2VerifierFaults.test_joint_resource_beam_is_fully_verifiable) ... ok
+test_mismatched_aircraft_type (test_q2_verifier.Q2VerifierFaults.test_mismatched_aircraft_type) ... ok
+test_mismatched_battery_type (test_q2_verifier.Q2VerifierFaults.test_mismatched_battery_type) ... ok
+test_relocate_candidates_do_not_duplicate_boxes (test_q2_verifier.Q2VerifierFaults.test_relocate_candidates_do_not_duplicate_boxes) ... ok
+test_soft_target_competes_with_later_hard_deadline (test_q2_verifier.Q2VerifierFaults.test_soft_target_competes_with_later_hard_deadline) ... ok
+test_tampered_objective (test_q2_verifier.Q2VerifierFaults.test_tampered_objective) ... ok
+test_tampered_route_phase (test_q2_verifier.Q2VerifierFaults.test_tampered_route_phase) ... ok
+test_two_stage_alns_keeps_complete_verified_plans (test_q2_verifier.Q2VerifierFaults.test_two_stage_alns_keeps_complete_verified_plans) ... ok
+test_unknown_aircraft (test_q2_verifier.Q2VerifierFaults.test_unknown_aircraft) ... ok
+test_unknown_battery (test_q2_verifier.Q2VerifierFaults.test_unknown_battery) ... ok
+test_wrong_delivery_source (test_q2_verifier.Q2VerifierFaults.test_wrong_delivery_source) ... ok
+test_closed_cell_boundary_is_not_omitted (test_q3_joint.GeometryTests.test_closed_cell_boundary_is_not_omitted) ... ok
+test_disconnected_backhaul_cannot_certify_access (test_q3_joint.GeometryTests.test_disconnected_backhaul_cannot_certify_access) ... ok
+test_invalid_interval_is_rejected_before_subdivision (test_q3_joint.GeometryTests.test_invalid_interval_is_rejected_before_subdivision) ... ok
+test_nodata_and_vertical_low_endpoint (test_q3_joint.GeometryTests.test_nodata_and_vertical_low_endpoint) ... ok
+test_subsecond_relay_gap_is_unknown (test_q3_joint.GeometryTests.test_subsecond_relay_gap_is_unknown) ... ok
+test_swept_interior_obstacle_between_clear_endpoint_rays (test_q3_joint.GeometryTests.test_swept_interior_obstacle_between_clear_endpoint_rays) ... ok
+test_archive_filters_dominated_records (test_q3_joint.PhysicalTests.test_archive_filters_dominated_records) ... ok
+test_cache_keys_include_radio_parameters (test_q3_joint.PhysicalTests.test_cache_keys_include_radio_parameters) ... ok
+test_component_overlap_rejected (test_q3_joint.PhysicalTests.test_component_overlap_rejected) ... ok
+test_final_relay_return_in_objective (test_q3_joint.PhysicalTests.test_final_relay_return_in_objective) ... ok
+test_independent_replay_does_not_call_optimizer_links (test_q3_joint.PhysicalTests.test_independent_replay_does_not_call_optimizer_links) ... ok
+test_q4_adapter_preserves_actual_service_relations (test_q3_joint.PhysicalTests.test_q4_adapter_preserves_actual_service_relations) ... ok
+test_relaxed_bounds_do_not_exceed_feasible_plan (test_q3_joint.PhysicalTests.test_relaxed_bounds_do_not_exceed_feasible_plan) ... ok
+test_robust_failure_requires_a_point_counterexample (test_q3_joint.PhysicalTests.test_robust_failure_requires_a_point_counterexample) ... ok
+test_unknown_resource_and_tampered_times_rejected (test_q3_joint.PhysicalTests.test_unknown_resource_and_tampered_times_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 41 tests in 9.703s
+
+OK

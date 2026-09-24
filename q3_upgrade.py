@@ -12,7 +12,7 @@ piecewise-constant DEM convention and cannot miss a cell between samples.
 from __future__ import annotations
 
 from dataclasses import asdict, dataclass
-from math import ceil, floor, log10, sqrt
+from math import ceil, floor, log10, sqrt, cos, radians
 from pathlib import Path
 from typing import Iterable
 
@@ -152,7 +152,7 @@ def swept_clear(s: Scenario, fixed: tuple[float, float, float],
             (x1 - qx) * (p0[2] - fixed[2])) / det
     gamma = fixed[2] - alpha * qx - beta * qy
     triangle = [(qx, qy), (x0, y0), (x1, y1)]
-    ymin, ymax = floor(min(v[1] for v in triangle)), floor(max(v[1] for v in triangle))
+    ymin, ymax = floor(min(v[1] for v in triangle) - EPS), floor(max(v[1] for v in triangle) + EPS)
     xmin_all, xmax_all = floor(min(v[0] for v in triangle)), floor(max(v[0] for v in triangle))
     if xmin_all < 0 or ymin < 0 or xmax_all >= s.dem.width or ymax >= s.dem.nrows:
         return False
@@ -164,8 +164,8 @@ def swept_clear(s: Scenario, fixed: tuple[float, float, float],
         row_poly = _clip(row_poly, 1, iy + 1, False)
         if not row_poly:
             continue
-        xmin = max(0, floor(min(v[0] for v in row_poly)))
-        xmax = min(s.dem.width - 1, floor(max(v[0] for v in row_poly)))
+        xmin = max(0, floor(min(v[0] for v in row_poly) - EPS))
+        xmax = min(s.dem.width - 1, floor(max(v[0] for v in row_poly) + EPS))
         for ix in range(xmin, xmax + 1):
             z = float(s.dem.values[iy, ix])
             if z == s.dem.nodata or not (-1e30 < z < 1e30):
@@ -183,8 +183,16 @@ def interval_margin(s: Scenario, fixed: tuple[float, float, float],
                     p0: tuple[float, float, float], p1: tuple[float, float, float],
                     first: str, second: str, extra_loss_db: float = 0.0) -> tuple[float, str]:
     """A valid lower bound for link margin throughout one motion interval."""
+    # Great-circle distance is bounded by the length of the straight lat/lon
+    # path on the sphere. Use the maximum cosine on the entire latitude span;
+    # then the resulting weighted Euclidean norm is convex in the moving
+    # endpoint and attains its maximum at an interval endpoint. Merely taking
+    # the maximum of two haversine distances is not a convexity certificate.
+    lo, hi = min(fixed[1], p0[1], p1[1]), max(fixed[1], p0[1], p1[1])
+    c = 1.0 if lo <= 0 <= hi else max(cos(radians(lo)), cos(radians(hi)))
     def d3(p: tuple[float, float, float]) -> float:
-        horizontal = distance_m(fixed[:2], p[:2])
+        horizontal = 6371000.0 * sqrt(radians(p[1]-fixed[1])**2 +
+                                      c*c*radians(p[0]-fixed[0])**2)
         return sqrt(horizontal * horizontal + (fixed[2] - p[2]) ** 2)
     km = max(0.001, max(d3(p0), d3(p1)) / 1000.0)
     fspl = 32.45 + 20 * log10(s.frequency_mhz) + 20 * log10(km)
@@ -547,6 +555,10 @@ def optimize_relay_jobs(s: Scenario, sites: list[Site], demands: list[Demand],
     from scipy.optimize import Bounds, LinearConstraint, milp
     from scipy.sparse import coo_matrix, vstack
 
+    if not demands:
+        return [], {"relay_job_count": 0, "capacity_cuts": 0,
+                    "selected_relay_jobs": 0, "milp_message": "All transport intervals directly certified"}
+
     # Sites with the same complete coverage signature are interchangeable for
     # feasibility. Keep the three cheapest/fastest to retain scheduling choice.
     by_signature: dict[frozenset[int], list[int]] = {}
@@ -774,9 +786,14 @@ def solve(s: Scenario, q2: dict, label: str = "q2_seed",
           max_interval: float = 30.0) -> dict:
     cache_dir = Path(__file__).resolve().parent / ".q3_cache"
     cache_dir.mkdir(exist_ok=True)
-    fingerprint = ("geometry_v2_exact_cell_triangle", label, coarse_deg, local_deg, max_interval,
-                   tuple((r["id"], round(float(r["start"]), 6), round(float(r["return_time"]), 6))
-                         for r in q2["sorties"]))
+    from verify import verify_q2
+    verify_q2(s, q2)
+    fingerprint = ("geometry_v3_closed_cells_spherical_bound", label, coarse_deg, local_deg, max_interval,
+                   json.dumps(q2["sorties"], sort_keys=True),
+                   hashlib.sha256(s.dem.values.tobytes()).hexdigest(),
+                   repr((s.radio, s.frequency_mhz, s.obstruction_db, s.system_loss_db,
+                         s.sensitivity_dbm, s.fade_db, s.gateway_agl, s.relay,
+                         s.dem.x0, s.dem.y0, s.dem.dx, s.dem.dy)))
     cache_name = hashlib.sha256(repr(fingerprint).encode()).hexdigest()[:20] + ".pkl"
     cache_path = cache_dir / cache_name
     if cache_path.exists():
@@ -819,7 +836,7 @@ def solve(s: Scenario, q2: dict, label: str = "q2_seed",
                      for bid, x in deliveries.items() if s.boxes[bid].hard_deadline is None)
     min_margin = min(x["margin_lower_db"] for x in intervals) if intervals else 0.0
     q4_groups = _coupled_zones(s, q2, relays, demands)
-    return {
+    result = {
         "schema": "q3-continuous-v1",
         "q2_seed": label,
         "transport_sorties": q2["sorties"],
@@ -866,6 +883,8 @@ def solve(s: Scenario, q2: dict, label: str = "q2_seed",
                              "constraint_imposed_during_q3": False},
         "sites": [asdict(x) for x in sites],
     }
+    from q3_certificate import accept
+    return accept(s, result)
 
 
 def dump_json(path: Path, value: object) -> None:

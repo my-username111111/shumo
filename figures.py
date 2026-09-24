@@ -141,7 +141,7 @@ def partition_map(s: Scenario, q4: dict, path: Path) -> None:
         plan = q4["partitions"][k]
         background, xy = _dem_background(s, 880, 750)
         draw = ImageDraw.Draw(background, "RGBA")
-        for group_number, group in enumerate(plan["groups"]):
+        for group_number, group in enumerate(plan.get("groups", [])):
             for zone in group["zones"]:
                 node = s.nodes[zone]
                 x, y = xy(node.lon, node.lat)
@@ -155,8 +155,9 @@ def partition_map(s: Scenario, q4: dict, path: Path) -> None:
     for i, (k, plan, panel) in enumerate(panels):
         x = 15 + i * 900
         draw.text((x + 8, 10), f"Q4  K={k}  minimum stock shortage", font=_font(26), fill="#26374b")
-        total = sum(plan["shortage_strict"].values())
-        draw.text((x + 8, 44), f"Extra units: {total}    Workload CV: {plan['workload_cv']:.2f}",
+        subtitle = (f"Extra units: {sum(plan['shortage_strict'].values())}    Workload CV: {plan['workload_cv']:.2f}"
+                    if plan["feasible"] else "Infeasible: fewer coupled task blocks than groups")
+        draw.text((x + 8, 44), subtitle,
                   font=_font(18), fill="#526277")
         image.paste(panel, (x, 85))
     image.save(path)

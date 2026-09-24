@@ -228,6 +228,8 @@ def main() -> None:
     parser.add_argument("--no-sensitivity", action="store_true", help="Skip Q1 reserve sensitivity")
     parser.add_argument("--no-merge", action="store_true", help="Keep initial single-zone Q2 jobs")
     parser.add_argument("--only-q2", action="store_true", help="Solve and verify Q2, then fill its result-template sheets")
+    parser.add_argument("--q3-plan", type=Path,
+                        help="Independently recheck a saved continuous Q3 plan and use it for Q4")
     parser.add_argument("--no-coordination", action="store_true", help="Use the original fixed-Q2 relay plan")
     parser.add_argument("--q3-seed", choices=("soft_delay_priority", "zero_delay_efficient",
                                               "delivery_priority", "energy_guarded",
@@ -263,24 +265,32 @@ def main() -> None:
     print("Q3: communication-guided transport and relay search", flush=True)
     q3_seed = (q2 if args.q3_seed in {"soft_delay_priority", "timely_22"}
                else q2["alternatives"][args.q3_seed])
-    if args.no_coordination:
+    if args.q3_plan:
+        from q3_certificate import accept, legacy_view
+        saved = json.loads(args.q3_plan.read_text(encoding="utf-8"))
+        q3 = legacy_view(accept(scenario, saved, saved.get("extra_loss_db", 0.0)))
+        q3.setdefault("search", {})["saved_plan_source"] = str(args.q3_plan)
+    elif args.no_coordination:
         q3 = solve_q3(scenario, q3_seed)
     else:
         q3 = solve_coordination(scenario, q3_seed, rounds=args.coordination_rounds,
                                 trials_per_round=args.coordination_trials,
                                 promotion_trials=args.promotion_trials)
-    q3.setdefault("search", {})["q2_seed_policy"] = args.q3_seed
+    if not args.q3_plan:
+        q3.setdefault("search", {})["q2_seed_policy"] = args.q3_seed
     print("Q4: independent task-group resources", flush=True)
     q4 = solve_q4(scenario, q3)
     print("Replay verification", flush=True)
     checks = verify_all(scenario, q1, q2, q3, q4)
+    if args.q3_plan:
+        checks["q3_continuous"] = q3["certificate"]
     export(args.output, scenario, q1, q2, q3, q4, checks)
     if not args.no_figures:
         print("Drawing result figures", flush=True)
         create_all(scenario, q3, q4, args.output)
     print(f"Saved results to {args.output}", flush=True)
     print(json.dumps(dict(q1=q1["totals"], q2=q2["objective"], q3=q3["objective"],
-                          q4_shortage={k: v["shortage_strict"] for k, v in q4["partitions"].items()}),
+                          q4_shortage={k: v.get("shortage_strict", {"feasible": False}) for k, v in q4["partitions"].items()}),
                      ensure_ascii=False, indent=2), flush=True)
 
 

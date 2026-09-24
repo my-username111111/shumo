@@ -1,0 +1,79 @@
+[
+  {
+    "plan": "alns_002_merge.json",
+    "status": "PASS",
+    "boxes": 80,
+    "transport_sorties": 22,
+    "relay_sorties": 7
+  },
+  {
+    "plan": "balanced_24_2026.json",
+    "status": "PASS",
+    "boxes": 80,
+    "transport_sorties": 24,
+    "relay_sorties": 5
+  },
+  {
+    "plan": "balanced_24_2027.json",
+    "status": "PASS",
+    "boxes": 80,
+    "transport_sorties": 24,
+    "relay_sorties": 5
+  },
+  {
+    "plan": "baseline_recertified.json",
+    "status": "PASS",
+    "boxes": 80,
+    "transport_sorties": 24,
+    "relay_sorties": 9
+  },
+  {
+    "plan": "baseline_routes_2026.json",
+    "status": "PASS",
+    "boxes": 80,
+    "transport_sorties": 24,
+    "relay_sorties": 3
+  },
+  {
+    "plan": "baseline_routes_2027.json",
+    "status": "PASS",
+    "boxes": 80,
+    "transport_sorties": 24,
+    "relay_sorties": 5
+  },
+  {
+    "plan": "delivery_23_2026.json",
+    "status": "PASS",
+    "boxes": 80,
+    "transport_sorties": 23,
+    "relay_sorties": 3
+  },
+  {
+    "plan": "fastest_25_2026.json",
+    "status": "PASS",
+    "boxes": 80,
+    "transport_sorties": 25,
+    "relay_sorties": 4
+  },
+  {
+    "plan": "fastest_25_2027.json",
+    "status": "PASS",
+    "boxes": 80,
+    "transport_sorties": 25,
+    "relay_sorties": 3
+  },
+  {
+    "plan": "q4_compatible.json",
+    "status": "PASS",
+    "boxes": 80,
+    "transport_sorties": 24,
+    "relay_sorties": 5
+  },
+  {
+    "plan": "warm_start.json",
+    "status": "PASS",
+    "boxes": 80,
+    "transport_sorties": 24,
+    "relay_sorties": 4
+  }
+]

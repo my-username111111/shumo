@@ -1,0 +1,5 @@
+﻿extra_loss_db,fixed_plan_status,fixed_unknown_seconds,reoptimization_status,reoptimized_energy_kwh,reoptimized_makespan,reoptimized_soft_delay
+0.0,PASS,0,NOT_RUN,,,
+1.0,FAIL,,NO_CERTIFIED_SOLUTION_WITHIN_BUDGET,,,
+2.0,FAIL,,NO_CERTIFIED_SOLUTION_WITHIN_BUDGET,,,
+3.0,FAIL,,NO_CERTIFIED_SOLUTION_WITHIN_BUDGET,,,

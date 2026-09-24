@@ -1,0 +1,41 @@
+[
+  {
+    "status": "PASS",
+    "unknown_interval_count": 0,
+    "minimum_interval_seconds": 0.25,
+    "extra_loss_db": 0.0,
+    "dem_model": "piecewise_constant_closed_cells",
+    "time_method": "phase and service events; recursive interval lower bounds",
+    "independent_replay": "independent vertex-enumeration geometry and relay physics"
+  },
+  {
+    "status": "FAIL",
+    "extra_loss_db": 1.0,
+    "scope": "point counterexample; outage duration not measured",
+    "witness": {
+      "sortie": "T002",
+      "time": 3032.6804918794305,
+      "best_margin_db": -0.10049538885706966
+    }
+  },
+  {
+    "status": "FAIL",
+    "extra_loss_db": 2.0,
+    "scope": "point counterexample; outage duration not measured",
+    "witness": {
+      "sortie": "T002",
+      "time": 3014.360983758861,
+      "best_margin_db": -0.7080044366408753
+    }
+  },
+  {
+    "status": "FAIL",
+    "extra_loss_db": 3.0,
+    "scope": "point counterexample; outage duration not measured",
+    "witness": {
+      "sortie": "T001",
+      "time": 762.0273377787664,
+      "best_margin_db": -0.3349888204410174
+    }
+  }
+]

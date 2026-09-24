@@ -1,0 +1,70 @@
+{"stage": "accepted", "label": "baseline_recertified", "objective": {"weighted_soft_delay": 1416548.6911612228, "weighted_delivery_seconds": 5438318.76751968, "makespan": 16304.91681490707, "energy_kwh": 74.85485348124014, "transport_energy_kwh": 69.15451555444506, "relay_energy_kwh": 5.700337926795088, "transport_sorties": 24, "relay_sorties": 9, "total_sorties": 33}}
+{"stage": "accepted", "label": "warm_start", "objective": {"weighted_soft_delay": 0, "weighted_delivery_seconds": 2709476.5076264874, "makespan": 6659.7581046684645, "energy_kwh": 72.1630352839318, "transport_energy_kwh": 69.15451555444506, "relay_energy_kwh": 3.0085197294867534, "transport_sorties": 24, "relay_sorties": 4, "total_sorties": 28}}
+{"stage": "joint_cp", "seed": 2026, "target": "soft", "status": "OPTIMAL", "value": 0.0, "lower_bound": 0.0, "relative_gap": 0.0}
+{"stage": "joint_cp", "seed": 2026, "target": "weighted", "status": "FEASIBLE", "value": 2667200.0, "lower_bound": 1539922.0, "relative_gap": 0.4226447210557888}
+{"stage": "joint_cp", "seed": 2026, "target": "makespan", "status": "FEASIBLE", "value": 6659.0, "lower_bound": 6075.0, "relative_gap": 0.08770085598438204}
+{"stage": "joint_cp", "seed": 2026, "target": "energy", "status": "FEASIBLE", "value": 72518996.0, "lower_bound": 70295771.0, "relative_gap": 0.030657139820303082}
+{"stage": "joint_cp", "seed": 2026, "target": "sorties", "status": "OPTIMAL", "value": 3.0, "lower_bound": 3.0, "relative_gap": 0.0}
+{"stage": "accepted", "label": "baseline_routes_2026", "objective": {"weighted_soft_delay": 0, "weighted_delivery_seconds": 2659718.5076264874, "makespan": 6658.7581046684645, "energy_kwh": 72.5153176176905, "transport_energy_kwh": 69.15451555444506, "relay_energy_kwh": 3.3608020632454423, "transport_sorties": 24, "relay_sorties": 3, "total_sorties": 27}}
+{"stage": "joint_cp", "seed": 2027, "target": "soft", "status": "OPTIMAL", "value": 0.0, "lower_bound": 0.0, "relative_gap": 0.0}
+{"stage": "joint_cp", "seed": 2027, "target": "weighted", "status": "FEASIBLE", "value": 2917954.0, "lower_bound": 1473786.0, "relative_gap": 0.49492486858942947}
+{"stage": "joint_cp", "seed": 2027, "target": "makespan", "status": "FEASIBLE", "value": 6351.0, "lower_bound": 6075.0, "relative_gap": 0.04345772319319792}
+{"stage": "joint_cp", "seed": 2027, "target": "energy", "status": "FEASIBLE", "value": 71849997.0, "lower_bound": 70294036.0, "relative_gap": 0.02165568636001474}
+{"stage": "joint_cp", "seed": 2027, "target": "sorties", "status": "OPTIMAL", "value": 5.0, "lower_bound": 5.0, "relative_gap": 0.0}
+{"stage": "accepted", "label": "baseline_routes_2027", "objective": {"weighted_soft_delay": 0, "weighted_delivery_seconds": 2821260.5076264874, "makespan": 6350.534653380882, "energy_kwh": 71.84772693615166, "transport_energy_kwh": 69.15451555444506, "relay_energy_kwh": 2.6932113817066017, "transport_sorties": 24, "relay_sorties": 5, "total_sorties": 29}}
+{"stage": "joint_cp", "seed": 2026, "target": "soft", "status": "OPTIMAL", "value": 0.0, "lower_bound": 0.0, "relative_gap": 0.0}
+{"stage": "joint_cp", "seed": 2026, "target": "weighted", "status": "FEASIBLE", "value": 2832986.0, "lower_bound": 1387886.0, "relative_gap": 0.5100978261099772}
+{"stage": "joint_cp", "seed": 2026, "target": "makespan", "status": "FEASIBLE", "value": 6342.0, "lower_bound": 6075.0, "relative_gap": 0.042100283822138124}
+{"stage": "joint_cp", "seed": 2026, "target": "energy", "status": "FEASIBLE", "value": 71963400.0, "lower_bound": 70262773.0, "relative_gap": 0.023631832292526477}
+{"stage": "joint_cp", "seed": 2026, "target": "sorties", "status": "OPTIMAL", "value": 5.0, "lower_bound": 5.0, "relative_gap": 0.0}
+{"stage": "accepted", "label": "balanced_24_2026", "objective": {"weighted_soft_delay": 0, "weighted_delivery_seconds": 2808950.5076264874, "makespan": 6341.040897108922, "energy_kwh": 71.96115327439269, "transport_energy_kwh": 69.15451555444506, "relay_energy_kwh": 2.806637719947629, "transport_sorties": 24, "relay_sorties": 5, "total_sorties": 29}}
+{"stage": "joint_cp", "seed": 2027, "target": "soft", "status": "OPTIMAL", "value": 0.0, "lower_bound": 0.0, "relative_gap": 0.0}
+{"stage": "joint_cp", "seed": 2027, "target": "weighted", "status": "FEASIBLE", "value": 3107296.0, "lower_bound": 1553122.0, "relative_gap": 0.5001692790130068}
+{"stage": "joint_cp", "seed": 2027, "target": "makespan", "status": "FEASIBLE", "value": 6342.0, "lower_bound": 6075.0, "relative_gap": 0.042100283822138124}
+{"stage": "joint_cp", "seed": 2027, "target": "energy", "status": "FEASIBLE", "value": 71987574.0, "lower_bound": 70245657.0, "relative_gap": 0.02419746774630855}
+{"stage": "joint_cp", "seed": 2027, "target": "sorties", "status": "OPTIMAL", "value": 5.0, "lower_bound": 5.0, "relative_gap": 0.0}
+{"stage": "accepted", "label": "balanced_24_2027", "objective": {"weighted_soft_delay": 0, "weighted_delivery_seconds": 2817738.5076264874, "makespan": 6341.040897108922, "energy_kwh": 71.98529216328157, "transport_energy_kwh": 69.15451555444506, "relay_energy_kwh": 2.830776608836518, "transport_sorties": 24, "relay_sorties": 5, "total_sorties": 29}}
+{"stage": "joint_cp", "seed": 2026, "target": "soft", "status": "OPTIMAL", "value": 0.0, "lower_bound": 0.0, "relative_gap": 0.0}
+{"stage": "joint_cp", "seed": 2026, "target": "weighted", "status": "FEASIBLE", "value": 2634656.0, "lower_bound": 1572830.0, "relative_gap": 0.40302263369487323}
+{"stage": "joint_cp", "seed": 2026, "target": "makespan", "status": "FEASIBLE", "value": 6391.0, "lower_bound": 6114.0, "relative_gap": 0.043342199968705995}
+{"stage": "joint_cp", "seed": 2026, "target": "energy", "status": "FEASIBLE", "value": 72801943.0, "lower_bound": 70417748.0, "relative_gap": 0.03274905726073822}
+{"stage": "joint_cp", "seed": 2026, "target": "sorties", "status": "OPTIMAL", "value": 3.0, "lower_bound": 3.0, "relative_gap": 0.0}
+{"stage": "accepted", "label": "delivery_23_2026", "objective": {"weighted_soft_delay": 0, "weighted_delivery_seconds": 2634274.0032893578, "makespan": 6390.534653380882, "energy_kwh": 72.79802580771732, "transport_energy_kwh": 69.30723683159759, "relay_energy_kwh": 3.4907889761197355, "transport_sorties": 23, "relay_sorties": 3, "total_sorties": 26}}
+{"stage": "joint_cp", "seed": 2027, "target": "soft", "status": "UNKNOWN", "value": null, "lower_bound": 0.0, "relative_gap": null}
+{"stage": "joint_cp", "seed": 2026, "target": "soft", "status": "OPTIMAL", "value": 0.0, "lower_bound": 0.0, "relative_gap": 0.0}
+{"stage": "joint_cp", "seed": 2026, "target": "weighted", "status": "FEASIBLE", "value": 2879694.0, "lower_bound": 1473158.0, "relative_gap": 0.4884324515035278}
+{"stage": "joint_cp", "seed": 2026, "target": "makespan", "status": "FEASIBLE", "value": 7240.0, "lower_bound": 6048.0, "relative_gap": 0.16464088397790055}
+{"stage": "joint_cp", "seed": 2026, "target": "energy", "status": "FEASIBLE", "value": 73126457.0, "lower_bound": 71273516.0, "relative_gap": 0.025338859231208207}
+{"stage": "joint_cp", "seed": 2026, "target": "sorties", "status": "OPTIMAL", "value": 4.0, "lower_bound": 4.0, "relative_gap": 0.0}
+{"stage": "accepted", "label": "fastest_25_2026", "objective": {"weighted_soft_delay": 0, "weighted_delivery_seconds": 2846434.193092335, "makespan": 7145.470877312685, "energy_kwh": 73.12357501432774, "transport_energy_kwh": 70.19198829395475, "relay_energy_kwh": 2.931586720372985, "transport_sorties": 25, "relay_sorties": 4, "total_sorties": 29}}
+{"stage": "joint_cp", "seed": 2027, "target": "soft", "status": "OPTIMAL", "value": 0.0, "lower_bound": 0.0, "relative_gap": 0.0}
+{"stage": "joint_cp", "seed": 2027, "target": "weighted", "status": "FEASIBLE", "value": 2711114.0, "lower_bound": 1500738.0, "relative_gap": 0.4464496882093486}
+{"stage": "joint_cp", "seed": 2027, "target": "makespan", "status": "FEASIBLE", "value": 6659.0, "lower_bound": 6048.0, "relative_gap": 0.09175551884667367}
+{"stage": "joint_cp", "seed": 2027, "target": "energy", "status": "FEASIBLE", "value": 73533389.0, "lower_bound": 71274485.0, "relative_gap": 0.030719432773593503}
+{"stage": "joint_cp", "seed": 2027, "target": "sorties", "status": "OPTIMAL", "value": 3.0, "lower_bound": 3.0, "relative_gap": 0.0}
+{"stage": "accepted", "label": "fastest_25_2027", "objective": {"weighted_soft_delay": 0, "weighted_delivery_seconds": 2710734.193092335, "makespan": 6658.7581046684645, "energy_kwh": 73.52969393674115, "transport_energy_kwh": 70.19198829395475, "relay_energy_kwh": 3.3377056427864016, "transport_sorties": 25, "relay_sorties": 3, "total_sorties": 28}}
+{"stage": "joint_cp", "seed": 2026, "target": "soft", "status": "UNKNOWN", "value": null, "lower_bound": 0.0, "relative_gap": null}
+{"stage": "joint_cp", "seed": 2026, "target": "soft", "status": "UNKNOWN", "value": null, "lower_bound": 0.0, "relative_gap": null}
+{"stage": "joint_cp", "seed": 2026, "target": "soft", "status": "UNKNOWN", "value": null, "lower_bound": 36.0, "relative_gap": null}
+{"stage": "joint_cp", "seed": 2027, "target": "soft", "status": "UNKNOWN", "value": null, "lower_bound": 0.0, "relative_gap": null}
+{"stage": "joint_cp", "seed": 2028, "target": "soft", "status": "FEASIBLE", "value": 139998.0, "lower_bound": 0.0, "relative_gap": 1.0}
+{"stage": "joint_cp", "seed": 2028, "target": "weighted", "status": "FEASIBLE", "value": 3144886.0, "lower_bound": 1182178.0, "relative_gap": 0.6240951182332205}
+{"stage": "joint_cp", "seed": 2028, "target": "makespan", "status": "FEASIBLE", "value": 10052.0, "lower_bound": 2436.0, "relative_gap": 0.7576601671309192}
+{"stage": "joint_cp", "seed": 2028, "target": "energy", "status": "FEASIBLE", "value": 72804787.0, "lower_bound": 68367930.0, "relative_gap": 0.060941830651877325}
+{"stage": "joint_cp", "seed": 2028, "target": "sorties", "status": "FEASIBLE", "value": 7.0, "lower_bound": 3.0, "relative_gap": 0.5714285714285714}
+{"stage": "accepted", "label": "alns_002_merge", "objective": {"weighted_soft_delay": 65481.544772559035, "weighted_delivery_seconds": 3122949.268412115, "makespan": 9868.053128909793, "energy_kwh": 72.80140744584085, "transport_energy_kwh": 68.9897167013868, "relay_energy_kwh": 3.811690744454049, "transport_sorties": 22, "relay_sorties": 7, "total_sorties": 29}}
+{"stage": "joint_cp", "seed": 2029, "target": "soft", "status": "UNKNOWN", "value": null, "lower_bound": 0.0, "relative_gap": null}
+{"stage": "joint_cp", "seed": 2030, "target": "soft", "status": "UNKNOWN", "value": null, "lower_bound": 0.0, "relative_gap": null}
+{"stage": "joint_cp", "seed": 2031, "target": "soft", "status": "UNKNOWN", "value": null, "lower_bound": 0.0, "relative_gap": null}
+{"stage": "joint_cp", "seed": 2032, "target": "soft", "status": "UNKNOWN", "value": null, "lower_bound": 108.0, "relative_gap": null}
+{"stage": "joint_cp", "seed": 2033, "target": "soft", "status": "UNKNOWN", "value": null, "lower_bound": 0.0, "relative_gap": null}
+{"stage": "joint_cp", "seed": 2026, "target": "soft", "status": "OPTIMAL", "value": 0.0, "lower_bound": 0.0, "relative_gap": 0.0}
+{"stage": "joint_cp", "seed": 2026, "target": "weighted", "status": "FEASIBLE", "value": 2699560.0, "lower_bound": 1539922.0, "relative_gap": 0.42956555883180964}
+{"stage": "joint_cp", "seed": 2026, "target": "makespan", "status": "FEASIBLE", "value": 7890.0, "lower_bound": 6063.0, "relative_gap": 0.23155893536121672}
+{"stage": "joint_cp", "seed": 2026, "target": "energy", "status": "FEASIBLE", "value": 72842070.0, "lower_bound": 69977955.0, "relative_gap": 0.039319516867107156}
+{"stage": "joint_cp", "seed": 2026, "target": "sorties", "status": "FEASIBLE", "value": 5.0, "lower_bound": 3.0, "relative_gap": 0.4}
+{"stage": "accepted", "label": "q4_compatible", "objective": {"weighted_soft_delay": 0, "weighted_delivery_seconds": 2688138.5076264874, "makespan": 7880.847074711972, "energy_kwh": 72.83838994571158, "transport_energy_kwh": 69.15451555444506, "relay_energy_kwh": 3.6838743912665226, "transport_sorties": 24, "relay_sorties": 5, "total_sorties": 29}}
+{"label": "robust_1db", "status": "REJECTED", "error": "No continuously coverable route mode for T008"}
+{"label": "robust_2db", "status": "REJECTED", "error": "No continuously coverable route mode for T011"}
+{"label": "robust_3db", "status": "REJECTED", "error": "No continuously coverable route mode for T011"}
+{"selected": "delivery_23_2026", "objective": {"weighted_soft_delay": 0, "weighted_delivery_seconds": 2634274.0032893578, "makespan": 6390.534653380882, "energy_kwh": 72.79802580771732, "transport_energy_kwh": 69.30723683159759, "relay_energy_kwh": 3.4907889761197355, "transport_sorties": 23, "relay_sorties": 3, "total_sorties": 26}, "output": "D:\\建模\\shumo\\results_q3_complete"}
