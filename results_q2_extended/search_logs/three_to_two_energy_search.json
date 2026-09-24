@@ -1,0 +1,4346 @@
+{
+  "source": "results_q2_ejection\\weighted_refined\\plan.json",
+  "source_objective": {
+    "weighted_delivery_seconds": 2967133.7843982372,
+    "weighted_soft_delay_seconds": 0,
+    "makespan": 8335.748750508239,
+    "energy_kwh": 66.27458443139938,
+    "sortie_count": 20
+  },
+  "source_sorties": [
+    6,
+    8,
+    11
+  ],
+  "model_pair": [
+    "B",
+    "C"
+  ],
+  "physical_candidates": 102,
+  "tested": 100,
+  "cases": [
+    {
+      "rank": 1,
+      "route_energy_kwh": 5.934235699940724,
+      "first_visits": [
+        [
+          "S006",
+          [
+            "S006-WAT-01",
+            "S006-WAT-02"
+          ]
+        ]
+      ],
+      "second_visits": [
+        [
+          "S006",
+          [
+            "S006-FOD-01",
+            "S006-HYG-01",
+            "S006-MED-01",
+            "S006-WAT-03"
+          ]
+        ],
+        [
+          "S007",
+          [
+            "S007-FOD-01",
+            "S007-HYG-01",
+            "S007-MED-01",
+            "S007-WAT-01",
+            "S007-WAT-02"
+          ]
+        ]
+      ],
+      "solver_status": "OPTIMAL",
+      "objective": {
+        "weighted_delivery_seconds": 3269532.539820601,
+        "weighted_soft_delay_seconds": 0,
+        "makespan": 8999.213005077481,
+        "energy_kwh": 65.21750366168206,
+        "sortie_count": 19
+      }
+    },
+    {
+      "rank": 2,
+      "route_energy_kwh": 5.934235699940724,
+      "first_visits": [
+        [
+          "S006",
+          [
+            "S006-WAT-01",
+            "S006-WAT-03"
+          ]
+        ]
+      ],
+      "second_visits": [
+        [
+          "S006",
+          [
+            "S006-FOD-01",
+            "S006-HYG-01",
+            "S006-MED-01",
+            "S006-WAT-02"
+          ]
+        ],
+        [
+          "S007",
+          [
+            "S007-FOD-01",
+            "S007-HYG-01",
+            "S007-MED-01",
+            "S007-WAT-01",
+            "S007-WAT-02"
+          ]
+        ]
+      ],
+      "solver_status": "OPTIMAL",
+      "objective": {
+        "weighted_delivery_seconds": 3241218.5635073013,
+        "weighted_soft_delay_seconds": 0,
+        "makespan": 9059.21300507748,
+        "energy_kwh": 65.21750366168206,
+        "sortie_count": 19
+      }
+    },
+    {
+      "rank": 3,
+      "route_energy_kwh": 5.934235699940724,
+      "first_visits": [
+        [
+          "S006",
+          [
+            "S006-WAT-02",
+            "S006-WAT-03"
+          ]
+        ]
+      ],
+      "second_visits": [
+        [
+          "S006",
+          [
+            "S006-FOD-01",
+            "S006-HYG-01",
+            "S006-MED-01",
+            "S006-WAT-01"
+          ]
+        ],
+        [
+          "S007",
+          [
+            "S007-FOD-01",
+            "S007-HYG-01",
+            "S007-MED-01",
+            "S007-WAT-01",
+            "S007-WAT-02"
+          ]
+        ]
+      ],
+      "solver_status": "OPTIMAL",
+      "objective": {
+        "weighted_delivery_seconds": 3308696.303133387,
+        "weighted_soft_delay_seconds": 0,
+        "makespan": 8498.010595606876,
+        "energy_kwh": 65.21750366168206,
+        "sortie_count": 19
+      }
+    },
+    {
+      "rank": 4,
+      "route_energy_kwh": 5.991240494528061,
+      "first_visits": [
+        [
+          "S006",
+          [
+            "S006-FOD-01",
+            "S006-MED-01",
+            "S006-WAT-01"
+          ]
+        ]
+      ],
+      "second_visits": [
+        [
+          "S006",
+          [
+            "S006-HYG-01",
+            "S006-WAT-02",
+            "S006-WAT-03"
+          ]
+        ],
+        [
+          "S007",
+          [
+            "S007-FOD-01",
+            "S007-HYG-01",
+            "S007-MED-01",
+            "S007-WAT-01",
+            "S007-WAT-02"
+          ]
+        ]
+      ],
+      "solver_status": "OPTIMAL",
+      "objective": {
+        "weighted_delivery_seconds": 3413074.9161673575,
+        "weighted_soft_delay_seconds": 0,
+        "makespan": 9277.625873972105,
+        "energy_kwh": 65.27450845626939,
+        "sortie_count": 19
+      }
+    },
+    {
+      "rank": 5,
+      "route_energy_kwh": 5.991240494528061,
+      "first_visits": [
+        [
+          "S006",
+          [
+            "S006-FOD-01",
+            "S006-MED-01",
+            "S006-WAT-02"
+          ]
+        ]
+      ],
+      "second_visits": [
+        [
+          "S006",
+          [
+            "S006-HYG-01",
+            "S006-WAT-01",
+            "S006-WAT-03"
+          ]
+        ],
+        [
+          "S007",
+          [
+            "S007-FOD-01",
+            "S007-HYG-01",
+            "S007-MED-01",
+            "S007-WAT-01",
+            "S007-WAT-02"
+          ]
+        ]
+      ],
+      "solver_status": "OPTIMAL",
+      "objective": {
+        "weighted_delivery_seconds": 3409045.737454431,
+        "weighted_soft_delay_seconds": 0,
+        "makespan": 9384.514736541321,
+        "energy_kwh": 65.27450845626939,
+        "sortie_count": 19
+      }
+    },
+    {
+      "rank": 6,
+      "route_energy_kwh": 5.991240494528061,
+      "first_visits": [
+        [
+          "S006",
+          [
+            "S006-FOD-01",
+            "S006-MED-01",
+            "S006-WAT-03"
+          ]
+        ]
+      ],
+      "second_visits": [
+        [
+          "S006",
+          [
+            "S006-HYG-01",
+            "S006-WAT-01",
+            "S006-WAT-02"
+          ]
+        ],
+        [
+          "S007",
+          [
+            "S007-FOD-01",
+            "S007-HYG-01",
+            "S007-MED-01",
+            "S007-WAT-01",
+            "S007-WAT-02"
+          ]
+        ]
+      ],
+      "solver_status": "OPTIMAL",
+      "objective": {
+        "weighted_delivery_seconds": 3186465.3908807654,
+        "weighted_soft_delay_seconds": 0,
+        "makespan": 9810.471529190036,
+        "energy_kwh": 65.27450845626939,
+        "sortie_count": 19
+      }
+    },
+    {
+      "rank": 7,
+      "route_energy_kwh": 6.256067475589548,
+      "first_visits": [
+        [
+          "S006",
+          [
+            "S006-WAT-01",
+            "S006-WAT-02"
+          ]
+        ]
+      ],
+      "second_visits": [
+        [
+          "S007",
+          [
+            "S007-FOD-01",
+            "S007-HYG-01",
+            "S007-MED-01",
+            "S007-WAT-01",
+            "S007-WAT-02"
+          ]
+        ],
+        [
+          "S006",
+          [
+            "S006-FOD-01",
+            "S006-HYG-01",
+            "S006-MED-01",
+            "S006-WAT-03"
+          ]
+        ]
+      ],
+      "solver_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 8,
+      "route_energy_kwh": 6.256067475589548,
+      "first_visits": [
+        [
+          "S006",
+          [
+            "S006-WAT-01",
+            "S006-WAT-03"
+          ]
+        ]
+      ],
+      "second_visits": [
+        [
+          "S007",
+          [
+            "S007-FOD-01",
+            "S007-HYG-01",
+            "S007-MED-01",
+            "S007-WAT-01",
+            "S007-WAT-02"
+          ]
+        ],
+        [
+          "S006",
+          [
+            "S006-FOD-01",
+            "S006-HYG-01",
+            "S006-MED-01",
+            "S006-WAT-02"
+          ]
+        ]
+      ],
+      "solver_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 9,
+      "route_energy_kwh": 6.256067475589548,
+      "first_visits": [
+        [
+          "S006",
+          [
+            "S006-WAT-02",
+            "S006-WAT-03"
+          ]
+        ]
+      ],
+      "second_visits": [
+        [
+          "S007",
+          [
+            "S007-FOD-01",
+            "S007-HYG-01",
+            "S007-MED-01",
+            "S007-WAT-01",
+            "S007-WAT-02"
+          ]
+        ],
+        [
+          "S006",
+          [
+            "S006-FOD-01",
+            "S006-HYG-01",
+            "S006-MED-01",
+            "S006-WAT-01"
+          ]
+        ]
+      ],
+      "solver_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 10,
+      "route_energy_kwh": 6.300526006804262,
+      "first_visits": [
+        [
+          "S007",
+          [
+            "S007-WAT-01",
+            "S007-WAT-02"
+          ]
+        ]
+      ],
+      "second_visits": [
+        [
+          "S006",
+          [
+            "S006-FOD-01",
+            "S006-HYG-01",
+            "S006-MED-01",
+            "S006-WAT-01",
+            "S006-WAT-02",
+            "S006-WAT-03"
+          ]
+        ],
+        [
+          "S007",
+          [
+            "S007-FOD-01",
+            "S007-HYG-01",
+            "S007-MED-01"
+          ]
+        ]
+      ],
+      "solver_status": "OPTIMAL",
+      "objective": {
+        "weighted_delivery_seconds": 3304317.3707496,
+        "weighted_soft_delay_seconds": 0,
+        "makespan": 8934.597380907291,
+        "energy_kwh": 65.58379396854559,
+        "sortie_count": 19
+      }
+    },
+    {
+      "rank": 11,
+      "route_energy_kwh": 6.343646930408312,
+      "first_visits": [
+        [
+          "S007",
+          [
+            "S007-FOD-01",
+            "S007-MED-01",
+            "S007-WAT-01"
+          ]
+        ]
+      ],
+      "second_visits": [
+        [
+          "S006",
+          [
+            "S006-FOD-01",
+            "S006-HYG-01",
+            "S006-MED-01",
+            "S006-WAT-01",
+            "S006-WAT-02",
+            "S006-WAT-03"
+          ]
+        ],
+        [
+          "S007",
+          [
+            "S007-HYG-01",
+            "S007-WAT-02"
+          ]
+        ]
+      ],
+      "solver_status": "OPTIMAL",
+      "objective": {
+        "weighted_delivery_seconds": 3118598.562907491,
+        "weighted_soft_delay_seconds": 0,
+        "makespan": 8487.967723195521,
+        "energy_kwh": 65.62691489214964,
+        "sortie_count": 19
+      }
+    },
+    {
+      "rank": 12,
+      "route_energy_kwh": 6.343646930408312,
+      "first_visits": [
+        [
+          "S007",
+          [
+            "S007-FOD-01",
+            "S007-MED-01",
+            "S007-WAT-02"
+          ]
+        ]
+      ],
+      "second_visits": [
+        [
+          "S006",
+          [
+            "S006-FOD-01",
+            "S006-HYG-01",
+            "S006-MED-01",
+            "S006-WAT-01",
+            "S006-WAT-02",
+            "S006-WAT-03"
+          ]
+        ],
+        [
+          "S007",
+          [
+            "S007-HYG-01",
+            "S007-WAT-01"
+          ]
+        ]
+      ],
+      "solver_status": "OPTIMAL",
+      "objective": {
+        "weighted_delivery_seconds": 3186805.583351441,
+        "weighted_soft_delay_seconds": 0,
+        "makespan": 9217.615941464992,
+        "energy_kwh": 65.62691489214964,
+        "sortie_count": 19
+      }
+    },
+    {
+      "rank": 13,
+      "route_energy_kwh": 6.389971179041184,
+      "first_visits": [
+        [
+          "S006",
+          [
+            "S006-FOD-01",
+            "S006-MED-01",
+            "S006-WAT-01"
+          ]
+        ]
+      ],
+      "second_visits": [
+        [
+          "S007",
+          [
+            "S007-FOD-01",
+            "S007-HYG-01",
+            "S007-MED-01",
+            "S007-WAT-01",
+            "S007-WAT-02"
+          ]
+        ],
+        [
+          "S006",
+          [
+            "S006-HYG-01",
+            "S006-WAT-02",
+            "S006-WAT-03"
+          ]
+        ]
+      ],
+      "solver_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 14,
+      "route_energy_kwh": 6.389971179041184,
+      "first_visits": [
+        [
+          "S006",
+          [
+            "S006-FOD-01",
+            "S006-MED-01",
+            "S006-WAT-02"
+          ]
+        ]
+      ],
+      "second_visits": [
+        [
+          "S007",
+          [
+            "S007-FOD-01",
+            "S007-HYG-01",
+            "S007-MED-01",
+            "S007-WAT-01",
+            "S007-WAT-02"
+          ]
+        ],
+        [
+          "S006",
+          [
+            "S006-HYG-01",
+            "S006-WAT-01",
+            "S006-WAT-03"
+          ]
+        ]
+      ],
+      "solver_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 15,
+      "route_energy_kwh": 6.389971179041184,
+      "first_visits": [
+        [
+          "S006",
+          [
+            "S006-FOD-01",
+            "S006-MED-01",
+            "S006-WAT-03"
+          ]
+        ]
+      ],
+      "second_visits": [
+        [
+          "S007",
+          [
+            "S007-FOD-01",
+            "S007-HYG-01",
+            "S007-MED-01",
+            "S007-WAT-01",
+            "S007-WAT-02"
+          ]
+        ],
+        [
+          "S006",
+          [
+            "S006-HYG-01",
+            "S006-WAT-01",
+            "S006-WAT-02"
+          ]
+        ]
+      ],
+      "solver_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 16,
+      "route_energy_kwh": 6.523605027322534,
+      "first_visits": [
+        [
+          "S006",
+          [
+            "S006-WAT-01"
+          ]
+        ],
+        [
+          "S007",
+          [
+            "S007-WAT-01"
+          ]
+        ]
+      ],
+      "second_visits": [
+        [
+          "S006",
+          [
+            "S006-FOD-01",
+            "S006-HYG-01",
+            "S006-MED-01",
+            "S006-WAT-02",
+            "S006-WAT-03"
+          ]
+        ],
+        [
+          "S007",
+          [
+            "S007-FOD-01",
+            "S007-HYG-01",
+            "S007-MED-01",
+            "S007-WAT-02"
+          ]
+        ]
+      ],
+      "solver_status": "OPTIMAL",
+      "objective": {
+        "weighted_delivery_seconds": 3289982.7159045017,
+        "weighted_soft_delay_seconds": 0,
+        "makespan": 9223.807815734808,
+        "energy_kwh": 65.80687298906386,
+        "sortie_count": 19
+      }
+    },
+    {
+      "rank": 17,
+      "route_energy_kwh": 6.523605027322534,
+      "first_visits": [
+        [
+          "S006",
+          [
+            "S006-WAT-02"
+          ]
+        ],
+        [
+          "S007",
+          [
+            "S007-WAT-01"
+          ]
+        ]
+      ],
+      "second_visits": [
+        [
+          "S006",
+          [
+            "S006-FOD-01",
+            "S006-HYG-01",
+            "S006-MED-01",
+            "S006-WAT-01",
+            "S006-WAT-03"
+          ]
+        ],
+        [
+          "S007",
+          [
+            "S007-FOD-01",
+            "S007-HYG-01",
+            "S007-MED-01",
+            "S007-WAT-02"
+          ]
+        ]
+      ],
+      "solver_status": "OPTIMAL",
+      "objective": {
+        "weighted_delivery_seconds": 3485065.383638856,
+        "weighted_soft_delay_seconds": 0,
+        "makespan": 9416.73920994403,
+        "energy_kwh": 65.80687298906386,
+        "sortie_count": 19
+      }
+    },
+    {
+      "rank": 18,
+      "route_energy_kwh": 6.523605027322534,
+      "first_visits": [
+        [
+          "S006",
+          [
+            "S006-WAT-03"
+          ]
+        ],
+        [
+          "S007",
+          [
+            "S007-WAT-01"
+          ]
+        ]
+      ],
+      "second_visits": [
+        [
+          "S006",
+          [
+            "S006-FOD-01",
+            "S006-HYG-01",
+            "S006-MED-01",
+            "S006-WAT-01",
+            "S006-WAT-02"
+          ]
+        ],
+        [
+          "S007",
+          [
+            "S007-FOD-01",
+            "S007-HYG-01",
+            "S007-MED-01",
+            "S007-WAT-02"
+          ]
+        ]
+      ],
+      "solver_status": "OPTIMAL",
+      "objective": {
+        "weighted_delivery_seconds": 3367877.62314573,
+        "weighted_soft_delay_seconds": 0,
+        "makespan": 9810.471529190036,
+        "energy_kwh": 65.80687298906386,
+        "sortie_count": 19
+      }
+    },
+    {
+      "rank": 19,
+      "route_energy_kwh": 6.523605027322534,
+      "first_visits": [
+        [
+          "S006",
+          [
+            "S006-WAT-01"
+          ]
+        ],
+        [
+          "S007",
+          [
+            "S007-WAT-02"
+          ]
+        ]
+      ],
+      "second_visits": [
+        [
+          "S006",
+          [
+            "S006-FOD-01",
+            "S006-HYG-01",
+            "S006-MED-01",
+            "S006-WAT-02",
+            "S006-WAT-03"
+          ]
+        ],
+        [
+          "S007",
+          [
+            "S007-FOD-01",
+            "S007-HYG-01",
+            "S007-MED-01",
+            "S007-WAT-01"
+          ]
+        ]
+      ],
+      "solver_status": "OPTIMAL",
+      "objective": {
+        "weighted_delivery_seconds": 3302913.613046914,
+        "weighted_soft_delay_seconds": 0,
+        "makespan": 9416.73920994403,
+        "energy_kwh": 65.80687298906386,
+        "sortie_count": 19
+      }
+    },
+    {
+      "rank": 20,
+      "route_energy_kwh": 6.523605027322534,
+      "first_visits": [
+        [
+          "S006",
+          [
+            "S006-WAT-02"
+          ]
+        ],
+        [
+          "S007",
+          [
+            "S007-WAT-02"
+          ]
+        ]
+      ],
+      "second_visits": [
+        [
+          "S006",
+          [
+            "S006-FOD-01",
+            "S006-HYG-01",
+            "S006-MED-01",
+            "S006-WAT-01",
+            "S006-WAT-03"
+          ]
+        ],
+        [
+          "S007",
+          [
+            "S007-FOD-01",
+            "S007-HYG-01",
+            "S007-MED-01",
+            "S007-WAT-01"
+          ]
+        ]
+      ],
+      "solver_status": "OPTIMAL",
+      "objective": {
+        "weighted_delivery_seconds": 3330419.1004386954,
+        "weighted_soft_delay_seconds": 0,
+        "makespan": 9355.534853945433,
+        "energy_kwh": 65.80687298906386,
+        "sortie_count": 19
+      }
+    },
+    {
+      "rank": 21,
+      "route_energy_kwh": 6.523605027322534,
+      "first_visits": [
+        [
+          "S006",
+          [
+            "S006-WAT-03"
+          ]
+        ],
+        [
+          "S007",
+          [
+            "S007-WAT-02"
+          ]
+        ]
+      ],
+      "second_visits": [
+        [
+          "S006",
+          [
+            "S006-FOD-01",
+            "S006-HYG-01",
+            "S006-MED-01",
+            "S006-WAT-01",
+            "S006-WAT-02"
+          ]
+        ],
+        [
+          "S007",
+          [
+            "S007-FOD-01",
+            "S007-HYG-01",
+            "S007-MED-01",
+            "S007-WAT-01"
+          ]
+        ]
+      ],
+      "solver_status": "OPTIMAL",
+      "objective": {
+        "weighted_delivery_seconds": 3485065.383638856,
+        "weighted_soft_delay_seconds": 0,
+        "makespan": 9416.73920994403,
+        "energy_kwh": 65.80687298906386,
+        "sortie_count": 19
+      }
+    },
+    {
+      "rank": 22,
+      "route_energy_kwh": 6.569246493802169,
+      "first_visits": [
+        [
+          "S007",
+          [
+            "S007-FOD-01",
+            "S007-WAT-01"
+          ]
+        ],
+        [
+          "S006",
+          [
+            "S006-MED-01"
+          ]
+        ]
+      ],
+      "second_visits": [
+        [
+          "S006",
+          [
+            "S006-FOD-01",
+            "S006-HYG-01",
+            "S006-WAT-01",
+            "S006-WAT-02",
+            "S006-WAT-03"
+          ]
+        ],
+        [
+          "S007",
+          [
+            "S007-HYG-01",
+            "S007-MED-01",
+            "S007-WAT-02"
+          ]
+        ]
+      ],
+      "solver_status": "OPTIMAL",
+      "objective": {
+        "weighted_delivery_seconds": 3319365.157796177,
+        "weighted_soft_delay_seconds": 0,
+        "makespan": 9222.603459736212,
+        "energy_kwh": 65.8525144555435,
+        "sortie_count": 19
+      }
+    },
+    {
+      "rank": 23,
+      "route_energy_kwh": 6.569246493802169,
+      "first_visits": [
+        [
+          "S007",
+          [
+            "S007-FOD-01",
+            "S007-WAT-02"
+          ]
+        ],
+        [
+          "S006",
+          [
+            "S006-MED-01"
+          ]
+        ]
+      ],
+      "second_visits": [
+        [
+          "S006",
+          [
+            "S006-FOD-01",
+            "S006-HYG-01",
+            "S006-WAT-01",
+            "S006-WAT-02",
+            "S006-WAT-03"
+          ]
+        ],
+        [
+          "S007",
+          [
+            "S007-HYG-01",
+            "S007-MED-01",
+            "S007-WAT-01"
+          ]
+        ]
+      ],
+      "solver_status": "OPTIMAL",
+      "objective": {
+        "weighted_delivery_seconds": 3295718.969597367,
+        "weighted_soft_delay_seconds": 0,
+        "makespan": 9321.880447640347,
+        "energy_kwh": 65.8525144555435,
+        "sortie_count": 19
+      }
+    },
+    {
+      "rank": 24,
+      "route_energy_kwh": 6.580609821909872,
+      "first_visits": [
+        [
+          "S006",
+          [
+            "S006-FOD-01",
+            "S006-MED-01"
+          ]
+        ],
+        [
+          "S007",
+          [
+            "S007-WAT-01"
+          ]
+        ]
+      ],
+      "second_visits": [
+        [
+          "S006",
+          [
+            "S006-HYG-01",
+            "S006-WAT-01",
+            "S006-WAT-02",
+            "S006-WAT-03"
+          ]
+        ],
+        [
+          "S007",
+          [
+            "S007-FOD-01",
+            "S007-HYG-01",
+            "S007-MED-01",
+            "S007-WAT-02"
+          ]
+        ]
+      ],
+      "solver_status": "OPTIMAL",
+      "objective": {
+        "weighted_delivery_seconds": 3109664.6252193227,
+        "weighted_soft_delay_seconds": 0,
+        "makespan": 9286.564511570186,
+        "energy_kwh": 65.8638777836512,
+        "sortie_count": 19
+      }
+    },
+    {
+      "rank": 25,
+      "route_energy_kwh": 6.580609821909872,
+      "first_visits": [
+        [
+          "S006",
+          [
+            "S006-FOD-01",
+            "S006-MED-01"
+          ]
+        ],
+        [
+          "S007",
+          [
+            "S007-WAT-02"
+          ]
+        ]
+      ],
+      "second_visits": [
+        [
+          "S006",
+          [
+            "S006-HYG-01",
+            "S006-WAT-01",
+            "S006-WAT-02",
+            "S006-WAT-03"
+          ]
+        ],
+        [
+          "S007",
+          [
+            "S007-FOD-01",
+            "S007-HYG-01",
+            "S007-MED-01",
+            "S007-WAT-01"
+          ]
+        ]
+      ],
+      "solver_status": "OPTIMAL",
+      "objective": {
+        "weighted_delivery_seconds": 3267834.6646973356,
+        "weighted_soft_delay_seconds": 0,
+        "makespan": 8421.967723195521,
+        "energy_kwh": 65.8638777836512,
+        "sortie_count": 19
+      }
+    },
+    {
+      "rank": 26,
+      "route_energy_kwh": 6.581715820201623,
+      "first_visits": [
+        [
+          "S006",
+          [
+            "S006-WAT-01"
+          ]
+        ],
+        [
+          "S007",
+          [
+            "S007-FOD-01",
+            "S007-MED-01"
+          ]
+        ]
+      ],
+      "second_visits": [
+        [
+          "S006",
+          [
+            "S006-FOD-01",
+            "S006-HYG-01",
+            "S006-MED-01",
+            "S006-WAT-02",
+            "S006-WAT-03"
+          ]
+        ],
+        [
+          "S007",
+          [
+            "S007-HYG-01",
+            "S007-WAT-01",
+            "S007-WAT-02"
+          ]
+        ]
+      ],
+      "solver_status": "OPTIMAL",
+      "objective": {
+        "weighted_delivery_seconds": 3176402.52133311,
+        "weighted_soft_delay_seconds": 0,
+        "makespan": 9147.255187199378,
+        "energy_kwh": 65.86498378194295,
+        "sortie_count": 19
+      }
+    },
+    {
+      "rank": 27,
+      "route_energy_kwh": 6.581715820201623,
+      "first_visits": [
+        [
+          "S006",
+          [
+            "S006-WAT-02"
+          ]
+        ],
+        [
+          "S007",
+          [
+            "S007-FOD-01",
+            "S007-MED-01"
+          ]
+        ]
+      ],
+      "second_visits": [
+        [
+          "S006",
+          [
+            "S006-FOD-01",
+            "S006-HYG-01",
+            "S006-MED-01",
+            "S006-WAT-01",
+            "S006-WAT-03"
+          ]
+        ],
+        [
+          "S007",
+          [
+            "S007-HYG-01",
+            "S007-WAT-01",
+            "S007-WAT-02"
+          ]
+        ]
+      ],
+      "solver_status": "OPTIMAL",
+      "objective": {
+        "weighted_delivery_seconds": 3444976.752876608,
+        "weighted_soft_delay_seconds": 0,
+        "makespan": 9222.603459736212,
+        "energy_kwh": 65.86498378194295,
+        "sortie_count": 19
+      }
+    },
+    {
+      "rank": 28,
+      "route_energy_kwh": 6.581715820201623,
+      "first_visits": [
+        [
+          "S006",
+          [
+            "S006-WAT-03"
+          ]
+        ],
+        [
+          "S007",
+          [
+            "S007-FOD-01",
+            "S007-MED-01"
+          ]
+        ]
+      ],
+      "second_visits": [
+        [
+          "S006",
+          [
+            "S006-FOD-01",
+            "S006-HYG-01",
+            "S006-MED-01",
+            "S006-WAT-01",
+            "S006-WAT-02"
+          ]
+        ],
+        [
+          "S007",
+          [
+            "S007-HYG-01",
+            "S007-WAT-01",
+            "S007-WAT-02"
+          ]
+        ]
+      ],
+      "solver_status": "OPTIMAL",
+      "objective": {
+        "weighted_delivery_seconds": 3102192.057799552,
+        "weighted_soft_delay_seconds": 0,
+        "makespan": 9222.603459736212,
+        "energy_kwh": 65.86498378194295,
+        "sortie_count": 19
+      }
+    },
+    {
+      "rank": 29,
+      "route_energy_kwh": 6.585726319992891,
+      "first_visits": [
+        [
+          "S006",
+          [
+            "S006-FOD-01"
+          ]
+        ],
+        [
+          "S007",
+          [
+            "S007-MED-01",
+            "S007-WAT-01"
+          ]
+        ]
+      ],
+      "second_visits": [
+        [
+          "S006",
+          [
+            "S006-HYG-01",
+            "S006-MED-01",
+            "S006-WAT-01",
+            "S006-WAT-02",
+            "S006-WAT-03"
+          ]
+        ],
+        [
+          "S007",
+          [
+            "S007-FOD-01",
+            "S007-HYG-01",
+            "S007-WAT-02"
+          ]
+        ]
+      ],
+      "solver_status": "OPTIMAL",
+      "objective": {
+        "weighted_delivery_seconds": 3155599.8040829822,
+        "weighted_soft_delay_seconds": 0,
+        "makespan": 9321.880447640347,
+        "energy_kwh": 65.86899428173423,
+        "sortie_count": 19
+      }
+    },
+    {
+      "rank": 30,
+      "route_energy_kwh": 6.585726319992891,
+      "first_visits": [
+        [
+          "S006",
+          [
+            "S006-FOD-01"
+          ]
+        ],
+        [
+          "S007",
+          [
+            "S007-MED-01",
+            "S007-WAT-02"
+          ]
+        ]
+      ],
+      "second_visits": [
+        [
+          "S006",
+          [
+            "S006-HYG-01",
+            "S006-MED-01",
+            "S006-WAT-01",
+            "S006-WAT-02",
+            "S006-WAT-03"
+          ]
+        ],
+        [
+          "S007",
+          [
+            "S007-FOD-01",
+            "S007-HYG-01",
+            "S007-WAT-01"
+          ]
+        ]
+      ],
+      "solver_status": "OPTIMAL",
+      "objective": {
+        "weighted_delivery_seconds": 3155599.8040829822,
+        "weighted_soft_delay_seconds": 0,
+        "makespan": 9321.880447640347,
+        "energy_kwh": 65.86899428173423,
+        "sortie_count": 19
+      }
+    },
+    {
+      "rank": 31,
+      "route_energy_kwh": 6.588562219040979,
+      "first_visits": [
+        [
+          "S006",
+          [
+            "S006-MED-01",
+            "S006-WAT-01"
+          ]
+        ],
+        [
+          "S007",
+          [
+            "S007-FOD-01"
+          ]
+        ]
+      ],
+      "second_visits": [
+        [
+          "S006",
+          [
+            "S006-FOD-01",
+            "S006-HYG-01",
+            "S006-WAT-02",
+            "S006-WAT-03"
+          ]
+        ],
+        [
+          "S007",
+          [
+            "S007-HYG-01",
+            "S007-MED-01",
+            "S007-WAT-01",
+            "S007-WAT-02"
+          ]
+        ]
+      ],
+      "solver_status": "OPTIMAL",
+      "objective": {
+        "weighted_delivery_seconds": 3248862.410778235,
+        "weighted_soft_delay_seconds": 0,
+        "makespan": 8478.823919789542,
+        "energy_kwh": 65.87183018078231,
+        "sortie_count": 19
+      }
+    },
+    {
+      "rank": 32,
+      "route_energy_kwh": 6.588562219040979,
+      "first_visits": [
+        [
+          "S006",
+          [
+            "S006-MED-01",
+            "S006-WAT-02"
+          ]
+        ],
+        [
+          "S007",
+          [
+            "S007-FOD-01"
+          ]
+        ]
+      ],
+      "second_visits": [
+        [
+          "S006",
+          [
+            "S006-FOD-01",
+            "S006-HYG-01",
+            "S006-WAT-01",
+            "S006-WAT-03"
+          ]
+        ],
+        [
+          "S007",
+          [
+            "S007-HYG-01",
+            "S007-MED-01",
+            "S007-WAT-01",
+            "S007-WAT-02"
+          ]
+        ]
+      ],
+      "solver_status": "OPTIMAL",
+      "objective": {
+        "weighted_delivery_seconds": 3277179.7577755516,
+        "weighted_soft_delay_seconds": 0,
+        "makespan": 9286.564511570186,
+        "energy_kwh": 65.87183018078231,
+        "sortie_count": 19
+      }
+    },
+    {
+      "rank": 33,
+      "route_energy_kwh": 6.588562219040979,
+      "first_visits": [
+        [
+          "S006",
+          [
+            "S006-MED-01",
+            "S006-WAT-03"
+          ]
+        ],
+        [
+          "S007",
+          [
+            "S007-FOD-01"
+          ]
+        ]
+      ],
+      "second_visits": [
+        [
+          "S006",
+          [
+            "S006-FOD-01",
+            "S006-HYG-01",
+            "S006-WAT-01",
+            "S006-WAT-02"
+          ]
+        ],
+        [
+          "S007",
+          [
+            "S007-HYG-01",
+            "S007-MED-01",
+            "S007-WAT-01",
+            "S007-WAT-02"
+          ]
+        ]
+      ],
+      "solver_status": "OPTIMAL",
+      "objective": {
+        "weighted_delivery_seconds": 3277141.1640338562,
+        "weighted_soft_delay_seconds": 0,
+        "makespan": 9283.807815734808,
+        "energy_kwh": 65.87183018078231,
+        "sortie_count": 19
+      }
+    },
+    {
+      "rank": 34,
+      "route_energy_kwh": 6.610611022836408,
+      "first_visits": [
+        [
+          "S006",
+          [
+            "S006-MED-01"
+          ]
+        ],
+        [
+          "S007",
+          [
+            "S007-FOD-01",
+            "S007-WAT-01"
+          ]
+        ]
+      ],
+      "second_visits": [
+        [
+          "S006",
+          [
+            "S006-FOD-01",
+            "S006-HYG-01",
+            "S006-WAT-01",
+            "S006-WAT-02",
+            "S006-WAT-03"
+          ]
+        ],
+        [
+          "S007",
+          [
+            "S007-HYG-01",
+            "S007-MED-01",
+            "S007-WAT-02"
+          ]
+        ]
+      ],
+      "solver_status": "OPTIMAL",
+      "objective": {
+        "weighted_delivery_seconds": 3436863.784703235,
+        "weighted_soft_delay_seconds": 0,
+        "makespan": 9961.789868949478,
+        "energy_kwh": 65.89387898457774,
+        "sortie_count": 19
+      }
+    },
+    {
+      "rank": 35,
+      "route_energy_kwh": 6.610611022836408,
+      "first_visits": [
+        [
+          "S006",
+          [
+            "S006-MED-01"
+          ]
+        ],
+        [
+          "S007",
+          [
+            "S007-FOD-01",
+            "S007-WAT-02"
+          ]
+        ]
+      ],
+      "second_visits": [
+        [
+          "S006",
+          [
+            "S006-FOD-01",
+            "S006-HYG-01",
+            "S006-WAT-01",
+            "S006-WAT-02",
+            "S006-WAT-03"
+          ]
+        ],
+        [
+          "S007",
+          [
+            "S007-HYG-01",
+            "S007-MED-01",
+            "S007-WAT-01"
+          ]
+        ]
+      ],
+      "solver_status": "OPTIMAL",
+      "objective": {
+        "weighted_delivery_seconds": 3107108.184134681,
+        "weighted_soft_delay_seconds": 0,
+        "makespan": 9222.603459736212,
+        "energy_kwh": 65.89387898457774,
+        "sortie_count": 19
+      }
+    },
+    {
+      "rank": 36,
+      "route_energy_kwh": 6.6125306926251035,
+      "first_visits": [
+        [
+          "S006",
+          [
+            "S006-FOD-01",
+            "S006-WAT-01"
+          ]
+        ],
+        [
+          "S007",
+          [
+            "S007-MED-01"
+          ]
+        ]
+      ],
+      "second_visits": [
+        [
+          "S006",
+          [
+            "S006-HYG-01",
+            "S006-MED-01",
+            "S006-WAT-02",
+            "S006-WAT-03"
+          ]
+        ],
+        [
+          "S007",
+          [
+            "S007-FOD-01",
+            "S007-HYG-01",
+            "S007-WAT-01",
+            "S007-WAT-02"
+          ]
+        ]
+      ],
+      "solver_status": "OPTIMAL",
+      "objective": {
+        "weighted_delivery_seconds": 3115828.01554412,
+        "weighted_soft_delay_seconds": 0,
+        "makespan": 9222.603459736212,
+        "energy_kwh": 65.89579865436643,
+        "sortie_count": 19
+      }
+    },
+    {
+      "rank": 37,
+      "route_energy_kwh": 6.6125306926251035,
+      "first_visits": [
+        [
+          "S006",
+          [
+            "S006-FOD-01",
+            "S006-WAT-02"
+          ]
+        ],
+        [
+          "S007",
+          [
+            "S007-MED-01"
+          ]
+        ]
+      ],
+      "second_visits": [
+        [
+          "S006",
+          [
+            "S006-HYG-01",
+            "S006-MED-01",
+            "S006-WAT-01",
+            "S006-WAT-03"
+          ]
+        ],
+        [
+          "S007",
+          [
+            "S007-FOD-01",
+            "S007-HYG-01",
+            "S007-WAT-01",
+            "S007-WAT-02"
+          ]
+        ]
+      ],
+      "solver_status": "OPTIMAL",
+      "objective": {
+        "weighted_delivery_seconds": 3107430.693783776,
+        "weighted_soft_delay_seconds": 0,
+        "makespan": 9286.564511570186,
+        "energy_kwh": 65.89579865436643,
+        "sortie_count": 19
+      }
+    },
+    {
+      "rank": 38,
+      "route_energy_kwh": 6.6125306926251035,
+      "first_visits": [
+        [
+          "S006",
+          [
+            "S006-FOD-01",
+            "S006-WAT-03"
+          ]
+        ],
+        [
+          "S007",
+          [
+            "S007-MED-01"
+          ]
+        ]
+      ],
+      "second_visits": [
+        [
+          "S006",
+          [
+            "S006-HYG-01",
+            "S006-MED-01",
+            "S006-WAT-01",
+            "S006-WAT-02"
+          ]
+        ],
+        [
+          "S007",
+          [
+            "S007-FOD-01",
+            "S007-HYG-01",
+            "S007-WAT-01",
+            "S007-WAT-02"
+          ]
+        ]
+      ],
+      "solver_status": "OPTIMAL",
+      "objective": {
+        "weighted_delivery_seconds": 3280428.112358412,
+        "weighted_soft_delay_seconds": 0,
+        "makespan": 9222.603459736212,
+        "energy_kwh": 65.89579865436643,
+        "sortie_count": 19
+      }
+    },
+    {
+      "rank": 39,
+      "route_energy_kwh": 6.623630787023629,
+      "first_visits": [
+        [
+          "S007",
+          [
+            "S007-MED-01",
+            "S007-WAT-01"
+          ]
+        ],
+        [
+          "S006",
+          [
+            "S006-FOD-01"
+          ]
+        ]
+      ],
+      "second_visits": [
+        [
+          "S006",
+          [
+            "S006-HYG-01",
+            "S006-MED-01",
+            "S006-WAT-01",
+            "S006-WAT-02",
+            "S006-WAT-03"
+          ]
+        ],
+        [
+          "S007",
+          [
+            "S007-FOD-01",
+            "S007-HYG-01",
+            "S007-WAT-02"
+          ]
+        ]
+      ],
+      "solver_status": "OPTIMAL",
+      "objective": {
+        "weighted_delivery_seconds": 3150051.110198762,
+        "weighted_soft_delay_seconds": 0,
+        "makespan": 9321.880447640347,
+        "energy_kwh": 65.90689874876496,
+        "sortie_count": 19
+      }
+    },
+    {
+      "rank": 40,
+      "route_energy_kwh": 6.623630787023629,
+      "first_visits": [
+        [
+          "S007",
+          [
+            "S007-MED-01",
+            "S007-WAT-02"
+          ]
+        ],
+        [
+          "S006",
+          [
+            "S006-FOD-01"
+          ]
+        ]
+      ],
+      "second_visits": [
+        [
+          "S006",
+          [
+            "S006-HYG-01",
+            "S006-MED-01",
+            "S006-WAT-01",
+            "S006-WAT-02",
+            "S006-WAT-03"
+          ]
+        ],
+        [
+          "S007",
+          [
+            "S007-FOD-01",
+            "S007-HYG-01",
+            "S007-WAT-01"
+          ]
+        ]
+      ],
+      "solver_status": "OPTIMAL",
+      "objective": {
+        "weighted_delivery_seconds": 3280368.1012837803,
+        "weighted_soft_delay_seconds": 0,
+        "makespan": 9353.207263129725,
+        "energy_kwh": 65.90689874876496,
+        "sortie_count": 19
+      }
+    },
+    {
+      "rank": 41,
+      "route_energy_kwh": 6.657674955270947,
+      "first_visits": [
+        [
+          "S007",
+          [
+            "S007-WAT-01"
+          ]
+        ],
+        [
+          "S006",
+          [
+            "S006-WAT-01"
+          ]
+        ]
+      ],
+      "second_visits": [
+        [
+          "S006",
+          [
+            "S006-FOD-01",
+            "S006-HYG-01",
+            "S006-MED-01",
+            "S006-WAT-02",
+            "S006-WAT-03"
+          ]
+        ],
+        [
+          "S007",
+          [
+            "S007-FOD-01",
+            "S007-HYG-01",
+            "S007-MED-01",
+            "S007-WAT-02"
+          ]
+        ]
+      ],
+      "solver_status": "OPTIMAL",
+      "objective": {
+        "weighted_delivery_seconds": 3525756.625869848,
+        "weighted_soft_delay_seconds": 0,
+        "makespan": 9416.73920994403,
+        "energy_kwh": 65.94094291701228,
+        "sortie_count": 19
+      }
+    },
+    {
+      "rank": 42,
+      "route_energy_kwh": 6.657674955270947,
+      "first_visits": [
+        [
+          "S007",
+          [
+            "S007-WAT-01"
+          ]
+        ],
+        [
+          "S006",
+          [
+            "S006-WAT-02"
+          ]
+        ]
+      ],
+      "second_visits": [
+        [
+          "S006",
+          [
+            "S006-FOD-01",
+            "S006-HYG-01",
+            "S006-MED-01",
+            "S006-WAT-01",
+            "S006-WAT-03"
+          ]
+        ],
+        [
+          "S007",
+          [
+            "S007-FOD-01",
+            "S007-HYG-01",
+            "S007-MED-01",
+            "S007-WAT-02"
+          ]
+        ]
+      ],
+      "solver_status": "OPTIMAL",
+      "objective": {
+        "weighted_delivery_seconds": 3525756.625869848,
+        "weighted_soft_delay_seconds": 0,
+        "makespan": 9416.73920994403,
+        "energy_kwh": 65.94094291701228,
+        "sortie_count": 19
+      }
+    },
+    {
+      "rank": 43,
+      "route_energy_kwh": 6.657674955270947,
+      "first_visits": [
+        [
+          "S007",
+          [
+            "S007-WAT-01"
+          ]
+        ],
+        [
+          "S006",
+          [
+            "S006-WAT-03"
+          ]
+        ]
+      ],
+      "second_visits": [
+        [
+          "S006",
+          [
+            "S006-FOD-01",
+            "S006-HYG-01",
+            "S006-MED-01",
+            "S006-WAT-01",
+            "S006-WAT-02"
+          ]
+        ],
+        [
+          "S007",
+          [
+            "S007-FOD-01",
+            "S007-HYG-01",
+            "S007-MED-01",
+            "S007-WAT-02"
+          ]
+        ]
+      ],
+      "solver_status": "OPTIMAL",
+      "objective": {
+        "weighted_delivery_seconds": 3595494.3450942407,
+        "weighted_soft_delay_seconds": 0,
+        "makespan": 9355.534853945433,
+        "energy_kwh": 65.94094291701228,
+        "sortie_count": 19
+      }
+    },
+    {
+      "rank": 44,
+      "route_energy_kwh": 6.657674955270947,
+      "first_visits": [
+        [
+          "S007",
+          [
+            "S007-WAT-02"
+          ]
+        ],
+        [
+          "S006",
+          [
+            "S006-WAT-01"
+          ]
+        ]
+      ],
+      "second_visits": [
+        [
+          "S006",
+          [
+            "S006-FOD-01",
+            "S006-HYG-01",
+            "S006-MED-01",
+            "S006-WAT-02",
+            "S006-WAT-03"
+          ]
+        ],
+        [
+          "S007",
+          [
+            "S007-FOD-01",
+            "S007-HYG-01",
+            "S007-MED-01",
+            "S007-WAT-01"
+          ]
+        ]
+      ],
+      "solver_status": "OPTIMAL",
+      "objective": {
+        "weighted_delivery_seconds": 3525756.625869848,
+        "weighted_soft_delay_seconds": 0,
+        "makespan": 9416.73920994403,
+        "energy_kwh": 65.94094291701228,
+        "sortie_count": 19
+      }
+    },
+    {
+      "rank": 45,
+      "route_energy_kwh": 6.657674955270947,
+      "first_visits": [
+        [
+          "S007",
+          [
+            "S007-WAT-02"
+          ]
+        ],
+        [
+          "S006",
+          [
+            "S006-WAT-02"
+          ]
+        ]
+      ],
+      "second_visits": [
+        [
+          "S006",
+          [
+            "S006-FOD-01",
+            "S006-HYG-01",
+            "S006-MED-01",
+            "S006-WAT-01",
+            "S006-WAT-03"
+          ]
+        ],
+        [
+          "S007",
+          [
+            "S007-FOD-01",
+            "S007-HYG-01",
+            "S007-MED-01",
+            "S007-WAT-01"
+          ]
+        ]
+      ],
+      "solver_status": "OPTIMAL",
+      "objective": {
+        "weighted_delivery_seconds": 3399138.2839657245,
+        "weighted_soft_delay_seconds": 0,
+        "makespan": 9270.97720381987,
+        "energy_kwh": 65.94094291701228,
+        "sortie_count": 19
+      }
+    },
+    {
+      "rank": 46,
+      "route_energy_kwh": 6.657674955270947,
+      "first_visits": [
+        [
+          "S007",
+          [
+            "S007-WAT-02"
+          ]
+        ],
+        [
+          "S006",
+          [
+            "S006-WAT-03"
+          ]
+        ]
+      ],
+      "second_visits": [
+        [
+          "S006",
+          [
+            "S006-FOD-01",
+            "S006-HYG-01",
+            "S006-MED-01",
+            "S006-WAT-01",
+            "S006-WAT-02"
+          ]
+        ],
+        [
+          "S007",
+          [
+            "S007-FOD-01",
+            "S007-HYG-01",
+            "S007-MED-01",
+            "S007-WAT-01"
+          ]
+        ]
+      ],
+      "solver_status": "OPTIMAL",
+      "objective": {
+        "weighted_delivery_seconds": 3525756.625869848,
+        "weighted_soft_delay_seconds": 0,
+        "makespan": 9416.73920994403,
+        "energy_kwh": 65.94094291701228,
+        "sortie_count": 19
+      }
+    },
+    {
+      "rank": 47,
+      "route_energy_kwh": 6.663129206539914,
+      "first_visits": [
+        [
+          "S007",
+          [
+            "S007-WAT-01"
+          ]
+        ],
+        [
+          "S006",
+          [
+            "S006-FOD-01",
+            "S006-MED-01"
+          ]
+        ]
+      ],
+      "second_visits": [
+        [
+          "S006",
+          [
+            "S006-HYG-01",
+            "S006-WAT-01",
+            "S006-WAT-02",
+            "S006-WAT-03"
+          ]
+        ],
+        [
+          "S007",
+          [
+            "S007-FOD-01",
+            "S007-HYG-01",
+            "S007-MED-01",
+            "S007-WAT-02"
+          ]
+        ]
+      ],
+      "solver_status": "OPTIMAL",
+      "objective": {
+        "weighted_delivery_seconds": 3129133.122494229,
+        "weighted_soft_delay_seconds": 0,
+        "makespan": 9283.807815734808,
+        "energy_kwh": 65.94639716828125,
+        "sortie_count": 19
+      }
+    },
+    {
+      "rank": 48,
+      "route_energy_kwh": 6.663129206539914,
+      "first_visits": [
+        [
+          "S007",
+          [
+            "S007-WAT-02"
+          ]
+        ],
+        [
+          "S006",
+          [
+            "S006-FOD-01",
+            "S006-MED-01"
+          ]
+        ]
+      ],
+      "second_visits": [
+        [
+          "S006",
+          [
+            "S006-HYG-01",
+            "S006-WAT-01",
+            "S006-WAT-02",
+            "S006-WAT-03"
+          ]
+        ],
+        [
+          "S007",
+          [
+            "S007-FOD-01",
+            "S007-HYG-01",
+            "S007-MED-01",
+            "S007-WAT-01"
+          ]
+        ]
+      ],
+      "solver_status": "OPTIMAL",
+      "objective": {
+        "weighted_delivery_seconds": 3332965.3712867484,
+        "weighted_soft_delay_seconds": 0,
+        "makespan": 9283.807815734808,
+        "energy_kwh": 65.94639716828125,
+        "sortie_count": 19
+      }
+    },
+    {
+      "rank": 49,
+      "route_energy_kwh": 6.7082243329578235,
+      "first_visits": [
+        [
+          "S007",
+          [
+            "S007-FOD-01",
+            "S007-MED-01"
+          ]
+        ],
+        [
+          "S006",
+          [
+            "S006-WAT-01"
+          ]
+        ]
+      ],
+      "second_visits": [
+        [
+          "S006",
+          [
+            "S006-FOD-01",
+            "S006-HYG-01",
+            "S006-MED-01",
+            "S006-WAT-02",
+            "S006-WAT-03"
+          ]
+        ],
+        [
+          "S007",
+          [
+            "S007-HYG-01",
+            "S007-WAT-01",
+            "S007-WAT-02"
+          ]
+        ]
+      ],
+      "solver_status": "OPTIMAL",
+      "objective": {
+        "weighted_delivery_seconds": 3110647.7920962106,
+        "weighted_soft_delay_seconds": 0,
+        "makespan": 9283.807815734808,
+        "energy_kwh": 65.99149229469916,
+        "sortie_count": 19
+      }
+    },
+    {
+      "rank": 50,
+      "route_energy_kwh": 6.7082243329578235,
+      "first_visits": [
+        [
+          "S007",
+          [
+            "S007-FOD-01",
+            "S007-MED-01"
+          ]
+        ],
+        [
+          "S006",
+          [
+            "S006-WAT-02"
+          ]
+        ]
+      ],
+      "second_visits": [
+        [
+          "S006",
+          [
+            "S006-FOD-01",
+            "S006-HYG-01",
+            "S006-MED-01",
+            "S006-WAT-01",
+            "S006-WAT-03"
+          ]
+        ],
+        [
+          "S007",
+          [
+            "S007-HYG-01",
+            "S007-WAT-01",
+            "S007-WAT-02"
+          ]
+        ]
+      ],
+      "solver_status": "OPTIMAL",
+      "objective": {
+        "weighted_delivery_seconds": 3152494.414179755,
+        "weighted_soft_delay_seconds": 0,
+        "makespan": 9321.880447640347,
+        "energy_kwh": 65.99149229469916,
+        "sortie_count": 19
+      }
+    },
+    {
+      "rank": 51,
+      "route_energy_kwh": 6.7082243329578235,
+      "first_visits": [
+        [
+          "S007",
+          [
+            "S007-FOD-01",
+            "S007-MED-01"
+          ]
+        ],
+        [
+          "S006",
+          [
+            "S006-WAT-03"
+          ]
+        ]
+      ],
+      "second_visits": [
+        [
+          "S006",
+          [
+            "S006-FOD-01",
+            "S006-HYG-01",
+            "S006-MED-01",
+            "S006-WAT-01",
+            "S006-WAT-02"
+          ]
+        ],
+        [
+          "S007",
+          [
+            "S007-HYG-01",
+            "S007-WAT-01",
+            "S007-WAT-02"
+          ]
+        ]
+      ],
+      "solver_status": "OPTIMAL",
+      "objective": {
+        "weighted_delivery_seconds": 3152494.414179755,
+        "weighted_soft_delay_seconds": 0,
+        "makespan": 9321.880447640347,
+        "energy_kwh": 65.99149229469916,
+        "sortie_count": 19
+      }
+    },
+    {
+      "rank": 52,
+      "route_energy_kwh": 6.759685649396484,
+      "first_visits": [
+        [
+          "S007",
+          [
+            "S007-FOD-01"
+          ]
+        ],
+        [
+          "S006",
+          [
+            "S006-MED-01",
+            "S006-WAT-01"
+          ]
+        ]
+      ],
+      "second_visits": [
+        [
+          "S006",
+          [
+            "S006-FOD-01",
+            "S006-HYG-01",
+            "S006-WAT-02",
+            "S006-WAT-03"
+          ]
+        ],
+        [
+          "S007",
+          [
+            "S007-HYG-01",
+            "S007-MED-01",
+            "S007-WAT-01",
+            "S007-WAT-02"
+          ]
+        ]
+      ],
+      "solver_status": "OPTIMAL",
+      "objective": {
+        "weighted_delivery_seconds": 3176733.891402018,
+        "weighted_soft_delay_seconds": 0,
+        "makespan": 9222.603459736212,
+        "energy_kwh": 66.04295361113782,
+        "sortie_count": 19
+      }
+    },
+    {
+      "rank": 53,
+      "route_energy_kwh": 6.759685649396484,
+      "first_visits": [
+        [
+          "S007",
+          [
+            "S007-FOD-01"
+          ]
+        ],
+        [
+          "S006",
+          [
+            "S006-MED-01",
+            "S006-WAT-02"
+          ]
+        ]
+      ],
+      "second_visits": [
+        [
+          "S006",
+          [
+            "S006-FOD-01",
+            "S006-HYG-01",
+            "S006-WAT-01",
+            "S006-WAT-03"
+          ]
+        ],
+        [
+          "S007",
+          [
+            "S007-HYG-01",
+            "S007-MED-01",
+            "S007-WAT-01",
+            "S007-WAT-02"
+          ]
+        ]
+      ],
+      "solver_status": "OPTIMAL",
+      "objective": {
+        "weighted_delivery_seconds": 3418271.503151917,
+        "weighted_soft_delay_seconds": 0,
+        "makespan": 9353.207263129725,
+        "energy_kwh": 66.04295361113782,
+        "sortie_count": 19
+      }
+    },
+    {
+      "rank": 54,
+      "route_energy_kwh": 6.759685649396484,
+      "first_visits": [
+        [
+          "S007",
+          [
+            "S007-FOD-01"
+          ]
+        ],
+        [
+          "S006",
+          [
+            "S006-MED-01",
+            "S006-WAT-03"
+          ]
+        ]
+      ],
+      "second_visits": [
+        [
+          "S006",
+          [
+            "S006-FOD-01",
+            "S006-HYG-01",
+            "S006-WAT-01",
+            "S006-WAT-02"
+          ]
+        ],
+        [
+          "S007",
+          [
+            "S007-HYG-01",
+            "S007-MED-01",
+            "S007-WAT-01",
+            "S007-WAT-02"
+          ]
+        ]
+      ],
+      "solver_status": "OPTIMAL",
+      "objective": {
+        "weighted_delivery_seconds": 3289917.0596949304,
+        "weighted_soft_delay_seconds": 0,
+        "makespan": 8421.967723195521,
+        "energy_kwh": 66.04295361113782,
+        "sortie_count": 19
+      }
+    },
+    {
+      "rank": 55,
+      "route_energy_kwh": 6.862923119045584,
+      "first_visits": [
+        [
+          "S007",
+          [
+            "S007-MED-01"
+          ]
+        ],
+        [
+          "S006",
+          [
+            "S006-FOD-01",
+            "S006-WAT-01"
+          ]
+        ]
+      ],
+      "second_visits": [
+        [
+          "S006",
+          [
+            "S006-HYG-01",
+            "S006-MED-01",
+            "S006-WAT-02",
+            "S006-WAT-03"
+          ]
+        ],
+        [
+          "S007",
+          [
+            "S007-FOD-01",
+            "S007-HYG-01",
+            "S007-WAT-01",
+            "S007-WAT-02"
+          ]
+        ]
+      ],
+      "solver_status": "OPTIMAL",
+      "objective": {
+        "weighted_delivery_seconds": 3238539.2570007932,
+        "weighted_soft_delay_seconds": 0,
+        "makespan": 9321.880447640347,
+        "energy_kwh": 66.14619108078692,
+        "sortie_count": 19
+      }
+    },
+    {
+      "rank": 56,
+      "route_energy_kwh": 6.862923119045584,
+      "first_visits": [
+        [
+          "S007",
+          [
+            "S007-MED-01"
+          ]
+        ],
+        [
+          "S006",
+          [
+            "S006-FOD-01",
+            "S006-WAT-02"
+          ]
+        ]
+      ],
+      "second_visits": [
+        [
+          "S006",
+          [
+            "S006-HYG-01",
+            "S006-MED-01",
+            "S006-WAT-01",
+            "S006-WAT-03"
+          ]
+        ],
+        [
+          "S007",
+          [
+            "S007-FOD-01",
+            "S007-HYG-01",
+            "S007-WAT-01",
+            "S007-WAT-02"
+          ]
+        ]
+      ],
+      "solver_status": "OPTIMAL",
+      "objective": {
+        "weighted_delivery_seconds": 3510826.405869857,
+        "weighted_soft_delay_seconds": 0,
+        "makespan": 9353.207263129725,
+        "energy_kwh": 66.14619108078692,
+        "sortie_count": 19
+      }
+    },
+    {
+      "rank": 57,
+      "route_energy_kwh": 6.862923119045584,
+      "first_visits": [
+        [
+          "S007",
+          [
+            "S007-MED-01"
+          ]
+        ],
+        [
+          "S006",
+          [
+            "S006-FOD-01",
+            "S006-WAT-03"
+          ]
+        ]
+      ],
+      "second_visits": [
+        [
+          "S006",
+          [
+            "S006-HYG-01",
+            "S006-MED-01",
+            "S006-WAT-01",
+            "S006-WAT-02"
+          ]
+        ],
+        [
+          "S007",
+          [
+            "S007-FOD-01",
+            "S007-HYG-01",
+            "S007-WAT-01",
+            "S007-WAT-02"
+          ]
+        ]
+      ],
+      "solver_status": "OPTIMAL",
+      "objective": {
+        "weighted_delivery_seconds": 3113719.8923499663,
+        "weighted_soft_delay_seconds": 0,
+        "makespan": 9286.564511570186,
+        "energy_kwh": 66.14619108078692,
+        "sortie_count": 19
+      }
+    },
+    {
+      "rank": 58,
+      "route_energy_kwh": 7.067326632463757,
+      "first_visits": [
+        [
+          "S006",
+          [
+            "S006-FOD-01",
+            "S006-WAT-01"
+          ]
+        ],
+        [
+          "S007",
+          [
+            "S007-MED-01"
+          ]
+        ]
+      ],
+      "second_visits": [
+        [
+          "S007",
+          [
+            "S007-FOD-01",
+            "S007-HYG-01",
+            "S007-WAT-01",
+            "S007-WAT-02"
+          ]
+        ],
+        [
+          "S006",
+          [
+            "S006-HYG-01",
+            "S006-MED-01",
+            "S006-WAT-02",
+            "S006-WAT-03"
+          ]
+        ]
+      ],
+      "solver_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 59,
+      "route_energy_kwh": 7.067326632463757,
+      "first_visits": [
+        [
+          "S006",
+          [
+            "S006-FOD-01",
+            "S006-WAT-02"
+          ]
+        ],
+        [
+          "S007",
+          [
+            "S007-MED-01"
+          ]
+        ]
+      ],
+      "second_visits": [
+        [
+          "S007",
+          [
+            "S007-FOD-01",
+            "S007-HYG-01",
+            "S007-WAT-01",
+            "S007-WAT-02"
+          ]
+        ],
+        [
+          "S006",
+          [
+            "S006-HYG-01",
+            "S006-MED-01",
+            "S006-WAT-01",
+            "S006-WAT-03"
+          ]
+        ]
+      ],
+      "solver_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 60,
+      "route_energy_kwh": 7.067326632463757,
+      "first_visits": [
+        [
+          "S006",
+          [
+            "S006-FOD-01",
+            "S006-WAT-03"
+          ]
+        ],
+        [
+          "S007",
+          [
+            "S007-MED-01"
+          ]
+        ]
+      ],
+      "second_visits": [
+        [
+          "S007",
+          [
+            "S007-FOD-01",
+            "S007-HYG-01",
+            "S007-WAT-01",
+            "S007-WAT-02"
+          ]
+        ],
+        [
+          "S006",
+          [
+            "S006-HYG-01",
+            "S006-MED-01",
+            "S006-WAT-01",
+            "S006-WAT-02"
+          ]
+        ]
+      ],
+      "solver_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 61,
+      "route_energy_kwh": 7.0966231096404995,
+      "first_visits": [
+        [
+          "S006",
+          [
+            "S006-WAT-01"
+          ]
+        ],
+        [
+          "S007",
+          [
+            "S007-WAT-01"
+          ]
+        ]
+      ],
+      "second_visits": [
+        [
+          "S007",
+          [
+            "S007-FOD-01",
+            "S007-HYG-01",
+            "S007-MED-01",
+            "S007-WAT-02"
+          ]
+        ],
+        [
+          "S006",
+          [
+            "S006-FOD-01",
+            "S006-HYG-01",
+            "S006-MED-01",
+            "S006-WAT-02",
+            "S006-WAT-03"
+          ]
+        ]
+      ],
+      "solver_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 62,
+      "route_energy_kwh": 7.0966231096404995,
+      "first_visits": [
+        [
+          "S006",
+          [
+            "S006-WAT-02"
+          ]
+        ],
+        [
+          "S007",
+          [
+            "S007-WAT-01"
+          ]
+        ]
+      ],
+      "second_visits": [
+        [
+          "S007",
+          [
+            "S007-FOD-01",
+            "S007-HYG-01",
+            "S007-MED-01",
+            "S007-WAT-02"
+          ]
+        ],
+        [
+          "S006",
+          [
+            "S006-FOD-01",
+            "S006-HYG-01",
+            "S006-MED-01",
+            "S006-WAT-01",
+            "S006-WAT-03"
+          ]
+        ]
+      ],
+      "solver_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 63,
+      "route_energy_kwh": 7.0966231096404995,
+      "first_visits": [
+        [
+          "S006",
+          [
+            "S006-WAT-03"
+          ]
+        ],
+        [
+          "S007",
+          [
+            "S007-WAT-01"
+          ]
+        ]
+      ],
+      "second_visits": [
+        [
+          "S007",
+          [
+            "S007-FOD-01",
+            "S007-HYG-01",
+            "S007-MED-01",
+            "S007-WAT-02"
+          ]
+        ],
+        [
+          "S006",
+          [
+            "S006-FOD-01",
+            "S006-HYG-01",
+            "S006-MED-01",
+            "S006-WAT-01",
+            "S006-WAT-02"
+          ]
+        ]
+      ],
+      "solver_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 64,
+      "route_energy_kwh": 7.0966231096404995,
+      "first_visits": [
+        [
+          "S006",
+          [
+            "S006-WAT-01"
+          ]
+        ],
+        [
+          "S007",
+          [
+            "S007-WAT-02"
+          ]
+        ]
+      ],
+      "second_visits": [
+        [
+          "S007",
+          [
+            "S007-FOD-01",
+            "S007-HYG-01",
+            "S007-MED-01",
+            "S007-WAT-01"
+          ]
+        ],
+        [
+          "S006",
+          [
+            "S006-FOD-01",
+            "S006-HYG-01",
+            "S006-MED-01",
+            "S006-WAT-02",
+            "S006-WAT-03"
+          ]
+        ]
+      ],
+      "solver_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 65,
+      "route_energy_kwh": 7.0966231096404995,
+      "first_visits": [
+        [
+          "S006",
+          [
+            "S006-WAT-02"
+          ]
+        ],
+        [
+          "S007",
+          [
+            "S007-WAT-02"
+          ]
+        ]
+      ],
+      "second_visits": [
+        [
+          "S007",
+          [
+            "S007-FOD-01",
+            "S007-HYG-01",
+            "S007-MED-01",
+            "S007-WAT-01"
+          ]
+        ],
+        [
+          "S006",
+          [
+            "S006-FOD-01",
+            "S006-HYG-01",
+            "S006-MED-01",
+            "S006-WAT-01",
+            "S006-WAT-03"
+          ]
+        ]
+      ],
+      "solver_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 66,
+      "route_energy_kwh": 7.0966231096404995,
+      "first_visits": [
+        [
+          "S006",
+          [
+            "S006-WAT-03"
+          ]
+        ],
+        [
+          "S007",
+          [
+            "S007-WAT-02"
+          ]
+        ]
+      ],
+      "second_visits": [
+        [
+          "S007",
+          [
+            "S007-FOD-01",
+            "S007-HYG-01",
+            "S007-MED-01",
+            "S007-WAT-01"
+          ]
+        ],
+        [
+          "S006",
+          [
+            "S006-FOD-01",
+            "S006-HYG-01",
+            "S006-MED-01",
+            "S006-WAT-01",
+            "S006-WAT-02"
+          ]
+        ]
+      ],
+      "solver_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 67,
+      "route_energy_kwh": 7.1362128301880485,
+      "first_visits": [
+        [
+          "S006",
+          [
+            "S006-MED-01",
+            "S006-WAT-01"
+          ]
+        ],
+        [
+          "S007",
+          [
+            "S007-FOD-01"
+          ]
+        ]
+      ],
+      "second_visits": [
+        [
+          "S007",
+          [
+            "S007-HYG-01",
+            "S007-MED-01",
+            "S007-WAT-01",
+            "S007-WAT-02"
+          ]
+        ],
+        [
+          "S006",
+          [
+            "S006-FOD-01",
+            "S006-HYG-01",
+            "S006-WAT-02",
+            "S006-WAT-03"
+          ]
+        ]
+      ],
+      "solver_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 68,
+      "route_energy_kwh": 7.1362128301880485,
+      "first_visits": [
+        [
+          "S006",
+          [
+            "S006-MED-01",
+            "S006-WAT-02"
+          ]
+        ],
+        [
+          "S007",
+          [
+            "S007-FOD-01"
+          ]
+        ]
+      ],
+      "second_visits": [
+        [
+          "S007",
+          [
+            "S007-HYG-01",
+            "S007-MED-01",
+            "S007-WAT-01",
+            "S007-WAT-02"
+          ]
+        ],
+        [
+          "S006",
+          [
+            "S006-FOD-01",
+            "S006-HYG-01",
+            "S006-WAT-01",
+            "S006-WAT-03"
+          ]
+        ]
+      ],
+      "solver_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 69,
+      "route_energy_kwh": 7.1362128301880485,
+      "first_visits": [
+        [
+          "S006",
+          [
+            "S006-MED-01",
+            "S006-WAT-03"
+          ]
+        ],
+        [
+          "S007",
+          [
+            "S007-FOD-01"
+          ]
+        ]
+      ],
+      "second_visits": [
+        [
+          "S007",
+          [
+            "S007-HYG-01",
+            "S007-MED-01",
+            "S007-WAT-01",
+            "S007-WAT-02"
+          ]
+        ],
+        [
+          "S006",
+          [
+            "S006-FOD-01",
+            "S006-HYG-01",
+            "S006-WAT-01",
+            "S006-WAT-02"
+          ]
+        ]
+      ],
+      "solver_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 70,
+      "route_energy_kwh": 7.146306735517374,
+      "first_visits": [
+        [
+          "S007",
+          [
+            "S007-WAT-01",
+            "S007-WAT-02"
+          ]
+        ]
+      ],
+      "second_visits": [
+        [
+          "S007",
+          [
+            "S007-FOD-01",
+            "S007-HYG-01",
+            "S007-MED-01"
+          ]
+        ],
+        [
+          "S006",
+          [
+            "S006-FOD-01",
+            "S006-HYG-01",
+            "S006-MED-01",
+            "S006-WAT-01",
+            "S006-WAT-02",
+            "S006-WAT-03"
+          ]
+        ]
+      ],
+      "solver_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 71,
+      "route_energy_kwh": 7.1854316866742245,
+      "first_visits": [
+        [
+          "S006",
+          [
+            "S006-WAT-01"
+          ]
+        ],
+        [
+          "S007",
+          [
+            "S007-FOD-01",
+            "S007-MED-01"
+          ]
+        ]
+      ],
+      "second_visits": [
+        [
+          "S007",
+          [
+            "S007-HYG-01",
+            "S007-WAT-01",
+            "S007-WAT-02"
+          ]
+        ],
+        [
+          "S006",
+          [
+            "S006-FOD-01",
+            "S006-HYG-01",
+            "S006-MED-01",
+            "S006-WAT-02",
+            "S006-WAT-03"
+          ]
+        ]
+      ],
+      "solver_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 72,
+      "route_energy_kwh": 7.1854316866742245,
+      "first_visits": [
+        [
+          "S006",
+          [
+            "S006-WAT-02"
+          ]
+        ],
+        [
+          "S007",
+          [
+            "S007-FOD-01",
+            "S007-MED-01"
+          ]
+        ]
+      ],
+      "second_visits": [
+        [
+          "S007",
+          [
+            "S007-HYG-01",
+            "S007-WAT-01",
+            "S007-WAT-02"
+          ]
+        ],
+        [
+          "S006",
+          [
+            "S006-FOD-01",
+            "S006-HYG-01",
+            "S006-MED-01",
+            "S006-WAT-01",
+            "S006-WAT-03"
+          ]
+        ]
+      ],
+      "solver_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 73,
+      "route_energy_kwh": 7.1854316866742245,
+      "first_visits": [
+        [
+          "S006",
+          [
+            "S006-WAT-03"
+          ]
+        ],
+        [
+          "S007",
+          [
+            "S007-FOD-01",
+            "S007-MED-01"
+          ]
+        ]
+      ],
+      "second_visits": [
+        [
+          "S007",
+          [
+            "S007-HYG-01",
+            "S007-WAT-01",
+            "S007-WAT-02"
+          ]
+        ],
+        [
+          "S006",
+          [
+            "S006-FOD-01",
+            "S006-HYG-01",
+            "S006-MED-01",
+            "S006-WAT-01",
+            "S006-WAT-02"
+          ]
+        ]
+      ],
+      "solver_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 74,
+      "route_energy_kwh": 7.227553897358888,
+      "first_visits": [
+        [
+          "S007",
+          [
+            "S007-FOD-01",
+            "S007-MED-01",
+            "S007-WAT-01"
+          ]
+        ]
+      ],
+      "second_visits": [
+        [
+          "S007",
+          [
+            "S007-HYG-01",
+            "S007-WAT-02"
+          ]
+        ],
+        [
+          "S006",
+          [
+            "S006-FOD-01",
+            "S006-HYG-01",
+            "S006-MED-01",
+            "S006-WAT-01",
+            "S006-WAT-02",
+            "S006-WAT-03"
+          ]
+        ]
+      ],
+      "solver_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 75,
+      "route_energy_kwh": 7.227553897358888,
+      "first_visits": [
+        [
+          "S007",
+          [
+            "S007-FOD-01",
+            "S007-MED-01",
+            "S007-WAT-02"
+          ]
+        ]
+      ],
+      "second_visits": [
+        [
+          "S007",
+          [
+            "S007-HYG-01",
+            "S007-WAT-01"
+          ]
+        ],
+        [
+          "S006",
+          [
+            "S006-FOD-01",
+            "S006-HYG-01",
+            "S006-MED-01",
+            "S006-WAT-01",
+            "S006-WAT-02",
+            "S006-WAT-03"
+          ]
+        ]
+      ],
+      "solver_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 76,
+      "route_energy_kwh": 7.230693037588912,
+      "first_visits": [
+        [
+          "S007",
+          [
+            "S007-WAT-01"
+          ]
+        ],
+        [
+          "S006",
+          [
+            "S006-WAT-01"
+          ]
+        ]
+      ],
+      "second_visits": [
+        [
+          "S007",
+          [
+            "S007-FOD-01",
+            "S007-HYG-01",
+            "S007-MED-01",
+            "S007-WAT-02"
+          ]
+        ],
+        [
+          "S006",
+          [
+            "S006-FOD-01",
+            "S006-HYG-01",
+            "S006-MED-01",
+            "S006-WAT-02",
+            "S006-WAT-03"
+          ]
+        ]
+      ],
+      "solver_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 77,
+      "route_energy_kwh": 7.230693037588912,
+      "first_visits": [
+        [
+          "S007",
+          [
+            "S007-WAT-01"
+          ]
+        ],
+        [
+          "S006",
+          [
+            "S006-WAT-02"
+          ]
+        ]
+      ],
+      "second_visits": [
+        [
+          "S007",
+          [
+            "S007-FOD-01",
+            "S007-HYG-01",
+            "S007-MED-01",
+            "S007-WAT-02"
+          ]
+        ],
+        [
+          "S006",
+          [
+            "S006-FOD-01",
+            "S006-HYG-01",
+            "S006-MED-01",
+            "S006-WAT-01",
+            "S006-WAT-03"
+          ]
+        ]
+      ],
+      "solver_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 78,
+      "route_energy_kwh": 7.230693037588912,
+      "first_visits": [
+        [
+          "S007",
+          [
+            "S007-WAT-01"
+          ]
+        ],
+        [
+          "S006",
+          [
+            "S006-WAT-03"
+          ]
+        ]
+      ],
+      "second_visits": [
+        [
+          "S007",
+          [
+            "S007-FOD-01",
+            "S007-HYG-01",
+            "S007-MED-01",
+            "S007-WAT-02"
+          ]
+        ],
+        [
+          "S006",
+          [
+            "S006-FOD-01",
+            "S006-HYG-01",
+            "S006-MED-01",
+            "S006-WAT-01",
+            "S006-WAT-02"
+          ]
+        ]
+      ],
+      "solver_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 79,
+      "route_energy_kwh": 7.230693037588912,
+      "first_visits": [
+        [
+          "S007",
+          [
+            "S007-WAT-02"
+          ]
+        ],
+        [
+          "S006",
+          [
+            "S006-WAT-01"
+          ]
+        ]
+      ],
+      "second_visits": [
+        [
+          "S007",
+          [
+            "S007-FOD-01",
+            "S007-HYG-01",
+            "S007-MED-01",
+            "S007-WAT-01"
+          ]
+        ],
+        [
+          "S006",
+          [
+            "S006-FOD-01",
+            "S006-HYG-01",
+            "S006-MED-01",
+            "S006-WAT-02",
+            "S006-WAT-03"
+          ]
+        ]
+      ],
+      "solver_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 80,
+      "route_energy_kwh": 7.230693037588912,
+      "first_visits": [
+        [
+          "S007",
+          [
+            "S007-WAT-02"
+          ]
+        ],
+        [
+          "S006",
+          [
+            "S006-WAT-02"
+          ]
+        ]
+      ],
+      "second_visits": [
+        [
+          "S007",
+          [
+            "S007-FOD-01",
+            "S007-HYG-01",
+            "S007-MED-01",
+            "S007-WAT-01"
+          ]
+        ],
+        [
+          "S006",
+          [
+            "S006-FOD-01",
+            "S006-HYG-01",
+            "S006-MED-01",
+            "S006-WAT-01",
+            "S006-WAT-03"
+          ]
+        ]
+      ],
+      "solver_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 81,
+      "route_energy_kwh": 7.230693037588912,
+      "first_visits": [
+        [
+          "S007",
+          [
+            "S007-WAT-02"
+          ]
+        ],
+        [
+          "S006",
+          [
+            "S006-WAT-03"
+          ]
+        ]
+      ],
+      "second_visits": [
+        [
+          "S007",
+          [
+            "S007-FOD-01",
+            "S007-HYG-01",
+            "S007-MED-01",
+            "S007-WAT-01"
+          ]
+        ],
+        [
+          "S006",
+          [
+            "S006-FOD-01",
+            "S006-HYG-01",
+            "S006-MED-01",
+            "S006-WAT-01",
+            "S006-WAT-02"
+          ]
+        ]
+      ],
+      "solver_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 82,
+      "route_energy_kwh": 7.24119347098955,
+      "first_visits": [
+        [
+          "S006",
+          [
+            "S006-FOD-01",
+            "S006-MED-01"
+          ]
+        ],
+        [
+          "S007",
+          [
+            "S007-WAT-01"
+          ]
+        ]
+      ],
+      "second_visits": [
+        [
+          "S007",
+          [
+            "S007-FOD-01",
+            "S007-HYG-01",
+            "S007-MED-01",
+            "S007-WAT-02"
+          ]
+        ],
+        [
+          "S006",
+          [
+            "S006-HYG-01",
+            "S006-WAT-01",
+            "S006-WAT-02",
+            "S006-WAT-03"
+          ]
+        ]
+      ],
+      "solver_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 83,
+      "route_energy_kwh": 7.24119347098955,
+      "first_visits": [
+        [
+          "S006",
+          [
+            "S006-FOD-01",
+            "S006-MED-01"
+          ]
+        ],
+        [
+          "S007",
+          [
+            "S007-WAT-02"
+          ]
+        ]
+      ],
+      "second_visits": [
+        [
+          "S007",
+          [
+            "S007-FOD-01",
+            "S007-HYG-01",
+            "S007-MED-01",
+            "S007-WAT-01"
+          ]
+        ],
+        [
+          "S006",
+          [
+            "S006-HYG-01",
+            "S006-WAT-01",
+            "S006-WAT-02",
+            "S006-WAT-03"
+          ]
+        ]
+      ],
+      "solver_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 84,
+      "route_energy_kwh": 7.304444472522265,
+      "first_visits": [
+        [
+          "S006",
+          [
+            "S006-FOD-01"
+          ]
+        ],
+        [
+          "S007",
+          [
+            "S007-MED-01",
+            "S007-WAT-01"
+          ]
+        ]
+      ],
+      "second_visits": [
+        [
+          "S007",
+          [
+            "S007-FOD-01",
+            "S007-HYG-01",
+            "S007-WAT-02"
+          ]
+        ],
+        [
+          "S006",
+          [
+            "S006-HYG-01",
+            "S006-MED-01",
+            "S006-WAT-01",
+            "S006-WAT-02",
+            "S006-WAT-03"
+          ]
+        ]
+      ],
+      "solver_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 85,
+      "route_energy_kwh": 7.304444472522265,
+      "first_visits": [
+        [
+          "S006",
+          [
+            "S006-FOD-01"
+          ]
+        ],
+        [
+          "S007",
+          [
+            "S007-MED-01",
+            "S007-WAT-02"
+          ]
+        ]
+      ],
+      "second_visits": [
+        [
+          "S007",
+          [
+            "S007-FOD-01",
+            "S007-HYG-01",
+            "S007-WAT-01"
+          ]
+        ],
+        [
+          "S006",
+          [
+            "S006-HYG-01",
+            "S006-MED-01",
+            "S006-WAT-01",
+            "S006-WAT-02",
+            "S006-WAT-03"
+          ]
+        ]
+      ],
+      "solver_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 86,
+      "route_energy_kwh": 7.307336260543554,
+      "first_visits": [
+        [
+          "S007",
+          [
+            "S007-FOD-01"
+          ]
+        ],
+        [
+          "S006",
+          [
+            "S006-MED-01",
+            "S006-WAT-01"
+          ]
+        ]
+      ],
+      "second_visits": [
+        [
+          "S007",
+          [
+            "S007-HYG-01",
+            "S007-MED-01",
+            "S007-WAT-01",
+            "S007-WAT-02"
+          ]
+        ],
+        [
+          "S006",
+          [
+            "S006-FOD-01",
+            "S006-HYG-01",
+            "S006-WAT-02",
+            "S006-WAT-03"
+          ]
+        ]
+      ],
+      "solver_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 87,
+      "route_energy_kwh": 7.307336260543554,
+      "first_visits": [
+        [
+          "S007",
+          [
+            "S007-FOD-01"
+          ]
+        ],
+        [
+          "S006",
+          [
+            "S006-MED-01",
+            "S006-WAT-02"
+          ]
+        ]
+      ],
+      "second_visits": [
+        [
+          "S007",
+          [
+            "S007-HYG-01",
+            "S007-MED-01",
+            "S007-WAT-01",
+            "S007-WAT-02"
+          ]
+        ],
+        [
+          "S006",
+          [
+            "S006-FOD-01",
+            "S006-HYG-01",
+            "S006-WAT-01",
+            "S006-WAT-03"
+          ]
+        ]
+      ],
+      "solver_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 88,
+      "route_energy_kwh": 7.307336260543554,
+      "first_visits": [
+        [
+          "S007",
+          [
+            "S007-FOD-01"
+          ]
+        ],
+        [
+          "S006",
+          [
+            "S006-MED-01",
+            "S006-WAT-03"
+          ]
+        ]
+      ],
+      "second_visits": [
+        [
+          "S007",
+          [
+            "S007-HYG-01",
+            "S007-MED-01",
+            "S007-WAT-01",
+            "S007-WAT-02"
+          ]
+        ],
+        [
+          "S006",
+          [
+            "S006-FOD-01",
+            "S006-HYG-01",
+            "S006-WAT-01",
+            "S006-WAT-02"
+          ]
+        ]
+      ],
+      "solver_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 89,
+      "route_energy_kwh": 7.311940199430425,
+      "first_visits": [
+        [
+          "S007",
+          [
+            "S007-FOD-01",
+            "S007-MED-01"
+          ]
+        ],
+        [
+          "S006",
+          [
+            "S006-WAT-01"
+          ]
+        ]
+      ],
+      "second_visits": [
+        [
+          "S007",
+          [
+            "S007-HYG-01",
+            "S007-WAT-01",
+            "S007-WAT-02"
+          ]
+        ],
+        [
+          "S006",
+          [
+            "S006-FOD-01",
+            "S006-HYG-01",
+            "S006-MED-01",
+            "S006-WAT-02",
+            "S006-WAT-03"
+          ]
+        ]
+      ],
+      "solver_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 90,
+      "route_energy_kwh": 7.311940199430425,
+      "first_visits": [
+        [
+          "S007",
+          [
+            "S007-FOD-01",
+            "S007-MED-01"
+          ]
+        ],
+        [
+          "S006",
+          [
+            "S006-WAT-02"
+          ]
+        ]
+      ],
+      "second_visits": [
+        [
+          "S007",
+          [
+            "S007-HYG-01",
+            "S007-WAT-01",
+            "S007-WAT-02"
+          ]
+        ],
+        [
+          "S006",
+          [
+            "S006-FOD-01",
+            "S006-HYG-01",
+            "S006-MED-01",
+            "S006-WAT-01",
+            "S006-WAT-03"
+          ]
+        ]
+      ],
+      "solver_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 91,
+      "route_energy_kwh": 7.311940199430425,
+      "first_visits": [
+        [
+          "S007",
+          [
+            "S007-FOD-01",
+            "S007-MED-01"
+          ]
+        ],
+        [
+          "S006",
+          [
+            "S006-WAT-03"
+          ]
+        ]
+      ],
+      "second_visits": [
+        [
+          "S007",
+          [
+            "S007-HYG-01",
+            "S007-WAT-01",
+            "S007-WAT-02"
+          ]
+        ],
+        [
+          "S006",
+          [
+            "S006-FOD-01",
+            "S006-HYG-01",
+            "S006-MED-01",
+            "S006-WAT-01",
+            "S006-WAT-02"
+          ]
+        ]
+      ],
+      "solver_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 92,
+      "route_energy_kwh": 7.31771905888424,
+      "first_visits": [
+        [
+          "S007",
+          [
+            "S007-MED-01"
+          ]
+        ],
+        [
+          "S006",
+          [
+            "S006-FOD-01",
+            "S006-WAT-01"
+          ]
+        ]
+      ],
+      "second_visits": [
+        [
+          "S007",
+          [
+            "S007-FOD-01",
+            "S007-HYG-01",
+            "S007-WAT-01",
+            "S007-WAT-02"
+          ]
+        ],
+        [
+          "S006",
+          [
+            "S006-HYG-01",
+            "S006-MED-01",
+            "S006-WAT-02",
+            "S006-WAT-03"
+          ]
+        ]
+      ],
+      "solver_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 93,
+      "route_energy_kwh": 7.31771905888424,
+      "first_visits": [
+        [
+          "S007",
+          [
+            "S007-MED-01"
+          ]
+        ],
+        [
+          "S006",
+          [
+            "S006-FOD-01",
+            "S006-WAT-02"
+          ]
+        ]
+      ],
+      "second_visits": [
+        [
+          "S007",
+          [
+            "S007-FOD-01",
+            "S007-HYG-01",
+            "S007-WAT-01",
+            "S007-WAT-02"
+          ]
+        ],
+        [
+          "S006",
+          [
+            "S006-HYG-01",
+            "S006-MED-01",
+            "S006-WAT-01",
+            "S006-WAT-03"
+          ]
+        ]
+      ],
+      "solver_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 94,
+      "route_energy_kwh": 7.31771905888424,
+      "first_visits": [
+        [
+          "S007",
+          [
+            "S007-MED-01"
+          ]
+        ],
+        [
+          "S006",
+          [
+            "S006-FOD-01",
+            "S006-WAT-03"
+          ]
+        ]
+      ],
+      "second_visits": [
+        [
+          "S007",
+          [
+            "S007-FOD-01",
+            "S007-HYG-01",
+            "S007-WAT-01",
+            "S007-WAT-02"
+          ]
+        ],
+        [
+          "S006",
+          [
+            "S006-HYG-01",
+            "S006-MED-01",
+            "S006-WAT-01",
+            "S006-WAT-02"
+          ]
+        ]
+      ],
+      "solver_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 95,
+      "route_energy_kwh": 7.323712855619592,
+      "first_visits": [
+        [
+          "S007",
+          [
+            "S007-WAT-01"
+          ]
+        ],
+        [
+          "S006",
+          [
+            "S006-FOD-01",
+            "S006-MED-01"
+          ]
+        ]
+      ],
+      "second_visits": [
+        [
+          "S007",
+          [
+            "S007-FOD-01",
+            "S007-HYG-01",
+            "S007-MED-01",
+            "S007-WAT-02"
+          ]
+        ],
+        [
+          "S006",
+          [
+            "S006-HYG-01",
+            "S006-WAT-01",
+            "S006-WAT-02",
+            "S006-WAT-03"
+          ]
+        ]
+      ],
+      "solver_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 96,
+      "route_energy_kwh": 7.323712855619592,
+      "first_visits": [
+        [
+          "S007",
+          [
+            "S007-WAT-02"
+          ]
+        ],
+        [
+          "S006",
+          [
+            "S006-FOD-01",
+            "S006-MED-01"
+          ]
+        ]
+      ],
+      "second_visits": [
+        [
+          "S007",
+          [
+            "S007-FOD-01",
+            "S007-HYG-01",
+            "S007-MED-01",
+            "S007-WAT-01"
+          ]
+        ],
+        [
+          "S006",
+          [
+            "S006-HYG-01",
+            "S006-WAT-01",
+            "S006-WAT-02",
+            "S006-WAT-03"
+          ]
+        ]
+      ],
+      "solver_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 97,
+      "route_energy_kwh": 7.342348939553002,
+      "first_visits": [
+        [
+          "S007",
+          [
+            "S007-MED-01",
+            "S007-WAT-01"
+          ]
+        ],
+        [
+          "S006",
+          [
+            "S006-FOD-01"
+          ]
+        ]
+      ],
+      "second_visits": [
+        [
+          "S007",
+          [
+            "S007-FOD-01",
+            "S007-HYG-01",
+            "S007-WAT-02"
+          ]
+        ],
+        [
+          "S006",
+          [
+            "S006-HYG-01",
+            "S006-MED-01",
+            "S006-WAT-01",
+            "S006-WAT-02",
+            "S006-WAT-03"
+          ]
+        ]
+      ],
+      "solver_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 98,
+      "route_energy_kwh": 7.342348939553002,
+      "first_visits": [
+        [
+          "S007",
+          [
+            "S007-MED-01",
+            "S007-WAT-02"
+          ]
+        ],
+        [
+          "S006",
+          [
+            "S006-FOD-01"
+          ]
+        ]
+      ],
+      "second_visits": [
+        [
+          "S007",
+          [
+            "S007-FOD-01",
+            "S007-HYG-01",
+            "S007-WAT-01"
+          ]
+        ],
+        [
+          "S006",
+          [
+            "S006-HYG-01",
+            "S006-MED-01",
+            "S006-WAT-01",
+            "S006-WAT-02",
+            "S006-WAT-03"
+          ]
+        ]
+      ],
+      "solver_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 99,
+      "route_energy_kwh": 7.389050502221968,
+      "first_visits": [
+        [
+          "S007",
+          [
+            "S007-FOD-01",
+            "S007-WAT-01"
+          ]
+        ],
+        [
+          "S006",
+          [
+            "S006-MED-01"
+          ]
+        ]
+      ],
+      "second_visits": [
+        [
+          "S007",
+          [
+            "S007-HYG-01",
+            "S007-MED-01",
+            "S007-WAT-02"
+          ]
+        ],
+        [
+          "S006",
+          [
+            "S006-FOD-01",
+            "S006-HYG-01",
+            "S006-WAT-01",
+            "S006-WAT-02",
+            "S006-WAT-03"
+          ]
+        ]
+      ],
+      "solver_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 100,
+      "route_energy_kwh": 7.389050502221968,
+      "first_visits": [
+        [
+          "S007",
+          [
+            "S007-FOD-01",
+            "S007-WAT-02"
+          ]
+        ],
+        [
+          "S006",
+          [
+            "S006-MED-01"
+          ]
+        ]
+      ],
+      "second_visits": [
+        [
+          "S007",
+          [
+            "S007-HYG-01",
+            "S007-MED-01",
+            "S007-WAT-01"
+          ]
+        ],
+        [
+          "S006",
+          [
+            "S006-FOD-01",
+            "S006-HYG-01",
+            "S006-WAT-01",
+            "S006-WAT-02",
+            "S006-WAT-03"
+          ]
+        ]
+      ],
+      "solver_status": "INFEASIBLE",
+      "objective": null
+    }
+  ],
+  "best_objective": {
+    "weighted_delivery_seconds": 3308696.303133387,
+    "weighted_soft_delay_seconds": 0,
+    "makespan": 8498.010595606876,
+    "energy_kwh": 65.21750366168206,
+    "sortie_count": 19
+  }
+}

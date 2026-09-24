@@ -1,0 +1,120 @@
+{
+  "pool_routes_total": 52,
+  "pool_routes_used": 52,
+  "model": "finite_existing_route_pool_set_partition_then_Q2_schedule",
+  "zero_soft_route_filter": true,
+  "set_partition_lower_bound": 21.0,
+  "candidates": [
+    {
+      "rank": 1,
+      "route_count": 21,
+      "set_partition_status": "OPTIMAL",
+      "scheduled": true,
+      "exact_zero_delay_status": "INFEASIBLE",
+      "objective": {
+        "weighted_delivery_seconds": 3503051.6453876644,
+        "weighted_soft_delay_seconds": 128796.59284566641,
+        "makespan": 10698.066456725546,
+        "energy_kwh": 68.13067904367858,
+        "sortie_count": 21
+      }
+    },
+    {
+      "rank": 2,
+      "route_count": 21,
+      "set_partition_status": "OPTIMAL",
+      "scheduled": true,
+      "exact_zero_delay_status": "INFEASIBLE",
+      "objective": {
+        "weighted_delivery_seconds": 3337610.3566336827,
+        "weighted_soft_delay_seconds": 95197.32308842204,
+        "makespan": 9917.689408421664,
+        "energy_kwh": 68.35242130507689,
+        "sortie_count": 21
+      }
+    },
+    {
+      "rank": 3,
+      "route_count": 21,
+      "set_partition_status": "OPTIMAL",
+      "scheduled": false,
+      "exact_zero_delay_status": null,
+      "objective": null
+    },
+    {
+      "rank": 4,
+      "route_count": 21,
+      "set_partition_status": "OPTIMAL",
+      "scheduled": false,
+      "exact_zero_delay_status": null,
+      "objective": null
+    },
+    {
+      "rank": 5,
+      "route_count": 21,
+      "set_partition_status": "OPTIMAL",
+      "scheduled": false,
+      "exact_zero_delay_status": null,
+      "objective": null
+    },
+    {
+      "rank": 6,
+      "route_count": 21,
+      "set_partition_status": "OPTIMAL",
+      "scheduled": false,
+      "exact_zero_delay_status": null,
+      "objective": null
+    },
+    {
+      "rank": 7,
+      "route_count": 22,
+      "set_partition_status": "OPTIMAL",
+      "scheduled": false,
+      "exact_zero_delay_status": null,
+      "objective": null
+    },
+    {
+      "rank": 8,
+      "route_count": 22,
+      "set_partition_status": "OPTIMAL",
+      "scheduled": false,
+      "exact_zero_delay_status": null,
+      "objective": null
+    },
+    {
+      "rank": 9,
+      "route_count": 22,
+      "set_partition_status": "OPTIMAL",
+      "scheduled": true,
+      "exact_zero_delay_status": "INFEASIBLE",
+      "objective": {
+        "weighted_delivery_seconds": 2898270.0260863835,
+        "weighted_soft_delay_seconds": 4428.327853361765,
+        "makespan": 8791.601520223583,
+        "energy_kwh": 69.57091787558919,
+        "sortie_count": 22
+      }
+    },
+    {
+      "rank": 10,
+      "route_count": 22,
+      "set_partition_status": "OPTIMAL",
+      "scheduled": true,
+      "exact_zero_delay_status": "INFEASIBLE",
+      "objective": {
+        "weighted_delivery_seconds": 2845843.5952469,
+        "weighted_soft_delay_seconds": 14205.491454389003,
+        "makespan": 8463.961142241791,
+        "energy_kwh": 69.51430323691223,
+        "sortie_count": 22
+      }
+    }
+  ],
+  "best_verified": {
+    "weighted_delivery_seconds": 2898270.0260863835,
+    "weighted_soft_delay_seconds": 4428.327853361765,
+    "makespan": 8791.601520223583,
+    "energy_kwh": 69.57091787558919,
+    "sortie_count": 22
+  }
+}

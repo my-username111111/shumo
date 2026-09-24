@@ -257,7 +257,14 @@ def solve_case(s: Scenario, baseline: dict, case: str, scale: int,
            if weighted_cap_seconds is not None else None)
     model, variables = build_model(s, baseline, jobs, options, scale, cap,
                                    makespan_cap, energy_cap)
-    target = variables["weighted"] if case == "main" else variables["energy"]
+    if case == "main":
+        target = variables["weighted"]
+    elif case == "makespan":
+        target = variables["makespan"]
+    elif case == "alns":
+        target = variables["energy"]
+    else:
+        raise ValueError(f"Unknown Q2 scheduling objective: {case}")
     model.Minimize(target)
     solver = cp_model.CpSolver()
     solver.parameters.max_time_in_seconds = time_limit

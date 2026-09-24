@@ -1,0 +1,37 @@
+{
+  "case": "main",
+  "status": "OPTIMAL",
+  "time_limit_seconds": 60.0,
+  "elapsed_seconds": 13.203581999987364,
+  "workers": 8,
+  "seed": 2026,
+  "scale": 1,
+  "model_options": 36,
+  "fixed_sorties": 19,
+  "weighted_cap_seconds": null,
+  "makespan_cap_seconds": 8500.0,
+  "energy_cap_kwh": 65.7,
+  "objective_bound": 2959398.0,
+  "objective_value": 2959398.0,
+  "verification": {
+    "boxes": 80,
+    "sorties": 19,
+    "hard_boxes": 31,
+    "alternatives_checked": 0
+  },
+  "source": "results_q2_three_to_two_weighted\\best_plan.json",
+  "source_objective": {
+    "weighted_delivery_seconds": 2958556.1787138567,
+    "weighted_soft_delay_seconds": 0,
+    "makespan": 8466.169525432402,
+    "energy_kwh": 65.60659919024813,
+    "sortie_count": 19
+  },
+  "candidate_objective": {
+    "weighted_delivery_seconds": 2958556.1787138567,
+    "weighted_soft_delay_seconds": 0,
+    "makespan": 8466.169525432402,
+    "energy_kwh": 65.60659919024813,
+    "sortie_count": 19
+  }
+}

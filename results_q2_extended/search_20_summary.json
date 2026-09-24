@@ -1,0 +1,155 @@
+{
+  "scope": "one pairwise merge per distinct saved 21-sortie partition",
+  "route_partitions_tested": 18,
+  "candidate_schedules_tested": 857,
+  "feasible_20_sortie_schedules": 0,
+  "solver_status_counts": {
+    "INFEASIBLE": 857
+  },
+  "branches": [
+    {
+      "branch": 1,
+      "source": "results_q2_extended\\search_20_inputs\\branch_01.json",
+      "candidates": 54,
+      "tested": 54,
+      "feasible": 0,
+      "best_objective": null
+    },
+    {
+      "branch": 2,
+      "source": "results_q2_extended\\search_20_inputs\\branch_02.json",
+      "candidates": 54,
+      "tested": 54,
+      "feasible": 0,
+      "best_objective": null
+    },
+    {
+      "branch": 3,
+      "source": "results_q2_extended\\search_20_inputs\\branch_03.json",
+      "candidates": 48,
+      "tested": 48,
+      "feasible": 0,
+      "best_objective": null
+    },
+    {
+      "branch": 4,
+      "source": "results_q2_extended\\search_20_inputs\\branch_04.json",
+      "candidates": 45,
+      "tested": 45,
+      "feasible": 0,
+      "best_objective": null
+    },
+    {
+      "branch": 5,
+      "source": "results_q2_extended\\search_20_inputs\\branch_05.json",
+      "candidates": 47,
+      "tested": 47,
+      "feasible": 0,
+      "best_objective": null
+    },
+    {
+      "branch": 6,
+      "source": "results_q2_extended\\search_20_inputs\\branch_06.json",
+      "candidates": 47,
+      "tested": 47,
+      "feasible": 0,
+      "best_objective": null
+    },
+    {
+      "branch": 7,
+      "source": "results_q2_extended\\search_20_inputs\\branch_07.json",
+      "candidates": 44,
+      "tested": 44,
+      "feasible": 0,
+      "best_objective": null
+    },
+    {
+      "branch": 8,
+      "source": "results_q2_extended\\search_20_inputs\\branch_08.json",
+      "candidates": 44,
+      "tested": 44,
+      "feasible": 0,
+      "best_objective": null
+    },
+    {
+      "branch": 9,
+      "source": "results_q2_extended\\search_20_inputs\\branch_09.json",
+      "candidates": 50,
+      "tested": 50,
+      "feasible": 0,
+      "best_objective": null
+    },
+    {
+      "branch": 10,
+      "source": "results_q2_extended\\search_20_inputs\\branch_10.json",
+      "candidates": 47,
+      "tested": 47,
+      "feasible": 0,
+      "best_objective": null
+    },
+    {
+      "branch": 11,
+      "source": "results_q2_extended\\search_20_inputs\\branch_11.json",
+      "candidates": 50,
+      "tested": 50,
+      "feasible": 0,
+      "best_objective": null
+    },
+    {
+      "branch": 12,
+      "source": "results_q2_extended\\search_20_inputs\\branch_12.json",
+      "candidates": 47,
+      "tested": 47,
+      "feasible": 0,
+      "best_objective": null
+    },
+    {
+      "branch": 13,
+      "source": "results_q2_extended\\search_20_inputs\\branch_13.json",
+      "candidates": 49,
+      "tested": 49,
+      "feasible": 0,
+      "best_objective": null
+    },
+    {
+      "branch": 14,
+      "source": "results_q2_extended\\search_20_inputs\\branch_14.json",
+      "candidates": 49,
+      "tested": 49,
+      "feasible": 0,
+      "best_objective": null
+    },
+    {
+      "branch": 15,
+      "source": "results_q2_extended\\search_20_inputs\\branch_15.json",
+      "candidates": 48,
+      "tested": 48,
+      "feasible": 0,
+      "best_objective": null
+    },
+    {
+      "branch": 16,
+      "source": "results_q2_extended\\search_20_inputs\\branch_16.json",
+      "candidates": 48,
+      "tested": 48,
+      "feasible": 0,
+      "best_objective": null
+    },
+    {
+      "branch": 17,
+      "source": "results_q2_extended\\search_20_inputs\\branch_17.json",
+      "candidates": 43,
+      "tested": 43,
+      "feasible": 0,
+      "best_objective": null
+    },
+    {
+      "branch": 18,
+      "source": "results_q2_extended\\search_20_inputs\\branch_18.json",
+      "candidates": 43,
+      "tested": 43,
+      "feasible": 0,
+      "best_objective": null
+    }
+  ]
+}

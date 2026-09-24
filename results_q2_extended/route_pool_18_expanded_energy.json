@@ -1,0 +1,823 @@
+{
+  "pool_routes_total": 168,
+  "pool_routes_used": 168,
+  "model": "finite_existing_route_pool_set_partition_then_Q2_schedule",
+  "zero_soft_route_filter": true,
+  "extra_plan_paths": [
+    "results_q2_extended\\plans\\21_low_sorties.json",
+    "results_q2_ejection\\weighted_refined\\plan.json",
+    "results_q2_three_to_two_weighted\\best_plan.json"
+  ],
+  "extra_route_search_paths": [
+    "results_q2_three_to_two\\search.json"
+  ],
+  "min_count": 18,
+  "max_count": 18,
+  "direct_exact": true,
+  "rank_objective": "energy",
+  "set_partition_lower_bound": null,
+  "set_partition_objective_bound": 60640824.0,
+  "candidates": [
+    {
+      "rank": 1,
+      "route_count": 18,
+      "set_partition_status": "OPTIMAL",
+      "scheduled": false,
+      "exact_zero_delay_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 2,
+      "route_count": 18,
+      "set_partition_status": "OPTIMAL",
+      "scheduled": false,
+      "exact_zero_delay_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 3,
+      "route_count": 18,
+      "set_partition_status": "OPTIMAL",
+      "scheduled": false,
+      "exact_zero_delay_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 4,
+      "route_count": 18,
+      "set_partition_status": "OPTIMAL",
+      "scheduled": false,
+      "exact_zero_delay_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 5,
+      "route_count": 18,
+      "set_partition_status": "OPTIMAL",
+      "scheduled": false,
+      "exact_zero_delay_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 6,
+      "route_count": 18,
+      "set_partition_status": "OPTIMAL",
+      "scheduled": false,
+      "exact_zero_delay_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 7,
+      "route_count": 18,
+      "set_partition_status": "OPTIMAL",
+      "scheduled": false,
+      "exact_zero_delay_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 8,
+      "route_count": 18,
+      "set_partition_status": "OPTIMAL",
+      "scheduled": false,
+      "exact_zero_delay_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 9,
+      "route_count": 18,
+      "set_partition_status": "OPTIMAL",
+      "scheduled": false,
+      "exact_zero_delay_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 10,
+      "route_count": 18,
+      "set_partition_status": "OPTIMAL",
+      "scheduled": false,
+      "exact_zero_delay_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 11,
+      "route_count": 18,
+      "set_partition_status": "OPTIMAL",
+      "scheduled": false,
+      "exact_zero_delay_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 12,
+      "route_count": 18,
+      "set_partition_status": "OPTIMAL",
+      "scheduled": false,
+      "exact_zero_delay_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 13,
+      "route_count": 18,
+      "set_partition_status": "OPTIMAL",
+      "scheduled": false,
+      "exact_zero_delay_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 14,
+      "route_count": 18,
+      "set_partition_status": "OPTIMAL",
+      "scheduled": false,
+      "exact_zero_delay_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 15,
+      "route_count": 18,
+      "set_partition_status": "OPTIMAL",
+      "scheduled": false,
+      "exact_zero_delay_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 16,
+      "route_count": 18,
+      "set_partition_status": "OPTIMAL",
+      "scheduled": false,
+      "exact_zero_delay_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 17,
+      "route_count": 18,
+      "set_partition_status": "OPTIMAL",
+      "scheduled": false,
+      "exact_zero_delay_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 18,
+      "route_count": 18,
+      "set_partition_status": "OPTIMAL",
+      "scheduled": false,
+      "exact_zero_delay_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 19,
+      "route_count": 18,
+      "set_partition_status": "OPTIMAL",
+      "scheduled": false,
+      "exact_zero_delay_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 20,
+      "route_count": 18,
+      "set_partition_status": "OPTIMAL",
+      "scheduled": false,
+      "exact_zero_delay_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 21,
+      "route_count": 18,
+      "set_partition_status": "OPTIMAL",
+      "scheduled": false,
+      "exact_zero_delay_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 22,
+      "route_count": 18,
+      "set_partition_status": "OPTIMAL",
+      "scheduled": false,
+      "exact_zero_delay_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 23,
+      "route_count": 18,
+      "set_partition_status": "OPTIMAL",
+      "scheduled": false,
+      "exact_zero_delay_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 24,
+      "route_count": 18,
+      "set_partition_status": "OPTIMAL",
+      "scheduled": false,
+      "exact_zero_delay_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 25,
+      "route_count": 18,
+      "set_partition_status": "OPTIMAL",
+      "scheduled": false,
+      "exact_zero_delay_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 26,
+      "route_count": 18,
+      "set_partition_status": "OPTIMAL",
+      "scheduled": false,
+      "exact_zero_delay_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 27,
+      "route_count": 18,
+      "set_partition_status": "OPTIMAL",
+      "scheduled": false,
+      "exact_zero_delay_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 28,
+      "route_count": 18,
+      "set_partition_status": "OPTIMAL",
+      "scheduled": false,
+      "exact_zero_delay_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 29,
+      "route_count": 18,
+      "set_partition_status": "OPTIMAL",
+      "scheduled": false,
+      "exact_zero_delay_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 30,
+      "route_count": 18,
+      "set_partition_status": "OPTIMAL",
+      "scheduled": false,
+      "exact_zero_delay_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 31,
+      "route_count": 18,
+      "set_partition_status": "OPTIMAL",
+      "scheduled": false,
+      "exact_zero_delay_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 32,
+      "route_count": 18,
+      "set_partition_status": "OPTIMAL",
+      "scheduled": false,
+      "exact_zero_delay_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 33,
+      "route_count": 18,
+      "set_partition_status": "OPTIMAL",
+      "scheduled": false,
+      "exact_zero_delay_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 34,
+      "route_count": 18,
+      "set_partition_status": "OPTIMAL",
+      "scheduled": false,
+      "exact_zero_delay_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 35,
+      "route_count": 18,
+      "set_partition_status": "OPTIMAL",
+      "scheduled": false,
+      "exact_zero_delay_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 36,
+      "route_count": 18,
+      "set_partition_status": "OPTIMAL",
+      "scheduled": false,
+      "exact_zero_delay_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 37,
+      "route_count": 18,
+      "set_partition_status": "OPTIMAL",
+      "scheduled": false,
+      "exact_zero_delay_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 38,
+      "route_count": 18,
+      "set_partition_status": "OPTIMAL",
+      "scheduled": false,
+      "exact_zero_delay_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 39,
+      "route_count": 18,
+      "set_partition_status": "OPTIMAL",
+      "scheduled": false,
+      "exact_zero_delay_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 40,
+      "route_count": 18,
+      "set_partition_status": "OPTIMAL",
+      "scheduled": false,
+      "exact_zero_delay_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 41,
+      "route_count": 18,
+      "set_partition_status": "OPTIMAL",
+      "scheduled": false,
+      "exact_zero_delay_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 42,
+      "route_count": 18,
+      "set_partition_status": "OPTIMAL",
+      "scheduled": false,
+      "exact_zero_delay_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 43,
+      "route_count": 18,
+      "set_partition_status": "OPTIMAL",
+      "scheduled": false,
+      "exact_zero_delay_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 44,
+      "route_count": 18,
+      "set_partition_status": "OPTIMAL",
+      "scheduled": false,
+      "exact_zero_delay_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 45,
+      "route_count": 18,
+      "set_partition_status": "OPTIMAL",
+      "scheduled": false,
+      "exact_zero_delay_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 46,
+      "route_count": 18,
+      "set_partition_status": "OPTIMAL",
+      "scheduled": false,
+      "exact_zero_delay_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 47,
+      "route_count": 18,
+      "set_partition_status": "OPTIMAL",
+      "scheduled": false,
+      "exact_zero_delay_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 48,
+      "route_count": 18,
+      "set_partition_status": "OPTIMAL",
+      "scheduled": false,
+      "exact_zero_delay_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 49,
+      "route_count": 18,
+      "set_partition_status": "OPTIMAL",
+      "scheduled": false,
+      "exact_zero_delay_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 50,
+      "route_count": 18,
+      "set_partition_status": "OPTIMAL",
+      "scheduled": false,
+      "exact_zero_delay_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 51,
+      "route_count": 18,
+      "set_partition_status": "OPTIMAL",
+      "scheduled": false,
+      "exact_zero_delay_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 52,
+      "route_count": 18,
+      "set_partition_status": "OPTIMAL",
+      "scheduled": false,
+      "exact_zero_delay_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 53,
+      "route_count": 18,
+      "set_partition_status": "OPTIMAL",
+      "scheduled": false,
+      "exact_zero_delay_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 54,
+      "route_count": 18,
+      "set_partition_status": "OPTIMAL",
+      "scheduled": false,
+      "exact_zero_delay_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 55,
+      "route_count": 18,
+      "set_partition_status": "OPTIMAL",
+      "scheduled": false,
+      "exact_zero_delay_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 56,
+      "route_count": 18,
+      "set_partition_status": "OPTIMAL",
+      "scheduled": false,
+      "exact_zero_delay_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 57,
+      "route_count": 18,
+      "set_partition_status": "OPTIMAL",
+      "scheduled": false,
+      "exact_zero_delay_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 58,
+      "route_count": 18,
+      "set_partition_status": "OPTIMAL",
+      "scheduled": false,
+      "exact_zero_delay_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 59,
+      "route_count": 18,
+      "set_partition_status": "OPTIMAL",
+      "scheduled": false,
+      "exact_zero_delay_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 60,
+      "route_count": 18,
+      "set_partition_status": "OPTIMAL",
+      "scheduled": false,
+      "exact_zero_delay_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 61,
+      "route_count": 18,
+      "set_partition_status": "OPTIMAL",
+      "scheduled": false,
+      "exact_zero_delay_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 62,
+      "route_count": 18,
+      "set_partition_status": "OPTIMAL",
+      "scheduled": false,
+      "exact_zero_delay_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 63,
+      "route_count": 18,
+      "set_partition_status": "OPTIMAL",
+      "scheduled": false,
+      "exact_zero_delay_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 64,
+      "route_count": 18,
+      "set_partition_status": "OPTIMAL",
+      "scheduled": false,
+      "exact_zero_delay_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 65,
+      "route_count": 18,
+      "set_partition_status": "OPTIMAL",
+      "scheduled": false,
+      "exact_zero_delay_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 66,
+      "route_count": 18,
+      "set_partition_status": "OPTIMAL",
+      "scheduled": false,
+      "exact_zero_delay_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 67,
+      "route_count": 18,
+      "set_partition_status": "OPTIMAL",
+      "scheduled": false,
+      "exact_zero_delay_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 68,
+      "route_count": 18,
+      "set_partition_status": "OPTIMAL",
+      "scheduled": false,
+      "exact_zero_delay_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 69,
+      "route_count": 18,
+      "set_partition_status": "OPTIMAL",
+      "scheduled": false,
+      "exact_zero_delay_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 70,
+      "route_count": 18,
+      "set_partition_status": "OPTIMAL",
+      "scheduled": false,
+      "exact_zero_delay_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 71,
+      "route_count": 18,
+      "set_partition_status": "OPTIMAL",
+      "scheduled": false,
+      "exact_zero_delay_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 72,
+      "route_count": 18,
+      "set_partition_status": "OPTIMAL",
+      "scheduled": false,
+      "exact_zero_delay_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 73,
+      "route_count": 18,
+      "set_partition_status": "OPTIMAL",
+      "scheduled": false,
+      "exact_zero_delay_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 74,
+      "route_count": 18,
+      "set_partition_status": "OPTIMAL",
+      "scheduled": false,
+      "exact_zero_delay_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 75,
+      "route_count": 18,
+      "set_partition_status": "OPTIMAL",
+      "scheduled": false,
+      "exact_zero_delay_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 76,
+      "route_count": 18,
+      "set_partition_status": "OPTIMAL",
+      "scheduled": false,
+      "exact_zero_delay_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 77,
+      "route_count": 18,
+      "set_partition_status": "OPTIMAL",
+      "scheduled": false,
+      "exact_zero_delay_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 78,
+      "route_count": 18,
+      "set_partition_status": "OPTIMAL",
+      "scheduled": false,
+      "exact_zero_delay_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 79,
+      "route_count": 18,
+      "set_partition_status": "OPTIMAL",
+      "scheduled": false,
+      "exact_zero_delay_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 80,
+      "route_count": 18,
+      "set_partition_status": "OPTIMAL",
+      "scheduled": false,
+      "exact_zero_delay_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 81,
+      "route_count": 18,
+      "set_partition_status": "OPTIMAL",
+      "scheduled": false,
+      "exact_zero_delay_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 82,
+      "route_count": 18,
+      "set_partition_status": "OPTIMAL",
+      "scheduled": false,
+      "exact_zero_delay_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 83,
+      "route_count": 18,
+      "set_partition_status": "OPTIMAL",
+      "scheduled": false,
+      "exact_zero_delay_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 84,
+      "route_count": 18,
+      "set_partition_status": "OPTIMAL",
+      "scheduled": false,
+      "exact_zero_delay_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 85,
+      "route_count": 18,
+      "set_partition_status": "OPTIMAL",
+      "scheduled": false,
+      "exact_zero_delay_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 86,
+      "route_count": 18,
+      "set_partition_status": "OPTIMAL",
+      "scheduled": false,
+      "exact_zero_delay_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 87,
+      "route_count": 18,
+      "set_partition_status": "OPTIMAL",
+      "scheduled": false,
+      "exact_zero_delay_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 88,
+      "route_count": 18,
+      "set_partition_status": "OPTIMAL",
+      "scheduled": false,
+      "exact_zero_delay_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 89,
+      "route_count": 18,
+      "set_partition_status": "OPTIMAL",
+      "scheduled": false,
+      "exact_zero_delay_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 90,
+      "route_count": 18,
+      "set_partition_status": "OPTIMAL",
+      "scheduled": false,
+      "exact_zero_delay_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 91,
+      "route_count": 18,
+      "set_partition_status": "OPTIMAL",
+      "scheduled": false,
+      "exact_zero_delay_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 92,
+      "route_count": 18,
+      "set_partition_status": "OPTIMAL",
+      "scheduled": false,
+      "exact_zero_delay_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 93,
+      "route_count": 18,
+      "set_partition_status": "OPTIMAL",
+      "scheduled": false,
+      "exact_zero_delay_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 94,
+      "route_count": 18,
+      "set_partition_status": "OPTIMAL",
+      "scheduled": false,
+      "exact_zero_delay_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 95,
+      "route_count": 18,
+      "set_partition_status": "OPTIMAL",
+      "scheduled": false,
+      "exact_zero_delay_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 96,
+      "route_count": 18,
+      "set_partition_status": "OPTIMAL",
+      "scheduled": false,
+      "exact_zero_delay_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 97,
+      "route_count": 18,
+      "set_partition_status": "OPTIMAL",
+      "scheduled": false,
+      "exact_zero_delay_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 98,
+      "route_count": 18,
+      "set_partition_status": "OPTIMAL",
+      "scheduled": false,
+      "exact_zero_delay_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 99,
+      "route_count": 18,
+      "set_partition_status": "OPTIMAL",
+      "scheduled": false,
+      "exact_zero_delay_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 100,
+      "route_count": 18,
+      "set_partition_status": "OPTIMAL",
+      "scheduled": false,
+      "exact_zero_delay_status": "INFEASIBLE",
+      "objective": null
+    }
+  ],
+  "best_verified": null
+}

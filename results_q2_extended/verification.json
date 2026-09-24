@@ -1,0 +1,86 @@
+{
+  "28_earliest": {
+    "source": "results_q2_refined\\q2_main_plan.json",
+    "boxes": 80,
+    "sorties": 28,
+    "hard_boxes": 31,
+    "alternatives_checked": 0
+  },
+  "25_previous_efficient": {
+    "source": "results_q2_refined\\q2_energy_plan.json",
+    "boxes": 80,
+    "sorties": 25,
+    "hard_boxes": 31,
+    "alternatives_checked": 0
+  },
+  "24_fast_efficient": {
+    "source": "results_q2_frontier\\24_weighted_60s\\plan.json",
+    "boxes": 80,
+    "sorties": 24,
+    "hard_boxes": 31,
+    "alternatives_checked": 0
+  },
+  "24_min_energy_same_finish": {
+    "source": "results_q2_merge_search_cap7540\\best_plan.json",
+    "boxes": 80,
+    "sorties": 24,
+    "hard_boxes": 31,
+    "alternatives_checked": 0
+  },
+  "23_balanced": {
+    "source": "results_q2_frontier\\23_weighted_60s\\plan.json",
+    "boxes": 80,
+    "sorties": 23,
+    "hard_boxes": 31,
+    "alternatives_checked": 0
+  },
+  "23_min_energy": {
+    "source": "results_q2_merge_search_23\\best_plan.json",
+    "boxes": 80,
+    "sorties": 23,
+    "hard_boxes": 31,
+    "alternatives_checked": 0
+  },
+  "22_low_sorties": {
+    "source": "results_q2_merge_search_22\\best_plan.json",
+    "boxes": 80,
+    "sorties": 22,
+    "hard_boxes": 31,
+    "alternatives_checked": 0
+  },
+  "21_low_sorties": {
+    "source": "results_q2_frontier\\21_weighted\\plan.json",
+    "boxes": 80,
+    "sorties": 21,
+    "hard_boxes": 31,
+    "alternatives_checked": 0
+  },
+  "20_repacked": {
+    "source": "results_q2_ejection\\weighted_refined\\plan.json",
+    "boxes": 80,
+    "sorties": 20,
+    "hard_boxes": 31,
+    "alternatives_checked": 0
+  },
+  "19_best_delivery": {
+    "source": "results_q2_three_to_two_weighted\\best_plan.json",
+    "boxes": 80,
+    "sorties": 19,
+    "hard_boxes": 31,
+    "alternatives_checked": 0
+  },
+  "19_fast": {
+    "source": "results_q2_three_to_two_fast\\weighted_refined\\plan.json",
+    "boxes": 80,
+    "sorties": 19,
+    "hard_boxes": 31,
+    "alternatives_checked": 0
+  },
+  "19_min_energy": {
+    "source": "results_q2_three_to_two\\energy_best_weighted\\plan.json",
+    "boxes": 80,
+    "sorties": 19,
+    "hard_boxes": 31,
+    "alternatives_checked": 0
+  }
+}

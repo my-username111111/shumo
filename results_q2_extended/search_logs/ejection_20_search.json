@@ -1,0 +1,60 @@
+{
+  "source": "F:\\数学建模2026\\shumo_sync\\results_q2_extended\\plans\\21_low_sorties.json",
+  "source_objective": {
+    "weighted_delivery_seconds": 2948652.2972183637,
+    "weighted_soft_delay_seconds": 0,
+    "makespan": 8225.342267305714,
+    "energy_kwh": 66.89089297969177,
+    "sortie_count": 21
+  },
+  "candidates": 3,
+  "tested": 3,
+  "cases": [
+    {
+      "rank": 1,
+      "source_sortie": 16,
+      "recipient_sorties": [
+        4,
+        10
+      ],
+      "estimated_energy_delta_kwh": -0.713277048549525,
+      "solver_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 2,
+      "source_sortie": 5,
+      "recipient_sorties": [
+        2,
+        6
+      ],
+      "estimated_energy_delta_kwh": -0.6163085482923876,
+      "solver_status": "OPTIMAL",
+      "objective": {
+        "weighted_delivery_seconds": 3140932.0868361597,
+        "weighted_soft_delay_seconds": 0,
+        "makespan": 8335.748750508239,
+        "energy_kwh": 66.27458443139938,
+        "sortie_count": 20
+      }
+    },
+    {
+      "rank": 3,
+      "source_sortie": 8,
+      "recipient_sorties": [
+        17,
+        18
+      ],
+      "estimated_energy_delta_kwh": -0.5474246841741532,
+      "solver_status": "INFEASIBLE",
+      "objective": null
+    }
+  ],
+  "best_objective": {
+    "weighted_delivery_seconds": 3140932.0868361597,
+    "weighted_soft_delay_seconds": 0,
+    "makespan": 8335.748750508239,
+    "energy_kwh": 66.27458443139938,
+    "sortie_count": 20
+  }
+}

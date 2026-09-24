@@ -1,0 +1,238 @@
+{
+  "source": "results_q2_three_to_two_weighted\\best_plan.json",
+  "source_objective": {
+    "weighted_delivery_seconds": 2958556.1787138567,
+    "weighted_soft_delay_seconds": 0,
+    "makespan": 8466.169525432402,
+    "energy_kwh": 65.60659919024813,
+    "sortie_count": 19
+  },
+  "objective": "energy",
+  "rank_by": "energy",
+  "makespan_cap_seconds": 10000.0,
+  "physical_timing_candidates": 20,
+  "tested": 20,
+  "cases": [
+    {
+      "rank": 1,
+      "merge_source_jobs": [
+        "J007",
+        "J012"
+      ],
+      "relative_energy_kwh": -0.7978523152407888,
+      "minimum_merged_duration_seconds": 2378.8571421507622,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 2,
+      "merge_source_jobs": [
+        "J001",
+        "J017"
+      ],
+      "relative_energy_kwh": -0.15156983903651566,
+      "minimum_merged_duration_seconds": 2302.5685084102593,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 3,
+      "merge_source_jobs": [
+        "J006",
+        "J014"
+      ],
+      "relative_energy_kwh": -0.11874879940662719,
+      "minimum_merged_duration_seconds": 3169.683929368514,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 4,
+      "merge_source_jobs": [
+        "J001",
+        "J017"
+      ],
+      "relative_energy_kwh": 0.02723985841810217,
+      "minimum_merged_duration_seconds": 2556.055375542066,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 5,
+      "merge_source_jobs": [
+        "J009",
+        "J015"
+      ],
+      "relative_energy_kwh": 0.10045212250237823,
+      "minimum_merged_duration_seconds": 2194.1275609563954,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 6,
+      "merge_source_jobs": [
+        "J007",
+        "J017"
+      ],
+      "relative_energy_kwh": 0.2374723633541369,
+      "minimum_merged_duration_seconds": 2391.2509379520175,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 7,
+      "merge_source_jobs": [
+        "J001",
+        "J007"
+      ],
+      "relative_energy_kwh": 0.2552562357914985,
+      "minimum_merged_duration_seconds": 2910.67144101793,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 8,
+      "merge_source_jobs": [
+        "J012",
+        "J017"
+      ],
+      "relative_energy_kwh": 0.26682077342063293,
+      "minimum_merged_duration_seconds": 2637.6368485645144,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 9,
+      "merge_source_jobs": [
+        "J001",
+        "J012"
+      ],
+      "relative_energy_kwh": 0.2801055956053293,
+      "minimum_merged_duration_seconds": 3157.0573516304275,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 10,
+      "merge_source_jobs": [
+        "J003",
+        "J010"
+      ],
+      "relative_energy_kwh": 0.3704079244297054,
+      "minimum_merged_duration_seconds": 3012.353261169662,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 11,
+      "merge_source_jobs": [
+        "J007",
+        "J017"
+      ],
+      "relative_energy_kwh": 0.3972050873293633,
+      "minimum_merged_duration_seconds": 2391.2509379520175,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 12,
+      "merge_source_jobs": [
+        "J003",
+        "J010"
+      ],
+      "relative_energy_kwh": 0.9282747281156247,
+      "minimum_merged_duration_seconds": 3342.511262982053,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 13,
+      "merge_source_jobs": [
+        "J006",
+        "J018"
+      ],
+      "relative_energy_kwh": 1.2557079666374602,
+      "minimum_merged_duration_seconds": 3100.8886161712717,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 14,
+      "merge_source_jobs": [
+        "J004",
+        "J017"
+      ],
+      "relative_energy_kwh": 1.3951225427009555,
+      "minimum_merged_duration_seconds": 2680.1174386017037,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 15,
+      "merge_source_jobs": [
+        "J004",
+        "J010"
+      ],
+      "relative_energy_kwh": 1.569947527250887,
+      "minimum_merged_duration_seconds": 3334.2134752447528,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 16,
+      "merge_source_jobs": [
+        "J003",
+        "J017"
+      ],
+      "relative_energy_kwh": 1.7699609943270693,
+      "minimum_merged_duration_seconds": 3085.448726580678,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 17,
+      "merge_source_jobs": [
+        "J018",
+        "J014"
+      ],
+      "relative_energy_kwh": 2.073713957434485,
+      "minimum_merged_duration_seconds": 3102.886234194222,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 18,
+      "merge_source_jobs": [
+        "J018",
+        "J017"
+      ],
+      "relative_energy_kwh": 2.202634280262315,
+      "minimum_merged_duration_seconds": 2440.2116467943642,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 19,
+      "merge_source_jobs": [
+        "J018",
+        "J017"
+      ],
+      "relative_energy_kwh": 2.4949058944220295,
+      "minimum_merged_duration_seconds": 2440.211646794364,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 20,
+      "merge_source_jobs": [
+        "J018",
+        "J004"
+      ],
+      "relative_energy_kwh": 2.6939799531274,
+      "minimum_merged_duration_seconds": 2827.699263956148,
+      "status": "INFEASIBLE",
+      "objective": null
+    }
+  ],
+  "best_objective": null
+}

@@ -1,0 +1,37 @@
+{
+  "source": "results_q2_three_to_two_weighted\\best_plan.json",
+  "source_objective": {
+    "weighted_delivery_seconds": 2958556.1787138567,
+    "weighted_soft_delay_seconds": 0,
+    "makespan": 8466.169525432402,
+    "energy_kwh": 65.60659919024813,
+    "sortie_count": 19
+  },
+  "candidates": 2,
+  "tested": 2,
+  "cases": [
+    {
+      "rank": 1,
+      "source_sortie": 7,
+      "recipient_sorties": [
+        6,
+        9
+      ],
+      "estimated_energy_delta_kwh": -1.2178062297730872,
+      "solver_status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 2,
+      "source_sortie": 5,
+      "recipient_sorties": [
+        16,
+        17
+      ],
+      "estimated_energy_delta_kwh": -0.5474246841741532,
+      "solver_status": "INFEASIBLE",
+      "objective": null
+    }
+  ],
+  "best_objective": null
+}
