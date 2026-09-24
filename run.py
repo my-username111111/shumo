@@ -47,7 +47,10 @@ def delivery_rows(deliveries: dict) -> list[dict]:
 
 def write_q2_workbook(path: Path, q2: dict) -> None:
     """Fill only Q2 sheets in a copy of the supplied result template."""
-    template = Path(__file__).resolve().parent.parent / "结果提交模板.xlsx"
+    project_root = Path(__file__).resolve().parent.parent
+    template = project_root / "D题" / "结果提交模板.xlsx"
+    if not template.exists():
+        template = project_root / "结果提交模板.xlsx"
     workbook = load_workbook(template)
     rows_by_sheet = {
         "Q2_运输架次": [

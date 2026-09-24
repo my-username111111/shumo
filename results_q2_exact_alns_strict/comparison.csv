@@ -1,0 +1,3 @@
+﻿case,source,weighted_delivery_seconds,weighted_soft_delay_seconds,makespan,energy_kwh,sortie_count
+alns,baseline,2809611.6208803034,0,7531.736524399572,74.33663568052843,25
+alns,cp_sat,2808098.9475167473,0,7531.736524399572,74.09697341174574,25

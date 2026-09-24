@@ -19,7 +19,9 @@ from openpyxl import load_workbook
 from PIL import Image
 
 
-BASE = Path(__file__).resolve().parent.parent / "数据"
+_PROJECT_ROOT = Path(__file__).resolve().parent.parent
+BASE = (_PROJECT_ROOT / "D题" / "数据" if (_PROJECT_ROOT / "D题" / "数据").is_dir()
+        else _PROJECT_ROOT / "数据")
 TABLES = BASE / "无人机应急物资运输基础数据"
 TERRAIN = BASE / "镇龙乡地理空间数据"
 G = 9.81

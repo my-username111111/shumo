@@ -1,0 +1,3 @@
+﻿case,source,weighted_delivery_seconds,weighted_soft_delay_seconds,makespan,energy_kwh,sortie_count
+main,baseline,2735557.495136332,0,7558.434268462624,77.05945901639045,28
+main,cp_sat,2662962.4802919086,0,7350.4068166783945,77.05945901639045,28

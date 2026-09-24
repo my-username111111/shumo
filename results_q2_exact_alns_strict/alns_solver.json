@@ -1,0 +1,36 @@
+{
+  "case": "alns",
+  "status": "FEASIBLE",
+  "time_limit_seconds": 75.0,
+  "elapsed_seconds": 75.05523940001149,
+  "workers": 8,
+  "seed": 2026,
+  "scale": 10,
+  "model_options": 55,
+  "fixed_sorties": 25,
+  "weighted_cap_seconds": 2809611.621,
+  "makespan_cap_seconds": 7532.0,
+  "energy_cap_kwh": null,
+  "objective_bound": 74077863.0,
+  "objective_value": 74096984.0,
+  "verification": {
+    "boxes": 80,
+    "sorties": 25,
+    "hard_boxes": 31,
+    "alternatives_checked": 0
+  },
+  "baseline": {
+    "weighted_delivery_seconds": 2809611.6208803034,
+    "weighted_soft_delay_seconds": 0,
+    "makespan": 7531.736524399572,
+    "energy_kwh": 74.33663568052843,
+    "sortie_count": 25
+  },
+  "candidate": {
+    "weighted_delivery_seconds": 2808098.9475167473,
+    "weighted_soft_delay_seconds": 0,
+    "makespan": 7531.736524399572,
+    "energy_kwh": 74.09697341174574,
+    "sortie_count": 25
+  }
+}

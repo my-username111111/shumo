@@ -1,0 +1,2 @@
+# Optional isolated solver dependency for q2_exact_schedule.py
+ortools==9.15.6755
