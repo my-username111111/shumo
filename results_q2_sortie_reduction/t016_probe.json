@@ -1,0 +1,397 @@
+{
+  "source": "F:\\数学建模2026\\shumo_sync\\results_q2_time\\frontier_24\\weighted_plan.json",
+  "source_objective": {
+    "weighted_delivery_seconds": 2500844.9032504223,
+    "weighted_soft_delay_seconds": 0,
+    "makespan": 6073.208125395588,
+    "energy_kwh": 69.15451555444506,
+    "sortie_count": 24
+  },
+  "cases": [
+    {
+      "recipient_a": "T003",
+      "recipient_b": "T006",
+      "a_visits": [
+        [
+          "S013",
+          [
+            "S013-FOD-01",
+            "S013-MED-01",
+            "S013-WAT-01"
+          ]
+        ]
+      ],
+      "b_visits": [
+        [
+          "S012",
+          [
+            "S012-FOD-01",
+            "S012-MED-01",
+            "S012-WAT-01"
+          ]
+        ]
+      ],
+      "models": [
+        [
+          "B"
+        ],
+        [
+          "B"
+        ]
+      ],
+      "energy_route_lower": 62.84162928493977,
+      "forced_workload": {
+        "A": 0,
+        "B": 0,
+        "C": 12119.525465049155
+      },
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "recipient_a": "T010",
+      "recipient_b": "T003",
+      "a_visits": [
+        [
+          "S007",
+          [
+            "S007-MED-01",
+            "S007-WAT-01"
+          ]
+        ],
+        [
+          "S013",
+          [
+            "S013-FOD-01"
+          ]
+        ]
+      ],
+      "b_visits": [
+        [
+          "S012",
+          [
+            "S012-FOD-01"
+          ]
+        ],
+        [
+          "S013",
+          [
+            "S013-MED-01",
+            "S013-WAT-01"
+          ]
+        ]
+      ],
+      "models": [
+        [
+          "B"
+        ],
+        [
+          "B"
+        ]
+      ],
+      "energy_route_lower": 65.10040491702587,
+      "forced_workload": {
+        "A": 0,
+        "B": 0,
+        "C": 12119.525465049155
+      },
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "recipient_a": "T010",
+      "recipient_b": "T003",
+      "a_visits": [
+        [
+          "S007",
+          [
+            "S007-MED-01",
+            "S007-WAT-01"
+          ]
+        ],
+        [
+          "S013",
+          [
+            "S013-FOD-01"
+          ]
+        ]
+      ],
+      "b_visits": [
+        [
+          "S013",
+          [
+            "S013-MED-01",
+            "S013-WAT-01"
+          ]
+        ],
+        [
+          "S012",
+          [
+            "S012-FOD-01"
+          ]
+        ]
+      ],
+      "models": [
+        [
+          "B"
+        ],
+        [
+          "B"
+        ]
+      ],
+      "energy_route_lower": 64.84757131133371,
+      "forced_workload": {
+        "A": 0,
+        "B": 0,
+        "C": 12119.525465049155
+      },
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "recipient_a": "T010",
+      "recipient_b": "T006",
+      "a_visits": [
+        [
+          "S007",
+          [
+            "S007-MED-01",
+            "S007-WAT-01"
+          ]
+        ],
+        [
+          "S013",
+          [
+            "S013-FOD-01"
+          ]
+        ]
+      ],
+      "b_visits": [
+        [
+          "S012",
+          [
+            "S012-FOD-01",
+            "S012-MED-01",
+            "S012-WAT-01"
+          ]
+        ]
+      ],
+      "models": [
+        [
+          "B"
+        ],
+        [
+          "B"
+        ]
+      ],
+      "energy_route_lower": 64.09470813796241,
+      "forced_workload": {
+        "A": 0,
+        "B": 0,
+        "C": 12119.525465049155
+      },
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "recipient_a": "T006",
+      "recipient_b": "T003",
+      "a_visits": [
+        [
+          "S013",
+          [
+            "S013-FOD-01"
+          ]
+        ],
+        [
+          "S012",
+          [
+            "S012-MED-01",
+            "S012-WAT-01"
+          ]
+        ]
+      ],
+      "b_visits": [
+        [
+          "S012",
+          [
+            "S012-FOD-01"
+          ]
+        ],
+        [
+          "S013",
+          [
+            "S013-MED-01",
+            "S013-WAT-01"
+          ]
+        ]
+      ],
+      "models": [
+        [
+          "B"
+        ],
+        [
+          "B"
+        ]
+      ],
+      "energy_route_lower": 63.91792264542572,
+      "forced_workload": {
+        "A": 0,
+        "B": 0,
+        "C": 12119.525465049155
+      },
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "recipient_a": "T006",
+      "recipient_b": "T003",
+      "a_visits": [
+        [
+          "S013",
+          [
+            "S013-FOD-01"
+          ]
+        ],
+        [
+          "S012",
+          [
+            "S012-MED-01",
+            "S012-WAT-01"
+          ]
+        ]
+      ],
+      "b_visits": [
+        [
+          "S013",
+          [
+            "S013-MED-01",
+            "S013-WAT-01"
+          ]
+        ],
+        [
+          "S012",
+          [
+            "S012-FOD-01"
+          ]
+        ]
+      ],
+      "models": [
+        [
+          "B"
+        ],
+        [
+          "B"
+        ]
+      ],
+      "energy_route_lower": 63.66508903973356,
+      "forced_workload": {
+        "A": 0,
+        "B": 0,
+        "C": 12119.525465049155
+      },
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "recipient_a": "T006",
+      "recipient_b": "T003",
+      "a_visits": [
+        [
+          "S012",
+          [
+            "S012-MED-01",
+            "S012-WAT-01"
+          ]
+        ],
+        [
+          "S013",
+          [
+            "S013-FOD-01"
+          ]
+        ]
+      ],
+      "b_visits": [
+        [
+          "S012",
+          [
+            "S012-FOD-01"
+          ]
+        ],
+        [
+          "S013",
+          [
+            "S013-MED-01",
+            "S013-WAT-01"
+          ]
+        ]
+      ],
+      "models": [
+        [
+          "B"
+        ],
+        [
+          "B"
+        ]
+      ],
+      "energy_route_lower": 64.03078981232784,
+      "forced_workload": {
+        "A": 0,
+        "B": 0,
+        "C": 12119.525465049155
+      },
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "recipient_a": "T006",
+      "recipient_b": "T003",
+      "a_visits": [
+        [
+          "S012",
+          [
+            "S012-MED-01",
+            "S012-WAT-01"
+          ]
+        ],
+        [
+          "S013",
+          [
+            "S013-FOD-01"
+          ]
+        ]
+      ],
+      "b_visits": [
+        [
+          "S013",
+          [
+            "S013-MED-01",
+            "S013-WAT-01"
+          ]
+        ],
+        [
+          "S012",
+          [
+            "S012-FOD-01"
+          ]
+        ]
+      ],
+      "models": [
+        [
+          "B"
+        ],
+        [
+          "B"
+        ]
+      ],
+      "energy_route_lower": 63.77795620663568,
+      "forced_workload": {
+        "A": 0,
+        "B": 0,
+        "C": 12119.525465049155
+      },
+      "status": "INFEASIBLE",
+      "objective": null
+    }
+  ]
+}

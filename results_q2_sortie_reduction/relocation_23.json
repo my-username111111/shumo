@@ -1,0 +1,976 @@
+{
+  "source": "F:\\数学建模2026\\shumo_sync\\results_q2_time\\frontier_23\\weighted_plan.json",
+  "source_objective": {
+    "weighted_delivery_seconds": 2497000.608856295,
+    "weighted_soft_delay_seconds": 0,
+    "makespan": 6112.317339653567,
+    "energy_kwh": 69.30723683159759,
+    "sortie_count": 23
+  },
+  "physical_energy_improving": 107,
+  "cases": [
+    {
+      "rank": 1,
+      "source": "T002",
+      "receiver": "T007",
+      "box": "S007-MED-01",
+      "energy_route_delta": -2.2479431337076723,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 2,
+      "source": "T002",
+      "receiver": "T007",
+      "box": "S007-MED-01",
+      "energy_route_delta": -2.0682870935641087,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 3,
+      "source": "T002",
+      "receiver": "T020",
+      "box": "S007-MED-01",
+      "energy_route_delta": -1.9338754120951944,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 4,
+      "source": "T002",
+      "receiver": "T020",
+      "box": "S007-MED-01",
+      "energy_route_delta": -1.9177471813528695,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 5,
+      "source": "T017",
+      "receiver": "T011",
+      "box": "S012-FOD-01",
+      "energy_route_delta": -1.6830771813550918,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 6,
+      "source": "T002",
+      "receiver": "T016",
+      "box": "S007-MED-01",
+      "energy_route_delta": -1.3771454876942766,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 7,
+      "source": "T014",
+      "receiver": "T004",
+      "box": "S004-MED-01",
+      "energy_route_delta": -1.308939446482957,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 8,
+      "source": "T002",
+      "receiver": "T016",
+      "box": "S007-MED-01",
+      "energy_route_delta": -1.1656784440554908,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 9,
+      "source": "T002",
+      "receiver": "T022",
+      "box": "S007-MED-01",
+      "energy_route_delta": -1.1372601854627558,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 10,
+      "source": "T002",
+      "receiver": "T017",
+      "box": "S013-MED-01",
+      "energy_route_delta": -1.1168893609734947,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 11,
+      "source": "T007",
+      "receiver": "T020",
+      "box": "S015-MED-01",
+      "energy_route_delta": -1.0540903067899325,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 12,
+      "source": "T011",
+      "receiver": "T017",
+      "box": "S012-MED-01",
+      "energy_route_delta": -1.0141743791135465,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 13,
+      "source": "T002",
+      "receiver": "T011",
+      "box": "S013-MED-01",
+      "energy_route_delta": -1.0072156967342214,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 14,
+      "source": "T002",
+      "receiver": "T011",
+      "box": "S013-MED-01",
+      "energy_route_delta": -0.9833750959000072,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 15,
+      "source": "T017",
+      "receiver": "T011",
+      "box": "S013-FOD-01",
+      "energy_route_delta": -0.9212677523658526,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 16,
+      "source": "T002",
+      "receiver": "T005",
+      "box": "S007-MED-01",
+      "energy_route_delta": -0.9191974579952285,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 17,
+      "source": "T004",
+      "receiver": "T014",
+      "box": "S009-MED-01",
+      "energy_route_delta": -0.8502419530156766,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 18,
+      "source": "T014",
+      "receiver": "T022",
+      "box": "S004-MED-01",
+      "energy_route_delta": -0.8272052202699585,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 19,
+      "source": "T004",
+      "receiver": "T017",
+      "box": "S009-MED-01",
+      "energy_route_delta": -0.8254165192848184,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 20,
+      "source": "T017",
+      "receiver": "T011",
+      "box": "S013-FOD-01",
+      "energy_route_delta": -0.8084005854637342,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 21,
+      "source": "T014",
+      "receiver": "T016",
+      "box": "S005-MED-01",
+      "energy_route_delta": -0.8032141489757021,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 22,
+      "source": "T014",
+      "receiver": "T016",
+      "box": "S004-MED-01",
+      "energy_route_delta": -0.8032141489757021,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 23,
+      "source": "T004",
+      "receiver": "T022",
+      "box": "S009-MED-01",
+      "energy_route_delta": -0.7987118469720209,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 24,
+      "source": "T004",
+      "receiver": "T011",
+      "box": "S009-MED-01",
+      "energy_route_delta": -0.7749372869356455,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 25,
+      "source": "T004",
+      "receiver": "T011",
+      "box": "S009-MED-01",
+      "energy_route_delta": -0.7616586934003022,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 26,
+      "source": "T004",
+      "receiver": "T014",
+      "box": "S002-MED-01",
+      "energy_route_delta": -0.6936287304407616,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 27,
+      "source": "T002",
+      "receiver": "T004",
+      "box": "S013-MED-01",
+      "energy_route_delta": -0.6910277734176957,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 28,
+      "source": "T014",
+      "receiver": "T004",
+      "box": "S005-MED-01",
+      "energy_route_delta": -0.6896366668728495,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 29,
+      "source": "T005",
+      "receiver": "T002",
+      "box": "S001-MED-01",
+      "energy_route_delta": -0.6777016119657713,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 30,
+      "source": "T005",
+      "receiver": "T002",
+      "box": "S001-MED-02",
+      "energy_route_delta": -0.6777016119657713,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 31,
+      "source": "T005",
+      "receiver": "T004",
+      "box": "S001-MED-01",
+      "energy_route_delta": -0.6209999138384714,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 32,
+      "source": "T005",
+      "receiver": "T004",
+      "box": "S001-MED-02",
+      "energy_route_delta": -0.6209999138384714,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 33,
+      "source": "T002",
+      "receiver": "T005",
+      "box": "S007-MED-01",
+      "energy_route_delta": -0.5955759561014009,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 34,
+      "source": "T005",
+      "receiver": "T017",
+      "box": "S001-MED-01",
+      "energy_route_delta": -0.5939050583117638,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 35,
+      "source": "T005",
+      "receiver": "T017",
+      "box": "S001-MED-02",
+      "energy_route_delta": -0.5939050583117638,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 36,
+      "source": "T005",
+      "receiver": "T011",
+      "box": "S001-MED-01",
+      "energy_route_delta": -0.5884070889588631,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 37,
+      "source": "T005",
+      "receiver": "T011",
+      "box": "S001-MED-02",
+      "energy_route_delta": -0.5884070889588631,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 38,
+      "source": "T005",
+      "receiver": "T014",
+      "box": "S001-MED-01",
+      "energy_route_delta": -0.5834735647182012,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 39,
+      "source": "T005",
+      "receiver": "T014",
+      "box": "S001-MED-02",
+      "energy_route_delta": -0.5834735647182012,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 40,
+      "source": "T002",
+      "receiver": "T004",
+      "box": "S013-MED-01",
+      "energy_route_delta": -0.565639668460745,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 41,
+      "source": "T005",
+      "receiver": "T004",
+      "box": "S001-MED-01",
+      "energy_route_delta": -0.5590511320620082,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 42,
+      "source": "T005",
+      "receiver": "T004",
+      "box": "S001-MED-02",
+      "energy_route_delta": -0.5590511320620082,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 43,
+      "source": "T022",
+      "receiver": "T011",
+      "box": "S009-FOD-01",
+      "energy_route_delta": -0.5576742386285072,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 44,
+      "source": "T005",
+      "receiver": "T014",
+      "box": "S001-MED-01",
+      "energy_route_delta": -0.5471764115780298,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 45,
+      "source": "T005",
+      "receiver": "T014",
+      "box": "S001-MED-02",
+      "energy_route_delta": -0.5471764115780298,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 46,
+      "source": "T005",
+      "receiver": "T011",
+      "box": "S001-MED-01",
+      "energy_route_delta": -0.5434258259625904,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 47,
+      "source": "T005",
+      "receiver": "T011",
+      "box": "S001-MED-02",
+      "energy_route_delta": -0.5434258259625904,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 48,
+      "source": "T005",
+      "receiver": "T002",
+      "box": "S001-MED-01",
+      "energy_route_delta": -0.5411989746667771,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 49,
+      "source": "T005",
+      "receiver": "T002",
+      "box": "S001-MED-02",
+      "energy_route_delta": -0.5411989746667771,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 50,
+      "source": "T004",
+      "receiver": "T017",
+      "box": "S002-MED-01",
+      "energy_route_delta": -0.53265193314662,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 51,
+      "source": "T004",
+      "receiver": "T014",
+      "box": "S009-MED-01",
+      "energy_route_delta": -0.531709979689917,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 52,
+      "source": "T014",
+      "receiver": "T022",
+      "box": "S004-MED-01",
+      "energy_route_delta": -0.518949580705407,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 53,
+      "source": "T002",
+      "receiver": "T022",
+      "box": "S013-MED-01",
+      "energy_route_delta": -0.5096035903367522,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 54,
+      "source": "T005",
+      "receiver": "T017",
+      "box": "S001-MED-01",
+      "energy_route_delta": -0.5066021135729577,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 55,
+      "source": "T005",
+      "receiver": "T017",
+      "box": "S001-MED-02",
+      "energy_route_delta": -0.5066021135729577,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 56,
+      "source": "T014",
+      "receiver": "T017",
+      "box": "S005-MED-01",
+      "energy_route_delta": -0.5036871391168534,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 57,
+      "source": "T022",
+      "receiver": "T011",
+      "box": "S009-FOD-01",
+      "energy_route_delta": -0.50325301787228,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 58,
+      "source": "T006",
+      "receiver": "T002",
+      "box": "S011-MED-01",
+      "energy_route_delta": -0.4985743877505002,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 59,
+      "source": "T014",
+      "receiver": "T004",
+      "box": "S005-MED-01",
+      "energy_route_delta": -0.49291268309839786,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 60,
+      "source": "T004",
+      "receiver": "T017",
+      "box": "S009-MED-01",
+      "energy_route_delta": -0.4912330052693674,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 61,
+      "source": "T014",
+      "receiver": "T016",
+      "box": "S004-MED-01",
+      "energy_route_delta": -0.4855292791631789,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 62,
+      "source": "T004",
+      "receiver": "T011",
+      "box": "S002-MED-01",
+      "energy_route_delta": -0.4821727007974461,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 63,
+      "source": "T005",
+      "receiver": "T022",
+      "box": "S001-MED-01",
+      "energy_route_delta": -0.47840973022121336,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 64,
+      "source": "T005",
+      "receiver": "T022",
+      "box": "S001-MED-02",
+      "energy_route_delta": -0.47840973022121336,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 65,
+      "source": "T014",
+      "receiver": "T011",
+      "box": "S005-MED-01",
+      "energy_route_delta": -0.4532079067676804,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 66,
+      "source": "T014",
+      "receiver": "T022",
+      "box": "S005-MED-01",
+      "energy_route_delta": -0.44463484790783214,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 67,
+      "source": "T005",
+      "receiver": "T022",
+      "box": "S001-MED-01",
+      "energy_route_delta": -0.43578716929693684,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 68,
+      "source": "T005",
+      "receiver": "T022",
+      "box": "S001-MED-02",
+      "energy_route_delta": -0.43578716929693684,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 69,
+      "source": "T006",
+      "receiver": "T014",
+      "box": "S011-MED-01",
+      "energy_route_delta": -0.430824839579381,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 70,
+      "source": "T011",
+      "receiver": "T004",
+      "box": "S012-MED-01",
+      "energy_route_delta": -0.4215650984635344,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 71,
+      "source": "T002",
+      "receiver": "T022",
+      "box": "S013-MED-01",
+      "energy_route_delta": -0.3973223672767059,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 72,
+      "source": "T004",
+      "receiver": "T011",
+      "box": "S002-MED-01",
+      "energy_route_delta": -0.3861620570705595,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 73,
+      "source": "T006",
+      "receiver": "T014",
+      "box": "S011-MED-01",
+      "energy_route_delta": -0.3842430662841192,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 74,
+      "source": "T014",
+      "receiver": "T011",
+      "box": "S005-MED-01",
+      "energy_route_delta": -0.3736736360316595,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 75,
+      "source": "T006",
+      "receiver": "T007",
+      "box": "S011-MED-01",
+      "energy_route_delta": -0.3635760043082472,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 76,
+      "source": "T006",
+      "receiver": "T002",
+      "box": "S011-MED-01",
+      "energy_route_delta": -0.36309745550709627,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 77,
+      "source": "T014",
+      "receiver": "T020",
+      "box": "S005-MED-01",
+      "energy_route_delta": -0.3476068619421895,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 78,
+      "source": "T009",
+      "receiver": "T002",
+      "box": "S006-MED-01",
+      "energy_route_delta": -0.3319766581253698,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 79,
+      "source": "T009",
+      "receiver": "T007",
+      "box": "S006-MED-01",
+      "energy_route_delta": -0.32670722392822427,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 80,
+      "source": "T006",
+      "receiver": "T007",
+      "box": "S011-MED-01",
+      "energy_route_delta": -0.32432549036689284,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 81,
+      "source": "T014",
+      "receiver": "T022",
+      "box": "S005-MED-01",
+      "energy_route_delta": -0.32406125360812466,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 82,
+      "source": "T005",
+      "receiver": "T016",
+      "box": "S001-MED-01",
+      "energy_route_delta": -0.3234260154751034,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 83,
+      "source": "T005",
+      "receiver": "T016",
+      "box": "S001-MED-02",
+      "energy_route_delta": -0.3234260154751034,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 84,
+      "source": "T005",
+      "receiver": "T016",
+      "box": "S001-MED-01",
+      "energy_route_delta": -0.3219663986944261,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 85,
+      "source": "T005",
+      "receiver": "T016",
+      "box": "S001-MED-02",
+      "energy_route_delta": -0.3219663986944261,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 86,
+      "source": "T004",
+      "receiver": "T016",
+      "box": "S009-MED-01",
+      "energy_route_delta": -0.31326007481755225,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 87,
+      "source": "T015",
+      "receiver": "T017",
+      "box": "S010-MED-01",
+      "energy_route_delta": -0.29769859814780375,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 88,
+      "source": "T007",
+      "receiver": "T016",
+      "box": "S015-MED-01",
+      "energy_route_delta": -0.2775460404330672,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 89,
+      "source": "T006",
+      "receiver": "T020",
+      "box": "S011-MED-01",
+      "energy_route_delta": -0.27121073529295847,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 90,
+      "source": "T015",
+      "receiver": "T017",
+      "box": "S010-MED-01",
+      "energy_route_delta": -0.2676314516738083,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 91,
+      "source": "T004",
+      "receiver": "T022",
+      "box": "S002-MED-01",
+      "energy_route_delta": -0.2602727582534379,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 92,
+      "source": "T007",
+      "receiver": "T020",
+      "box": "S003-MED-01",
+      "energy_route_delta": -0.2519938399091828,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 93,
+      "source": "T015",
+      "receiver": "T011",
+      "box": "S010-MED-01",
+      "energy_route_delta": -0.2472193657986299,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 94,
+      "source": "T015",
+      "receiver": "T011",
+      "box": "S010-MED-01",
+      "energy_route_delta": -0.23542512541512028,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 95,
+      "source": "T006",
+      "receiver": "T020",
+      "box": "S011-MED-01",
+      "energy_route_delta": -0.22916432283933252,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 96,
+      "source": "T015",
+      "receiver": "T011",
+      "box": "S010-FOD-01",
+      "energy_route_delta": -0.2115757422987068,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 97,
+      "source": "T006",
+      "receiver": "T016",
+      "box": "S011-MED-01",
+      "energy_route_delta": -0.21079530562545346,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 98,
+      "source": "T006",
+      "receiver": "T004",
+      "box": "S011-MED-01",
+      "energy_route_delta": -0.1974005340706424,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 99,
+      "source": "T014",
+      "receiver": "T020",
+      "box": "S005-MED-01",
+      "energy_route_delta": -0.1968477319277957,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 100,
+      "source": "T006",
+      "receiver": "T016",
+      "box": "S011-MED-01",
+      "energy_route_delta": -0.18827915681782947,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 101,
+      "source": "T006",
+      "receiver": "T004",
+      "box": "S011-MED-01",
+      "energy_route_delta": -0.17298076599762613,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 102,
+      "source": "T002",
+      "receiver": "T016",
+      "box": "S013-MED-01",
+      "energy_route_delta": -0.15264105566035369,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 103,
+      "source": "T004",
+      "receiver": "T016",
+      "box": "S009-MED-01",
+      "energy_route_delta": -0.14413793119768714,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 104,
+      "source": "T006",
+      "receiver": "T017",
+      "box": "S011-MED-01",
+      "energy_route_delta": -0.13427311020320065,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 105,
+      "source": "T015",
+      "receiver": "T011",
+      "box": "S010-FOD-01",
+      "energy_route_delta": -0.12479388368632982,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 106,
+      "source": "T013",
+      "receiver": "T014",
+      "box": "S008-MED-01",
+      "energy_route_delta": -0.11540912397888459,
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 107,
+      "source": "T015",
+      "receiver": "T017",
+      "box": "S010-MED-01",
+      "energy_route_delta": -0.11045138696542978,
+      "status": "INFEASIBLE",
+      "objective": null
+    }
+  ]
+}

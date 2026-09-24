@@ -1,0 +1,121 @@
+{
+  "source": "F:\\数学建模2026\\shumo_sync\\results_q2_time\\frontier_23\\weighted_plan.json",
+  "source_objective": {
+    "weighted_delivery_seconds": 2497000.608856295,
+    "weighted_soft_delay_seconds": 0,
+    "makespan": 6112.317339653567,
+    "energy_kwh": 69.30723683159759,
+    "sortie_count": 23
+  },
+  "energy_improving_swaps": 6,
+  "cases": [
+    {
+      "rank": 1,
+      "left": "T001",
+      "right": "T003",
+      "swap": [
+        "S001-FOD-01",
+        "S001-HYG-02"
+      ],
+      "fixed_model_energy_delta": -0.015910134233526385,
+      "status": "FEASIBLE",
+      "objective": {
+        "weighted_delivery_seconds": 2496736.608856295,
+        "weighted_soft_delay_seconds": 0,
+        "makespan": 6112.317339653567,
+        "energy_kwh": 69.29132669736407,
+        "sortie_count": 23
+      }
+    },
+    {
+      "rank": 2,
+      "left": "T001",
+      "right": "T003",
+      "swap": [
+        "S001-FOD-02",
+        "S001-HYG-02"
+      ],
+      "fixed_model_energy_delta": -0.015910134233526385,
+      "status": "FEASIBLE",
+      "objective": {
+        "weighted_delivery_seconds": 2497360.330469215,
+        "weighted_soft_delay_seconds": 0,
+        "makespan": 6112.317339653567,
+        "energy_kwh": 69.29132669736407,
+        "sortie_count": 23
+      }
+    },
+    {
+      "rank": 3,
+      "left": "T001",
+      "right": "T003",
+      "swap": [
+        "S001-FOD-03",
+        "S001-HYG-02"
+      ],
+      "fixed_model_energy_delta": -0.015910134233526385,
+      "status": "FEASIBLE",
+      "objective": {
+        "weighted_delivery_seconds": 2496736.608856295,
+        "weighted_soft_delay_seconds": 0,
+        "makespan": 6112.317339653567,
+        "energy_kwh": 69.29132669736407,
+        "sortie_count": 23
+      }
+    },
+    {
+      "rank": 4,
+      "left": "T001",
+      "right": "T003",
+      "swap": [
+        "S001-WAT-06",
+        "S001-HYG-02"
+      ],
+      "fixed_model_energy_delta": -0.015910134233526385,
+      "status": "FEASIBLE",
+      "objective": {
+        "weighted_delivery_seconds": 2497096.330469215,
+        "weighted_soft_delay_seconds": 0,
+        "makespan": 6112.317339653567,
+        "energy_kwh": 69.29132669736407,
+        "sortie_count": 23
+      }
+    },
+    {
+      "rank": 5,
+      "left": "T001",
+      "right": "T003",
+      "swap": [
+        "S001-WAT-07",
+        "S001-HYG-02"
+      ],
+      "fixed_model_energy_delta": -0.015910134233526385,
+      "status": "FEASIBLE",
+      "objective": {
+        "weighted_delivery_seconds": 2497096.330469215,
+        "weighted_soft_delay_seconds": 0,
+        "makespan": 6112.317339653567,
+        "energy_kwh": 69.29132669736407,
+        "sortie_count": 23
+      }
+    },
+    {
+      "rank": 6,
+      "left": "T001",
+      "right": "T003",
+      "swap": [
+        "S001-WAT-08",
+        "S001-HYG-02"
+      ],
+      "fixed_model_energy_delta": -0.015910134233526385,
+      "status": "FEASIBLE",
+      "objective": {
+        "weighted_delivery_seconds": 2496472.608856295,
+        "weighted_soft_delay_seconds": 0,
+        "makespan": 6112.317339653567,
+        "energy_kwh": 69.29132669736407,
+        "sortie_count": 23
+      }
+    }
+  ]
+}

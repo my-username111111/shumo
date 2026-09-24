@@ -1,0 +1,237 @@
+{
+  "source": "F:\\数学建模2026\\shumo_sync\\results_q2_time\\research_23\\hyg_j004_to_j001_plan.json",
+  "source_objective": {
+    "weighted_delivery_seconds": 2613002.0589106535,
+    "weighted_soft_delay_seconds": 0,
+    "makespan": 6139.208125395588,
+    "energy_kwh": 68.61077044233845,
+    "sortie_count": 23
+  },
+  "physical_candidates": 28,
+  "cases": [
+    {
+      "rank": 1,
+      "source": "T001",
+      "receiver": "T003",
+      "box": "S001-FOD-01",
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 2,
+      "source": "T001",
+      "receiver": "T003",
+      "box": "S001-FOD-01",
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 3,
+      "source": "T001",
+      "receiver": "T006",
+      "box": "S001-FOD-01",
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 4,
+      "source": "T001",
+      "receiver": "T006",
+      "box": "S001-FOD-01",
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 5,
+      "source": "T001",
+      "receiver": "T003",
+      "box": "S001-FOD-02",
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 6,
+      "source": "T001",
+      "receiver": "T003",
+      "box": "S001-FOD-02",
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 7,
+      "source": "T001",
+      "receiver": "T006",
+      "box": "S001-FOD-02",
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 8,
+      "source": "T001",
+      "receiver": "T006",
+      "box": "S001-FOD-02",
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 9,
+      "source": "T001",
+      "receiver": "T003",
+      "box": "S001-FOD-03",
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 10,
+      "source": "T001",
+      "receiver": "T003",
+      "box": "S001-FOD-03",
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 11,
+      "source": "T001",
+      "receiver": "T006",
+      "box": "S001-FOD-03",
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 12,
+      "source": "T001",
+      "receiver": "T006",
+      "box": "S001-FOD-03",
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 13,
+      "source": "T013",
+      "receiver": "T003",
+      "box": "S007-FOD-01",
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 14,
+      "source": "T013",
+      "receiver": "T003",
+      "box": "S007-MED-01",
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 15,
+      "source": "T013",
+      "receiver": "T003",
+      "box": "S007-MED-01",
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 16,
+      "source": "T013",
+      "receiver": "T007",
+      "box": "S007-MED-01",
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 17,
+      "source": "T013",
+      "receiver": "T007",
+      "box": "S007-MED-01",
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 18,
+      "source": "T013",
+      "receiver": "T010",
+      "box": "S007-MED-01",
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 19,
+      "source": "T013",
+      "receiver": "T010",
+      "box": "S007-MED-01",
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 20,
+      "source": "T013",
+      "receiver": "T024",
+      "box": "S007-MED-01",
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 21,
+      "source": "T013",
+      "receiver": "T021",
+      "box": "S007-MED-01",
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 22,
+      "source": "T013",
+      "receiver": "T021",
+      "box": "S007-MED-01",
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 23,
+      "source": "T013",
+      "receiver": "T020",
+      "box": "S007-MED-01",
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 24,
+      "source": "T013",
+      "receiver": "T020",
+      "box": "S007-MED-01",
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 25,
+      "source": "T014",
+      "receiver": "T003",
+      "box": "S002-FOD-01",
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 26,
+      "source": "T014",
+      "receiver": "T003",
+      "box": "S002-FOD-01",
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 27,
+      "source": "T014",
+      "receiver": "T003",
+      "box": "S002-FOD-02",
+      "status": "INFEASIBLE",
+      "objective": null
+    },
+    {
+      "rank": 28,
+      "source": "T014",
+      "receiver": "T003",
+      "box": "S002-FOD-02",
+      "status": "INFEASIBLE",
+      "objective": null
+    }
+  ]
+}
