@@ -1,0 +1,27 @@
+{
+  "coupled_components": [
+    [
+      "S001"
+    ],
+    [
+      "S002",
+      "S003",
+      "S004",
+      "S005",
+      "S006",
+      "S007",
+      "S008",
+      "S009",
+      "S010",
+      "S012",
+      "S013",
+      "S014",
+      "S015"
+    ],
+    [
+      "S011"
+    ]
+  ],
+  "component_count": 3,
+  "constraint_imposed_during_q3": false
+}

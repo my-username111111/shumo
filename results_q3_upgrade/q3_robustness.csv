@@ -1,0 +1,5 @@
+﻿extra_loss_db,fixed_plan_pass,residual_minimum_margin_db,reoptimization_run
+0,True,0.01449780642904841,False
+1,False,-0.9855021935709516,False
+2,False,-1.9855021935709516,False
+3,False,-2.9855021935709516,False

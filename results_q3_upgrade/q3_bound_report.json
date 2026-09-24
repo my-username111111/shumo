@@ -1,0 +1,30 @@
+{
+  "status": "FEASIBLE",
+  "upper_bound": {
+    "weighted_soft_delay": 1416548.6911612228,
+    "weighted_delivery_seconds": 5438318.76751968,
+    "makespan": 16304.91681490707,
+    "energy_kwh": 74.85485348124014,
+    "transport_energy_kwh": 69.15451555444506,
+    "relay_energy_kwh": 5.700337926795088,
+    "transport_sorties": 24,
+    "relay_sorties": 9,
+    "total_sorties": 33
+  },
+  "proved_facts": [
+    "All Q2 boxes and transport resource assignments are preserved.",
+    "Every transport phase interval has a certified direct or two-hop path.",
+    "Relay aircraft, energy components, return reserve and recharge intervals are replayed."
+  ],
+  "optimality_scope": "No global optimum is claimed for the continuous joint problem.",
+  "finite_search_scope": {
+    "relay_job_count": 61102,
+    "capacity_cuts": 2,
+    "milp_status": 0,
+    "milp_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+    "selected_relay_jobs": 9,
+    "coarse_grid_degrees": 0.01,
+    "local_grid_degrees": 0.003,
+    "finite_candidate_optimality": "heuristic feasible solution; no global-optimum claim"
+  }
+}

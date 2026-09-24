@@ -1,0 +1,55 @@
+{
+  "selected_seed": "q3_feasible_compressed",
+  "selected_q2_plan": "D:\\Program Files\\shumo\\q3-work\\q3_feasible_compressed_seed.json",
+  "policy": [
+    "weighted_soft_delay",
+    "weighted_delivery_seconds",
+    "makespan",
+    "energy_kwh",
+    "total_sorties"
+  ],
+  "errors": [],
+  "files": {
+    "q3_bound_report.json": {
+      "sha256": "b221b6058095f6d711a472d0964b81cdd120eff89cb32127d4789d10c0cde8aa",
+      "bytes": 1151
+    },
+    "q3_communication_intervals.csv": {
+      "sha256": "7b99a65e1dbf6fa8dea50d68fdd3896815c9d1eea0de1fb8762d4180809368c9",
+      "bytes": 32841
+    },
+    "q3_continuity_certificate.json": {
+      "sha256": "85a3515ec9354265a1da3b6b69dae3feb627955dc76309d27d2bb5d3807ed00d",
+      "bytes": 10342
+    },
+    "q3_deliveries.csv": {
+      "sha256": "ba7451d59bf4790f3f5d4f9157e079f75420cf7ea08f9d11c82306976779e303",
+      "bytes": 3357
+    },
+    "q3_independent_replay.json": {
+      "sha256": "681331271283480a872de472a6655b11df6413f7c2681ee855ab51ae82802f93",
+      "bytes": 451
+    },
+    "q3_pareto.csv": {
+      "sha256": "5858770f1d268885ed993688da85d1e06c7892540b26d9811dab698ee63e6b48",
+      "bytes": 452
+    },
+    "q3_plan.json": {
+      "sha256": "71819fa07055ffd3a7b5a48af09d816af627289390822ac0f58f10b429dbc7f7",
+      "bytes": 374181
+    },
+    "q3_q4_compatibility.json": {
+      "sha256": "e1be441385307260591e18da5389d9ddeac7d19d0a8c0cb37066d05259918b11",
+      "bytes": 369
+    },
+    "q3_resource_timeline.csv": {
+      "sha256": "370a045a8e6e4584bac3edc1f4e766c34a1a9c6346317db7e69aa44105261924",
+      "bytes": 4963
+    },
+    "q3_robustness.csv": {
+      "sha256": "b6dda7f401d4c59380d9b452cd9bdf4f42b060f9851f7bd83ec9934e9ddb8f7a",
+      "bytes": 219
+    }
+  },
+  "independent_replay": "q3_independent_replay.json: PASS"
+}
