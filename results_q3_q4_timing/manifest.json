@@ -1,0 +1,34 @@
+{
+  "status": "PASS",
+  "policy": "Q3 fixed-structure LP, full Q3/Q4 independent recertification; no global joint optimum claim",
+  "source_hashes": {
+    "previous_primary": "9d703feb8b42059ffd5e1cd5ae6531f4a860a853806a96e9b5bc519a059f5f6e",
+    "previous_buffer30": "0b1be7cde8b4da46afa9ad739d1e504060b1a9af33e96a14b389df05aaadbabc",
+    "previous_stock": "c8949ef773f883428dd3ae18d11633ada1548f7f617d17641b069bd268d2381f"
+  },
+  "seed_sha256": "4ec8e1dad4346f630eaf556f16fd27a42a5de6b496fc50d738a8ed0981dbd160",
+  "code_hashes": {
+    "optimize_q3_timing.py": "4e2b8cb8eca3b0e5a2358725978082d8dd116d9324e4e1fe2c3c9ab7aaddad3d",
+    "deliver_q3_q4_timing.py": "2dba1a97b13067e6eb291d17529262ab148521ef2e67af282f19bb13cfecf4d9",
+    "q3_certificate.py": "004d837bc5105fae3a610f98cccf285ddcbd28cd5b28dc5997884239f930eabb",
+    "q4_exact.py": "40862c7331e0284973f87bc19d5af5dbd96b92d51b23674dba62baf2915f7c00",
+    "q4_audit.py": "20e9721fae8057c8d82c40915242d4049c03cf79c65477052027570f704bb6d7"
+  },
+  "generated": {
+    "nominal_0p2": "10c62c5e285eeb90d11b118e939ba4683e1c6e34a46dbbe7c696091d2bec56ea",
+    "buffer5_timely": "fe6fa5d3a2c48e9ed5044e9e5b69999f9809d58467042ed39cb61a1d5994b125",
+    "buffer5_energy": "c9629563195cf032b6cd72c4fc7704fe320e1c17ac36bbcf5c70e3b9658691c2",
+    "buffer30_retimed": "ba940da076880471520fe0f4ca57ee8497e8d0ced85efa9a0946295619ed3132",
+    "stock_zero_shortage": "e6c3b98b7a9d3c75dfa5472dadeced8de3f62c0cf447cad5630ed35d4c18225e"
+  },
+  "compared_schemes": [
+    "previous_primary",
+    "previous_buffer30",
+    "previous_stock",
+    "nominal_0p2",
+    "buffer5_timely",
+    "buffer5_energy",
+    "buffer30_retimed",
+    "stock_zero_shortage"
+  ]
+}

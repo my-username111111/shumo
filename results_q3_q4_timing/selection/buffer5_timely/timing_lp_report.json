@@ -1,0 +1,84 @@
+{
+  "status": "PASS",
+  "scope": "fixed routes, resource order, relay sites and original relay coverage obligations",
+  "buffer_seconds": 5.0,
+  "policy": "timely",
+  "allow_soft_delay": false,
+  "delivery_cap": null,
+  "makespan_cap": null,
+  "fixed_relay_intervals": 131,
+  "input_sha256": "559417864a11dffa5d086c412c365b7d3a993d6b32a072a8c6e2f5d39e5fd0ae",
+  "lp_stages": [
+    {
+      "objective": "weighted_start",
+      "value": 1363556.0398101462,
+      "status": "OPTIMAL"
+    },
+    {
+      "objective": "makespan",
+      "value": 6317.346808368566,
+      "status": "OPTIMAL"
+    },
+    {
+      "objective": "relay_service_seconds",
+      "value": 8591.187286610382,
+      "status": "OPTIMAL"
+    }
+  ],
+  "old_objective": {
+    "weighted_soft_delay": 0,
+    "weighted_delivery_seconds": 2613406.0032893578,
+    "makespan": 6307.7581046684645,
+    "energy_kwh": 72.67597306146124,
+    "transport_energy_kwh": 69.30723683159759,
+    "relay_energy_kwh": 3.36873622986365,
+    "transport_sorties": 23,
+    "relay_sorties": 3,
+    "total_sorties": 26
+  },
+  "new_objective": {
+    "weighted_soft_delay": 0,
+    "weighted_delivery_seconds": 2616580.043109504,
+    "makespan": 6317.346808368565,
+    "energy_kwh": 72.6803080657033,
+    "transport_energy_kwh": 69.30723683159759,
+    "relay_energy_kwh": 3.3730712341057116,
+    "transport_sorties": 23,
+    "relay_sorties": 3,
+    "total_sorties": 26
+  },
+  "recertified_relation_changed_seconds": 0.3667699035959231,
+  "recertified_relation_changed_intervals": 5,
+  "q3_independent_validation": "PASS",
+  "q4_independent_validation": "PASS",
+  "q4": [
+    {
+      "id": "P1",
+      "groups": 2,
+      "shortage": 6,
+      "resources": 33,
+      "cv": 0.8475985402611771
+    },
+    {
+      "id": "P2",
+      "groups": 2,
+      "shortage": 8,
+      "resources": 35,
+      "cv": 0.8054679861970709
+    },
+    {
+      "id": "P3",
+      "groups": 2,
+      "shortage": 2,
+      "resources": 29,
+      "cv": 0.9578694459358936
+    },
+    {
+      "id": "P4",
+      "groups": 3,
+      "shortage": 8,
+      "resources": 35,
+      "cv": 1.2097672826928676
+    }
+  ]
+}
