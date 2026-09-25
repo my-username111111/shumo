@@ -1,0 +1,1237 @@
+{
+  "input_sha256": "92C6C2F11B69F21842952FC30AA18C8676307832AEE9653D17615385B7846110",
+  "canonical_plan_sha256": "89ffae03f6e1b85d35cc03408842a83ce9cc11e527b048c8222983a96dbbb834",
+  "components": [
+    [
+      "S001"
+    ],
+    [
+      "S002",
+      "S003",
+      "S004",
+      "S005",
+      "S006",
+      "S007",
+      "S008",
+      "S009",
+      "S010",
+      "S012",
+      "S013",
+      "S014",
+      "S015"
+    ],
+    [
+      "S011"
+    ]
+  ],
+  "component_work_seconds": [
+    4303.323232347616,
+    49641.25052401667,
+    1189.630285736439
+  ],
+  "component_box_counts": [
+    15,
+    62,
+    3
+  ],
+  "coupling_evidence": [
+    {
+      "kind": "transport",
+      "task": "T001",
+      "zones": [
+        "S001"
+      ]
+    },
+    {
+      "kind": "transport",
+      "task": "T002",
+      "zones": [
+        "S007",
+        "S013"
+      ]
+    },
+    {
+      "kind": "transport",
+      "task": "T003",
+      "zones": [
+        "S001"
+      ]
+    },
+    {
+      "kind": "transport",
+      "task": "T004",
+      "zones": [
+        "S002",
+        "S009"
+      ]
+    },
+    {
+      "kind": "transport",
+      "task": "T005",
+      "zones": [
+        "S001"
+      ]
+    },
+    {
+      "kind": "transport",
+      "task": "T009",
+      "zones": [
+        "S006"
+      ]
+    },
+    {
+      "kind": "transport",
+      "task": "T011",
+      "zones": [
+        "S012"
+      ]
+    },
+    {
+      "kind": "transport",
+      "task": "T015",
+      "zones": [
+        "S010"
+      ]
+    },
+    {
+      "kind": "transport",
+      "task": "T006",
+      "zones": [
+        "S011"
+      ]
+    },
+    {
+      "kind": "transport",
+      "task": "T007",
+      "zones": [
+        "S003",
+        "S015"
+      ]
+    },
+    {
+      "kind": "transport",
+      "task": "T010",
+      "zones": [
+        "S006",
+        "S007"
+      ]
+    },
+    {
+      "kind": "transport",
+      "task": "T008",
+      "zones": [
+        "S014"
+      ]
+    },
+    {
+      "kind": "transport",
+      "task": "T012",
+      "zones": [
+        "S002"
+      ]
+    },
+    {
+      "kind": "transport",
+      "task": "T014",
+      "zones": [
+        "S004",
+        "S005"
+      ]
+    },
+    {
+      "kind": "transport",
+      "task": "T016",
+      "zones": [
+        "S005"
+      ]
+    },
+    {
+      "kind": "transport",
+      "task": "T013",
+      "zones": [
+        "S008"
+      ]
+    },
+    {
+      "kind": "transport",
+      "task": "T021",
+      "zones": [
+        "S008"
+      ]
+    },
+    {
+      "kind": "transport",
+      "task": "T017",
+      "zones": [
+        "S012",
+        "S013"
+      ]
+    },
+    {
+      "kind": "transport",
+      "task": "T018",
+      "zones": [
+        "S003"
+      ]
+    },
+    {
+      "kind": "transport",
+      "task": "T019",
+      "zones": [
+        "S004"
+      ]
+    },
+    {
+      "kind": "transport",
+      "task": "T022",
+      "zones": [
+        "S009"
+      ]
+    },
+    {
+      "kind": "transport",
+      "task": "T020",
+      "zones": [
+        "S015"
+      ]
+    },
+    {
+      "kind": "transport",
+      "task": "T023",
+      "zones": [
+        "S005"
+      ]
+    },
+    {
+      "kind": "relay",
+      "task": "R001",
+      "zones": [
+        "S002",
+        "S003",
+        "S004",
+        "S005",
+        "S006",
+        "S007",
+        "S008",
+        "S009",
+        "S013",
+        "S015"
+      ],
+      "actual_transport_tasks": [
+        "T002",
+        "T007",
+        "T010",
+        "T012",
+        "T013",
+        "T014",
+        "T016",
+        "T018",
+        "T020",
+        "T021",
+        "T022",
+        "T023"
+      ],
+      "communication_interval_indices": [
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        130,
+        141,
+        144,
+        145,
+        146,
+        147,
+        148,
+        168,
+        169,
+        170,
+        171,
+        190,
+        191,
+        192,
+        193,
+        194,
+        195,
+        210,
+        211,
+        212,
+        213,
+        214,
+        215,
+        218,
+        229,
+        238,
+        239,
+        240,
+        241,
+        242
+      ]
+    },
+    {
+      "kind": "relay",
+      "task": "R002",
+      "zones": [
+        "S002",
+        "S007",
+        "S008",
+        "S009",
+        "S012",
+        "S013"
+      ],
+      "actual_transport_tasks": [
+        "T002",
+        "T004",
+        "T011",
+        "T012",
+        "T013",
+        "T017"
+      ],
+      "communication_interval_indices": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        117,
+        118,
+        123,
+        124,
+        125,
+        126,
+        127,
+        128,
+        129,
+        135,
+        136,
+        137,
+        138,
+        139,
+        140,
+        183,
+        184,
+        185,
+        186
+      ]
+    },
+    {
+      "kind": "relay",
+      "task": "R003",
+      "zones": [
+        "S004",
+        "S005",
+        "S008",
+        "S009"
+      ],
+      "actual_transport_tasks": [
+        "T014",
+        "T019",
+        "T021",
+        "T022"
+      ],
+      "communication_interval_indices": [
+        149,
+        150,
+        151,
+        152,
+        153,
+        201,
+        202,
+        203,
+        204,
+        205,
+        206,
+        219,
+        220,
+        221,
+        222,
+        223,
+        230,
+        231,
+        232,
+        233,
+        234
+      ]
+    },
+    {
+      "kind": "relay",
+      "task": "R004",
+      "zones": [
+        "S002",
+        "S009",
+        "S010",
+        "S012",
+        "S013",
+        "S014"
+      ],
+      "actual_transport_tasks": [
+        "T004",
+        "T008",
+        "T011",
+        "T015",
+        "T017"
+      ],
+      "communication_interval_indices": [
+        32,
+        78,
+        79,
+        80,
+        81,
+        82,
+        112,
+        113,
+        114,
+        115,
+        116,
+        158,
+        159,
+        160,
+        161,
+        162,
+        175,
+        176,
+        177,
+        178,
+        179,
+        180,
+        181,
+        182
+      ]
+    }
+  ],
+  "relay_actual_service": {
+    "R002": [
+      {
+        "transport": "T002",
+        "start": 2056.3252486254296,
+        "end": 2258.354427900421,
+        "interval_index": 10
+      },
+      {
+        "transport": "T002",
+        "start": 2258.354427900421,
+        "end": 2274.775160322296,
+        "interval_index": 11
+      },
+      {
+        "transport": "T002",
+        "start": 2274.775160322296,
+        "end": 2484.775160322296,
+        "interval_index": 12
+      },
+      {
+        "transport": "T002",
+        "start": 2484.775160322296,
+        "end": 2511.7211991406552,
+        "interval_index": 13
+      },
+      {
+        "transport": "T002",
+        "start": 2511.7211991406552,
+        "end": 2791.3332790697664,
+        "interval_index": 14
+      },
+      {
+        "transport": "T004",
+        "start": 1598.9999000000003,
+        "end": 1599.0001000000002,
+        "interval_index": 33
+      },
+      {
+        "transport": "T004",
+        "start": 1599.0001000000002,
+        "end": 1618.0656781780683,
+        "interval_index": 34
+      },
+      {
+        "transport": "T004",
+        "start": 1618.0656781780683,
+        "end": 1643.3572431194746,
+        "interval_index": 35
+      },
+      {
+        "transport": "T004",
+        "start": 1643.3572431194746,
+        "end": 1823.3572431194746,
+        "interval_index": 36
+      },
+      {
+        "transport": "T004",
+        "start": 1823.3572431194746,
+        "end": 1856.1194603232507,
+        "interval_index": 37
+      },
+      {
+        "transport": "T004",
+        "start": 1856.1194603232507,
+        "end": 2000.3596865163627,
+        "interval_index": 38
+      },
+      {
+        "transport": "T004",
+        "start": 2000.3596865163627,
+        "end": 2043.8743471608939,
+        "interval_index": 39
+      },
+      {
+        "transport": "T004",
+        "start": 2043.8743471608939,
+        "end": 2253.874347160894,
+        "interval_index": 40
+      },
+      {
+        "transport": "T004",
+        "start": 2253.874347160894,
+        "end": 2284.447040031988,
+        "interval_index": 41
+      },
+      {
+        "transport": "T004",
+        "start": 2284.447040031988,
+        "end": 2594.2498837115336,
+        "interval_index": 42
+      },
+      {
+        "transport": "T004",
+        "start": 2594.2498837115336,
+        "end": 2749.1513055513065,
+        "interval_index": 43
+      },
+      {
+        "transport": "T011",
+        "start": 1598.9999000000003,
+        "end": 1599.0001000000002,
+        "interval_index": 117
+      },
+      {
+        "transport": "T011",
+        "start": 1599.0001000000002,
+        "end": 1815.9415218700256,
+        "interval_index": 118
+      },
+      {
+        "transport": "T012",
+        "start": 2111.7546464345965,
+        "end": 2235.675783906415,
+        "interval_index": 123
+      },
+      {
+        "transport": "T012",
+        "start": 2235.675783906415,
+        "end": 2483.5180588500516,
+        "interval_index": 124
+      },
+      {
+        "transport": "T012",
+        "start": 2483.5180588500516,
+        "end": 2529.377098156692,
+        "interval_index": 125
+      },
+      {
+        "transport": "T012",
+        "start": 2529.377098156692,
+        "end": 2925.377098156692,
+        "interval_index": 126
+      },
+      {
+        "transport": "T012",
+        "start": 2925.377098156692,
+        "end": 2962.0643296020044,
+        "interval_index": 127
+      },
+      {
+        "transport": "T012",
+        "start": 2962.0643296020044,
+        "end": 3070.9453589988775,
+        "interval_index": 128
+      },
+      {
+        "transport": "T012",
+        "start": 3070.9453589988775,
+        "end": 3140.4263775174663,
+        "interval_index": 129
+      },
+      {
+        "transport": "T013",
+        "start": 2343.694633108941,
+        "end": 2614.010032564349,
+        "interval_index": 135
+      },
+      {
+        "transport": "T013",
+        "start": 2614.010032564349,
+        "end": 2652.67357992763,
+        "interval_index": 136
+      },
+      {
+        "transport": "T013",
+        "start": 2652.6735799276303,
+        "end": 2892.6735799276303,
+        "interval_index": 137
+      },
+      {
+        "transport": "T013",
+        "start": 2892.6735799276303,
+        "end": 2924.8932027303645,
+        "interval_index": 138
+      },
+      {
+        "transport": "T013",
+        "start": 2924.8932027303645,
+        "end": 3070.9453589988775,
+        "interval_index": 139
+      },
+      {
+        "transport": "T013",
+        "start": 3070.9453589988775,
+        "end": 3140.4263775174663,
+        "interval_index": 140
+      },
+      {
+        "transport": "T017",
+        "start": 1598.9999000000003,
+        "end": 1599.0001000000002,
+        "interval_index": 183
+      },
+      {
+        "transport": "T017",
+        "start": 1599.0001000000002,
+        "end": 1639.554317848456,
+        "interval_index": 184
+      },
+      {
+        "transport": "T017",
+        "start": 1639.554317848456,
+        "end": 1947.822623770448,
+        "interval_index": 185
+      },
+      {
+        "transport": "T017",
+        "start": 1947.822623770448,
+        "end": 2101.956776731444,
+        "interval_index": 186
+      }
+    ],
+    "R001": [
+      {
+        "transport": "T002",
+        "start": 3070.9453589988775,
+        "end": 3140.4263775174663,
+        "interval_index": 16
+      },
+      {
+        "transport": "T002",
+        "start": 3140.4263775174663,
+        "end": 3181.8775852419203,
+        "interval_index": 17
+      },
+      {
+        "transport": "T002",
+        "start": 3181.8775852419203,
+        "end": 3215.4928318239513,
+        "interval_index": 18
+      },
+      {
+        "transport": "T002",
+        "start": 3215.4928318239513,
+        "end": 3395.4928318239513,
+        "interval_index": 19
+      },
+      {
+        "transport": "T002",
+        "start": 3395.4928318239513,
+        "end": 3446.6029901084567,
+        "interval_index": 20
+      },
+      {
+        "transport": "T002",
+        "start": 3446.6029901084567,
+        "end": 3824.4214597423183,
+        "interval_index": 21
+      },
+      {
+        "transport": "T007",
+        "start": 3070.9453589988775,
+        "end": 3140.4263775174663,
+        "interval_index": 64
+      },
+      {
+        "transport": "T007",
+        "start": 3140.4263775174663,
+        "end": 3364.7356334728956,
+        "interval_index": 65
+      },
+      {
+        "transport": "T007",
+        "start": 3364.7356334728956,
+        "end": 3454.057288746333,
+        "interval_index": 66
+      },
+      {
+        "transport": "T007",
+        "start": 3454.057288746333,
+        "end": 3664.057288746333,
+        "interval_index": 67
+      },
+      {
+        "transport": "T007",
+        "start": 3664.057288746333,
+        "end": 3715.785071949458,
+        "interval_index": 68
+      },
+      {
+        "transport": "T007",
+        "start": 3715.785071949458,
+        "end": 3933.6480927756393,
+        "interval_index": 69
+      },
+      {
+        "transport": "T007",
+        "start": 3933.6480927756393,
+        "end": 3941.3214326193893,
+        "interval_index": 70
+      },
+      {
+        "transport": "T007",
+        "start": 3941.3214326193893,
+        "end": 4121.321432619389,
+        "interval_index": 71
+      },
+      {
+        "transport": "T007",
+        "start": 4121.321432619389,
+        "end": 4153.7545177430875,
+        "interval_index": 72
+      },
+      {
+        "transport": "T007",
+        "start": 4153.7545177430875,
+        "end": 4655.346653959361,
+        "interval_index": 73
+      },
+      {
+        "transport": "T010",
+        "start": 3070.9453589988775,
+        "end": 3140.4263775174663,
+        "interval_index": 103
+      },
+      {
+        "transport": "T010",
+        "start": 3140.4263775174663,
+        "end": 3155.148279947186,
+        "interval_index": 104
+      },
+      {
+        "transport": "T010",
+        "start": 3155.148279947186,
+        "end": 3274.8911388339047,
+        "interval_index": 105
+      },
+      {
+        "transport": "T010",
+        "start": 3274.8911388339043,
+        "end": 3598.8911388339043,
+        "interval_index": 106
+      },
+      {
+        "transport": "T010",
+        "start": 3598.8911388339043,
+        "end": 3660.2233287753106,
+        "interval_index": 107
+      },
+      {
+        "transport": "T010",
+        "start": 3660.2233287753106,
+        "end": 3962.4781044824,
+        "interval_index": 108
+      },
+      {
+        "transport": "T012",
+        "start": 3140.4263775174663,
+        "end": 3457.748879489278,
+        "interval_index": 130
+      },
+      {
+        "transport": "T013",
+        "start": 3140.4263775174663,
+        "end": 3465.5240016411794,
+        "interval_index": 141
+      },
+      {
+        "transport": "T014",
+        "start": 4041.7267387328225,
+        "end": 4395.194259246042,
+        "interval_index": 144
+      },
+      {
+        "transport": "T014",
+        "start": 4395.194259246042,
+        "end": 4447.758614714791,
+        "interval_index": 145
+      },
+      {
+        "transport": "T014",
+        "start": 4447.758614714791,
+        "end": 4657.758614714792,
+        "interval_index": 146
+      },
+      {
+        "transport": "T014",
+        "start": 4657.758614714792,
+        "end": 4714.6941412447395,
+        "interval_index": 147
+      },
+      {
+        "transport": "T014",
+        "start": 4714.6941412447395,
+        "end": 4774.489675842198,
+        "interval_index": 148
+      },
+      {
+        "transport": "T016",
+        "start": 3248.918538244121,
+        "end": 3301.4828937128714,
+        "interval_index": 168
+      },
+      {
+        "transport": "T016",
+        "start": 3301.4828937128714,
+        "end": 3511.4828937128714,
+        "interval_index": 169
+      },
+      {
+        "transport": "T016",
+        "start": 3511.4828937128714,
+        "end": 3555.2865232701633,
+        "interval_index": 170
+      },
+      {
+        "transport": "T016",
+        "start": 3555.2865232701633,
+        "end": 3997.120923911687,
+        "interval_index": 171
+      },
+      {
+        "transport": "T018",
+        "start": 4208.149674069356,
+        "end": 4692.220710132946,
+        "interval_index": 190
+      },
+      {
+        "transport": "T018",
+        "start": 4692.220710132946,
+        "end": 4774.489675842198,
+        "interval_index": 191
+      },
+      {
+        "transport": "T018",
+        "start": 4774.489675842198,
+        "end": 4803.872779224743,
+        "interval_index": 192
+      },
+      {
+        "transport": "T018",
+        "start": 4803.872779224743,
+        "end": 5199.872779224743,
+        "interval_index": 193
+      },
+      {
+        "transport": "T018",
+        "start": 5199.872779224743,
+        "end": 5289.19443449818,
+        "interval_index": 194
+      },
+      {
+        "transport": "T018",
+        "start": 5289.19443449818,
+        "end": 5524.543551836691,
+        "interval_index": 195
+      },
+      {
+        "transport": "T020",
+        "start": 4023.4572688517137,
+        "end": 4525.049405067988,
+        "interval_index": 210
+      },
+      {
+        "transport": "T020",
+        "start": 4525.049405067988,
+        "end": 4563.969107216425,
+        "interval_index": 211
+      },
+      {
+        "transport": "T020",
+        "start": 4563.969107216425,
+        "end": 4773.969107216425,
+        "interval_index": 212
+      },
+      {
+        "transport": "T020",
+        "start": 4773.969107216425,
+        "end": 4774.489675842198,
+        "interval_index": 213
+      },
+      {
+        "transport": "T020",
+        "start": 4774.489675842198,
+        "end": 4806.402192340123,
+        "interval_index": 214
+      },
+      {
+        "transport": "T020",
+        "start": 4806.402192340123,
+        "end": 5307.994328556398,
+        "interval_index": 215
+      },
+      {
+        "transport": "T021",
+        "start": 5088.496407972759,
+        "end": 5524.543551836691,
+        "interval_index": 218
+      },
+      {
+        "transport": "T022",
+        "start": 4396.666079960037,
+        "end": 4774.489675842198,
+        "interval_index": 229
+      },
+      {
+        "transport": "T023",
+        "start": 3550.7559703154607,
+        "end": 3904.22349082868,
+        "interval_index": 238
+      },
+      {
+        "transport": "T023",
+        "start": 3904.22349082868,
+        "end": 3956.78784629743,
+        "interval_index": 239
+      },
+      {
+        "transport": "T023",
+        "start": 3956.78784629743,
+        "end": 4166.7878462974295,
+        "interval_index": 240
+      },
+      {
+        "transport": "T023",
+        "start": 4166.7878462974295,
+        "end": 4210.5914758547215,
+        "interval_index": 241
+      },
+      {
+        "transport": "T023",
+        "start": 4210.5914758547215,
+        "end": 4564.058996367941,
+        "interval_index": 242
+      }
+    ],
+    "R004": [
+      {
+        "transport": "T004",
+        "start": 1141.1763041178385,
+        "end": 1598.9999000000003,
+        "interval_index": 32
+      },
+      {
+        "transport": "T008",
+        "start": 769.8547183897838,
+        "end": 900.0085824475755,
+        "interval_index": 78
+      },
+      {
+        "transport": "T008",
+        "start": 900.0085824475755,
+        "end": 989.8261117444505,
+        "interval_index": 79
+      },
+      {
+        "transport": "T008",
+        "start": 989.8261117444505,
+        "end": 1229.8261117444504,
+        "interval_index": 80
+      },
+      {
+        "transport": "T008",
+        "start": 1229.8261117444504,
+        "end": 1304.6740528251796,
+        "interval_index": 81
+      },
+      {
+        "transport": "T008",
+        "start": 1304.6740528251796,
+        "end": 1598.9999000000003,
+        "interval_index": 82
+      },
+      {
+        "transport": "T011",
+        "start": 769.8547183897838,
+        "end": 1098.3333993602596,
+        "interval_index": 112
+      },
+      {
+        "transport": "T011",
+        "start": 1098.3333993602596,
+        "end": 1157.249544379791,
+        "interval_index": 113
+      },
+      {
+        "transport": "T011",
+        "start": 1157.249544379791,
+        "end": 1367.249544379791,
+        "interval_index": 114
+      },
+      {
+        "transport": "T011",
+        "start": 1367.249544379791,
+        "end": 1416.3463318960669,
+        "interval_index": 115
+      },
+      {
+        "transport": "T011",
+        "start": 1416.3463318960669,
+        "end": 1598.9999000000003,
+        "interval_index": 116
+      },
+      {
+        "transport": "T015",
+        "start": 769.8547183897838,
+        "end": 855.0625503624788,
+        "interval_index": 158
+      },
+      {
+        "transport": "T015",
+        "start": 855.0625503624788,
+        "end": 888.6771646202913,
+        "interval_index": 159
+      },
+      {
+        "transport": "T015",
+        "start": 888.6771646202913,
+        "end": 1128.6771646202913,
+        "interval_index": 160
+      },
+      {
+        "transport": "T015",
+        "start": 1128.6771646202913,
+        "end": 1156.6893431684684,
+        "interval_index": 161
+      },
+      {
+        "transport": "T015",
+        "start": 1156.6893431684684,
+        "end": 1475.251563259653,
+        "interval_index": 162
+      },
+      {
+        "transport": "T017",
+        "start": 769.8547183897838,
+        "end": 884.4089689015445,
+        "interval_index": 175
+      },
+      {
+        "transport": "T017",
+        "start": 884.4089689015445,
+        "end": 900.8297013234195,
+        "interval_index": 176
+      },
+      {
+        "transport": "T017",
+        "start": 900.8297013234195,
+        "end": 1080.8297013234196,
+        "interval_index": 177
+      },
+      {
+        "transport": "T017",
+        "start": 1080.8297013234196,
+        "end": 1109.1051570525863,
+        "interval_index": 178
+      },
+      {
+        "transport": "T017",
+        "start": 1109.1051570525863,
+        "end": 1347.7669834571802,
+        "interval_index": 179
+      },
+      {
+        "transport": "T017",
+        "start": 1347.7669834571802,
+        "end": 1410.4575303321803,
+        "interval_index": 180
+      },
+      {
+        "transport": "T017",
+        "start": 1410.45753033218,
+        "end": 1590.45753033218,
+        "interval_index": 181
+      },
+      {
+        "transport": "T017",
+        "start": 1590.45753033218,
+        "end": 1598.9999000000003,
+        "interval_index": 182
+      }
+    ],
+    "R003": [
+      {
+        "transport": "T014",
+        "start": 4774.489675842198,
+        "end": 4889.128144247865,
+        "interval_index": 149
+      },
+      {
+        "transport": "T014",
+        "start": 4889.128144247865,
+        "end": 4944.130776083803,
+        "interval_index": 150
+      },
+      {
+        "transport": "T014",
+        "start": 4944.130776083803,
+        "end": 5124.130776083803,
+        "interval_index": 151
+      },
+      {
+        "transport": "T014",
+        "start": 5124.130776083803,
+        "end": 5180.777164837058,
+        "interval_index": 152
+      },
+      {
+        "transport": "T014",
+        "start": 5180.777164837058,
+        "end": 5524.543551836691,
+        "interval_index": 153
+      },
+      {
+        "transport": "T019",
+        "start": 4774.489675842198,
+        "end": 5229.135891263195,
+        "interval_index": 201
+      },
+      {
+        "transport": "T019",
+        "start": 5229.135891263195,
+        "end": 5314.105474393078,
+        "interval_index": 202
+      },
+      {
+        "transport": "T019",
+        "start": 5314.105474393078,
+        "end": 5524.543551836691,
+        "interval_index": 203
+      },
+      {
+        "transport": "T019",
+        "start": 5524.543551836691,
+        "end": 5674.105474393078,
+        "interval_index": 204
+      },
+      {
+        "transport": "T019",
+        "start": 5674.105474393078,
+        "end": 5742.081140896984,
+        "interval_index": 205
+      },
+      {
+        "transport": "T019",
+        "start": 5742.081140896984,
+        "end": 6172.54355183669,
+        "interval_index": 206
+      },
+      {
+        "transport": "T021",
+        "start": 5524.543551836691,
+        "end": 5629.127206883573,
+        "interval_index": 219
+      },
+      {
+        "transport": "T021",
+        "start": 5629.127206883573,
+        "end": 5667.790754246855,
+        "interval_index": 220
+      },
+      {
+        "transport": "T021",
+        "start": 5667.790754246855,
+        "end": 5877.790754246855,
+        "interval_index": 221
+      },
+      {
+        "transport": "T021",
+        "start": 5877.790754246855,
+        "end": 5910.01037704959,
+        "interval_index": 222
+      },
+      {
+        "transport": "T021",
+        "start": 5910.01037704959,
+        "end": 6172.54355183669,
+        "interval_index": 223
+      },
+      {
+        "transport": "T022",
+        "start": 4774.489675842198,
+        "end": 4873.555454020267,
+        "interval_index": 230
+      },
+      {
+        "transport": "T022",
+        "start": 4873.555454020267,
+        "end": 4898.847018961673,
+        "interval_index": 231
+      },
+      {
+        "transport": "T022",
+        "start": 4898.847018961673,
+        "end": 5108.847018961673,
+        "interval_index": 232
+      },
+      {
+        "transport": "T022",
+        "start": 5108.847018961673,
+        "end": 5129.923323079511,
+        "interval_index": 233
+      },
+      {
+        "transport": "T022",
+        "start": 5129.923323079511,
+        "end": 5524.543551836691,
+        "interval_index": 234
+      }
+    ]
+  },
+  "transport_task_count": 23,
+  "relay_task_count": 4,
+  "communication_interval_count": 244,
+  "box_count": 80
+}

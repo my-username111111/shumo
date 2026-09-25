@@ -1,0 +1,52 @@
+{
+  "status": "PASS",
+  "scope": "fixed Q3, all legal Q4 partitions and all eight resource types",
+  "component_methods": "union-find and independent graph traversal",
+  "proof_methods": "independent interval peak, Edmonds-Karp flow, descending bottleneck thresholds and assignment replay",
+  "optimality_certificates_independently_verified": true,
+  "physical_inventory_mapping_verified": true,
+  "assignment_rows": 208,
+  "partitions": {
+    "P1": {
+      "status": "PASS",
+      "groups": 2,
+      "transport_tasks": 23,
+      "relay_tasks": 3,
+      "assignment_rows": 52,
+      "stock_sufficient": false,
+      "executable_after_procurement": true
+    },
+    "P2": {
+      "status": "PASS",
+      "groups": 2,
+      "transport_tasks": 23,
+      "relay_tasks": 3,
+      "assignment_rows": 52,
+      "stock_sufficient": false,
+      "executable_after_procurement": true
+    },
+    "P3": {
+      "status": "PASS",
+      "groups": 2,
+      "transport_tasks": 23,
+      "relay_tasks": 3,
+      "assignment_rows": 52,
+      "stock_sufficient": false,
+      "executable_after_procurement": true
+    },
+    "P4": {
+      "status": "PASS",
+      "groups": 3,
+      "transport_tasks": 23,
+      "relay_tasks": 3,
+      "assignment_rows": 52,
+      "stock_sufficient": false,
+      "executable_after_procurement": true
+    }
+  },
+  "q3_tasks_unchanged": true,
+  "all_boxes_delivered_once": true,
+  "all_communication_intervals_certified": true,
+  "resources_not_shared_between_groups": true,
+  "ready_before_reuse": true
+}

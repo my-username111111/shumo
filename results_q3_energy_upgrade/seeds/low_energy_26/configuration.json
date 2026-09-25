@@ -1,0 +1,140 @@
+{
+  "args": {
+    "output": "results_q3_energy_next\\T014_B_three_relay_retry",
+    "input": "results_q3_energy_next\\T014_B_five_relay_timing\\q3_plan.json",
+    "phase": "schedule",
+    "seconds": 30.0,
+    "limit": 1,
+    "offset": 0,
+    "seed": 2035,
+    "expanded_sites": false,
+    "refine_sites": false,
+    "sites_json": "results_q3_q4_resilience\\expanded_sites\\sites.json",
+    "extra_loss": 1.0,
+    "buffer": 5.0,
+    "allow_soft_delay": false,
+    "interval": 6.0,
+    "fixed_models": true,
+    "max_makespan": 6900.0,
+    "max_weighted_delivery": 2800000.0,
+    "max_relay_sorties": 3,
+    "policies": [
+      "energy"
+    ]
+  },
+  "baseline_sha256": "5ed8e05780ea6e0c85ed1bc2e847897442f2e47db8f197c2790bd6f4b58c7e35",
+  "input_fingerprint": "8b318a9045d58f13b75e945b88ac406c28444aa986dfed4cc92f08b05d5fc6f0",
+  "site_records": [
+    {
+      "id": "J0000",
+      "lon": 109.20285475,
+      "lat": 23.02139045,
+      "agl": 300.0,
+      "altitude": 744.9194946289062,
+      "gateway_margin": 5.68493634450104,
+      "lead": 577.8625809705912,
+      "back_time": 419.29753885633346,
+      "travel_energy_kwh": 0.20050241493256435,
+      "max_service_seconds": 7721.992096584336
+    },
+    {
+      "id": "J0001",
+      "lon": 109.25,
+      "lat": 23.06,
+      "agl": 300.0,
+      "altitude": 548.0058898925781,
+      "gateway_margin": 0.2893925921353002,
+      "lead": 718.5091625565008,
+      "back_time": 543.5346533808823,
+      "travel_energy_kwh": 0.3042977442532498,
+      "max_service_seconds": 7382.29829153482
+    },
+    {
+      "id": "J0002",
+      "lon": 109.2865966,
+      "lat": 23.0022097,
+      "agl": 300.0,
+      "altitude": 670.6218566894531,
+      "gateway_margin": 0.7188306771577402,
+      "lead": 728.9578332912158,
+      "back_time": 564.2013213486703,
+      "travel_energy_kwh": 0.30229437248947644,
+      "max_service_seconds": 7388.854780943533
+    },
+    {
+      "id": "X0003",
+      "lon": 109.24610349667968,
+      "lat": 23.014220323535156,
+      "agl": 300.0,
+      "altitude": 542.7470092773438,
+      "gateway_margin": 11.180289521928685,
+      "lead": 426.10806838734294,
+      "back_time": 250.69531916045491,
+      "travel_energy_kwh": 0.11785816423316824,
+      "max_service_seconds": 7992.4641897823585
+    },
+    {
+      "id": "X0004",
+      "lon": 109.25155384531251,
+      "lat": 23.063517446875,
+      "agl": 300.0,
+      "altitude": 500.80555725097656,
+      "gateway_margin": 9.710487512954643,
+      "lead": 734.8138013789235,
+      "back_time": 555.9059311498381,
+      "travel_energy_kwh": 0.3180554953790304,
+      "max_service_seconds": 7337.272924214083
+    },
+    {
+      "id": "X0005",
+      "lon": 109.2881357,
+      "lat": 23.049464,
+      "agl": 300.0,
+      "altitude": 573.2224731445312,
+      "gateway_margin": 8.51901993205287,
+      "lead": 816.2528762220276,
+      "back_time": 643.3797489840717,
+      "travel_energy_kwh": 0.36496025558958956,
+      "max_service_seconds": 7183.766436252254
+    },
+    {
+      "id": "X0006",
+      "lon": 109.25165948499999,
+      "lat": 23.017321489999997,
+      "agl": 300.0,
+      "altitude": 567.7374877929688,
+      "gateway_margin": 8.40843533586174,
+      "lead": 476.2889364030841,
+      "back_time": 302.95872705249815,
+      "travel_energy_kwh": 0.14814930593579098,
+      "max_service_seconds": 7893.32954421014
+    },
+    {
+      "id": "X0007",
+      "lon": 109.265410375,
+      "lat": 23.00103465,
+      "agl": 300.0,
+      "altitude": 694.4912109375,
+      "gateway_margin": 4.6418264212589975,
+      "lead": 593.9302524244695,
+      "back_time": 431.1628533359278,
+      "travel_energy_kwh": 0.2143372486497967,
+      "max_service_seconds": 7676.714458964303
+    },
+    {
+      "id": "X0008",
+      "lon": 109.270410375,
+      "lat": 23.00603465,
+      "agl": 300.0,
+      "altitude": 660.79150390625,
+      "gateway_margin": 3.7102170759866624,
+      "lead": 613.8175344463092,
+      "back_time": 448.2418264384967,
+      "travel_energy_kwh": 0.2294283195520555,
+      "max_service_seconds": 7627.32549964782
+    }
+  ],
+  "candidate_sites": 9,
+  "objective_policy": "zero soft delay; policy-specific lexicographic branches",
+  "q4_policy": "fixed Q3 partitions; report shortages, no stock-feasibility constraint"
+}

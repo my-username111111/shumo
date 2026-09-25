@@ -87,6 +87,10 @@ def main():
     parser.add_argument('--interval',type=float,default=90.)
     parser.add_argument('--fixed-models',action='store_true')
     parser.add_argument('--max-makespan',type=float)
+    parser.add_argument('--max-weighted-delivery',type=float,
+                        help='Cap the finite CP weighted-delivery objective in priority-seconds')
+    parser.add_argument('--max-relay-sorties',type=int,
+                        help='Cap the number of relay missions while searching the energy frontier')
     parser.add_argument('--policies',nargs='+',choices=['timely','energy','makespan'],default=['timely','energy','makespan'])
     args=parser.parse_args();s=Scenario();baseline=read(args.input);out=args.output
     sites=site_pool(s,baseline,refine=args.refine_sites)
@@ -103,7 +107,7 @@ def main():
                for seed in (args.seed,args.seed+1) for policy in args.policies]
     elif args.phase=='low_sorties':
         paths=list((ROOT/'results_q2_extended/plans').glob('*.json'))
-        cases=[dict(label=p.stem,source=read(p),policy='timely',seed=args.seed) for p in paths]
+        cases=[dict(label=p.stem,source=read(p),policy=args.policies[0],seed=args.seed) for p in paths]
     else:
         cases=neighbors(s,baseline)
         dump_json(out/'neighborhood.json',[{k:v for k,v in c.items() if k!='source'} for c in cases])
@@ -119,6 +123,8 @@ def main():
         try:
             caps={} if args.allow_soft_delay else {'soft':0}
             if args.max_makespan is not None:caps['makespan']=args.max_makespan
+            if args.max_weighted_delivery is not None:caps['weighted']=args.max_weighted_delivery
+            if args.max_relay_sorties is not None:caps['sorties']=args.max_relay_sorties
             plan,report=solve(s,case['source'],geometry,seconds=args.seconds,
                               seed=case.get('seed',args.seed+args.offset+index),
                               policy=case.get('policy','timely'),variable_models=not args.fixed_models,

@@ -1,0 +1,105 @@
+{
+  "stages": [
+    {
+      "target": "soft",
+      "status": "OPTIMAL",
+      "value": 0.0,
+      "lower_bound": 0.0,
+      "relative_gap": 0.0
+    },
+    {
+      "target": "energy",
+      "status": "OPTIMAL",
+      "value": 72548219.0,
+      "lower_bound": 72548219.0,
+      "relative_gap": 0.0
+    },
+    {
+      "target": "makespan",
+      "status": "OPTIMAL",
+      "value": 6420.0,
+      "lower_bound": 6420.0,
+      "relative_gap": 0.0
+    },
+    {
+      "target": "weighted",
+      "status": "FEASIBLE",
+      "value": 2629986.0,
+      "lower_bound": 2400878.0,
+      "relative_gap": 0.08711377170829046
+    },
+    {
+      "target": "sorties",
+      "status": "OPTIMAL",
+      "value": 3.0,
+      "lower_bound": 3.0,
+      "relative_gap": 0.0
+    }
+  ],
+  "policy": "energy",
+  "seed": 2030,
+  "scale_seconds": 1,
+  "coverage_max_interval_seconds": 6.0,
+  "stage_budget_seconds": 35.0,
+  "search_workers": 8,
+  "candidate_sites": 9,
+  "route_modes": 23,
+  "session_slots": 14,
+  "q4_constraint": false,
+  "independent_groups": false,
+  "resource_buffer_seconds": 5.0,
+  "objective_caps": {
+    "soft": 0,
+    "makespan": 6500.0,
+    "weighted": 2630000.0,
+    "sorties": 3
+  },
+  "elapsed_seconds": 83.3921343999973,
+  "bound_scope": "Finite sites, fixed box groups/visit orders, optional type modes and bounded relay sessions; later bounds conditional on earlier attained caps.",
+  "status": "PASS",
+  "objective": {
+    "weighted_soft_delay": 0,
+    "weighted_delivery_seconds": 2629604.0032893578,
+    "makespan": 6419.809520857649,
+    "energy_kwh": 72.54458417257236,
+    "transport_energy_kwh": 69.30723683159759,
+    "relay_energy_kwh": 3.2373473409747615,
+    "transport_sorties": 23,
+    "relay_sorties": 3,
+    "total_sorties": 26
+  },
+  "components": 3,
+  "q4_validation": "PASS",
+  "q4": [
+    {
+      "id": "P1",
+      "group_count": 2,
+      "resource_total": 33,
+      "shortage_total": 6,
+      "workload_cv": 0.8463903375050967
+    },
+    {
+      "id": "P2",
+      "group_count": 2,
+      "resource_total": 35,
+      "shortage_total": 8,
+      "workload_cv": 0.8039257823649988
+    },
+    {
+      "id": "P3",
+      "group_count": 2,
+      "resource_total": 29,
+      "shortage_total": 2,
+      "workload_cv": 0.9575354448599022
+    },
+    {
+      "id": "P4",
+      "group_count": 3,
+      "resource_total": 35,
+      "shortage_total": 8,
+      "workload_cv": 1.2081641222748518
+    }
+  ],
+  "label": "energy_2030",
+  "elapsed_wall_seconds": 85.5364527999991
+}

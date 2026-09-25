@@ -1,0 +1,84 @@
+{
+  "status": "PASS",
+  "scope": "fixed routes, resource order, relay sites and original relay coverage obligations",
+  "buffer_seconds": 5.0,
+  "policy": "energy",
+  "allow_soft_delay": false,
+  "delivery_cap": null,
+  "makespan_cap": 6900.0,
+  "fixed_relay_intervals": 129,
+  "input_sha256": "0c625f0e1994daeb20e590d21c3807177c688776742f74b931fd11f725f883e2",
+  "lp_stages": [
+    {
+      "objective": "relay_service_seconds",
+      "value": 7762.211413524958,
+      "status": "OPTIMAL"
+    },
+    {
+      "objective": "weighted_start",
+      "value": 1550776.5092035152,
+      "status": "OPTIMAL"
+    },
+    {
+      "objective": "makespan",
+      "value": 6888.018242618097,
+      "status": "OPTIMAL"
+    }
+  ],
+  "old_objective": {
+    "weighted_soft_delay": 0,
+    "weighted_delivery_seconds": 2799589.6905486966,
+    "makespan": 6889.630285736439,
+    "energy_kwh": 71.90810114424598,
+    "transport_energy_kwh": 68.78747602549343,
+    "relay_energy_kwh": 3.1206251187525393,
+    "transport_sorties": 23,
+    "relay_sorties": 3,
+    "total_sorties": 26
+  },
+  "new_objective": {
+    "weighted_soft_delay": 0,
+    "weighted_delivery_seconds": 2799040.1997622126,
+    "makespan": 6888.018242618096,
+    "energy_kwh": 71.90724907921192,
+    "transport_energy_kwh": 68.78747602549343,
+    "relay_energy_kwh": 3.1197730537184984,
+    "transport_sorties": 23,
+    "relay_sorties": 3,
+    "total_sorties": 26
+  },
+  "recertified_relation_changed_seconds": 1.4912521945802837,
+  "recertified_relation_changed_intervals": 10,
+  "q3_independent_validation": "PASS",
+  "q4_independent_validation": "PASS",
+  "q4": [
+    {
+      "id": "P1",
+      "groups": 2,
+      "shortage": 6,
+      "resources": 33,
+      "cv": 0.8445990078957646
+    },
+    {
+      "id": "P2",
+      "groups": 2,
+      "shortage": 8,
+      "resources": 35,
+      "cv": 0.8016392494348984
+    },
+    {
+      "id": "P3",
+      "groups": 2,
+      "shortage": 2,
+      "resources": 29,
+      "cv": 0.9570402415391337
+    },
+    {
+      "id": "P4",
+      "groups": 3,
+      "shortage": 8,
+      "resources": 35,
+      "cv": 1.205787811235358
+    }
+  ]
+}
