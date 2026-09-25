@@ -1,0 +1,92 @@
+{
+  "status": "PASS",
+  "scope": "fixed routes, resource order, relay sites and original relay coverage obligations, plus selected Q4 group resource chains",
+  "buffer_seconds": 5.0,
+  "policy": "energy",
+  "allow_soft_delay": false,
+  "delivery_cap": null,
+  "makespan_cap": 7000.0,
+  "fixed_relay_intervals": 133,
+  "input_sha256": "bf095700e8a1827f5cbdeea5619d2ff5e77d7a0355f49216b4e783e7389297d0",
+  "lp_stages": [
+    {
+      "objective": "relay_service_seconds",
+      "value": 6313.115066721427,
+      "status": "OPTIMAL"
+    },
+    {
+      "objective": "weighted_start",
+      "value": 1636330.0868565126,
+      "status": "OPTIMAL"
+    },
+    {
+      "objective": "makespan",
+      "value": 6999.999999934213,
+      "status": "OPTIMAL"
+    }
+  ],
+  "old_objective": {
+    "weighted_soft_delay": 0,
+    "weighted_delivery_seconds": 2854493.6905486966,
+    "makespan": 6962.630285736439,
+    "energy_kwh": 71.83260108406945,
+    "transport_energy_kwh": 68.78747602549343,
+    "relay_energy_kwh": 3.045125058576014,
+    "transport_sorties": 23,
+    "relay_sorties": 4,
+    "total_sorties": 27
+  },
+  "new_objective": {
+    "weighted_soft_delay": 0,
+    "weighted_delivery_seconds": 2884593.7774152094,
+    "makespan": 6999.999999934213,
+    "energy_kwh": 71.78252513528987,
+    "transport_energy_kwh": 68.78747602549343,
+    "relay_energy_kwh": 2.99504910979645,
+    "transport_sorties": 23,
+    "relay_sorties": 4,
+    "total_sorties": 27
+  },
+  "recertified_relation_changed_seconds": 446.5272133546398,
+  "recertified_relation_changed_intervals": 16,
+  "q3_independent_validation": "PASS",
+  "q4_independent_validation": "PASS",
+  "q4": [
+    {
+      "id": "P1",
+      "groups": 2,
+      "shortage": 5,
+      "resources": 32,
+      "cv": 0.8441533430598898
+    },
+    {
+      "id": "P2",
+      "groups": 2,
+      "shortage": 7,
+      "resources": 34,
+      "cv": 0.8010703829807813
+    },
+    {
+      "id": "P3",
+      "groups": 2,
+      "shortage": 2,
+      "resources": 28,
+      "cv": 0.9569170399208916
+    },
+    {
+      "id": "P4",
+      "groups": 3,
+      "shortage": 7,
+      "resources": 34,
+      "cv": 1.2051967203674028
+    }
+  ],
+  "preserved_q4_resources": [
+    {
+      "partition": "P4",
+      "group": "G2",
+      "resource": "A_batteries",
+      "maximum": 5
+    }
+  ]
+}

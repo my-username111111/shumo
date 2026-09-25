@@ -6,6 +6,7 @@ durations change. Independent recertification may choose a different relay
 over an overlap; the actual relation and Q4 are then rebuilt and audited.
 The LP optimizes weighted delivery, makespan, then relay service energy in
 lexicographic order. Optimality applies to this fixed-structure LP only.
+Optional Q4 resource chains can also be frozen to preserve a group peak bound.
 """
 
 from __future__ import annotations
@@ -35,7 +36,9 @@ EPS = 1e-4
 def optimize(s: Scenario, original: dict, buffer: float,
              policy: str = 'timely', delivery_cap: float | None = None,
              makespan_cap: float | None = None,
-             allow_soft_delay: bool = False) -> tuple[dict, dict, dict]:
+             allow_soft_delay: bool = False,
+             preserve_q4_resources: list[tuple[str, str, str]] | None = None
+             ) -> tuple[dict, dict, dict]:
     """Return certified plan, exact Q4, and the fixed-structure LP record."""
     if not isfinite(buffer) or buffer < 0:
         raise ValueError('Resource handoff buffer must be nonnegative')
@@ -103,6 +106,33 @@ def optimize(s: Scenario, original: dict, buffer: float,
                 else:
                     elapsed = old[end] - old['service_end']
                     solver.Add(launches[new['id']] >= service_ends[old['id']] + elapsed + buffer + EPS)
+    # Preserve selected Q4 resource chains while refining the Q3 timetable.
+    # Q4 can reassign a battery within a group, so freezing only its Q3
+    # physical identity can otherwise undo a group peak-count improvement.
+    preserved = []
+    original_q4 = None
+    if preserve_q4_resources:
+        original_q4 = solve_q4(s, original,
+            json.dumps(original, ensure_ascii=False).encode('utf8'))
+        for partition_id, group_id, resource_key in preserve_q4_resources:
+            if resource_key not in {f'{g}_{kind}' for g in 'ABC'
+                                    for kind in ('aircraft', 'batteries')}:
+                raise ValueError('Q4 chain preservation supports transport resources only')
+            partition = next((p for p in original_q4['partitions']
+                              if p['id'] == partition_id), None)
+            if partition is None or group_id not in partition['certificates']:
+                raise ValueError('Unknown Q4 partition or group')
+            cert = partition['certificates'][group_id][resource_key]
+            end = 'battery_ready' if resource_key.endswith('batteries') else 'return_time'
+            for chain in cert['chains']:
+                for predecessor, successor in zip(chain, chain[1:]):
+                    row = transports[predecessor]
+                    elapsed = row[end] - row['start']
+                    solver.Add(starts[successor] >= starts[predecessor] +
+                               elapsed + buffer + EPS)
+            preserved.append(dict(partition=partition_id, group=group_id,
+                                  resource=resource_key,
+                                  maximum=cert['minimum_resources']))
     # A previously certified relay interval remains on the same relay. Its
     # geometry is invariant under a pure shift of the transport trajectory.
     relay_rows = 0
@@ -184,6 +214,8 @@ def optimize(s: Scenario, original: dict, buffer: float,
         independent_groups=old_search.get('independent_groups',False),
         timing_lp_stages=stages,
         timing_bound_scope='Optimal only for the continuous timing LP with frozen routes, aircraft/battery sequence, relay sites and original relay coverage obligations')
+    if preserved:
+        result['search']['preserved_q4_resources']=preserved
     result['q2_seed'] = f"timing_lp_buffer_{buffer:g}"
     result = accept(s, result)
     verify_fixed_q3(s, result)
@@ -210,7 +242,19 @@ def optimize(s: Scenario, original: dict, buffer: float,
     checked = audit(s, result, q4)
     if checked['status'] != 'PASS':
         raise AssertionError('Exact Q4 audit failed')
-    report = dict(status='PASS',scope='fixed routes, resource order, relay sites and original relay coverage obligations',
+    for cap in preserved:
+        new_partition = next((p for p in q4['partitions']
+                              if p['id'] == cap['partition']), None)
+        if new_partition is None:
+            raise AssertionError('Preserved Q4 partition disappeared')
+        new_group = next((g for g in new_partition['groups']
+                          if g['id'] == cap['group']), None)
+        if new_group is None or new_group['resource_need'][cap['resource']] > cap['maximum']:
+            raise AssertionError('Q4 resource cap lost after timing refinement')
+    scope='fixed routes, resource order, relay sites and original relay coverage obligations'
+    if preserved:
+        scope+=', plus selected Q4 group resource chains'
+    report = dict(status='PASS',scope=scope,
                   buffer_seconds=buffer, policy=policy, allow_soft_delay=allow_soft_delay,
                   delivery_cap=delivery_cap,
                   makespan_cap=makespan_cap, fixed_relay_intervals=relay_rows,
@@ -222,6 +266,8 @@ def optimize(s: Scenario, original: dict, buffer: float,
                   q3_independent_validation='PASS',q4_independent_validation=checked['status'],
                   q4=[dict(id=p['id'],groups=p['group_count'],shortage=p['shortage_total'],
                            resources=p['resource_total'],cv=p['workload_cv']) for p in q4['partitions']])
+    if preserved:
+        report['preserved_q4_resources']=preserved
     return result, q4, report
 
 
@@ -234,12 +280,20 @@ def main() -> None:
     parser.add_argument('--delivery-cap',type=float)
     parser.add_argument('--makespan-cap',type=float)
     parser.add_argument('--allow-soft-delay',action='store_true')
+    parser.add_argument('--preserve-q4-resource',action='append',default=[],
+                        help='Preserve a Q4 resource chain, e.g. P4:G2:A_batteries')
     args = parser.parse_args()
     s = Scenario()
     original = json.loads(args.input.read_text(encoding='utf8'))
+    preserved = []
+    for item in args.preserve_q4_resource:
+        parts = item.split(':')
+        if len(parts) != 3:
+            parser.error('Use --preserve-q4-resource P4:G2:A_batteries')
+        preserved.append(tuple(parts))
     plan, q4, report = optimize(s, original, args.buffer, args.policy,
                                 args.delivery_cap, args.makespan_cap,
-                                args.allow_soft_delay)
+                                args.allow_soft_delay, preserved)
     dump_json(args.output/'q3_plan.json',plan)
     dump_json(args.output/'q4_results.json',q4)
     dump_json(args.output/'report.json',report)

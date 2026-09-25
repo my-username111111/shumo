@@ -146,7 +146,8 @@ def prepare_modes(s, source, geometry, variable_models=True):
 
 def solve(s, source, geometry, seconds=20., seed=2026, slots=2,
           variable_models=True, policy='timely', q4_groups=None,
-          independent_groups=False, resource_buffer=0., objective_caps=None):
+          independent_groups=False, resource_buffer=0., objective_caps=None,
+          group_resource_caps=None):
     if not isfinite(seconds) or seconds<=0 or not isinstance(slots,int) or slots<1:
         raise ValueError('Positive solver time and positive integer relay slots required')
     if policy not in {'timely','energy','makespan'}:
@@ -222,6 +223,32 @@ def solve(s, source, geometry, seconds=20., seed=2026, slots=2,
             energy_terms.append(up(route['energy_kwh']*1e6)*x)
         model.AddExactlyOne(selected)
         selections.append(selected); aircraft.append(av); bat_vars.append(bv)
+
+    # A Q4 group must execute its own transport tasks. Bound its type-specific
+    # interval peaks while Q3 still chooses the actual fleet and timetable.
+    # The extra buffer is conservative relative to Q4's half-open intervals.
+    group_caps = []
+    for group_index, kind, typ, cap in group_resource_caps or []:
+        if (not 0 <= group_index < len(groups) or kind not in ('aircraft','battery')
+                or typ not in s.transport or not isinstance(cap,int) or cap < 0):
+            raise ValueError('Invalid Q4 group resource cap')
+        scoped = []
+        for i, options in enumerate(modes):
+            if job_groups[i] != group_index:
+                continue
+            for k, option in enumerate(options):
+                if option['model'] != typ:
+                    continue
+                route = option['route']
+                size = route['duration']
+                if kind == 'battery':
+                    size += s.charge_time(route['return_soc'], s.battery_charge[typ])
+                scoped.append(model.NewOptionalFixedSizeIntervalVar(
+                    starts[i], up(size)+buffer, selections[i][k],
+                    f'q4cap_{group_index}_{kind}_{typ}_{i}_{k}'))
+        if scoped:
+            model.AddCumulative(scoped, [1]*len(scoped), cap)
+        group_caps.append(dict(group_index=group_index, kind=kind, model=typ, cap=cap))
 
     # Variable-duration relay sessions. Charge time is a conservative piecewise
     # affine upper rounding of the original two-stage SOC curve, not a full
@@ -371,6 +398,8 @@ def solve(s, source, geometry, seconds=20., seed=2026, slots=2,
         resource_buffer_seconds=resource_buffer,objective_caps=objective_caps or {},
         elapsed_seconds=perf_counter()-start_clock,
         bound_scope='Finite sites, fixed box groups/visit orders, optional type modes and bounded relay sessions; later bounds conditional on earlier attained caps.')
+    if group_caps:
+        report['q4_group_resource_caps']=group_caps
     if successful is None:
         return None,report
     solver=successful
