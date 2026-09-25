@@ -1,0 +1,28 @@
+{
+  "stages": [
+    {
+      "target": "soft",
+      "status": "UNKNOWN",
+      "value": null,
+      "lower_bound": 0.0,
+      "relative_gap": null
+    }
+  ],
+  "policy": "timely",
+  "seed": 2030,
+  "scale_seconds": 1,
+  "candidate_sites": 9,
+  "route_modes": 36,
+  "session_slots": 18,
+  "q4_constraint": false,
+  "independent_groups": false,
+  "resource_buffer_seconds": 0.0,
+  "objective_caps": {
+    "soft": 0
+  },
+  "elapsed_seconds": 15.460870200011414,
+  "bound_scope": "Finite sites, fixed box groups/visit orders, optional type modes and bounded relay sessions; later bounds conditional on earlier attained caps.",
+  "status": "BUDGET_EXHAUSTED",
+  "label": "19_fast",
+  "elapsed_wall_seconds": 15.47212310001487
+}

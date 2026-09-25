@@ -1,0 +1,78 @@
+{
+  "stages": [
+    {
+      "target": "soft",
+      "status": "OPTIMAL",
+      "value": 0.0,
+      "lower_bound": 0.0,
+      "relative_gap": 0.0
+    },
+    {
+      "target": "weighted",
+      "status": "FEASIBLE",
+      "value": 3050600.0,
+      "lower_bound": 1255434.0,
+      "relative_gap": 0.5884632531305317
+    },
+    {
+      "target": "makespan",
+      "status": "FEASIBLE",
+      "value": 8414.0,
+      "lower_bound": 2466.0,
+      "relative_gap": 0.7069170430235322
+    },
+    {
+      "target": "energy",
+      "status": "FEASIBLE",
+      "value": 71435371.0,
+      "lower_bound": 67905715.0,
+      "relative_gap": 0.04941048041872702
+    },
+    {
+      "target": "sorties",
+      "status": "FEASIBLE",
+      "value": 5.0,
+      "lower_bound": 4.0,
+      "relative_gap": 0.2
+    }
+  ],
+  "policy": "timely",
+  "seed": 2030,
+  "scale_seconds": 1,
+  "candidate_sites": 9,
+  "route_modes": 43,
+  "session_slots": 18,
+  "q4_constraint": false,
+  "independent_groups": false,
+  "resource_buffer_seconds": 0.0,
+  "objective_caps": {
+    "soft": 0
+  },
+  "elapsed_seconds": 71.26205839999602,
+  "bound_scope": "Finite sites, fixed box groups/visit orders, optional type modes and bounded relay sessions; later bounds conditional on earlier attained caps.",
+  "status": "PASS",
+  "objective": {
+    "weighted_soft_delay": 0,
+    "weighted_delivery_seconds": 3050181.2309751664,
+    "makespan": 8413.650383541955,
+    "energy_kwh": 71.43168180817082,
+    "transport_energy_kwh": 67.72751289489406,
+    "relay_energy_kwh": 3.704168913276753,
+    "transport_sorties": 21,
+    "relay_sorties": 5,
+    "total_sorties": 26
+  },
+  "components": 2,
+  "q4_validation": "PASS",
+  "q4": [
+    {
+      "id": "P1_2",
+      "group_count": 2,
+      "resource_total": 33,
+      "shortage_total": 6,
+      "workload_cv": 0.8458294827180035
+    }
+  ],
+  "label": "21_low_sorties",
+  "elapsed_wall_seconds": 75.37948239999241
+}

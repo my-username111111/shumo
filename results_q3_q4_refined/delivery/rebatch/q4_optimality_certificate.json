@@ -1,0 +1,2367 @@
+{
+  "P1": {
+    "G1": {
+      "A_aircraft": {
+        "resource_type": "A_aircraft",
+        "task_count": 1,
+        "minimum_resources": 1,
+        "peak_witness": {
+          "count": 1,
+          "time": 0.0,
+          "tasks": [
+            "T005"
+          ]
+        },
+        "maximum_matching_size": 0,
+        "matching_edges": [],
+        "chains": [
+          [
+            "T005"
+          ]
+        ],
+        "optimal_min_handoff_slack_seconds": null,
+        "original_id_min_handoff_slack_seconds": null,
+        "next_threshold_seconds": null,
+        "matching_size_at_next_threshold": null
+      },
+      "B_aircraft": {
+        "resource_type": "B_aircraft",
+        "task_count": 0,
+        "minimum_resources": 0,
+        "peak_witness": {
+          "count": 0,
+          "time": null,
+          "tasks": []
+        },
+        "maximum_matching_size": 0,
+        "matching_edges": [],
+        "chains": [],
+        "optimal_min_handoff_slack_seconds": null,
+        "original_id_min_handoff_slack_seconds": null,
+        "next_threshold_seconds": null,
+        "matching_size_at_next_threshold": null
+      },
+      "C_aircraft": {
+        "resource_type": "C_aircraft",
+        "task_count": 2,
+        "minimum_resources": 2,
+        "peak_witness": {
+          "count": 2,
+          "time": 0.0,
+          "tasks": [
+            "T001",
+            "T003"
+          ]
+        },
+        "maximum_matching_size": 0,
+        "matching_edges": [],
+        "chains": [
+          [
+            "T001"
+          ],
+          [
+            "T003"
+          ]
+        ],
+        "optimal_min_handoff_slack_seconds": null,
+        "original_id_min_handoff_slack_seconds": null,
+        "next_threshold_seconds": null,
+        "matching_size_at_next_threshold": null
+      },
+      "A_batteries": {
+        "resource_type": "A_batteries",
+        "task_count": 1,
+        "minimum_resources": 1,
+        "peak_witness": {
+          "count": 1,
+          "time": 0.0,
+          "tasks": [
+            "T005"
+          ]
+        },
+        "maximum_matching_size": 0,
+        "matching_edges": [],
+        "chains": [
+          [
+            "T005"
+          ]
+        ],
+        "optimal_min_handoff_slack_seconds": null,
+        "original_id_min_handoff_slack_seconds": null,
+        "next_threshold_seconds": null,
+        "matching_size_at_next_threshold": null
+      },
+      "B_batteries": {
+        "resource_type": "B_batteries",
+        "task_count": 0,
+        "minimum_resources": 0,
+        "peak_witness": {
+          "count": 0,
+          "time": null,
+          "tasks": []
+        },
+        "maximum_matching_size": 0,
+        "matching_edges": [],
+        "chains": [],
+        "optimal_min_handoff_slack_seconds": null,
+        "original_id_min_handoff_slack_seconds": null,
+        "next_threshold_seconds": null,
+        "matching_size_at_next_threshold": null
+      },
+      "C_batteries": {
+        "resource_type": "C_batteries",
+        "task_count": 2,
+        "minimum_resources": 2,
+        "peak_witness": {
+          "count": 2,
+          "time": 0.0,
+          "tasks": [
+            "T001",
+            "T003"
+          ]
+        },
+        "maximum_matching_size": 0,
+        "matching_edges": [],
+        "chains": [
+          [
+            "T001"
+          ],
+          [
+            "T003"
+          ]
+        ],
+        "optimal_min_handoff_slack_seconds": null,
+        "original_id_min_handoff_slack_seconds": null,
+        "next_threshold_seconds": null,
+        "matching_size_at_next_threshold": null
+      },
+      "relay_aircraft": {
+        "resource_type": "relay_aircraft",
+        "task_count": 0,
+        "minimum_resources": 0,
+        "peak_witness": {
+          "count": 0,
+          "time": null,
+          "tasks": []
+        },
+        "maximum_matching_size": 0,
+        "matching_edges": [],
+        "chains": [],
+        "optimal_min_handoff_slack_seconds": null,
+        "original_id_min_handoff_slack_seconds": null,
+        "next_threshold_seconds": null,
+        "matching_size_at_next_threshold": null
+      },
+      "relay_components": {
+        "resource_type": "relay_components",
+        "task_count": 0,
+        "minimum_resources": 0,
+        "peak_witness": {
+          "count": 0,
+          "time": null,
+          "tasks": []
+        },
+        "maximum_matching_size": 0,
+        "matching_edges": [],
+        "chains": [],
+        "optimal_min_handoff_slack_seconds": null,
+        "original_id_min_handoff_slack_seconds": null,
+        "next_threshold_seconds": null,
+        "matching_size_at_next_threshold": null
+      }
+    },
+    "G2": {
+      "A_aircraft": {
+        "resource_type": "A_aircraft",
+        "task_count": 10,
+        "minimum_resources": 4,
+        "peak_witness": {
+          "count": 4,
+          "time": 1334.0,
+          "tasks": [
+            "T002",
+            "T011",
+            "T017",
+            "T022"
+          ]
+        },
+        "maximum_matching_size": 6,
+        "matching_edges": [
+          {
+            "predecessor": "T002",
+            "successor": "T016",
+            "slack_seconds": 5.87180931515195
+          },
+          {
+            "predecessor": "T009",
+            "successor": "T002",
+            "slack_seconds": 17.98578558301142
+          },
+          {
+            "predecessor": "T011",
+            "successor": "T014",
+            "slack_seconds": 53.36091124041741
+          },
+          {
+            "predecessor": "T014",
+            "successor": "T023",
+            "slack_seconds": 5.050585059482728
+          },
+          {
+            "predecessor": "T017",
+            "successor": "T007",
+            "slack_seconds": 5.1529252880282
+          },
+          {
+            "predecessor": "T022",
+            "successor": "T020",
+            "slack_seconds": 484.4655137610507
+          }
+        ],
+        "chains": [
+          [
+            "T009",
+            "T002",
+            "T016"
+          ],
+          [
+            "T011",
+            "T014",
+            "T023"
+          ],
+          [
+            "T017",
+            "T007"
+          ],
+          [
+            "T022",
+            "T020"
+          ]
+        ],
+        "optimal_min_handoff_slack_seconds": 5.050585059482728,
+        "original_id_min_handoff_slack_seconds": 5.050585059482728,
+        "next_threshold_seconds": 5.1529252880282,
+        "matching_size_at_next_threshold": 5
+      },
+      "B_aircraft": {
+        "resource_type": "B_aircraft",
+        "task_count": 6,
+        "minimum_resources": 2,
+        "peak_witness": {
+          "count": 2,
+          "time": 0.0,
+          "tasks": [
+            "T008",
+            "T015"
+          ]
+        },
+        "maximum_matching_size": 4,
+        "matching_edges": [
+          {
+            "predecessor": "T004",
+            "successor": "T021",
+            "slack_seconds": 5.6870986860949415
+          },
+          {
+            "predecessor": "T006",
+            "successor": "T013",
+            "slack_seconds": 5.369714263561036
+          },
+          {
+            "predecessor": "T008",
+            "successor": "T006",
+            "slack_seconds": 5.461109844432485
+          },
+          {
+            "predecessor": "T015",
+            "successor": "T004",
+            "slack_seconds": 5.428640872318283
+          }
+        ],
+        "chains": [
+          [
+            "T008",
+            "T006",
+            "T013"
+          ],
+          [
+            "T015",
+            "T004",
+            "T021"
+          ]
+        ],
+        "optimal_min_handoff_slack_seconds": 5.369714263561036,
+        "original_id_min_handoff_slack_seconds": 5.369714263561036,
+        "next_threshold_seconds": 5.428640872318283,
+        "matching_size_at_next_threshold": 3
+      },
+      "C_aircraft": {
+        "resource_type": "C_aircraft",
+        "task_count": 4,
+        "minimum_resources": 2,
+        "peak_witness": {
+          "count": 2,
+          "time": 1664.0,
+          "tasks": [
+            "T010",
+            "T012"
+          ]
+        },
+        "maximum_matching_size": 2,
+        "matching_edges": [
+          {
+            "predecessor": "T010",
+            "successor": "T019",
+            "slack_seconds": 5.402117089719468
+          },
+          {
+            "predecessor": "T012",
+            "successor": "T018",
+            "slack_seconds": 5.918358721547065
+          }
+        ],
+        "chains": [
+          [
+            "T012",
+            "T018"
+          ],
+          [
+            "T010",
+            "T019"
+          ]
+        ],
+        "optimal_min_handoff_slack_seconds": 5.402117089719468,
+        "original_id_min_handoff_slack_seconds": 5.402117089719468,
+        "next_threshold_seconds": 5.918358721547065,
+        "matching_size_at_next_threshold": 1
+      },
+      "A_batteries": {
+        "resource_type": "A_batteries",
+        "task_count": 10,
+        "minimum_resources": 6,
+        "peak_witness": {
+          "count": 6,
+          "time": 2184.0,
+          "tasks": [
+            "T002",
+            "T009",
+            "T011",
+            "T014",
+            "T017",
+            "T022"
+          ]
+        },
+        "maximum_matching_size": 4,
+        "matching_edges": [
+          {
+            "predecessor": "T009",
+            "successor": "T007",
+            "slack_seconds": 141.13098367391467
+          },
+          {
+            "predecessor": "T011",
+            "successor": "T020",
+            "slack_seconds": 5.575916271985079
+          },
+          {
+            "predecessor": "T017",
+            "successor": "T016",
+            "slack_seconds": 230.58894203845375
+          },
+          {
+            "predecessor": "T022",
+            "successor": "T023",
+            "slack_seconds": 484.9710070815954
+          }
+        ],
+        "chains": [
+          [
+            "T009",
+            "T007"
+          ],
+          [
+            "T011",
+            "T020"
+          ],
+          [
+            "T017",
+            "T016"
+          ],
+          [
+            "T022",
+            "T023"
+          ],
+          [
+            "T002"
+          ],
+          [
+            "T014"
+          ]
+        ],
+        "optimal_min_handoff_slack_seconds": 5.575916271985079,
+        "original_id_min_handoff_slack_seconds": 5.575916271985079,
+        "next_threshold_seconds": 141.13098367391467,
+        "matching_size_at_next_threshold": 3
+      },
+      "B_batteries": {
+        "resource_type": "B_batteries",
+        "task_count": 6,
+        "minimum_resources": 4,
+        "peak_witness": {
+          "count": 4,
+          "time": 1850.0,
+          "tasks": [
+            "T004",
+            "T006",
+            "T008",
+            "T015"
+          ]
+        },
+        "maximum_matching_size": 2,
+        "matching_edges": [
+          {
+            "predecessor": "T008",
+            "successor": "T021",
+            "slack_seconds": 165.79914676505086
+          },
+          {
+            "predecessor": "T015",
+            "successor": "T013",
+            "slack_seconds": 34.64249894942577
+          }
+        ],
+        "chains": [
+          [
+            "T008",
+            "T021"
+          ],
+          [
+            "T015",
+            "T013"
+          ],
+          [
+            "T004"
+          ],
+          [
+            "T006"
+          ]
+        ],
+        "optimal_min_handoff_slack_seconds": 34.64249894942577,
+        "original_id_min_handoff_slack_seconds": 34.64249894942577,
+        "next_threshold_seconds": 165.79914676505086,
+        "matching_size_at_next_threshold": 1
+      },
+      "C_batteries": {
+        "resource_type": "C_batteries",
+        "task_count": 4,
+        "minimum_resources": 4,
+        "peak_witness": {
+          "count": 4,
+          "time": 4140.0,
+          "tasks": [
+            "T010",
+            "T012",
+            "T018",
+            "T019"
+          ]
+        },
+        "maximum_matching_size": 0,
+        "matching_edges": [],
+        "chains": [
+          [
+            "T012"
+          ],
+          [
+            "T010"
+          ],
+          [
+            "T018"
+          ],
+          [
+            "T019"
+          ]
+        ],
+        "optimal_min_handoff_slack_seconds": null,
+        "original_id_min_handoff_slack_seconds": null,
+        "next_threshold_seconds": null,
+        "matching_size_at_next_threshold": null
+      },
+      "relay_aircraft": {
+        "resource_type": "relay_aircraft",
+        "task_count": 3,
+        "minimum_resources": 2,
+        "peak_witness": {
+          "count": 2,
+          "time": 829.4908374434992,
+          "tasks": [
+            "R002",
+            "R003"
+          ]
+        },
+        "maximum_matching_size": 1,
+        "matching_edges": [
+          {
+            "predecessor": "R003",
+            "successor": "R001",
+            "slack_seconds": 5.93609768073884
+          }
+        ],
+        "chains": [
+          [
+            "R003",
+            "R001"
+          ],
+          [
+            "R002"
+          ]
+        ],
+        "optimal_min_handoff_slack_seconds": 5.93609768073884,
+        "original_id_min_handoff_slack_seconds": 5.93609768073884,
+        "next_threshold_seconds": null,
+        "matching_size_at_next_threshold": null
+      },
+      "relay_components": {
+        "resource_type": "relay_components",
+        "task_count": 3,
+        "minimum_resources": 3,
+        "peak_witness": {
+          "count": 3,
+          "time": 2478.1374190294086,
+          "tasks": [
+            "R001",
+            "R002",
+            "R003"
+          ]
+        },
+        "maximum_matching_size": 0,
+        "matching_edges": [],
+        "chains": [
+          [
+            "R003"
+          ],
+          [
+            "R002"
+          ],
+          [
+            "R001"
+          ]
+        ],
+        "optimal_min_handoff_slack_seconds": null,
+        "original_id_min_handoff_slack_seconds": null,
+        "next_threshold_seconds": null,
+        "matching_size_at_next_threshold": null
+      }
+    }
+  },
+  "P2": {
+    "G1": {
+      "A_aircraft": {
+        "resource_type": "A_aircraft",
+        "task_count": 1,
+        "minimum_resources": 1,
+        "peak_witness": {
+          "count": 1,
+          "time": 0.0,
+          "tasks": [
+            "T005"
+          ]
+        },
+        "maximum_matching_size": 0,
+        "matching_edges": [],
+        "chains": [
+          [
+            "T005"
+          ]
+        ],
+        "optimal_min_handoff_slack_seconds": null,
+        "original_id_min_handoff_slack_seconds": null,
+        "next_threshold_seconds": null,
+        "matching_size_at_next_threshold": null
+      },
+      "B_aircraft": {
+        "resource_type": "B_aircraft",
+        "task_count": 1,
+        "minimum_resources": 1,
+        "peak_witness": {
+          "count": 1,
+          "time": 1850.0,
+          "tasks": [
+            "T006"
+          ]
+        },
+        "maximum_matching_size": 0,
+        "matching_edges": [],
+        "chains": [
+          [
+            "T006"
+          ]
+        ],
+        "optimal_min_handoff_slack_seconds": null,
+        "original_id_min_handoff_slack_seconds": null,
+        "next_threshold_seconds": null,
+        "matching_size_at_next_threshold": null
+      },
+      "C_aircraft": {
+        "resource_type": "C_aircraft",
+        "task_count": 2,
+        "minimum_resources": 2,
+        "peak_witness": {
+          "count": 2,
+          "time": 0.0,
+          "tasks": [
+            "T001",
+            "T003"
+          ]
+        },
+        "maximum_matching_size": 0,
+        "matching_edges": [],
+        "chains": [
+          [
+            "T001"
+          ],
+          [
+            "T003"
+          ]
+        ],
+        "optimal_min_handoff_slack_seconds": null,
+        "original_id_min_handoff_slack_seconds": null,
+        "next_threshold_seconds": null,
+        "matching_size_at_next_threshold": null
+      },
+      "A_batteries": {
+        "resource_type": "A_batteries",
+        "task_count": 1,
+        "minimum_resources": 1,
+        "peak_witness": {
+          "count": 1,
+          "time": 0.0,
+          "tasks": [
+            "T005"
+          ]
+        },
+        "maximum_matching_size": 0,
+        "matching_edges": [],
+        "chains": [
+          [
+            "T005"
+          ]
+        ],
+        "optimal_min_handoff_slack_seconds": null,
+        "original_id_min_handoff_slack_seconds": null,
+        "next_threshold_seconds": null,
+        "matching_size_at_next_threshold": null
+      },
+      "B_batteries": {
+        "resource_type": "B_batteries",
+        "task_count": 1,
+        "minimum_resources": 1,
+        "peak_witness": {
+          "count": 1,
+          "time": 1850.0,
+          "tasks": [
+            "T006"
+          ]
+        },
+        "maximum_matching_size": 0,
+        "matching_edges": [],
+        "chains": [
+          [
+            "T006"
+          ]
+        ],
+        "optimal_min_handoff_slack_seconds": null,
+        "original_id_min_handoff_slack_seconds": null,
+        "next_threshold_seconds": null,
+        "matching_size_at_next_threshold": null
+      },
+      "C_batteries": {
+        "resource_type": "C_batteries",
+        "task_count": 2,
+        "minimum_resources": 2,
+        "peak_witness": {
+          "count": 2,
+          "time": 0.0,
+          "tasks": [
+            "T001",
+            "T003"
+          ]
+        },
+        "maximum_matching_size": 0,
+        "matching_edges": [],
+        "chains": [
+          [
+            "T001"
+          ],
+          [
+            "T003"
+          ]
+        ],
+        "optimal_min_handoff_slack_seconds": null,
+        "original_id_min_handoff_slack_seconds": null,
+        "next_threshold_seconds": null,
+        "matching_size_at_next_threshold": null
+      },
+      "relay_aircraft": {
+        "resource_type": "relay_aircraft",
+        "task_count": 0,
+        "minimum_resources": 0,
+        "peak_witness": {
+          "count": 0,
+          "time": null,
+          "tasks": []
+        },
+        "maximum_matching_size": 0,
+        "matching_edges": [],
+        "chains": [],
+        "optimal_min_handoff_slack_seconds": null,
+        "original_id_min_handoff_slack_seconds": null,
+        "next_threshold_seconds": null,
+        "matching_size_at_next_threshold": null
+      },
+      "relay_components": {
+        "resource_type": "relay_components",
+        "task_count": 0,
+        "minimum_resources": 0,
+        "peak_witness": {
+          "count": 0,
+          "time": null,
+          "tasks": []
+        },
+        "maximum_matching_size": 0,
+        "matching_edges": [],
+        "chains": [],
+        "optimal_min_handoff_slack_seconds": null,
+        "original_id_min_handoff_slack_seconds": null,
+        "next_threshold_seconds": null,
+        "matching_size_at_next_threshold": null
+      }
+    },
+    "G2": {
+      "A_aircraft": {
+        "resource_type": "A_aircraft",
+        "task_count": 10,
+        "minimum_resources": 4,
+        "peak_witness": {
+          "count": 4,
+          "time": 1334.0,
+          "tasks": [
+            "T002",
+            "T011",
+            "T017",
+            "T022"
+          ]
+        },
+        "maximum_matching_size": 6,
+        "matching_edges": [
+          {
+            "predecessor": "T002",
+            "successor": "T016",
+            "slack_seconds": 5.87180931515195
+          },
+          {
+            "predecessor": "T009",
+            "successor": "T002",
+            "slack_seconds": 17.98578558301142
+          },
+          {
+            "predecessor": "T011",
+            "successor": "T014",
+            "slack_seconds": 53.36091124041741
+          },
+          {
+            "predecessor": "T014",
+            "successor": "T023",
+            "slack_seconds": 5.050585059482728
+          },
+          {
+            "predecessor": "T017",
+            "successor": "T007",
+            "slack_seconds": 5.1529252880282
+          },
+          {
+            "predecessor": "T022",
+            "successor": "T020",
+            "slack_seconds": 484.4655137610507
+          }
+        ],
+        "chains": [
+          [
+            "T009",
+            "T002",
+            "T016"
+          ],
+          [
+            "T011",
+            "T014",
+            "T023"
+          ],
+          [
+            "T017",
+            "T007"
+          ],
+          [
+            "T022",
+            "T020"
+          ]
+        ],
+        "optimal_min_handoff_slack_seconds": 5.050585059482728,
+        "original_id_min_handoff_slack_seconds": 5.050585059482728,
+        "next_threshold_seconds": 5.1529252880282,
+        "matching_size_at_next_threshold": 5
+      },
+      "B_aircraft": {
+        "resource_type": "B_aircraft",
+        "task_count": 5,
+        "minimum_resources": 2,
+        "peak_witness": {
+          "count": 2,
+          "time": 0.0,
+          "tasks": [
+            "T008",
+            "T015"
+          ]
+        },
+        "maximum_matching_size": 3,
+        "matching_edges": [
+          {
+            "predecessor": "T004",
+            "successor": "T021",
+            "slack_seconds": 5.6870986860949415
+          },
+          {
+            "predecessor": "T008",
+            "successor": "T013",
+            "slack_seconds": 1200.4611098444325
+          },
+          {
+            "predecessor": "T015",
+            "successor": "T004",
+            "slack_seconds": 5.428640872318283
+          }
+        ],
+        "chains": [
+          [
+            "T008",
+            "T013"
+          ],
+          [
+            "T015",
+            "T004",
+            "T021"
+          ]
+        ],
+        "optimal_min_handoff_slack_seconds": 5.428640872318283,
+        "original_id_min_handoff_slack_seconds": 5.428640872318283,
+        "next_threshold_seconds": 5.6870986860949415,
+        "matching_size_at_next_threshold": 2
+      },
+      "C_aircraft": {
+        "resource_type": "C_aircraft",
+        "task_count": 4,
+        "minimum_resources": 2,
+        "peak_witness": {
+          "count": 2,
+          "time": 1664.0,
+          "tasks": [
+            "T010",
+            "T012"
+          ]
+        },
+        "maximum_matching_size": 2,
+        "matching_edges": [
+          {
+            "predecessor": "T010",
+            "successor": "T019",
+            "slack_seconds": 5.402117089719468
+          },
+          {
+            "predecessor": "T012",
+            "successor": "T018",
+            "slack_seconds": 5.918358721547065
+          }
+        ],
+        "chains": [
+          [
+            "T012",
+            "T018"
+          ],
+          [
+            "T010",
+            "T019"
+          ]
+        ],
+        "optimal_min_handoff_slack_seconds": 5.402117089719468,
+        "original_id_min_handoff_slack_seconds": 5.402117089719468,
+        "next_threshold_seconds": 5.918358721547065,
+        "matching_size_at_next_threshold": 1
+      },
+      "A_batteries": {
+        "resource_type": "A_batteries",
+        "task_count": 10,
+        "minimum_resources": 6,
+        "peak_witness": {
+          "count": 6,
+          "time": 2184.0,
+          "tasks": [
+            "T002",
+            "T009",
+            "T011",
+            "T014",
+            "T017",
+            "T022"
+          ]
+        },
+        "maximum_matching_size": 4,
+        "matching_edges": [
+          {
+            "predecessor": "T009",
+            "successor": "T007",
+            "slack_seconds": 141.13098367391467
+          },
+          {
+            "predecessor": "T011",
+            "successor": "T020",
+            "slack_seconds": 5.575916271985079
+          },
+          {
+            "predecessor": "T017",
+            "successor": "T016",
+            "slack_seconds": 230.58894203845375
+          },
+          {
+            "predecessor": "T022",
+            "successor": "T023",
+            "slack_seconds": 484.9710070815954
+          }
+        ],
+        "chains": [
+          [
+            "T009",
+            "T007"
+          ],
+          [
+            "T011",
+            "T020"
+          ],
+          [
+            "T017",
+            "T016"
+          ],
+          [
+            "T022",
+            "T023"
+          ],
+          [
+            "T002"
+          ],
+          [
+            "T014"
+          ]
+        ],
+        "optimal_min_handoff_slack_seconds": 5.575916271985079,
+        "original_id_min_handoff_slack_seconds": 5.575916271985079,
+        "next_threshold_seconds": 141.13098367391467,
+        "matching_size_at_next_threshold": 3
+      },
+      "B_batteries": {
+        "resource_type": "B_batteries",
+        "task_count": 5,
+        "minimum_resources": 3,
+        "peak_witness": {
+          "count": 3,
+          "time": 1560.0,
+          "tasks": [
+            "T004",
+            "T008",
+            "T015"
+          ]
+        },
+        "maximum_matching_size": 2,
+        "matching_edges": [
+          {
+            "predecessor": "T008",
+            "successor": "T021",
+            "slack_seconds": 165.79914676505086
+          },
+          {
+            "predecessor": "T015",
+            "successor": "T013",
+            "slack_seconds": 34.64249894942577
+          }
+        ],
+        "chains": [
+          [
+            "T008",
+            "T021"
+          ],
+          [
+            "T015",
+            "T013"
+          ],
+          [
+            "T004"
+          ]
+        ],
+        "optimal_min_handoff_slack_seconds": 34.64249894942577,
+        "original_id_min_handoff_slack_seconds": 34.64249894942577,
+        "next_threshold_seconds": 165.79914676505086,
+        "matching_size_at_next_threshold": 1
+      },
+      "C_batteries": {
+        "resource_type": "C_batteries",
+        "task_count": 4,
+        "minimum_resources": 4,
+        "peak_witness": {
+          "count": 4,
+          "time": 4140.0,
+          "tasks": [
+            "T010",
+            "T012",
+            "T018",
+            "T019"
+          ]
+        },
+        "maximum_matching_size": 0,
+        "matching_edges": [],
+        "chains": [
+          [
+            "T012"
+          ],
+          [
+            "T010"
+          ],
+          [
+            "T018"
+          ],
+          [
+            "T019"
+          ]
+        ],
+        "optimal_min_handoff_slack_seconds": null,
+        "original_id_min_handoff_slack_seconds": null,
+        "next_threshold_seconds": null,
+        "matching_size_at_next_threshold": null
+      },
+      "relay_aircraft": {
+        "resource_type": "relay_aircraft",
+        "task_count": 3,
+        "minimum_resources": 2,
+        "peak_witness": {
+          "count": 2,
+          "time": 829.4908374434992,
+          "tasks": [
+            "R002",
+            "R003"
+          ]
+        },
+        "maximum_matching_size": 1,
+        "matching_edges": [
+          {
+            "predecessor": "R003",
+            "successor": "R001",
+            "slack_seconds": 5.93609768073884
+          }
+        ],
+        "chains": [
+          [
+            "R003",
+            "R001"
+          ],
+          [
+            "R002"
+          ]
+        ],
+        "optimal_min_handoff_slack_seconds": 5.93609768073884,
+        "original_id_min_handoff_slack_seconds": 5.93609768073884,
+        "next_threshold_seconds": null,
+        "matching_size_at_next_threshold": null
+      },
+      "relay_components": {
+        "resource_type": "relay_components",
+        "task_count": 3,
+        "minimum_resources": 3,
+        "peak_witness": {
+          "count": 3,
+          "time": 2478.1374190294086,
+          "tasks": [
+            "R001",
+            "R002",
+            "R003"
+          ]
+        },
+        "maximum_matching_size": 0,
+        "matching_edges": [],
+        "chains": [
+          [
+            "R003"
+          ],
+          [
+            "R002"
+          ],
+          [
+            "R001"
+          ]
+        ],
+        "optimal_min_handoff_slack_seconds": null,
+        "original_id_min_handoff_slack_seconds": null,
+        "next_threshold_seconds": null,
+        "matching_size_at_next_threshold": null
+      }
+    }
+  },
+  "P3": {
+    "G1": {
+      "A_aircraft": {
+        "resource_type": "A_aircraft",
+        "task_count": 11,
+        "minimum_resources": 4,
+        "peak_witness": {
+          "count": 4,
+          "time": 0.0,
+          "tasks": [
+            "T005",
+            "T009",
+            "T011",
+            "T017"
+          ]
+        },
+        "maximum_matching_size": 7,
+        "matching_edges": [
+          {
+            "predecessor": "T002",
+            "successor": "T016",
+            "slack_seconds": 5.87180931515195
+          },
+          {
+            "predecessor": "T005",
+            "successor": "T022",
+            "slack_seconds": 5.529122687315066
+          },
+          {
+            "predecessor": "T009",
+            "successor": "T002",
+            "slack_seconds": 17.98578558301142
+          },
+          {
+            "predecessor": "T011",
+            "successor": "T014",
+            "slack_seconds": 53.36091124041741
+          },
+          {
+            "predecessor": "T014",
+            "successor": "T023",
+            "slack_seconds": 5.050585059482728
+          },
+          {
+            "predecessor": "T017",
+            "successor": "T007",
+            "slack_seconds": 5.1529252880282
+          },
+          {
+            "predecessor": "T022",
+            "successor": "T020",
+            "slack_seconds": 484.4655137610507
+          }
+        ],
+        "chains": [
+          [
+            "T005",
+            "T022",
+            "T020"
+          ],
+          [
+            "T009",
+            "T002",
+            "T016"
+          ],
+          [
+            "T011",
+            "T014",
+            "T023"
+          ],
+          [
+            "T017",
+            "T007"
+          ]
+        ],
+        "optimal_min_handoff_slack_seconds": 5.050585059482728,
+        "original_id_min_handoff_slack_seconds": 5.050585059482728,
+        "next_threshold_seconds": 5.1529252880282,
+        "matching_size_at_next_threshold": 6
+      },
+      "B_aircraft": {
+        "resource_type": "B_aircraft",
+        "task_count": 5,
+        "minimum_resources": 2,
+        "peak_witness": {
+          "count": 2,
+          "time": 0.0,
+          "tasks": [
+            "T008",
+            "T015"
+          ]
+        },
+        "maximum_matching_size": 3,
+        "matching_edges": [
+          {
+            "predecessor": "T004",
+            "successor": "T021",
+            "slack_seconds": 5.6870986860949415
+          },
+          {
+            "predecessor": "T008",
+            "successor": "T013",
+            "slack_seconds": 1200.4611098444325
+          },
+          {
+            "predecessor": "T015",
+            "successor": "T004",
+            "slack_seconds": 5.428640872318283
+          }
+        ],
+        "chains": [
+          [
+            "T008",
+            "T013"
+          ],
+          [
+            "T015",
+            "T004",
+            "T021"
+          ]
+        ],
+        "optimal_min_handoff_slack_seconds": 5.428640872318283,
+        "original_id_min_handoff_slack_seconds": 5.428640872318283,
+        "next_threshold_seconds": 5.6870986860949415,
+        "matching_size_at_next_threshold": 2
+      },
+      "C_aircraft": {
+        "resource_type": "C_aircraft",
+        "task_count": 6,
+        "minimum_resources": 2,
+        "peak_witness": {
+          "count": 2,
+          "time": 0.0,
+          "tasks": [
+            "T001",
+            "T003"
+          ]
+        },
+        "maximum_matching_size": 4,
+        "matching_edges": [
+          {
+            "predecessor": "T001",
+            "successor": "T010",
+            "slack_seconds": 102.57382248253452
+          },
+          {
+            "predecessor": "T003",
+            "successor": "T012",
+            "slack_seconds": 5.573822482534524
+          },
+          {
+            "predecessor": "T010",
+            "successor": "T019",
+            "slack_seconds": 5.402117089719468
+          },
+          {
+            "predecessor": "T012",
+            "successor": "T018",
+            "slack_seconds": 5.918358721547065
+          }
+        ],
+        "chains": [
+          [
+            "T001",
+            "T010",
+            "T019"
+          ],
+          [
+            "T003",
+            "T012",
+            "T018"
+          ]
+        ],
+        "optimal_min_handoff_slack_seconds": 5.402117089719468,
+        "original_id_min_handoff_slack_seconds": 5.402117089719468,
+        "next_threshold_seconds": 5.573822482534524,
+        "matching_size_at_next_threshold": 3
+      },
+      "A_batteries": {
+        "resource_type": "A_batteries",
+        "task_count": 11,
+        "minimum_resources": 6,
+        "peak_witness": {
+          "count": 6,
+          "time": 1334.0,
+          "tasks": [
+            "T002",
+            "T005",
+            "T009",
+            "T011",
+            "T017",
+            "T022"
+          ]
+        },
+        "maximum_matching_size": 5,
+        "matching_edges": [
+          {
+            "predecessor": "T005",
+            "successor": "T014",
+            "slack_seconds": 5.211287712528701
+          },
+          {
+            "predecessor": "T009",
+            "successor": "T007",
+            "slack_seconds": 141.13098367391467
+          },
+          {
+            "predecessor": "T011",
+            "successor": "T020",
+            "slack_seconds": 5.575916271985079
+          },
+          {
+            "predecessor": "T017",
+            "successor": "T016",
+            "slack_seconds": 230.58894203845375
+          },
+          {
+            "predecessor": "T022",
+            "successor": "T023",
+            "slack_seconds": 484.9710070815954
+          }
+        ],
+        "chains": [
+          [
+            "T005",
+            "T014"
+          ],
+          [
+            "T009",
+            "T007"
+          ],
+          [
+            "T011",
+            "T020"
+          ],
+          [
+            "T017",
+            "T016"
+          ],
+          [
+            "T022",
+            "T023"
+          ],
+          [
+            "T002"
+          ]
+        ],
+        "optimal_min_handoff_slack_seconds": 5.211287712528701,
+        "original_id_min_handoff_slack_seconds": 5.211287712528701,
+        "next_threshold_seconds": 5.575916271985079,
+        "matching_size_at_next_threshold": 4
+      },
+      "B_batteries": {
+        "resource_type": "B_batteries",
+        "task_count": 5,
+        "minimum_resources": 3,
+        "peak_witness": {
+          "count": 3,
+          "time": 1560.0,
+          "tasks": [
+            "T004",
+            "T008",
+            "T015"
+          ]
+        },
+        "maximum_matching_size": 2,
+        "matching_edges": [
+          {
+            "predecessor": "T008",
+            "successor": "T021",
+            "slack_seconds": 165.79914676505086
+          },
+          {
+            "predecessor": "T015",
+            "successor": "T013",
+            "slack_seconds": 34.64249894942577
+          }
+        ],
+        "chains": [
+          [
+            "T008",
+            "T021"
+          ],
+          [
+            "T015",
+            "T013"
+          ],
+          [
+            "T004"
+          ]
+        ],
+        "optimal_min_handoff_slack_seconds": 34.64249894942577,
+        "original_id_min_handoff_slack_seconds": 34.64249894942577,
+        "next_threshold_seconds": 165.79914676505086,
+        "matching_size_at_next_threshold": 1
+      },
+      "C_batteries": {
+        "resource_type": "C_batteries",
+        "task_count": 6,
+        "minimum_resources": 4,
+        "peak_witness": {
+          "count": 4,
+          "time": 1664.0,
+          "tasks": [
+            "T001",
+            "T003",
+            "T010",
+            "T012"
+          ]
+        },
+        "maximum_matching_size": 2,
+        "matching_edges": [
+          {
+            "predecessor": "T001",
+            "successor": "T019",
+            "slack_seconds": 989.9071462370484
+          },
+          {
+            "predecessor": "T003",
+            "successor": "T018",
+            "slack_seconds": 608.393369334316
+          }
+        ],
+        "chains": [
+          [
+            "T001",
+            "T019"
+          ],
+          [
+            "T003",
+            "T018"
+          ],
+          [
+            "T012"
+          ],
+          [
+            "T010"
+          ]
+        ],
+        "optimal_min_handoff_slack_seconds": 608.393369334316,
+        "original_id_min_handoff_slack_seconds": 405.90714623704844,
+        "next_threshold_seconds": 989.9071462370484,
+        "matching_size_at_next_threshold": 1
+      },
+      "relay_aircraft": {
+        "resource_type": "relay_aircraft",
+        "task_count": 3,
+        "minimum_resources": 2,
+        "peak_witness": {
+          "count": 2,
+          "time": 829.4908374434992,
+          "tasks": [
+            "R002",
+            "R003"
+          ]
+        },
+        "maximum_matching_size": 1,
+        "matching_edges": [
+          {
+            "predecessor": "R003",
+            "successor": "R001",
+            "slack_seconds": 5.93609768073884
+          }
+        ],
+        "chains": [
+          [
+            "R003",
+            "R001"
+          ],
+          [
+            "R002"
+          ]
+        ],
+        "optimal_min_handoff_slack_seconds": 5.93609768073884,
+        "original_id_min_handoff_slack_seconds": 5.93609768073884,
+        "next_threshold_seconds": null,
+        "matching_size_at_next_threshold": null
+      },
+      "relay_components": {
+        "resource_type": "relay_components",
+        "task_count": 3,
+        "minimum_resources": 3,
+        "peak_witness": {
+          "count": 3,
+          "time": 2478.1374190294086,
+          "tasks": [
+            "R001",
+            "R002",
+            "R003"
+          ]
+        },
+        "maximum_matching_size": 0,
+        "matching_edges": [],
+        "chains": [
+          [
+            "R003"
+          ],
+          [
+            "R002"
+          ],
+          [
+            "R001"
+          ]
+        ],
+        "optimal_min_handoff_slack_seconds": null,
+        "original_id_min_handoff_slack_seconds": null,
+        "next_threshold_seconds": null,
+        "matching_size_at_next_threshold": null
+      }
+    },
+    "G2": {
+      "A_aircraft": {
+        "resource_type": "A_aircraft",
+        "task_count": 0,
+        "minimum_resources": 0,
+        "peak_witness": {
+          "count": 0,
+          "time": null,
+          "tasks": []
+        },
+        "maximum_matching_size": 0,
+        "matching_edges": [],
+        "chains": [],
+        "optimal_min_handoff_slack_seconds": null,
+        "original_id_min_handoff_slack_seconds": null,
+        "next_threshold_seconds": null,
+        "matching_size_at_next_threshold": null
+      },
+      "B_aircraft": {
+        "resource_type": "B_aircraft",
+        "task_count": 1,
+        "minimum_resources": 1,
+        "peak_witness": {
+          "count": 1,
+          "time": 1850.0,
+          "tasks": [
+            "T006"
+          ]
+        },
+        "maximum_matching_size": 0,
+        "matching_edges": [],
+        "chains": [
+          [
+            "T006"
+          ]
+        ],
+        "optimal_min_handoff_slack_seconds": null,
+        "original_id_min_handoff_slack_seconds": null,
+        "next_threshold_seconds": null,
+        "matching_size_at_next_threshold": null
+      },
+      "C_aircraft": {
+        "resource_type": "C_aircraft",
+        "task_count": 0,
+        "minimum_resources": 0,
+        "peak_witness": {
+          "count": 0,
+          "time": null,
+          "tasks": []
+        },
+        "maximum_matching_size": 0,
+        "matching_edges": [],
+        "chains": [],
+        "optimal_min_handoff_slack_seconds": null,
+        "original_id_min_handoff_slack_seconds": null,
+        "next_threshold_seconds": null,
+        "matching_size_at_next_threshold": null
+      },
+      "A_batteries": {
+        "resource_type": "A_batteries",
+        "task_count": 0,
+        "minimum_resources": 0,
+        "peak_witness": {
+          "count": 0,
+          "time": null,
+          "tasks": []
+        },
+        "maximum_matching_size": 0,
+        "matching_edges": [],
+        "chains": [],
+        "optimal_min_handoff_slack_seconds": null,
+        "original_id_min_handoff_slack_seconds": null,
+        "next_threshold_seconds": null,
+        "matching_size_at_next_threshold": null
+      },
+      "B_batteries": {
+        "resource_type": "B_batteries",
+        "task_count": 1,
+        "minimum_resources": 1,
+        "peak_witness": {
+          "count": 1,
+          "time": 1850.0,
+          "tasks": [
+            "T006"
+          ]
+        },
+        "maximum_matching_size": 0,
+        "matching_edges": [],
+        "chains": [
+          [
+            "T006"
+          ]
+        ],
+        "optimal_min_handoff_slack_seconds": null,
+        "original_id_min_handoff_slack_seconds": null,
+        "next_threshold_seconds": null,
+        "matching_size_at_next_threshold": null
+      },
+      "C_batteries": {
+        "resource_type": "C_batteries",
+        "task_count": 0,
+        "minimum_resources": 0,
+        "peak_witness": {
+          "count": 0,
+          "time": null,
+          "tasks": []
+        },
+        "maximum_matching_size": 0,
+        "matching_edges": [],
+        "chains": [],
+        "optimal_min_handoff_slack_seconds": null,
+        "original_id_min_handoff_slack_seconds": null,
+        "next_threshold_seconds": null,
+        "matching_size_at_next_threshold": null
+      },
+      "relay_aircraft": {
+        "resource_type": "relay_aircraft",
+        "task_count": 0,
+        "minimum_resources": 0,
+        "peak_witness": {
+          "count": 0,
+          "time": null,
+          "tasks": []
+        },
+        "maximum_matching_size": 0,
+        "matching_edges": [],
+        "chains": [],
+        "optimal_min_handoff_slack_seconds": null,
+        "original_id_min_handoff_slack_seconds": null,
+        "next_threshold_seconds": null,
+        "matching_size_at_next_threshold": null
+      },
+      "relay_components": {
+        "resource_type": "relay_components",
+        "task_count": 0,
+        "minimum_resources": 0,
+        "peak_witness": {
+          "count": 0,
+          "time": null,
+          "tasks": []
+        },
+        "maximum_matching_size": 0,
+        "matching_edges": [],
+        "chains": [],
+        "optimal_min_handoff_slack_seconds": null,
+        "original_id_min_handoff_slack_seconds": null,
+        "next_threshold_seconds": null,
+        "matching_size_at_next_threshold": null
+      }
+    }
+  },
+  "P4": {
+    "G1": {
+      "A_aircraft": {
+        "resource_type": "A_aircraft",
+        "task_count": 1,
+        "minimum_resources": 1,
+        "peak_witness": {
+          "count": 1,
+          "time": 0.0,
+          "tasks": [
+            "T005"
+          ]
+        },
+        "maximum_matching_size": 0,
+        "matching_edges": [],
+        "chains": [
+          [
+            "T005"
+          ]
+        ],
+        "optimal_min_handoff_slack_seconds": null,
+        "original_id_min_handoff_slack_seconds": null,
+        "next_threshold_seconds": null,
+        "matching_size_at_next_threshold": null
+      },
+      "B_aircraft": {
+        "resource_type": "B_aircraft",
+        "task_count": 0,
+        "minimum_resources": 0,
+        "peak_witness": {
+          "count": 0,
+          "time": null,
+          "tasks": []
+        },
+        "maximum_matching_size": 0,
+        "matching_edges": [],
+        "chains": [],
+        "optimal_min_handoff_slack_seconds": null,
+        "original_id_min_handoff_slack_seconds": null,
+        "next_threshold_seconds": null,
+        "matching_size_at_next_threshold": null
+      },
+      "C_aircraft": {
+        "resource_type": "C_aircraft",
+        "task_count": 2,
+        "minimum_resources": 2,
+        "peak_witness": {
+          "count": 2,
+          "time": 0.0,
+          "tasks": [
+            "T001",
+            "T003"
+          ]
+        },
+        "maximum_matching_size": 0,
+        "matching_edges": [],
+        "chains": [
+          [
+            "T001"
+          ],
+          [
+            "T003"
+          ]
+        ],
+        "optimal_min_handoff_slack_seconds": null,
+        "original_id_min_handoff_slack_seconds": null,
+        "next_threshold_seconds": null,
+        "matching_size_at_next_threshold": null
+      },
+      "A_batteries": {
+        "resource_type": "A_batteries",
+        "task_count": 1,
+        "minimum_resources": 1,
+        "peak_witness": {
+          "count": 1,
+          "time": 0.0,
+          "tasks": [
+            "T005"
+          ]
+        },
+        "maximum_matching_size": 0,
+        "matching_edges": [],
+        "chains": [
+          [
+            "T005"
+          ]
+        ],
+        "optimal_min_handoff_slack_seconds": null,
+        "original_id_min_handoff_slack_seconds": null,
+        "next_threshold_seconds": null,
+        "matching_size_at_next_threshold": null
+      },
+      "B_batteries": {
+        "resource_type": "B_batteries",
+        "task_count": 0,
+        "minimum_resources": 0,
+        "peak_witness": {
+          "count": 0,
+          "time": null,
+          "tasks": []
+        },
+        "maximum_matching_size": 0,
+        "matching_edges": [],
+        "chains": [],
+        "optimal_min_handoff_slack_seconds": null,
+        "original_id_min_handoff_slack_seconds": null,
+        "next_threshold_seconds": null,
+        "matching_size_at_next_threshold": null
+      },
+      "C_batteries": {
+        "resource_type": "C_batteries",
+        "task_count": 2,
+        "minimum_resources": 2,
+        "peak_witness": {
+          "count": 2,
+          "time": 0.0,
+          "tasks": [
+            "T001",
+            "T003"
+          ]
+        },
+        "maximum_matching_size": 0,
+        "matching_edges": [],
+        "chains": [
+          [
+            "T001"
+          ],
+          [
+            "T003"
+          ]
+        ],
+        "optimal_min_handoff_slack_seconds": null,
+        "original_id_min_handoff_slack_seconds": null,
+        "next_threshold_seconds": null,
+        "matching_size_at_next_threshold": null
+      },
+      "relay_aircraft": {
+        "resource_type": "relay_aircraft",
+        "task_count": 0,
+        "minimum_resources": 0,
+        "peak_witness": {
+          "count": 0,
+          "time": null,
+          "tasks": []
+        },
+        "maximum_matching_size": 0,
+        "matching_edges": [],
+        "chains": [],
+        "optimal_min_handoff_slack_seconds": null,
+        "original_id_min_handoff_slack_seconds": null,
+        "next_threshold_seconds": null,
+        "matching_size_at_next_threshold": null
+      },
+      "relay_components": {
+        "resource_type": "relay_components",
+        "task_count": 0,
+        "minimum_resources": 0,
+        "peak_witness": {
+          "count": 0,
+          "time": null,
+          "tasks": []
+        },
+        "maximum_matching_size": 0,
+        "matching_edges": [],
+        "chains": [],
+        "optimal_min_handoff_slack_seconds": null,
+        "original_id_min_handoff_slack_seconds": null,
+        "next_threshold_seconds": null,
+        "matching_size_at_next_threshold": null
+      }
+    },
+    "G2": {
+      "A_aircraft": {
+        "resource_type": "A_aircraft",
+        "task_count": 10,
+        "minimum_resources": 4,
+        "peak_witness": {
+          "count": 4,
+          "time": 1334.0,
+          "tasks": [
+            "T002",
+            "T011",
+            "T017",
+            "T022"
+          ]
+        },
+        "maximum_matching_size": 6,
+        "matching_edges": [
+          {
+            "predecessor": "T002",
+            "successor": "T016",
+            "slack_seconds": 5.87180931515195
+          },
+          {
+            "predecessor": "T009",
+            "successor": "T002",
+            "slack_seconds": 17.98578558301142
+          },
+          {
+            "predecessor": "T011",
+            "successor": "T014",
+            "slack_seconds": 53.36091124041741
+          },
+          {
+            "predecessor": "T014",
+            "successor": "T023",
+            "slack_seconds": 5.050585059482728
+          },
+          {
+            "predecessor": "T017",
+            "successor": "T007",
+            "slack_seconds": 5.1529252880282
+          },
+          {
+            "predecessor": "T022",
+            "successor": "T020",
+            "slack_seconds": 484.4655137610507
+          }
+        ],
+        "chains": [
+          [
+            "T009",
+            "T002",
+            "T016"
+          ],
+          [
+            "T011",
+            "T014",
+            "T023"
+          ],
+          [
+            "T017",
+            "T007"
+          ],
+          [
+            "T022",
+            "T020"
+          ]
+        ],
+        "optimal_min_handoff_slack_seconds": 5.050585059482728,
+        "original_id_min_handoff_slack_seconds": 5.050585059482728,
+        "next_threshold_seconds": 5.1529252880282,
+        "matching_size_at_next_threshold": 5
+      },
+      "B_aircraft": {
+        "resource_type": "B_aircraft",
+        "task_count": 5,
+        "minimum_resources": 2,
+        "peak_witness": {
+          "count": 2,
+          "time": 0.0,
+          "tasks": [
+            "T008",
+            "T015"
+          ]
+        },
+        "maximum_matching_size": 3,
+        "matching_edges": [
+          {
+            "predecessor": "T004",
+            "successor": "T021",
+            "slack_seconds": 5.6870986860949415
+          },
+          {
+            "predecessor": "T008",
+            "successor": "T013",
+            "slack_seconds": 1200.4611098444325
+          },
+          {
+            "predecessor": "T015",
+            "successor": "T004",
+            "slack_seconds": 5.428640872318283
+          }
+        ],
+        "chains": [
+          [
+            "T008",
+            "T013"
+          ],
+          [
+            "T015",
+            "T004",
+            "T021"
+          ]
+        ],
+        "optimal_min_handoff_slack_seconds": 5.428640872318283,
+        "original_id_min_handoff_slack_seconds": 5.428640872318283,
+        "next_threshold_seconds": 5.6870986860949415,
+        "matching_size_at_next_threshold": 2
+      },
+      "C_aircraft": {
+        "resource_type": "C_aircraft",
+        "task_count": 4,
+        "minimum_resources": 2,
+        "peak_witness": {
+          "count": 2,
+          "time": 1664.0,
+          "tasks": [
+            "T010",
+            "T012"
+          ]
+        },
+        "maximum_matching_size": 2,
+        "matching_edges": [
+          {
+            "predecessor": "T010",
+            "successor": "T019",
+            "slack_seconds": 5.402117089719468
+          },
+          {
+            "predecessor": "T012",
+            "successor": "T018",
+            "slack_seconds": 5.918358721547065
+          }
+        ],
+        "chains": [
+          [
+            "T012",
+            "T018"
+          ],
+          [
+            "T010",
+            "T019"
+          ]
+        ],
+        "optimal_min_handoff_slack_seconds": 5.402117089719468,
+        "original_id_min_handoff_slack_seconds": 5.402117089719468,
+        "next_threshold_seconds": 5.918358721547065,
+        "matching_size_at_next_threshold": 1
+      },
+      "A_batteries": {
+        "resource_type": "A_batteries",
+        "task_count": 10,
+        "minimum_resources": 6,
+        "peak_witness": {
+          "count": 6,
+          "time": 2184.0,
+          "tasks": [
+            "T002",
+            "T009",
+            "T011",
+            "T014",
+            "T017",
+            "T022"
+          ]
+        },
+        "maximum_matching_size": 4,
+        "matching_edges": [
+          {
+            "predecessor": "T009",
+            "successor": "T007",
+            "slack_seconds": 141.13098367391467
+          },
+          {
+            "predecessor": "T011",
+            "successor": "T020",
+            "slack_seconds": 5.575916271985079
+          },
+          {
+            "predecessor": "T017",
+            "successor": "T016",
+            "slack_seconds": 230.58894203845375
+          },
+          {
+            "predecessor": "T022",
+            "successor": "T023",
+            "slack_seconds": 484.9710070815954
+          }
+        ],
+        "chains": [
+          [
+            "T009",
+            "T007"
+          ],
+          [
+            "T011",
+            "T020"
+          ],
+          [
+            "T017",
+            "T016"
+          ],
+          [
+            "T022",
+            "T023"
+          ],
+          [
+            "T002"
+          ],
+          [
+            "T014"
+          ]
+        ],
+        "optimal_min_handoff_slack_seconds": 5.575916271985079,
+        "original_id_min_handoff_slack_seconds": 5.575916271985079,
+        "next_threshold_seconds": 141.13098367391467,
+        "matching_size_at_next_threshold": 3
+      },
+      "B_batteries": {
+        "resource_type": "B_batteries",
+        "task_count": 5,
+        "minimum_resources": 3,
+        "peak_witness": {
+          "count": 3,
+          "time": 1560.0,
+          "tasks": [
+            "T004",
+            "T008",
+            "T015"
+          ]
+        },
+        "maximum_matching_size": 2,
+        "matching_edges": [
+          {
+            "predecessor": "T008",
+            "successor": "T021",
+            "slack_seconds": 165.79914676505086
+          },
+          {
+            "predecessor": "T015",
+            "successor": "T013",
+            "slack_seconds": 34.64249894942577
+          }
+        ],
+        "chains": [
+          [
+            "T008",
+            "T021"
+          ],
+          [
+            "T015",
+            "T013"
+          ],
+          [
+            "T004"
+          ]
+        ],
+        "optimal_min_handoff_slack_seconds": 34.64249894942577,
+        "original_id_min_handoff_slack_seconds": 34.64249894942577,
+        "next_threshold_seconds": 165.79914676505086,
+        "matching_size_at_next_threshold": 1
+      },
+      "C_batteries": {
+        "resource_type": "C_batteries",
+        "task_count": 4,
+        "minimum_resources": 4,
+        "peak_witness": {
+          "count": 4,
+          "time": 4140.0,
+          "tasks": [
+            "T010",
+            "T012",
+            "T018",
+            "T019"
+          ]
+        },
+        "maximum_matching_size": 0,
+        "matching_edges": [],
+        "chains": [
+          [
+            "T012"
+          ],
+          [
+            "T010"
+          ],
+          [
+            "T018"
+          ],
+          [
+            "T019"
+          ]
+        ],
+        "optimal_min_handoff_slack_seconds": null,
+        "original_id_min_handoff_slack_seconds": null,
+        "next_threshold_seconds": null,
+        "matching_size_at_next_threshold": null
+      },
+      "relay_aircraft": {
+        "resource_type": "relay_aircraft",
+        "task_count": 3,
+        "minimum_resources": 2,
+        "peak_witness": {
+          "count": 2,
+          "time": 829.4908374434992,
+          "tasks": [
+            "R002",
+            "R003"
+          ]
+        },
+        "maximum_matching_size": 1,
+        "matching_edges": [
+          {
+            "predecessor": "R003",
+            "successor": "R001",
+            "slack_seconds": 5.93609768073884
+          }
+        ],
+        "chains": [
+          [
+            "R003",
+            "R001"
+          ],
+          [
+            "R002"
+          ]
+        ],
+        "optimal_min_handoff_slack_seconds": 5.93609768073884,
+        "original_id_min_handoff_slack_seconds": 5.93609768073884,
+        "next_threshold_seconds": null,
+        "matching_size_at_next_threshold": null
+      },
+      "relay_components": {
+        "resource_type": "relay_components",
+        "task_count": 3,
+        "minimum_resources": 3,
+        "peak_witness": {
+          "count": 3,
+          "time": 2478.1374190294086,
+          "tasks": [
+            "R001",
+            "R002",
+            "R003"
+          ]
+        },
+        "maximum_matching_size": 0,
+        "matching_edges": [],
+        "chains": [
+          [
+            "R003"
+          ],
+          [
+            "R002"
+          ],
+          [
+            "R001"
+          ]
+        ],
+        "optimal_min_handoff_slack_seconds": null,
+        "original_id_min_handoff_slack_seconds": null,
+        "next_threshold_seconds": null,
+        "matching_size_at_next_threshold": null
+      }
+    },
+    "G3": {
+      "A_aircraft": {
+        "resource_type": "A_aircraft",
+        "task_count": 0,
+        "minimum_resources": 0,
+        "peak_witness": {
+          "count": 0,
+          "time": null,
+          "tasks": []
+        },
+        "maximum_matching_size": 0,
+        "matching_edges": [],
+        "chains": [],
+        "optimal_min_handoff_slack_seconds": null,
+        "original_id_min_handoff_slack_seconds": null,
+        "next_threshold_seconds": null,
+        "matching_size_at_next_threshold": null
+      },
+      "B_aircraft": {
+        "resource_type": "B_aircraft",
+        "task_count": 1,
+        "minimum_resources": 1,
+        "peak_witness": {
+          "count": 1,
+          "time": 1850.0,
+          "tasks": [
+            "T006"
+          ]
+        },
+        "maximum_matching_size": 0,
+        "matching_edges": [],
+        "chains": [
+          [
+            "T006"
+          ]
+        ],
+        "optimal_min_handoff_slack_seconds": null,
+        "original_id_min_handoff_slack_seconds": null,
+        "next_threshold_seconds": null,
+        "matching_size_at_next_threshold": null
+      },
+      "C_aircraft": {
+        "resource_type": "C_aircraft",
+        "task_count": 0,
+        "minimum_resources": 0,
+        "peak_witness": {
+          "count": 0,
+          "time": null,
+          "tasks": []
+        },
+        "maximum_matching_size": 0,
+        "matching_edges": [],
+        "chains": [],
+        "optimal_min_handoff_slack_seconds": null,
+        "original_id_min_handoff_slack_seconds": null,
+        "next_threshold_seconds": null,
+        "matching_size_at_next_threshold": null
+      },
+      "A_batteries": {
+        "resource_type": "A_batteries",
+        "task_count": 0,
+        "minimum_resources": 0,
+        "peak_witness": {
+          "count": 0,
+          "time": null,
+          "tasks": []
+        },
+        "maximum_matching_size": 0,
+        "matching_edges": [],
+        "chains": [],
+        "optimal_min_handoff_slack_seconds": null,
+        "original_id_min_handoff_slack_seconds": null,
+        "next_threshold_seconds": null,
+        "matching_size_at_next_threshold": null
+      },
+      "B_batteries": {
+        "resource_type": "B_batteries",
+        "task_count": 1,
+        "minimum_resources": 1,
+        "peak_witness": {
+          "count": 1,
+          "time": 1850.0,
+          "tasks": [
+            "T006"
+          ]
+        },
+        "maximum_matching_size": 0,
+        "matching_edges": [],
+        "chains": [
+          [
+            "T006"
+          ]
+        ],
+        "optimal_min_handoff_slack_seconds": null,
+        "original_id_min_handoff_slack_seconds": null,
+        "next_threshold_seconds": null,
+        "matching_size_at_next_threshold": null
+      },
+      "C_batteries": {
+        "resource_type": "C_batteries",
+        "task_count": 0,
+        "minimum_resources": 0,
+        "peak_witness": {
+          "count": 0,
+          "time": null,
+          "tasks": []
+        },
+        "maximum_matching_size": 0,
+        "matching_edges": [],
+        "chains": [],
+        "optimal_min_handoff_slack_seconds": null,
+        "original_id_min_handoff_slack_seconds": null,
+        "next_threshold_seconds": null,
+        "matching_size_at_next_threshold": null
+      },
+      "relay_aircraft": {
+        "resource_type": "relay_aircraft",
+        "task_count": 0,
+        "minimum_resources": 0,
+        "peak_witness": {
+          "count": 0,
+          "time": null,
+          "tasks": []
+        },
+        "maximum_matching_size": 0,
+        "matching_edges": [],
+        "chains": [],
+        "optimal_min_handoff_slack_seconds": null,
+        "original_id_min_handoff_slack_seconds": null,
+        "next_threshold_seconds": null,
+        "matching_size_at_next_threshold": null
+      },
+      "relay_components": {
+        "resource_type": "relay_components",
+        "task_count": 0,
+        "minimum_resources": 0,
+        "peak_witness": {
+          "count": 0,
+          "time": null,
+          "tasks": []
+        },
+        "maximum_matching_size": 0,
+        "matching_edges": [],
+        "chains": [],
+        "optimal_min_handoff_slack_seconds": null,
+        "original_id_min_handoff_slack_seconds": null,
+        "next_threshold_seconds": null,
+        "matching_size_at_next_threshold": null
+      }
+    }
+  }
+}

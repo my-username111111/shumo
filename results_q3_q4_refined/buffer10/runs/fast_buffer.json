@@ -1,0 +1,109 @@
+{
+  "stages": [
+    {
+      "target": "soft",
+      "status": "OPTIMAL",
+      "value": 0.0,
+      "lower_bound": 0.0,
+      "relative_gap": 0.0
+    },
+    {
+      "target": "makespan",
+      "status": "OPTIMAL",
+      "value": 6411.0,
+      "lower_bound": 6411.0,
+      "relative_gap": 0.0
+    },
+    {
+      "target": "weighted",
+      "status": "FEASIBLE",
+      "value": 2641876.0,
+      "lower_bound": 2462992.0,
+      "relative_gap": 0.06771097507982964
+    },
+    {
+      "target": "energy",
+      "status": "OPTIMAL",
+      "value": 72811123.0,
+      "lower_bound": 72811123.0,
+      "relative_gap": 0.0
+    },
+    {
+      "target": "sorties",
+      "status": "OPTIMAL",
+      "value": 3.0,
+      "lower_bound": 3.0,
+      "relative_gap": 0.0
+    }
+  ],
+  "policy": "makespan",
+  "seed": 2028,
+  "scale_seconds": 1,
+  "candidate_sites": 3,
+  "route_modes": 23,
+  "session_slots": 6,
+  "q4_constraint": false,
+  "independent_groups": false,
+  "resource_buffer_seconds": 10.0,
+  "objective_caps": {
+    "soft": 0
+  },
+  "elapsed_seconds": 32.58626470001764,
+  "bound_scope": "Finite sites, fixed box groups/visit orders, optional type modes and bounded relay sessions; later bounds conditional on earlier attained caps.",
+  "label": "fast_buffer",
+  "settings": {
+    "variable_models": false,
+    "policy": "makespan"
+  },
+  "box_transfers": [],
+  "status": "PASS",
+  "objective": {
+    "weighted_soft_delay": 0,
+    "weighted_delivery_seconds": 2641494.0032893578,
+    "makespan": 6410.534653380882,
+    "energy_kwh": 72.807192474384,
+    "transport_energy_kwh": 69.30723683159759,
+    "relay_energy_kwh": 3.499955642786402,
+    "transport_sorties": 23,
+    "relay_sorties": 3,
+    "total_sorties": 26
+  },
+  "handoff_minima": {
+    "aircraft": 10.050585059482728,
+    "battery": 10.57591627198508,
+    "relay": 10.93609768073884,
+    "component": null
+  },
+  "q4": [
+    {
+      "id": "P1",
+      "groups": 2,
+      "shortage": 6,
+      "resources": 33,
+      "cv": 0.848734864128408
+    },
+    {
+      "id": "P2",
+      "groups": 2,
+      "shortage": 8,
+      "resources": 35,
+      "cv": 0.8069184406126884
+    },
+    {
+      "id": "P3",
+      "groups": 2,
+      "shortage": 2,
+      "resources": 29,
+      "cv": 0.9581835764842804
+    },
+    {
+      "id": "P4",
+      "groups": 3,
+      "shortage": 8,
+      "resources": 35,
+      "cv": 1.2112753626752528
+    }
+  ],
+  "q4_validation": "PASS",
+  "wall_seconds": 36.26150640001288
+}

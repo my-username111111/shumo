@@ -113,6 +113,24 @@ def charge(soc,full):
 
 def physical_audit(s,plan):
     checked=verify_q2(s,dict(sorties=plan['transport_sorties'],deliveries=plan['deliveries']))
+    buffer=plan.get('search',{}).get('resource_buffer_seconds',0.)
+    if not isfinite(buffer) or buffer<0:
+        raise AssertionError('Invalid resource buffer')
+    handoffs={}
+    for kind,rows,key,end in (
+        ('aircraft',plan['transport_sorties'],'drone','return_time'),
+        ('battery',plan['transport_sorties'],'battery','battery_ready'),
+        ('relay',plan['relay_sorties'],'relay','relay_ready'),
+        ('component',plan['relay_sorties'],'energy_component','component_ready')):
+        gaps=[]
+        for rid in {row[key] for row in rows}:
+            chain=sorted((row for row in rows if row[key]==rid),key=lambda row:row['start'])
+            gaps.extend(b['start']-a[end] for a,b in zip(chain,chain[1:]))
+        handoffs[kind]=min(gaps) if gaps else None
+        if gaps and min(gaps)<buffer-1e-7:
+            raise AssertionError(f'{kind} handoff violates declared resource buffer')
+    checked['resource_buffer_seconds']=buffer
+    checked['minimum_handoff_seconds']=handoffs
     for row in plan['transport_sorties']:
         close(row['battery_ready'],row['return_time']+charge(row['return_soc'],
               s.battery_charge[row['model']]),'independent transport battery charging')
@@ -188,6 +206,8 @@ def certify(s,plan,extra=0.,minimum_interval=.25,kernel=margin,stop_on_failure=F
                     when=(a+b)/2;position=phase_position(ph,when-row['start'])
                     point_paths=[point_margin(s,gateway,position,'transport','gateway',extra)]
                     for r in relays:
+                        if 'service_zones' in r and not {z for z,_ in row['visits']}<=set(r['service_zones']):
+                            continue
                         if r['established']<=when<=r['service_end']:
                             point=(r['lon'],r['lat'],r['altitude'])
                             access=point_margin(s,point,position,'relay_access','transport',extra)
@@ -221,12 +241,17 @@ def certify(s,plan,extra=0.,minimum_interval=.25,kernel=margin,stop_on_failure=F
     return intervals,communication,certificate
 
 
-def accept(s,plan,extra=0.):
+def accept(s,plan,extra=None):
+    # Preserve a saved robustness scenario unless the caller explicitly changes it.
+    from math import isfinite
+    extra = plan.get('extra_loss_db', 0.) if extra is None else extra
+    if not isfinite(extra) or extra < 0:
+        raise ValueError('Extra communication loss must be finite and nonnegative')
     physical=physical_audit(s,plan)
     rows,communication,certificate=certify(s,plan,extra)
     if certificate['status']!='PASS':
         raise ValueError(f"Continuous replay UNKNOWN: {certificate['unknown_interval_count']} intervals")
-    plan.update(communication_intervals=rows,communication=communication,certificate=certificate,
+    plan.update(extra_loss_db=extra,communication_intervals=rows,communication=communication,certificate=certificate,
                 independent_replay=physical)
     components,relations=coupled_components(s,{**plan,'communication':rows})
     plan['q4_compatibility']=dict(coupled_components=components,component_count=len(components),

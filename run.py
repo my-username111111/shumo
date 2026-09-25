@@ -17,7 +17,7 @@ from q1 import solve_all as solve_q1
 from q2 import solve as solve_q2
 from q3 import solve as solve_q3
 from q4 import RESOURCE_KEYS, solve as solve_q4
-from verify import verify_all, verify_q2
+from verify import verify_all, verify_q1, verify_q2
 
 
 def save_json(path: Path, obj: object) -> None:
@@ -180,6 +180,18 @@ def export(output: Path, s: Scenario, q1: dict, q2: dict, q3: dict, q4: dict, ch
     save_csv(output / "q3_communication.csv",
              ["transport_sortie", "phase", "start_s", "end_s", "mode", "relay_sortie"], comm_rows)
 
+    if isinstance(q4['partitions'], list):
+        # Exact Q4 tables/certificates are exported by q4_delivery to this directory.
+        save_json(output / 'summary.json', dict(
+            q1=q1['totals'], q2=q2['objective'], q3=q3['objective'],
+            q3_source=q3.get('search', {}).get('saved_plan_source'),
+            q3_validation=checks['q3'], q4_validation=checks['q4'],
+            q4_recommended=q4['recommended_partition'],
+            q4=[{k:p[k] for k in ('id','group_count','shortage','resource_total','workload_cv')}
+                for p in q4['partitions']],
+            q4_scope='Exact fixed-input partition enumeration; shortages are allowed and reported'))
+        return
+
     partition_rows = []
     for k, plan in q4["partitions"].items():
         if not plan["feasible"]:
@@ -228,8 +240,11 @@ def main() -> None:
     parser.add_argument("--no-sensitivity", action="store_true", help="Skip Q1 reserve sensitivity")
     parser.add_argument("--no-merge", action="store_true", help="Keep initial single-zone Q2 jobs")
     parser.add_argument("--only-q2", action="store_true", help="Solve and verify Q2, then fill its result-template sheets")
+    parser.add_argument("--only-q4", action="store_true", help="Independently verify a saved Q3 and export exact Q4 without rerunning Q1-Q3")
     parser.add_argument("--q3-plan", type=Path,
                         help="Independently recheck a saved continuous Q3 plan and use it for Q4")
+    parser.add_argument('--legacy-q3-search', action='store_true',
+                        help='Explicitly run the historical Q3/Q4 pipeline instead of the current certified delivery')
     parser.add_argument("--no-coordination", action="store_true", help="Use the original fixed-Q2 relay plan")
     parser.add_argument("--q3-seed", choices=("soft_delay_priority", "zero_delay_efficient",
                                               "delivery_priority", "energy_guarded",
@@ -237,16 +252,37 @@ def main() -> None:
                                               "alns_zero_delay_efficient", "quick_24",
                                               "energy_22", "prior_soft_delay_priority",
                                               "timely_22"),
-                        default="energy_guarded", help="Q2 candidate used to initialize Q3")
-    parser.add_argument("--coordination-rounds", type=int, default=2,
+                        default=None, help="Q2 candidate used to initialize legacy Q3 (default: energy_guarded)")
+    parser.add_argument("--coordination-rounds", type=int, default=None,
                         help="Communication-guided search rounds (default: 2)")
-    parser.add_argument("--coordination-trials", type=int, default=3,
+    parser.add_argument("--coordination-trials", type=int, default=None,
                         help="Full relay evaluations per round (default: 3)")
-    parser.add_argument("--promotion-trials", type=int, default=12,
+    parser.add_argument("--promotion-trials", type=int, default=None,
                         help="Soft-sortie insertion trials (default: 12)")
     parser.add_argument("--no-figures", action="store_true", help="Skip static result figures")
     args = parser.parse_args()
+    if args.only_q2 and args.only_q4:
+        parser.error("--only-q2 and --only-q4 cannot be combined")
+    if args.legacy_q3_search and (args.q3_plan or args.only_q4):
+        parser.error('--legacy-q3-search conflicts with --q3-plan/--only-q4')
+    if args.no_coordination and not args.legacy_q3_search:
+        parser.error('--no-coordination requires --legacy-q3-search')
+    if not args.legacy_q3_search and any(v is not None for v in (
+            args.q3_seed,args.coordination_rounds,args.coordination_trials,args.promotion_trials)):
+        parser.error('Historical Q3 search options require --legacy-q3-search')
+    args.q3_seed = args.q3_seed or 'energy_guarded'
+    args.coordination_rounds = 2 if args.coordination_rounds is None else args.coordination_rounds
+    args.coordination_trials = 3 if args.coordination_trials is None else args.coordination_trials
+    args.promotion_trials = 12 if args.promotion_trials is None else args.promotion_trials
     scenario = Scenario()
+    if args.only_q4:
+        from q4_delivery import export as export_exact_q4, default_plan_path
+        plan = args.q3_plan or default_plan_path()
+        output = args.output if args.output != default_output else Path(__file__).resolve().parent / "results_q4"
+        result, checked = export_exact_q4(scenario, plan, output, figures=not args.no_figures)
+        print(json.dumps(dict(output=str(output), recommended=result['recommended_partition'],
+                              validation=checked), ensure_ascii=False, indent=2))
+        return
     if args.only_q2:
         if args.output == default_output:
             args.output = Path(__file__).resolve().parent / "results_q2"
@@ -262,28 +298,23 @@ def main() -> None:
     q1 = solve_q1(scenario, sensitivity=not args.no_sensitivity)
     print("Q2: transport and shared batteries", flush=True)
     q2 = solve_q2(scenario, improve=not args.no_merge)
+    if not args.legacy_q3_search:
+        run_certified_tail(scenario, q1, q2, args.q3_plan, args.output, not args.no_figures)
+        return
     print("Q3: communication-guided transport and relay search", flush=True)
     q3_seed = (q2 if args.q3_seed in {"soft_delay_priority", "timely_22"}
                else q2["alternatives"][args.q3_seed])
-    if args.q3_plan:
-        from q3_certificate import accept, legacy_view
-        saved = json.loads(args.q3_plan.read_text(encoding="utf-8"))
-        q3 = legacy_view(accept(scenario, saved, saved.get("extra_loss_db", 0.0)))
-        q3.setdefault("search", {})["saved_plan_source"] = str(args.q3_plan)
-    elif args.no_coordination:
+    if args.no_coordination:
         q3 = solve_q3(scenario, q3_seed)
     else:
         q3 = solve_coordination(scenario, q3_seed, rounds=args.coordination_rounds,
                                 trials_per_round=args.coordination_trials,
                                 promotion_trials=args.promotion_trials)
-    if not args.q3_plan:
-        q3.setdefault("search", {})["q2_seed_policy"] = args.q3_seed
+    q3.setdefault("search", {})["q2_seed_policy"] = args.q3_seed
     print("Q4: independent task-group resources", flush=True)
     q4 = solve_q4(scenario, q3)
     print("Replay verification", flush=True)
     checks = verify_all(scenario, q1, q2, q3, q4)
-    if args.q3_plan:
-        checks["q3_continuous"] = q3["certificate"]
     export(args.output, scenario, q1, q2, q3, q4, checks)
     if not args.no_figures:
         print("Drawing result figures", flush=True)
@@ -292,6 +323,30 @@ def main() -> None:
     print(json.dumps(dict(q1=q1["totals"], q2=q2["objective"], q3=q3["objective"],
                           q4_shortage={k: v.get("shortage_strict", {"feasible": False}) for k, v in q4["partitions"].items()}),
                      ensure_ascii=False, indent=2), flush=True)
+
+
+def run_certified_tail(scenario, q1, q2, plan_path, output, figures=True):
+    """Use one immutable Q3 input for full runs and Q4-only delivery alike."""
+    from q4_delivery import export as export_exact_q4, default_plan_path
+    from q4_audit import verify_fixed_q3
+    from q3_certificate import legacy_view
+    plan_path = plan_path or default_plan_path()
+    saved = json.loads(plan_path.read_text(encoding='utf8'))
+    checked = verify_fixed_q3(scenario, saved)
+    q3 = legacy_view(saved)
+    q3.setdefault('search', {})['saved_plan_source'] = str(plan_path.resolve())
+    q4, validation = export_exact_q4(scenario, plan_path, output, figures=figures)
+    checks = dict(q1=verify_q1(scenario,q1), q2=verify_q2(scenario,q2),
+                  q3=checked, q3_continuous=saved['certificate'], q4=validation)
+    export(output,scenario,q1,q2,q3,q4,checks)
+    # Keep the certified schema available for downstream Q4 replay.
+    save_json(output/'q3_plan.json', saved)
+    if figures:
+        from figures import route_map, timeline
+        route_map(scenario,q3,output/'q3_route_map.png')
+        timeline(scenario,q3,output/'q3_resource_timeline.png')
+    print(json.dumps(dict(q3=saved['objective'],q4_recommended=q4['recommended_partition'],
+                          validation=validation,output=str(output)),ensure_ascii=False,indent=2),flush=True)
 
 
 if __name__ == "__main__":

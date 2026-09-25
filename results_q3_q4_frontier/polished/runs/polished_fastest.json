@@ -1,0 +1,43 @@
+{
+  "label": "polished_fastest",
+  "status": "PASS",
+  "source": "results_q3_q4_frontier/fast24/plans/makespan_2030.json",
+  "objective": {
+    "weighted_soft_delay": 0,
+    "weighted_delivery_seconds": 2693930.5076264874,
+    "makespan": 6275.184064967842,
+    "energy_kwh": 72.15271338592915,
+    "transport_energy_kwh": 69.15451555444506,
+    "relay_energy_kwh": 2.998197831484096,
+    "transport_sorties": 24,
+    "relay_sorties": 4,
+    "total_sorties": 28
+  },
+  "changes": [
+    {
+      "relay": "R001",
+      "launch_shift_seconds": 0.0,
+      "service_reduction_seconds": 0.0,
+      "energy_saved_kwh": 0.0
+    },
+    {
+      "relay": "R002",
+      "launch_shift_seconds": 4.0,
+      "service_reduction_seconds": 4.0,
+      "energy_saved_kwh": 0.0012222222222222356
+    },
+    {
+      "relay": "R003",
+      "launch_shift_seconds": 0.0,
+      "service_reduction_seconds": 0.0,
+      "energy_saved_kwh": 0.0
+    },
+    {
+      "relay": "R004",
+      "launch_shift_seconds": 0.0,
+      "service_reduction_seconds": 0.0,
+      "energy_saved_kwh": 0.0
+    }
+  ],
+  "q4_validation": "PASS"
+}

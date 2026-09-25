@@ -1,0 +1,5 @@
+﻿id,group_count,resource_total,shortage_total,workload_cv,stock_sufficient,assignment_replay_passed,need_A_aircraft,shortage_A_aircraft,need_B_aircraft,shortage_B_aircraft,need_C_aircraft,shortage_C_aircraft,need_A_batteries,shortage_A_batteries,need_B_batteries,shortage_B_batteries,need_C_batteries,shortage_C_batteries,need_relay_aircraft,shortage_relay_aircraft,need_relay_components,shortage_relay_components
+P1,2,33,6,0.8479653084214936,False,True,5,1,2,0,4,2,7,1,4,0,6,2,2,0,3,0
+P2,2,35,8,0.8059361454190851,False,True,5,1,3,1,4,2,7,1,5,1,6,2,2,0,3,0
+P3,2,29,2,0.9579708369975914,False,True,4,0,3,1,2,0,6,0,5,1,4,0,2,0,3,0
+P4,3,35,8,1.2102540103168005,False,True,5,1,3,1,4,2,7,1,5,1,6,2,2,0,3,0

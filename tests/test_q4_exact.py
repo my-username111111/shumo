@@ -38,6 +38,7 @@ class Q4ExactTests(unittest.TestCase):
         self.assertEqual([p["id"] for p in result["partitions"]], ["P1", "P2", "P3", "P4"])
         self.assertEqual([p["resource_total"] for p in result["partitions"]], [33, 35, 29, 35])
         self.assertEqual([p["shortage_total"] for p in result["partitions"]], [6, 8, 2, 8])
+        self.assertEqual(result['pareto_partitions'],{'2':['P1','P2','P3'],'3':['P4']})
         p3 = result["partitions"][2]
         self.assertAlmostEqual(p3["certificates"]["G1"]["B_batteries"]
                                ["optimal_min_handoff_slack_seconds"], 767.7991467650509)
@@ -51,6 +52,47 @@ class Q4ExactTests(unittest.TestCase):
         row["relay_sortie"] = "R999"
         with self.assertRaisesRegex(ValueError, "Unknown relay"):
             fixed_input(self.scenario, corrupted)
+
+    def test_tampered_optimality_fields_are_rejected(self):
+        for field, value in [('optimal_min_handoff_slack_seconds',999999.),
+                             ('original_id_min_handoff_slack_seconds',999999.),
+                             ('matching_size_at_next_threshold',999),
+                             ('maximum_matching_size',999)]:
+            with self.subTest(field=field):
+                result = load_and_solve(self.scenario, PLAN)
+                result['partitions'][2]['certificates']['G1']['B_batteries'][field]=value
+                with self.assertRaises(AssertionError):
+                    audit(self.scenario,self.plan,result)
+
+    def test_unknown_physical_resource_is_rejected(self):
+        result = load_and_solve(self.scenario, PLAN)
+        result['assignments'][0]['physical_id']='U_FAKE'
+        with self.assertRaises(AssertionError):
+            audit(self.scenario,self.plan,result)
+
+    def test_q3_changes_invalidate_q4_fingerprint(self):
+        result = load_and_solve(self.scenario, PLAN)
+        changed=copy.deepcopy(self.plan)
+        changed['relay_sorties'][0]['lon']+=.001
+        with self.assertRaisesRegex(AssertionError,'bound'):
+            audit(self.scenario,changed,result)
+
+    def test_missing_partition_and_corrupt_mapping_rejected(self):
+        result=load_and_solve(self.scenario,PLAN)
+        for field in ('partitions','inventory_mapping'):
+            changed=copy.deepcopy(result)
+            changed[field].pop()
+            with self.subTest(field=field), self.assertRaises(AssertionError):
+                audit(self.scenario,self.plan,changed)
+
+    def test_misleading_summary_rejected(self):
+        result=load_and_solve(self.scenario,PLAN)
+        for field,value in [('resource_total',0),('shortage_total',0),
+                            ('stock_sufficient',True),('workload_cv',0.)]:
+            changed=copy.deepcopy(result)
+            changed['partitions'][2][field]=value
+            with self.subTest(field=field), self.assertRaises(AssertionError):
+                audit(self.scenario,self.plan,changed)
 
 
 if __name__ == "__main__":

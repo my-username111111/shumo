@@ -1,12 +1,16 @@
 # 山区洪涝无人机运输与通信协同优化求解代码
 
+最新结果见[Q3/Q4继续优化交付说明](results_q3_q4_resilience/Q3_Q4_继续优化交付说明.md)，当前默认完整方案在`results_q3_q4_resilience/selection/primary`。扩展中继选址后，已获得额外1 dB损耗下仍通过连续通信认证、且五个Q3主要目标不劣于上一轮基线的方案。30秒接续缓冲方案单独比较。Q4允许库存缺口，每个Q4均固定对应Q3后精确核算，未宣称原题Q3全局最优。上一轮名义基线及完工、能耗备选保留在[题意对齐优化交付](results_q3_q4_frontier/Q3_Q4_题意对齐优化交付说明.md)。
+
+最新附加情景见[接续缓冲与通信鲁棒性优化](results_q3_q4_resilience/Q3_Q4_继续优化交付说明.md)，包含30秒接续缓冲、扩大中继选址、均衡通信分组试验及独立验收。附加要求不作为原题名义优化的硬约束。上一轮试验保留在[缓冲与库存试验说明](results_q3_q4_refined/Q3_Q4_优化交付说明.md)。Q4已补齐独立最大流证书核验、实物设备映射、输入指纹和全分区汇总检查。`python run.py --only-q4` 或 `python run_q4.py` 默认读取最新主Q3并写入`results_q4`；完整`run.py`默认也采用同一已认证Q3和精确Q4核算，输出到`results`。
+
 本目录优先读取上一级 `D题/数据` 文件夹中的原始 Excel 和 30 米 DEM，若不存在则读取上一级 `数据` 文件夹；不修改原始附件。Git 仓库不包含题目原始数据及生成的 `results` 文件夹。运行 `run.py` 后，四问的结果、逐箱交付记录、资源时序和独立复算报告写入 `results`。第一问与公共运输核验的最新实现、结果和后续路线见 `交付说明_v4.md`；第二问的运输主流程见 `Q2_交付说明.md`，最新时间优化续跑见 `Q2_时间优化_续跑_23至25架次.md`，上一轮见 `Q2_时间优化_24架次.md`，对标复盘见 `Q2_对标复盘.md`，下一轮文献与方法调研见 `Q2_新方法调研_2026-09-23.md`。`v3.md` 保留升级前的完整审查清单，`交付说明_v2.md` 和 `交付说明.md` 分别保留 v2、v1 阶段记录。
 
 四问的不足、改进原因、具体实施方式与验收标准见 [v3 四问审查与改进方案](v3.md)。该文档保留审查时的设计路线；第一问与第二问的已实施改动分别见 `交付说明_v4.md` 和 `Q2_交付说明.md`。
 
 第三问最新实现与结果见 [Q3_交付说明.md](Q3_交付说明.md)。`python run_q3_joint.py --seconds 20 --iterations 8 --seeds 2026 2027 --warm-start q3_joint_feasible_seed.json` 运行四类资源联合 CP-SAT、多初值箱级搜索、位置高度细化和鲁棒性实验；额外依赖为 `requirements-q3.txt`。结果单独写入 `results_q3_complete`，`python q3_deliver.py` 重新认证并汇总表格和图形。旧版 `results_q3_upgrade` 与 `Q3_运行结果.md` 保留作对照。
 
-完整四问接入最新第三问方案时，执行 `python run.py --q3-plan results_q3_complete/q3_plan.json`；程序重新认证该计划，再计算原版第四问预览。默认不带 `--q3-plan` 的全流程仍为历史采样版搜索。第三问独立主方案不强制保留三个 Q4 任务块，分区兼容方案及其代价在新结果目录单列。
+完整四问默认读取`results_q3_q4_resilience/selection/primary/q3_plan.json`；该交付不存在时才回退至`results_q3_q4_frontier/selection/primary/q3_plan.json`及历史基线。也可执行`python run.py --q3-plan <计划.json>`选择其他方案。程序逐条核验保存的连续通信关系，不重新选择中继，然后枚举固定该Q3的全部合法Q4分区。`q3_plan.json`保留可复算的认证格式，`q3.json`供历史表格兼容使用。历史搜索只能用`python run.py --legacy-q3-search`显式调用，其Q4为历史算法。最新Q3重新优化使用`search_q3_frontier.py`，不会在全流程中隐式重搜。
 
 第四问的优化设计见 [Q4_优化方案_v2.md](Q4_优化方案_v2.md)。现已用独立入口 `python run_q4.py --plan results_q3_complete/q3_plan.json --output results_q4` 正式实现：枚举全部四种合法分区，导出八类资源的最低配置、具体接续链、最优性证据和独立回放。结果与图表见 [results_q4/Q4_交付说明.md](results_q4/Q4_交付说明.md)。
 

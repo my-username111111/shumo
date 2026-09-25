@@ -1,0 +1,8 @@
+{
+  "sources": {
+    "primary": "results_q3_q4_frontier/fine3_capped/plans/timely_2030.json",
+    "fastest": "results_q3_q4_frontier/fast24/plans/makespan_2030.json",
+    "energy": "results_q3_q4_frontier/schedule/plans/energy_2030.json"
+  },
+  "method": "continuous relay window trimming; no task or box changes"
+}

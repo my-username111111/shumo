@@ -1,0 +1,23 @@
+{
+  "args": {
+    "output": "results_q3_q4_frontier\\med_fast",
+    "input": "results_q3_q4_frontier\\moves\\plans\\move_S004-MED-01_T014_T019.json",
+    "phase": "schedule",
+    "seconds": 30.0,
+    "limit": 2,
+    "offset": 0,
+    "seed": 2030,
+    "expanded_sites": false,
+    "interval": 90.0,
+    "fixed_models": false,
+    "policies": [
+      "makespan",
+      "timely"
+    ]
+  },
+  "baseline_sha256": "6e02c4f8890c1b70aef8ff9637dc2c819a446d6c679391177c8601a6b516ad37",
+  "input_fingerprint": "8b318a9045d58f13b75e945b88ac406c28444aa986dfed4cc92f08b05d5fc6f0",
+  "candidate_sites": 3,
+  "objective_policy": "zero soft delay; independent time, energy and weighted-delivery branches",
+  "q4_policy": "fixed Q3 partitions; report shortages, no stock-feasibility constraint"
+}

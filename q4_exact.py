@@ -297,6 +297,31 @@ def _stock(s) -> dict:
                 relay_components=s.relay_energy_count)
 
 
+def map_inventory(s, partitions, assignments):
+    inventory = {f'{g}_aircraft': sorted(u for u, typ in s.aircraft.items() if typ == g)
+                 for g in s.transport}
+    inventory.update({f'{g}_batteries': [f'{g}{i:02d}' for i in range(1,n+1)]
+                      for g,n in s.battery_count.items()})
+    inventory['relay_aircraft'] = sorted(s.relays)
+    inventory['relay_components'] = [f'RE{i:02d}' for i in range(1,s.relay_energy_count+1)]
+    mapping = []
+    for partition in partitions:
+        rows = [r for r in assignments if r['partition'] == partition['id']]
+        for key in RESOURCE_KEYS:
+            ids = sorted({r['resource_id'] for r in rows if r['resource_type'] == key})
+            for i, rid in enumerate(ids):
+                existing = i < len(inventory[key])
+                physical = inventory[key][i] if existing else f'NEW-{key}-{i-len(inventory[key])+1:02d}'
+                item = dict(partition=partition['id'], group=rid.split('-')[0], resource_type=key,
+                            resource_id=rid, physical_id=physical,
+                            inventory_status='existing' if existing else 'procurement_required')
+                mapping.append(item)
+                for row in rows:
+                    if row['resource_id'] == rid:
+                        row.update(physical_id=physical,inventory_status=item['inventory_status'])
+    return mapping
+
+
 def _partition_id(groups: list[list[int]]) -> str:
     value = {tuple(g) for g in groups}
     return {
@@ -308,6 +333,8 @@ def _partition_id(groups: list[list[int]]) -> str:
 
 
 def solve(s, plan: dict, input_bytes: bytes) -> dict:
+    if json.dumps(json.loads(input_bytes.decode('utf-8')), sort_keys=True) != json.dumps(plan, sort_keys=True):
+        raise ValueError('Input bytes and Q3 plan differ')
     fixed = fixed_input(s, plan)
     stock = _stock(s)
     components = fixed["components"]
@@ -384,7 +411,7 @@ def solve(s, plan: dict, input_bytes: bytes) -> dict:
         partition["sharing_loss"] = {key: partition["resource_need"][key] - pooled[key]
                                      for key in RESOURCE_KEYS}
     two = [p for p in all_partitions if p["group_count"] == 2]
-    recommended = min(two, key=lambda p: (p["resource_total"], p["workload_cv"]))
+    recommended = min(two, key=lambda p: (p['shortage_total'], p["resource_total"], p["workload_cv"])) if two else None
     thresholds = sorted({p["workload_cv"] for p in two})
     staircase = [dict(maximum_cv=limit,
                       least_resource_partition=min((p for p in two if p["workload_cv"] <= limit + 1e-12),
@@ -404,9 +431,11 @@ def solve(s, plan: dict, input_bytes: bytes) -> dict:
                               sum(r["return_time"] - r["start"] for r in fixed["relay"].values()
                                   if set(fixed["relay_zones"][r["id"]]) <= zset))
     alpha = max(component_work) / total_work
-    bounds = {str(k): (k * alpha - 1) / sqrt(k - 1) for k in (2, 3)}
+    bounds = {str(k): max(0., (k * alpha - 1) / sqrt(k - 1)) for k in (2, 3)}
     components_doc = dict(input_sha256=sha256(input_bytes).hexdigest().upper(),
-                          fixed_q3_commit_reference="799197c", components=components,
+                          canonical_plan_sha256=sha256(json.dumps(plan, sort_keys=True, ensure_ascii=False,
+                                                                 separators=(',', ':')).encode()).hexdigest(),
+                          components=components,
                           component_work_seconds=component_work,
                           component_box_counts=component_boxes,
                           coupling_evidence=fixed["evidence"],
@@ -415,9 +444,19 @@ def solve(s, plan: dict, input_bytes: bytes) -> dict:
                           relay_task_count=len(fixed["relay"]),
                           communication_interval_count=fixed["communication_intervals"],
                           box_count=fixed["boxes"])
+    inventory_mapping = map_inventory(s, all_partitions, all_assignments)
+    pareto = {}
+    for k in (2,3):
+        choices = [p for p in all_partitions if p['group_count']==k]
+        def vector(p):return tuple(p['resource_need'][key] for key in RESOURCE_KEYS)+(p['workload_cv'],)
+        pareto[str(k)] = [p['id'] for p in choices if not any(
+            all(x<=y+1e-10 for x,y in zip(vector(q),vector(p))) and
+            any(x<y-1e-10 for x,y in zip(vector(q),vector(p))) for q in choices)]
     return dict(components=components_doc, stock=stock, pooled_resource_need=pooled,
                 partitions=all_partitions, assignments=all_assignments,
-                recommended_partition=recommended["id"],
+                inventory_mapping=inventory_mapping,
+                pareto_partitions=pareto,
+                recommended_partition=recommended["id"] if recommended else None,
                 balance_threshold_policy=staircase,
                 total_work_seconds=total_work, dominant_component_fraction=alpha,
                 workload_cv_lower_bound=bounds)

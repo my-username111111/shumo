@@ -1,0 +1,26 @@
+[
+  {
+    "label": "makespan_2030",
+    "weighted_soft_delay": 0,
+    "weighted_delivery_seconds": 2624970.0032893578,
+    "makespan": 6311.184064967842,
+    "energy_kwh": 72.72897025216177,
+    "transport_energy_kwh": 69.30723683159759,
+    "relay_energy_kwh": 3.4217334205641796,
+    "transport_sorties": 23,
+    "relay_sorties": 3,
+    "total_sorties": 26
+  },
+  {
+    "label": "makespan_2030",
+    "weighted_soft_delay": 0,
+    "weighted_delivery_seconds": 2650642.0032893578,
+    "makespan": 6296.184064967842,
+    "energy_kwh": 72.71338691882843,
+    "transport_energy_kwh": 69.30723683159759,
+    "relay_energy_kwh": 3.406150087230847,
+    "transport_sorties": 23,
+    "relay_sorties": 3,
+    "total_sorties": 26
+  }
+]

@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "physical": {
+    "status": "PASS",
+    "boxes": 80,
+    "sorties": 23,
+    "hard_boxes": 31,
+    "alternatives_checked": 0,
+    "resource_buffer_seconds": 30.0,
+    "minimum_handoff_seconds": {
+      "aircraft": 30.050585059482728,
+      "battery": 30.57591627198508,
+      "relay": 30.895592590911747,
+      "component": null
+    },
+    "relay_sorties": 3,
+    "four_resource_classes": true
+  },
+  "communication_intervals": 246,
+  "communication_relation_preserved": true
+}

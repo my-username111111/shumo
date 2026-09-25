@@ -1,0 +1,14 @@
+[
+  {
+    "label": "timely_2030",
+    "weighted_soft_delay": 0,
+    "weighted_delivery_seconds": 2715412.0032893578,
+    "makespan": 6356.184064967842,
+    "energy_kwh": 72.69780358549511,
+    "transport_energy_kwh": 69.30723683159759,
+    "relay_energy_kwh": 3.390566753897513,
+    "transport_sorties": 23,
+    "relay_sorties": 3,
+    "total_sorties": 26
+  }
+]

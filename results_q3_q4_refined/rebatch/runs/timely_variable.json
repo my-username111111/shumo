@@ -1,0 +1,123 @@
+{
+  "stages": [
+    {
+      "target": "soft",
+      "status": "OPTIMAL",
+      "value": 0.0,
+      "lower_bound": 0.0,
+      "relative_gap": 0.0
+    },
+    {
+      "target": "weighted",
+      "status": "FEASIBLE",
+      "value": 2671586.0,
+      "lower_bound": 1907012.0,
+      "relative_gap": 0.2861873059673168
+    },
+    {
+      "target": "makespan",
+      "status": "OPTIMAL",
+      "value": 6748.0,
+      "lower_bound": 6748.0,
+      "relative_gap": 0.0
+    },
+    {
+      "target": "energy",
+      "status": "FEASIBLE",
+      "value": 73159654.0,
+      "lower_bound": 71213541.0,
+      "relative_gap": 0.026600904919533926
+    },
+    {
+      "target": "sorties",
+      "status": "OPTIMAL",
+      "value": 3.0,
+      "lower_bound": 3.0,
+      "relative_gap": 0.0
+    }
+  ],
+  "policy": "timely",
+  "seed": 2028,
+  "scale_seconds": 1,
+  "candidate_sites": 3,
+  "route_modes": 52,
+  "session_slots": 6,
+  "q4_constraint": false,
+  "independent_groups": false,
+  "resource_buffer_seconds": 5.0,
+  "objective_caps": {
+    "soft": 0
+  },
+  "elapsed_seconds": 47.67240330000641,
+  "bound_scope": "Finite sites, fixed box groups/visit orders, optional type modes and bounded relay sessions; later bounds conditional on earlier attained caps.",
+  "label": "timely_variable",
+  "settings": {
+    "variable_models": true
+  },
+  "box_transfers": [
+    {
+      "box": "S006-MED-01",
+      "origin": "T009",
+      "target": "T010",
+      "origin_model": "A",
+      "extra_target_energy": 0.12612527935578743
+    },
+    {
+      "box": "S005-HYG-01",
+      "origin": "T023",
+      "target": "T019",
+      "origin_model": "A",
+      "extra_target_energy": 0.3252904271589552
+    }
+  ],
+  "status": "PASS",
+  "objective": {
+    "weighted_soft_delay": 0,
+    "weighted_delivery_seconds": 2671179.141741869,
+    "makespan": 6747.534653380882,
+    "energy_kwh": 73.15575481746102,
+    "transport_energy_kwh": 69.6765769524524,
+    "relay_energy_kwh": 3.4791778650086242,
+    "transport_sorties": 23,
+    "relay_sorties": 3,
+    "total_sorties": 26
+  },
+  "handoff_minima": {
+    "aircraft": 5.050585059482728,
+    "battery": 5.211287712528701,
+    "relay": 5.93609768073884,
+    "component": null
+  },
+  "q4": [
+    {
+      "id": "P1",
+      "groups": 2,
+      "shortage": 6,
+      "resources": 33,
+      "cv": 0.8494209026174925
+    },
+    {
+      "id": "P2",
+      "groups": 2,
+      "shortage": 7,
+      "resources": 34,
+      "cv": 0.807794130708155
+    },
+    {
+      "id": "P3",
+      "groups": 2,
+      "shortage": 1,
+      "resources": 28,
+      "cv": 0.9583732280906626
+    },
+    {
+      "id": "P4",
+      "groups": 3,
+      "shortage": 7,
+      "resources": 34,
+      "cv": 1.2121859815219083
+    }
+  ],
+  "q4_validation": "PASS",
+  "wall_seconds": 50.59426439998788
+}

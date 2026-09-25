@@ -145,11 +145,26 @@ def prepare_modes(s, source, geometry, variable_models=True):
 
 
 def solve(s, source, geometry, seconds=20., seed=2026, slots=2,
-          variable_models=True, policy='timely', q4_groups=None):
+          variable_models=True, policy='timely', q4_groups=None,
+          independent_groups=False, resource_buffer=0., objective_caps=None):
     if not isfinite(seconds) or seconds<=0 or not isinstance(slots,int) or slots<1:
         raise ValueError('Positive solver time and positive integer relay slots required')
-    if policy not in {'timely','energy'}:
+    if policy not in {'timely','energy','makespan'}:
         raise ValueError('Unknown Q3 objective policy')
+    if not isfinite(resource_buffer) or resource_buffer < 0:
+        raise ValueError('Nonnegative resource handoff buffer required')
+    groups = q4_groups or [list(s.zone_boxes)]
+    if (any(not g for g in groups) or set(z for g in groups for z in g) != set(s.zone_boxes)
+            or sum(map(len, groups)) != len(s.zone_boxes)):
+        raise ValueError('Q4 groups must partition all service zones')
+    job_groups = []
+    for row in source['sorties']:
+        zones = {z for z, _ in row['visits']}
+        choices = [i for i, group in enumerate(groups) if zones <= set(group)]
+        if len(choices) != 1:
+            raise ValueError('A fixed transport route crosses the requested Q4 groups')
+        job_groups.append(choices[0])
+    buffer = up(resource_buffer)
     start_clock = perf_counter()
     modes = prepare_modes(s, source, geometry, variable_models)
     sites = geometry.sites
@@ -162,6 +177,8 @@ def solve(s, source, geometry, seconds=20., seed=2026, slots=2,
     intervals.update({('relay', r): [] for r in s.relays})
     components = [f'RE{i:02d}' for i in range(1,s.relay_energy_count+1)]
     intervals.update({('component', c): [] for c in components})
+    owners = ({resource: model.NewIntVar(0, len(groups)-1, f'owner_{resource[0]}_{resource[1]}')
+               for resource in intervals} if independent_groups else {})
     starts, selections, aircraft, bat_vars = [], [], [], []
     soft_terms, weighted_terms, energy_terms, endings = [], [], [], []
     for i, options in enumerate(modes):
@@ -180,8 +197,10 @@ def solve(s, source, geometry, seconds=20., seed=2026, slots=2,
                 choices = []
                 for u in ids:
                     flag = model.NewBoolVar(f'{kind}{i}_{k}_{u}')
+                    if independent_groups:
+                        model.Add(owners[kind,u] == job_groups[i]).OnlyEnforceIf(flag)
                     choices.append(flag); target[(k,u)] = flag
-                    interval = model.NewOptionalFixedSizeIntervalVar(t, duration, flag,
+                    interval = model.NewOptionalFixedSizeIntervalVar(t, duration+buffer, flag,
                                                                      f'{kind}I{i}_{k}_{u}')
                     intervals[(kind,u)].append(interval)
                 model.Add(sum(choices) == x)
@@ -208,7 +227,6 @@ def solve(s, source, geometry, seconds=20., seed=2026, slots=2,
     # affine upper rounding of the original two-stage SOC curve, not a full
     # charge assigned to the aircraft itself.
     sessions = []
-    groups = q4_groups or [list(s.zone_boxes)]
     power = (s.relay.hover_kw+s.relay.comm_kw)/3600
     for j, site in enumerate(sites):
         if site.gateway_margin < geometry.extra:
@@ -225,12 +243,14 @@ def solve(s, source, geometry, seconds=20., seed=2026, slots=2,
                 model.Add(finish==established+service+up(site.back_time))
                 model.Add(service==0).OnlyEnforceIf(active.Not())
                 model.Add(launch==0).OnlyEnforceIf(active.Not())
-                relay_duration=up(site.lead)+service+up(site.back_time+s.relay.turnaround)
+                relay_duration=up(site.lead)+service+up(site.back_time+s.relay.turnaround)+buffer
                 relay_release=model.NewIntVar(0,horizon+10000,name+'relay_release')
                 model.Add(relay_release==launch+relay_duration)
                 rflags={}
                 for r in s.relays:
                     f=model.NewBoolVar(name+r); rflags[r]=f
+                    if independent_groups:
+                        model.Add(owners['relay',r] == group_index).OnlyEnforceIf(f)
                     intervals[('relay',r)].append(model.NewOptionalIntervalVar(
                         launch,relay_duration,relay_release,f,name+r+'I'))
                 model.Add(sum(rflags.values())==active)
@@ -249,8 +269,10 @@ def solve(s, source, geometry, seconds=20., seed=2026, slots=2,
                 cflags={}
                 for c in components:
                     f=model.NewBoolVar(name+c); cflags[c]=f
+                    if independent_groups:
+                        model.Add(owners['component',c] == group_index).OnlyEnforceIf(f)
                     size=model.NewIntVar(0,horizon+100000,name+c+'size')
-                    model.Add(size==up(site.lead)+service+up(site.back_time)+charge)
+                    model.Add(size==up(site.lead)+service+up(site.back_time)+charge+buffer)
                     release=model.NewIntVar(0,2*horizon+100000,name+c+'release')
                     model.Add(release==launch+size)
                     intervals[('component',c)].append(model.NewOptionalIntervalVar(
@@ -304,14 +326,23 @@ def solve(s, source, geometry, seconds=20., seed=2026, slots=2,
         model.AddHint(session['active'],int(old is not None))
         if old:
             used_hints.add(old['id'])
-            model.AddHint(session['start'],up(old['start']))
-            model.AddHint(session['service'],min(floor(site.max_service_seconds),up(old['service_end']-old['established'])+2))
+            # Exported launch includes the fractional lead-rounding offset.
+            # Recover the original integer launch; ceil(actual launch) shifts
+            # the service window by one second and can invalidate a tight hint.
+            model.AddHint(session['start'],max(0,up(old['established'])-up(site.lead)))
+            model.AddHint(session['service'],min(floor(site.max_service_seconds),up(old['service_end']-old['established'])))
             for r,flag in session['relay'].items():model.AddHint(flag,int(r==old['relay']))
             for c,flag in session['component'].items():model.AddHint(flag,int(c==old['energy_component']))
     makespan=model.NewIntVar(0,horizon+10000,'Cmax'); model.AddMaxEquality(makespan,endings)
     objectives=dict(soft=sum(soft_terms),weighted=sum(weighted_terms),makespan=makespan,
                     energy=sum(energy_terms),sorties=sum(x['active'] for x in sessions))
+    for name, cap in (objective_caps or {}).items():
+        if name not in objectives or not isfinite(cap) or cap < 0:
+            raise ValueError('Invalid objective cap')
+        model.Add(objectives[name] <= floor(cap))
     order=['soft','weighted','makespan','energy','sorties'] if policy=='timely' else ['soft','energy','makespan','weighted','sorties']
+    if policy == 'makespan':
+        order=['soft','makespan','weighted','energy','sorties']
     reports=[]; solver=None; successful=None
     for target in order:
         model.Minimize(objectives[target])
@@ -334,8 +365,11 @@ def solve(s, source, geometry, seconds=20., seed=2026, slots=2,
             variable=model.GetIntVarFromProtoIndex(index)
             model.AddHint(variable,solver.Value(variable))
     report=dict(stages=reports,policy=policy,seed=seed,scale_seconds=1,
+        coverage_max_interval_seconds=geometry.interval,stage_budget_seconds=seconds,search_workers=8,
         candidate_sites=len(sites),route_modes=sum(map(len,modes)),session_slots=len(sessions),
-        q4_constraint=bool(q4_groups),elapsed_seconds=perf_counter()-start_clock,
+        q4_constraint=bool(q4_groups),independent_groups=independent_groups,
+        resource_buffer_seconds=resource_buffer,objective_caps=objective_caps or {},
+        elapsed_seconds=perf_counter()-start_clock,
         bound_scope='Finite sites, fixed box groups/visit orders, optional type modes and bounded relay sessions; later bounds conditional on earlier attained caps.')
     if successful is None:
         return None,report

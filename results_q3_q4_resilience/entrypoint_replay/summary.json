@@ -1,0 +1,167 @@
+{
+  "q1": {
+    "sorties": 18,
+    "energy_kwh": 59.229659919419014,
+    "work_seconds": 32768.89579667042
+  },
+  "q2": {
+    "weighted_delivery_seconds": 2730086.799402874,
+    "weighted_soft_delay_seconds": 0,
+    "makespan": 8027.342267305714,
+    "energy_kwh": 67.60568442497828,
+    "sortie_count": 22
+  },
+  "q3": {
+    "weighted_soft_delay": 0,
+    "weighted_delivery_seconds": 2613406.0032893578,
+    "makespan": 6307.7581046684645,
+    "energy_kwh": 72.67597306146124,
+    "transport_energy_kwh": 69.30723683159759,
+    "relay_energy_kwh": 3.36873622986365,
+    "transport_sorties": 23,
+    "relay_sorties": 3,
+    "total_sorties": 26
+  },
+  "q3_source": "D:\\建模\\shumo\\results_q3_q4_resilience\\selection\\primary\\q3_plan.json",
+  "q3_validation": {
+    "status": "PASS",
+    "physical": {
+      "status": "PASS",
+      "boxes": 80,
+      "sorties": 23,
+      "hard_boxes": 31,
+      "alternatives_checked": 0,
+      "resource_buffer_seconds": 0.0,
+      "minimum_handoff_seconds": {
+        "aircraft": 0.050585059482727956,
+        "battery": 0.5759162719850792,
+        "relay": 0.8955925909117468,
+        "component": null
+      },
+      "relay_sorties": 3,
+      "four_resource_classes": true
+    },
+    "communication_intervals": 246,
+    "communication_relation_preserved": true
+  },
+  "q4_validation": {
+    "status": "PASS",
+    "scope": "fixed Q3, all legal Q4 partitions and all eight resource types",
+    "component_methods": "union-find and independent graph traversal",
+    "proof_methods": "independent interval peak, Edmonds-Karp flow, descending bottleneck thresholds and assignment replay",
+    "optimality_certificates_independently_verified": true,
+    "physical_inventory_mapping_verified": true,
+    "assignment_rows": 208,
+    "partitions": {
+      "P1": {
+        "status": "PASS",
+        "groups": 2,
+        "transport_tasks": 23,
+        "relay_tasks": 3,
+        "assignment_rows": 52,
+        "stock_sufficient": false,
+        "executable_after_procurement": true
+      },
+      "P2": {
+        "status": "PASS",
+        "groups": 2,
+        "transport_tasks": 23,
+        "relay_tasks": 3,
+        "assignment_rows": 52,
+        "stock_sufficient": false,
+        "executable_after_procurement": true
+      },
+      "P3": {
+        "status": "PASS",
+        "groups": 2,
+        "transport_tasks": 23,
+        "relay_tasks": 3,
+        "assignment_rows": 52,
+        "stock_sufficient": false,
+        "executable_after_procurement": true
+      },
+      "P4": {
+        "status": "PASS",
+        "groups": 3,
+        "transport_tasks": 23,
+        "relay_tasks": 3,
+        "assignment_rows": 52,
+        "stock_sufficient": false,
+        "executable_after_procurement": true
+      }
+    },
+    "q3_tasks_unchanged": true,
+    "all_boxes_delivered_once": true,
+    "all_communication_intervals_certified": true,
+    "resources_not_shared_between_groups": true,
+    "ready_before_reuse": true
+  },
+  "q4_recommended": "P3",
+  "q4": [
+    {
+      "id": "P1",
+      "group_count": 2,
+      "shortage": {
+        "A_aircraft": 1,
+        "B_aircraft": 0,
+        "C_aircraft": 2,
+        "A_batteries": 1,
+        "B_batteries": 0,
+        "C_batteries": 2,
+        "relay_aircraft": 0,
+        "relay_components": 0
+      },
+      "resource_total": 33,
+      "workload_cv": 0.8475602443198199
+    },
+    {
+      "id": "P2",
+      "group_count": 2,
+      "shortage": {
+        "A_aircraft": 1,
+        "B_aircraft": 1,
+        "C_aircraft": 2,
+        "A_batteries": 1,
+        "B_batteries": 1,
+        "C_batteries": 2,
+        "relay_aircraft": 0,
+        "relay_components": 0
+      },
+      "resource_total": 35,
+      "workload_cv": 0.80541910355116
+    },
+    {
+      "id": "P3",
+      "group_count": 2,
+      "shortage": {
+        "A_aircraft": 0,
+        "B_aircraft": 1,
+        "C_aircraft": 0,
+        "A_batteries": 0,
+        "B_batteries": 1,
+        "C_batteries": 0,
+        "relay_aircraft": 0,
+        "relay_components": 0
+      },
+      "resource_total": 29,
+      "workload_cv": 0.9578588592313401
+    },
+    {
+      "id": "P4",
+      "group_count": 3,
+      "shortage": {
+        "A_aircraft": 1,
+        "B_aircraft": 1,
+        "C_aircraft": 2,
+        "A_batteries": 1,
+        "B_batteries": 1,
+        "C_batteries": 2,
+        "relay_aircraft": 0,
+        "relay_components": 0
+      },
+      "resource_total": 35,
+      "workload_cv": 1.2097164629546229
+    }
+  ],
+  "q4_scope": "Exact fixed-input partition enumeration; shortages are allowed and reported"
+}

@@ -1,0 +1,27 @@
+{
+  "args": {
+    "output": "results_q3_q4_resilience\\radio1_refined",
+    "input": "results_q3_q4_frontier\\selection\\primary\\q3_plan.json",
+    "phase": "schedule",
+    "seconds": 30.0,
+    "limit": 1,
+    "offset": 0,
+    "seed": 2030,
+    "expanded_sites": false,
+    "refine_sites": true,
+    "extra_loss": 1.0,
+    "buffer": 30.0,
+    "allow_soft_delay": false,
+    "interval": 6.0,
+    "fixed_models": true,
+    "max_makespan": null,
+    "policies": [
+      "timely"
+    ]
+  },
+  "baseline_sha256": "f4427c6b718e9df03e20a517ae27c7e5a6d066d890ddb979345f806cf263dd9c",
+  "input_fingerprint": "8b318a9045d58f13b75e945b88ac406c28444aa986dfed4cc92f08b05d5fc6f0",
+  "candidate_sites": 63,
+  "objective_policy": "zero soft delay; independent time, energy and weighted-delivery branches",
+  "q4_policy": "fixed Q3 partitions; report shortages, no stock-feasibility constraint"
+}

@@ -1,0 +1,53 @@
+{
+  "stages": [
+    {
+      "target": "soft",
+      "status": "INFEASIBLE",
+      "value": null,
+      "lower_bound": 0.0,
+      "relative_gap": null
+    }
+  ],
+  "policy": "timely",
+  "seed": 2028,
+  "scale_seconds": 1,
+  "candidate_sites": 3,
+  "route_modes": 50,
+  "session_slots": 12,
+  "q4_constraint": true,
+  "independent_groups": true,
+  "resource_buffer_seconds": 30.0,
+  "objective_caps": {
+    "soft": 0
+  },
+  "elapsed_seconds": 11.412557499977993,
+  "bound_scope": "Finite sites, fixed box groups/visit orders, optional type modes and bounded relay sessions; later bounds conditional on earlier attained caps.",
+  "label": "balanced_two",
+  "settings": {
+    "variable_models": true,
+    "q4_groups": [
+      [
+        "S001",
+        "S003",
+        "S015",
+        "S004",
+        "S005",
+        "S011",
+        "S014"
+      ],
+      [
+        "S002",
+        "S009",
+        "S006",
+        "S007",
+        "S012",
+        "S013",
+        "S008",
+        "S010"
+      ]
+    ],
+    "independent_groups": true
+  },
+  "status": "NO_SOLUTION_WITHIN_BUDGET",
+  "wall_seconds": 11.414823699975386
+}

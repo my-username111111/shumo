@@ -1,0 +1,2778 @@
+[
+  {
+    "path": "fast24\\runs\\makespan_2030.json",
+    "stages": [
+      {
+        "target": "soft",
+        "status": "OPTIMAL",
+        "value": 0.0,
+        "lower_bound": 0.0,
+        "relative_gap": 0.0
+      },
+      {
+        "target": "makespan",
+        "status": "OPTIMAL",
+        "value": 6276.0,
+        "lower_bound": 6276.0,
+        "relative_gap": 0.0
+      },
+      {
+        "target": "weighted",
+        "status": "FEASIBLE",
+        "value": 2694306.0,
+        "lower_bound": 1605684.0,
+        "relative_gap": 0.4040454202306642
+      },
+      {
+        "target": "energy",
+        "status": "FEASIBLE",
+        "value": 72156695.0,
+        "lower_bound": 70616455.0,
+        "relative_gap": 0.021345767014412174
+      },
+      {
+        "target": "sorties",
+        "status": "OPTIMAL",
+        "value": 4.0,
+        "lower_bound": 4.0,
+        "relative_gap": 0.0
+      }
+    ],
+    "policy": "makespan",
+    "seed": 2030,
+    "scale_seconds": 1,
+    "candidate_sites": 4,
+    "route_modes": 24,
+    "session_slots": 8,
+    "q4_constraint": false,
+    "independent_groups": false,
+    "resource_buffer_seconds": 0.0,
+    "objective_caps": {
+      "soft": 0
+    },
+    "elapsed_seconds": 126.45923519998905,
+    "bound_scope": "Finite sites, fixed box groups/visit orders, optional type modes and bounded relay sessions; later bounds conditional on earlier attained caps.",
+    "status": "PASS",
+    "objective": {
+      "weighted_soft_delay": 0,
+      "weighted_delivery_seconds": 2693930.5076264874,
+      "makespan": 6275.184064967842,
+      "energy_kwh": 72.15393560815137,
+      "transport_energy_kwh": 69.15451555444506,
+      "relay_energy_kwh": 2.9994200537063183,
+      "transport_sorties": 24,
+      "relay_sorties": 4,
+      "total_sorties": 28
+    },
+    "components": 3,
+    "q4_validation": "PASS",
+    "q4": [
+      {
+        "id": "P1",
+        "group_count": 2,
+        "resource_total": 33,
+        "shortage_total": 6,
+        "workload_cv": 0.8467933168456271
+      },
+      {
+        "id": "P2",
+        "group_count": 2,
+        "resource_total": 35,
+        "shortage_total": 8,
+        "workload_cv": 0.8044401631509092
+      },
+      {
+        "id": "P3",
+        "group_count": 2,
+        "resource_total": 29,
+        "shortage_total": 2,
+        "workload_cv": 0.9576468463052822
+      },
+      {
+        "id": "P4",
+        "group_count": 3,
+        "resource_total": 35,
+        "shortage_total": 8,
+        "workload_cv": 1.2086987982278088
+      }
+    ],
+    "label": "makespan_2030",
+    "elapsed_wall_seconds": 129.20496949998778
+  },
+  {
+    "path": "fine\\runs\\makespan_2030.json",
+    "stages": [
+      {
+        "target": "soft",
+        "status": "OPTIMAL",
+        "value": 0.0,
+        "lower_bound": 0.0,
+        "relative_gap": 0.0
+      },
+      {
+        "target": "makespan",
+        "status": "OPTIMAL",
+        "value": 6312.0,
+        "lower_bound": 6312.0,
+        "relative_gap": 0.0
+      },
+      {
+        "target": "weighted",
+        "status": "FEASIBLE",
+        "value": 2625352.0,
+        "lower_bound": 1586390.0,
+        "relative_gap": 0.39574198050394765
+      },
+      {
+        "target": "energy",
+        "status": "OPTIMAL",
+        "value": 72732787.0,
+        "lower_bound": 72732787.0,
+        "relative_gap": 0.0
+      },
+      {
+        "target": "sorties",
+        "status": "OPTIMAL",
+        "value": 3.0,
+        "lower_bound": 3.0,
+        "relative_gap": 0.0
+      }
+    ],
+    "policy": "makespan",
+    "seed": 2030,
+    "scale_seconds": 1,
+    "candidate_sites": 3,
+    "route_modes": 23,
+    "session_slots": 6,
+    "q4_constraint": false,
+    "independent_groups": false,
+    "resource_buffer_seconds": 0.0,
+    "objective_caps": {
+      "soft": 0
+    },
+    "elapsed_seconds": 100.2570383999846,
+    "bound_scope": "Finite sites, fixed box groups/visit orders, optional type modes and bounded relay sessions; later bounds conditional on earlier attained caps.",
+    "status": "PASS",
+    "objective": {
+      "weighted_soft_delay": 0,
+      "weighted_delivery_seconds": 2624970.0032893578,
+      "makespan": 6311.184064967842,
+      "energy_kwh": 72.72897025216177,
+      "transport_energy_kwh": 69.30723683159759,
+      "relay_energy_kwh": 3.4217334205641796,
+      "transport_sorties": 23,
+      "relay_sorties": 3,
+      "total_sorties": 26
+    },
+    "components": 3,
+    "q4_validation": "PASS",
+    "q4": [
+      {
+        "id": "P1",
+        "group_count": 2,
+        "resource_total": 33,
+        "shortage_total": 6,
+        "workload_cv": 0.848051201067838
+      },
+      {
+        "id": "P2",
+        "group_count": 2,
+        "resource_total": 35,
+        "shortage_total": 8,
+        "workload_cv": 0.8060457826200207
+      },
+      {
+        "id": "P3",
+        "group_count": 2,
+        "resource_total": 29,
+        "shortage_total": 2,
+        "workload_cv": 0.9579945815521823
+      },
+      {
+        "id": "P4",
+        "group_count": 3,
+        "resource_total": 35,
+        "shortage_total": 8,
+        "workload_cv": 1.2103680003191586
+      }
+    ],
+    "label": "makespan_2030",
+    "elapsed_wall_seconds": 102.95107859998825
+  },
+  {
+    "path": "fine\\runs\\timely_2030.json",
+    "stages": [
+      {
+        "target": "soft",
+        "status": "OPTIMAL",
+        "value": 0.0,
+        "lower_bound": 0.0,
+        "relative_gap": 0.0
+      },
+      {
+        "target": "weighted",
+        "status": "FEASIBLE",
+        "value": 2625352.0,
+        "lower_bound": 1584912.0,
+        "relative_gap": 0.39630495263111387
+      },
+      {
+        "target": "makespan",
+        "status": "OPTIMAL",
+        "value": 6312.0,
+        "lower_bound": 6312.0,
+        "relative_gap": 0.0
+      },
+      {
+        "target": "energy",
+        "status": "FEASIBLE",
+        "value": 72732787.0,
+        "lower_bound": 72114357.0,
+        "relative_gap": 0.008502767809516223
+      },
+      {
+        "target": "sorties",
+        "status": "OPTIMAL",
+        "value": 3.0,
+        "lower_bound": 3.0,
+        "relative_gap": 0.0
+      }
+    ],
+    "policy": "timely",
+    "seed": 2030,
+    "scale_seconds": 1,
+    "candidate_sites": 3,
+    "route_modes": 23,
+    "session_slots": 6,
+    "q4_constraint": false,
+    "independent_groups": false,
+    "resource_buffer_seconds": 0.0,
+    "objective_caps": {
+      "soft": 0
+    },
+    "elapsed_seconds": 74.96800599998096,
+    "bound_scope": "Finite sites, fixed box groups/visit orders, optional type modes and bounded relay sessions; later bounds conditional on earlier attained caps.",
+    "status": "PASS",
+    "objective": {
+      "weighted_soft_delay": 0,
+      "weighted_delivery_seconds": 2624970.0032893578,
+      "makespan": 6311.184064967842,
+      "energy_kwh": 72.72897025216177,
+      "transport_energy_kwh": 69.30723683159759,
+      "relay_energy_kwh": 3.4217334205641796,
+      "transport_sorties": 23,
+      "relay_sorties": 3,
+      "total_sorties": 26
+    },
+    "components": 3,
+    "q4_validation": "PASS",
+    "q4": [
+      {
+        "id": "P1",
+        "group_count": 2,
+        "resource_total": 33,
+        "shortage_total": 6,
+        "workload_cv": 0.848051201067838
+      },
+      {
+        "id": "P2",
+        "group_count": 2,
+        "resource_total": 35,
+        "shortage_total": 8,
+        "workload_cv": 0.8060457826200207
+      },
+      {
+        "id": "P3",
+        "group_count": 2,
+        "resource_total": 29,
+        "shortage_total": 2,
+        "workload_cv": 0.9579945815521823
+      },
+      {
+        "id": "P4",
+        "group_count": 3,
+        "resource_total": 35,
+        "shortage_total": 8,
+        "workload_cv": 1.2103680003191586
+      }
+    ],
+    "label": "timely_2030",
+    "elapsed_wall_seconds": 78.28096739997272
+  },
+  {
+    "path": "fine3\\runs\\makespan_2030.json",
+    "stages": [
+      {
+        "target": "soft",
+        "status": "OPTIMAL",
+        "value": 0.0,
+        "lower_bound": 0.0,
+        "relative_gap": 0.0
+      },
+      {
+        "target": "makespan",
+        "status": "FEASIBLE",
+        "value": 6301.0,
+        "lower_bound": 5280.0,
+        "relative_gap": 0.16203777178225678
+      },
+      {
+        "target": "weighted",
+        "status": "FEASIBLE",
+        "value": 2651024.0,
+        "lower_bound": 1538240.0,
+        "relative_gap": 0.41975629039948337
+      },
+      {
+        "target": "energy",
+        "status": "FEASIBLE",
+        "value": 72717181.0,
+        "lower_bound": 70115569.0,
+        "relative_gap": 0.03577712947920795
+      },
+      {
+        "target": "sorties",
+        "status": "OPTIMAL",
+        "value": 3.0,
+        "lower_bound": 3.0,
+        "relative_gap": 0.0
+      }
+    ],
+    "policy": "makespan",
+    "seed": 2030,
+    "scale_seconds": 1,
+    "candidate_sites": 3,
+    "route_modes": 23,
+    "session_slots": 6,
+    "q4_constraint": false,
+    "independent_groups": false,
+    "resource_buffer_seconds": 0.0,
+    "objective_caps": {
+      "soft": 0
+    },
+    "elapsed_seconds": 247.88528260000749,
+    "bound_scope": "Finite sites, fixed box groups/visit orders, optional type modes and bounded relay sessions; later bounds conditional on earlier attained caps.",
+    "status": "PASS",
+    "objective": {
+      "weighted_soft_delay": 0,
+      "weighted_delivery_seconds": 2650642.0032893578,
+      "makespan": 6296.184064967842,
+      "energy_kwh": 72.71338691882843,
+      "transport_energy_kwh": 69.30723683159759,
+      "relay_energy_kwh": 3.406150087230847,
+      "transport_sorties": 23,
+      "relay_sorties": 3,
+      "total_sorties": 26
+    },
+    "components": 3,
+    "q4_validation": "PASS",
+    "q4": [
+      {
+        "id": "P1",
+        "group_count": 2,
+        "resource_total": 33,
+        "shortage_total": 6,
+        "workload_cv": 0.8479142637022733
+      },
+      {
+        "id": "P2",
+        "group_count": 2,
+        "resource_total": 35,
+        "shortage_total": 8,
+        "workload_cv": 0.8058709896650592
+      },
+      {
+        "id": "P3",
+        "group_count": 2,
+        "resource_total": 29,
+        "shortage_total": 2,
+        "workload_cv": 0.9579567259627857
+      },
+      {
+        "id": "P4",
+        "group_count": 3,
+        "resource_total": 35,
+        "shortage_total": 8,
+        "workload_cv": 1.2101862685318892
+      }
+    ],
+    "label": "makespan_2030",
+    "elapsed_wall_seconds": 252.01153289998183
+  },
+  {
+    "path": "fine3\\runs\\timely_2030.json",
+    "stages": [
+      {
+        "target": "soft",
+        "status": "UNKNOWN",
+        "value": null,
+        "lower_bound": 0.0,
+        "relative_gap": null
+      }
+    ],
+    "policy": "timely",
+    "seed": 2030,
+    "scale_seconds": 1,
+    "candidate_sites": 3,
+    "route_modes": 23,
+    "session_slots": 6,
+    "q4_constraint": false,
+    "independent_groups": false,
+    "resource_buffer_seconds": 0.0,
+    "objective_caps": {
+      "soft": 0
+    },
+    "elapsed_seconds": 27.093654999975115,
+    "bound_scope": "Finite sites, fixed box groups/visit orders, optional type modes and bounded relay sessions; later bounds conditional on earlier attained caps.",
+    "status": "BUDGET_EXHAUSTED",
+    "label": "timely_2030",
+    "elapsed_wall_seconds": 27.15349589998368
+  },
+  {
+    "path": "fine3_capped\\runs\\timely_2030.json",
+    "stages": [
+      {
+        "target": "soft",
+        "status": "OPTIMAL",
+        "value": 0.0,
+        "lower_bound": 0.0,
+        "relative_gap": 0.0
+      },
+      {
+        "target": "weighted",
+        "status": "FEASIBLE",
+        "value": 2623582.0,
+        "lower_bound": 1541930.0,
+        "relative_gap": 0.4122806148235504
+      },
+      {
+        "target": "makespan",
+        "status": "FEASIBLE",
+        "value": 6308.0,
+        "lower_bound": 5418.0,
+        "relative_gap": 0.14109067850348764
+      },
+      {
+        "target": "energy",
+        "status": "FEASIBLE",
+        "value": 72722995.0,
+        "lower_bound": 70169119.0,
+        "relative_gap": 0.0351178605886625
+      },
+      {
+        "target": "sorties",
+        "status": "OPTIMAL",
+        "value": 3.0,
+        "lower_bound": 3.0,
+        "relative_gap": 0.0
+      }
+    ],
+    "policy": "timely",
+    "seed": 2030,
+    "scale_seconds": 1,
+    "coverage_max_interval_seconds": 3.0,
+    "stage_budget_seconds": 45.0,
+    "search_workers": 8,
+    "candidate_sites": 3,
+    "route_modes": 23,
+    "session_slots": 6,
+    "q4_constraint": false,
+    "independent_groups": false,
+    "resource_buffer_seconds": 0.0,
+    "objective_caps": {
+      "soft": 0,
+      "makespan": 6312.0
+    },
+    "elapsed_seconds": 178.10726990000694,
+    "bound_scope": "Finite sites, fixed box groups/visit orders, optional type modes and bounded relay sessions; later bounds conditional on earlier attained caps.",
+    "status": "PASS",
+    "objective": {
+      "weighted_soft_delay": 0,
+      "weighted_delivery_seconds": 2623200.0032893578,
+      "makespan": 6307.7581046684645,
+      "energy_kwh": 72.71919247438399,
+      "transport_energy_kwh": 69.30723683159759,
+      "relay_energy_kwh": 3.411955642786402,
+      "transport_sorties": 23,
+      "relay_sorties": 3,
+      "total_sorties": 26
+    },
+    "components": 3,
+    "q4_validation": "PASS",
+    "q4": [
+      {
+        "id": "P1",
+        "group_count": 2,
+        "resource_total": 33,
+        "shortage_total": 6,
+        "workload_cv": 0.8479653084214936
+      },
+      {
+        "id": "P2",
+        "group_count": 2,
+        "resource_total": 35,
+        "shortage_total": 8,
+        "workload_cv": 0.8059361454190851
+      },
+      {
+        "id": "P3",
+        "group_count": 2,
+        "resource_total": 29,
+        "shortage_total": 2,
+        "workload_cv": 0.9579708369975914
+      },
+      {
+        "id": "P4",
+        "group_count": 3,
+        "resource_total": 35,
+        "shortage_total": 8,
+        "workload_cv": 1.2102540103168005
+      }
+    ],
+    "label": "timely_2030",
+    "elapsed_wall_seconds": 180.82642040000064
+  },
+  {
+    "path": "fine_expanded\\runs\\makespan_2030.json",
+    "stages": [
+      {
+        "target": "soft",
+        "status": "OPTIMAL",
+        "value": 0.0,
+        "lower_bound": 0.0,
+        "relative_gap": 0.0
+      },
+      {
+        "target": "makespan",
+        "status": "FEASIBLE",
+        "value": 6312.0,
+        "lower_bound": 6114.0,
+        "relative_gap": 0.03136882129277566
+      },
+      {
+        "target": "weighted",
+        "status": "FEASIBLE",
+        "value": 2625352.0,
+        "lower_bound": 1536616.0,
+        "relative_gap": 0.41470096200433315
+      },
+      {
+        "target": "energy",
+        "status": "FEASIBLE",
+        "value": 72732787.0,
+        "lower_bound": 70084173.0,
+        "relative_gap": 0.03641568141751532
+      },
+      {
+        "target": "sorties",
+        "status": "OPTIMAL",
+        "value": 3.0,
+        "lower_bound": 3.0,
+        "relative_gap": 0.0
+      }
+    ],
+    "policy": "makespan",
+    "seed": 2030,
+    "scale_seconds": 1,
+    "candidate_sites": 9,
+    "route_modes": 23,
+    "session_slots": 18,
+    "q4_constraint": false,
+    "independent_groups": false,
+    "resource_buffer_seconds": 0.0,
+    "objective_caps": {
+      "soft": 0
+    },
+    "elapsed_seconds": 202.01263499999186,
+    "bound_scope": "Finite sites, fixed box groups/visit orders, optional type modes and bounded relay sessions; later bounds conditional on earlier attained caps.",
+    "status": "PASS",
+    "objective": {
+      "weighted_soft_delay": 0,
+      "weighted_delivery_seconds": 2624970.0032893578,
+      "makespan": 6311.184064967842,
+      "energy_kwh": 72.72897025216177,
+      "transport_energy_kwh": 69.30723683159759,
+      "relay_energy_kwh": 3.4217334205641796,
+      "transport_sorties": 23,
+      "relay_sorties": 3,
+      "total_sorties": 26
+    },
+    "components": 3,
+    "q4_validation": "PASS",
+    "q4": [
+      {
+        "id": "P1",
+        "group_count": 2,
+        "resource_total": 33,
+        "shortage_total": 6,
+        "workload_cv": 0.848051201067838
+      },
+      {
+        "id": "P2",
+        "group_count": 2,
+        "resource_total": 35,
+        "shortage_total": 8,
+        "workload_cv": 0.8060457826200207
+      },
+      {
+        "id": "P3",
+        "group_count": 2,
+        "resource_total": 29,
+        "shortage_total": 2,
+        "workload_cv": 0.9579945815521823
+      },
+      {
+        "id": "P4",
+        "group_count": 3,
+        "resource_total": 35,
+        "shortage_total": 8,
+        "workload_cv": 1.2103680003191586
+      }
+    ],
+    "label": "makespan_2030",
+    "elapsed_wall_seconds": 205.81216639999184
+  },
+  {
+    "path": "low_sorties\\runs\\19_best_delivery.json",
+    "stages": [
+      {
+        "target": "soft",
+        "status": "UNKNOWN",
+        "value": null,
+        "lower_bound": 0.0,
+        "relative_gap": null
+      }
+    ],
+    "policy": "timely",
+    "seed": 2030,
+    "scale_seconds": 1,
+    "candidate_sites": 9,
+    "route_modes": 36,
+    "session_slots": 18,
+    "q4_constraint": false,
+    "independent_groups": false,
+    "resource_buffer_seconds": 0.0,
+    "objective_caps": {
+      "soft": 0
+    },
+    "elapsed_seconds": 72.45318819998647,
+    "bound_scope": "Finite sites, fixed box groups/visit orders, optional type modes and bounded relay sessions; later bounds conditional on earlier attained caps.",
+    "status": "BUDGET_EXHAUSTED",
+    "label": "19_best_delivery",
+    "elapsed_wall_seconds": 72.45809640001971
+  },
+  {
+    "path": "low_sorties\\runs\\19_fast.json",
+    "stages": [
+      {
+        "target": "soft",
+        "status": "UNKNOWN",
+        "value": null,
+        "lower_bound": 0.0,
+        "relative_gap": null
+      }
+    ],
+    "policy": "timely",
+    "seed": 2030,
+    "scale_seconds": 1,
+    "candidate_sites": 9,
+    "route_modes": 36,
+    "session_slots": 18,
+    "q4_constraint": false,
+    "independent_groups": false,
+    "resource_buffer_seconds": 0.0,
+    "objective_caps": {
+      "soft": 0
+    },
+    "elapsed_seconds": 15.460870200011414,
+    "bound_scope": "Finite sites, fixed box groups/visit orders, optional type modes and bounded relay sessions; later bounds conditional on earlier attained caps.",
+    "status": "BUDGET_EXHAUSTED",
+    "label": "19_fast",
+    "elapsed_wall_seconds": 15.47212310001487
+  },
+  {
+    "path": "low_sorties\\runs\\19_min_energy.json",
+    "stages": [
+      {
+        "target": "soft",
+        "status": "UNKNOWN",
+        "value": null,
+        "lower_bound": 0.0,
+        "relative_gap": null
+      }
+    ],
+    "policy": "timely",
+    "seed": 2030,
+    "scale_seconds": 1,
+    "candidate_sites": 9,
+    "route_modes": 36,
+    "session_slots": 18,
+    "q4_constraint": false,
+    "independent_groups": false,
+    "resource_buffer_seconds": 0.0,
+    "objective_caps": {
+      "soft": 0
+    },
+    "elapsed_seconds": 16.058740600012243,
+    "bound_scope": "Finite sites, fixed box groups/visit orders, optional type modes and bounded relay sessions; later bounds conditional on earlier attained caps.",
+    "status": "BUDGET_EXHAUSTED",
+    "label": "19_min_energy",
+    "elapsed_wall_seconds": 16.063645099988207
+  },
+  {
+    "path": "low_sorties\\runs\\20_repacked.json",
+    "stages": [
+      {
+        "target": "soft",
+        "status": "UNKNOWN",
+        "value": null,
+        "lower_bound": 0.0,
+        "relative_gap": null
+      }
+    ],
+    "policy": "timely",
+    "seed": 2030,
+    "scale_seconds": 1,
+    "candidate_sites": 9,
+    "route_modes": 40,
+    "session_slots": 18,
+    "q4_constraint": false,
+    "independent_groups": false,
+    "resource_buffer_seconds": 0.0,
+    "objective_caps": {
+      "soft": 0
+    },
+    "elapsed_seconds": 17.730714600009378,
+    "bound_scope": "Finite sites, fixed box groups/visit orders, optional type modes and bounded relay sessions; later bounds conditional on earlier attained caps.",
+    "status": "BUDGET_EXHAUSTED",
+    "label": "20_repacked",
+    "elapsed_wall_seconds": 17.7381166999985
+  },
+  {
+    "path": "low_sorties\\runs\\21_low_sorties.json",
+    "stages": [
+      {
+        "target": "soft",
+        "status": "OPTIMAL",
+        "value": 0.0,
+        "lower_bound": 0.0,
+        "relative_gap": 0.0
+      },
+      {
+        "target": "weighted",
+        "status": "FEASIBLE",
+        "value": 3050600.0,
+        "lower_bound": 1255434.0,
+        "relative_gap": 0.5884632531305317
+      },
+      {
+        "target": "makespan",
+        "status": "FEASIBLE",
+        "value": 8414.0,
+        "lower_bound": 2466.0,
+        "relative_gap": 0.7069170430235322
+      },
+      {
+        "target": "energy",
+        "status": "FEASIBLE",
+        "value": 71435371.0,
+        "lower_bound": 67905715.0,
+        "relative_gap": 0.04941048041872702
+      },
+      {
+        "target": "sorties",
+        "status": "FEASIBLE",
+        "value": 5.0,
+        "lower_bound": 4.0,
+        "relative_gap": 0.2
+      }
+    ],
+    "policy": "timely",
+    "seed": 2030,
+    "scale_seconds": 1,
+    "candidate_sites": 9,
+    "route_modes": 43,
+    "session_slots": 18,
+    "q4_constraint": false,
+    "independent_groups": false,
+    "resource_buffer_seconds": 0.0,
+    "objective_caps": {
+      "soft": 0
+    },
+    "elapsed_seconds": 71.26205839999602,
+    "bound_scope": "Finite sites, fixed box groups/visit orders, optional type modes and bounded relay sessions; later bounds conditional on earlier attained caps.",
+    "status": "PASS",
+    "objective": {
+      "weighted_soft_delay": 0,
+      "weighted_delivery_seconds": 3050181.2309751664,
+      "makespan": 8413.650383541955,
+      "energy_kwh": 71.43168180817082,
+      "transport_energy_kwh": 67.72751289489406,
+      "relay_energy_kwh": 3.704168913276753,
+      "transport_sorties": 21,
+      "relay_sorties": 5,
+      "total_sorties": 26
+    },
+    "components": 2,
+    "q4_validation": "PASS",
+    "q4": [
+      {
+        "id": "P1_2",
+        "group_count": 2,
+        "resource_total": 33,
+        "shortage_total": 6,
+        "workload_cv": 0.8458294827180035
+      }
+    ],
+    "label": "21_low_sorties",
+    "elapsed_wall_seconds": 75.37948239999241
+  },
+  {
+    "path": "med_fast\\runs\\makespan_2030.json",
+    "stages": [
+      {
+        "target": "soft",
+        "status": "OPTIMAL",
+        "value": 0.0,
+        "lower_bound": 0.0,
+        "relative_gap": 0.0
+      },
+      {
+        "target": "makespan",
+        "status": "OPTIMAL",
+        "value": 6457.0,
+        "lower_bound": 6457.0,
+        "relative_gap": 0.0
+      },
+      {
+        "target": "weighted",
+        "status": "OPTIMAL",
+        "value": 2664830.0,
+        "lower_bound": 2664830.0,
+        "relative_gap": 0.0
+      },
+      {
+        "target": "energy",
+        "status": "OPTIMAL",
+        "value": 71967784.0,
+        "lower_bound": 71967784.0,
+        "relative_gap": 0.0
+      },
+      {
+        "target": "sorties",
+        "status": "OPTIMAL",
+        "value": 3.0,
+        "lower_bound": 3.0,
+        "relative_gap": 0.0
+      }
+    ],
+    "policy": "makespan",
+    "seed": 2030,
+    "scale_seconds": 1,
+    "candidate_sites": 3,
+    "route_modes": 50,
+    "session_slots": 6,
+    "q4_constraint": false,
+    "independent_groups": false,
+    "resource_buffer_seconds": 0.0,
+    "objective_caps": {
+      "soft": 0
+    },
+    "elapsed_seconds": 64.27398170001106,
+    "bound_scope": "Finite sites, fixed box groups/visit orders, optional type modes and bounded relay sessions; later bounds conditional on earlier attained caps.",
+    "status": "PASS",
+    "objective": {
+      "weighted_soft_delay": 0,
+      "weighted_delivery_seconds": 2664446.9163166224,
+      "makespan": 6456.534653380882,
+      "energy_kwh": 71.96380795438162,
+      "transport_energy_kwh": 68.43268564492855,
+      "relay_energy_kwh": 3.5311223094530684,
+      "transport_sorties": 23,
+      "relay_sorties": 3,
+      "total_sorties": 26
+    },
+    "components": 3,
+    "q4_validation": "PASS",
+    "q4": [
+      {
+        "id": "P1",
+        "group_count": 2,
+        "resource_total": 33,
+        "shortage_total": 6,
+        "workload_cv": 0.8470760404916428
+      },
+      {
+        "id": "P2",
+        "group_count": 2,
+        "resource_total": 35,
+        "shortage_total": 8,
+        "workload_cv": 0.8048010442100763
+      },
+      {
+        "id": "P3",
+        "group_count": 2,
+        "resource_total": 29,
+        "shortage_total": 2,
+        "workload_cv": 0.9577250037184335
+      },
+      {
+        "id": "P4",
+        "group_count": 3,
+        "resource_total": 35,
+        "shortage_total": 8,
+        "workload_cv": 1.2090739395971928
+      }
+    ],
+    "label": "makespan_2030",
+    "elapsed_wall_seconds": 67.49905049998779
+  },
+  {
+    "path": "med_fast\\runs\\timely_2030.json",
+    "stages": [
+      {
+        "target": "soft",
+        "status": "OPTIMAL",
+        "value": 0.0,
+        "lower_bound": 0.0,
+        "relative_gap": 0.0
+      },
+      {
+        "target": "weighted",
+        "status": "FEASIBLE",
+        "value": 2657822.0,
+        "lower_bound": 2131768.0,
+        "relative_gap": 0.19792672346003606
+      },
+      {
+        "target": "makespan",
+        "status": "FEASIBLE",
+        "value": 6566.0,
+        "lower_bound": 4531.0,
+        "relative_gap": 0.3099299421261042
+      },
+      {
+        "target": "energy",
+        "status": "FEASIBLE",
+        "value": 71828554.0,
+        "lower_bound": 70314666.0,
+        "relative_gap": 0.02107640925083916
+      },
+      {
+        "target": "sorties",
+        "status": "OPTIMAL",
+        "value": 3.0,
+        "lower_bound": 3.0,
+        "relative_gap": 0.0
+      }
+    ],
+    "policy": "timely",
+    "seed": 2030,
+    "scale_seconds": 1,
+    "candidate_sites": 3,
+    "route_modes": 50,
+    "session_slots": 6,
+    "q4_constraint": false,
+    "independent_groups": false,
+    "resource_buffer_seconds": 0.0,
+    "objective_caps": {
+      "soft": 0
+    },
+    "elapsed_seconds": 94.82959810001194,
+    "bound_scope": "Finite sites, fixed box groups/visit orders, optional type modes and bounded relay sessions; later bounds conditional on earlier attained caps.",
+    "status": "PASS",
+    "objective": {
+      "weighted_soft_delay": 0,
+      "weighted_delivery_seconds": 2657438.9163166224,
+      "makespan": 6565.809520857649,
+      "energy_kwh": 71.82478017660385,
+      "transport_energy_kwh": 68.43268564492855,
+      "relay_energy_kwh": 3.392094531675291,
+      "transport_sorties": 23,
+      "relay_sorties": 3,
+      "total_sorties": 26
+    },
+    "components": 3,
+    "q4_validation": "PASS",
+    "q4": [
+      {
+        "id": "P1",
+        "group_count": 2,
+        "resource_total": 33,
+        "shortage_total": 6,
+        "workload_cv": 0.8458296508731767
+      },
+      {
+        "id": "P2",
+        "group_count": 2,
+        "resource_total": 35,
+        "shortage_total": 8,
+        "workload_cv": 0.8032100969653532
+      },
+      {
+        "id": "P3",
+        "group_count": 2,
+        "resource_total": 29,
+        "shortage_total": 2,
+        "workload_cv": 0.9573804460921764
+      },
+      {
+        "id": "P4",
+        "group_count": 3,
+        "resource_total": 35,
+        "shortage_total": 8,
+        "workload_cv": 1.2074202592893
+      }
+    ],
+    "label": "timely_2030",
+    "elapsed_wall_seconds": 98.38553020000109
+  },
+  {
+    "path": "moves\\runs\\move_S001-FOD-01_T001_T003.json",
+    "stages": [
+      {
+        "target": "soft",
+        "status": "OPTIMAL",
+        "value": 0.0,
+        "lower_bound": 0.0,
+        "relative_gap": 0.0
+      },
+      {
+        "target": "weighted",
+        "status": "FEASIBLE",
+        "value": 2641124.0,
+        "lower_bound": 1900298.0,
+        "relative_gap": 0.280496485587197
+      },
+      {
+        "target": "makespan",
+        "status": "OPTIMAL",
+        "value": 6391.0,
+        "lower_bound": 6391.0,
+        "relative_gap": 0.0
+      },
+      {
+        "target": "energy",
+        "status": "OPTIMAL",
+        "value": 72786032.0,
+        "lower_bound": 72786032.0,
+        "relative_gap": 0.0
+      },
+      {
+        "target": "sorties",
+        "status": "OPTIMAL",
+        "value": 3.0,
+        "lower_bound": 3.0,
+        "relative_gap": 0.0
+      }
+    ],
+    "policy": "timely",
+    "seed": 2036,
+    "scale_seconds": 1,
+    "candidate_sites": 3,
+    "route_modes": 50,
+    "session_slots": 6,
+    "q4_constraint": false,
+    "independent_groups": false,
+    "resource_buffer_seconds": 0.0,
+    "objective_caps": {
+      "soft": 0
+    },
+    "elapsed_seconds": 28.05231400000048,
+    "bound_scope": "Finite sites, fixed box groups/visit orders, optional type modes and bounded relay sessions; later bounds conditional on earlier attained caps.",
+    "status": "PASS",
+    "objective": {
+      "weighted_soft_delay": 0,
+      "weighted_delivery_seconds": 2640742.0032893578,
+      "makespan": 6390.534653380882,
+      "energy_kwh": 72.7821156734838,
+      "transport_energy_kwh": 69.29132669736407,
+      "relay_energy_kwh": 3.4907889761197355,
+      "transport_sorties": 23,
+      "relay_sorties": 3,
+      "total_sorties": 26
+    },
+    "components": 3,
+    "q4_validation": "PASS",
+    "q4": [
+      {
+        "id": "P1",
+        "group_count": 2,
+        "resource_total": 33,
+        "shortage_total": 6,
+        "workload_cv": 0.8486550657581524
+      },
+      {
+        "id": "P2",
+        "group_count": 2,
+        "resource_total": 35,
+        "shortage_total": 8,
+        "workload_cv": 0.8068165824172973
+      },
+      {
+        "id": "P3",
+        "group_count": 2,
+        "resource_total": 29,
+        "shortage_total": 2,
+        "workload_cv": 0.9581615166591445
+      },
+      {
+        "id": "P4",
+        "group_count": 3,
+        "resource_total": 35,
+        "shortage_total": 8,
+        "workload_cv": 1.2111694483969988
+      }
+    ],
+    "label": "move_S001-FOD-01_T001_T003",
+    "elapsed_wall_seconds": 32.28899780000211
+  },
+  {
+    "path": "moves\\runs\\move_S001-FOD-02_T001_T003.json",
+    "stages": [
+      {
+        "target": "soft",
+        "status": "OPTIMAL",
+        "value": 0.0,
+        "lower_bound": 0.0,
+        "relative_gap": 0.0
+      },
+      {
+        "target": "weighted",
+        "status": "FEASIBLE",
+        "value": 2641124.0,
+        "lower_bound": 1358940.0,
+        "relative_gap": 0.4854690654433491
+      },
+      {
+        "target": "makespan",
+        "status": "OPTIMAL",
+        "value": 6391.0,
+        "lower_bound": 6391.0,
+        "relative_gap": 0.0
+      },
+      {
+        "target": "energy",
+        "status": "FEASIBLE",
+        "value": 72786032.0,
+        "lower_bound": 72028502.0,
+        "relative_gap": 0.010407628760419306
+      },
+      {
+        "target": "sorties",
+        "status": "OPTIMAL",
+        "value": 3.0,
+        "lower_bound": 3.0,
+        "relative_gap": 0.0
+      }
+    ],
+    "policy": "timely",
+    "seed": 2038,
+    "scale_seconds": 1,
+    "candidate_sites": 3,
+    "route_modes": 50,
+    "session_slots": 6,
+    "q4_constraint": false,
+    "independent_groups": false,
+    "resource_buffer_seconds": 0.0,
+    "objective_caps": {
+      "soft": 0
+    },
+    "elapsed_seconds": 37.53582530000131,
+    "bound_scope": "Finite sites, fixed box groups/visit orders, optional type modes and bounded relay sessions; later bounds conditional on earlier attained caps.",
+    "status": "PASS",
+    "objective": {
+      "weighted_soft_delay": 0,
+      "weighted_delivery_seconds": 2640742.0032893578,
+      "makespan": 6390.534653380882,
+      "energy_kwh": 72.7821156734838,
+      "transport_energy_kwh": 69.29132669736407,
+      "relay_energy_kwh": 3.4907889761197355,
+      "transport_sorties": 23,
+      "relay_sorties": 3,
+      "total_sorties": 26
+    },
+    "components": 3,
+    "q4_validation": "PASS",
+    "q4": [
+      {
+        "id": "P1",
+        "group_count": 2,
+        "resource_total": 33,
+        "shortage_total": 6,
+        "workload_cv": 0.8486550657581524
+      },
+      {
+        "id": "P2",
+        "group_count": 2,
+        "resource_total": 35,
+        "shortage_total": 8,
+        "workload_cv": 0.8068165824172973
+      },
+      {
+        "id": "P3",
+        "group_count": 2,
+        "resource_total": 29,
+        "shortage_total": 2,
+        "workload_cv": 0.9581615166591445
+      },
+      {
+        "id": "P4",
+        "group_count": 3,
+        "resource_total": 35,
+        "shortage_total": 8,
+        "workload_cv": 1.2111694483969988
+      }
+    ],
+    "label": "move_S001-FOD-02_T001_T003",
+    "elapsed_wall_seconds": 42.187402300012764
+  },
+  {
+    "path": "moves\\runs\\move_S001-FOD-03_T001_T003.json",
+    "stages": [
+      {
+        "target": "soft",
+        "status": "OPTIMAL",
+        "value": 0.0,
+        "lower_bound": 0.0,
+        "relative_gap": 0.0
+      },
+      {
+        "target": "weighted",
+        "status": "FEASIBLE",
+        "value": 2641124.0,
+        "lower_bound": 1820050.0,
+        "relative_gap": 0.3108805190517371
+      },
+      {
+        "target": "makespan",
+        "status": "OPTIMAL",
+        "value": 6391.0,
+        "lower_bound": 6391.0,
+        "relative_gap": 0.0
+      },
+      {
+        "target": "energy",
+        "status": "FEASIBLE",
+        "value": 72786032.0,
+        "lower_bound": 70489993.0,
+        "relative_gap": 0.03154504974251104
+      },
+      {
+        "target": "sorties",
+        "status": "OPTIMAL",
+        "value": 3.0,
+        "lower_bound": 3.0,
+        "relative_gap": 0.0
+      }
+    ],
+    "policy": "timely",
+    "seed": 2039,
+    "scale_seconds": 1,
+    "candidate_sites": 3,
+    "route_modes": 50,
+    "session_slots": 6,
+    "q4_constraint": false,
+    "independent_groups": false,
+    "resource_buffer_seconds": 0.0,
+    "objective_caps": {
+      "soft": 0
+    },
+    "elapsed_seconds": 40.01346200000262,
+    "bound_scope": "Finite sites, fixed box groups/visit orders, optional type modes and bounded relay sessions; later bounds conditional on earlier attained caps.",
+    "status": "PASS",
+    "objective": {
+      "weighted_soft_delay": 0,
+      "weighted_delivery_seconds": 2640742.0032893578,
+      "makespan": 6390.534653380882,
+      "energy_kwh": 72.7821156734838,
+      "transport_energy_kwh": 69.29132669736407,
+      "relay_energy_kwh": 3.4907889761197355,
+      "transport_sorties": 23,
+      "relay_sorties": 3,
+      "total_sorties": 26
+    },
+    "components": 3,
+    "q4_validation": "PASS",
+    "q4": [
+      {
+        "id": "P1",
+        "group_count": 2,
+        "resource_total": 33,
+        "shortage_total": 6,
+        "workload_cv": 0.8486550657581524
+      },
+      {
+        "id": "P2",
+        "group_count": 2,
+        "resource_total": 35,
+        "shortage_total": 8,
+        "workload_cv": 0.8068165824172973
+      },
+      {
+        "id": "P3",
+        "group_count": 2,
+        "resource_total": 29,
+        "shortage_total": 2,
+        "workload_cv": 0.9581615166591445
+      },
+      {
+        "id": "P4",
+        "group_count": 3,
+        "resource_total": 35,
+        "shortage_total": 8,
+        "workload_cv": 1.2111694483969988
+      }
+    ],
+    "label": "move_S001-FOD-03_T001_T003",
+    "elapsed_wall_seconds": 44.95315310001024
+  },
+  {
+    "path": "moves\\runs\\move_S001-HYG-01_T001_T003.json",
+    "stages": [
+      {
+        "target": "soft",
+        "status": "OPTIMAL",
+        "value": 0.0,
+        "lower_bound": 0.0,
+        "relative_gap": 0.0
+      },
+      {
+        "target": "weighted",
+        "status": "FEASIBLE",
+        "value": 2641124.0,
+        "lower_bound": 1368964.0,
+        "relative_gap": 0.4816737116470109
+      },
+      {
+        "target": "makespan",
+        "status": "OPTIMAL",
+        "value": 6391.0,
+        "lower_bound": 6391.0,
+        "relative_gap": 0.0
+      },
+      {
+        "target": "energy",
+        "status": "FEASIBLE",
+        "value": 72778142.0,
+        "lower_bound": 72525692.0,
+        "relative_gap": 0.003468761266260411
+      },
+      {
+        "target": "sorties",
+        "status": "OPTIMAL",
+        "value": 3.0,
+        "lower_bound": 3.0,
+        "relative_gap": 0.0
+      }
+    ],
+    "policy": "timely",
+    "seed": 2034,
+    "scale_seconds": 1,
+    "candidate_sites": 3,
+    "route_modes": 50,
+    "session_slots": 6,
+    "q4_constraint": false,
+    "independent_groups": false,
+    "resource_buffer_seconds": 0.0,
+    "objective_caps": {
+      "soft": 0
+    },
+    "elapsed_seconds": 38.76914190000389,
+    "bound_scope": "Finite sites, fixed box groups/visit orders, optional type modes and bounded relay sessions; later bounds conditional on earlier attained caps.",
+    "status": "PASS",
+    "objective": {
+      "weighted_soft_delay": 0,
+      "weighted_delivery_seconds": 2640742.0032893578,
+      "makespan": 6390.534653380882,
+      "energy_kwh": 72.77422579896586,
+      "transport_energy_kwh": 69.28343682284613,
+      "relay_energy_kwh": 3.4907889761197355,
+      "transport_sorties": 23,
+      "relay_sorties": 3,
+      "total_sorties": 26
+    },
+    "components": 3,
+    "q4_validation": "PASS",
+    "q4": [
+      {
+        "id": "P1",
+        "group_count": 2,
+        "resource_total": 33,
+        "shortage_total": 6,
+        "workload_cv": 0.8486550657581524
+      },
+      {
+        "id": "P2",
+        "group_count": 2,
+        "resource_total": 35,
+        "shortage_total": 8,
+        "workload_cv": 0.8068165824172973
+      },
+      {
+        "id": "P3",
+        "group_count": 2,
+        "resource_total": 29,
+        "shortage_total": 2,
+        "workload_cv": 0.9581615166591445
+      },
+      {
+        "id": "P4",
+        "group_count": 3,
+        "resource_total": 35,
+        "shortage_total": 8,
+        "workload_cv": 1.2111694483969988
+      }
+    ],
+    "label": "move_S001-HYG-01_T001_T003",
+    "elapsed_wall_seconds": 43.84635710000293
+  },
+  {
+    "path": "moves\\runs\\move_S004-MED-01_T014_T019.json",
+    "stages": [
+      {
+        "target": "soft",
+        "status": "OPTIMAL",
+        "value": 0.0,
+        "lower_bound": 0.0,
+        "relative_gap": 0.0
+      },
+      {
+        "target": "weighted",
+        "status": "FEASIBLE",
+        "value": 2657822.0,
+        "lower_bound": 1771638.0,
+        "relative_gap": 0.33342488699393713
+      },
+      {
+        "target": "makespan",
+        "status": "FEASIBLE",
+        "value": 6566.0,
+        "lower_bound": 6191.0,
+        "relative_gap": 0.057112397197685044
+      },
+      {
+        "target": "energy",
+        "status": "FEASIBLE",
+        "value": 71828554.0,
+        "lower_bound": 69645224.0,
+        "relative_gap": 0.03039640753453007
+      },
+      {
+        "target": "sorties",
+        "status": "OPTIMAL",
+        "value": 3.0,
+        "lower_bound": 3.0,
+        "relative_gap": 0.0
+      }
+    ],
+    "policy": "timely",
+    "seed": 2031,
+    "scale_seconds": 1,
+    "candidate_sites": 3,
+    "route_modes": 50,
+    "session_slots": 6,
+    "q4_constraint": false,
+    "independent_groups": false,
+    "resource_buffer_seconds": 0.0,
+    "objective_caps": {
+      "soft": 0
+    },
+    "elapsed_seconds": 51.68504420001409,
+    "bound_scope": "Finite sites, fixed box groups/visit orders, optional type modes and bounded relay sessions; later bounds conditional on earlier attained caps.",
+    "status": "PASS",
+    "objective": {
+      "weighted_soft_delay": 0,
+      "weighted_delivery_seconds": 2657438.9163166224,
+      "makespan": 6565.809520857649,
+      "energy_kwh": 71.82478017660385,
+      "transport_energy_kwh": 68.43268564492855,
+      "relay_energy_kwh": 3.392094531675291,
+      "transport_sorties": 23,
+      "relay_sorties": 3,
+      "total_sorties": 26
+    },
+    "components": 3,
+    "q4_validation": "PASS",
+    "q4": [
+      {
+        "id": "P1",
+        "group_count": 2,
+        "resource_total": 33,
+        "shortage_total": 6,
+        "workload_cv": 0.8458296508731767
+      },
+      {
+        "id": "P2",
+        "group_count": 2,
+        "resource_total": 35,
+        "shortage_total": 8,
+        "workload_cv": 0.8032100969653532
+      },
+      {
+        "id": "P3",
+        "group_count": 2,
+        "resource_total": 29,
+        "shortage_total": 2,
+        "workload_cv": 0.9573804460921764
+      },
+      {
+        "id": "P4",
+        "group_count": 3,
+        "resource_total": 35,
+        "shortage_total": 8,
+        "workload_cv": 1.2074202592893
+      }
+    ],
+    "label": "move_S004-MED-01_T014_T019",
+    "elapsed_wall_seconds": 54.98035119997803
+  },
+  {
+    "path": "moves\\runs\\move_S007-MED-01_T002_T010.json",
+    "stages": [
+      {
+        "target": "soft",
+        "status": "OPTIMAL",
+        "value": 0.0,
+        "lower_bound": 0.0,
+        "relative_gap": 0.0
+      },
+      {
+        "target": "weighted",
+        "status": "FEASIBLE",
+        "value": 2893098.0,
+        "lower_bound": 2032236.0,
+        "relative_gap": 0.2975571515379016
+      },
+      {
+        "target": "makespan",
+        "status": "OPTIMAL",
+        "value": 7537.0,
+        "lower_bound": 7537.0,
+        "relative_gap": 0.0
+      },
+      {
+        "target": "energy",
+        "status": "OPTIMAL",
+        "value": 71807917.0,
+        "lower_bound": 71807917.0,
+        "relative_gap": 0.0
+      },
+      {
+        "target": "sorties",
+        "status": "OPTIMAL",
+        "value": 5.0,
+        "lower_bound": 5.0,
+        "relative_gap": 0.0
+      }
+    ],
+    "policy": "timely",
+    "seed": 2030,
+    "scale_seconds": 1,
+    "candidate_sites": 3,
+    "route_modes": 50,
+    "session_slots": 6,
+    "q4_constraint": false,
+    "independent_groups": false,
+    "resource_buffer_seconds": 0.0,
+    "objective_caps": {
+      "soft": 0
+    },
+    "elapsed_seconds": 45.294255000015255,
+    "bound_scope": "Finite sites, fixed box groups/visit orders, optional type modes and bounded relay sessions; later bounds conditional on earlier attained caps.",
+    "status": "PASS",
+    "objective": {
+      "weighted_soft_delay": 0,
+      "weighted_delivery_seconds": 2892725.5626575965,
+      "makespan": 7536.534653380882,
+      "energy_kwh": 71.8043831984688,
+      "transport_energy_kwh": 67.97100210560633,
+      "relay_energy_kwh": 3.8333810928624614,
+      "transport_sorties": 23,
+      "relay_sorties": 5,
+      "total_sorties": 28
+    },
+    "components": 3,
+    "q4_validation": "PASS",
+    "q4": [
+      {
+        "id": "P1",
+        "group_count": 2,
+        "resource_total": 31,
+        "shortage_total": 4,
+        "workload_cv": 0.8506553377963068
+      },
+      {
+        "id": "P2",
+        "group_count": 2,
+        "resource_total": 32,
+        "shortage_total": 5,
+        "workload_cv": 0.8093698187734494
+      },
+      {
+        "id": "P3",
+        "group_count": 2,
+        "resource_total": 28,
+        "shortage_total": 1,
+        "workload_cv": 0.9587144809771425
+      },
+      {
+        "id": "P4",
+        "group_count": 3,
+        "resource_total": 32,
+        "shortage_total": 5,
+        "workload_cv": 1.2138247803836806
+      }
+    ],
+    "label": "move_S007-MED-01_T002_T010",
+    "elapsed_wall_seconds": 48.701885100017535
+  },
+  {
+    "path": "moves\\runs\\move_S009-MED-01_T004_T022.json",
+    "stages": [
+      {
+        "target": "soft",
+        "status": "OPTIMAL",
+        "value": 0.0,
+        "lower_bound": 0.0,
+        "relative_gap": 0.0
+      },
+      {
+        "target": "weighted",
+        "status": "FEASIBLE",
+        "value": 2687726.0,
+        "lower_bound": 1731248.0,
+        "relative_gap": 0.35586886460896683
+      },
+      {
+        "target": "makespan",
+        "status": "FEASIBLE",
+        "value": 7034.0,
+        "lower_bound": 6119.0,
+        "relative_gap": 0.1300824566391811
+      },
+      {
+        "target": "energy",
+        "status": "FEASIBLE",
+        "value": 72718946.0,
+        "lower_bound": 70369824.0,
+        "relative_gap": 0.03230412608015523
+      },
+      {
+        "target": "sorties",
+        "status": "OPTIMAL",
+        "value": 3.0,
+        "lower_bound": 3.0,
+        "relative_gap": 0.0
+      }
+    ],
+    "policy": "timely",
+    "seed": 2035,
+    "scale_seconds": 1,
+    "candidate_sites": 3,
+    "route_modes": 49,
+    "session_slots": 6,
+    "q4_constraint": false,
+    "independent_groups": false,
+    "resource_buffer_seconds": 0.0,
+    "objective_caps": {
+      "soft": 0
+    },
+    "elapsed_seconds": 53.173126099980436,
+    "bound_scope": "Finite sites, fixed box groups/visit orders, optional type modes and bounded relay sessions; later bounds conditional on earlier attained caps.",
+    "status": "PASS",
+    "objective": {
+      "weighted_soft_delay": 0,
+      "weighted_delivery_seconds": 2687347.952567522,
+      "makespan": 7033.297538856334,
+      "energy_kwh": 72.71470023189335,
+      "transport_energy_kwh": 68.99749458910695,
+      "relay_energy_kwh": 3.717205642786402,
+      "transport_sorties": 23,
+      "relay_sorties": 3,
+      "total_sorties": 26
+    },
+    "components": 3,
+    "q4_validation": "PASS",
+    "q4": [
+      {
+        "id": "P1",
+        "group_count": 2,
+        "resource_total": 33,
+        "shortage_total": 6,
+        "workload_cv": 0.8495541140179779
+      },
+      {
+        "id": "P2",
+        "group_count": 2,
+        "resource_total": 35,
+        "shortage_total": 8,
+        "workload_cv": 0.8079641676752702
+      },
+      {
+        "id": "P3",
+        "group_count": 2,
+        "resource_total": 29,
+        "shortage_total": 2,
+        "workload_cv": 0.9584100536572925
+      },
+      {
+        "id": "P4",
+        "group_count": 3,
+        "resource_total": 35,
+        "shortage_total": 8,
+        "workload_cv": 1.2123628128091763
+      }
+    ],
+    "label": "move_S009-MED-01_T004_T022",
+    "elapsed_wall_seconds": 57.61721430000034
+  },
+  {
+    "path": "moves\\runs\\move_S012-FOD-01_T017_T011.json",
+    "stages": [
+      {
+        "target": "soft",
+        "status": "INFEASIBLE",
+        "value": null,
+        "lower_bound": 0.0,
+        "relative_gap": null
+      }
+    ],
+    "policy": "timely",
+    "seed": 2032,
+    "scale_seconds": 1,
+    "candidate_sites": 3,
+    "route_modes": 49,
+    "session_slots": 6,
+    "q4_constraint": false,
+    "independent_groups": false,
+    "resource_buffer_seconds": 0.0,
+    "objective_caps": {
+      "soft": 0
+    },
+    "elapsed_seconds": 4.941699499991955,
+    "bound_scope": "Finite sites, fixed box groups/visit orders, optional type modes and bounded relay sessions; later bounds conditional on earlier attained caps.",
+    "status": "INFEASIBLE_FINITE_MODEL",
+    "label": "move_S012-FOD-01_T017_T011",
+    "elapsed_wall_seconds": 4.943688899977133
+  },
+  {
+    "path": "moves\\runs\\move_S013-FOD-01_T017_T002.json",
+    "stages": [
+      {
+        "target": "soft",
+        "status": "INFEASIBLE",
+        "value": null,
+        "lower_bound": 0.0,
+        "relative_gap": null
+      }
+    ],
+    "policy": "timely",
+    "seed": 2037,
+    "scale_seconds": 1,
+    "candidate_sites": 3,
+    "route_modes": 48,
+    "session_slots": 6,
+    "q4_constraint": false,
+    "independent_groups": false,
+    "resource_buffer_seconds": 0.0,
+    "objective_caps": {
+      "soft": 0
+    },
+    "elapsed_seconds": 2.4952429000113625,
+    "bound_scope": "Finite sites, fixed box groups/visit orders, optional type modes and bounded relay sessions; later bounds conditional on earlier attained caps.",
+    "status": "INFEASIBLE_FINITE_MODEL",
+    "label": "move_S013-FOD-01_T017_T002",
+    "elapsed_wall_seconds": 2.498543299996527
+  },
+  {
+    "path": "moves\\runs\\move_S015-MED-01_T007_T020.json",
+    "stages": [
+      {
+        "target": "soft",
+        "status": "OPTIMAL",
+        "value": 0.0,
+        "lower_bound": 0.0,
+        "relative_gap": 0.0
+      },
+      {
+        "target": "weighted",
+        "status": "FEASIBLE",
+        "value": 2655912.0,
+        "lower_bound": 1762764.0,
+        "relative_gap": 0.33628674444032786
+      },
+      {
+        "target": "makespan",
+        "status": "FEASIBLE",
+        "value": 7034.0,
+        "lower_bound": 4558.0,
+        "relative_gap": 0.3520045493318169
+      },
+      {
+        "target": "energy",
+        "status": "FEASIBLE",
+        "value": 72447532.0,
+        "lower_bound": 70544579.0,
+        "relative_gap": 0.026266636660583553
+      },
+      {
+        "target": "sorties",
+        "status": "OPTIMAL",
+        "value": 3.0,
+        "lower_bound": 3.0,
+        "relative_gap": 0.0
+      }
+    ],
+    "policy": "timely",
+    "seed": 2033,
+    "scale_seconds": 1,
+    "candidate_sites": 3,
+    "route_modes": 49,
+    "session_slots": 6,
+    "q4_constraint": false,
+    "independent_groups": false,
+    "resource_buffer_seconds": 0.0,
+    "objective_caps": {
+      "soft": 0
+    },
+    "elapsed_seconds": 54.49493899999652,
+    "bound_scope": "Finite sites, fixed box groups/visit orders, optional type modes and bounded relay sessions; later bounds conditional on earlier attained caps.",
+    "status": "PASS",
+    "objective": {
+      "weighted_soft_delay": 0,
+      "weighted_delivery_seconds": 2655522.854715196,
+      "makespan": 7033.297538856334,
+      "energy_kwh": 72.44330302455606,
+      "transport_energy_kwh": 68.73801404843633,
+      "relay_energy_kwh": 3.705288976119735,
+      "transport_sorties": 23,
+      "relay_sorties": 3,
+      "total_sorties": 26
+    },
+    "components": 3,
+    "q4_validation": "PASS",
+    "q4": [
+      {
+        "id": "P1",
+        "group_count": 2,
+        "resource_total": 33,
+        "shortage_total": 6,
+        "workload_cv": 0.849226683422994
+      },
+      {
+        "id": "P2",
+        "group_count": 2,
+        "resource_total": 35,
+        "shortage_total": 8,
+        "workload_cv": 0.8075462206744211
+      },
+      {
+        "id": "P3",
+        "group_count": 2,
+        "resource_total": 29,
+        "shortage_total": 2,
+        "workload_cv": 0.9583195372514267
+      },
+      {
+        "id": "P4",
+        "group_count": 3,
+        "resource_total": 35,
+        "shortage_total": 8,
+        "workload_cv": 1.2119281725336326
+      }
+    ],
+    "label": "move_S015-MED-01_T007_T020",
+    "elapsed_wall_seconds": 60.3254820999864
+  },
+  {
+    "path": "moves_second\\runs\\move_S001-MED-01_T005_T003.json",
+    "stages": [
+      {
+        "target": "soft",
+        "status": "OPTIMAL",
+        "value": 0.0,
+        "lower_bound": 0.0,
+        "relative_gap": 0.0
+      },
+      {
+        "target": "weighted",
+        "status": "FEASIBLE",
+        "value": 2648960.0,
+        "lower_bound": 1602896.0,
+        "relative_gap": 0.394896110171539
+      },
+      {
+        "target": "makespan",
+        "status": "OPTIMAL",
+        "value": 6391.0,
+        "lower_bound": 6391.0,
+        "relative_gap": 0.0
+      },
+      {
+        "target": "energy",
+        "status": "FEASIBLE",
+        "value": 72845888.0,
+        "lower_bound": 72097056.0,
+        "relative_gap": 0.010279674262464891
+      },
+      {
+        "target": "sorties",
+        "status": "OPTIMAL",
+        "value": 3.0,
+        "lower_bound": 3.0,
+        "relative_gap": 0.0
+      }
+    ],
+    "policy": "timely",
+    "seed": 2045,
+    "scale_seconds": 1,
+    "candidate_sites": 3,
+    "route_modes": 50,
+    "session_slots": 6,
+    "q4_constraint": false,
+    "independent_groups": false,
+    "resource_buffer_seconds": 0.0,
+    "objective_caps": {
+      "soft": 0
+    },
+    "elapsed_seconds": 37.99175329998252,
+    "bound_scope": "Finite sites, fixed box groups/visit orders, optional type modes and bounded relay sessions; later bounds conditional on earlier attained caps.",
+    "status": "PASS",
+    "objective": {
+      "weighted_soft_delay": 0,
+      "weighted_delivery_seconds": 2648590.946891815,
+      "makespan": 6390.534653380882,
+      "energy_kwh": 72.84197086234938,
+      "transport_energy_kwh": 69.35118188622965,
+      "relay_energy_kwh": 3.4907889761197355,
+      "transport_sorties": 23,
+      "relay_sorties": 3,
+      "total_sorties": 26
+    },
+    "components": 3,
+    "q4_validation": "PASS",
+    "q4": [
+      {
+        "id": "P1",
+        "group_count": 2,
+        "resource_total": 33,
+        "shortage_total": 6,
+        "workload_cv": 0.8484600385329994
+      },
+      {
+        "id": "P2",
+        "group_count": 2,
+        "resource_total": 35,
+        "shortage_total": 8,
+        "workload_cv": 0.8066259690189644
+      },
+      {
+        "id": "P3",
+        "group_count": 2,
+        "resource_total": 29,
+        "shortage_total": 2,
+        "workload_cv": 0.9581659304859649
+      },
+      {
+        "id": "P4",
+        "group_count": 3,
+        "resource_total": 35,
+        "shortage_total": 8,
+        "workload_cv": 1.2109743518838159
+      }
+    ],
+    "label": "move_S001-MED-01_T005_T003",
+    "elapsed_wall_seconds": 42.561836499982746
+  },
+  {
+    "path": "moves_second\\runs\\move_S001-WAT-06_T001_T003.json",
+    "stages": [
+      {
+        "target": "soft",
+        "status": "OPTIMAL",
+        "value": 0.0,
+        "lower_bound": 0.0,
+        "relative_gap": 0.0
+      },
+      {
+        "target": "weighted",
+        "status": "FEASIBLE",
+        "value": 2641124.0,
+        "lower_bound": 1923404.0,
+        "relative_gap": 0.2717479376204979
+      },
+      {
+        "target": "makespan",
+        "status": "OPTIMAL",
+        "value": 6391.0,
+        "lower_bound": 6391.0,
+        "relative_gap": 0.0
+      },
+      {
+        "target": "energy",
+        "status": "FEASIBLE",
+        "value": 72859035.0,
+        "lower_bound": 70713147.0,
+        "relative_gap": 0.02945259980454037
+      },
+      {
+        "target": "sorties",
+        "status": "OPTIMAL",
+        "value": 3.0,
+        "lower_bound": 3.0,
+        "relative_gap": 0.0
+      }
+    ],
+    "policy": "timely",
+    "seed": 2042,
+    "scale_seconds": 1,
+    "candidate_sites": 3,
+    "route_modes": 50,
+    "session_slots": 6,
+    "q4_constraint": false,
+    "independent_groups": false,
+    "resource_buffer_seconds": 0.0,
+    "objective_caps": {
+      "soft": 0
+    },
+    "elapsed_seconds": 39.2897206999769,
+    "bound_scope": "Finite sites, fixed box groups/visit orders, optional type modes and bounded relay sessions; later bounds conditional on earlier attained caps.",
+    "status": "PASS",
+    "objective": {
+      "weighted_soft_delay": 0,
+      "weighted_delivery_seconds": 2640742.0032893578,
+      "makespan": 6390.534653380882,
+      "energy_kwh": 72.8551190905575,
+      "transport_energy_kwh": 69.36433011443776,
+      "relay_energy_kwh": 3.4907889761197355,
+      "transport_sorties": 23,
+      "relay_sorties": 3,
+      "total_sorties": 26
+    },
+    "components": 3,
+    "q4_validation": "PASS",
+    "q4": [
+      {
+        "id": "P1",
+        "group_count": 2,
+        "resource_total": 33,
+        "shortage_total": 6,
+        "workload_cv": 0.8486550657581524
+      },
+      {
+        "id": "P2",
+        "group_count": 2,
+        "resource_total": 35,
+        "shortage_total": 8,
+        "workload_cv": 0.8068165824172973
+      },
+      {
+        "id": "P3",
+        "group_count": 2,
+        "resource_total": 29,
+        "shortage_total": 2,
+        "workload_cv": 0.9581615166591445
+      },
+      {
+        "id": "P4",
+        "group_count": 3,
+        "resource_total": 35,
+        "shortage_total": 8,
+        "workload_cv": 1.2111694483969988
+      }
+    ],
+    "label": "move_S001-WAT-06_T001_T003",
+    "elapsed_wall_seconds": 43.01775450000423
+  },
+  {
+    "path": "moves_second\\runs\\move_S001-WAT-07_T001_T003.json",
+    "stages": [
+      {
+        "target": "soft",
+        "status": "OPTIMAL",
+        "value": 0.0,
+        "lower_bound": 0.0,
+        "relative_gap": 0.0
+      },
+      {
+        "target": "weighted",
+        "status": "FEASIBLE",
+        "value": 2653394.0,
+        "lower_bound": 1587284.0,
+        "relative_gap": 0.4017910645761617
+      },
+      {
+        "target": "makespan",
+        "status": "OPTIMAL",
+        "value": 6391.0,
+        "lower_bound": 6391.0,
+        "relative_gap": 0.0
+      },
+      {
+        "target": "energy",
+        "status": "FEASIBLE",
+        "value": 72818031.0,
+        "lower_bound": 72265835.0,
+        "relative_gap": 0.00758323168611906
+      },
+      {
+        "target": "sorties",
+        "status": "OPTIMAL",
+        "value": 3.0,
+        "lower_bound": 3.0,
+        "relative_gap": 0.0
+      }
+    ],
+    "policy": "timely",
+    "seed": 2044,
+    "scale_seconds": 1,
+    "candidate_sites": 3,
+    "route_modes": 50,
+    "session_slots": 6,
+    "q4_constraint": false,
+    "independent_groups": false,
+    "resource_buffer_seconds": 0.0,
+    "objective_caps": {
+      "soft": 0
+    },
+    "elapsed_seconds": 38.575027000013506,
+    "bound_scope": "Finite sites, fixed box groups/visit orders, optional type modes and bounded relay sessions; later bounds conditional on earlier attained caps.",
+    "status": "PASS",
+    "objective": {
+      "weighted_soft_delay": 0,
+      "weighted_delivery_seconds": 2650714.0032893578,
+      "makespan": 6390.534653380882,
+      "energy_kwh": 72.81417464611306,
+      "transport_energy_kwh": 69.36433011443776,
+      "relay_energy_kwh": 3.449844531675291,
+      "transport_sorties": 23,
+      "relay_sorties": 3,
+      "total_sorties": 26
+    },
+    "components": 3,
+    "q4_validation": "PASS",
+    "q4": [
+      {
+        "id": "P1",
+        "group_count": 2,
+        "resource_total": 33,
+        "shortage_total": 6,
+        "workload_cv": 0.8482976026992606
+      },
+      {
+        "id": "P2",
+        "group_count": 2,
+        "resource_total": 35,
+        "shortage_total": 8,
+        "workload_cv": 0.8063603006413513
+      },
+      {
+        "id": "P3",
+        "group_count": 2,
+        "resource_total": 29,
+        "shortage_total": 2,
+        "workload_cv": 0.9580626979420905
+      },
+      {
+        "id": "P4",
+        "group_count": 3,
+        "resource_total": 35,
+        "shortage_total": 8,
+        "workload_cv": 1.210695014356568
+      }
+    ],
+    "label": "move_S001-WAT-07_T001_T003",
+    "elapsed_wall_seconds": 41.53948860001401
+  },
+  {
+    "path": "moves_second\\runs\\move_S005-MED-01_T014_T016.json",
+    "stages": [
+      {
+        "target": "soft",
+        "status": "OPTIMAL",
+        "value": 0.0,
+        "lower_bound": 0.0,
+        "relative_gap": 0.0
+      },
+      {
+        "target": "weighted",
+        "status": "FEASIBLE",
+        "value": 2716422.0,
+        "lower_bound": 1651694.0,
+        "relative_gap": 0.39195971759910647
+      },
+      {
+        "target": "makespan",
+        "status": "FEASIBLE",
+        "value": 6663.0,
+        "lower_bound": 4871.0,
+        "relative_gap": 0.2689479213567462
+      },
+      {
+        "target": "energy",
+        "status": "FEASIBLE",
+        "value": 72395008.0,
+        "lower_bound": 70623719.0,
+        "relative_gap": 0.024467004686289973
+      },
+      {
+        "target": "sorties",
+        "status": "OPTIMAL",
+        "value": 3.0,
+        "lower_bound": 3.0,
+        "relative_gap": 0.0
+      }
+    ],
+    "policy": "timely",
+    "seed": 2043,
+    "scale_seconds": 1,
+    "candidate_sites": 3,
+    "route_modes": 49,
+    "session_slots": 6,
+    "q4_constraint": false,
+    "independent_groups": false,
+    "resource_buffer_seconds": 0.0,
+    "objective_caps": {
+      "soft": 0
+    },
+    "elapsed_seconds": 53.024860499979695,
+    "bound_scope": "Finite sites, fixed box groups/visit orders, optional type modes and bounded relay sessions; later bounds conditional on earlier attained caps.",
+    "status": "PASS",
+    "objective": {
+      "weighted_soft_delay": 0,
+      "weighted_delivery_seconds": 2714136.9968855088,
+      "makespan": 6662.630285736439,
+      "energy_kwh": 72.39130215458675,
+      "transport_energy_kwh": 69.04595762291146,
+      "relay_energy_kwh": 3.345344531675291,
+      "transport_sorties": 23,
+      "relay_sorties": 3,
+      "total_sorties": 26
+    },
+    "components": 3,
+    "q4_validation": "PASS",
+    "q4": [
+      {
+        "id": "P1",
+        "group_count": 2,
+        "resource_total": 33,
+        "shortage_total": 6,
+        "workload_cv": 0.8468977427528155
+      },
+      {
+        "id": "P2",
+        "group_count": 2,
+        "resource_total": 35,
+        "shortage_total": 8,
+        "workload_cv": 0.8045734570317775
+      },
+      {
+        "id": "P3",
+        "group_count": 2,
+        "resource_total": 29,
+        "shortage_total": 2,
+        "workload_cv": 0.957675714278962
+      },
+      {
+        "id": "P4",
+        "group_count": 3,
+        "resource_total": 35,
+        "shortage_total": 8,
+        "workload_cv": 1.2088373571823876
+      }
+    ],
+    "label": "move_S005-MED-01_T014_T016",
+    "elapsed_wall_seconds": 57.10879110000678
+  },
+  {
+    "path": "moves_second\\runs\\move_S012-MED-01_T011_T017.json",
+    "stages": [
+      {
+        "target": "soft",
+        "status": "INFEASIBLE",
+        "value": null,
+        "lower_bound": 0.0,
+        "relative_gap": null
+      }
+    ],
+    "policy": "timely",
+    "seed": 2041,
+    "scale_seconds": 1,
+    "candidate_sites": 3,
+    "route_modes": 49,
+    "session_slots": 6,
+    "q4_constraint": false,
+    "independent_groups": false,
+    "resource_buffer_seconds": 0.0,
+    "objective_caps": {
+      "soft": 0
+    },
+    "elapsed_seconds": 6.605460199993104,
+    "bound_scope": "Finite sites, fixed box groups/visit orders, optional type modes and bounded relay sessions; later bounds conditional on earlier attained caps.",
+    "status": "INFEASIBLE_FINITE_MODEL",
+    "label": "move_S012-MED-01_T011_T017",
+    "elapsed_wall_seconds": 6.607267999992473
+  },
+  {
+    "path": "moves_second\\runs\\move_S013-MED-01_T002_T017.json",
+    "stages": [
+      {
+        "target": "soft",
+        "status": "INFEASIBLE",
+        "value": null,
+        "lower_bound": 0.0,
+        "relative_gap": null
+      }
+    ],
+    "policy": "timely",
+    "seed": 2040,
+    "scale_seconds": 1,
+    "candidate_sites": 3,
+    "route_modes": 49,
+    "session_slots": 6,
+    "q4_constraint": false,
+    "independent_groups": false,
+    "resource_buffer_seconds": 0.0,
+    "objective_caps": {
+      "soft": 0
+    },
+    "elapsed_seconds": 6.378983999980846,
+    "bound_scope": "Finite sites, fixed box groups/visit orders, optional type modes and bounded relay sessions; later bounds conditional on earlier attained caps.",
+    "status": "INFEASIBLE_FINITE_MODEL",
+    "label": "move_S013-MED-01_T002_T017",
+    "elapsed_wall_seconds": 6.380384499992942
+  },
+  {
+    "path": "polished\\runs\\polished_energy.json",
+    "label": "polished_energy",
+    "status": "PASS",
+    "source": "results_q3_q4_frontier/schedule/plans/energy_2030.json",
+    "objective": {
+      "weighted_soft_delay": 0,
+      "weighted_delivery_seconds": 3341885.780312233,
+      "makespan": 11233.57299249031,
+      "energy_kwh": 71.00789913182099,
+      "transport_energy_kwh": 67.33833777429322,
+      "relay_energy_kwh": 3.6695613575277717,
+      "transport_sorties": 23,
+      "relay_sorties": 5,
+      "total_sorties": 28
+    },
+    "changes": [
+      {
+        "relay": "R001",
+        "launch_shift_seconds": 0.0,
+        "service_reduction_seconds": 0.0,
+        "energy_saved_kwh": 0.0
+      },
+      {
+        "relay": "R002",
+        "launch_shift_seconds": 0.0,
+        "service_reduction_seconds": 0.0,
+        "energy_saved_kwh": 0.0
+      },
+      {
+        "relay": "R003",
+        "launch_shift_seconds": 1.0,
+        "service_reduction_seconds": 1.0,
+        "energy_saved_kwh": 0.0003055555555555589
+      },
+      {
+        "relay": "R004",
+        "launch_shift_seconds": 1.0,
+        "service_reduction_seconds": 1.0,
+        "energy_saved_kwh": 0.0003055555555555589
+      },
+      {
+        "relay": "R005",
+        "launch_shift_seconds": 0.0,
+        "service_reduction_seconds": 0.0,
+        "energy_saved_kwh": 0.0
+      }
+    ],
+    "q4_validation": "PASS"
+  },
+  {
+    "path": "polished\\runs\\polished_fastest.json",
+    "label": "polished_fastest",
+    "status": "PASS",
+    "source": "results_q3_q4_frontier/fast24/plans/makespan_2030.json",
+    "objective": {
+      "weighted_soft_delay": 0,
+      "weighted_delivery_seconds": 2693930.5076264874,
+      "makespan": 6275.184064967842,
+      "energy_kwh": 72.15271338592915,
+      "transport_energy_kwh": 69.15451555444506,
+      "relay_energy_kwh": 2.998197831484096,
+      "transport_sorties": 24,
+      "relay_sorties": 4,
+      "total_sorties": 28
+    },
+    "changes": [
+      {
+        "relay": "R001",
+        "launch_shift_seconds": 0.0,
+        "service_reduction_seconds": 0.0,
+        "energy_saved_kwh": 0.0
+      },
+      {
+        "relay": "R002",
+        "launch_shift_seconds": 4.0,
+        "service_reduction_seconds": 4.0,
+        "energy_saved_kwh": 0.0012222222222222356
+      },
+      {
+        "relay": "R003",
+        "launch_shift_seconds": 0.0,
+        "service_reduction_seconds": 0.0,
+        "energy_saved_kwh": 0.0
+      },
+      {
+        "relay": "R004",
+        "launch_shift_seconds": 0.0,
+        "service_reduction_seconds": 0.0,
+        "energy_saved_kwh": 0.0
+      }
+    ],
+    "q4_validation": "PASS"
+  },
+  {
+    "path": "polished\\runs\\polished_primary.json",
+    "label": "polished_primary",
+    "status": "PASS",
+    "source": "results_q3_q4_frontier/fine3_capped/plans/timely_2030.json",
+    "objective": {
+      "weighted_soft_delay": 0,
+      "weighted_delivery_seconds": 2623200.0032893578,
+      "makespan": 6307.7581046684645,
+      "energy_kwh": 72.71919247438399,
+      "transport_energy_kwh": 69.30723683159759,
+      "relay_energy_kwh": 3.411955642786402,
+      "transport_sorties": 23,
+      "relay_sorties": 3,
+      "total_sorties": 26
+    },
+    "changes": [
+      {
+        "relay": "R001",
+        "launch_shift_seconds": 0.0,
+        "service_reduction_seconds": 0.0,
+        "energy_saved_kwh": 0.0
+      },
+      {
+        "relay": "R002",
+        "launch_shift_seconds": -5.684341886080802e-14,
+        "service_reduction_seconds": 0.0,
+        "energy_saved_kwh": 0.0
+      },
+      {
+        "relay": "R003",
+        "launch_shift_seconds": 0.0,
+        "service_reduction_seconds": 0.0,
+        "energy_saved_kwh": 0.0
+      }
+    ],
+    "q4_validation": "PASS"
+  },
+  {
+    "path": "schedule\\runs\\energy_2030.json",
+    "stages": [
+      {
+        "target": "soft",
+        "status": "OPTIMAL",
+        "value": 0.0,
+        "lower_bound": 0.0,
+        "relative_gap": 0.0
+      },
+      {
+        "target": "energy",
+        "status": "FEASIBLE",
+        "value": 71011954.0,
+        "lower_bound": 68753466.0,
+        "relative_gap": 0.031804335365845586
+      },
+      {
+        "target": "makespan",
+        "status": "FEASIBLE",
+        "value": 11234.0,
+        "lower_bound": 5180.0,
+        "relative_gap": 0.5388997685597294
+      },
+      {
+        "target": "weighted",
+        "status": "FEASIBLE",
+        "value": 3342260.0,
+        "lower_bound": 1381818.0,
+        "relative_gap": 0.5865617875329867
+      },
+      {
+        "target": "sorties",
+        "status": "FEASIBLE",
+        "value": 5.0,
+        "lower_bound": 4.0,
+        "relative_gap": 0.2
+      }
+    ],
+    "policy": "energy",
+    "seed": 2030,
+    "scale_seconds": 1,
+    "candidate_sites": 3,
+    "route_modes": 50,
+    "session_slots": 6,
+    "q4_constraint": false,
+    "independent_groups": false,
+    "resource_buffer_seconds": 0.0,
+    "objective_caps": {
+      "soft": 0
+    },
+    "elapsed_seconds": 123.4933144999959,
+    "bound_scope": "Finite sites, fixed box groups/visit orders, optional type modes and bounded relay sessions; later bounds conditional on earlier attained caps.",
+    "status": "PASS",
+    "objective": {
+      "weighted_soft_delay": 0,
+      "weighted_delivery_seconds": 3341885.780312233,
+      "makespan": 11233.57299249031,
+      "energy_kwh": 71.0085102429321,
+      "transport_energy_kwh": 67.33833777429322,
+      "relay_energy_kwh": 3.670172468638883,
+      "transport_sorties": 23,
+      "relay_sorties": 5,
+      "total_sorties": 28
+    },
+    "components": 3,
+    "q4_validation": "PASS",
+    "q4": [
+      {
+        "id": "P1",
+        "group_count": 2,
+        "resource_total": 29,
+        "shortage_total": 4,
+        "workload_cv": 0.8489552593784695
+      },
+      {
+        "id": "P2",
+        "group_count": 2,
+        "resource_total": 31,
+        "shortage_total": 6,
+        "workload_cv": 0.8071997629300767
+      },
+      {
+        "id": "P3",
+        "group_count": 2,
+        "resource_total": 26,
+        "shortage_total": 2,
+        "workload_cv": 0.9582445035516072
+      },
+      {
+        "id": "P4",
+        "group_count": 3,
+        "resource_total": 31,
+        "shortage_total": 6,
+        "workload_cv": 1.2115678948023103
+      }
+    ],
+    "label": "energy_2030",
+    "elapsed_wall_seconds": 127.96499149998999
+  },
+  {
+    "path": "schedule\\runs\\makespan_2030.json",
+    "stages": [
+      {
+        "target": "soft",
+        "status": "OPTIMAL",
+        "value": 0.0,
+        "lower_bound": 0.0,
+        "relative_gap": 0.0
+      },
+      {
+        "target": "makespan",
+        "status": "OPTIMAL",
+        "value": 6391.0,
+        "lower_bound": 6391.0,
+        "relative_gap": 0.0
+      },
+      {
+        "target": "weighted",
+        "status": "OPTIMAL",
+        "value": 2634656.0,
+        "lower_bound": 2634656.0,
+        "relative_gap": 0.0
+      },
+      {
+        "target": "energy",
+        "status": "FEASIBLE",
+        "value": 72801943.0,
+        "lower_bound": 72223521.0,
+        "relative_gap": 0.00794514509042705
+      },
+      {
+        "target": "sorties",
+        "status": "OPTIMAL",
+        "value": 3.0,
+        "lower_bound": 3.0,
+        "relative_gap": 0.0
+      }
+    ],
+    "policy": "makespan",
+    "seed": 2030,
+    "scale_seconds": 1,
+    "candidate_sites": 3,
+    "route_modes": 50,
+    "session_slots": 6,
+    "q4_constraint": false,
+    "independent_groups": false,
+    "resource_buffer_seconds": 0.0,
+    "objective_caps": {
+      "soft": 0
+    },
+    "elapsed_seconds": 58.59014399998705,
+    "bound_scope": "Finite sites, fixed box groups/visit orders, optional type modes and bounded relay sessions; later bounds conditional on earlier attained caps.",
+    "status": "PASS",
+    "objective": {
+      "weighted_soft_delay": 0,
+      "weighted_delivery_seconds": 2634274.0032893578,
+      "makespan": 6390.534653380882,
+      "energy_kwh": 72.79802580771732,
+      "transport_energy_kwh": 69.30723683159759,
+      "relay_energy_kwh": 3.4907889761197355,
+      "transport_sorties": 23,
+      "relay_sorties": 3,
+      "total_sorties": 26
+    },
+    "components": 3,
+    "q4_validation": "PASS",
+    "q4": [
+      {
+        "id": "P1",
+        "group_count": 2,
+        "resource_total": 33,
+        "shortage_total": 6,
+        "workload_cv": 0.8486550657581524
+      },
+      {
+        "id": "P2",
+        "group_count": 2,
+        "resource_total": 35,
+        "shortage_total": 8,
+        "workload_cv": 0.8068165824172973
+      },
+      {
+        "id": "P3",
+        "group_count": 2,
+        "resource_total": 29,
+        "shortage_total": 2,
+        "workload_cv": 0.9581615166591445
+      },
+      {
+        "id": "P4",
+        "group_count": 3,
+        "resource_total": 35,
+        "shortage_total": 8,
+        "workload_cv": 1.2111694483969988
+      }
+    ],
+    "label": "makespan_2030",
+    "elapsed_wall_seconds": 62.635700699989684
+  },
+  {
+    "path": "schedule\\runs\\timely_2030.json",
+    "stages": [
+      {
+        "target": "soft",
+        "status": "OPTIMAL",
+        "value": 0.0,
+        "lower_bound": 0.0,
+        "relative_gap": 0.0
+      },
+      {
+        "target": "weighted",
+        "status": "FEASIBLE",
+        "value": 2634656.0,
+        "lower_bound": 2218674.0,
+        "relative_gap": 0.15788854408317443
+      },
+      {
+        "target": "makespan",
+        "status": "OPTIMAL",
+        "value": 6391.0,
+        "lower_bound": 6391.0,
+        "relative_gap": 0.0
+      },
+      {
+        "target": "energy",
+        "status": "OPTIMAL",
+        "value": 72801943.0,
+        "lower_bound": 72801943.0,
+        "relative_gap": 0.0
+      },
+      {
+        "target": "sorties",
+        "status": "OPTIMAL",
+        "value": 3.0,
+        "lower_bound": 3.0,
+        "relative_gap": 0.0
+      }
+    ],
+    "policy": "timely",
+    "seed": 2030,
+    "scale_seconds": 1,
+    "candidate_sites": 3,
+    "route_modes": 50,
+    "session_slots": 6,
+    "q4_constraint": false,
+    "independent_groups": false,
+    "resource_buffer_seconds": 0.0,
+    "objective_caps": {
+      "soft": 0
+    },
+    "elapsed_seconds": 66.02870009999606,
+    "bound_scope": "Finite sites, fixed box groups/visit orders, optional type modes and bounded relay sessions; later bounds conditional on earlier attained caps.",
+    "status": "PASS",
+    "objective": {
+      "weighted_soft_delay": 0,
+      "weighted_delivery_seconds": 2634274.0032893578,
+      "makespan": 6390.534653380882,
+      "energy_kwh": 72.79802580771732,
+      "transport_energy_kwh": 69.30723683159759,
+      "relay_energy_kwh": 3.4907889761197355,
+      "transport_sorties": 23,
+      "relay_sorties": 3,
+      "total_sorties": 26
+    },
+    "components": 3,
+    "q4_validation": "PASS",
+    "q4": [
+      {
+        "id": "P1",
+        "group_count": 2,
+        "resource_total": 33,
+        "shortage_total": 6,
+        "workload_cv": 0.8486550657581524
+      },
+      {
+        "id": "P2",
+        "group_count": 2,
+        "resource_total": 35,
+        "shortage_total": 8,
+        "workload_cv": 0.8068165824172973
+      },
+      {
+        "id": "P3",
+        "group_count": 2,
+        "resource_total": 29,
+        "shortage_total": 2,
+        "workload_cv": 0.9581615166591445
+      },
+      {
+        "id": "P4",
+        "group_count": 3,
+        "resource_total": 35,
+        "shortage_total": 8,
+        "workload_cv": 1.2111694483969988
+      }
+    ],
+    "label": "timely_2030",
+    "elapsed_wall_seconds": 69.52438289998099
+  }
+]

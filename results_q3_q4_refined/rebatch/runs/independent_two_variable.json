@@ -1,0 +1,69 @@
+{
+  "stages": [
+    {
+      "target": "soft",
+      "status": "INFEASIBLE",
+      "value": null,
+      "lower_bound": 0.0,
+      "relative_gap": null
+    }
+  ],
+  "policy": "timely",
+  "seed": 2028,
+  "scale_seconds": 1,
+  "candidate_sites": 3,
+  "route_modes": 52,
+  "session_slots": 12,
+  "q4_constraint": true,
+  "independent_groups": true,
+  "resource_buffer_seconds": 5.0,
+  "objective_caps": {
+    "soft": 0
+  },
+  "elapsed_seconds": 3.8951628000068013,
+  "bound_scope": "Finite sites, fixed box groups/visit orders, optional type modes and bounded relay sessions; later bounds conditional on earlier attained caps.",
+  "label": "independent_two_variable",
+  "settings": {
+    "variable_models": true,
+    "q4_groups": [
+      [
+        "S001",
+        "S002",
+        "S003",
+        "S004",
+        "S005",
+        "S006",
+        "S007",
+        "S008",
+        "S009",
+        "S010",
+        "S012",
+        "S013",
+        "S014",
+        "S015"
+      ],
+      [
+        "S011"
+      ]
+    ],
+    "independent_groups": true
+  },
+  "box_transfers": [
+    {
+      "box": "S006-MED-01",
+      "origin": "T009",
+      "target": "T010",
+      "origin_model": "A",
+      "extra_target_energy": 0.12612527935578743
+    },
+    {
+      "box": "S005-HYG-01",
+      "origin": "T023",
+      "target": "T019",
+      "origin_model": "A",
+      "extra_target_energy": 0.3252904271589552
+    }
+  ],
+  "status": "INFEASIBLE_FINITE_MODEL",
+  "wall_seconds": 3.8983718999952544
+}

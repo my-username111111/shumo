@@ -1,0 +1,49 @@
+{
+  "label": "polished_energy",
+  "status": "PASS",
+  "source": "results_q3_q4_frontier/schedule/plans/energy_2030.json",
+  "objective": {
+    "weighted_soft_delay": 0,
+    "weighted_delivery_seconds": 3341885.780312233,
+    "makespan": 11233.57299249031,
+    "energy_kwh": 71.00789913182099,
+    "transport_energy_kwh": 67.33833777429322,
+    "relay_energy_kwh": 3.6695613575277717,
+    "transport_sorties": 23,
+    "relay_sorties": 5,
+    "total_sorties": 28
+  },
+  "changes": [
+    {
+      "relay": "R001",
+      "launch_shift_seconds": 0.0,
+      "service_reduction_seconds": 0.0,
+      "energy_saved_kwh": 0.0
+    },
+    {
+      "relay": "R002",
+      "launch_shift_seconds": 0.0,
+      "service_reduction_seconds": 0.0,
+      "energy_saved_kwh": 0.0
+    },
+    {
+      "relay": "R003",
+      "launch_shift_seconds": 1.0,
+      "service_reduction_seconds": 1.0,
+      "energy_saved_kwh": 0.0003055555555555589
+    },
+    {
+      "relay": "R004",
+      "launch_shift_seconds": 1.0,
+      "service_reduction_seconds": 1.0,
+      "energy_saved_kwh": 0.0003055555555555589
+    },
+    {
+      "relay": "R005",
+      "launch_shift_seconds": 0.0,
+      "service_reduction_seconds": 0.0,
+      "energy_saved_kwh": 0.0
+    }
+  ],
+  "q4_validation": "PASS"
+}

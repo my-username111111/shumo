@@ -1,0 +1,37 @@
+{
+  "label": "polished_primary",
+  "status": "PASS",
+  "source": "results_q3_q4_frontier/fine3_capped/plans/timely_2030.json",
+  "objective": {
+    "weighted_soft_delay": 0,
+    "weighted_delivery_seconds": 2623200.0032893578,
+    "makespan": 6307.7581046684645,
+    "energy_kwh": 72.71919247438399,
+    "transport_energy_kwh": 69.30723683159759,
+    "relay_energy_kwh": 3.411955642786402,
+    "transport_sorties": 23,
+    "relay_sorties": 3,
+    "total_sorties": 26
+  },
+  "changes": [
+    {
+      "relay": "R001",
+      "launch_shift_seconds": 0.0,
+      "service_reduction_seconds": 0.0,
+      "energy_saved_kwh": 0.0
+    },
+    {
+      "relay": "R002",
+      "launch_shift_seconds": -5.684341886080802e-14,
+      "service_reduction_seconds": 0.0,
+      "energy_saved_kwh": 0.0
+    },
+    {
+      "relay": "R003",
+      "launch_shift_seconds": 0.0,
+      "service_reduction_seconds": 0.0,
+      "energy_saved_kwh": 0.0
+    }
+  ],
+  "q4_validation": "PASS"
+}

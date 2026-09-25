@@ -1,0 +1,26 @@
+[
+  {
+    "label": "makespan_2030",
+    "weighted_soft_delay": 0,
+    "weighted_delivery_seconds": 2624970.0032893578,
+    "makespan": 6311.184064967842,
+    "energy_kwh": 72.72897025216177,
+    "transport_energy_kwh": 69.30723683159759,
+    "relay_energy_kwh": 3.4217334205641796,
+    "transport_sorties": 23,
+    "relay_sorties": 3,
+    "total_sorties": 26
+  },
+  {
+    "label": "move_S005-MED-01_T014_T016",
+    "weighted_soft_delay": 0,
+    "weighted_delivery_seconds": 2714136.9968855088,
+    "makespan": 6662.630285736439,
+    "energy_kwh": 72.39130215458675,
+    "transport_energy_kwh": 69.04595762291146,
+    "relay_energy_kwh": 3.345344531675291,
+    "transport_sorties": 23,
+    "relay_sorties": 3,
+    "total_sorties": 26
+  }
+]

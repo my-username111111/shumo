@@ -1,0 +1,23 @@
+{
+  "args": {
+    "output": "results_q3_q4_frontier\\fine3",
+    "input": "results_q3_q4_frontier\\fine\\plans\\makespan_2030.json",
+    "phase": "schedule",
+    "seconds": 30.0,
+    "limit": 2,
+    "offset": 0,
+    "seed": 2030,
+    "expanded_sites": false,
+    "interval": 3.0,
+    "fixed_models": true,
+    "policies": [
+      "makespan",
+      "timely"
+    ]
+  },
+  "baseline_sha256": "6556dd62aef527bb5cbfba331494adda664d0f71433733105b4734c9a8bd2ff6",
+  "input_fingerprint": "8b318a9045d58f13b75e945b88ac406c28444aa986dfed4cc92f08b05d5fc6f0",
+  "candidate_sites": 3,
+  "objective_policy": "zero soft delay; independent time, energy and weighted-delivery branches",
+  "q4_policy": "fixed Q3 partitions; report shortages, no stock-feasibility constraint"
+}

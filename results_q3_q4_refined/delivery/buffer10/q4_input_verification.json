@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "physical": {
+    "status": "PASS",
+    "boxes": 80,
+    "sorties": 23,
+    "hard_boxes": 31,
+    "alternatives_checked": 0,
+    "relay_sorties": 3,
+    "four_resource_classes": true
+  },
+  "communication_intervals": 220,
+  "communication_relation_preserved": true
+}

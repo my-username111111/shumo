@@ -1,0 +1,99 @@
+{
+  "stages": [
+    {
+      "target": "soft",
+      "status": "OPTIMAL",
+      "value": 0.0,
+      "lower_bound": 0.0,
+      "relative_gap": 0.0
+    },
+    {
+      "target": "weighted",
+      "status": "FEASIBLE",
+      "value": 2893098.0,
+      "lower_bound": 2032236.0,
+      "relative_gap": 0.2975571515379016
+    },
+    {
+      "target": "makespan",
+      "status": "OPTIMAL",
+      "value": 7537.0,
+      "lower_bound": 7537.0,
+      "relative_gap": 0.0
+    },
+    {
+      "target": "energy",
+      "status": "OPTIMAL",
+      "value": 71807917.0,
+      "lower_bound": 71807917.0,
+      "relative_gap": 0.0
+    },
+    {
+      "target": "sorties",
+      "status": "OPTIMAL",
+      "value": 5.0,
+      "lower_bound": 5.0,
+      "relative_gap": 0.0
+    }
+  ],
+  "policy": "timely",
+  "seed": 2030,
+  "scale_seconds": 1,
+  "candidate_sites": 3,
+  "route_modes": 50,
+  "session_slots": 6,
+  "q4_constraint": false,
+  "independent_groups": false,
+  "resource_buffer_seconds": 0.0,
+  "objective_caps": {
+    "soft": 0
+  },
+  "elapsed_seconds": 45.294255000015255,
+  "bound_scope": "Finite sites, fixed box groups/visit orders, optional type modes and bounded relay sessions; later bounds conditional on earlier attained caps.",
+  "status": "PASS",
+  "objective": {
+    "weighted_soft_delay": 0,
+    "weighted_delivery_seconds": 2892725.5626575965,
+    "makespan": 7536.534653380882,
+    "energy_kwh": 71.8043831984688,
+    "transport_energy_kwh": 67.97100210560633,
+    "relay_energy_kwh": 3.8333810928624614,
+    "transport_sorties": 23,
+    "relay_sorties": 5,
+    "total_sorties": 28
+  },
+  "components": 3,
+  "q4_validation": "PASS",
+  "q4": [
+    {
+      "id": "P1",
+      "group_count": 2,
+      "resource_total": 31,
+      "shortage_total": 4,
+      "workload_cv": 0.8506553377963068
+    },
+    {
+      "id": "P2",
+      "group_count": 2,
+      "resource_total": 32,
+      "shortage_total": 5,
+      "workload_cv": 0.8093698187734494
+    },
+    {
+      "id": "P3",
+      "group_count": 2,
+      "resource_total": 28,
+      "shortage_total": 1,
+      "workload_cv": 0.9587144809771425
+    },
+    {
+      "id": "P4",
+      "group_count": 3,
+      "resource_total": 32,
+      "shortage_total": 5,
+      "workload_cv": 1.2138247803836806
+    }
+  ],
+  "label": "move_S007-MED-01_T002_T010",
+  "elapsed_wall_seconds": 48.701885100017535
+}

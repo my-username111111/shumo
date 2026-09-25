@@ -70,6 +70,21 @@ class GeometryTests(unittest.TestCase):
         def kernel(s,f,a,b,first,second,extra):return (1 if first=='relay_access' else -1),'test'
         self.assertEqual(certify(s,plan,kernel=kernel)[2]['status'],'UNKNOWN')
 
+    def test_failure_witness_cannot_use_another_groups_relay(self):
+        node=SimpleNamespace(lon=0,lat=0,ground=0)
+        s=SimpleNamespace(nodes={'O01':node},gateway_agl=10)
+        plan=dict(transport_sorties=[dict(id='T1',start=0.,visits=[('S1',[])],route={'phases':[
+            dict(kind='cruise',t0=0.,t1=.1,a=(0,0,10),b=(1,1,10))]})],
+            relay_sorties=[dict(id='R1',lon=0,lat=0,altitude=10,established=0.,service_end=1.,
+                               service_zones=['S2'])])
+        def lower(s,f,a,b,first,second,extra):return (-1 if first=='transport' else 1),'test'
+        def point(s,f,p,first,second,extra):return -1 if first=='transport' else 1
+        with patch('q3_certificate.margin',side_effect=lower) as kernel, \
+             patch('q3_certificate.point_margin',side_effect=point):
+            cert=certify(s,plan,kernel=kernel,stop_on_failure=True)[2]
+        self.assertEqual(cert['status'],'FAIL')
+        self.assertEqual(cert['witness']['best_margin_db'],-1)
+
 
 class PhysicalTests(unittest.TestCase):
     @classmethod
@@ -109,6 +124,27 @@ class PhysicalTests(unittest.TestCase):
         self.assertLess(cert['witness']['best_margin_db'],0)
         self.assertIsNone(comm['outage_seconds'])
 
+    def test_accept_inherits_and_records_extra_loss(self):
+        plan=copy.deepcopy(self.plan);plan['extra_loss_db']=1.
+        with patch('q3_certificate.certify',return_value=([],{},dict(status='PASS'))) as cert, \
+             patch('q3_certificate.coupled_components',return_value=([],{})):
+            accepted=accept(self.s,plan)
+        self.assertEqual(cert.call_args.args[2],1.)
+        self.assertEqual(accepted['extra_loss_db'],1.)
+
+    def test_declared_buffer_cannot_exceed_actual_handoffs(self):
+        plan=json.loads((ROOT/'results_q3_complete/q3_plan.json').read_text(encoding='utf8'))
+        plan.setdefault('search',{})['resource_buffer_seconds']=30.
+        with self.assertRaisesRegex(AssertionError,'handoff violates'):
+            physical_audit(self.s,plan)
+
+    def test_q4_rejects_mismatched_communication_scenario(self):
+        from q4_audit import verify_fixed_q3
+        plan=accept(self.s,copy.deepcopy(self.plan))
+        plan['certificate']['extra_loss_db']=1.
+        with self.assertRaisesRegex(AssertionError,'scenarios disagree'):
+            verify_fixed_q3(self.s,plan)
+
     def test_cache_keys_include_radio_parameters(self):
         before=data_signature(self.s);old=self.s.fade_db
         try:
@@ -134,6 +170,17 @@ class PhysicalTests(unittest.TestCase):
         self.assertEqual(components,certified['q4_compatibility']['coupled_components'])
         verify_q4(self.s,legacy,solve(self.s,legacy))
         self.assertEqual(legacy['transport_sorties'],certified['transport_sorties'])
+
+    def test_window_polish_preserves_transport_and_does_not_worsen_objectives(self):
+        from polish_q3_windows import trim
+        plan=json.loads((ROOT/'results_q3_complete/q3_plan.json').read_text(encoding='utf8'))
+        before=copy.deepcopy(plan)
+        polished,_=trim(self.s,plan)
+        self.assertEqual(plan,before)
+        self.assertEqual(polished['transport_sorties'],before['transport_sorties'])
+        for key,value in before['objective'].items():
+            self.assertLessEqual(polished['objective'][key],value+1e-7)
+        self.assertEqual(polished['certificate']['status'],'PASS')
 
 
 if __name__=='__main__':unittest.main()

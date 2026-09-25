@@ -4,6 +4,7 @@ from __future__ import annotations
 
 from collections import defaultdict
 from pathlib import Path
+from math import floor, ceil
 
 from PIL import Image, ImageDraw, ImageFont
 
@@ -46,15 +47,15 @@ def _legend(d, x, y, color, label):
 
 
 def component_chart(result, output):
-    im, d = _canvas("第四问任务绑定结构", "运输架次与实际中继保障关系形成三个不可拆任务块")
     comps = result["components"]["components"]
+    im, d = _canvas("第四问任务绑定结构", f"运输架次与实际中继保障关系形成{len(comps)}个不可拆任务块")
     work = result["components"]["component_work_seconds"]
     counts = result["components"]["component_box_counts"]
     total = sum(work)
-    widths = [280, 700, 280]
+    widths = [280, 700, 280] if len(comps)==3 else [(1360-20*(len(comps)-1))/len(comps)]*len(comps)
     x = 70
     for i, (zones, sec, boxes, width) in enumerate(zip(comps, work, counts, widths)):
-        col = PALETTE[i]
+        col = PALETTE[i%len(PALETTE)]
         d.rounded_rectangle((x, 210, x + width, 670), radius=20, fill="white", outline=GRID, width=2)
         d.rounded_rectangle((x + 18, 230, x + width - 18, 305), radius=12, fill=col)
         d.text((x + 36, 246), f"C{i + 1}  ·  {len(zones)}区", fill="white", font=B30)
@@ -69,7 +70,9 @@ def component_chart(result, output):
         else:
             d.text((x + 32, 525), label, fill=MUTED, font=F22)
         x += width + 20
-    d.text((72, 720), "合法分区：两组 3 种；三组 1 种。C2 占总任务工作量 90.34%。", fill=INK, font=F26)
+    counts_by_k={k:sum(p['group_count']==k for p in result['partitions']) for k in (2,3)}
+    dominant=max(range(len(work)),key=work.__getitem__)
+    d.text((72, 720), f"合法分区：两组 {counts_by_k[2]} 种；三组 {counts_by_k[3]} 种。C{dominant+1}工作量占比 {work[dominant]/total:.2%}。", fill=INK, font=F26)
     d.text((72, 776), "分组时保持原Q3的货箱组批、访问顺序、中继保障关系和任务时刻。", fill=MUTED, font=F22)
     im.save(output)
 
@@ -77,32 +80,39 @@ def component_chart(result, output):
 def tradeoff_chart(result, output):
     im, d = _canvas("资源需求与工作量均衡", "固定Q3后枚举全部合法的两组和三组方案")
     left, right, top, bottom = 180, 1330, 210, 710
-    for v in (28, 30, 32, 34, 36):
-        y = bottom - (v - 28) / 8 * (bottom - top)
+    parts=result['partitions']
+    ymin=min(p['resource_total'] for p in parts)-1;ymax=max(p['resource_total'] for p in parts)+1
+    xmin=floor(min(p['workload_cv'] for p in parts)*20)/20-.05
+    xmax=ceil(max(p['workload_cv'] for p in parts)*20)/20+.05
+    for v in range(ymin,ymax+1,2):
+        y = bottom - (v-ymin)/(ymax-ymin) * (bottom - top)
         d.line((left, y, right, y), fill=GRID, width=2)
         d.text((112, y - 15), str(v), fill=MUTED, font=F22)
-    for v in (0.75, 0.85, 0.95, 1.05, 1.15, 1.25):
-        x = left + (v - 0.75) / 0.5 * (right - left)
+    for v in [xmin+i*(xmax-xmin)/5 for i in range(6)]:
+        x = left + (v-xmin)/(xmax-xmin) * (right - left)
         d.line((x, top, x, bottom), fill=GRID, width=2)
         d.text((x - 27, bottom + 18), f"{v:.2f}", fill=MUTED, font=F18)
     d.text((590, 785), "工作量变异系数 CV →", fill=INK, font=F26)
     d.text((40, 175), "资源件数", fill=INK, font=F22)
     offsets = {"P1": (-98, -48), "P2": (-100, 16), "P3": (20, -42), "P4": (-100, -50)}
     for i, p in enumerate(result["partitions"]):
-        x = left + (p["workload_cv"] - 0.75) / 0.5 * (right - left)
-        y = bottom - (p["resource_total"] - 28) / 8 * (bottom - top)
-        d.ellipse((x - 15, y - 15, x + 15, y + 15), fill=PALETTE[i], outline="white", width=3)
-        dx, dy = offsets[p["id"]]
+        x = left + (p["workload_cv"]-xmin)/(xmax-xmin) * (right - left)
+        y = bottom - (p["resource_total"]-ymin)/(ymax-ymin) * (bottom - top)
+        d.ellipse((x - 15, y - 15, x + 15, y + 15), fill=PALETTE[i%len(PALETTE)], outline="white", width=3)
+        dx, dy = offsets.get(p['id'],(20,-35))
         d.text((x + dx, y + dy), f"{p['id']}  {p['resource_total']}件", fill=INK, font=B22)
-    d.text((72, 830), "P3使用最少资源；P2在两组中最均衡。P4是唯一三组方案。", fill=MUTED, font=F22)
+    two=[p for p in parts if p['group_count']==2]
+    d.text((72, 830), f"两组：{min(two,key=lambda p:p['resource_total'])['id']}资源最少；{min(two,key=lambda p:p['workload_cv'])['id']}最均衡。库存缺口允许保留并解释。", fill=MUTED, font=F22)
     im.save(output)
 
 
 def battery_chart(result, plan, output):
-    im, d = _canvas("P3大组电池接续优化", "实线段为任务开始至充满；同一行对应同一组可复用电池", 1200)
-    p3 = next(p for p in result["partitions"] if p["id"] == "P3")
+    pid=result['recommended_partition']
+    p3 = next(p for p in result["partitions"] if p["id"] == pid)
+    gid=max(p3['groups'],key=lambda g:g['work_seconds'])['id']
+    im, d = _canvas(f"{pid}/{gid}电池接续优化", "实线段为任务开始至充满；同一行对应同一组可复用电池", 1200)
     tasks = {t["id"]: t for t in plan["transport_sorties"]}
-    assignment = [r for r in result["assignments"] if r["partition"] == "P3" and r["group"] == "G1"]
+    assignment = [r for r in result["assignments"] if r["partition"] == pid and r["group"] == gid]
     start_x, end_x = 350, 1370
     all_time = max(t["battery_ready"] for t in tasks.values())
     scale = (end_x - start_x) / (all_time + 300)
@@ -144,7 +154,11 @@ def battery_chart(result, plan, output):
         d.line((x, 997, x, 1009), fill=MUTED, width=2)
         d.text((x - 25, 1015), str(t), fill=MUTED, font=F18)
     d.text((1300, 970), "时间/s", fill=MUTED, font=F18)
-    d.text((75, 1090), "B型最小接续余量 179.008→767.799 s；C型 395.907→598.393 s。", fill=INK, font=F22)
+    def slack(model):
+        c=p3['certificates'][gid][model+'_batteries']
+        values=[c['original_id_min_handoff_slack_seconds'],c['optimal_min_handoff_slack_seconds']]
+        return '→'.join('无接续' if v is None else f'{v:.3f}' for v in values)
+    d.text((75, 1090), f"B型最小接续余量 {slack('B')} s；C型 {slack('C')} s。", fill=INK, font=F22)
     im.save(output)
 
 
@@ -170,7 +184,8 @@ def stock_chart(result, output):
         d.text((x0 + 28, bottom + 18), label, fill=INK, font=F22)
     for i, (label, _) in enumerate(series):
         _legend(d, 200 + i * 225, 185, colors[i], label)
-    d.text((75, 808), "P3虽仅需29件，仍缺1架B型机和1组B型电池。", fill=INK, font=F26)
+    selected=next(p for p in result['partitions'] if p['id']==result['recommended_partition'])
+    d.text((75, 808), f"{selected['id']}需{selected['resource_total']}件，逐类型库存缺口合计{selected['shortage_total']}件；完整类型见交付表。", fill=INK, font=F26)
     im.save(output)
 
 

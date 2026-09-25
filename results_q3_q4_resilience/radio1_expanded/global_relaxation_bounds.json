@@ -1,0 +1,8 @@
+{
+  "transport_sorties": 10,
+  "weighted_delivery_seconds": 829048.8546443789,
+  "makespan": 1591.26159782163,
+  "weighted_soft_delay": 0.0,
+  "energy_kwh": 0.0,
+  "scope": "Original problem relaxation: capacity totals and individual-box great-circle flight lower bounds; no DEM climbs, queuing, communication, or shared resources."
+}

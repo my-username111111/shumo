@@ -1,0 +1,79 @@
+[
+  {
+    "case": "baseline",
+    "extra_loss_db": 1.0,
+    "status": "FAIL",
+    "scope": "point counterexample; outage duration not measured",
+    "witness": {
+      "sortie": "T002",
+      "time": 3032.6804918794305,
+      "best_margin_db": -0.10049538885706966
+    }
+  },
+  {
+    "case": "buffer5",
+    "extra_loss_db": 1.0,
+    "status": "FAIL",
+    "scope": "point counterexample; outage duration not measured",
+    "witness": {
+      "sortie": "T002",
+      "time": 3037.6804918794305,
+      "best_margin_db": -0.10049538885706966
+    }
+  },
+  {
+    "case": "buffer10",
+    "extra_loss_db": 1.0,
+    "status": "FAIL",
+    "scope": "point counterexample; outage duration not measured",
+    "witness": {
+      "sortie": "T002",
+      "time": 3042.6804918794305,
+      "best_margin_db": -0.10049538885706966
+    }
+  },
+  {
+    "case": "rebatch",
+    "extra_loss_db": 1.0,
+    "status": "FAIL",
+    "scope": "point counterexample; outage duration not measured",
+    "witness": {
+      "sortie": "T002",
+      "time": 3037.6804918794305,
+      "best_margin_db": -0.10049538885706966
+    }
+  },
+  {
+    "case": "two_stock",
+    "extra_loss_db": 1.0,
+    "status": "FAIL",
+    "scope": "point counterexample; outage duration not measured",
+    "witness": {
+      "sortie": "T002",
+      "time": 3037.6804918794305,
+      "best_margin_db": -0.10049538885706966
+    }
+  },
+  {
+    "case": "three_stock",
+    "extra_loss_db": 1.0,
+    "status": "FAIL",
+    "scope": "point counterexample; outage duration not measured",
+    "witness": {
+      "sortie": "T002",
+      "time": 2869.6804918794305,
+      "best_margin_db": -0.10049538885706966
+    }
+  },
+  {
+    "case": "balanced_stock",
+    "extra_loss_db": 1.0,
+    "status": "FAIL",
+    "scope": "point counterexample; outage duration not measured",
+    "witness": {
+      "sortie": "T002",
+      "time": 2874.6804918794305,
+      "best_margin_db": -0.10049538885706966
+    }
+  }
+]

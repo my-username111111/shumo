@@ -1,0 +1,17 @@
+{
+  "args": {
+    "output": "results_q3_q4_frontier\\schedule",
+    "input": "D:\\建模\\shumo\\results_q3_complete\\q3_plan.json",
+    "phase": "schedule",
+    "seconds": 30.0,
+    "limit": 3,
+    "offset": 0,
+    "seed": 2030,
+    "expanded_sites": false
+  },
+  "baseline_sha256": "df5dbf182cea219a3eb173d86ce411acd339ad7b9ed93bb1b4d0f5bc23f0f181",
+  "input_fingerprint": "8b318a9045d58f13b75e945b88ac406c28444aa986dfed4cc92f08b05d5fc6f0",
+  "candidate_sites": 3,
+  "objective_policy": "zero soft delay; independent time, energy and weighted-delivery branches",
+  "q4_policy": "fixed Q3 partitions; report shortages, no stock-feasibility constraint"
+}

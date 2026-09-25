@@ -1,0 +1,31 @@
+{
+  "primary": {
+    "scheme": "radio1_tradeoff",
+    "weighted_soft_delay": 0,
+    "weighted_delivery_seconds": 2613406.0032893578,
+    "makespan": 6307.7581046684645,
+    "energy_kwh": 72.67597306146124,
+    "transport_energy_kwh": 69.30723683159759,
+    "relay_energy_kwh": 3.36873622986365,
+    "transport_sorties": 23,
+    "relay_sorties": 3,
+    "total_sorties": 26,
+    "extra_loss_db": 1.0,
+    "hard_violations": 0,
+    "minimum_hard_margin_seconds": 177.05432016497252,
+    "communication_margin_lower_db": 0.03130229755301883,
+    "aircraft_min_handoff_seconds": 0.050585059482727956,
+    "battery_min_handoff_seconds": 0.5759162719850792,
+    "relay_min_handoff_seconds": 0.8955925909117468,
+    "component_min_handoff_seconds": null,
+    "q4_recommended": "P3",
+    "q4_shortage": 2,
+    "q4_workload_cv": 0.9578588592313401,
+    "q4_min_handoff_seconds": 0.050585059482727956,
+    "q4_three_groups_available": true,
+    "validation": "PASS"
+  },
+  "source": "results_q3_q4_resilience\\selection\\radio1_tradeoff",
+  "policy": "Replace prior default only if all five Q3 metrics are no worse with at least one better; extra-loss guarantee, two-group shortage/CV and availability of three groups must not worsen.",
+  "default_plan": "results_q3_q4_resilience/selection/primary/q3_plan.json"
+}

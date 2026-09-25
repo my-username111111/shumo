@@ -1,0 +1,108 @@
+{
+  "extra_loss_db": 1.0,
+  "interval_seconds": 6.0,
+  "initial_sites": 3,
+  "initial_uncovered_unique_intervals": 897,
+  "steps": [
+    {
+      "site": {
+        "id": "X0003",
+        "lon": 109.24610349667968,
+        "lat": 23.014220323535156,
+        "agl": 300.0,
+        "altitude": 542.7470092773438,
+        "gateway_margin": 11.180289521928685,
+        "lead": 426.10806838734294,
+        "back_time": 250.69531916045491,
+        "travel_energy_kwh": 0.11785816423316824,
+        "max_service_seconds": 7992.4641897823585
+      },
+      "covered": 506,
+      "remaining": 391
+    },
+    {
+      "site": {
+        "id": "X0004",
+        "lon": 109.25155384531251,
+        "lat": 23.063517446875,
+        "agl": 300.0,
+        "altitude": 500.80555725097656,
+        "gateway_margin": 9.710487512954643,
+        "lead": 734.8138013789235,
+        "back_time": 555.9059311498381,
+        "travel_energy_kwh": 0.3180554953790304,
+        "max_service_seconds": 7337.272924214083
+      },
+      "covered": 352,
+      "remaining": 39
+    },
+    {
+      "site": {
+        "id": "X0005",
+        "lon": 109.2881357,
+        "lat": 23.049464,
+        "agl": 300.0,
+        "altitude": 573.2224731445312,
+        "gateway_margin": 8.51901993205287,
+        "lead": 816.2528762220276,
+        "back_time": 643.3797489840717,
+        "travel_energy_kwh": 0.36496025558958956,
+        "max_service_seconds": 7183.766436252254
+      },
+      "covered": 19,
+      "remaining": 20
+    },
+    {
+      "site": {
+        "id": "X0006",
+        "lon": 109.25165948499999,
+        "lat": 23.017321489999997,
+        "agl": 300.0,
+        "altitude": 567.7374877929688,
+        "gateway_margin": 8.40843533586174,
+        "lead": 476.2889364030841,
+        "back_time": 302.95872705249815,
+        "travel_energy_kwh": 0.14814930593579098,
+        "max_service_seconds": 7893.32954421014
+      },
+      "covered": 3,
+      "remaining": 17
+    },
+    {
+      "site": {
+        "id": "X0007",
+        "lon": 109.265410375,
+        "lat": 23.00103465,
+        "agl": 300.0,
+        "altitude": 694.4912109375,
+        "gateway_margin": 4.6418264212589975,
+        "lead": 593.9302524244695,
+        "back_time": 431.1628533359278,
+        "travel_energy_kwh": 0.2143372486497967,
+        "max_service_seconds": 7676.714458964303
+      },
+      "covered": 2,
+      "remaining": 15
+    },
+    {
+      "site": {
+        "id": "X0008",
+        "lon": 109.270410375,
+        "lat": 23.00603465,
+        "agl": 300.0,
+        "altitude": 660.79150390625,
+        "gateway_margin": 3.7102170759866624,
+        "lead": 613.8175344463092,
+        "back_time": 448.2418264384967,
+        "travel_energy_kwh": 0.2294283195520555,
+        "max_service_seconds": 7627.32549964782
+      },
+      "covered": 15,
+      "remaining": 0
+    }
+  ],
+  "scope": "Adaptive finite candidate heuristic; failure is not a global impossibility proof",
+  "final_sites": 9,
+  "remaining_uncovered_unique_intervals": 0,
+  "source": "results_q3_q4_frontier\\selection\\primary\\q3_plan.json"
+}

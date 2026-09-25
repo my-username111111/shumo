@@ -1,0 +1,9 @@
+{
+  "label": "timely_buffer",
+  "status": "REJECTED",
+  "error": "Input bytes and Q3 plan differ",
+  "settings": {
+    "variable_models": false
+  },
+  "wall_seconds": 22.31554869998945
+}

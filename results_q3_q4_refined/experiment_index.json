@@ -1,0 +1,186 @@
+[
+  {
+    "path": "buffer10/runs/fast_buffer.json",
+    "status": "PASS",
+    "reported_status": "PASS",
+    "error": "",
+    "buffer": 10.0,
+    "scope": "Finite sites, fixed box groups/visit orders, optional type modes and bounded relay sessions; later bounds conditional on earlier attained caps."
+  },
+  {
+    "path": "buffer10/runs/timely_variable.json",
+    "status": "PASS",
+    "reported_status": "PASS",
+    "error": "",
+    "buffer": 10.0,
+    "scope": "Finite sites, fixed box groups/visit orders, optional type modes and bounded relay sessions; later bounds conditional on earlier attained caps."
+  },
+  {
+    "path": "buffer5/runs/fast_buffer.json",
+    "status": "PASS",
+    "reported_status": "PASS",
+    "error": "",
+    "buffer": 5.0,
+    "scope": "Finite sites, fixed box groups/visit orders, optional type modes and bounded relay sessions; later bounds conditional on earlier attained caps."
+  },
+  {
+    "path": "buffer5/runs/timely_buffer.json",
+    "status": "PASS",
+    "reported_status": "PASS",
+    "error": "",
+    "buffer": 5.0,
+    "scope": "Finite sites, fixed box groups/visit orders, optional type modes and bounded relay sessions; later bounds conditional on earlier attained caps."
+  },
+  {
+    "path": "buffer5/runs/timely_variable.json",
+    "status": "PASS",
+    "reported_status": "PASS",
+    "error": "",
+    "buffer": 5.0,
+    "scope": "Finite sites, fixed box groups/visit orders, optional type modes and bounded relay sessions; later bounds conditional on earlier attained caps."
+  },
+  {
+    "path": "group_tradeoffs/runs/isolate_s001.json",
+    "status": "PASS",
+    "reported_status": "PASS",
+    "error": "",
+    "buffer": 10.0,
+    "scope": "Finite sites, fixed box groups/visit orders, optional type modes and bounded relay sessions; later bounds conditional on earlier attained caps."
+  },
+  {
+    "path": "group_tradeoffs/runs/outer_pair.json",
+    "status": "PASS",
+    "reported_status": "PASS",
+    "error": "",
+    "buffer": 10.0,
+    "scope": "Finite sites, fixed box groups/visit orders, optional type modes and bounded relay sessions; later bounds conditional on earlier attained caps."
+  },
+  {
+    "path": "other_groups/runs/balanced_shared.json",
+    "status": "INFEASIBLE_FINITE_MODEL",
+    "reported_status": "INFEASIBLE_FINITE_MODEL",
+    "error": "",
+    "buffer": 5.0,
+    "scope": "Finite sites, fixed box groups/visit orders, optional type modes and bounded relay sessions; later bounds conditional on earlier attained caps."
+  },
+  {
+    "path": "other_groups/runs/isolate_s001.json",
+    "status": "INFEASIBLE_FINITE_MODEL",
+    "reported_status": "INFEASIBLE_FINITE_MODEL",
+    "error": "",
+    "buffer": 5.0,
+    "scope": "Finite sites, fixed box groups/visit orders, optional type modes and bounded relay sessions; later bounds conditional on earlier attained caps."
+  },
+  {
+    "path": "other_groups/runs/outer_pair.json",
+    "status": "INFEASIBLE_FINITE_MODEL",
+    "reported_status": "INFEASIBLE_FINITE_MODEL",
+    "error": "",
+    "buffer": 5.0,
+    "scope": "Finite sites, fixed box groups/visit orders, optional type modes and bounded relay sessions; later bounds conditional on earlier attained caps."
+  },
+  {
+    "path": "probe_zero/runs/independent_two_variable.json",
+    "status": "INFEASIBLE_FINITE_MODEL",
+    "reported_status": "NO_SOLUTION_WITHIN_BUDGET",
+    "error": "",
+    "buffer": 0.0,
+    "scope": "Finite sites, fixed box groups/visit orders, optional type modes and bounded relay sessions; later bounds conditional on earlier attained caps."
+  },
+  {
+    "path": "probe_zero/runs/timely_buffer.json",
+    "status": "REJECTED",
+    "reported_status": "REJECTED",
+    "error": "Input bytes and Q3 plan differ",
+    "buffer": null,
+    "scope": ""
+  },
+  {
+    "path": "probe_zero/runs/timely_variable.json",
+    "status": "REJECTED",
+    "reported_status": "REJECTED",
+    "error": "Input bytes and Q3 plan differ",
+    "buffer": null,
+    "scope": ""
+  },
+  {
+    "path": "rebatch/runs/independent_two_variable.json",
+    "status": "INFEASIBLE_FINITE_MODEL",
+    "reported_status": "INFEASIBLE_FINITE_MODEL",
+    "error": "",
+    "buffer": 5.0,
+    "scope": "Finite sites, fixed box groups/visit orders, optional type modes and bounded relay sessions; later bounds conditional on earlier attained caps."
+  },
+  {
+    "path": "rebatch/runs/timely_variable.json",
+    "status": "PASS",
+    "reported_status": "PASS",
+    "error": "",
+    "buffer": 5.0,
+    "scope": "Finite sites, fixed box groups/visit orders, optional type modes and bounded relay sessions; later bounds conditional on earlier attained caps."
+  },
+  {
+    "path": "rebatch_stock/runs/independent_two_variable.json",
+    "status": "PASS",
+    "reported_status": "PASS",
+    "error": "",
+    "buffer": 5.0,
+    "scope": "Finite sites, fixed box groups/visit orders, optional type modes and bounded relay sessions; later bounds conditional on earlier attained caps."
+  },
+  {
+    "path": "runs/balanced_two.json",
+    "status": "INFEASIBLE_FINITE_MODEL",
+    "reported_status": "NO_SOLUTION_WITHIN_BUDGET",
+    "error": "",
+    "buffer": 30.0,
+    "scope": "Finite sites, fixed box groups/visit orders, optional type modes and bounded relay sessions; later bounds conditional on earlier attained caps."
+  },
+  {
+    "path": "runs/independent_three.json",
+    "status": "INFEASIBLE_FINITE_MODEL",
+    "reported_status": "NO_SOLUTION_WITHIN_BUDGET",
+    "error": "",
+    "buffer": 30.0,
+    "scope": "Finite sites, fixed box groups/visit orders, optional type modes and bounded relay sessions; later bounds conditional on earlier attained caps."
+  },
+  {
+    "path": "runs/independent_two.json",
+    "status": "INFEASIBLE_FINITE_MODEL",
+    "reported_status": "NO_SOLUTION_WITHIN_BUDGET",
+    "error": "",
+    "buffer": 30.0,
+    "scope": "Finite sites, fixed box groups/visit orders, optional type modes and bounded relay sessions; later bounds conditional on earlier attained caps."
+  },
+  {
+    "path": "runs/timely_buffer.json",
+    "status": "INFEASIBLE_FINITE_MODEL",
+    "reported_status": "NO_SOLUTION_WITHIN_BUDGET",
+    "error": "",
+    "buffer": 30.0,
+    "scope": "Finite sites, fixed box groups/visit orders, optional type modes and bounded relay sessions; later bounds conditional on earlier attained caps."
+  },
+  {
+    "path": "stock_trials/runs/balanced_two.json",
+    "status": "INFEASIBLE_FINITE_MODEL",
+    "reported_status": "INFEASIBLE_FINITE_MODEL",
+    "error": "",
+    "buffer": 5.0,
+    "scope": "Finite sites, fixed box groups/visit orders, optional type modes and bounded relay sessions; later bounds conditional on earlier attained caps."
+  },
+  {
+    "path": "stock_trials/runs/independent_three.json",
+    "status": "PASS",
+    "reported_status": "PASS",
+    "error": "",
+    "buffer": 5.0,
+    "scope": "Finite sites, fixed box groups/visit orders, optional type modes and bounded relay sessions; later bounds conditional on earlier attained caps."
+  },
+  {
+    "path": "stock_trials/runs/independent_two_variable.json",
+    "status": "PASS",
+    "reported_status": "PASS",
+    "error": "",
+    "buffer": 5.0,
+    "scope": "Finite sites, fixed box groups/visit orders, optional type modes and bounded relay sessions; later bounds conditional on earlier attained caps."
+  }
+]

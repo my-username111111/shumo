@@ -1,0 +1,62 @@
+[
+  {
+    "label": "delivery_23_2026",
+    "weighted_soft_delay": 0,
+    "weighted_delivery_seconds": 2634274.0032893578,
+    "makespan": 6390.534653380882,
+    "energy_kwh": 72.79802580771732,
+    "transport_energy_kwh": 69.30723683159759,
+    "relay_energy_kwh": 3.4907889761197355,
+    "transport_sorties": 23,
+    "relay_sorties": 3,
+    "total_sorties": 26
+  },
+  {
+    "label": "move_S001-HYG-01_T001_T003",
+    "weighted_soft_delay": 0,
+    "weighted_delivery_seconds": 2640742.0032893578,
+    "makespan": 6390.534653380882,
+    "energy_kwh": 72.77422579896586,
+    "transport_energy_kwh": 69.28343682284613,
+    "relay_energy_kwh": 3.4907889761197355,
+    "transport_sorties": 23,
+    "relay_sorties": 3,
+    "total_sorties": 26
+  },
+  {
+    "label": "move_S004-MED-01_T014_T019",
+    "weighted_soft_delay": 0,
+    "weighted_delivery_seconds": 2657438.9163166224,
+    "makespan": 6565.809520857649,
+    "energy_kwh": 71.82478017660385,
+    "transport_energy_kwh": 68.43268564492855,
+    "relay_energy_kwh": 3.392094531675291,
+    "transport_sorties": 23,
+    "relay_sorties": 3,
+    "total_sorties": 26
+  },
+  {
+    "label": "move_S007-MED-01_T002_T010",
+    "weighted_soft_delay": 0,
+    "weighted_delivery_seconds": 2892725.5626575965,
+    "makespan": 7536.534653380882,
+    "energy_kwh": 71.8043831984688,
+    "transport_energy_kwh": 67.97100210560633,
+    "relay_energy_kwh": 3.8333810928624614,
+    "transport_sorties": 23,
+    "relay_sorties": 5,
+    "total_sorties": 28
+  },
+  {
+    "label": "move_S015-MED-01_T007_T020",
+    "weighted_soft_delay": 0,
+    "weighted_delivery_seconds": 2655522.854715196,
+    "makespan": 7033.297538856334,
+    "energy_kwh": 72.44330302455606,
+    "transport_energy_kwh": 68.73801404843633,
+    "relay_energy_kwh": 3.705288976119735,
+    "transport_sorties": 23,
+    "relay_sorties": 3,
+    "total_sorties": 26
+  }
+]

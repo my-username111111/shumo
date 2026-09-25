@@ -1,0 +1,10 @@
+{
+  "status": "FAIL",
+  "extra_loss_db": 1.0,
+  "scope": "point counterexample; outage duration not measured",
+  "witness": {
+    "sortie": "T004",
+    "time": 797.0,
+    "best_margin_db": -0.6553607291630179
+  }
+}

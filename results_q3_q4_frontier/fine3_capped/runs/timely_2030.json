@@ -1,0 +1,103 @@
+{
+  "stages": [
+    {
+      "target": "soft",
+      "status": "OPTIMAL",
+      "value": 0.0,
+      "lower_bound": 0.0,
+      "relative_gap": 0.0
+    },
+    {
+      "target": "weighted",
+      "status": "FEASIBLE",
+      "value": 2623582.0,
+      "lower_bound": 1541930.0,
+      "relative_gap": 0.4122806148235504
+    },
+    {
+      "target": "makespan",
+      "status": "FEASIBLE",
+      "value": 6308.0,
+      "lower_bound": 5418.0,
+      "relative_gap": 0.14109067850348764
+    },
+    {
+      "target": "energy",
+      "status": "FEASIBLE",
+      "value": 72722995.0,
+      "lower_bound": 70169119.0,
+      "relative_gap": 0.0351178605886625
+    },
+    {
+      "target": "sorties",
+      "status": "OPTIMAL",
+      "value": 3.0,
+      "lower_bound": 3.0,
+      "relative_gap": 0.0
+    }
+  ],
+  "policy": "timely",
+  "seed": 2030,
+  "scale_seconds": 1,
+  "coverage_max_interval_seconds": 3.0,
+  "stage_budget_seconds": 45.0,
+  "search_workers": 8,
+  "candidate_sites": 3,
+  "route_modes": 23,
+  "session_slots": 6,
+  "q4_constraint": false,
+  "independent_groups": false,
+  "resource_buffer_seconds": 0.0,
+  "objective_caps": {
+    "soft": 0,
+    "makespan": 6312.0
+  },
+  "elapsed_seconds": 178.10726990000694,
+  "bound_scope": "Finite sites, fixed box groups/visit orders, optional type modes and bounded relay sessions; later bounds conditional on earlier attained caps.",
+  "status": "PASS",
+  "objective": {
+    "weighted_soft_delay": 0,
+    "weighted_delivery_seconds": 2623200.0032893578,
+    "makespan": 6307.7581046684645,
+    "energy_kwh": 72.71919247438399,
+    "transport_energy_kwh": 69.30723683159759,
+    "relay_energy_kwh": 3.411955642786402,
+    "transport_sorties": 23,
+    "relay_sorties": 3,
+    "total_sorties": 26
+  },
+  "components": 3,
+  "q4_validation": "PASS",
+  "q4": [
+    {
+      "id": "P1",
+      "group_count": 2,
+      "resource_total": 33,
+      "shortage_total": 6,
+      "workload_cv": 0.8479653084214936
+    },
+    {
+      "id": "P2",
+      "group_count": 2,
+      "resource_total": 35,
+      "shortage_total": 8,
+      "workload_cv": 0.8059361454190851
+    },
+    {
+      "id": "P3",
+      "group_count": 2,
+      "resource_total": 29,
+      "shortage_total": 2,
+      "workload_cv": 0.9579708369975914
+    },
+    {
+      "id": "P4",
+      "group_count": 3,
+      "resource_total": 35,
+      "shortage_total": 8,
+      "workload_cv": 1.2102540103168005
+    }
+  ],
+  "label": "timely_2030",
+  "elapsed_wall_seconds": 180.82642040000064
+}
