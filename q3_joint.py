@@ -98,7 +98,7 @@ class Geometry:
         self.memory = {}
 
     def template(self, route):
-        key = hashlib.sha256(json.dumps(dict(version=3, data=self.fingerprint,
+        key = hashlib.sha256(json.dumps(dict(version=4, data=self.fingerprint,
             route=route, sites=[asdict(x) for x in self.sites],
             extra=self.extra, interval=self.interval), sort_keys=True).encode()).hexdigest()
         if key in self.memory:
@@ -144,16 +144,38 @@ def prepare_modes(s, source, geometry, variable_models=True):
     return all_modes
 
 
+def add_partition_capacity_budget(model, group_intervals, stock, group_count, budget):
+    """Bound summed group peaks by type, retaining global physical constraints."""
+    deficits = []
+    for key, inventory_count in stock.items():
+        capacities = []
+        for group_index in range(group_count):
+            capacity = model.NewIntVar(0, inventory_count, f'capacity_{group_index}_{key}')
+            rows = group_intervals[group_index, key]
+            if rows:
+                model.AddCumulative(rows, [1] * len(rows), capacity)
+            else:
+                model.Add(capacity == 0)
+            capacities.append(capacity)
+        deficit = model.NewIntVar(0, group_count*inventory_count, f'deficit_{key}')
+        model.AddMaxEquality(deficit, [0, sum(capacities)-inventory_count])
+        deficits.append(deficit)
+    model.Add(sum(deficits) <= budget)
+
+
 def solve(s, source, geometry, seconds=20., seed=2026, slots=2,
           variable_models=True, policy='timely', q4_groups=None,
           independent_groups=False, resource_buffer=0., objective_caps=None,
-          group_resource_caps=None):
+          group_resource_caps=None, max_partition_shortage=None):
     if not isfinite(seconds) or seconds<=0 or not isinstance(slots,int) or slots<1:
         raise ValueError('Positive solver time and positive integer relay slots required')
     if policy not in {'timely','energy','makespan'}:
         raise ValueError('Unknown Q3 objective policy')
     if not isfinite(resource_buffer) or resource_buffer < 0:
         raise ValueError('Nonnegative resource handoff buffer required')
+    if max_partition_shortage is not None and (
+            not isinstance(max_partition_shortage, int) or max_partition_shortage < 0):
+        raise ValueError('Partition shortage budget must be a nonnegative integer')
     groups = q4_groups or [list(s.zone_boxes)]
     if (any(not g for g in groups) or set(z for g in groups for z in g) != set(s.zone_boxes)
             or sum(map(len, groups)) != len(s.zone_boxes)):
@@ -171,6 +193,11 @@ def solve(s, source, geometry, seconds=20., seed=2026, slots=2,
     sites = geometry.sites
     # Slot count bounds are explicit: no inference about the continuous problem.
     model = cp_model.CpModel()
+    # Group capacities constrain Q4 demand without inventing extra Q3 inventory.
+    # Optional intervals still use the original physical devices globally.
+    from q4_exact import _stock
+    stock = _stock(s)
+    group_intervals = {(i, key): [] for i in range(len(groups)) for key in stock}
     horizon = 24000
     intervals = {('drone', u): [] for u in s.aircraft}
     batteries = {f'{g}{i:02d}': g for g, n in s.battery_count.items() for i in range(1,n+1)}
@@ -204,6 +231,8 @@ def solve(s, source, geometry, seconds=20., seed=2026, slots=2,
                     interval = model.NewOptionalFixedSizeIntervalVar(t, duration+buffer, flag,
                                                                      f'{kind}I{i}_{k}_{u}')
                     intervals[(kind,u)].append(interval)
+                    resource_key = f'{g}_' + ('aircraft' if kind == 'drone' else 'batteries')
+                    group_intervals[job_groups[i], resource_key].append(interval)
                 model.Add(sum(choices) == x)
             end = model.NewIntVar(0, horizon+6000, f'end{i}_{k}')
             model.Add(end == t+up(route['duration'])).OnlyEnforceIf(x)
@@ -278,8 +307,10 @@ def solve(s, source, geometry, seconds=20., seed=2026, slots=2,
                     f=model.NewBoolVar(name+r); rflags[r]=f
                     if independent_groups:
                         model.Add(owners['relay',r] == group_index).OnlyEnforceIf(f)
-                    intervals[('relay',r)].append(model.NewOptionalIntervalVar(
-                        launch,relay_duration,relay_release,f,name+r+'I'))
+                    interval = model.NewOptionalIntervalVar(
+                        launch,relay_duration,relay_release,f,name+r+'I')
+                    intervals[('relay',r)].append(interval)
+                    group_intervals[group_index, 'relay_aircraft'].append(interval)
                 model.Add(sum(rflags.values())==active)
                 energy=model.NewIntVar(0,up(s.relay.battery_kwh*1e6),name+'energy')
                 model.Add(energy==up(site.travel_energy_kwh*1e6)+up(power*1e6)*service)
@@ -302,8 +333,10 @@ def solve(s, source, geometry, seconds=20., seed=2026, slots=2,
                     model.Add(size==up(site.lead)+service+up(site.back_time)+charge+buffer)
                     release=model.NewIntVar(0,2*horizon+100000,name+c+'release')
                     model.Add(release==launch+size)
-                    intervals[('component',c)].append(model.NewOptionalIntervalVar(
-                        launch,size,release,f,name+c+'I'))
+                    interval = model.NewOptionalIntervalVar(
+                        launch,size,release,f,name+c+'I')
+                    intervals[('component',c)].append(interval)
+                    group_intervals[group_index, 'relay_components'].append(interval)
                 model.Add(sum(cflags.values())==active)
                 ee=model.NewIntVar(0,up(s.relay.battery_kwh*1e6),name+'selected_energy')
                 model.Add(ee==energy).OnlyEnforceIf(active)
@@ -335,6 +368,9 @@ def solve(s, source, geometry, seconds=20., seed=2026, slots=2,
         model.Add(session['active']<=sum(x[0] for x in session['assignments']))
     for rows in intervals.values():
         model.AddNoOverlap(rows)
+    if max_partition_shortage is not None:
+        add_partition_capacity_budget(model, group_intervals, stock, len(groups),
+                                      max_partition_shortage)
     for i,row in enumerate(source['sorties']):
         model.AddHint(starts[i],up(row.get('start',0.)))
         for k,option in enumerate(modes[i]):
@@ -396,6 +432,7 @@ def solve(s, source, geometry, seconds=20., seed=2026, slots=2,
         candidate_sites=len(sites),route_modes=sum(map(len,modes)),session_slots=len(sessions),
         q4_constraint=bool(q4_groups),independent_groups=independent_groups,
         resource_buffer_seconds=resource_buffer,objective_caps=objective_caps or {},
+        max_partition_shortage=max_partition_shortage,
         elapsed_seconds=perf_counter()-start_clock,
         bound_scope='Finite sites, fixed box groups/visit orders, optional type modes and bounded relay sessions; later bounds conditional on earlier attained caps.')
     if group_caps:

@@ -46,6 +46,16 @@ class GeometryTests(unittest.TestCase):
         self.s.dem.values[2,2]=15.
         self.assertFalse(independent_clear(self.s,fixed,a,b))
 
+    def test_near_collinear_sweep_checks_lower_envelope(self):
+        fixed=(.2,4.8,10.); a=(3.2,1.8,10.)
+        for noise in (0.,1e-11,-1e-11):
+            b=(4.8,.2+noise,10.)
+            self.s.dem.values[:]=0.
+            self.assertTrue(independent_clear(self.s,fixed,a,b))
+            self.s.dem.values[2,2]=20.
+            self.assertFalse(independent_clear(self.s,fixed,a,b))
+            self.assertFalse(swept_clear(self.s,fixed,a,b))
+
     def test_subsecond_relay_gap_is_unknown(self):
         node=SimpleNamespace(lon=0,lat=0,ground=0)
         s=SimpleNamespace(nodes={'O01':node},gateway_agl=10)
@@ -155,6 +165,25 @@ class PhysicalTests(unittest.TestCase):
     def test_relaxed_bounds_do_not_exceed_feasible_plan(self):
         for key,value in lower_bounds(self.s).items():
             if key!='scope':self.assertLessEqual(value,self.plan['objective'][key]+1e-8)
+
+    def test_radial_interval_certificate_cannot_exceed_obstructed_point(self):
+        # Observed failure: the old near-singular plane inversion reported a
+        # positive direct margin over an interval containing a negative point.
+        from model import phase_position
+        from q3_certificate import margin, point_margin
+        path=ROOT/'results_q3_q4_balance/three_broad/plans/g3_000.json'
+        plan=json.loads(path.read_text(encoding='utf8'))
+        row=next(r for r in plan['transport_sorties'] if r['id']=='T020')
+        ph=row['route']['phases'][1]
+        node=self.s.nodes['O01']
+        gateway=(node.lon,node.lat,node.ground+self.s.gateway_agl)
+        a=phase_position(ph,5374.-row['start'])
+        b=phase_position(ph,5525.-row['start'])
+        mid=phase_position(ph,(5374.+5525.)/2-row['start'])
+        witness=point_margin(self.s,gateway,mid,'transport','gateway',1.)
+        lower,_=margin(self.s,gateway,a,b,'transport','gateway',1.)
+        self.assertLess(witness,0.)
+        self.assertLessEqual(lower,witness+1e-7)
 
     def test_archive_filters_dominated_records(self):
         a=copy.deepcopy(self.plan);b=copy.deepcopy(a)

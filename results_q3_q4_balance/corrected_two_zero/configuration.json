@@ -1,0 +1,21 @@
+{
+  "arguments": {
+    "input": "results_q3_q4_balance\\selection\\two_zero_shortage\\q3_plan.json",
+    "output": "results_q3_q4_balance\\corrected_two_zero",
+    "groups": 2,
+    "shortage": 0,
+    "seconds": 35.0,
+    "limit": 1,
+    "offset": 2,
+    "buffer": 5.0,
+    "soft_cap": 300000.0,
+    "rebatch": false,
+    "regional": true,
+    "fixed_models": true,
+    "policy": "timely",
+    "extra_loss": 1.0
+  },
+  "input_sha256": "42dedcc6b7b0814b95c8c385d408248effd4b0a1b02f5c7f7a8d7a28168fa99c",
+  "box_transfers": [],
+  "ranking_scope": "transport-only workload plus finite-site count heuristic; final CV includes relay work"
+}

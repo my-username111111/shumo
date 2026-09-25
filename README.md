@@ -2,9 +2,11 @@
 
 第四问资源峰值反馈优化见[Q4 资源峰值反馈优化交付说明](results_q4_feedback/Q4_资源峰值反馈优化交付说明.md)。新的 26 架次已认证第三问方案使两组推荐分区的运输机/电池需求由 9/15 降为 **9/14**、库存缺口由 2 件降为 **1 件**，三组由 12/18 降为 **12/17**、缺口由 8 件降为 **7 件**；仍有 1 架 B 型机缺口。`python deliver_q4_feedback.py` 可重算固定资源链的时间精修并独立验收 Q3/Q4。结果以新方案形式保存，不自动覆盖默认主方案。
 
+本轮按“同时减少缺口并显著改善均衡”优化Q3/Q4，交付见 [缺口与均衡联合优化说明](results_q3_q4_balance/Q3_Q4_缺口与均衡优化交付说明.md)。固定同一新Q3：两组缺口 **2→0**、CV **0.957→0.049**；三组缺口 **8→6**、CV **1.206→0.511**。另选Q3的三组备选可达到缺口6、CV **0.026**，须与固定输入比较区分。所有方案经过修复近共线几何问题后的通信核验；代价是更多架次、能耗及普通物资软延误，硬时限仍全部满足。本次默认主Q3改为 `results_q3_q4_balance/selection/two_zero_shortage/q3_plan.json`，体现缺口与均衡优先；旧时效方案保留为历史备选。
+
 第三问进一步降能耗的四套已认证方案、时效与架次代价，以及第四问固定输入复核见[Q3 进一步降能耗交付说明](results_q3_energy_upgrade/Q3_进一步降能耗交付说明.md)。同为 1 dB 通信保障、零软延误和至少 5 秒资源接续时，26 架次节能方案为 71.907249 kWh；本轮最低能耗的 27 架次方案为 71.754753 kWh。两者均以更晚的加权交付换取节能，仓库默认主方案不自动切换。运行 `python deliver_q3_energy_upgrade.py` 可从保存的离散候选重做时间精修及 Q3/Q4 独立验收。
 
-最新第三、四问时间精修与库存对照见[Q3/Q4时间优化交付说明](results_q3_q4_timing/Q3_Q4_时间优化交付说明.md)：增加固定任务结构的连续时间线性规划，输出0.2秒、5秒、30秒接续方案及零库存缺口备选，并逐一重验Q3与Q4。当前默认完整方案仍在`results_q3_q4_resilience/selection/primary`；时间精修存在通信或各类资源余量权衡，不自动覆盖默认。上一轮见[Q3/Q4继续优化交付说明](results_q3_q4_resilience/Q3_Q4_继续优化交付说明.md)。所有Q4均固定对应Q3后精确核算，未宣称原题Q3全局最优。
+上一阶段时间精修与库存对照见[Q3/Q4时间优化交付说明](results_q3_q4_timing/Q3_Q4_时间优化交付说明.md)。当时的主方案在`results_q3_q4_resilience/selection/primary`。本轮发现并修复了近共线通信几何的数值判定问题，旧计划的保存通信归属和余量应重新认证后使用；不能直接沿用旧PASS。所有Q4均固定对应Q3后精确核算，未宣称原题Q3全局最优。
 
 上一轮附加情景见[接续缓冲与通信鲁棒性优化](results_q3_q4_resilience/Q3_Q4_继续优化交付说明.md)，包含30秒接续缓冲、扩大中继选址、均衡通信分组试验及独立验收。附加要求不作为原题名义优化的硬约束。更早的试验保留在[缓冲与库存试验说明](results_q3_q4_refined/Q3_Q4_优化交付说明.md)。Q4已补齐独立最大流证书核验、实物设备映射、输入指纹和全分区汇总检查。`python run.py --only-q4` 或 `python run_q4.py` 默认读取最新主Q3并写入`results_q4`；完整`run.py`默认也采用同一已认证Q3和精确Q4核算，输出到`results`。
 
@@ -14,7 +16,7 @@
 
 第三问最新实现与结果见 [Q3_交付说明.md](Q3_交付说明.md)。`python run_q3_joint.py --seconds 20 --iterations 8 --seeds 2026 2027 --warm-start q3_joint_feasible_seed.json` 运行四类资源联合 CP-SAT、多初值箱级搜索、位置高度细化和鲁棒性实验；额外依赖为 `requirements-q3.txt`。结果单独写入 `results_q3_complete`，`python q3_deliver.py` 重新认证并汇总表格和图形。旧版 `results_q3_upgrade` 与 `Q3_运行结果.md` 保留作对照。
 
-完整四问默认读取`results_q3_q4_resilience/selection/primary/q3_plan.json`；该交付不存在时才回退至`results_q3_q4_frontier/selection/primary/q3_plan.json`及历史基线。也可执行`python run.py --q3-plan <计划.json>`选择其他方案。程序逐条核验保存的连续通信关系，不重新选择中继，然后枚举固定该Q3的全部合法Q4分区。`q3_plan.json`保留可复算的认证格式，`q3.json`供历史表格兼容使用。历史搜索只能用`python run.py --legacy-q3-search`显式调用，其Q4为历史算法。最新Q3重新优化使用`search_q3_frontier.py`，不会在全流程中隐式重搜。
+完整四问和`run_q4.py`默认读取`results_q3_q4_balance/selection/two_zero_shortage/q3_plan.json`；交付缺失时才按历史路径回退。也可执行`python run.py --q3-plan <计划.json>`选择其他方案。程序逐条核验保存的连续通信关系，不重新选择中继，然后枚举固定该Q3的全部合法Q4分区。`q3_plan.json`保留可复算的认证格式，`q3.json`供历史表格兼容使用。历史搜索只能用`python run.py --legacy-q3-search`显式调用，其Q4为历史算法。新联合搜索入口为`optimize_q3_q4_balance.py`；`deliver_q3_q4_balance.py`从保存候选复做认证、时间精修和固定Q4，不在全流程中隐式重搜。
 
 第四问的优化设计见 [Q4_优化方案_v2.md](Q4_优化方案_v2.md)。现已用独立入口 `python run_q4.py --plan results_q3_complete/q3_plan.json --output results_q4` 正式实现：枚举全部四种合法分区，导出八类资源的最低配置、具体接续链、最优性证据和独立回放。结果与图表见 [results_q4/Q4_交付说明.md](results_q4/Q4_交付说明.md)。
 

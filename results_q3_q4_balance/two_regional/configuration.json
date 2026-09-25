@@ -1,0 +1,42 @@
+{
+  "arguments": {
+    "input": "D:\\建模\\shumo\\results_q3_energy_upgrade\\selection\\low_energy_26\\q3_plan.json",
+    "output": "results_q3_q4_balance\\two_regional",
+    "groups": 2,
+    "shortage": 0,
+    "seconds": 12.0,
+    "limit": 6,
+    "offset": 0,
+    "buffer": 5.0,
+    "soft_cap": 200000.0,
+    "rebatch": false,
+    "regional": true,
+    "policy": "timely",
+    "extra_loss": 1.0
+  },
+  "input_sha256": "aff7d347d1f985979753ee067eb774f679cccce1296ba34c6b92e7d6cfc50bd1",
+  "box_transfers": [
+    {
+      "split_sortie": "T002",
+      "regions": [
+        0,
+        2
+      ]
+    },
+    {
+      "split_sortie": "T010",
+      "regions": [
+        0,
+        4
+      ]
+    },
+    {
+      "split_sortie": "T014",
+      "regions": [
+        0,
+        1
+      ]
+    }
+  ],
+  "ranking_scope": "transport-only workload plus finite-site count heuristic; final CV includes relay work"
+}

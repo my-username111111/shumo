@@ -1,0 +1,376 @@
+{
+  "status": "PASS",
+  "scope": "fixed Q3, all legal Q4 partitions and all eight resource types",
+  "component_methods": "union-find and independent graph traversal",
+  "proof_methods": "independent interval peak, Edmonds-Karp flow, descending bottleneck thresholds and assignment replay",
+  "optimality_certificates_independently_verified": true,
+  "physical_inventory_mapping_verified": true,
+  "assignment_rows": 2480,
+  "partitions": {
+    "P1234_5": {
+      "status": "PASS",
+      "groups": 2,
+      "transport_tasks": 27,
+      "relay_tasks": 4,
+      "assignment_rows": 62,
+      "stock_sufficient": false,
+      "executable_after_procurement": true
+    },
+    "P1235_4": {
+      "status": "PASS",
+      "groups": 2,
+      "transport_tasks": 27,
+      "relay_tasks": 4,
+      "assignment_rows": 62,
+      "stock_sufficient": false,
+      "executable_after_procurement": true
+    },
+    "P123_45": {
+      "status": "PASS",
+      "groups": 2,
+      "transport_tasks": 27,
+      "relay_tasks": 4,
+      "assignment_rows": 62,
+      "stock_sufficient": false,
+      "executable_after_procurement": true
+    },
+    "P123_4_5": {
+      "status": "PASS",
+      "groups": 3,
+      "transport_tasks": 27,
+      "relay_tasks": 4,
+      "assignment_rows": 62,
+      "stock_sufficient": false,
+      "executable_after_procurement": true
+    },
+    "P1245_3": {
+      "status": "PASS",
+      "groups": 2,
+      "transport_tasks": 27,
+      "relay_tasks": 4,
+      "assignment_rows": 62,
+      "stock_sufficient": false,
+      "executable_after_procurement": true
+    },
+    "P124_35": {
+      "status": "PASS",
+      "groups": 2,
+      "transport_tasks": 27,
+      "relay_tasks": 4,
+      "assignment_rows": 62,
+      "stock_sufficient": false,
+      "executable_after_procurement": true
+    },
+    "P124_3_5": {
+      "status": "PASS",
+      "groups": 3,
+      "transport_tasks": 27,
+      "relay_tasks": 4,
+      "assignment_rows": 62,
+      "stock_sufficient": false,
+      "executable_after_procurement": true
+    },
+    "P125_34": {
+      "status": "PASS",
+      "groups": 2,
+      "transport_tasks": 27,
+      "relay_tasks": 4,
+      "assignment_rows": 62,
+      "stock_sufficient": false,
+      "executable_after_procurement": true
+    },
+    "P125_3_4": {
+      "status": "PASS",
+      "groups": 3,
+      "transport_tasks": 27,
+      "relay_tasks": 4,
+      "assignment_rows": 62,
+      "stock_sufficient": false,
+      "executable_after_procurement": true
+    },
+    "P12_345": {
+      "status": "PASS",
+      "groups": 2,
+      "transport_tasks": 27,
+      "relay_tasks": 4,
+      "assignment_rows": 62,
+      "stock_sufficient": false,
+      "executable_after_procurement": true
+    },
+    "P12_34_5": {
+      "status": "PASS",
+      "groups": 3,
+      "transport_tasks": 27,
+      "relay_tasks": 4,
+      "assignment_rows": 62,
+      "stock_sufficient": false,
+      "executable_after_procurement": true
+    },
+    "P12_35_4": {
+      "status": "PASS",
+      "groups": 3,
+      "transport_tasks": 27,
+      "relay_tasks": 4,
+      "assignment_rows": 62,
+      "stock_sufficient": false,
+      "executable_after_procurement": true
+    },
+    "P12_3_45": {
+      "status": "PASS",
+      "groups": 3,
+      "transport_tasks": 27,
+      "relay_tasks": 4,
+      "assignment_rows": 62,
+      "stock_sufficient": false,
+      "executable_after_procurement": true
+    },
+    "P1345_2": {
+      "status": "PASS",
+      "groups": 2,
+      "transport_tasks": 27,
+      "relay_tasks": 4,
+      "assignment_rows": 62,
+      "stock_sufficient": false,
+      "executable_after_procurement": true
+    },
+    "P134_25": {
+      "status": "PASS",
+      "groups": 2,
+      "transport_tasks": 27,
+      "relay_tasks": 4,
+      "assignment_rows": 62,
+      "stock_sufficient": false,
+      "executable_after_procurement": true
+    },
+    "P134_2_5": {
+      "status": "PASS",
+      "groups": 3,
+      "transport_tasks": 27,
+      "relay_tasks": 4,
+      "assignment_rows": 62,
+      "stock_sufficient": false,
+      "executable_after_procurement": true
+    },
+    "P135_24": {
+      "status": "PASS",
+      "groups": 2,
+      "transport_tasks": 27,
+      "relay_tasks": 4,
+      "assignment_rows": 62,
+      "stock_sufficient": false,
+      "executable_after_procurement": true
+    },
+    "P135_2_4": {
+      "status": "PASS",
+      "groups": 3,
+      "transport_tasks": 27,
+      "relay_tasks": 4,
+      "assignment_rows": 62,
+      "stock_sufficient": false,
+      "executable_after_procurement": true
+    },
+    "P13_245": {
+      "status": "PASS",
+      "groups": 2,
+      "transport_tasks": 27,
+      "relay_tasks": 4,
+      "assignment_rows": 62,
+      "stock_sufficient": false,
+      "executable_after_procurement": true
+    },
+    "P13_24_5": {
+      "status": "PASS",
+      "groups": 3,
+      "transport_tasks": 27,
+      "relay_tasks": 4,
+      "assignment_rows": 62,
+      "stock_sufficient": false,
+      "executable_after_procurement": true
+    },
+    "P13_25_4": {
+      "status": "PASS",
+      "groups": 3,
+      "transport_tasks": 27,
+      "relay_tasks": 4,
+      "assignment_rows": 62,
+      "stock_sufficient": false,
+      "executable_after_procurement": true
+    },
+    "P13_2_45": {
+      "status": "PASS",
+      "groups": 3,
+      "transport_tasks": 27,
+      "relay_tasks": 4,
+      "assignment_rows": 62,
+      "stock_sufficient": false,
+      "executable_after_procurement": true
+    },
+    "P145_23": {
+      "status": "PASS",
+      "groups": 2,
+      "transport_tasks": 27,
+      "relay_tasks": 4,
+      "assignment_rows": 62,
+      "stock_sufficient": false,
+      "executable_after_procurement": true
+    },
+    "P145_2_3": {
+      "status": "PASS",
+      "groups": 3,
+      "transport_tasks": 27,
+      "relay_tasks": 4,
+      "assignment_rows": 62,
+      "stock_sufficient": false,
+      "executable_after_procurement": true
+    },
+    "P14_235": {
+      "status": "PASS",
+      "groups": 2,
+      "transport_tasks": 27,
+      "relay_tasks": 4,
+      "assignment_rows": 62,
+      "stock_sufficient": false,
+      "executable_after_procurement": true
+    },
+    "P14_23_5": {
+      "status": "PASS",
+      "groups": 3,
+      "transport_tasks": 27,
+      "relay_tasks": 4,
+      "assignment_rows": 62,
+      "stock_sufficient": false,
+      "executable_after_procurement": true
+    },
+    "P14_25_3": {
+      "status": "PASS",
+      "groups": 3,
+      "transport_tasks": 27,
+      "relay_tasks": 4,
+      "assignment_rows": 62,
+      "stock_sufficient": false,
+      "executable_after_procurement": true
+    },
+    "P14_2_35": {
+      "status": "PASS",
+      "groups": 3,
+      "transport_tasks": 27,
+      "relay_tasks": 4,
+      "assignment_rows": 62,
+      "stock_sufficient": false,
+      "executable_after_procurement": true
+    },
+    "P15_234": {
+      "status": "PASS",
+      "groups": 2,
+      "transport_tasks": 27,
+      "relay_tasks": 4,
+      "assignment_rows": 62,
+      "stock_sufficient": false,
+      "executable_after_procurement": true
+    },
+    "P15_23_4": {
+      "status": "PASS",
+      "groups": 3,
+      "transport_tasks": 27,
+      "relay_tasks": 4,
+      "assignment_rows": 62,
+      "stock_sufficient": false,
+      "executable_after_procurement": true
+    },
+    "P15_24_3": {
+      "status": "PASS",
+      "groups": 3,
+      "transport_tasks": 27,
+      "relay_tasks": 4,
+      "assignment_rows": 62,
+      "stock_sufficient": false,
+      "executable_after_procurement": true
+    },
+    "P15_2_34": {
+      "status": "PASS",
+      "groups": 3,
+      "transport_tasks": 27,
+      "relay_tasks": 4,
+      "assignment_rows": 62,
+      "stock_sufficient": false,
+      "executable_after_procurement": true
+    },
+    "P1_2345": {
+      "status": "PASS",
+      "groups": 2,
+      "transport_tasks": 27,
+      "relay_tasks": 4,
+      "assignment_rows": 62,
+      "stock_sufficient": false,
+      "executable_after_procurement": true
+    },
+    "P1_234_5": {
+      "status": "PASS",
+      "groups": 3,
+      "transport_tasks": 27,
+      "relay_tasks": 4,
+      "assignment_rows": 62,
+      "stock_sufficient": false,
+      "executable_after_procurement": true
+    },
+    "P1_235_4": {
+      "status": "PASS",
+      "groups": 3,
+      "transport_tasks": 27,
+      "relay_tasks": 4,
+      "assignment_rows": 62,
+      "stock_sufficient": false,
+      "executable_after_procurement": true
+    },
+    "P1_23_45": {
+      "status": "PASS",
+      "groups": 3,
+      "transport_tasks": 27,
+      "relay_tasks": 4,
+      "assignment_rows": 62,
+      "stock_sufficient": false,
+      "executable_after_procurement": true
+    },
+    "P1_245_3": {
+      "status": "PASS",
+      "groups": 3,
+      "transport_tasks": 27,
+      "relay_tasks": 4,
+      "assignment_rows": 62,
+      "stock_sufficient": false,
+      "executable_after_procurement": true
+    },
+    "P1_24_35": {
+      "status": "PASS",
+      "groups": 3,
+      "transport_tasks": 27,
+      "relay_tasks": 4,
+      "assignment_rows": 62,
+      "stock_sufficient": false,
+      "executable_after_procurement": true
+    },
+    "P1_25_34": {
+      "status": "PASS",
+      "groups": 3,
+      "transport_tasks": 27,
+      "relay_tasks": 4,
+      "assignment_rows": 62,
+      "stock_sufficient": false,
+      "executable_after_procurement": true
+    },
+    "P1_2_345": {
+      "status": "PASS",
+      "groups": 3,
+      "transport_tasks": 27,
+      "relay_tasks": 4,
+      "assignment_rows": 62,
+      "stock_sufficient": false,
+      "executable_after_procurement": true
+    }
+  },
+  "q3_tasks_unchanged": true,
+  "all_boxes_delivered_once": true,
+  "all_communication_intervals_certified": true,
+  "resources_not_shared_between_groups": true,
+  "ready_before_reuse": true
+}

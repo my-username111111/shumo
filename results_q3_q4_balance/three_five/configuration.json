@@ -1,0 +1,21 @@
+{
+  "arguments": {
+    "input": "results_q3_q4_balance\\three_broad\\plans\\g3_000.json",
+    "output": "results_q3_q4_balance\\three_five",
+    "groups": 3,
+    "shortage": 5,
+    "seconds": 60.0,
+    "limit": 1,
+    "offset": 0,
+    "buffer": 5.0,
+    "soft_cap": 400000.0,
+    "rebatch": false,
+    "regional": true,
+    "fixed_models": false,
+    "policy": "timely",
+    "extra_loss": 1.0
+  },
+  "input_sha256": "943f023c8b45ddd38e4d642e1708019b97a3c07afa4694c4d0b7f5838bbe334d",
+  "box_transfers": [],
+  "ranking_scope": "transport-only workload plus finite-site count heuristic; final CV includes relay work"
+}

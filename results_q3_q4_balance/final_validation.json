@@ -1,0 +1,140 @@
+[
+  {
+    "case": "baseline_2",
+    "sha256": "85b7b066856e5859b216eb5750549b63daecfa08f7a63d90ee04c436910596d8",
+    "status": "PASS",
+    "physical": {
+      "status": "PASS",
+      "boxes": 80,
+      "sorties": 23,
+      "hard_boxes": 31,
+      "alternatives_checked": 0,
+      "resource_buffer_seconds": 5.0,
+      "minimum_handoff_seconds": {
+        "aircraft": 5.000099999999293,
+        "battery": 5.0000999999997475,
+        "relay": 97.85777885562084,
+        "component": null
+      },
+      "relay_sorties": 3,
+      "four_resource_classes": true
+    },
+    "communication_intervals": 235,
+    "communication_relation_preserved": true
+  },
+  {
+    "case": "baseline_3",
+    "sha256": "85b7b066856e5859b216eb5750549b63daecfa08f7a63d90ee04c436910596d8",
+    "status": "PASS",
+    "physical": {
+      "status": "PASS",
+      "boxes": 80,
+      "sorties": 23,
+      "hard_boxes": 31,
+      "alternatives_checked": 0,
+      "resource_buffer_seconds": 5.0,
+      "minimum_handoff_seconds": {
+        "aircraft": 5.000099999999293,
+        "battery": 5.0000999999997475,
+        "relay": 97.85777885562084,
+        "component": null
+      },
+      "relay_sorties": 3,
+      "four_resource_classes": true
+    },
+    "communication_intervals": 235,
+    "communication_relation_preserved": true
+  },
+  {
+    "case": "two_zero_shortage",
+    "sha256": "010d0c51718022d6945f06d11f531b29a24d1f77280aaa6af4dd71b19316506f",
+    "status": "PASS",
+    "physical": {
+      "status": "PASS",
+      "boxes": 80,
+      "sorties": 27,
+      "hard_boxes": 31,
+      "alternatives_checked": 0,
+      "resource_buffer_seconds": 5.0,
+      "minimum_handoff_seconds": {
+        "aircraft": 5.000099999998383,
+        "battery": 5.000099999999293,
+        "relay": 5.000099999998383,
+        "component": null
+      },
+      "relay_sorties": 4,
+      "four_resource_classes": true
+    },
+    "communication_intervals": 294,
+    "communication_relation_preserved": true
+  },
+  {
+    "case": "same_q3_three_groups",
+    "sha256": "010d0c51718022d6945f06d11f531b29a24d1f77280aaa6af4dd71b19316506f",
+    "status": "PASS",
+    "physical": {
+      "status": "PASS",
+      "boxes": 80,
+      "sorties": 27,
+      "hard_boxes": 31,
+      "alternatives_checked": 0,
+      "resource_buffer_seconds": 5.0,
+      "minimum_handoff_seconds": {
+        "aircraft": 5.000099999998383,
+        "battery": 5.000099999999293,
+        "relay": 5.000099999998383,
+        "component": null
+      },
+      "relay_sorties": 4,
+      "four_resource_classes": true
+    },
+    "communication_intervals": 294,
+    "communication_relation_preserved": true
+  },
+  {
+    "case": "three_balanced",
+    "sha256": "243595d205b634b1b4768aa1326dab8166d529bc87ee308c945f7f538892bad1",
+    "status": "PASS",
+    "physical": {
+      "status": "PASS",
+      "boxes": 80,
+      "sorties": 27,
+      "hard_boxes": 31,
+      "alternatives_checked": 0,
+      "resource_buffer_seconds": 5.0,
+      "minimum_handoff_seconds": {
+        "aircraft": 5.000099999999293,
+        "battery": 5.000099999999293,
+        "relay": 5.000099999997474,
+        "component": 627.4236983673582
+      },
+      "relay_sorties": 6,
+      "four_resource_classes": true
+    },
+    "communication_intervals": 322,
+    "communication_relation_preserved": true
+  },
+  {
+    "case": "two_one_shortage",
+    "sha256": "558630b4d8c3684c8829144877c5afdf47e0ee2d1cf71bda4a792905aa9e32fe",
+    "status": "PASS",
+    "physical": {
+      "status": "PASS",
+      "boxes": 80,
+      "sorties": 27,
+      "hard_boxes": 31,
+      "alternatives_checked": 0,
+      "resource_buffer_seconds": 5.0,
+      "minimum_handoff_seconds": {
+        "aircraft": 5.000099999999293,
+        "battery": 5.000100000001112,
+        "relay": 5.000100000000657,
+        "component": 1474.6450492640715
+      },
+      "relay_sorties": 4,
+      "four_resource_classes": true
+    },
+    "communication_intervals": 318,
+    "communication_relation_preserved": true
+  }
+]

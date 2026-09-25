@@ -1,0 +1,954 @@
+{
+  "stages": [
+    {
+      "target": "soft",
+      "status": "OPTIMAL",
+      "value": 204244.0,
+      "lower_bound": 204244.0,
+      "relative_gap": 0.0
+    },
+    {
+      "target": "weighted",
+      "status": "FEASIBLE",
+      "value": 3544518.0,
+      "lower_bound": 2923264.0,
+      "relative_gap": 0.17527178589585382
+    },
+    {
+      "target": "makespan",
+      "status": "OPTIMAL",
+      "value": 9092.0,
+      "lower_bound": 9092.0,
+      "relative_gap": 0.0
+    },
+    {
+      "target": "energy",
+      "status": "FEASIBLE",
+      "value": 79242317.0,
+      "lower_bound": 77355590.0,
+      "relative_gap": 0.02380958901037687
+    },
+    {
+      "target": "sorties",
+      "status": "OPTIMAL",
+      "value": 4.0,
+      "lower_bound": 4.0,
+      "relative_gap": 0.0
+    }
+  ],
+  "policy": "timely",
+  "seed": 2039,
+  "scale_seconds": 1,
+  "coverage_max_interval_seconds": 90.0,
+  "stage_budget_seconds": 90.0,
+  "search_workers": 8,
+  "candidate_sites": 3,
+  "route_modes": 62,
+  "session_slots": 12,
+  "q4_constraint": true,
+  "independent_groups": true,
+  "resource_buffer_seconds": 5.0,
+  "objective_caps": {
+    "soft": 1000000.0
+  },
+  "max_partition_shortage": 0,
+  "elapsed_seconds": 250.56153529998846,
+  "bound_scope": "Finite sites, fixed box groups/visit orders, optional type modes and bounded relay sessions; later bounds conditional on earlier attained caps.",
+  "status": "PASS",
+  "objective": {
+    "weighted_soft_delay": 204237.57715111107,
+    "weighted_delivery_seconds": 3544099.40470804,
+    "makespan": 9091.905931149839,
+    "energy_kwh": 79.23751866482527,
+    "transport_energy_kwh": 75.00094668669573,
+    "relay_energy_kwh": 4.236571978129548,
+    "transport_sorties": 27,
+    "relay_sorties": 4,
+    "total_sorties": 31
+  },
+  "q4_validation": "PASS",
+  "target_partition": "P1246_35",
+  "target_shortage": 0,
+  "target_cv": 0.04887994811183997,
+  "target_resources": {
+    "A_aircraft": 4,
+    "B_aircraft": 2,
+    "C_aircraft": 2,
+    "A_batteries": 6,
+    "B_batteries": 4,
+    "C_batteries": 4,
+    "relay_aircraft": 2,
+    "relay_components": 3
+  },
+  "q4": [
+    {
+      "id": "P12345_6",
+      "group_count": 2,
+      "shortage_total": 2,
+      "workload_cv": 0.9626547695990056,
+      "resource_total": 29
+    },
+    {
+      "id": "P12346_5",
+      "group_count": 2,
+      "shortage_total": 8,
+      "workload_cv": 0.6250322485000809,
+      "resource_total": 35
+    },
+    {
+      "id": "P1234_56",
+      "group_count": 2,
+      "shortage_total": 9,
+      "workload_cv": 0.5876870180990865,
+      "resource_total": 36
+    },
+    {
+      "id": "P1234_5_6",
+      "group_count": 3,
+      "shortage_total": 10,
+      "workload_cv": 0.9985284979680016,
+      "resource_total": 37
+    },
+    {
+      "id": "P12356_4",
+      "group_count": 2,
+      "shortage_total": 4,
+      "workload_cv": 0.9137010207102968,
+      "resource_total": 31
+    },
+    {
+      "id": "P1235_46",
+      "group_count": 2,
+      "shortage_total": 6,
+      "workload_cv": 0.8763557903093024,
+      "resource_total": 33
+    },
+    {
+      "id": "P1235_4_6",
+      "group_count": 3,
+      "shortage_total": 6,
+      "workload_cv": 1.2834192315512285,
+      "resource_total": 33
+    },
+    {
+      "id": "P1236_45",
+      "group_count": 2,
+      "shortage_total": 11,
+      "workload_cv": 0.5387332692103776,
+      "resource_total": 38
+    },
+    {
+      "id": "P1236_4_5",
+      "group_count": 3,
+      "shortage_total": 12,
+      "workload_cv": 0.9417065900266678,
+      "resource_total": 39
+    },
+    {
+      "id": "P123_456",
+      "group_count": 2,
+      "shortage_total": 12,
+      "workload_cv": 0.5013880388093832,
+      "resource_total": 39
+    },
+    {
+      "id": "P123_45_6",
+      "group_count": 3,
+      "shortage_total": 13,
+      "workload_cv": 0.9226298172534864,
+      "resource_total": 40
+    },
+    {
+      "id": "P123_46_5",
+      "group_count": 3,
+      "shortage_total": 14,
+      "workload_cv": 0.8986328845814188,
+      "resource_total": 41
+    },
+    {
+      "id": "P123_4_56",
+      "group_count": 3,
+      "shortage_total": 13,
+      "workload_cv": 0.9075856234883657,
+      "resource_total": 40
+    },
+    {
+      "id": "P12456_3",
+      "group_count": 2,
+      "shortage_total": 9,
+      "workload_cv": 0.3260878033880792,
+      "resource_total": 36
+    },
+    {
+      "id": "P1245_36",
+      "group_count": 2,
+      "shortage_total": 11,
+      "workload_cv": 0.2887425729870847,
+      "resource_total": 38
+    },
+    {
+      "id": "P1245_3_6",
+      "group_count": 3,
+      "shortage_total": 11,
+      "workload_cv": 0.7663597724333099,
+      "resource_total": 38
+    },
+    {
+      "id": "P1246_35",
+      "group_count": 2,
+      "shortage_total": 0,
+      "workload_cv": 0.04887994811183997,
+      "resource_total": 27
+    },
+    {
+      "id": "P1246_3_5",
+      "group_count": 3,
+      "shortage_total": 9,
+      "workload_cv": 0.3529034745978129,
+      "resource_total": 36
+    },
+    {
+      "id": "P124_356",
+      "group_count": 2,
+      "shortage_total": 2,
+      "workload_cv": 0.08622517851283444,
+      "resource_total": 29
+    },
+    {
+      "id": "P124_35_6",
+      "group_count": 3,
+      "shortage_total": 2,
+      "workload_cv": 0.6726040269924987,
+      "resource_total": 29
+    },
+    {
+      "id": "P124_36_5",
+      "group_count": 3,
+      "shortage_total": 11,
+      "workload_cv": 0.333323078855004,
+      "resource_total": 38
+    },
+    {
+      "id": "P124_3_56",
+      "group_count": 3,
+      "shortage_total": 10,
+      "workload_cv": 0.3071775563540923,
+      "resource_total": 37
+    },
+    {
+      "id": "P1256_34",
+      "group_count": 2,
+      "shortage_total": 10,
+      "workload_cv": 0.2397888240983759,
+      "resource_total": 37
+    },
+    {
+      "id": "P1256_3_4",
+      "group_count": 3,
+      "shortage_total": 12,
+      "workload_cv": 0.7064071900794804,
+      "resource_total": 39
+    },
+    {
+      "id": "P125_346",
+      "group_count": 2,
+      "shortage_total": 12,
+      "workload_cv": 0.20244359369738152,
+      "resource_total": 39
+    },
+    {
+      "id": "P125_34_6",
+      "group_count": 3,
+      "shortage_total": 12,
+      "workload_cv": 0.7203400035174226,
+      "resource_total": 39
+    },
+    {
+      "id": "P125_36_4",
+      "group_count": 3,
+      "shortage_total": 14,
+      "workload_cv": 0.6851305919301173,
+      "resource_total": 41
+    },
+    {
+      "id": "P125_3_46",
+      "group_count": 3,
+      "shortage_total": 14,
+      "workload_cv": 0.6606717047953252,
+      "resource_total": 41
+    },
+    {
+      "id": "P126_345",
+      "group_count": 2,
+      "shortage_total": 4,
+      "workload_cv": 0.1351789274015432,
+      "resource_total": 31
+    },
+    {
+      "id": "P126_34_5",
+      "group_count": 3,
+      "shortage_total": 11,
+      "workload_cv": 0.3159556941736219,
+      "resource_total": 38
+    },
+    {
+      "id": "P126_35_4",
+      "group_count": 3,
+      "shortage_total": 4,
+      "workload_cv": 0.6258067674937006,
+      "resource_total": 31
+    },
+    {
+      "id": "P126_3_45",
+      "group_count": 3,
+      "shortage_total": 12,
+      "workload_cv": 0.24724502010049992,
+      "resource_total": 39
+    },
+    {
+      "id": "P12_3456",
+      "group_count": 2,
+      "shortage_total": 6,
+      "workload_cv": 0.17252415780253766,
+      "resource_total": 33
+    },
+    {
+      "id": "P12_345_6",
+      "group_count": 3,
+      "shortage_total": 6,
+      "workload_cv": 0.6935824389738873,
+      "resource_total": 33
+    },
+    {
+      "id": "P12_346_5",
+      "group_count": 3,
+      "shortage_total": 13,
+      "workload_cv": 0.3099354432615592,
+      "resource_total": 40
+    },
+    {
+      "id": "P12_34_56",
+      "group_count": 3,
+      "shortage_total": 12,
+      "workload_cv": 0.2729092748929845,
+      "resource_total": 39
+    },
+    {
+      "id": "P12_356_4",
+      "group_count": 3,
+      "shortage_total": 6,
+      "workload_cv": 0.6356388056605438,
+      "resource_total": 33
+    },
+    {
+      "id": "P12_35_46",
+      "group_count": 3,
+      "shortage_total": 6,
+      "workload_cv": 0.5917051454661771,
+      "resource_total": 33
+    },
+    {
+      "id": "P12_36_45",
+      "group_count": 3,
+      "shortage_total": 14,
+      "workload_cv": 0.22918943120502647,
+      "resource_total": 41
+    },
+    {
+      "id": "P12_3_456",
+      "group_count": 3,
+      "shortage_total": 13,
+      "workload_cv": 0.2015337552465909,
+      "resource_total": 40
+    },
+    {
+      "id": "P13456_2",
+      "group_count": 2,
+      "shortage_total": 8,
+      "workload_cv": 0.30761537019756086,
+      "resource_total": 35
+    },
+    {
+      "id": "P1345_26",
+      "group_count": 2,
+      "shortage_total": 6,
+      "workload_cv": 0.27027013979656656,
+      "resource_total": 33
+    },
+    {
+      "id": "P1345_2_6",
+      "group_count": 3,
+      "shortage_total": 8,
+      "workload_cv": 0.7555018381244115,
+      "resource_total": 35
+    },
+    {
+      "id": "P1346_25",
+      "group_count": 2,
+      "shortage_total": 11,
+      "workload_cv": 0.06735238130235827,
+      "resource_total": 38
+    },
+    {
+      "id": "P1346_2_5",
+      "group_count": 3,
+      "shortage_total": 14,
+      "workload_cv": 0.3425954657981636,
+      "resource_total": 41
+    },
+    {
+      "id": "P134_256",
+      "group_count": 2,
+      "shortage_total": 9,
+      "workload_cv": 0.10469761170335264,
+      "resource_total": 36
+    },
+    {
+      "id": "P134_25_6",
+      "group_count": 3,
+      "shortage_total": 11,
+      "workload_cv": 0.6757600194939023,
+      "resource_total": 38
+    },
+    {
+      "id": "P134_26_5",
+      "group_count": 3,
+      "shortage_total": 12,
+      "workload_cv": 0.32558353385933286,
+      "resource_total": 39
+    },
+    {
+      "id": "P134_2_56",
+      "group_count": 3,
+      "shortage_total": 13,
+      "workload_cv": 0.29702462497286874,
+      "resource_total": 40
+    },
+    {
+      "id": "P1356_24",
+      "group_count": 2,
+      "shortage_total": 6,
+      "workload_cv": 0.22131639090785757,
+      "resource_total": 33
+    },
+    {
+      "id": "P1356_2_4",
+      "group_count": 3,
+      "shortage_total": 10,
+      "workload_cv": 0.6955884466298842,
+      "resource_total": 37
+    },
+    {
+      "id": "P135_246",
+      "group_count": 2,
+      "shortage_total": 4,
+      "workload_cv": 0.18397116050686332,
+      "resource_total": 31
+    },
+    {
+      "id": "P135_24_6",
+      "group_count": 3,
+      "shortage_total": 6,
+      "workload_cv": 0.712143176377354,
+      "resource_total": 33
+    },
+    {
+      "id": "P135_26_4",
+      "group_count": 3,
+      "shortage_total": 8,
+      "workload_cv": 0.6755040108749925,
+      "resource_total": 35
+    },
+    {
+      "id": "P135_2_46",
+      "group_count": 3,
+      "shortage_total": 10,
+      "workload_cv": 0.6498877259315642,
+      "resource_total": 37
+    },
+    {
+      "id": "P136_245",
+      "group_count": 2,
+      "shortage_total": 12,
+      "workload_cv": 0.1536513605920615,
+      "resource_total": 39
+    },
+    {
+      "id": "P136_24_5",
+      "group_count": 3,
+      "shortage_total": 14,
+      "workload_cv": 0.3121558070435398,
+      "resource_total": 41
+    },
+    {
+      "id": "P136_25_4",
+      "group_count": 3,
+      "shortage_total": 15,
+      "workload_cv": 0.63027452696777,
+      "resource_total": 42
+    },
+    {
+      "id": "P136_2_45",
+      "group_count": 3,
+      "shortage_total": 17,
+      "workload_cv": 0.2373860125634122,
+      "resource_total": 44
+    },
+    {
+      "id": "P13_2456",
+      "group_count": 2,
+      "shortage_total": 10,
+      "workload_cv": 0.19099659099305585,
+      "resource_total": 37
+    },
+    {
+      "id": "P13_245_6",
+      "group_count": 3,
+      "shortage_total": 12,
+      "workload_cv": 0.7000674845047843,
+      "resource_total": 39
+    },
+    {
+      "id": "P13_246_5",
+      "group_count": 3,
+      "shortage_total": 12,
+      "workload_cv": 0.3094233313774321,
+      "resource_total": 39
+    },
+    {
+      "id": "P13_24_56",
+      "group_count": 3,
+      "shortage_total": 13,
+      "workload_cv": 0.2704209781493168,
+      "resource_total": 40
+    },
+    {
+      "id": "P13_256_4",
+      "group_count": 3,
+      "shortage_total": 13,
+      "workload_cv": 0.641652656961533,
+      "resource_total": 40
+    },
+    {
+      "id": "P13_25_46",
+      "group_count": 3,
+      "shortage_total": 15,
+      "workload_cv": 0.5972952654969163,
+      "resource_total": 42
+    },
+    {
+      "id": "P13_26_45",
+      "group_count": 3,
+      "shortage_total": 15,
+      "workload_cv": 0.223202567621979,
+      "resource_total": 42
+    },
+    {
+      "id": "P13_2_456",
+      "group_count": 3,
+      "shortage_total": 16,
+      "workload_cv": 0.19202254922379047,
+      "resource_total": 43
+    },
+    {
+      "id": "P1456_23",
+      "group_count": 2,
+      "shortage_total": 15,
+      "workload_cv": 0.3662968264143599,
+      "resource_total": 42
+    },
+    {
+      "id": "P1456_2_3",
+      "group_count": 3,
+      "shortage_total": 16,
+      "workload_cv": 0.036747481629460774,
+      "resource_total": 43
+    },
+    {
+      "id": "P145_236",
+      "group_count": 2,
+      "shortage_total": 14,
+      "workload_cv": 0.40364205681535426,
+      "resource_total": 41
+    },
+    {
+      "id": "P145_23_6",
+      "group_count": 3,
+      "shortage_total": 16,
+      "workload_cv": 0.8172229563450276,
+      "resource_total": 43
+    },
+    {
+      "id": "P145_26_3",
+      "group_count": 3,
+      "shortage_total": 15,
+      "workload_cv": 0.08203405092207697,
+      "resource_total": 42
+    },
+    {
+      "id": "P145_2_36",
+      "group_count": 3,
+      "shortage_total": 17,
+      "workload_cv": 0.07546389600554428,
+      "resource_total": 44
+    },
+    {
+      "id": "P146_235",
+      "group_count": 2,
+      "shortage_total": 7,
+      "workload_cv": 0.741264577914279,
+      "resource_total": 34
+    },
+    {
+      "id": "P146_23_5",
+      "group_count": 3,
+      "shortage_total": 16,
+      "workload_cv": 0.7454756121983802,
+      "resource_total": 43
+    },
+    {
+      "id": "P146_25_3",
+      "group_count": 3,
+      "shortage_total": 14,
+      "workload_cv": 0.49523436870031184,
+      "resource_total": 41
+    },
+    {
+      "id": "P146_2_35",
+      "group_count": 3,
+      "shortage_total": 8,
+      "workload_cv": 0.4846310244244839,
+      "resource_total": 35
+    },
+    {
+      "id": "P14_2356",
+      "group_count": 2,
+      "shortage_total": 5,
+      "workload_cv": 0.7786098083152735,
+      "resource_total": 32
+    },
+    {
+      "id": "P14_235_6",
+      "group_count": 3,
+      "shortage_total": 7,
+      "workload_cv": 1.1453418529549035,
+      "resource_total": 34
+    },
+    {
+      "id": "P14_236_5",
+      "group_count": 3,
+      "shortage_total": 14,
+      "workload_cv": 0.7873176560162726,
+      "resource_total": 41
+    },
+    {
+      "id": "P14_23_56",
+      "group_count": 3,
+      "shortage_total": 15,
+      "workload_cv": 0.7512236500644339,
+      "resource_total": 42
+    },
+    {
+      "id": "P14_256_3",
+      "group_count": 3,
+      "shortage_total": 12,
+      "workload_cv": 0.5409677063048187,
+      "resource_total": 39
+    },
+    {
+      "id": "P14_25_36",
+      "group_count": 3,
+      "shortage_total": 14,
+      "workload_cv": 0.5201984119019255,
+      "resource_total": 41
+    },
+    {
+      "id": "P14_26_35",
+      "group_count": 3,
+      "shortage_total": 6,
+      "workload_cv": 0.5111275022422135,
+      "resource_total": 33
+    },
+    {
+      "id": "P14_2_356",
+      "group_count": 3,
+      "shortage_total": 8,
+      "workload_cv": 0.5303031427844593,
+      "resource_total": 35
+    },
+    {
+      "id": "P156_234",
+      "group_count": 2,
+      "shortage_total": 13,
+      "workload_cv": 0.4525958057040632,
+      "resource_total": 40
+    },
+    {
+      "id": "P156_23_4",
+      "group_count": 3,
+      "shortage_total": 17,
+      "workload_cv": 0.7939769598180322,
+      "resource_total": 44
+    },
+    {
+      "id": "P156_24_3",
+      "group_count": 3,
+      "shortage_total": 14,
+      "workload_cv": 0.14183748731519913,
+      "resource_total": 41
+    },
+    {
+      "id": "P156_2_34",
+      "group_count": 3,
+      "shortage_total": 16,
+      "workload_cv": 0.13314144589075488,
+      "resource_total": 43
+    },
+    {
+      "id": "P15_2346",
+      "group_count": 2,
+      "shortage_total": 12,
+      "workload_cv": 0.48994103610505757,
+      "resource_total": 39
+    },
+    {
+      "id": "P15_234_6",
+      "group_count": 3,
+      "shortage_total": 14,
+      "workload_cv": 0.8824352898225691,
+      "resource_total": 41
+    },
+    {
+      "id": "P15_236_4",
+      "group_count": 3,
+      "shortage_total": 16,
+      "workload_cv": 0.8236285650113458,
+      "resource_total": 43
+    },
+    {
+      "id": "P15_23_46",
+      "group_count": 3,
+      "shortage_total": 18,
+      "workload_cv": 0.7788846457160253,
+      "resource_total": 45
+    },
+    {
+      "id": "P15_246_3",
+      "group_count": 3,
+      "shortage_total": 13,
+      "workload_cv": 0.1875250562119672,
+      "resource_total": 40
+    },
+    {
+      "id": "P15_24_36",
+      "group_count": 3,
+      "shortage_total": 15,
+      "workload_cv": 0.1711624313321537,
+      "resource_total": 42
+    },
+    {
+      "id": "P15_26_34",
+      "group_count": 3,
+      "shortage_total": 15,
+      "workload_cv": 0.16715303053153446,
+      "resource_total": 42
+    },
+    {
+      "id": "P15_2_346",
+      "group_count": 3,
+      "shortage_total": 17,
+      "workload_cv": 0.17815620281916286,
+      "resource_total": 44
+    },
+    {
+      "id": "P16_2345",
+      "group_count": 2,
+      "shortage_total": 6,
+      "workload_cv": 0.8275635572039823,
+      "resource_total": 33
+    },
+    {
+      "id": "P16_234_5",
+      "group_count": 3,
+      "shortage_total": 15,
+      "workload_cv": 0.8427795009156099,
+      "resource_total": 42
+    },
+    {
+      "id": "P16_235_4",
+      "group_count": 3,
+      "shortage_total": 10,
+      "workload_cv": 1.1410031236579443,
+      "resource_total": 37
+    },
+    {
+      "id": "P16_23_45",
+      "group_count": 3,
+      "shortage_total": 18,
+      "workload_cv": 0.7628572974059968,
+      "resource_total": 45
+    },
+    {
+      "id": "P16_245_3",
+      "group_count": 3,
+      "shortage_total": 14,
+      "workload_cv": 0.6009181125634112,
+      "resource_total": 41
+    },
+    {
+      "id": "P16_24_35",
+      "group_count": 3,
+      "shortage_total": 7,
+      "workload_cv": 0.5497033077652013,
+      "resource_total": 34
+    },
+    {
+      "id": "P16_25_34",
+      "group_count": 3,
+      "shortage_total": 15,
+      "workload_cv": 0.5569311882820596,
+      "resource_total": 42
+    },
+    {
+      "id": "P16_2_345",
+      "group_count": 3,
+      "shortage_total": 11,
+      "workload_cv": 0.5901876817635999,
+      "resource_total": 38
+    },
+    {
+      "id": "P1_23456",
+      "group_count": 2,
+      "shortage_total": 4,
+      "workload_cv": 0.8649087876049768,
+      "resource_total": 31
+    },
+    {
+      "id": "P1_2345_6",
+      "group_count": 3,
+      "shortage_total": 6,
+      "workload_cv": 1.2327711235830034,
+      "resource_total": 33
+    },
+    {
+      "id": "P1_2346_5",
+      "group_count": 3,
+      "shortage_total": 13,
+      "workload_cv": 0.8854835154031985,
+      "resource_total": 40
+    },
+    {
+      "id": "P1_234_56",
+      "group_count": 3,
+      "shortage_total": 14,
+      "workload_cv": 0.850714202358561,
+      "resource_total": 41
+    },
+    {
+      "id": "P1_2356_4",
+      "group_count": 3,
+      "shortage_total": 8,
+      "workload_cv": 1.1797722236923835,
+      "resource_total": 35
+    },
+    {
+      "id": "P1_235_46",
+      "group_count": 3,
+      "shortage_total": 10,
+      "workload_cv": 1.1398047606570787,
+      "resource_total": 37
+    },
+    {
+      "id": "P1_236_45",
+      "group_count": 3,
+      "shortage_total": 16,
+      "workload_cv": 0.8067965928258536,
+      "resource_total": 43
+    },
+    {
+      "id": "P1_23_456",
+      "group_count": 3,
+      "shortage_total": 17,
+      "workload_cv": 0.7747405411065028,
+      "resource_total": 44
+    },
+    {
+      "id": "P1_2456_3",
+      "group_count": 3,
+      "shortage_total": 12,
+      "workload_cv": 0.6466530160173279,
+      "resource_total": 39
+    },
+    {
+      "id": "P1_245_36",
+      "group_count": 3,
+      "shortage_total": 14,
+      "workload_cv": 0.6255287113374399,
+      "resource_total": 41
+    },
+    {
+      "id": "P1_246_35",
+      "group_count": 3,
+      "shortage_total": 5,
+      "workload_cv": 0.5815723395042759,
+      "resource_total": 32
+    },
+    {
+      "id": "P1_24_356",
+      "group_count": 3,
+      "shortage_total": 7,
+      "workload_cv": 0.594442766696484,
+      "resource_total": 34
+    },
+    {
+      "id": "P1_256_34",
+      "group_count": 3,
+      "shortage_total": 13,
+      "workload_cv": 0.6019930321036814,
+      "resource_total": 40
+    },
+    {
+      "id": "P1_25_346",
+      "group_count": 3,
+      "shortage_total": 15,
+      "workload_cv": 0.5875289116965986,
+      "resource_total": 42
+    },
+    {
+      "id": "P1_26_345",
+      "group_count": 3,
+      "shortage_total": 9,
+      "workload_cv": 0.616068077663945,
+      "resource_total": 36
+    },
+    {
+      "id": "P1_2_3456",
+      "group_count": 3,
+      "shortage_total": 11,
+      "workload_cv": 0.6358806955024473,
+      "resource_total": 38
+    }
+  ],
+  "label": "g2_002",
+  "requested_groups": [
+    [
+      "S003",
+      "S005",
+      "S007",
+      "S010",
+      "S012",
+      "S013",
+      "S014",
+      "S015"
+    ],
+    [
+      "S001",
+      "S002",
+      "S004",
+      "S006",
+      "S008",
+      "S009",
+      "S011"
+    ]
+  ]
+}

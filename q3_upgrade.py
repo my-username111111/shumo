@@ -135,7 +135,9 @@ def swept_clear(s: Scenario, fixed: tuple[float, float, float],
     if not all(-1e12 < v < 1e12 for v in (qx, qy, x0, y0, x1, y1)):
         return False
     area2 = (x0 - qx) * (y1 - qy) - (y0 - qy) * (x1 - qx)
-    if abs(area2) <= 1e-10:
+    area_tolerance = 1e-10 * max(1., sqrt((x0-qx)**2+(y0-qy)**2) *
+                                      sqrt((x1-qx)**2+(y1-qy)**2))
+    if abs(area2) <= area_tolerance:
         # Vertical motion has a fixed ground ray; the lower endpoint is the
         # worst altitude everywhere.  Other collinear sweeps are conservatively
         # left obstructed unless the obstruction penalty itself is affordable.

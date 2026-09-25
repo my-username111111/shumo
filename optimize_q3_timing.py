@@ -37,7 +37,8 @@ def optimize(s: Scenario, original: dict, buffer: float,
              policy: str = 'timely', delivery_cap: float | None = None,
              makespan_cap: float | None = None,
              allow_soft_delay: bool = False,
-             preserve_q4_resources: list[tuple[str, str, str]] | None = None
+             preserve_q4_resources: list[tuple[str, str, str]] | None = None,
+             preserve_partition: str | None = None
              ) -> tuple[dict, dict, dict]:
     """Return certified plan, exact Q4, and the fixed-structure LP record."""
     if not isfinite(buffer) or buffer < 0:
@@ -133,6 +134,33 @@ def optimize(s: Scenario, original: dict, buffer: float,
             preserved.append(dict(partition=partition_id, group=group_id,
                                   resource=resource_key,
                                   maximum=cert['minimum_resources']))
+    # Optional Q4 feedback: retain group-local chains as well as global IDs.
+    # Otherwise a pure Q3 time improvement can silently increase the sum of
+    # independent group peaks and undo the shortage reduction.
+    protected_groups = None
+    protected_need = None
+    if preserve_partition is not None:
+        original_q4 = solve_q4(s, original, json.dumps(original, ensure_ascii=False).encode('utf8'))
+        choices = [p for p in original_q4['partitions'] if p['id'] == preserve_partition]
+        if not choices:
+            raise ValueError('Unknown partition to preserve')
+        protected_groups = [g['zones'] for g in choices[0]['groups']]
+        protected_need = choices[0]['resource_need']
+        for row in original_q4['assignments']:
+            if row['partition'] != preserve_partition or not row['next_task']:
+                continue
+            first, second = row['task'], row['next_task']
+            key = row['resource_type']
+            if key.endswith('_aircraft') and key != 'relay_aircraft':
+                elapsed = transports[first]['return_time'] - transports[first]['start']
+                solver.Add(starts[second] >= starts[first] + elapsed + EPS)
+            elif key.endswith('_batteries'):
+                elapsed = transports[first]['battery_ready'] - transports[first]['start']
+                solver.Add(starts[second] >= starts[first] + elapsed + EPS)
+            else:
+                release = 'relay_ready' if key == 'relay_aircraft' else 'component_ready'
+                elapsed = relays[first][release] - relays[first]['service_end']
+                solver.Add(launches[second] >= service_ends[first] + elapsed + EPS)
     # A previously certified relay interval remains on the same relay. Its
     # geometry is invariant under a pure shift of the transport trajectory.
     relay_rows = 0
@@ -217,6 +245,13 @@ def optimize(s: Scenario, original: dict, buffer: float,
     if preserved:
         result['search']['preserved_q4_resources']=preserved
     result['q2_seed'] = f"timing_lp_buffer_{buffer:g}"
+    # Shift known geometric proof boundaries with their transport trajectory.
+    # They refine the independent replay grid but do not replace revalidation.
+    for interval in result.get('communication_intervals', []):
+        tid=interval['sortie']
+        delta=starts[tid].solution_value()-transports[tid]['start']
+        interval['start']+=delta
+        interval['end']+=delta
     result = accept(s, result)
     verify_fixed_q3(s, result)
     original_starts = {r['id']: r['start'] for r in original['transport_sorties']}
@@ -254,8 +289,17 @@ def optimize(s: Scenario, original: dict, buffer: float,
     scope='fixed routes, resource order, relay sites and original relay coverage obligations'
     if preserved:
         scope+=', plus selected Q4 group resource chains'
+    if protected_groups is not None:
+        target = {frozenset(g) for g in protected_groups}
+        candidate = next((p for p in q4['partitions']
+                          if {frozenset(g['zones']) for g in p['groups']} == target), None)
+        if candidate is None or any(candidate['resource_need'][k] > v
+                                    for k,v in protected_need.items()):
+            raise AssertionError('Retiming failed to preserve Q4 partition resource demand')
+        scope+=', plus complete selected Q4 partition resource chains'
     report = dict(status='PASS',scope=scope,
                   buffer_seconds=buffer, policy=policy, allow_soft_delay=allow_soft_delay,
+                  preserved_partition=preserve_partition,
                   delivery_cap=delivery_cap,
                   makespan_cap=makespan_cap, fixed_relay_intervals=relay_rows,
                   input_sha256=sha256(json.dumps(original,sort_keys=True,ensure_ascii=False).encode()).hexdigest(),
