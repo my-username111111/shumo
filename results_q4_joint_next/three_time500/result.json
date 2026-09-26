@@ -1,0 +1,53 @@
+{
+  "status": "CERTIFIED_CANDIDATE",
+  "baseline": {
+    "weighted_soft_delay": 0,
+    "weighted_delivery_seconds": 2911369.1763067786,
+    "makespan": 6761.824258884327,
+    "energy_kwh": 69.56654127519937,
+    "transport_energy_kwh": 66.34517818126442,
+    "relay_energy_kwh": 3.2213630939349573,
+    "transport_sorties": 24,
+    "relay_sorties": 4,
+    "total_sorties": 28
+  },
+  "candidate": {
+    "weighted_soft_delay": 0,
+    "weighted_delivery_seconds": 2914038.1560927066,
+    "makespan": 6763.630877370617,
+    "energy_kwh": 69.56669460383841,
+    "transport_energy_kwh": 66.34517818126442,
+    "relay_energy_kwh": 3.2215164225739925,
+    "transport_sorties": 24,
+    "relay_sorties": 4,
+    "total_sorties": 28
+  },
+  "selected_partitions": {
+    "2": {
+      "id": "P1346_25",
+      "shortage": 8,
+      "resources": 35,
+      "cv": 0.023027944068387096
+    },
+    "3": {
+      "id": "P126_34_5",
+      "shortage": 11,
+      "resources": 38,
+      "cv": 0.2977998780610138
+    },
+    "best_balanced": {
+      "2": {
+        "id": "P1256_34",
+        "shortage": 7,
+        "resources": 34,
+        "cv": 0.18067581996953266
+      },
+      "3": {
+        "id": "P126_34_5",
+        "shortage": 11,
+        "resources": 38,
+        "cv": 0.2977998780610138
+      }
+    }
+  }
+}

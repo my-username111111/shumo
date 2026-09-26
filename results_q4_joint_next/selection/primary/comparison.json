@@ -1,0 +1,53 @@
+{
+  "baseline_objective": {
+    "weighted_soft_delay": 0,
+    "weighted_delivery_seconds": 2911369.1763067786,
+    "makespan": 6761.824258884327,
+    "energy_kwh": 69.56654127519937,
+    "transport_energy_kwh": 66.34517818126442,
+    "relay_energy_kwh": 3.2213630939349573,
+    "transport_sorties": 24,
+    "relay_sorties": 4,
+    "total_sorties": 28
+  },
+  "candidate_objective": {
+    "weighted_soft_delay": 0,
+    "weighted_delivery_seconds": 2913464.6567155095,
+    "makespan": 6761.824258884327,
+    "energy_kwh": 69.56654127519937,
+    "transport_energy_kwh": 66.34517818126442,
+    "relay_energy_kwh": 3.221363093934957,
+    "transport_sorties": 24,
+    "relay_sorties": 4,
+    "total_sorties": 28
+  },
+  "objective_delta": {
+    "makespan": 0.0,
+    "energy_kwh": 0.0,
+    "weighted_delivery_seconds": 2095.4804087309167,
+    "weighted_soft_delay": 0
+  },
+  "baseline_shortage": {
+    "2": 8,
+    "3": 12
+  },
+  "candidate_shortage": {
+    "2": 7,
+    "3": 11
+  },
+  "changed_transport_sorties": [
+    {
+      "id": "T022",
+      "old_start": 2034.1116402352575,
+      "new_start": 2183.7888122874715,
+      "shift": 149.67717205221402,
+      "box_ids": [
+        "S009-FOD-01",
+        "S009-WAT-01"
+      ]
+    }
+  ],
+  "q4_partition_count": 121,
+  "q4_assignment_count": 6776,
+  "independent_q4_validation": "PASS"
+}

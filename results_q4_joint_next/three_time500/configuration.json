@@ -1,0 +1,75 @@
+{
+  "input": "F:\\数学建模2026\\shumo_sync\\results_q3_imported\\selection\\primary\\q3_plan.json",
+  "output": "results_q4_joint_next\\three_time500",
+  "target_shortage": {
+    "2": 8,
+    "3": 11
+  },
+  "atoms": [
+    [
+      "S001",
+      "S011"
+    ],
+    [
+      "S002",
+      "S004",
+      "S008",
+      "S009"
+    ],
+    [
+      "S003",
+      "S005",
+      "S006",
+      "S007",
+      "S015"
+    ],
+    [
+      "S010",
+      "S012",
+      "S013",
+      "S014"
+    ]
+  ],
+  "limits": [
+    {
+      "blocks": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "shortage_total": 8,
+      "resource_total": 35
+    },
+    {
+      "blocks": [
+        [
+          0,
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ]
+      ],
+      "shortage_total": 11,
+      "resource_total": 39
+    }
+  ],
+  "caps": {
+    "soft": 0,
+    "makespan": 7261.824258884327,
+    "weighted": 3111369.1763067786,
+    "energy": 70566541.27519937,
+    "sorties": 4
+  },
+  "seconds": 35.0,
+  "seed": 2613,
+  "fixed_models": false
+}
