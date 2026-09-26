@@ -1,0 +1,83 @@
+{
+  "baseline": "D:\\建模\\shumo\\results_q34_compromise\\selection\\primary\\q3_plan.json",
+  "input": "results_q3_time_guarded\\seeds\\merge_s005.json",
+  "output": "results_q3_time_guarded\\merge_s005_fixed",
+  "data_dir": "D:\\建模\\数据",
+  "mode": "cp",
+  "seconds": 45.0,
+  "seed": 2132,
+  "fixed_models": true,
+  "cv_tolerance": 0.01,
+  "quality_tolerance": 0.01,
+  "baseline_sha256": "d76ca8cee0319385d09c06268877c639d6a9a69a0a67eff047cc1dc160342c06",
+  "input_sha256": "a4d8158f7cb696d621b439a84650d36d31fd0162ec1fae3a7d3a0749a12f28f3",
+  "groups": [
+    [
+      "S001",
+      "S002",
+      "S004",
+      "S008",
+      "S009"
+    ],
+    [
+      "S003",
+      "S005",
+      "S006",
+      "S007",
+      "S015"
+    ],
+    [
+      "S010",
+      "S011",
+      "S012",
+      "S013",
+      "S014"
+    ]
+  ],
+  "limits": [
+    {
+      "blocks": [
+        [
+          0,
+          2
+        ],
+        [
+          1
+        ]
+      ],
+      "resource_need": {
+        "A_aircraft": 4,
+        "B_aircraft": 3,
+        "C_aircraft": 3,
+        "A_batteries": 6,
+        "B_batteries": 5,
+        "C_batteries": 4,
+        "relay_aircraft": 3,
+        "relay_components": 3
+      }
+    },
+    {
+      "blocks": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ]
+      ],
+      "resource_need": {
+        "A_aircraft": 4,
+        "B_aircraft": 4,
+        "C_aircraft": 3,
+        "A_batteries": 6,
+        "B_batteries": 7,
+        "C_batteries": 4,
+        "relay_aircraft": 3,
+        "relay_components": 3
+      }
+    }
+  ]
+}

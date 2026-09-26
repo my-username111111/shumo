@@ -38,6 +38,14 @@ class Q3TimingTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError,'caps'):
             optimize(self.scenario,self.primary,5.,delivery_cap=float('nan'))
 
+    def test_makespan_policy_is_certified_and_optimizes_completion_first(self):
+        plan, _, report = optimize(self.scenario,self.primary,5.,policy='makespan')
+        self.assertEqual(report['lp_stages'][0]['objective'],'makespan')
+        self.assertEqual(report['q3_independent_validation'],'PASS')
+        self.assertEqual(report['q4_independent_validation'],'PASS')
+        self.assertEqual(plan['objective']['weighted_soft_delay'],0)
+        self.assertAlmostEqual(report['lp_stages'][0]['value'],plan['objective']['makespan'],places=3)
+
     def test_protected_partition_does_not_increase_any_resource_type(self):
         from q4_exact import solve
         before=solve(self.scenario,self.primary,json.dumps(self.primary).encode('utf8'))

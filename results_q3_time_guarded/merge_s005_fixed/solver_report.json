@@ -1,0 +1,79 @@
+{
+  "stages": [
+    {
+      "target": "soft",
+      "status": "INFEASIBLE",
+      "value": null,
+      "lower_bound": 0.0,
+      "relative_gap": null
+    }
+  ],
+  "policy": "makespan",
+  "seed": 2132,
+  "scale_seconds": 1,
+  "coverage_max_interval_seconds": 12.0,
+  "stage_budget_seconds": 45.0,
+  "search_workers": 8,
+  "candidate_sites": 3,
+  "route_modes": 23,
+  "session_slots": 18,
+  "q4_constraint": true,
+  "independent_groups": false,
+  "resource_buffer_seconds": 5.0,
+  "objective_caps": {
+    "soft": 0,
+    "makespan": 7444.455885352581,
+    "energy": 70024082.6704564,
+    "weighted": 2968235.757221522,
+    "sorties": 4
+  },
+  "max_partition_shortage": null,
+  "partition_resource_limits": [
+    {
+      "blocks": [
+        [
+          0,
+          2
+        ],
+        [
+          1
+        ]
+      ],
+      "resource_need": {
+        "A_aircraft": 4,
+        "B_aircraft": 3,
+        "C_aircraft": 3,
+        "A_batteries": 6,
+        "B_batteries": 5,
+        "C_batteries": 4,
+        "relay_aircraft": 3,
+        "relay_components": 3
+      }
+    },
+    {
+      "blocks": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ]
+      ],
+      "resource_need": {
+        "A_aircraft": 4,
+        "B_aircraft": 4,
+        "C_aircraft": 3,
+        "A_batteries": 6,
+        "B_batteries": 7,
+        "C_batteries": 4,
+        "relay_aircraft": 3,
+        "relay_components": 3
+      }
+    }
+  ],
+  "elapsed_seconds": 18.0326298000291,
+  "bound_scope": "Finite sites, fixed box groups/visit orders, optional type modes and bounded relay sessions; later bounds conditional on earlier attained caps."
+}

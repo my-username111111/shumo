@@ -1,0 +1,220 @@
+[
+  {
+    "experiment": "cp_no_extra_3pct",
+    "status": "NO_PLAN",
+    "failures": [],
+    "stages": [
+      {
+        "target": "soft",
+        "status": "UNKNOWN",
+        "value": null,
+        "lower_bound": 0.0,
+        "relative_gap": null
+      }
+    ],
+    "objective": null,
+    "polished_status": null
+  },
+  {
+    "experiment": "cp_no_extra_3pct_deep",
+    "status": "NO_PLAN",
+    "failures": [],
+    "stages": [
+      {
+        "target": "soft",
+        "status": "INFEASIBLE",
+        "value": null,
+        "lower_bound": 0.0,
+        "relative_gap": null
+      }
+    ],
+    "objective": null,
+    "polished_status": null
+  },
+  {
+    "experiment": "cp_one_extra",
+    "status": "ACCEPTED",
+    "failures": [],
+    "stages": [
+      {
+        "target": "soft",
+        "status": "OPTIMAL",
+        "value": 0.0,
+        "lower_bound": 0.0,
+        "relative_gap": 0.0
+      },
+      {
+        "target": "makespan",
+        "status": "OPTIMAL",
+        "value": 7161.0,
+        "lower_bound": 7161.0,
+        "relative_gap": 0.0
+      },
+      {
+        "target": "weighted",
+        "status": "FEASIBLE",
+        "value": 2972090.0,
+        "lower_bound": 1691032.0,
+        "relative_gap": 0.4310293429875946
+      },
+      {
+        "target": "energy",
+        "status": "FEASIBLE",
+        "value": 70592452.0,
+        "lower_bound": 67306817.0,
+        "relative_gap": 0.04654371546691706
+      },
+      {
+        "target": "sorties",
+        "status": "OPTIMAL",
+        "value": 4.0,
+        "lower_bound": 4.0,
+        "relative_gap": 0.0
+      }
+    ],
+    "objective": {
+      "weighted_soft_delay": 0,
+      "weighted_delivery_seconds": 2971676.2606098675,
+      "makespan": 7160.905931149839,
+      "energy_kwh": 70.58846798804242,
+      "transport_energy_kwh": 66.91075712102399,
+      "relay_energy_kwh": 3.677710867018437,
+      "transport_sorties": 24,
+      "relay_sorties": 4,
+      "total_sorties": 28
+    },
+    "polished_status": "ACCEPTED"
+  },
+  {
+    "experiment": "cp_shortage_2141",
+    "status": "NO_PLAN",
+    "failures": [],
+    "stages": [
+      {
+        "target": "soft",
+        "status": "INFEASIBLE",
+        "value": null,
+        "lower_bound": 0.0,
+        "relative_gap": null
+      }
+    ],
+    "objective": null,
+    "polished_status": null
+  },
+  {
+    "experiment": "cp_variable_2121",
+    "status": "NO_PLAN",
+    "failures": [],
+    "stages": [
+      {
+        "target": "soft",
+        "status": "UNKNOWN",
+        "value": null,
+        "lower_bound": 0.0,
+        "relative_gap": null
+      }
+    ],
+    "objective": null,
+    "polished_status": null
+  },
+  {
+    "experiment": "cp_variable_2122",
+    "status": "NO_PLAN",
+    "failures": [],
+    "stages": [
+      {
+        "target": "soft",
+        "status": "INFEASIBLE",
+        "value": null,
+        "lower_bound": 0.0,
+        "relative_gap": null
+      }
+    ],
+    "objective": null,
+    "polished_status": null
+  },
+  {
+    "experiment": "lp_baseline",
+    "status": "REJECTED",
+    "failures": [
+      "No makespan improvement"
+    ],
+    "stages": [],
+    "objective": {
+      "weighted_soft_delay": 0,
+      "weighted_delivery_seconds": 2938847.2843777444,
+      "makespan": 7444.45588535258,
+      "energy_kwh": 69.33077492124396,
+      "transport_energy_kwh": 65.50481867026501,
+      "relay_energy_kwh": 3.8259562509789498,
+      "transport_sorties": 24,
+      "relay_sorties": 4,
+      "total_sorties": 28
+    },
+    "polished_status": null
+  },
+  {
+    "experiment": "merge_s005_fixed",
+    "status": "NO_PLAN",
+    "failures": [],
+    "stages": [
+      {
+        "target": "soft",
+        "status": "INFEASIBLE",
+        "value": null,
+        "lower_bound": 0.0,
+        "relative_gap": null
+      }
+    ],
+    "objective": null,
+    "polished_status": null
+  },
+  {
+    "experiment": "merge_s008_fixed",
+    "status": "NO_PLAN",
+    "failures": [],
+    "stages": [
+      {
+        "target": "soft",
+        "status": "INFEASIBLE",
+        "value": null,
+        "lower_bound": 0.0,
+        "relative_gap": null
+      }
+    ],
+    "objective": null,
+    "polished_status": null
+  },
+  {
+    "experiment": "merge_s008_shortage",
+    "status": "NO_PLAN",
+    "failures": [],
+    "stages": [
+      {
+        "target": "soft",
+        "status": "INFEASIBLE",
+        "value": null,
+        "lower_bound": 0.0,
+        "relative_gap": null
+      }
+    ],
+    "objective": null,
+    "polished_status": null
+  },
+  {
+    "experiment": "move_s008_hygiene",
+    "status": "NO_PLAN",
+    "failures": [],
+    "stages": [
+      {
+        "target": "soft",
+        "status": "INFEASIBLE",
+        "value": null,
+        "lower_bound": 0.0,
+        "relative_gap": null
+      }
+    ],
+    "objective": null,
+    "polished_status": null
+  }
+]

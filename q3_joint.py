@@ -174,10 +174,49 @@ def add_partition_capacity_budget(model, group_intervals, stock, group_count, bu
     model.Add(sum(deficits) <= budget)
 
 
+def add_partition_resource_limits(model, group_intervals, stock, group_count, limits):
+    """Protect typed totals for several partitions of the same atomic groups.
+
+    Merged groups reuse resources internally; distinct groups cannot share a
+    resource even when their operating windows do not overlap.
+    """
+    for index, limit in enumerate(limits):
+        blocks = limit['blocks']
+        flat = [g for block in blocks for g in block]
+        if (any(not block for block in blocks) or sorted(flat) != list(range(group_count))):
+            raise ValueError('Resource-limit blocks must partition the Q4 groups')
+        total_capacities, deficits = [], []
+        bounds = limit.get('resource_need', {key: group_count*n for key,n in stock.items()})
+        for key, bound in bounds.items():
+            if key not in stock or not isinstance(bound, int) or bound < 0:
+                raise ValueError('Invalid typed partition resource limit')
+            capacities = []
+            for j, block in enumerate(blocks):
+                rows = [r for g in block for r in group_intervals[g, key]]
+                capacity = model.NewIntVar(0, stock[key], f'protected_{index}_{j}_{key}')
+                if rows:
+                    model.AddCumulative(rows, [1]*len(rows), capacity)
+                else:
+                    model.Add(capacity == 0)
+                capacities.append(capacity)
+            model.Add(sum(capacities) <= bound)
+            total_capacities.extend(capacities)
+            deficit = model.NewIntVar(0, group_count*stock[key], f'protected_deficit_{index}_{key}')
+            model.AddMaxEquality(deficit, [0, sum(capacities)-stock[key]])
+            deficits.append(deficit)
+        for field, expression in (('shortage_total', sum(deficits)),
+                                  ('resource_total', sum(total_capacities))):
+            if field in limit:
+                if not isinstance(limit[field], int) or limit[field] < 0 or set(bounds) != set(stock):
+                    raise ValueError('Aggregate resource limits require all types and integer bounds')
+                model.Add(expression <= limit[field])
+
+
 def solve(s, source, geometry, seconds=20., seed=2026, slots=2,
           variable_models=True, policy='timely', q4_groups=None,
           independent_groups=False, resource_buffer=0., objective_caps=None,
-          group_resource_caps=None, max_partition_shortage=None):
+          group_resource_caps=None, max_partition_shortage=None,
+          partition_resource_limits=None):
     if not isfinite(seconds) or seconds<=0 or not isinstance(slots,int) or slots<1:
         raise ValueError('Positive solver time and positive integer relay slots required')
     if policy not in {'timely','energy','makespan'}:
@@ -382,6 +421,9 @@ def solve(s, source, geometry, seconds=20., seed=2026, slots=2,
     if max_partition_shortage is not None:
         add_partition_capacity_budget(model, group_intervals, stock, len(groups),
                                       max_partition_shortage)
+    if partition_resource_limits:
+        add_partition_resource_limits(model, group_intervals, stock, len(groups),
+                                      partition_resource_limits)
     for i,row in enumerate(source['sorties']):
         model.AddHint(starts[i],up(row.get('start',0.)))
         for k,option in enumerate(modes[i]):
@@ -444,6 +486,7 @@ def solve(s, source, geometry, seconds=20., seed=2026, slots=2,
         q4_constraint=bool(q4_groups),independent_groups=independent_groups,
         resource_buffer_seconds=resource_buffer,objective_caps=objective_caps or {},
         max_partition_shortage=max_partition_shortage,
+        partition_resource_limits=partition_resource_limits or [],
         elapsed_seconds=perf_counter()-start_clock,
         bound_scope='Finite sites, fixed box groups/visit orders, optional type modes and bounded relay sessions; later bounds conditional on earlier attained caps.')
     if group_caps:

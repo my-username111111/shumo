@@ -1,0 +1,12 @@
+{
+  "status": "NO_PLAN",
+  "stages": [
+    {
+      "target": "soft",
+      "status": "INFEASIBLE",
+      "value": null,
+      "lower_bound": 0.0,
+      "relative_gap": null
+    }
+  ]
+}

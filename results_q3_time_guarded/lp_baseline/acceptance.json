@@ -1,0 +1,344 @@
+{
+  "status": "REJECTED",
+  "failures": [
+    "No makespan improvement"
+  ],
+  "objective": {
+    "weighted_soft_delay": 0,
+    "weighted_delivery_seconds": 2938847.2843777444,
+    "makespan": 7444.45588535258,
+    "energy_kwh": 69.33077492124396,
+    "transport_energy_kwh": 65.50481867026501,
+    "relay_energy_kwh": 3.8259562509789498,
+    "transport_sorties": 24,
+    "relay_sorties": 4,
+    "total_sorties": 28
+  },
+  "partitions": {
+    "2": {
+      "id": "P1256_34",
+      "resource_need": {
+        "A_aircraft": 4,
+        "B_aircraft": 3,
+        "C_aircraft": 3,
+        "A_batteries": 6,
+        "B_batteries": 5,
+        "C_batteries": 4,
+        "relay_aircraft": 3,
+        "relay_components": 3
+      },
+      "shortage_total": 4,
+      "resource_total": 31,
+      "workload_cv": 0.18278601886340506,
+      "groups": [
+        {
+          "id": "G1",
+          "component_indices": [
+            1,
+            2,
+            5,
+            6
+          ],
+          "zones": [
+            "S001",
+            "S002",
+            "S004",
+            "S008",
+            "S009",
+            "S010",
+            "S011",
+            "S012",
+            "S013",
+            "S014"
+          ],
+          "transport_tasks": [
+            "T001",
+            "T002_2",
+            "T003",
+            "T004",
+            "T005",
+            "T006",
+            "T008",
+            "T011",
+            "T012",
+            "T013",
+            "T014_2",
+            "T015",
+            "T021",
+            "T022"
+          ],
+          "relay_tasks": [
+            "R003",
+            "R004"
+          ],
+          "boxes": 52,
+          "cargo_kg": 489.0,
+          "transport_sorties": 14,
+          "relay_sorties": 2,
+          "work_seconds": 33532.5874981337,
+          "energy_kwh": 42.157406865605225,
+          "resource_need": {
+            "A_aircraft": 1,
+            "B_aircraft": 2,
+            "C_aircraft": 2,
+            "A_batteries": 2,
+            "B_batteries": 4,
+            "C_batteries": 3,
+            "relay_aircraft": 2,
+            "relay_components": 2
+          },
+          "horizon_seconds": 9078.773277607346,
+          "resource_occupancy_ratio": {
+            "A_aircraft": 0.5821783583278308,
+            "B_aircraft": 0.6548140674413523,
+            "C_aircraft": 0.40815635739911216,
+            "A_batteries": 0.4788764417802611,
+            "B_batteries": 0.6392360958785779,
+            "C_batteries": 0.5697127094543056,
+            "relay_aircraft": 0.5257421299105531,
+            "relay_components": 0.6050957950220139
+          }
+        },
+        {
+          "id": "G2",
+          "component_indices": [
+            3,
+            4
+          ],
+          "zones": [
+            "S003",
+            "S005",
+            "S006",
+            "S007",
+            "S015"
+          ],
+          "transport_tasks": [
+            "T007",
+            "T007_HARD",
+            "T007_SOFT",
+            "T009",
+            "T010_2",
+            "T014_1",
+            "T016",
+            "T018",
+            "T019_1",
+            "T020"
+          ],
+          "relay_tasks": [
+            "R001",
+            "R002"
+          ],
+          "boxes": 28,
+          "cargo_kg": 269.0,
+          "transport_sorties": 10,
+          "relay_sorties": 2,
+          "work_seconds": 23168.43358826153,
+          "energy_kwh": 27.173368055638733,
+          "resource_need": {
+            "A_aircraft": 3,
+            "B_aircraft": 1,
+            "C_aircraft": 1,
+            "A_batteries": 4,
+            "B_batteries": 1,
+            "C_batteries": 1,
+            "relay_aircraft": 1,
+            "relay_components": 1
+          },
+          "horizon_seconds": 9324.985226007511,
+          "resource_occupancy_ratio": {
+            "A_aircraft": 0.454358698028766,
+            "B_aircraft": 0.16289831110673242,
+            "C_aircraft": 0.441895173062153,
+            "A_batteries": 0.5539709240375853,
+            "B_batteries": 0.319969024726039,
+            "C_batteries": 0.8720228422280473,
+            "relay_aircraft": 0.5810281424587374,
+            "relay_components": 0.6789829205343503
+          }
+        }
+      ]
+    },
+    "3": {
+      "id": "P12_34_56",
+      "resource_need": {
+        "A_aircraft": 4,
+        "B_aircraft": 4,
+        "C_aircraft": 3,
+        "A_batteries": 6,
+        "B_batteries": 7,
+        "C_batteries": 4,
+        "relay_aircraft": 3,
+        "relay_components": 3
+      },
+      "shortage_total": 7,
+      "resource_total": 34,
+      "workload_cv": 0.2765450370598209,
+      "groups": [
+        {
+          "id": "G1",
+          "component_indices": [
+            1,
+            2
+          ],
+          "zones": [
+            "S001",
+            "S002",
+            "S004",
+            "S008",
+            "S009"
+          ],
+          "transport_tasks": [
+            "T001",
+            "T003",
+            "T004",
+            "T005",
+            "T012",
+            "T013",
+            "T014_2",
+            "T021",
+            "T022"
+          ],
+          "relay_tasks": [
+            "R003"
+          ],
+          "boxes": 37,
+          "cargo_kg": 364.0,
+          "transport_sorties": 9,
+          "relay_sorties": 1,
+          "work_seconds": 21992.824073086857,
+          "energy_kwh": 31.57119391949999,
+          "resource_need": {
+            "A_aircraft": 1,
+            "B_aircraft": 1,
+            "C_aircraft": 2,
+            "A_batteries": 2,
+            "B_batteries": 2,
+            "C_batteries": 3,
+            "relay_aircraft": 1,
+            "relay_components": 1
+          },
+          "horizon_seconds": 9078.773277607346,
+          "resource_occupancy_ratio": {
+            "A_aircraft": 0.5821783583278308,
+            "B_aircraft": 0.4247360766773366,
+            "C_aircraft": 0.40815635739911216,
+            "A_batteries": 0.4788764417802611,
+            "B_batteries": 0.42310288446821237,
+            "C_batteries": 0.5697127094543056,
+            "relay_aircraft": 0.6322614268385385,
+            "relay_components": 0.7252572400231101
+          }
+        },
+        {
+          "id": "G2",
+          "component_indices": [
+            3,
+            4
+          ],
+          "zones": [
+            "S003",
+            "S005",
+            "S006",
+            "S007",
+            "S015"
+          ],
+          "transport_tasks": [
+            "T007",
+            "T007_HARD",
+            "T007_SOFT",
+            "T009",
+            "T010_2",
+            "T014_1",
+            "T016",
+            "T018",
+            "T019_1",
+            "T020"
+          ],
+          "relay_tasks": [
+            "R001",
+            "R002"
+          ],
+          "boxes": 28,
+          "cargo_kg": 269.0,
+          "transport_sorties": 10,
+          "relay_sorties": 2,
+          "work_seconds": 23168.43358826153,
+          "energy_kwh": 27.173368055638733,
+          "resource_need": {
+            "A_aircraft": 3,
+            "B_aircraft": 1,
+            "C_aircraft": 1,
+            "A_batteries": 4,
+            "B_batteries": 1,
+            "C_batteries": 1,
+            "relay_aircraft": 1,
+            "relay_components": 1
+          },
+          "horizon_seconds": 9324.985226007511,
+          "resource_occupancy_ratio": {
+            "A_aircraft": 0.454358698028766,
+            "B_aircraft": 0.16289831110673242,
+            "C_aircraft": 0.441895173062153,
+            "A_batteries": 0.5539709240375853,
+            "B_batteries": 0.319969024726039,
+            "C_batteries": 0.8720228422280473,
+            "relay_aircraft": 0.5810281424587374,
+            "relay_components": 0.6789829205343503
+          }
+        },
+        {
+          "id": "G3",
+          "component_indices": [
+            5,
+            6
+          ],
+          "zones": [
+            "S010",
+            "S011",
+            "S012",
+            "S013",
+            "S014"
+          ],
+          "transport_tasks": [
+            "T002_2",
+            "T006",
+            "T008",
+            "T011",
+            "T015"
+          ],
+          "relay_tasks": [
+            "R004"
+          ],
+          "boxes": 15,
+          "cargo_kg": 125.0,
+          "transport_sorties": 5,
+          "relay_sorties": 1,
+          "work_seconds": 11539.763425046844,
+          "energy_kwh": 10.586212946105238,
+          "resource_need": {
+            "A_aircraft": 0,
+            "B_aircraft": 2,
+            "C_aircraft": 0,
+            "A_batteries": 0,
+            "B_batteries": 4,
+            "C_batteries": 0,
+            "relay_aircraft": 1,
+            "relay_components": 1
+          },
+          "horizon_seconds": 5831.667165848992,
+          "resource_occupancy_ratio": {
+            "A_aircraft": 0.0,
+            "B_aircraft": 0.6888025450636536,
+            "C_aircraft": 0.0,
+            "A_batteries": 0.0,
+            "B_batteries": 0.665821950108654,
+            "C_batteries": 0.0,
+            "relay_aircraft": 0.6526485386089231,
+            "relay_components": 0.7549486095753287
+          }
+        }
+      ]
+    }
+  },
+  "saved_seconds": 1.8189894035458565e-12
+}

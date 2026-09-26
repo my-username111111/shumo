@@ -4,7 +4,7 @@ The selected routes, drone/battery identities, relay sites, and original
 relay coverage obligations are frozen. Only launch times and relay service
 durations change. Independent recertification may choose a different relay
 over an overlap; the actual relation and Q4 are then rebuilt and audited.
-The LP optimizes weighted delivery, makespan, then relay service energy in
+The LP supports weighted-delivery, makespan or relay-energy-first
 lexicographic order. Optimality applies to this fixed-structure LP only.
 Optional Q4 resource chains can also be frozen to preserve a group peak bound.
 """
@@ -46,7 +46,7 @@ def optimize(s: Scenario, original: dict, buffer: float,
     if any(x is not None and (not isfinite(x) or x < 0)
            for x in (delivery_cap, makespan_cap)):
         raise ValueError('Objective caps must be finite and nonnegative')
-    if policy not in ('timely', 'energy'):
+    if policy not in ('timely', 'energy', 'makespan'):
         raise ValueError('Unknown timing objective policy')
     verify_fixed_q3(s, original)
     solver = pywraplp.Solver.CreateSolver('GLOP')
@@ -192,6 +192,8 @@ def optimize(s: Scenario, original: dict, buffer: float,
         objectives['weighted_soft_delay'] = solver.Sum(soft_terms)
     order = (['weighted_start', 'makespan', 'relay_service_seconds'] if policy == 'timely'
              else ['relay_service_seconds', 'weighted_start', 'makespan'])
+    if policy == 'makespan':
+        order = ['makespan', 'weighted_start', 'relay_service_seconds']
     if allow_soft_delay:
         order.insert(0, 'weighted_soft_delay')
     for index, name in enumerate(order):
@@ -320,7 +322,7 @@ def main() -> None:
     parser.add_argument('--input',type=Path,default=ROOT/'results_q3_q4_resilience/selection/primary/q3_plan.json')
     parser.add_argument('--output',type=Path,default=ROOT/'results_q3_q4_next/timing_lp')
     parser.add_argument('--buffer',type=float,default=5.)
-    parser.add_argument('--policy',choices=['timely','energy'],default='timely')
+    parser.add_argument('--policy',choices=['timely','energy','makespan'],default='timely')
     parser.add_argument('--delivery-cap',type=float)
     parser.add_argument('--makespan-cap',type=float)
     parser.add_argument('--allow-soft-delay',action='store_true')
