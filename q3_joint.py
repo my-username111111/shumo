@@ -25,6 +25,17 @@ def up(x):
     return ceil(x - 1e-8)
 
 
+def relay_hint_matches(row, site, group):
+    """Do not hint a saved relay into another group's optional session.
+
+    A hint never relaxes a constraint. Missing historical group metadata is
+    left unrestricted; known ownership must be compatible with this group.
+    """
+    return (abs(row['lon']-site.lon)<1e-9 and abs(row['lat']-site.lat)<1e-9
+            and abs(row['agl']-site.agl)<1e-9
+            and set(row.get('service_zones', [])) <= set(group))
+
+
 def data_signature(s):
     h = hashlib.sha256(s.dem.values.tobytes())
     h.update(repr((s.radio, s.frequency_mhz, s.obstruction_db, s.fade_db,
@@ -384,7 +395,7 @@ def solve(s, source, geometry, seconds=20., seed=2026, slots=2,
     for session in sessions:
         site=sites[session['site']]
         options=[r for r in source.get('relay_sorties',[]) if r['id'] not in used_hints and
-                 abs(r['lon']-site.lon)<1e-9 and abs(r['lat']-site.lat)<1e-9 and abs(r['agl']-site.agl)<1e-9]
+                 relay_hint_matches(r, site, session['group'])]
         old=min(options,key=lambda r:r['start']) if options else None
         model.AddHint(session['active'],int(old is not None))
         if old:

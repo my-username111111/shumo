@@ -1,6 +1,7 @@
 """Regression checks for the fixed-Q3 fourth-question computation."""
 
 import copy
+from hashlib import sha256
 import json
 from pathlib import Path
 import unittest
@@ -33,8 +34,12 @@ class Q4ExactTests(unittest.TestCase):
 
     def test_complete_four_partition_result_and_replay(self):
         result = load_and_solve(self.scenario, PLAN)
+        # Git archives contain LF while Windows checkouts may use CRLF.
+        # Validate the raw input fingerprint separately from fixture content.
         self.assertEqual(result["components"]["input_sha256"],
-                         "DF5DBF182CEA219A3EB173D86CE411ACD339AD7B9ED93BB1B4D0F5BC23F0F181")
+                         sha256(PLAN.read_bytes()).hexdigest().upper())
+        self.assertEqual(result["components"]["canonical_plan_sha256"],
+                         "374f80f59b32b667c146192e6b9caca447ab640b058ad6d2e263922de6c5bdbc")
         self.assertEqual([p["id"] for p in result["partitions"]], ["P1", "P2", "P3", "P4"])
         self.assertEqual([p["resource_total"] for p in result["partitions"]], [33, 35, 29, 35])
         self.assertEqual([p["shortage_total"] for p in result["partitions"]], [6, 8, 2, 8])

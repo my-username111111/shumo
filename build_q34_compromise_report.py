@@ -1,0 +1,113 @@
+"""Build the delivery note from frozen machine-readable results."""
+import json
+from pathlib import Path
+from search_q34_compromise import ROOT,read,dump_json
+
+def main():
+    work=ROOT/'results_q34_compromise';summary=read(work/'selection/primary/delivery_summary.json')
+    o=summary['objective'];q=summary['q4'];comm=summary['communication']
+    old=read(ROOT/'results_q3_q4_balance/selection/two_zero_shortage/q3_plan.json')['objective']
+    trials=[];candidates=[]
+    for path in sorted(work.glob('*/solver_report.json')):
+        r=read(path);trials.append(dict(case=path.parent.name,stages=r['stages'],
+            accepted=(path.parent/'summary.json').exists(),bound_scope=r['bound_scope']))
+    dump_json(work/'experiment_inventory.json',trials)
+    for path in sorted(work.glob('*/summary.json')):
+        r=read(path);entry=dict(case=path.parent.name,**r['objective'])
+        for k in (2,3):
+            options=[p for p in r['partitions'] if p['group_count']==k and p['workload_cv']<=.3]
+            p=min(options,key=lambda p:(p['shortage_total'],p['workload_cv'],p['resource_total'])) if options else None
+            entry[f'q4_{k}']=p
+        candidates.append(entry)
+    dump_json(work/'candidate_comparison.json',candidates)
+    text=f'''# 第三问运输通信与第四问分区折中优化交付说明
+
+本轮从 GitHub 提交 c01be7730f5b5ed70e731d5c6c88bcd6fc9c2cd5 出发，在独立工作副本中完成实际搜索、时间精修与独立验收。推荐第三问为24个运输架次加4个中继架次，80箱均交付一次，31个硬时限箱全部按时，普通物资加权软延误为0。两组和三组均固定这同一份第三问，工作量不再集中到一个大组和极小的单区组。
+
+结果目录为 `results_q34_compromise/selection/primary`。原始题目数据始终只读；原先论文未在本轮修改。为便于对照，仓库旧默认方案保留，本轮结果使用独立交付入口并随本次提交同步。
+
+## 本轮结果与取舍
+
+| 指标 | 网站上一版零缺口主方案 | 本轮推荐 |
+|---|---:|---:|
+| 运输加中继架次 | 27+4 | 24+4 |
+| 联合完工时间/s | {old['makespan']:.3f} | {o['makespan']:.3f} |
+| 总能耗/kWh | {old['energy_kwh']:.6f} | {o['energy_kwh']:.6f} |
+| 加权交付时间/优先级·s | {old['weighted_delivery_seconds']:.3f} | {o['weighted_delivery_seconds']:.3f} |
+| 加权软延误/优先级·s | {old['weighted_soft_delay']:.3f} | 0 |
+| 两组工作量CV | 0.049135 | {q['2']['cv']:.6f} |
+| 两组库存缺口/件 | 0 | {q['2']['shortage']} |
+| 同一Q3三组工作量CV | 0.511285 | {q['3']['cv']:.6f} |
+| 同一Q3三组库存缺口/件 | 6 | {q['3']['shortage']} |
+
+完工提前{old['makespan']-o['makespan']:.3f}秒（{(1-o['makespan']/old['makespan'])*100:.2f}%），节能{old['energy_kwh']-o['energy_kwh']:.6f} kWh（{(1-o['energy_kwh']/old['energy_kwh'])*100:.2f}%），加权交付改善{(1-o['weighted_delivery_seconds']/old['weighted_delivery_seconds'])*100:.2f}%。代价是两组需要增配4件、三组需要增配7件，两组均衡也不如上一版接近对半。因此这是恢复运输服务质量后的折中，不能宣称全面支配上一版。
+
+另一对照是原26架次零软延误节能方案：6888.018秒、71.907249 kWh，两组CV为0.957040、三组为1.205788。本轮保持零软延误，能耗更低，但完工晚556.438秒；换取的是两组和三组均可避免极端工作量分配。旧26架次方案已经过网站本轮修复后的几何重新认证，未直接信任旧通信PASS。
+
+## 如何选取平衡
+
+先要求运输和通信可行、硬时限满足，优先寻找零软延误；随后比较完工、能耗、加权交付。第四问分别对K=2、3要求工作量CV不超过0.30，再依次最小化逐类型库存缺口、CV和资源总件数。0.30是本轮公开的选择偏好，不是题目新增硬约束，完整分区表仍保留所有方案。
+
+CV按运输和中继从准备至返航的累计工作量计算，不按地图面积、货箱数或仅运输工作量替代。两组CV≤0.30对应每组至少35%的工作量；三组这一阈值也排除了只有几个百分点工作量的小组。主方案三组实际最小占比超过20%。若更强调均分，可在全部分区中选择CV更低但需要更多设备的方案。
+
+## 模型与实际优化步骤
+
+1. 读取最新方案、货箱、机型、两阶段充电模型及DEM。保存原提交和每次输入指纹；货箱不能拆分，每箱必须恰好运输一次。
+2. 保留区域间可分组关系，先枚举区域内可行的航线合并。将S004的医疗与其他物资合批，将S005两条小载货任务合并，将S012、S013食品分别放回对应服务区的已有任务。每个候选都重算载重、体积、航段爬升、水平能耗、投送、SOC与时限，不直接相加旧航线成本。
+3. 初步得到23个运输任务，但独立复核发现仅S001三箱饮用水发生约535秒延误。直接增加送水架次、把水挪入已满载任务等尝试未得到更好的已认证解，相关有限模型失败和限时未找到均保存日志。
+4. 定位早期C型机竞争。把S007的医疗和首批水、食品和第二箱水分成两条小机型可行任务；把该区卫生箱放入同属西部任务块的S003大型机航线。这样释放一架C型机的早期时段，让S001、S002饮用水及时送达。最终24个运输任务、4个中继任务。
+5. CP-SAT同时选择运输开始时刻、实体机和电池，中继建链和服务窗口、实体中继机及能源组件；保留真实全局库存。资源占用包含充电或周转并增加5秒接续缓冲。按类型限制组内峰值之和，从而把第四问配置代价反馈给第三问，而非拿额外设备偷偷放宽第三问。
+6. 比较不同组块组合。最终三组候选将S001和北部任务放在一起、S006和西部任务放在一起、S011和东部任务放在一起。在零软延误下，有限模型得到7451秒的整数完工候选，第三问仍只用题目原有实体库存。
+7. 冻结路线、机型、实体资源顺序及中继覆盖义务，用连续时间LP精修。除保留三组全部资源链外，同时保留两组的运输机、电池链；精修后再次检查两组和三组八维资源向量均未增大，防止改善第三问却破坏第四问。
+8. 重新计算连续通信区间，固定最终实际中继关系。第四问通过运输与中继耦合构造6个不可拆块，精确枚举31种两组和90种三组分区。每组最低资源数由区间峰值和最大匹配交叉证明；独立最大流、阈值扫描及实物资源回放重新核对。
+
+中继候选仍使用原三处已用悬停点，额外损耗1 dB。没有修改题目能耗口径、库存、时限或地形数据来获得改善。
+
+## 固定同一第三问的分区
+'''
+    for k in ('2','3'):
+        v=q[k];text+=f"\n### {k}组方案 {v['partition']}\n\n"
+        for g in v['groups']:
+            text+=f"- {g['id']}：{', '.join(g['zones'])}；{g['boxes']}箱，工作量占{g['share']*100:.2f}%。\n"
+        text+=f"\nCV={v['cv']:.6f}，资源总数{v['resource_total']}件，逐类型缺口合计{v['shortage']}件。\n\n| 资源 | 需求 | 缺口 |\n|---|---:|---:|\n"
+        labels=dict(A_aircraft='A型运输机',B_aircraft='B型运输机',C_aircraft='C型运输机',A_batteries='A型电池',B_batteries='B型电池',C_batteries='C型电池',relay_aircraft='中继无人机',relay_components='中继能源组件')
+        for key,label in labels.items():text+=f"| {label} | {v['need'][key]} | {v['deficit'][key]} |\n"
+    text+=f'''
+第三问统一调度仍可使用原库存完成。第四问一旦要求组间独立运行，就失去跨组复用机会，所以最低配置可能超过库存；应补齐表中对应类型设备，不能用富余能源组件抵扣不同类型的缺口。
+
+## 验收与适用边界
+
+- 80箱各交付一次，31个硬时限箱全部按时，最小硬时限余量{summary['minimum_hard_margin_seconds']:.3f}秒；加权软延误为0。
+- 全部{comm['total_transport_seconds']:.3f}秒运输飞行与投送过程连续认证，直连{comm['direct_seconds']:.3f}秒、中继{comm['relay_seconds']:.3f}秒，中断0秒、未认证0秒。使用修复近共线判定后的geometry_version=2，额外1 dB损耗后的最小保守链路余量{comm['minimum_certified_margin_db']:.6f} dB。
+- 第三问实体运输机、电池、中继机的最小接续约5.0001秒；四个能源组件未重复使用。不能把这一缓冲自动解释为第四问重新编号后每条最低设备链都有5秒；各链实际余量见Q4证书。
+- 独立验收121种分区、6776条资源分配。67项全量回归测试通过。测试中的历史输入指纹原来固定了Windows换行字节，本轮分离原文件字节指纹和规范化JSON内容指纹，保留对内容变更的检查。
+- 搜索不是第三问全局最优证明。最后离散模型的软延误、完工阶段给出了限定结构下的界；加权交付和能耗阶段仍有间隙，不能跨模型引用为全局界。LP只对固定结构连续时间子问题最优。第四问的资源数及CV筛选后的选择，对这份冻结第三问的完整分区集精确有效。
+- 1 dB额外损耗及5秒接续为已验证情景，未宣称能抵抗任意天气、随机延误或额外无线容量限制。
+
+## 文件与复现
+
+主计划SHA256：`{summary['plan_sha256']}`。
+
+- `selection/primary/q3_plan.json`：最终运输、设备、逐箱交付、中继、连续通信证书。
+- `selection/primary/delivery_summary.json`和`balanced_partitions.json`：同一第三问的两组、三组正式选择。通用Q4报告内默认按库存件数排序的“推荐”属于另一政策，应以本轮CV筛选文件为准。
+- `selection/primary/transport_sorties.csv`、`relay_sorties.csv`、`box_deliveries.csv`、`communication_intervals.csv`：可读明细。
+- `selection/primary/q4`：全部分区、峰值及匹配证书、最优接续链、设备编号和独立核验。
+- `candidate_comparison.json`：包括零延误、少量延误节能、不同资源缺口方案的完整对照。
+- `experiment_inventory.json`：各次搜索的阶段、界及是否通过；`regression_tests.json`为测试汇总。
+- `repack24_s7_energy`另存同完工时间的微幅节能方案，能耗69.319160 kWh，加权交付2946069.945，比主方案晚7222.660优先级·秒，仅省0.011615 kWh，因此主方案选择交付较早者。
+
+新增脚本为`build_q34_compromise_seeds.py`、`search_q34_compromise.py`、`polish_q34_compromise.py`、`deliver_q34_compromise.py`和本报告生成脚本。`q3_joint.py`修正了中继初始提示跨组错配；这只改善求解提示，不改变物理可行域。新增相应回归测试。公共物理模型和独立认证核未修改。
+
+使用已有保存的离散候选可重做连续精修与交付：
+
+```powershell
+.\\.venv\\Scripts\\python.exe polish_q34_compromise.py --input results_q34_compromise/repack24_s7/q3_plan.json --output results_q34_compromise/replay_timely --policy timely --makespan-cap 7451 --delivery-cap 3000000
+.\\.venv\\Scripts\\python.exe deliver_q34_compromise.py --input results_q34_compromise/replay_timely/q3_plan.json --name replay
+```
+
+数据目录可通过`--data-dir`显式指定。运行原候选搜索需OR-Tools 9.15.6755；八线程限时搜索未承诺逐次复现相同启发式路径，应以保存的完整计划和独立验收为交付依据。最终离散搜索使用seed=2091、每阶段50秒、12秒覆盖预处理区间、1秒整数排程；最终通信认证再按事件和区间下界细化，不以12秒采样代替连续认证。
+'''
+    (ROOT/'Q3_Q4_折中优化交付说明.md').write_text(text,encoding='utf8')
+    print('Wrote delivery report; trials',len(trials),'accepted snapshots',len(candidates))
+
+if __name__=='__main__':main()

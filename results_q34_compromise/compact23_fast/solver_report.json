@@ -1,0 +1,31 @@
+{
+  "stages": [
+    {
+      "target": "soft",
+      "status": "UNKNOWN",
+      "value": null,
+      "lower_bound": 19260.0,
+      "relative_gap": null
+    }
+  ],
+  "policy": "makespan",
+  "seed": 2070,
+  "scale_seconds": 1,
+  "coverage_max_interval_seconds": 12,
+  "stage_budget_seconds": 35.0,
+  "search_workers": 8,
+  "candidate_sites": 3,
+  "route_modes": 47,
+  "session_slots": 18,
+  "q4_constraint": true,
+  "independent_groups": false,
+  "resource_buffer_seconds": 5.0,
+  "objective_caps": {
+    "soft": 20000.0,
+    "makespan": 7800.0,
+    "energy": 73000000.0
+  },
+  "max_partition_shortage": 8,
+  "elapsed_seconds": 35.64831620035693,
+  "bound_scope": "Finite sites, fixed box groups/visit orders, optional type modes and bounded relay sessions; later bounds conditional on earlier attained caps."
+}

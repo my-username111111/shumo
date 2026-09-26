@@ -1,0 +1,39 @@
+{
+  "input": "results_q34_compromise\\repack24_fixed\\q3_plan.json",
+  "name": "repack24_s3",
+  "groups": "two",
+  "shortage": 3,
+  "soft": 0,
+  "makespan": 8000.0,
+  "energy": 73.0,
+  "seconds": 60.0,
+  "seed": 2087,
+  "interval": 12,
+  "fixed_models": true,
+  "policy": "makespan",
+  "slots": 2,
+  "data_dir": "C:\\Users\\user\\Desktop\\建模\\第二十三届中国研究生数学建模竞赛 - 中文题目\\中文题目\\D题\\数据",
+  "groups_file": "results_q34_compromise\\seeds\\repack_groups2.json",
+  "source_sha256": "12a46edaf46071289edbbe23141640aa535b4f3929a82810cd538bb94ff61e53",
+  "q4_groups": [
+    [
+      "S001",
+      "S003",
+      "S005",
+      "S006",
+      "S007",
+      "S015"
+    ],
+    [
+      "S002",
+      "S004",
+      "S008",
+      "S009",
+      "S010",
+      "S011",
+      "S012",
+      "S013",
+      "S014"
+    ]
+  ]
+}
