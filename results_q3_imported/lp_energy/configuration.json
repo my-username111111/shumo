@@ -1,0 +1,12 @@
+{
+  "mode": "lp",
+  "input": "results_q3_imported\\baseline\\q3_plan.json",
+  "baseline": "D:\\建模\\shumo\\results_q3_imported\\baseline\\q3_plan.json",
+  "output": "results_q3_imported\\lp_energy",
+  "policy": "energy",
+  "seconds": 60.0,
+  "seed": 2401,
+  "fixed_models": false,
+  "discrete_time_slack": 5.0,
+  "input_sha256": "ab067e3d2212a05186c06f7aec18023800650bc5f6adccfa05e360add4471c16"
+}

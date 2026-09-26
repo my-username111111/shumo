@@ -1,0 +1,93 @@
+test_edge_corner_and_reversal (test_q1_upgrade.GeometryTests.test_edge_corner_and_reversal) ... ok
+test_partial_nodata_must_fail (test_q1_upgrade.GeometryTests.test_partial_nodata_must_fail) ... ok
+test_random_supercover_independent_rectangles (test_q1_upgrade.GeometryTests.test_random_supercover_independent_rectangles) ... ok
+test_both_dps_against_exhaustive_partitions (test_q1_upgrade.OptimizationTests.test_both_dps_against_exhaustive_partitions) ... ok
+test_corrupted_export_is_rejected (test_q1_upgrade.OptimizationTests.test_corrupted_export_is_rejected) ... ok
+test_critical_thresholds_against_bruteforce (test_q1_upgrade.OptimizationTests.test_critical_thresholds_against_bruteforce) ... ok
+test_fake_aircraft_and_battery_are_rejected (test_q1_upgrade.OptimizationTests.test_fake_aircraft_and_battery_are_rejected) ... ok
+test_global_budget_is_not_per_zone_budget (test_q1_upgrade.OptimizationTests.test_global_budget_is_not_per_zone_budget) ... ok
+test_duplicates_invalid_parameters_and_cargo (test_q1_upgrade.PhysicsTests.test_duplicates_invalid_parameters_and_cargo) ... ok
+test_hand_calculated_energy_time (test_q1_upgrade.PhysicsTests.test_hand_calculated_energy_time) ... ok
+test_invalid_reserve_and_infeasible_empty (test_q1_upgrade.PhysicsTests.test_invalid_reserve_and_infeasible_empty) ... ok
+test_replay_does_not_call_shared_physics (test_q1_upgrade.PhysicsTests.test_replay_does_not_call_shared_physics) ... ok
+test_baseline_can_be_exported_with_alternatives (test_q2_verifier.Q2VerifierFaults.test_baseline_can_be_exported_with_alternatives) ... D:\��ģ\shumo\transport_check.py:44: ResourceWarning: unclosed file <_io.BufferedReader name='D:\\��ģ\\����\\���˻�Ӧ�����������������\\���������������.xlsx'>
+  return sorted(zip(xx[valid].tolist(), yy[valid].tolist()))
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_duplicate_sortie_id (test_q2_verifier.Q2VerifierFaults.test_duplicate_sortie_id) ... ok
+test_incremental_repair_preserves_each_box_and_replays (test_q2_verifier.Q2VerifierFaults.test_incremental_repair_preserves_each_box_and_replays) ... ok
+test_joint_resource_beam_is_fully_verifiable (test_q2_verifier.Q2VerifierFaults.test_joint_resource_beam_is_fully_verifiable) ... ok
+test_mismatched_aircraft_type (test_q2_verifier.Q2VerifierFaults.test_mismatched_aircraft_type) ... ok
+test_mismatched_battery_type (test_q2_verifier.Q2VerifierFaults.test_mismatched_battery_type) ... ok
+test_relocate_candidates_do_not_duplicate_boxes (test_q2_verifier.Q2VerifierFaults.test_relocate_candidates_do_not_duplicate_boxes) ... ok
+test_soft_target_competes_with_later_hard_deadline (test_q2_verifier.Q2VerifierFaults.test_soft_target_competes_with_later_hard_deadline) ... ok
+test_tampered_objective (test_q2_verifier.Q2VerifierFaults.test_tampered_objective) ... ok
+test_tampered_route_phase (test_q2_verifier.Q2VerifierFaults.test_tampered_route_phase) ... ok
+test_two_stage_alns_keeps_complete_verified_plans (test_q2_verifier.Q2VerifierFaults.test_two_stage_alns_keeps_complete_verified_plans) ... ok
+test_unknown_aircraft (test_q2_verifier.Q2VerifierFaults.test_unknown_aircraft) ... ok
+test_unknown_battery (test_q2_verifier.Q2VerifierFaults.test_unknown_battery) ... ok
+test_wrong_delivery_source (test_q2_verifier.Q2VerifierFaults.test_wrong_delivery_source) ... ok
+test_historical_unknown_group_does_not_invent_ownership (test_q34_compromise.RelayHintOwnershipTests.test_historical_unknown_group_does_not_invent_ownership) ... ok
+test_same_location_wrong_group_is_not_a_compatible_hint (test_q34_compromise.RelayHintOwnershipTests.test_same_location_wrong_group_is_not_a_compatible_hint) ... ok
+test_crossing_partition_refinement_preserves_every_membership (test_q3_imported.ImportedPlanTests.test_crossing_partition_refinement_preserves_every_membership) ... ok
+test_nested_partition_does_not_split_groups_unnecessarily (test_q3_imported.ImportedPlanTests.test_nested_partition_does_not_split_groups_unnecessarily) ... ok
+test_closed_cell_boundary_is_not_omitted (test_q3_joint.GeometryTests.test_closed_cell_boundary_is_not_omitted) ... ok
+test_disconnected_backhaul_cannot_certify_access (test_q3_joint.GeometryTests.test_disconnected_backhaul_cannot_certify_access) ... ok
+test_failure_witness_cannot_use_another_groups_relay (test_q3_joint.GeometryTests.test_failure_witness_cannot_use_another_groups_relay) ... ok
+test_invalid_interval_is_rejected_before_subdivision (test_q3_joint.GeometryTests.test_invalid_interval_is_rejected_before_subdivision) ... ok
+test_near_collinear_sweep_checks_lower_envelope (test_q3_joint.GeometryTests.test_near_collinear_sweep_checks_lower_envelope) ... ok
+test_nodata_and_vertical_low_endpoint (test_q3_joint.GeometryTests.test_nodata_and_vertical_low_endpoint) ... ok
+test_subsecond_relay_gap_is_unknown (test_q3_joint.GeometryTests.test_subsecond_relay_gap_is_unknown) ... ok
+test_swept_interior_obstacle_between_clear_endpoint_rays (test_q3_joint.GeometryTests.test_swept_interior_obstacle_between_clear_endpoint_rays) ... ok
+test_accept_inherits_and_records_extra_loss (test_q3_joint.PhysicalTests.test_accept_inherits_and_records_extra_loss) ... ok
+test_archive_filters_dominated_records (test_q3_joint.PhysicalTests.test_archive_filters_dominated_records) ... ok
+test_cache_keys_include_radio_parameters (test_q3_joint.PhysicalTests.test_cache_keys_include_radio_parameters) ... ok
+test_component_overlap_rejected (test_q3_joint.PhysicalTests.test_component_overlap_rejected) ... ok
+test_declared_buffer_cannot_exceed_actual_handoffs (test_q3_joint.PhysicalTests.test_declared_buffer_cannot_exceed_actual_handoffs) ... ok
+test_final_relay_return_in_objective (test_q3_joint.PhysicalTests.test_final_relay_return_in_objective) ... ok
+test_independent_replay_does_not_call_optimizer_links (test_q3_joint.PhysicalTests.test_independent_replay_does_not_call_optimizer_links) ... ok
+test_q4_adapter_preserves_actual_service_relations (test_q3_joint.PhysicalTests.test_q4_adapter_preserves_actual_service_relations) ... ok
+test_q4_rejects_mismatched_communication_scenario (test_q3_joint.PhysicalTests.test_q4_rejects_mismatched_communication_scenario) ... ok
+test_radial_interval_certificate_cannot_exceed_obstructed_point (test_q3_joint.PhysicalTests.test_radial_interval_certificate_cannot_exceed_obstructed_point) ... ok
+test_relaxed_bounds_do_not_exceed_feasible_plan (test_q3_joint.PhysicalTests.test_relaxed_bounds_do_not_exceed_feasible_plan) ... ok
+test_robust_failure_requires_a_point_counterexample (test_q3_joint.PhysicalTests.test_robust_failure_requires_a_point_counterexample) ... ok
+test_unknown_resource_and_tampered_times_rejected (test_q3_joint.PhysicalTests.test_unknown_resource_and_tampered_times_rejected) ... ok
+test_window_polish_preserves_transport_and_does_not_worsen_objectives (test_q3_joint.PhysicalTests.test_window_polish_preserves_transport_and_does_not_worsen_objectives) ... ok
+test_battery_charge_release_increases_capacity (test_q3_q4_balance.PartitionCapacityTests.test_battery_charge_release_increases_capacity) ... ok
+test_invalid_budget_rejected_before_scenario_access (test_q3_q4_balance.PartitionCapacityTests.test_invalid_budget_rejected_before_scenario_access) ... ok
+test_nonoverlapping_groups_still_require_separate_stock (test_q3_q4_balance.PartitionCapacityTests.test_nonoverlapping_groups_still_require_separate_stock) ... ok
+test_reuse_within_group_counts_peak_not_task_count (test_q3_q4_balance.PartitionCapacityTests.test_reuse_within_group_counts_peak_not_task_count) ... ok
+test_surplus_of_one_type_cannot_offset_another_type (test_q3_q4_balance.PartitionCapacityTests.test_surplus_of_one_type_cannot_offset_another_type) ... ok
+test_faster_candidate_cannot_hide_changed_resource_type_or_balance (test_q3_time_guarded.AcceptanceTests.test_faster_candidate_cannot_hide_changed_resource_type_or_balance) ... ok
+test_battery_charge_can_break_otherwise_valid_aircraft_bound (test_q3_time_guarded.MultiPartitionLimitsTests.test_battery_charge_can_break_otherwise_valid_aircraft_bound) ... ok
+test_merged_group_reuses_resource_but_three_groups_cannot (test_q3_time_guarded.MultiPartitionLimitsTests.test_merged_group_reuses_resource_but_three_groups_cannot) ... ok
+test_overlapping_or_missing_blocks_rejected (test_q3_time_guarded.MultiPartitionLimitsTests.test_overlapping_or_missing_blocks_rejected) ... ok
+test_shortage_budget_counts_types_separately (test_q3_time_guarded.MultiPartitionLimitsTests.test_shortage_budget_counts_types_separately) ... ok
+test_buffer_five_replays_q3_and_q4 (test_q3_timing.Q3TimingTests.test_buffer_five_replays_q3_and_q4) ... ok
+test_invalid_cap_is_rejected (test_q3_timing.Q3TimingTests.test_invalid_cap_is_rejected) ... ok
+test_makespan_policy_is_certified_and_optimizes_completion_first (test_q3_timing.Q3TimingTests.test_makespan_policy_is_certified_and_optimizes_completion_first) ... ok
+test_protected_partition_does_not_increase_any_resource_type (test_q3_timing.Q3TimingTests.test_protected_partition_does_not_increase_any_resource_type) ... ok
+test_bad_communication_reference_is_rejected (test_q4_exact.Q4ExactTests.test_bad_communication_reference_is_rejected) ... ok
+test_complete_four_partition_result_and_replay (test_q4_exact.Q4ExactTests.test_complete_four_partition_result_and_replay) ... ok
+test_half_open_peak_and_bottleneck_matching (test_q4_exact.Q4ExactTests.test_half_open_peak_and_bottleneck_matching) ... ok
+test_misleading_summary_rejected (test_q4_exact.Q4ExactTests.test_misleading_summary_rejected) ... ok
+test_missing_partition_and_corrupt_mapping_rejected (test_q4_exact.Q4ExactTests.test_missing_partition_and_corrupt_mapping_rejected) ... ok
+test_q3_changes_invalidate_q4_fingerprint (test_q4_exact.Q4ExactTests.test_q3_changes_invalidate_q4_fingerprint) ... ok
+test_tampered_optimality_fields_are_rejected (test_q4_exact.Q4ExactTests.test_tampered_optimality_fields_are_rejected) ... ok
+test_unknown_physical_resource_is_rejected (test_q4_exact.Q4ExactTests.test_unknown_physical_resource_is_rejected) ... ok
+{
+  "q3": {
+    "makespan": 123.0
+  },
+  "q4_recommended": null,
+  "validation": {
+    "status": "PASS"
+  },
+  "output": "C:\\Users\\USER\\AppData\\Local\\Temp\\tmp133vsjmg\\out"
+}
+test_certified_tail_preserves_saved_relations_and_uses_exact_q4 (test_run_delivery.EntryTests.test_certified_tail_preserves_saved_relations_and_uses_exact_q4) ... ok
+
+----------------------------------------------------------------------
+Ran 75 tests in 49.488s
+
+OK

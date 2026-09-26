@@ -1,0 +1,11 @@
+{
+  "mode": "audit",
+  "input": "D:\\WeChat\\xwechat_files\\wxid_gzoeemvh3jzw22_00a9\\msg\\file\\2026-09\\q3_plan.json",
+  "baseline": "D:\\建模\\shumo\\results_q3_imported\\baseline\\q3_plan.json",
+  "output": "results_q3_imported\\baseline",
+  "policy": "makespan",
+  "seconds": 60.0,
+  "seed": 2401,
+  "fixed_models": false,
+  "input_sha256": "ab067e3d2212a05186c06f7aec18023800650bc5f6adccfa05e360add4471c16"
+}

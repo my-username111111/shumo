@@ -1,0 +1,75 @@
+{
+  "mode": "cp",
+  "input": "results_q3_imported\\seeds\\split_s007_hyg_01.json",
+  "baseline": "D:\\建模\\shumo\\results_q3_imported\\baseline\\q3_plan.json",
+  "output": "results_q3_imported\\split_tail_fixed",
+  "policy": "makespan",
+  "seconds": 45.0,
+  "seed": 2401,
+  "fixed_models": true,
+  "input_sha256": "c88082752ce531c2d48bee0d140ec361300d9820851ebfbc64fae89ce136413a",
+  "groups": [
+    [
+      "S001",
+      "S011"
+    ],
+    [
+      "S002",
+      "S004",
+      "S008",
+      "S009"
+    ],
+    [
+      "S003",
+      "S005",
+      "S006",
+      "S007",
+      "S015"
+    ],
+    [
+      "S010",
+      "S012",
+      "S013",
+      "S014"
+    ]
+  ],
+  "limits": [
+    {
+      "blocks": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "shortage_total": 8,
+      "resource_total": 35
+    },
+    {
+      "blocks": [
+        [
+          0,
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ]
+      ],
+      "shortage_total": 12,
+      "resource_total": 39
+    }
+  ],
+  "objective_caps": {
+    "soft": 0,
+    "makespan": 6761.824258884326,
+    "weighted": 2928867.6869733846,
+    "energy": 69564889.5573266,
+    "sorties": 4
+  }
+}

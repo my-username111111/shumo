@@ -1,0 +1,10 @@
+test_both_partition_budgets_and_membership_are_checked (test_q3_imported.ImportedPlanTests.test_both_partition_budgets_and_membership_are_checked) ... ok
+test_crossing_partition_refinement_preserves_every_membership (test_q3_imported.ImportedPlanTests.test_crossing_partition_refinement_preserves_every_membership) ... ok
+test_energy_trade_requires_explicit_tolerance (test_q3_imported.ImportedPlanTests.test_energy_trade_requires_explicit_tolerance) ... ok
+test_nested_partition_does_not_split_groups_unnecessarily (test_q3_imported.ImportedPlanTests.test_nested_partition_does_not_split_groups_unnecessarily) ... ok
+test_time_guard_rejects_discrete_rounding_regression (test_q3_imported.ImportedPlanTests.test_time_guard_rejects_discrete_rounding_regression) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.001s
+
+OK

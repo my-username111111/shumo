@@ -1,0 +1,22 @@
+[
+  {
+    "name": "split_s007_hyg_01",
+    "transport_energy": 67.89430494562009,
+    "tail_duration": 2435.8095208576483
+  },
+  {
+    "name": "split_s003_hyg_01",
+    "transport_energy": 68.81970913244689,
+    "tail_duration": 2621.630877370617
+  },
+  {
+    "name": "split_s003_fod_01",
+    "transport_energy": 68.74164952517854,
+    "tail_duration": 2621.630877370617
+  },
+  {
+    "name": "split_s003_wat_04",
+    "transport_energy": 68.56194581248539,
+    "tail_duration": 2621.630877370617
+  }
+]
