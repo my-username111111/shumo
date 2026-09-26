@@ -1,0 +1,464 @@
+[
+  {
+    "case": "compact23_deep",
+    "stages": [
+      {
+        "target": "soft",
+        "status": "OPTIMAL",
+        "value": 19260.0,
+        "lower_bound": 19260.0,
+        "relative_gap": 0.0
+      },
+      {
+        "target": "weighted",
+        "status": "OPTIMAL",
+        "value": 3183998.0,
+        "lower_bound": 3183998.0,
+        "relative_gap": 0.0
+      },
+      {
+        "target": "makespan",
+        "status": "OPTIMAL",
+        "value": 7996.0,
+        "lower_bound": 7996.0,
+        "relative_gap": 0.0
+      },
+      {
+        "target": "energy",
+        "status": "OPTIMAL",
+        "value": 68728418.0,
+        "lower_bound": 68728418.0,
+        "relative_gap": 0.0
+      },
+      {
+        "target": "sorties",
+        "status": "OPTIMAL",
+        "value": 5.0,
+        "lower_bound": 5.0,
+        "relative_gap": 0.0
+      }
+    ],
+    "accepted": true,
+    "bound_scope": "Finite sites, fixed box groups/visit orders, optional type modes and bounded relay sessions; later bounds conditional on earlier attained caps."
+  },
+  {
+    "case": "compact23_fast",
+    "stages": [
+      {
+        "target": "soft",
+        "status": "UNKNOWN",
+        "value": null,
+        "lower_bound": 19260.0,
+        "relative_gap": null
+      }
+    ],
+    "accepted": false,
+    "bound_scope": "Finite sites, fixed box groups/visit orders, optional type modes and bounded relay sessions; later bounds conditional on earlier attained caps."
+  },
+  {
+    "case": "compact23_s3",
+    "stages": [
+      {
+        "target": "soft",
+        "status": "OPTIMAL",
+        "value": 19260.0,
+        "lower_bound": 19260.0,
+        "relative_gap": 0.0
+      },
+      {
+        "target": "makespan",
+        "status": "OPTIMAL",
+        "value": 8044.0,
+        "lower_bound": 8044.0,
+        "relative_gap": 0.0
+      },
+      {
+        "target": "weighted",
+        "status": "FEASIBLE",
+        "value": 3162596.0,
+        "lower_bound": 2815440.0,
+        "relative_gap": 0.10976931609348775
+      },
+      {
+        "target": "energy",
+        "status": "FEASIBLE",
+        "value": 70410117.0,
+        "lower_bound": 65655963.0,
+        "relative_gap": 0.0675208933398023
+      },
+      {
+        "target": "sorties",
+        "status": "OPTIMAL",
+        "value": 5.0,
+        "lower_bound": 5.0,
+        "relative_gap": 0.0
+      }
+    ],
+    "accepted": true,
+    "bound_scope": "Finite sites, fixed box groups/visit orders, optional type modes and bounded relay sessions; later bounds conditional on earlier attained caps."
+  },
+  {
+    "case": "compact23_soft100",
+    "stages": [
+      {
+        "target": "soft",
+        "status": "UNKNOWN",
+        "value": null,
+        "lower_bound": 11064.0,
+        "relative_gap": null
+      }
+    ],
+    "accepted": false,
+    "bound_scope": "Finite sites, fixed box groups/visit orders, optional type modes and bounded relay sessions; later bounds conditional on earlier attained caps."
+  },
+  {
+    "case": "compact23_three",
+    "stages": [
+      {
+        "target": "soft",
+        "status": "INFEASIBLE",
+        "value": null,
+        "lower_bound": 0.0,
+        "relative_gap": null
+      }
+    ],
+    "accepted": false,
+    "bound_scope": "Finite sites, fixed box groups/visit orders, optional type modes and bounded relay sessions; later bounds conditional on earlier attained caps."
+  },
+  {
+    "case": "compact23_two",
+    "stages": [
+      {
+        "target": "soft",
+        "status": "UNKNOWN",
+        "value": null,
+        "lower_bound": 13128.0,
+        "relative_gap": null
+      }
+    ],
+    "accepted": false,
+    "bound_scope": "Finite sites, fixed box groups/visit orders, optional type modes and bounded relay sessions; later bounds conditional on earlier attained caps."
+  },
+  {
+    "case": "compact24_soft50",
+    "stages": [
+      {
+        "target": "soft",
+        "status": "INFEASIBLE",
+        "value": null,
+        "lower_bound": 0.0,
+        "relative_gap": null
+      }
+    ],
+    "accepted": false,
+    "bound_scope": "Finite sites, fixed box groups/visit orders, optional type modes and bounded relay sessions; later bounds conditional on earlier attained caps."
+  },
+  {
+    "case": "compact24_two",
+    "stages": [
+      {
+        "target": "soft",
+        "status": "INFEASIBLE",
+        "value": null,
+        "lower_bound": 0.0,
+        "relative_gap": null
+      }
+    ],
+    "accepted": false,
+    "bound_scope": "Finite sites, fixed box groups/visit orders, optional type modes and bounded relay sessions; later bounds conditional on earlier attained caps."
+  },
+  {
+    "case": "q2regional25_deep",
+    "stages": [
+      {
+        "target": "soft",
+        "status": "UNKNOWN",
+        "value": null,
+        "lower_bound": 0.0,
+        "relative_gap": null
+      }
+    ],
+    "accepted": false,
+    "bound_scope": "Finite sites, fixed box groups/visit orders, optional type modes and bounded relay sessions; later bounds conditional on earlier attained caps."
+  },
+  {
+    "case": "q2regional25_zero",
+    "stages": [
+      {
+        "target": "soft",
+        "status": "UNKNOWN",
+        "value": null,
+        "lower_bound": 0.0,
+        "relative_gap": null
+      }
+    ],
+    "accepted": false,
+    "bound_scope": "Finite sites, fixed box groups/visit orders, optional type modes and bounded relay sessions; later bounds conditional on earlier attained caps."
+  },
+  {
+    "case": "repack24_A_zero",
+    "stages": [
+      {
+        "target": "soft",
+        "status": "UNKNOWN",
+        "value": null,
+        "lower_bound": 0.0,
+        "relative_gap": null
+      }
+    ],
+    "accepted": false,
+    "bound_scope": "Finite sites, fixed box groups/visit orders, optional type modes and bounded relay sessions; later bounds conditional on earlier attained caps."
+  },
+  {
+    "case": "repack24_fast",
+    "stages": [
+      {
+        "target": "soft",
+        "status": "INFEASIBLE",
+        "value": null,
+        "lower_bound": 0.0,
+        "relative_gap": null
+      }
+    ],
+    "accepted": false,
+    "bound_scope": "Finite sites, fixed box groups/visit orders, optional type modes and bounded relay sessions; later bounds conditional on earlier attained caps."
+  },
+  {
+    "case": "repack24_fixed",
+    "stages": [
+      {
+        "target": "soft",
+        "status": "OPTIMAL",
+        "value": 0.0,
+        "lower_bound": 0.0,
+        "relative_gap": 0.0
+      },
+      {
+        "target": "weighted",
+        "status": "FEASIBLE",
+        "value": 3046772.0,
+        "lower_bound": 1769758.0,
+        "relative_gap": 0.41913671256004714
+      },
+      {
+        "target": "makespan",
+        "status": "FEASIBLE",
+        "value": 8279.0,
+        "lower_bound": 6781.0,
+        "relative_gap": 0.18093972702017153
+      },
+      {
+        "target": "energy",
+        "status": "FEASIBLE",
+        "value": 69677950.0,
+        "lower_bound": 67914428.0,
+        "relative_gap": 0.025309613730025066
+      },
+      {
+        "target": "sorties",
+        "status": "OPTIMAL",
+        "value": 4.0,
+        "lower_bound": 4.0,
+        "relative_gap": 0.0
+      }
+    ],
+    "accepted": true,
+    "bound_scope": "Finite sites, fixed box groups/visit orders, optional type modes and bounded relay sessions; later bounds conditional on earlier attained caps."
+  },
+  {
+    "case": "repack24_makespan",
+    "stages": [
+      {
+        "target": "soft",
+        "status": "OPTIMAL",
+        "value": 0.0,
+        "lower_bound": 0.0,
+        "relative_gap": 0.0
+      },
+      {
+        "target": "makespan",
+        "status": "FEASIBLE",
+        "value": 7975.0,
+        "lower_bound": 6777.0,
+        "relative_gap": 0.15021943573667712
+      },
+      {
+        "target": "weighted",
+        "status": "FEASIBLE",
+        "value": 3061668.0,
+        "lower_bound": 1694040.0,
+        "relative_gap": 0.44669376300761543
+      },
+      {
+        "target": "energy",
+        "status": "FEASIBLE",
+        "value": 69599002.0,
+        "lower_bound": 67875444.0,
+        "relative_gap": 0.02476411946251758
+      },
+      {
+        "target": "sorties",
+        "status": "OPTIMAL",
+        "value": 4.0,
+        "lower_bound": 4.0,
+        "relative_gap": 0.0
+      }
+    ],
+    "accepted": true,
+    "bound_scope": "Finite sites, fixed box groups/visit orders, optional type modes and bounded relay sessions; later bounds conditional on earlier attained caps."
+  },
+  {
+    "case": "repack24_s3",
+    "stages": [
+      {
+        "target": "soft",
+        "status": "INFEASIBLE",
+        "value": null,
+        "lower_bound": 0.0,
+        "relative_gap": null
+      }
+    ],
+    "accepted": false,
+    "bound_scope": "Finite sites, fixed box groups/visit orders, optional type modes and bounded relay sessions; later bounds conditional on earlier attained caps."
+  },
+  {
+    "case": "repack24_s7",
+    "stages": [
+      {
+        "target": "soft",
+        "status": "OPTIMAL",
+        "value": 0.0,
+        "lower_bound": 0.0,
+        "relative_gap": 0.0
+      },
+      {
+        "target": "makespan",
+        "status": "OPTIMAL",
+        "value": 7451.0,
+        "lower_bound": 7451.0,
+        "relative_gap": 0.0
+      },
+      {
+        "target": "weighted",
+        "status": "FEASIBLE",
+        "value": 2939900.0,
+        "lower_bound": 1760858.0,
+        "relative_gap": 0.4010483349773802
+      },
+      {
+        "target": "energy",
+        "status": "FEASIBLE",
+        "value": 69336760.0,
+        "lower_bound": 68597158.0,
+        "relative_gap": 0.010666809351922414
+      },
+      {
+        "target": "sorties",
+        "status": "OPTIMAL",
+        "value": 4.0,
+        "lower_bound": 4.0,
+        "relative_gap": 0.0
+      }
+    ],
+    "accepted": true,
+    "bound_scope": "Finite sites, fixed box groups/visit orders, optional type modes and bounded relay sessions; later bounds conditional on earlier attained caps."
+  },
+  {
+    "case": "repack24_two",
+    "stages": [
+      {
+        "target": "soft",
+        "status": "INFEASIBLE",
+        "value": null,
+        "lower_bound": 0.0,
+        "relative_gap": null
+      }
+    ],
+    "accepted": false,
+    "bound_scope": "Finite sites, fixed box groups/visit orders, optional type modes and bounded relay sessions; later bounds conditional on earlier attained caps."
+  },
+  {
+    "case": "repack24_warm",
+    "stages": [
+      {
+        "target": "soft",
+        "status": "UNKNOWN",
+        "value": null,
+        "lower_bound": 0.0,
+        "relative_gap": null
+      }
+    ],
+    "accepted": false,
+    "bound_scope": "Finite sites, fixed box groups/visit orders, optional type modes and bounded relay sessions; later bounds conditional on earlier attained caps."
+  },
+  {
+    "case": "repack24_zero",
+    "stages": [
+      {
+        "target": "soft",
+        "status": "INFEASIBLE",
+        "value": null,
+        "lower_bound": 0.0,
+        "relative_gap": null
+      }
+    ],
+    "accepted": false,
+    "bound_scope": "Finite sites, fixed box groups/visit orders, optional type modes and bounded relay sessions; later bounds conditional on earlier attained caps."
+  },
+  {
+    "case": "two_s4_zero",
+    "stages": [
+      {
+        "target": "soft",
+        "status": "INFEASIBLE",
+        "value": null,
+        "lower_bound": 0.0,
+        "relative_gap": null
+      }
+    ],
+    "accepted": false,
+    "bound_scope": "Finite sites, fixed box groups/visit orders, optional type modes and bounded relay sessions; later bounds conditional on earlier attained caps."
+  },
+  {
+    "case": "two_s8_zero",
+    "stages": [
+      {
+        "target": "soft",
+        "status": "INFEASIBLE",
+        "value": null,
+        "lower_bound": 0.0,
+        "relative_gap": null
+      }
+    ],
+    "accepted": false,
+    "bound_scope": "Finite sites, fixed box groups/visit orders, optional type modes and bounded relay sessions; later bounds conditional on earlier attained caps."
+  },
+  {
+    "case": "water24_zero",
+    "stages": [
+      {
+        "target": "soft",
+        "status": "INFEASIBLE",
+        "value": null,
+        "lower_bound": 0.0,
+        "relative_gap": null
+      }
+    ],
+    "accepted": false,
+    "bound_scope": "Finite sites, fixed box groups/visit orders, optional type modes and bounded relay sessions; later bounds conditional on earlier attained caps."
+  },
+  {
+    "case": "water25_zero",
+    "stages": [
+      {
+        "target": "soft",
+        "status": "INFEASIBLE",
+        "value": null,
+        "lower_bound": 0.0,
+        "relative_gap": null
+      }
+    ],
+    "accepted": false,
+    "bound_scope": "Finite sites, fixed box groups/visit orders, optional type modes and bounded relay sessions; later bounds conditional on earlier attained caps."
+  }
+]

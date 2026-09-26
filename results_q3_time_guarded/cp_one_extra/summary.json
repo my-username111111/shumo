@@ -1,0 +1,6615 @@
+{
+  "objective": {
+    "weighted_soft_delay": 0,
+    "weighted_delivery_seconds": 2971676.2606098675,
+    "makespan": 7160.905931149839,
+    "energy_kwh": 70.58846798804242,
+    "transport_energy_kwh": 66.91075712102399,
+    "relay_energy_kwh": 3.677710867018437,
+    "transport_sorties": 24,
+    "relay_sorties": 4,
+    "total_sorties": 28
+  },
+  "communication": {
+    "direct_seconds": 15740.052471322053,
+    "relay_seconds": 17486.073125356004,
+    "total_transport_seconds": 33226.12559667806,
+    "relay_share": 0.5262748157162284,
+    "unknown_seconds": 0,
+    "outage_seconds": 0.0,
+    "minimum_certified_margin_db": 0.05058481752191746
+  },
+  "components": [
+    [
+      "S001"
+    ],
+    [
+      "S002",
+      "S004",
+      "S008",
+      "S009"
+    ],
+    [
+      "S003",
+      "S005",
+      "S007",
+      "S015"
+    ],
+    [
+      "S006"
+    ],
+    [
+      "S010",
+      "S012",
+      "S013",
+      "S014"
+    ],
+    [
+      "S011"
+    ]
+  ],
+  "partitions": [
+    {
+      "id": "P12345_6",
+      "group_count": 2,
+      "shortage_total": 2,
+      "resource_total": 28,
+      "workload_cv": 0.9575928877488298,
+      "resource_need": {
+        "A_aircraft": 4,
+        "B_aircraft": 3,
+        "C_aircraft": 2,
+        "A_batteries": 5,
+        "B_batteries": 5,
+        "C_batteries": 4,
+        "relay_aircraft": 2,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 0,
+        "B_aircraft": 1,
+        "C_aircraft": 0,
+        "A_batteries": 0,
+        "B_batteries": 1,
+        "C_batteries": 0,
+        "relay_aircraft": 0,
+        "relay_components": 0
+      },
+      "shares": [
+        0.9787964438744148,
+        0.02120355612558518
+      ],
+      "zones": [
+        [
+          "S001",
+          "S002",
+          "S003",
+          "S004",
+          "S005",
+          "S006",
+          "S007",
+          "S008",
+          "S009",
+          "S010",
+          "S012",
+          "S013",
+          "S014",
+          "S015"
+        ],
+        [
+          "S011"
+        ]
+      ]
+    },
+    {
+      "id": "P12346_5",
+      "group_count": 2,
+      "shortage_total": 7,
+      "resource_total": 33,
+      "workload_cv": 0.6226318151292991,
+      "resource_need": {
+        "A_aircraft": 4,
+        "B_aircraft": 4,
+        "C_aircraft": 2,
+        "A_batteries": 5,
+        "B_batteries": 8,
+        "C_batteries": 4,
+        "relay_aircraft": 3,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 0,
+        "B_aircraft": 2,
+        "C_aircraft": 0,
+        "A_batteries": 0,
+        "B_batteries": 4,
+        "C_batteries": 0,
+        "relay_aircraft": 1,
+        "relay_components": 0
+      },
+      "shares": [
+        0.8113159075646496,
+        0.18868409243535042
+      ],
+      "zones": [
+        [
+          "S001",
+          "S002",
+          "S003",
+          "S004",
+          "S005",
+          "S006",
+          "S007",
+          "S008",
+          "S009",
+          "S011",
+          "S015"
+        ],
+        [
+          "S010",
+          "S012",
+          "S013",
+          "S014"
+        ]
+      ]
+    },
+    {
+      "id": "P1234_56",
+      "group_count": 2,
+      "shortage_total": 6,
+      "resource_total": 32,
+      "workload_cv": 0.5802247028781288,
+      "resource_need": {
+        "A_aircraft": 4,
+        "B_aircraft": 4,
+        "C_aircraft": 2,
+        "A_batteries": 5,
+        "B_batteries": 7,
+        "C_batteries": 4,
+        "relay_aircraft": 3,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 0,
+        "B_aircraft": 2,
+        "C_aircraft": 0,
+        "A_batteries": 0,
+        "B_batteries": 3,
+        "C_batteries": 0,
+        "relay_aircraft": 1,
+        "relay_components": 0
+      },
+      "shares": [
+        0.7901123514390643,
+        0.2098876485609356
+      ],
+      "zones": [
+        [
+          "S001",
+          "S002",
+          "S003",
+          "S004",
+          "S005",
+          "S006",
+          "S007",
+          "S008",
+          "S009",
+          "S015"
+        ],
+        [
+          "S010",
+          "S011",
+          "S012",
+          "S013",
+          "S014"
+        ]
+      ]
+    },
+    {
+      "id": "P12356_4",
+      "group_count": 2,
+      "shortage_total": 3,
+      "resource_total": 30,
+      "workload_cv": 0.9020038044322141,
+      "resource_need": {
+        "A_aircraft": 5,
+        "B_aircraft": 2,
+        "C_aircraft": 3,
+        "A_batteries": 6,
+        "B_batteries": 4,
+        "C_batteries": 5,
+        "relay_aircraft": 2,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 1,
+        "B_aircraft": 0,
+        "C_aircraft": 1,
+        "A_batteries": 0,
+        "B_batteries": 0,
+        "C_batteries": 1,
+        "relay_aircraft": 0,
+        "relay_components": 0
+      },
+      "shares": [
+        0.951001902216107,
+        0.04899809778389301
+      ],
+      "zones": [
+        [
+          "S001",
+          "S002",
+          "S003",
+          "S004",
+          "S005",
+          "S007",
+          "S008",
+          "S009",
+          "S010",
+          "S011",
+          "S012",
+          "S013",
+          "S014",
+          "S015"
+        ],
+        [
+          "S006"
+        ]
+      ]
+    },
+    {
+      "id": "P1235_46",
+      "group_count": 2,
+      "shortage_total": 5,
+      "resource_total": 32,
+      "workload_cv": 0.8595966921810436,
+      "resource_need": {
+        "A_aircraft": 5,
+        "B_aircraft": 3,
+        "C_aircraft": 3,
+        "A_batteries": 6,
+        "B_batteries": 5,
+        "C_batteries": 5,
+        "relay_aircraft": 2,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 1,
+        "B_aircraft": 1,
+        "C_aircraft": 1,
+        "A_batteries": 0,
+        "B_batteries": 1,
+        "C_batteries": 1,
+        "relay_aircraft": 0,
+        "relay_components": 0
+      },
+      "shares": [
+        0.9297983460905218,
+        0.07020165390947819
+      ],
+      "zones": [
+        [
+          "S001",
+          "S002",
+          "S003",
+          "S004",
+          "S005",
+          "S007",
+          "S008",
+          "S009",
+          "S010",
+          "S012",
+          "S013",
+          "S014",
+          "S015"
+        ],
+        [
+          "S006",
+          "S011"
+        ]
+      ]
+    },
+    {
+      "id": "P1236_45",
+      "group_count": 2,
+      "shortage_total": 10,
+      "resource_total": 37,
+      "workload_cv": 0.5246356195615131,
+      "resource_need": {
+        "A_aircraft": 5,
+        "B_aircraft": 4,
+        "C_aircraft": 3,
+        "A_batteries": 6,
+        "B_batteries": 8,
+        "C_batteries": 5,
+        "relay_aircraft": 3,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 1,
+        "B_aircraft": 2,
+        "C_aircraft": 1,
+        "A_batteries": 0,
+        "B_batteries": 4,
+        "C_batteries": 1,
+        "relay_aircraft": 1,
+        "relay_components": 0
+      },
+      "shares": [
+        0.7623178097807566,
+        0.23768219021924347
+      ],
+      "zones": [
+        [
+          "S001",
+          "S002",
+          "S003",
+          "S004",
+          "S005",
+          "S007",
+          "S008",
+          "S009",
+          "S011",
+          "S015"
+        ],
+        [
+          "S006",
+          "S010",
+          "S012",
+          "S013",
+          "S014"
+        ]
+      ]
+    },
+    {
+      "id": "P123_456",
+      "group_count": 2,
+      "shortage_total": 9,
+      "resource_total": 36,
+      "workload_cv": 0.48222850731034267,
+      "resource_need": {
+        "A_aircraft": 5,
+        "B_aircraft": 4,
+        "C_aircraft": 3,
+        "A_batteries": 6,
+        "B_batteries": 7,
+        "C_batteries": 5,
+        "relay_aircraft": 3,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 1,
+        "B_aircraft": 2,
+        "C_aircraft": 1,
+        "A_batteries": 0,
+        "B_batteries": 3,
+        "C_batteries": 1,
+        "relay_aircraft": 1,
+        "relay_components": 0
+      },
+      "shares": [
+        0.7411142536551714,
+        0.25888574634482864
+      ],
+      "zones": [
+        [
+          "S001",
+          "S002",
+          "S003",
+          "S004",
+          "S005",
+          "S007",
+          "S008",
+          "S009",
+          "S015"
+        ],
+        [
+          "S006",
+          "S010",
+          "S011",
+          "S012",
+          "S013",
+          "S014"
+        ]
+      ]
+    },
+    {
+      "id": "P12456_3",
+      "group_count": 2,
+      "shortage_total": 8,
+      "resource_total": 35,
+      "workload_cv": 0.2876732706688131,
+      "resource_need": {
+        "A_aircraft": 6,
+        "B_aircraft": 3,
+        "C_aircraft": 3,
+        "A_batteries": 7,
+        "B_batteries": 5,
+        "C_batteries": 5,
+        "relay_aircraft": 3,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 2,
+        "B_aircraft": 1,
+        "C_aircraft": 1,
+        "A_batteries": 1,
+        "B_batteries": 1,
+        "C_batteries": 1,
+        "relay_aircraft": 1,
+        "relay_components": 0
+      },
+      "shares": [
+        0.6438366353344065,
+        0.3561633646655934
+      ],
+      "zones": [
+        [
+          "S001",
+          "S002",
+          "S004",
+          "S006",
+          "S008",
+          "S009",
+          "S010",
+          "S011",
+          "S012",
+          "S013",
+          "S014"
+        ],
+        [
+          "S003",
+          "S005",
+          "S007",
+          "S015"
+        ]
+      ]
+    },
+    {
+      "id": "P1245_36",
+      "group_count": 2,
+      "shortage_total": 9,
+      "resource_total": 36,
+      "workload_cv": 0.24526615841764268,
+      "resource_need": {
+        "A_aircraft": 6,
+        "B_aircraft": 3,
+        "C_aircraft": 3,
+        "A_batteries": 7,
+        "B_batteries": 6,
+        "C_batteries": 5,
+        "relay_aircraft": 3,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 2,
+        "B_aircraft": 1,
+        "C_aircraft": 1,
+        "A_batteries": 1,
+        "B_batteries": 2,
+        "C_batteries": 1,
+        "relay_aircraft": 1,
+        "relay_components": 0
+      },
+      "shares": [
+        0.6226330792088214,
+        0.3773669207911787
+      ],
+      "zones": [
+        [
+          "S001",
+          "S002",
+          "S004",
+          "S006",
+          "S008",
+          "S009",
+          "S010",
+          "S012",
+          "S013",
+          "S014"
+        ],
+        [
+          "S003",
+          "S005",
+          "S007",
+          "S011",
+          "S015"
+        ]
+      ]
+    },
+    {
+      "id": "P1246_35",
+      "group_count": 2,
+      "shortage_total": 11,
+      "resource_total": 38,
+      "workload_cv": 0.08969491420188795,
+      "resource_need": {
+        "A_aircraft": 6,
+        "B_aircraft": 4,
+        "C_aircraft": 3,
+        "A_batteries": 7,
+        "B_batteries": 7,
+        "C_batteries": 5,
+        "relay_aircraft": 3,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 2,
+        "B_aircraft": 2,
+        "C_aircraft": 1,
+        "A_batteries": 1,
+        "B_batteries": 3,
+        "C_batteries": 1,
+        "relay_aircraft": 1,
+        "relay_components": 0
+      },
+      "shares": [
+        0.45515254289905605,
+        0.544847457100944
+      ],
+      "zones": [
+        [
+          "S001",
+          "S002",
+          "S004",
+          "S006",
+          "S008",
+          "S009",
+          "S011"
+        ],
+        [
+          "S003",
+          "S005",
+          "S007",
+          "S010",
+          "S012",
+          "S013",
+          "S014",
+          "S015"
+        ]
+      ]
+    },
+    {
+      "id": "P124_356",
+      "group_count": 2,
+      "shortage_total": 9,
+      "resource_total": 36,
+      "workload_cv": 0.13210202645305819,
+      "resource_need": {
+        "A_aircraft": 6,
+        "B_aircraft": 3,
+        "C_aircraft": 3,
+        "A_batteries": 7,
+        "B_batteries": 6,
+        "C_batteries": 5,
+        "relay_aircraft": 3,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 2,
+        "B_aircraft": 1,
+        "C_aircraft": 1,
+        "A_batteries": 1,
+        "B_batteries": 2,
+        "C_batteries": 1,
+        "relay_aircraft": 1,
+        "relay_components": 0
+      },
+      "shares": [
+        0.43394898677347093,
+        0.5660510132265291
+      ],
+      "zones": [
+        [
+          "S001",
+          "S002",
+          "S004",
+          "S006",
+          "S008",
+          "S009"
+        ],
+        [
+          "S003",
+          "S005",
+          "S007",
+          "S010",
+          "S011",
+          "S012",
+          "S013",
+          "S014",
+          "S015"
+        ]
+      ]
+    },
+    {
+      "id": "P1256_34",
+      "group_count": 2,
+      "shortage_total": 5,
+      "resource_total": 32,
+      "workload_cv": 0.18967707510102708,
+      "resource_need": {
+        "A_aircraft": 5,
+        "B_aircraft": 3,
+        "C_aircraft": 3,
+        "A_batteries": 6,
+        "B_batteries": 5,
+        "C_batteries": 4,
+        "relay_aircraft": 3,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 1,
+        "B_aircraft": 1,
+        "C_aircraft": 1,
+        "A_batteries": 0,
+        "B_batteries": 1,
+        "C_batteries": 0,
+        "relay_aircraft": 1,
+        "relay_components": 0
+      },
+      "shares": [
+        0.5948385375505134,
+        0.4051614624494864
+      ],
+      "zones": [
+        [
+          "S001",
+          "S002",
+          "S004",
+          "S008",
+          "S009",
+          "S010",
+          "S011",
+          "S012",
+          "S013",
+          "S014"
+        ],
+        [
+          "S003",
+          "S005",
+          "S006",
+          "S007",
+          "S015"
+        ]
+      ]
+    },
+    {
+      "id": "P125_346",
+      "group_count": 2,
+      "shortage_total": 6,
+      "resource_total": 33,
+      "workload_cv": 0.14726996284985666,
+      "resource_need": {
+        "A_aircraft": 5,
+        "B_aircraft": 3,
+        "C_aircraft": 3,
+        "A_batteries": 6,
+        "B_batteries": 6,
+        "C_batteries": 4,
+        "relay_aircraft": 3,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 1,
+        "B_aircraft": 1,
+        "C_aircraft": 1,
+        "A_batteries": 0,
+        "B_batteries": 2,
+        "C_batteries": 0,
+        "relay_aircraft": 1,
+        "relay_components": 0
+      },
+      "shares": [
+        0.5736349814249283,
+        0.42636501857507164
+      ],
+      "zones": [
+        [
+          "S001",
+          "S002",
+          "S004",
+          "S008",
+          "S009",
+          "S010",
+          "S012",
+          "S013",
+          "S014"
+        ],
+        [
+          "S003",
+          "S005",
+          "S006",
+          "S007",
+          "S011",
+          "S015"
+        ]
+      ]
+    },
+    {
+      "id": "P126_345",
+      "group_count": 2,
+      "shortage_total": 8,
+      "resource_total": 35,
+      "workload_cv": 0.18769110976967393,
+      "resource_need": {
+        "A_aircraft": 5,
+        "B_aircraft": 4,
+        "C_aircraft": 3,
+        "A_batteries": 6,
+        "B_batteries": 7,
+        "C_batteries": 4,
+        "relay_aircraft": 3,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 1,
+        "B_aircraft": 2,
+        "C_aircraft": 1,
+        "A_batteries": 0,
+        "B_batteries": 3,
+        "C_batteries": 0,
+        "relay_aircraft": 1,
+        "relay_components": 0
+      },
+      "shares": [
+        0.406154445115163,
+        0.5938455548848369
+      ],
+      "zones": [
+        [
+          "S001",
+          "S002",
+          "S004",
+          "S008",
+          "S009",
+          "S011"
+        ],
+        [
+          "S003",
+          "S005",
+          "S006",
+          "S007",
+          "S010",
+          "S012",
+          "S013",
+          "S014",
+          "S015"
+        ]
+      ]
+    },
+    {
+      "id": "P12_3456",
+      "group_count": 2,
+      "shortage_total": 6,
+      "resource_total": 33,
+      "workload_cv": 0.23009822202084415,
+      "resource_need": {
+        "A_aircraft": 5,
+        "B_aircraft": 3,
+        "C_aircraft": 3,
+        "A_batteries": 6,
+        "B_batteries": 6,
+        "C_batteries": 4,
+        "relay_aircraft": 3,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 1,
+        "B_aircraft": 1,
+        "C_aircraft": 1,
+        "A_batteries": 0,
+        "B_batteries": 2,
+        "C_batteries": 0,
+        "relay_aircraft": 1,
+        "relay_components": 0
+      },
+      "shares": [
+        0.3849508889895779,
+        0.615049111010422
+      ],
+      "zones": [
+        [
+          "S001",
+          "S002",
+          "S004",
+          "S008",
+          "S009"
+        ],
+        [
+          "S003",
+          "S005",
+          "S006",
+          "S007",
+          "S010",
+          "S011",
+          "S012",
+          "S013",
+          "S014",
+          "S015"
+        ]
+      ]
+    },
+    {
+      "id": "P13456_2",
+      "group_count": 2,
+      "shortage_total": 9,
+      "resource_total": 35,
+      "workload_cv": 0.3835000927997674,
+      "resource_need": {
+        "A_aircraft": 5,
+        "B_aircraft": 3,
+        "C_aircraft": 4,
+        "A_batteries": 5,
+        "B_batteries": 6,
+        "C_batteries": 6,
+        "relay_aircraft": 3,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 1,
+        "B_aircraft": 1,
+        "C_aircraft": 2,
+        "A_batteries": 0,
+        "B_batteries": 2,
+        "C_batteries": 2,
+        "relay_aircraft": 1,
+        "relay_components": 0
+      },
+      "shares": [
+        0.6917500463998837,
+        0.3082499536001163
+      ],
+      "zones": [
+        [
+          "S001",
+          "S003",
+          "S005",
+          "S006",
+          "S007",
+          "S010",
+          "S011",
+          "S012",
+          "S013",
+          "S014",
+          "S015"
+        ],
+        [
+          "S002",
+          "S004",
+          "S008",
+          "S009"
+        ]
+      ]
+    },
+    {
+      "id": "P1345_26",
+      "group_count": 2,
+      "shortage_total": 11,
+      "resource_total": 37,
+      "workload_cv": 0.341092980548597,
+      "resource_need": {
+        "A_aircraft": 5,
+        "B_aircraft": 4,
+        "C_aircraft": 4,
+        "A_batteries": 5,
+        "B_batteries": 7,
+        "C_batteries": 6,
+        "relay_aircraft": 3,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 1,
+        "B_aircraft": 2,
+        "C_aircraft": 2,
+        "A_batteries": 0,
+        "B_batteries": 3,
+        "C_batteries": 2,
+        "relay_aircraft": 1,
+        "relay_components": 0
+      },
+      "shares": [
+        0.6705464902742985,
+        0.3294535097257015
+      ],
+      "zones": [
+        [
+          "S001",
+          "S003",
+          "S005",
+          "S006",
+          "S007",
+          "S010",
+          "S012",
+          "S013",
+          "S014",
+          "S015"
+        ],
+        [
+          "S002",
+          "S004",
+          "S008",
+          "S009",
+          "S011"
+        ]
+      ]
+    },
+    {
+      "id": "P1346_25",
+      "group_count": 2,
+      "shortage_total": 9,
+      "resource_total": 35,
+      "workload_cv": 0.0061319079290665214,
+      "resource_need": {
+        "A_aircraft": 5,
+        "B_aircraft": 3,
+        "C_aircraft": 4,
+        "A_batteries": 5,
+        "B_batteries": 6,
+        "C_batteries": 6,
+        "relay_aircraft": 3,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 1,
+        "B_aircraft": 1,
+        "C_aircraft": 2,
+        "A_batteries": 0,
+        "B_batteries": 2,
+        "C_batteries": 2,
+        "relay_aircraft": 1,
+        "relay_components": 0
+      },
+      "shares": [
+        0.5030659539645332,
+        0.49693404603546676
+      ],
+      "zones": [
+        [
+          "S001",
+          "S003",
+          "S005",
+          "S006",
+          "S007",
+          "S011",
+          "S015"
+        ],
+        [
+          "S002",
+          "S004",
+          "S008",
+          "S009",
+          "S010",
+          "S012",
+          "S013",
+          "S014"
+        ]
+      ]
+    },
+    {
+      "id": "P134_256",
+      "group_count": 2,
+      "shortage_total": 8,
+      "resource_total": 34,
+      "workload_cv": 0.036275204322103904,
+      "resource_need": {
+        "A_aircraft": 5,
+        "B_aircraft": 3,
+        "C_aircraft": 4,
+        "A_batteries": 5,
+        "B_batteries": 5,
+        "C_batteries": 6,
+        "relay_aircraft": 3,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 1,
+        "B_aircraft": 1,
+        "C_aircraft": 2,
+        "A_batteries": 0,
+        "B_batteries": 1,
+        "C_batteries": 2,
+        "relay_aircraft": 1,
+        "relay_components": 0
+      },
+      "shares": [
+        0.481862397838948,
+        0.5181376021610519
+      ],
+      "zones": [
+        [
+          "S001",
+          "S003",
+          "S005",
+          "S006",
+          "S007",
+          "S015"
+        ],
+        [
+          "S002",
+          "S004",
+          "S008",
+          "S009",
+          "S010",
+          "S011",
+          "S012",
+          "S013",
+          "S014"
+        ]
+      ]
+    },
+    {
+      "id": "P1356_24",
+      "group_count": 2,
+      "shortage_total": 8,
+      "resource_total": 35,
+      "workload_cv": 0.2855038972319814,
+      "resource_need": {
+        "A_aircraft": 5,
+        "B_aircraft": 3,
+        "C_aircraft": 4,
+        "A_batteries": 6,
+        "B_batteries": 6,
+        "C_batteries": 5,
+        "relay_aircraft": 3,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 1,
+        "B_aircraft": 1,
+        "C_aircraft": 2,
+        "A_batteries": 0,
+        "B_batteries": 2,
+        "C_batteries": 1,
+        "relay_aircraft": 1,
+        "relay_components": 0
+      },
+      "shares": [
+        0.6427519486159907,
+        0.3572480513840093
+      ],
+      "zones": [
+        [
+          "S001",
+          "S003",
+          "S005",
+          "S007",
+          "S010",
+          "S011",
+          "S012",
+          "S013",
+          "S014",
+          "S015"
+        ],
+        [
+          "S002",
+          "S004",
+          "S006",
+          "S008",
+          "S009"
+        ]
+      ]
+    },
+    {
+      "id": "P135_246",
+      "group_count": 2,
+      "shortage_total": 10,
+      "resource_total": 37,
+      "workload_cv": 0.24309678498081091,
+      "resource_need": {
+        "A_aircraft": 5,
+        "B_aircraft": 4,
+        "C_aircraft": 4,
+        "A_batteries": 6,
+        "B_batteries": 7,
+        "C_batteries": 5,
+        "relay_aircraft": 3,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 1,
+        "B_aircraft": 2,
+        "C_aircraft": 2,
+        "A_batteries": 0,
+        "B_batteries": 3,
+        "C_batteries": 1,
+        "relay_aircraft": 1,
+        "relay_components": 0
+      },
+      "shares": [
+        0.6215483924904055,
+        0.37845160750959456
+      ],
+      "zones": [
+        [
+          "S001",
+          "S003",
+          "S005",
+          "S007",
+          "S010",
+          "S012",
+          "S013",
+          "S014",
+          "S015"
+        ],
+        [
+          "S002",
+          "S004",
+          "S006",
+          "S008",
+          "S009",
+          "S011"
+        ]
+      ]
+    },
+    {
+      "id": "P136_245",
+      "group_count": 2,
+      "shortage_total": 8,
+      "resource_total": 35,
+      "workload_cv": 0.09186428763871961,
+      "resource_need": {
+        "A_aircraft": 5,
+        "B_aircraft": 3,
+        "C_aircraft": 4,
+        "A_batteries": 6,
+        "B_batteries": 6,
+        "C_batteries": 5,
+        "relay_aircraft": 3,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 1,
+        "B_aircraft": 1,
+        "C_aircraft": 2,
+        "A_batteries": 0,
+        "B_batteries": 2,
+        "C_batteries": 1,
+        "relay_aircraft": 1,
+        "relay_components": 0
+      },
+      "shares": [
+        0.45406785618064016,
+        0.5459321438193597
+      ],
+      "zones": [
+        [
+          "S001",
+          "S003",
+          "S005",
+          "S007",
+          "S011",
+          "S015"
+        ],
+        [
+          "S002",
+          "S004",
+          "S006",
+          "S008",
+          "S009",
+          "S010",
+          "S012",
+          "S013",
+          "S014"
+        ]
+      ]
+    },
+    {
+      "id": "P13_2456",
+      "group_count": 2,
+      "shortage_total": 7,
+      "resource_total": 34,
+      "workload_cv": 0.1342713998898899,
+      "resource_need": {
+        "A_aircraft": 5,
+        "B_aircraft": 3,
+        "C_aircraft": 4,
+        "A_batteries": 6,
+        "B_batteries": 5,
+        "C_batteries": 5,
+        "relay_aircraft": 3,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 1,
+        "B_aircraft": 1,
+        "C_aircraft": 2,
+        "A_batteries": 0,
+        "B_batteries": 1,
+        "C_batteries": 1,
+        "relay_aircraft": 1,
+        "relay_components": 0
+      },
+      "shares": [
+        0.43286430005505505,
+        0.567135699944945
+      ],
+      "zones": [
+        [
+          "S001",
+          "S003",
+          "S005",
+          "S007",
+          "S015"
+        ],
+        [
+          "S002",
+          "S004",
+          "S006",
+          "S008",
+          "S009",
+          "S010",
+          "S011",
+          "S012",
+          "S013",
+          "S014"
+        ]
+      ]
+    },
+    {
+      "id": "P1456_23",
+      "group_count": 2,
+      "shortage_total": 14,
+      "resource_total": 41,
+      "workload_cv": 0.3288266365314196,
+      "resource_need": {
+        "A_aircraft": 6,
+        "B_aircraft": 4,
+        "C_aircraft": 4,
+        "A_batteries": 7,
+        "B_batteries": 7,
+        "C_batteries": 7,
+        "relay_aircraft": 3,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 2,
+        "B_aircraft": 2,
+        "C_aircraft": 2,
+        "A_batteries": 1,
+        "B_batteries": 3,
+        "C_batteries": 3,
+        "relay_aircraft": 1,
+        "relay_components": 0
+      },
+      "shares": [
+        0.3355866817342902,
+        0.6644133182657098
+      ],
+      "zones": [
+        [
+          "S001",
+          "S006",
+          "S010",
+          "S011",
+          "S012",
+          "S013",
+          "S014"
+        ],
+        [
+          "S002",
+          "S003",
+          "S004",
+          "S005",
+          "S007",
+          "S008",
+          "S009",
+          "S015"
+        ]
+      ]
+    },
+    {
+      "id": "P145_236",
+      "group_count": 2,
+      "shortage_total": 15,
+      "resource_total": 42,
+      "workload_cv": 0.37123374878258997,
+      "resource_need": {
+        "A_aircraft": 6,
+        "B_aircraft": 4,
+        "C_aircraft": 4,
+        "A_batteries": 7,
+        "B_batteries": 8,
+        "C_batteries": 7,
+        "relay_aircraft": 3,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 2,
+        "B_aircraft": 2,
+        "C_aircraft": 2,
+        "A_batteries": 1,
+        "B_batteries": 4,
+        "C_batteries": 3,
+        "relay_aircraft": 1,
+        "relay_components": 0
+      },
+      "shares": [
+        0.314383125608705,
+        0.6856168743912949
+      ],
+      "zones": [
+        [
+          "S001",
+          "S006",
+          "S010",
+          "S012",
+          "S013",
+          "S014"
+        ],
+        [
+          "S002",
+          "S003",
+          "S004",
+          "S005",
+          "S007",
+          "S008",
+          "S009",
+          "S011",
+          "S015"
+        ]
+      ]
+    },
+    {
+      "id": "P146_235",
+      "group_count": 2,
+      "shortage_total": 10,
+      "resource_total": 37,
+      "workload_cv": 0.7061948214021204,
+      "resource_need": {
+        "A_aircraft": 6,
+        "B_aircraft": 3,
+        "C_aircraft": 4,
+        "A_batteries": 7,
+        "B_batteries": 5,
+        "C_batteries": 7,
+        "relay_aircraft": 2,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 2,
+        "B_aircraft": 1,
+        "C_aircraft": 2,
+        "A_batteries": 1,
+        "B_batteries": 1,
+        "C_batteries": 3,
+        "relay_aircraft": 0,
+        "relay_components": 0
+      },
+      "shares": [
+        0.14690258929893973,
+        0.8530974107010603
+      ],
+      "zones": [
+        [
+          "S001",
+          "S006",
+          "S011"
+        ],
+        [
+          "S002",
+          "S003",
+          "S004",
+          "S005",
+          "S007",
+          "S008",
+          "S009",
+          "S010",
+          "S012",
+          "S013",
+          "S014",
+          "S015"
+        ]
+      ]
+    },
+    {
+      "id": "P14_2356",
+      "group_count": 2,
+      "shortage_total": 8,
+      "resource_total": 35,
+      "workload_cv": 0.7486019336532908,
+      "resource_need": {
+        "A_aircraft": 6,
+        "B_aircraft": 2,
+        "C_aircraft": 4,
+        "A_batteries": 7,
+        "B_batteries": 4,
+        "C_batteries": 7,
+        "relay_aircraft": 2,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 2,
+        "B_aircraft": 0,
+        "C_aircraft": 2,
+        "A_batteries": 1,
+        "B_batteries": 0,
+        "C_batteries": 3,
+        "relay_aircraft": 0,
+        "relay_components": 0
+      },
+      "shares": [
+        0.12569903317335457,
+        0.8743009668266454
+      ],
+      "zones": [
+        [
+          "S001",
+          "S006"
+        ],
+        [
+          "S002",
+          "S003",
+          "S004",
+          "S005",
+          "S007",
+          "S008",
+          "S009",
+          "S010",
+          "S011",
+          "S012",
+          "S013",
+          "S014",
+          "S015"
+        ]
+      ]
+    },
+    {
+      "id": "P156_234",
+      "group_count": 2,
+      "shortage_total": 11,
+      "resource_total": 38,
+      "workload_cv": 0.4268228320992056,
+      "resource_need": {
+        "A_aircraft": 5,
+        "B_aircraft": 4,
+        "C_aircraft": 4,
+        "A_batteries": 6,
+        "B_batteries": 7,
+        "C_batteries": 6,
+        "relay_aircraft": 3,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 1,
+        "B_aircraft": 2,
+        "C_aircraft": 2,
+        "A_batteries": 0,
+        "B_batteries": 3,
+        "C_batteries": 2,
+        "relay_aircraft": 1,
+        "relay_components": 0
+      },
+      "shares": [
+        0.2865885839503972,
+        0.7134114160496027
+      ],
+      "zones": [
+        [
+          "S001",
+          "S010",
+          "S011",
+          "S012",
+          "S013",
+          "S014"
+        ],
+        [
+          "S002",
+          "S003",
+          "S004",
+          "S005",
+          "S006",
+          "S007",
+          "S008",
+          "S009",
+          "S015"
+        ]
+      ]
+    },
+    {
+      "id": "P15_2346",
+      "group_count": 2,
+      "shortage_total": 12,
+      "resource_total": 39,
+      "workload_cv": 0.4692299443503759,
+      "resource_need": {
+        "A_aircraft": 5,
+        "B_aircraft": 4,
+        "C_aircraft": 4,
+        "A_batteries": 6,
+        "B_batteries": 8,
+        "C_batteries": 6,
+        "relay_aircraft": 3,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 1,
+        "B_aircraft": 2,
+        "C_aircraft": 2,
+        "A_batteries": 0,
+        "B_batteries": 4,
+        "C_batteries": 2,
+        "relay_aircraft": 1,
+        "relay_components": 0
+      },
+      "shares": [
+        0.26538502782481205,
+        0.734614972175188
+      ],
+      "zones": [
+        [
+          "S001",
+          "S010",
+          "S012",
+          "S013",
+          "S014"
+        ],
+        [
+          "S002",
+          "S003",
+          "S004",
+          "S005",
+          "S006",
+          "S007",
+          "S008",
+          "S009",
+          "S011",
+          "S015"
+        ]
+      ]
+    },
+    {
+      "id": "P16_2345",
+      "group_count": 2,
+      "shortage_total": 7,
+      "resource_total": 34,
+      "workload_cv": 0.8041910169699066,
+      "resource_need": {
+        "A_aircraft": 5,
+        "B_aircraft": 3,
+        "C_aircraft": 4,
+        "A_batteries": 6,
+        "B_batteries": 5,
+        "C_batteries": 6,
+        "relay_aircraft": 2,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 1,
+        "B_aircraft": 1,
+        "C_aircraft": 2,
+        "A_batteries": 0,
+        "B_batteries": 1,
+        "C_batteries": 2,
+        "relay_aircraft": 0,
+        "relay_components": 0
+      },
+      "shares": [
+        0.09790449151504674,
+        0.9020955084849532
+      ],
+      "zones": [
+        [
+          "S001",
+          "S011"
+        ],
+        [
+          "S002",
+          "S003",
+          "S004",
+          "S005",
+          "S006",
+          "S007",
+          "S008",
+          "S009",
+          "S010",
+          "S012",
+          "S013",
+          "S014",
+          "S015"
+        ]
+      ]
+    },
+    {
+      "id": "P1_23456",
+      "group_count": 2,
+      "shortage_total": 5,
+      "resource_total": 32,
+      "workload_cv": 0.8465981292210769,
+      "resource_need": {
+        "A_aircraft": 5,
+        "B_aircraft": 2,
+        "C_aircraft": 4,
+        "A_batteries": 6,
+        "B_batteries": 4,
+        "C_batteries": 6,
+        "relay_aircraft": 2,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 1,
+        "B_aircraft": 0,
+        "C_aircraft": 2,
+        "A_batteries": 0,
+        "B_batteries": 0,
+        "C_batteries": 2,
+        "relay_aircraft": 0,
+        "relay_components": 0
+      },
+      "shares": [
+        0.07670093538946156,
+        0.9232990646105383
+      ],
+      "zones": [
+        [
+          "S001"
+        ],
+        [
+          "S002",
+          "S003",
+          "S004",
+          "S005",
+          "S006",
+          "S007",
+          "S008",
+          "S009",
+          "S010",
+          "S011",
+          "S012",
+          "S013",
+          "S014",
+          "S015"
+        ]
+      ]
+    },
+    {
+      "id": "P1234_5_6",
+      "group_count": 3,
+      "shortage_total": 8,
+      "resource_total": 34,
+      "workload_cv": 0.9904475838131318,
+      "resource_need": {
+        "A_aircraft": 4,
+        "B_aircraft": 5,
+        "C_aircraft": 2,
+        "A_batteries": 5,
+        "B_batteries": 8,
+        "C_batteries": 4,
+        "relay_aircraft": 3,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 0,
+        "B_aircraft": 3,
+        "C_aircraft": 0,
+        "A_batteries": 0,
+        "B_batteries": 4,
+        "C_batteries": 0,
+        "relay_aircraft": 1,
+        "relay_components": 0
+      },
+      "shares": [
+        0.7901123514390643,
+        0.18868409243535042,
+        0.02120355612558518
+      ],
+      "zones": [
+        [
+          "S001",
+          "S002",
+          "S003",
+          "S004",
+          "S005",
+          "S006",
+          "S007",
+          "S008",
+          "S009",
+          "S015"
+        ],
+        [
+          "S010",
+          "S012",
+          "S013",
+          "S014"
+        ],
+        [
+          "S011"
+        ]
+      ]
+    },
+    {
+      "id": "P1235_4_6",
+      "group_count": 3,
+      "shortage_total": 5,
+      "resource_total": 32,
+      "workload_cv": 1.26575120237527,
+      "resource_need": {
+        "A_aircraft": 5,
+        "B_aircraft": 3,
+        "C_aircraft": 3,
+        "A_batteries": 6,
+        "B_batteries": 5,
+        "C_batteries": 5,
+        "relay_aircraft": 2,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 1,
+        "B_aircraft": 1,
+        "C_aircraft": 1,
+        "A_batteries": 0,
+        "B_batteries": 1,
+        "C_batteries": 1,
+        "relay_aircraft": 0,
+        "relay_components": 0
+      },
+      "shares": [
+        0.9297983460905218,
+        0.04899809778389301,
+        0.02120355612558518
+      ],
+      "zones": [
+        [
+          "S001",
+          "S002",
+          "S003",
+          "S004",
+          "S005",
+          "S007",
+          "S008",
+          "S009",
+          "S010",
+          "S012",
+          "S013",
+          "S014",
+          "S015"
+        ],
+        [
+          "S006"
+        ],
+        [
+          "S011"
+        ]
+      ]
+    },
+    {
+      "id": "P1236_4_5",
+      "group_count": 3,
+      "shortage_total": 10,
+      "resource_total": 37,
+      "workload_cv": 0.9259550908659473,
+      "resource_need": {
+        "A_aircraft": 5,
+        "B_aircraft": 4,
+        "C_aircraft": 3,
+        "A_batteries": 6,
+        "B_batteries": 8,
+        "C_batteries": 5,
+        "relay_aircraft": 3,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 1,
+        "B_aircraft": 2,
+        "C_aircraft": 1,
+        "A_batteries": 0,
+        "B_batteries": 4,
+        "C_batteries": 1,
+        "relay_aircraft": 1,
+        "relay_components": 0
+      },
+      "shares": [
+        0.7623178097807566,
+        0.04899809778389301,
+        0.18868409243535042
+      ],
+      "zones": [
+        [
+          "S001",
+          "S002",
+          "S003",
+          "S004",
+          "S005",
+          "S007",
+          "S008",
+          "S009",
+          "S011",
+          "S015"
+        ],
+        [
+          "S006"
+        ],
+        [
+          "S010",
+          "S012",
+          "S013",
+          "S014"
+        ]
+      ]
+    },
+    {
+      "id": "P123_45_6",
+      "group_count": 3,
+      "shortage_total": 11,
+      "resource_total": 38,
+      "workload_cv": 0.9047531453009419,
+      "resource_need": {
+        "A_aircraft": 5,
+        "B_aircraft": 5,
+        "C_aircraft": 3,
+        "A_batteries": 6,
+        "B_batteries": 8,
+        "C_batteries": 5,
+        "relay_aircraft": 3,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 1,
+        "B_aircraft": 3,
+        "C_aircraft": 1,
+        "A_batteries": 0,
+        "B_batteries": 4,
+        "C_batteries": 1,
+        "relay_aircraft": 1,
+        "relay_components": 0
+      },
+      "shares": [
+        0.7411142536551714,
+        0.23768219021924347,
+        0.02120355612558518
+      ],
+      "zones": [
+        [
+          "S001",
+          "S002",
+          "S003",
+          "S004",
+          "S005",
+          "S007",
+          "S008",
+          "S009",
+          "S015"
+        ],
+        [
+          "S006",
+          "S010",
+          "S012",
+          "S013",
+          "S014"
+        ],
+        [
+          "S011"
+        ]
+      ]
+    },
+    {
+      "id": "P123_46_5",
+      "group_count": 3,
+      "shortage_total": 11,
+      "resource_total": 38,
+      "workload_cv": 0.8771207942820185,
+      "resource_need": {
+        "A_aircraft": 5,
+        "B_aircraft": 5,
+        "C_aircraft": 3,
+        "A_batteries": 6,
+        "B_batteries": 8,
+        "C_batteries": 5,
+        "relay_aircraft": 3,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 1,
+        "B_aircraft": 3,
+        "C_aircraft": 1,
+        "A_batteries": 0,
+        "B_batteries": 4,
+        "C_batteries": 1,
+        "relay_aircraft": 1,
+        "relay_components": 0
+      },
+      "shares": [
+        0.7411142536551714,
+        0.07020165390947819,
+        0.18868409243535042
+      ],
+      "zones": [
+        [
+          "S001",
+          "S002",
+          "S003",
+          "S004",
+          "S005",
+          "S007",
+          "S008",
+          "S009",
+          "S015"
+        ],
+        [
+          "S006",
+          "S011"
+        ],
+        [
+          "S010",
+          "S012",
+          "S013",
+          "S014"
+        ]
+      ]
+    },
+    {
+      "id": "P123_4_56",
+      "group_count": 3,
+      "shortage_total": 9,
+      "resource_total": 36,
+      "workload_cv": 0.8871932860021097,
+      "resource_need": {
+        "A_aircraft": 5,
+        "B_aircraft": 4,
+        "C_aircraft": 3,
+        "A_batteries": 6,
+        "B_batteries": 7,
+        "C_batteries": 5,
+        "relay_aircraft": 3,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 1,
+        "B_aircraft": 2,
+        "C_aircraft": 1,
+        "A_batteries": 0,
+        "B_batteries": 3,
+        "C_batteries": 1,
+        "relay_aircraft": 1,
+        "relay_components": 0
+      },
+      "shares": [
+        0.7411142536551714,
+        0.04899809778389301,
+        0.2098876485609356
+      ],
+      "zones": [
+        [
+          "S001",
+          "S002",
+          "S003",
+          "S004",
+          "S005",
+          "S007",
+          "S008",
+          "S009",
+          "S015"
+        ],
+        [
+          "S006"
+        ],
+        [
+          "S010",
+          "S011",
+          "S012",
+          "S013",
+          "S014"
+        ]
+      ]
+    },
+    {
+      "id": "P1245_3_6",
+      "group_count": 3,
+      "shortage_total": 10,
+      "resource_total": 37,
+      "workload_cv": 0.7381880880521152,
+      "resource_need": {
+        "A_aircraft": 6,
+        "B_aircraft": 4,
+        "C_aircraft": 3,
+        "A_batteries": 7,
+        "B_batteries": 6,
+        "C_batteries": 5,
+        "relay_aircraft": 3,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 2,
+        "B_aircraft": 2,
+        "C_aircraft": 1,
+        "A_batteries": 1,
+        "B_batteries": 2,
+        "C_batteries": 1,
+        "relay_aircraft": 1,
+        "relay_components": 0
+      },
+      "shares": [
+        0.6226330792088214,
+        0.3561633646655934,
+        0.02120355612558518
+      ],
+      "zones": [
+        [
+          "S001",
+          "S002",
+          "S004",
+          "S006",
+          "S008",
+          "S009",
+          "S010",
+          "S012",
+          "S013",
+          "S014"
+        ],
+        [
+          "S003",
+          "S005",
+          "S007",
+          "S015"
+        ],
+        [
+          "S011"
+        ]
+      ]
+    },
+    {
+      "id": "P1246_3_5",
+      "group_count": 3,
+      "shortage_total": 13,
+      "resource_total": 40,
+      "workload_cv": 0.3299296881558803,
+      "resource_need": {
+        "A_aircraft": 6,
+        "B_aircraft": 5,
+        "C_aircraft": 3,
+        "A_batteries": 7,
+        "B_batteries": 8,
+        "C_batteries": 5,
+        "relay_aircraft": 3,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 2,
+        "B_aircraft": 3,
+        "C_aircraft": 1,
+        "A_batteries": 1,
+        "B_batteries": 4,
+        "C_batteries": 1,
+        "relay_aircraft": 1,
+        "relay_components": 0
+      },
+      "shares": [
+        0.45515254289905605,
+        0.3561633646655934,
+        0.18868409243535042
+      ],
+      "zones": [
+        [
+          "S001",
+          "S002",
+          "S004",
+          "S006",
+          "S008",
+          "S009",
+          "S011"
+        ],
+        [
+          "S003",
+          "S005",
+          "S007",
+          "S015"
+        ],
+        [
+          "S010",
+          "S012",
+          "S013",
+          "S014"
+        ]
+      ]
+    },
+    {
+      "id": "P124_35_6",
+      "group_count": 3,
+      "shortage_total": 11,
+      "resource_total": 38,
+      "workload_cv": 0.6759143409266987,
+      "resource_need": {
+        "A_aircraft": 6,
+        "B_aircraft": 4,
+        "C_aircraft": 3,
+        "A_batteries": 7,
+        "B_batteries": 7,
+        "C_batteries": 5,
+        "relay_aircraft": 3,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 2,
+        "B_aircraft": 2,
+        "C_aircraft": 1,
+        "A_batteries": 1,
+        "B_batteries": 3,
+        "C_batteries": 1,
+        "relay_aircraft": 1,
+        "relay_components": 0
+      },
+      "shares": [
+        0.43394898677347093,
+        0.544847457100944,
+        0.02120355612558518
+      ],
+      "zones": [
+        [
+          "S001",
+          "S002",
+          "S004",
+          "S006",
+          "S008",
+          "S009"
+        ],
+        [
+          "S003",
+          "S005",
+          "S007",
+          "S010",
+          "S012",
+          "S013",
+          "S014",
+          "S015"
+        ],
+        [
+          "S011"
+        ]
+      ]
+    },
+    {
+      "id": "P124_36_5",
+      "group_count": 3,
+      "shortage_total": 12,
+      "resource_total": 39,
+      "workload_cv": 0.3145752824076755,
+      "resource_need": {
+        "A_aircraft": 6,
+        "B_aircraft": 4,
+        "C_aircraft": 3,
+        "A_batteries": 7,
+        "B_batteries": 8,
+        "C_batteries": 5,
+        "relay_aircraft": 3,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 2,
+        "B_aircraft": 2,
+        "C_aircraft": 1,
+        "A_batteries": 1,
+        "B_batteries": 4,
+        "C_batteries": 1,
+        "relay_aircraft": 1,
+        "relay_components": 0
+      },
+      "shares": [
+        0.43394898677347093,
+        0.3773669207911787,
+        0.18868409243535042
+      ],
+      "zones": [
+        [
+          "S001",
+          "S002",
+          "S004",
+          "S006",
+          "S008",
+          "S009"
+        ],
+        [
+          "S003",
+          "S005",
+          "S007",
+          "S011",
+          "S015"
+        ],
+        [
+          "S010",
+          "S012",
+          "S013",
+          "S014"
+        ]
+      ]
+    },
+    {
+      "id": "P124_3_56",
+      "group_count": 3,
+      "shortage_total": 11,
+      "resource_total": 38,
+      "workload_cv": 0.27865870058232906,
+      "resource_need": {
+        "A_aircraft": 6,
+        "B_aircraft": 4,
+        "C_aircraft": 3,
+        "A_batteries": 7,
+        "B_batteries": 7,
+        "C_batteries": 5,
+        "relay_aircraft": 3,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 2,
+        "B_aircraft": 2,
+        "C_aircraft": 1,
+        "A_batteries": 1,
+        "B_batteries": 3,
+        "C_batteries": 1,
+        "relay_aircraft": 1,
+        "relay_components": 0
+      },
+      "shares": [
+        0.43394898677347093,
+        0.3561633646655934,
+        0.2098876485609356
+      ],
+      "zones": [
+        [
+          "S001",
+          "S002",
+          "S004",
+          "S006",
+          "S008",
+          "S009"
+        ],
+        [
+          "S003",
+          "S005",
+          "S007",
+          "S015"
+        ],
+        [
+          "S010",
+          "S011",
+          "S012",
+          "S013",
+          "S014"
+        ]
+      ]
+    },
+    {
+      "id": "P1256_3_4",
+      "group_count": 3,
+      "shortage_total": 9,
+      "resource_total": 36,
+      "workload_cv": 0.67026720419156,
+      "resource_need": {
+        "A_aircraft": 6,
+        "B_aircraft": 3,
+        "C_aircraft": 4,
+        "A_batteries": 7,
+        "B_batteries": 5,
+        "C_batteries": 5,
+        "relay_aircraft": 3,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 2,
+        "B_aircraft": 1,
+        "C_aircraft": 2,
+        "A_batteries": 1,
+        "B_batteries": 1,
+        "C_batteries": 1,
+        "relay_aircraft": 1,
+        "relay_components": 0
+      },
+      "shares": [
+        0.5948385375505134,
+        0.3561633646655934,
+        0.04899809778389301
+      ],
+      "zones": [
+        [
+          "S001",
+          "S002",
+          "S004",
+          "S008",
+          "S009",
+          "S010",
+          "S011",
+          "S012",
+          "S013",
+          "S014"
+        ],
+        [
+          "S003",
+          "S005",
+          "S007",
+          "S015"
+        ],
+        [
+          "S006"
+        ]
+      ]
+    },
+    {
+      "id": "P125_34_6",
+      "group_count": 3,
+      "shortage_total": 7,
+      "resource_total": 34,
+      "workload_cv": 0.6935326092426124,
+      "resource_need": {
+        "A_aircraft": 5,
+        "B_aircraft": 4,
+        "C_aircraft": 3,
+        "A_batteries": 6,
+        "B_batteries": 6,
+        "C_batteries": 4,
+        "relay_aircraft": 3,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 1,
+        "B_aircraft": 2,
+        "C_aircraft": 1,
+        "A_batteries": 0,
+        "B_batteries": 2,
+        "C_batteries": 0,
+        "relay_aircraft": 1,
+        "relay_components": 0
+      },
+      "shares": [
+        0.5736349814249283,
+        0.4051614624494864,
+        0.02120355612558518
+      ],
+      "zones": [
+        [
+          "S001",
+          "S002",
+          "S004",
+          "S008",
+          "S009",
+          "S010",
+          "S012",
+          "S013",
+          "S014"
+        ],
+        [
+          "S003",
+          "S005",
+          "S006",
+          "S007",
+          "S015"
+        ],
+        [
+          "S011"
+        ]
+      ]
+    },
+    {
+      "id": "P125_36_4",
+      "group_count": 3,
+      "shortage_total": 10,
+      "resource_total": 37,
+      "workload_cv": 0.6493004660592048,
+      "resource_need": {
+        "A_aircraft": 6,
+        "B_aircraft": 3,
+        "C_aircraft": 4,
+        "A_batteries": 7,
+        "B_batteries": 6,
+        "C_batteries": 5,
+        "relay_aircraft": 3,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 2,
+        "B_aircraft": 1,
+        "C_aircraft": 2,
+        "A_batteries": 1,
+        "B_batteries": 2,
+        "C_batteries": 1,
+        "relay_aircraft": 1,
+        "relay_components": 0
+      },
+      "shares": [
+        0.5736349814249283,
+        0.3773669207911787,
+        0.04899809778389301
+      ],
+      "zones": [
+        [
+          "S001",
+          "S002",
+          "S004",
+          "S008",
+          "S009",
+          "S010",
+          "S012",
+          "S013",
+          "S014"
+        ],
+        [
+          "S003",
+          "S005",
+          "S007",
+          "S011",
+          "S015"
+        ],
+        [
+          "S006"
+        ]
+      ]
+    },
+    {
+      "id": "P125_3_46",
+      "group_count": 3,
+      "shortage_total": 11,
+      "resource_total": 38,
+      "workload_cv": 0.6184764501319042,
+      "resource_need": {
+        "A_aircraft": 6,
+        "B_aircraft": 4,
+        "C_aircraft": 4,
+        "A_batteries": 7,
+        "B_batteries": 6,
+        "C_batteries": 5,
+        "relay_aircraft": 3,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 2,
+        "B_aircraft": 2,
+        "C_aircraft": 2,
+        "A_batteries": 1,
+        "B_batteries": 2,
+        "C_batteries": 1,
+        "relay_aircraft": 1,
+        "relay_components": 0
+      },
+      "shares": [
+        0.5736349814249283,
+        0.3561633646655934,
+        0.07020165390947819
+      ],
+      "zones": [
+        [
+          "S001",
+          "S002",
+          "S004",
+          "S008",
+          "S009",
+          "S010",
+          "S012",
+          "S013",
+          "S014"
+        ],
+        [
+          "S003",
+          "S005",
+          "S007",
+          "S015"
+        ],
+        [
+          "S006",
+          "S011"
+        ]
+      ]
+    },
+    {
+      "id": "P126_34_5",
+      "group_count": 3,
+      "shortage_total": 10,
+      "resource_total": 37,
+      "workload_cv": 0.306849787416406,
+      "resource_need": {
+        "A_aircraft": 5,
+        "B_aircraft": 5,
+        "C_aircraft": 3,
+        "A_batteries": 6,
+        "B_batteries": 8,
+        "C_batteries": 4,
+        "relay_aircraft": 3,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 1,
+        "B_aircraft": 3,
+        "C_aircraft": 1,
+        "A_batteries": 0,
+        "B_batteries": 4,
+        "C_batteries": 0,
+        "relay_aircraft": 1,
+        "relay_components": 0
+      },
+      "shares": [
+        0.406154445115163,
+        0.4051614624494864,
+        0.18868409243535042
+      ],
+      "zones": [
+        [
+          "S001",
+          "S002",
+          "S004",
+          "S008",
+          "S009",
+          "S011"
+        ],
+        [
+          "S003",
+          "S005",
+          "S006",
+          "S007",
+          "S015"
+        ],
+        [
+          "S010",
+          "S012",
+          "S013",
+          "S014"
+        ]
+      ]
+    },
+    {
+      "id": "P126_35_4",
+      "group_count": 3,
+      "shortage_total": 12,
+      "resource_total": 39,
+      "workload_cv": 0.6266282750944395,
+      "resource_need": {
+        "A_aircraft": 6,
+        "B_aircraft": 4,
+        "C_aircraft": 4,
+        "A_batteries": 7,
+        "B_batteries": 7,
+        "C_batteries": 5,
+        "relay_aircraft": 3,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 2,
+        "B_aircraft": 2,
+        "C_aircraft": 2,
+        "A_batteries": 1,
+        "B_batteries": 3,
+        "C_batteries": 1,
+        "relay_aircraft": 1,
+        "relay_components": 0
+      },
+      "shares": [
+        0.406154445115163,
+        0.544847457100944,
+        0.04899809778389301
+      ],
+      "zones": [
+        [
+          "S001",
+          "S002",
+          "S004",
+          "S008",
+          "S009",
+          "S011"
+        ],
+        [
+          "S003",
+          "S005",
+          "S007",
+          "S010",
+          "S012",
+          "S013",
+          "S014",
+          "S015"
+        ],
+        [
+          "S006"
+        ]
+      ]
+    },
+    {
+      "id": "P126_3_45",
+      "group_count": 3,
+      "shortage_total": 14,
+      "resource_total": 41,
+      "workload_cv": 0.21194291092748882,
+      "resource_need": {
+        "A_aircraft": 6,
+        "B_aircraft": 5,
+        "C_aircraft": 4,
+        "A_batteries": 7,
+        "B_batteries": 8,
+        "C_batteries": 5,
+        "relay_aircraft": 3,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 2,
+        "B_aircraft": 3,
+        "C_aircraft": 2,
+        "A_batteries": 1,
+        "B_batteries": 4,
+        "C_batteries": 1,
+        "relay_aircraft": 1,
+        "relay_components": 0
+      },
+      "shares": [
+        0.406154445115163,
+        0.3561633646655934,
+        0.23768219021924347
+      ],
+      "zones": [
+        [
+          "S001",
+          "S002",
+          "S004",
+          "S008",
+          "S009",
+          "S011"
+        ],
+        [
+          "S003",
+          "S005",
+          "S007",
+          "S015"
+        ],
+        [
+          "S006",
+          "S010",
+          "S012",
+          "S013",
+          "S014"
+        ]
+      ]
+    },
+    {
+      "id": "P12_345_6",
+      "group_count": 3,
+      "shortage_total": 8,
+      "resource_total": 35,
+      "workload_cv": 0.709836574394523,
+      "resource_need": {
+        "A_aircraft": 5,
+        "B_aircraft": 4,
+        "C_aircraft": 3,
+        "A_batteries": 6,
+        "B_batteries": 7,
+        "C_batteries": 4,
+        "relay_aircraft": 3,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 1,
+        "B_aircraft": 2,
+        "C_aircraft": 1,
+        "A_batteries": 0,
+        "B_batteries": 3,
+        "C_batteries": 0,
+        "relay_aircraft": 1,
+        "relay_components": 0
+      },
+      "shares": [
+        0.3849508889895779,
+        0.5938455548848369,
+        0.02120355612558518
+      ],
+      "zones": [
+        [
+          "S001",
+          "S002",
+          "S004",
+          "S008",
+          "S009"
+        ],
+        [
+          "S003",
+          "S005",
+          "S006",
+          "S007",
+          "S010",
+          "S012",
+          "S013",
+          "S014",
+          "S015"
+        ],
+        [
+          "S011"
+        ]
+      ]
+    },
+    {
+      "id": "P12_346_5",
+      "group_count": 3,
+      "shortage_total": 9,
+      "resource_total": 36,
+      "workload_cv": 0.3110112670139431,
+      "resource_need": {
+        "A_aircraft": 5,
+        "B_aircraft": 4,
+        "C_aircraft": 3,
+        "A_batteries": 6,
+        "B_batteries": 8,
+        "C_batteries": 4,
+        "relay_aircraft": 3,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 1,
+        "B_aircraft": 2,
+        "C_aircraft": 1,
+        "A_batteries": 0,
+        "B_batteries": 4,
+        "C_batteries": 0,
+        "relay_aircraft": 1,
+        "relay_components": 0
+      },
+      "shares": [
+        0.3849508889895779,
+        0.42636501857507164,
+        0.18868409243535042
+      ],
+      "zones": [
+        [
+          "S001",
+          "S002",
+          "S004",
+          "S008",
+          "S009"
+        ],
+        [
+          "S003",
+          "S005",
+          "S006",
+          "S007",
+          "S011",
+          "S015"
+        ],
+        [
+          "S010",
+          "S012",
+          "S013",
+          "S014"
+        ]
+      ]
+    },
+    {
+      "id": "P12_34_56",
+      "group_count": 3,
+      "shortage_total": 8,
+      "resource_total": 35,
+      "workload_cv": 0.263035107579835,
+      "resource_need": {
+        "A_aircraft": 5,
+        "B_aircraft": 4,
+        "C_aircraft": 3,
+        "A_batteries": 6,
+        "B_batteries": 7,
+        "C_batteries": 4,
+        "relay_aircraft": 3,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 1,
+        "B_aircraft": 2,
+        "C_aircraft": 1,
+        "A_batteries": 0,
+        "B_batteries": 3,
+        "C_batteries": 0,
+        "relay_aircraft": 1,
+        "relay_components": 0
+      },
+      "shares": [
+        0.3849508889895779,
+        0.4051614624494864,
+        0.2098876485609356
+      ],
+      "zones": [
+        [
+          "S001",
+          "S002",
+          "S004",
+          "S008",
+          "S009"
+        ],
+        [
+          "S003",
+          "S005",
+          "S006",
+          "S007",
+          "S015"
+        ],
+        [
+          "S010",
+          "S011",
+          "S012",
+          "S013",
+          "S014"
+        ]
+      ]
+    },
+    {
+      "id": "P12_356_4",
+      "group_count": 3,
+      "shortage_total": 10,
+      "resource_total": 37,
+      "workload_cv": 0.6426548453760069,
+      "resource_need": {
+        "A_aircraft": 6,
+        "B_aircraft": 3,
+        "C_aircraft": 4,
+        "A_batteries": 7,
+        "B_batteries": 6,
+        "C_batteries": 5,
+        "relay_aircraft": 3,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 2,
+        "B_aircraft": 1,
+        "C_aircraft": 2,
+        "A_batteries": 1,
+        "B_batteries": 2,
+        "C_batteries": 1,
+        "relay_aircraft": 1,
+        "relay_components": 0
+      },
+      "shares": [
+        0.3849508889895779,
+        0.5660510132265291,
+        0.04899809778389301
+      ],
+      "zones": [
+        [
+          "S001",
+          "S002",
+          "S004",
+          "S008",
+          "S009"
+        ],
+        [
+          "S003",
+          "S005",
+          "S007",
+          "S010",
+          "S011",
+          "S012",
+          "S013",
+          "S014",
+          "S015"
+        ],
+        [
+          "S006"
+        ]
+      ]
+    },
+    {
+      "id": "P12_35_46",
+      "group_count": 3,
+      "shortage_total": 12,
+      "resource_total": 39,
+      "workload_cv": 0.5915425867717152,
+      "resource_need": {
+        "A_aircraft": 6,
+        "B_aircraft": 4,
+        "C_aircraft": 4,
+        "A_batteries": 7,
+        "B_batteries": 7,
+        "C_batteries": 5,
+        "relay_aircraft": 3,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 2,
+        "B_aircraft": 2,
+        "C_aircraft": 2,
+        "A_batteries": 1,
+        "B_batteries": 3,
+        "C_batteries": 1,
+        "relay_aircraft": 1,
+        "relay_components": 0
+      },
+      "shares": [
+        0.3849508889895779,
+        0.544847457100944,
+        0.07020165390947819
+      ],
+      "zones": [
+        [
+          "S001",
+          "S002",
+          "S004",
+          "S008",
+          "S009"
+        ],
+        [
+          "S003",
+          "S005",
+          "S007",
+          "S010",
+          "S012",
+          "S013",
+          "S014",
+          "S015"
+        ],
+        [
+          "S006",
+          "S011"
+        ]
+      ]
+    },
+    {
+      "id": "P12_36_45",
+      "group_count": 3,
+      "shortage_total": 13,
+      "resource_total": 40,
+      "workload_cv": 0.2031192018645602,
+      "resource_need": {
+        "A_aircraft": 6,
+        "B_aircraft": 4,
+        "C_aircraft": 4,
+        "A_batteries": 7,
+        "B_batteries": 8,
+        "C_batteries": 5,
+        "relay_aircraft": 3,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 2,
+        "B_aircraft": 2,
+        "C_aircraft": 2,
+        "A_batteries": 1,
+        "B_batteries": 4,
+        "C_batteries": 1,
+        "relay_aircraft": 1,
+        "relay_components": 0
+      },
+      "shares": [
+        0.3849508889895779,
+        0.3773669207911787,
+        0.23768219021924347
+      ],
+      "zones": [
+        [
+          "S001",
+          "S002",
+          "S004",
+          "S008",
+          "S009"
+        ],
+        [
+          "S003",
+          "S005",
+          "S007",
+          "S011",
+          "S015"
+        ],
+        [
+          "S006",
+          "S010",
+          "S012",
+          "S013",
+          "S014"
+        ]
+      ]
+    },
+    {
+      "id": "P12_3_456",
+      "group_count": 3,
+      "shortage_total": 12,
+      "resource_total": 39,
+      "workload_cv": 0.16181494607391914,
+      "resource_need": {
+        "A_aircraft": 6,
+        "B_aircraft": 4,
+        "C_aircraft": 4,
+        "A_batteries": 7,
+        "B_batteries": 7,
+        "C_batteries": 5,
+        "relay_aircraft": 3,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 2,
+        "B_aircraft": 2,
+        "C_aircraft": 2,
+        "A_batteries": 1,
+        "B_batteries": 3,
+        "C_batteries": 1,
+        "relay_aircraft": 1,
+        "relay_components": 0
+      },
+      "shares": [
+        0.3849508889895779,
+        0.3561633646655934,
+        0.25888574634482864
+      ],
+      "zones": [
+        [
+          "S001",
+          "S002",
+          "S004",
+          "S008",
+          "S009"
+        ],
+        [
+          "S003",
+          "S005",
+          "S007",
+          "S015"
+        ],
+        [
+          "S006",
+          "S010",
+          "S011",
+          "S012",
+          "S013",
+          "S014"
+        ]
+      ]
+    },
+    {
+      "id": "P1345_2_6",
+      "group_count": 3,
+      "shortage_total": 11,
+      "resource_total": 37,
+      "workload_cv": 0.7970575016384162,
+      "resource_need": {
+        "A_aircraft": 5,
+        "B_aircraft": 4,
+        "C_aircraft": 4,
+        "A_batteries": 5,
+        "B_batteries": 7,
+        "C_batteries": 6,
+        "relay_aircraft": 3,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 1,
+        "B_aircraft": 2,
+        "C_aircraft": 2,
+        "A_batteries": 0,
+        "B_batteries": 3,
+        "C_batteries": 2,
+        "relay_aircraft": 1,
+        "relay_components": 0
+      },
+      "shares": [
+        0.6705464902742985,
+        0.3082499536001163,
+        0.02120355612558518
+      ],
+      "zones": [
+        [
+          "S001",
+          "S003",
+          "S005",
+          "S006",
+          "S007",
+          "S010",
+          "S012",
+          "S013",
+          "S014",
+          "S015"
+        ],
+        [
+          "S002",
+          "S004",
+          "S008",
+          "S009"
+        ],
+        [
+          "S011"
+        ]
+      ]
+    },
+    {
+      "id": "P1346_2_5",
+      "group_count": 3,
+      "shortage_total": 12,
+      "resource_total": 38,
+      "workload_cv": 0.3886968278911147,
+      "resource_need": {
+        "A_aircraft": 5,
+        "B_aircraft": 4,
+        "C_aircraft": 4,
+        "A_batteries": 5,
+        "B_batteries": 8,
+        "C_batteries": 6,
+        "relay_aircraft": 3,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 1,
+        "B_aircraft": 2,
+        "C_aircraft": 2,
+        "A_batteries": 0,
+        "B_batteries": 4,
+        "C_batteries": 2,
+        "relay_aircraft": 1,
+        "relay_components": 0
+      },
+      "shares": [
+        0.5030659539645332,
+        0.3082499536001163,
+        0.18868409243535042
+      ],
+      "zones": [
+        [
+          "S001",
+          "S003",
+          "S005",
+          "S006",
+          "S007",
+          "S011",
+          "S015"
+        ],
+        [
+          "S002",
+          "S004",
+          "S008",
+          "S009"
+        ],
+        [
+          "S010",
+          "S012",
+          "S013",
+          "S014"
+        ]
+      ]
+    },
+    {
+      "id": "P134_25_6",
+      "group_count": 3,
+      "shortage_total": 10,
+      "resource_total": 36,
+      "workload_cv": 0.6623844971449382,
+      "resource_need": {
+        "A_aircraft": 5,
+        "B_aircraft": 4,
+        "C_aircraft": 4,
+        "A_batteries": 5,
+        "B_batteries": 6,
+        "C_batteries": 6,
+        "relay_aircraft": 3,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 1,
+        "B_aircraft": 2,
+        "C_aircraft": 2,
+        "A_batteries": 0,
+        "B_batteries": 2,
+        "C_batteries": 2,
+        "relay_aircraft": 1,
+        "relay_components": 0
+      },
+      "shares": [
+        0.481862397838948,
+        0.49693404603546676,
+        0.02120355612558518
+      ],
+      "zones": [
+        [
+          "S001",
+          "S003",
+          "S005",
+          "S006",
+          "S007",
+          "S015"
+        ],
+        [
+          "S002",
+          "S004",
+          "S008",
+          "S009",
+          "S010",
+          "S012",
+          "S013",
+          "S014"
+        ],
+        [
+          "S011"
+        ]
+      ]
+    },
+    {
+      "id": "P134_26_5",
+      "group_count": 3,
+      "shortage_total": 13,
+      "resource_total": 39,
+      "workload_cv": 0.35916293903952046,
+      "resource_need": {
+        "A_aircraft": 5,
+        "B_aircraft": 5,
+        "C_aircraft": 4,
+        "A_batteries": 5,
+        "B_batteries": 8,
+        "C_batteries": 6,
+        "relay_aircraft": 3,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 1,
+        "B_aircraft": 3,
+        "C_aircraft": 2,
+        "A_batteries": 0,
+        "B_batteries": 4,
+        "C_batteries": 2,
+        "relay_aircraft": 1,
+        "relay_components": 0
+      },
+      "shares": [
+        0.481862397838948,
+        0.3294535097257015,
+        0.18868409243535042
+      ],
+      "zones": [
+        [
+          "S001",
+          "S003",
+          "S005",
+          "S006",
+          "S007",
+          "S015"
+        ],
+        [
+          "S002",
+          "S004",
+          "S008",
+          "S009",
+          "S011"
+        ],
+        [
+          "S010",
+          "S012",
+          "S013",
+          "S014"
+        ]
+      ]
+    },
+    {
+      "id": "P134_2_56",
+      "group_count": 3,
+      "shortage_total": 11,
+      "resource_total": 37,
+      "workload_cv": 0.33732282474217484,
+      "resource_need": {
+        "A_aircraft": 5,
+        "B_aircraft": 4,
+        "C_aircraft": 4,
+        "A_batteries": 5,
+        "B_batteries": 7,
+        "C_batteries": 6,
+        "relay_aircraft": 3,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 1,
+        "B_aircraft": 2,
+        "C_aircraft": 2,
+        "A_batteries": 0,
+        "B_batteries": 3,
+        "C_batteries": 2,
+        "relay_aircraft": 1,
+        "relay_components": 0
+      },
+      "shares": [
+        0.481862397838948,
+        0.3082499536001163,
+        0.2098876485609356
+      ],
+      "zones": [
+        [
+          "S001",
+          "S003",
+          "S005",
+          "S006",
+          "S007",
+          "S015"
+        ],
+        [
+          "S002",
+          "S004",
+          "S008",
+          "S009"
+        ],
+        [
+          "S010",
+          "S011",
+          "S012",
+          "S013",
+          "S014"
+        ]
+      ]
+    },
+    {
+      "id": "P1356_2_4",
+      "group_count": 3,
+      "shortage_total": 11,
+      "resource_total": 38,
+      "workload_cv": 0.7291411007423055,
+      "resource_need": {
+        "A_aircraft": 6,
+        "B_aircraft": 3,
+        "C_aircraft": 5,
+        "A_batteries": 6,
+        "B_batteries": 6,
+        "C_batteries": 6,
+        "relay_aircraft": 3,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 2,
+        "B_aircraft": 1,
+        "C_aircraft": 3,
+        "A_batteries": 0,
+        "B_batteries": 2,
+        "C_batteries": 2,
+        "relay_aircraft": 1,
+        "relay_components": 0
+      },
+      "shares": [
+        0.6427519486159907,
+        0.3082499536001163,
+        0.04899809778389301
+      ],
+      "zones": [
+        [
+          "S001",
+          "S003",
+          "S005",
+          "S007",
+          "S010",
+          "S011",
+          "S012",
+          "S013",
+          "S014",
+          "S015"
+        ],
+        [
+          "S002",
+          "S004",
+          "S008",
+          "S009"
+        ],
+        [
+          "S006"
+        ]
+      ]
+    },
+    {
+      "id": "P135_24_6",
+      "group_count": 3,
+      "shortage_total": 10,
+      "resource_total": 37,
+      "workload_cv": 0.7370172967117864,
+      "resource_need": {
+        "A_aircraft": 5,
+        "B_aircraft": 4,
+        "C_aircraft": 4,
+        "A_batteries": 6,
+        "B_batteries": 7,
+        "C_batteries": 5,
+        "relay_aircraft": 3,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 1,
+        "B_aircraft": 2,
+        "C_aircraft": 2,
+        "A_batteries": 0,
+        "B_batteries": 3,
+        "C_batteries": 1,
+        "relay_aircraft": 1,
+        "relay_components": 0
+      },
+      "shares": [
+        0.6215483924904055,
+        0.3572480513840093,
+        0.02120355612558518
+      ],
+      "zones": [
+        [
+          "S001",
+          "S003",
+          "S005",
+          "S007",
+          "S010",
+          "S012",
+          "S013",
+          "S014",
+          "S015"
+        ],
+        [
+          "S002",
+          "S004",
+          "S006",
+          "S008",
+          "S009"
+        ],
+        [
+          "S011"
+        ]
+      ]
+    },
+    {
+      "id": "P135_26_4",
+      "group_count": 3,
+      "shortage_total": 13,
+      "resource_total": 40,
+      "workload_cv": 0.7012763354008817,
+      "resource_need": {
+        "A_aircraft": 6,
+        "B_aircraft": 4,
+        "C_aircraft": 5,
+        "A_batteries": 6,
+        "B_batteries": 7,
+        "C_batteries": 6,
+        "relay_aircraft": 3,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 2,
+        "B_aircraft": 2,
+        "C_aircraft": 3,
+        "A_batteries": 0,
+        "B_batteries": 3,
+        "C_batteries": 2,
+        "relay_aircraft": 1,
+        "relay_components": 0
+      },
+      "shares": [
+        0.6215483924904055,
+        0.3294535097257015,
+        0.04899809778389301
+      ],
+      "zones": [
+        [
+          "S001",
+          "S003",
+          "S005",
+          "S007",
+          "S010",
+          "S012",
+          "S013",
+          "S014",
+          "S015"
+        ],
+        [
+          "S002",
+          "S004",
+          "S008",
+          "S009",
+          "S011"
+        ],
+        [
+          "S006"
+        ]
+      ]
+    },
+    {
+      "id": "P135_2_46",
+      "group_count": 3,
+      "shortage_total": 13,
+      "resource_total": 40,
+      "workload_cv": 0.6773522945561795,
+      "resource_need": {
+        "A_aircraft": 6,
+        "B_aircraft": 4,
+        "C_aircraft": 5,
+        "A_batteries": 6,
+        "B_batteries": 7,
+        "C_batteries": 6,
+        "relay_aircraft": 3,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 2,
+        "B_aircraft": 2,
+        "C_aircraft": 3,
+        "A_batteries": 0,
+        "B_batteries": 3,
+        "C_batteries": 2,
+        "relay_aircraft": 1,
+        "relay_components": 0
+      },
+      "shares": [
+        0.6215483924904055,
+        0.3082499536001163,
+        0.07020165390947819
+      ],
+      "zones": [
+        [
+          "S001",
+          "S003",
+          "S005",
+          "S007",
+          "S010",
+          "S012",
+          "S013",
+          "S014",
+          "S015"
+        ],
+        [
+          "S002",
+          "S004",
+          "S008",
+          "S009"
+        ],
+        [
+          "S006",
+          "S011"
+        ]
+      ]
+    },
+    {
+      "id": "P136_24_5",
+      "group_count": 3,
+      "shortage_total": 11,
+      "resource_total": 38,
+      "workload_cv": 0.32896264972929473,
+      "resource_need": {
+        "A_aircraft": 5,
+        "B_aircraft": 4,
+        "C_aircraft": 4,
+        "A_batteries": 6,
+        "B_batteries": 8,
+        "C_batteries": 5,
+        "relay_aircraft": 3,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 1,
+        "B_aircraft": 2,
+        "C_aircraft": 2,
+        "A_batteries": 0,
+        "B_batteries": 4,
+        "C_batteries": 1,
+        "relay_aircraft": 1,
+        "relay_components": 0
+      },
+      "shares": [
+        0.45406785618064016,
+        0.3572480513840093,
+        0.18868409243535042
+      ],
+      "zones": [
+        [
+          "S001",
+          "S003",
+          "S005",
+          "S007",
+          "S011",
+          "S015"
+        ],
+        [
+          "S002",
+          "S004",
+          "S006",
+          "S008",
+          "S009"
+        ],
+        [
+          "S010",
+          "S012",
+          "S013",
+          "S014"
+        ]
+      ]
+    },
+    {
+      "id": "P136_25_4",
+      "group_count": 3,
+      "shortage_total": 11,
+      "resource_total": 38,
+      "workload_cv": 0.60544663937981,
+      "resource_need": {
+        "A_aircraft": 6,
+        "B_aircraft": 3,
+        "C_aircraft": 5,
+        "A_batteries": 6,
+        "B_batteries": 6,
+        "C_batteries": 6,
+        "relay_aircraft": 3,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 2,
+        "B_aircraft": 1,
+        "C_aircraft": 3,
+        "A_batteries": 0,
+        "B_batteries": 2,
+        "C_batteries": 2,
+        "relay_aircraft": 1,
+        "relay_components": 0
+      },
+      "shares": [
+        0.45406785618064016,
+        0.49693404603546676,
+        0.04899809778389301
+      ],
+      "zones": [
+        [
+          "S001",
+          "S003",
+          "S005",
+          "S007",
+          "S011",
+          "S015"
+        ],
+        [
+          "S002",
+          "S004",
+          "S008",
+          "S009",
+          "S010",
+          "S012",
+          "S013",
+          "S014"
+        ],
+        [
+          "S006"
+        ]
+      ]
+    },
+    {
+      "id": "P136_2_45",
+      "group_count": 3,
+      "shortage_total": 14,
+      "resource_total": 41,
+      "workload_cv": 0.27030617154463776,
+      "resource_need": {
+        "A_aircraft": 6,
+        "B_aircraft": 4,
+        "C_aircraft": 5,
+        "A_batteries": 6,
+        "B_batteries": 8,
+        "C_batteries": 6,
+        "relay_aircraft": 3,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 2,
+        "B_aircraft": 2,
+        "C_aircraft": 3,
+        "A_batteries": 0,
+        "B_batteries": 4,
+        "C_batteries": 2,
+        "relay_aircraft": 1,
+        "relay_components": 0
+      },
+      "shares": [
+        0.45406785618064016,
+        0.3082499536001163,
+        0.23768219021924347
+      ],
+      "zones": [
+        [
+          "S001",
+          "S003",
+          "S005",
+          "S007",
+          "S011",
+          "S015"
+        ],
+        [
+          "S002",
+          "S004",
+          "S008",
+          "S009"
+        ],
+        [
+          "S006",
+          "S010",
+          "S012",
+          "S013",
+          "S014"
+        ]
+      ]
+    },
+    {
+      "id": "P13_245_6",
+      "group_count": 3,
+      "shortage_total": 9,
+      "resource_total": 36,
+      "workload_cv": 0.6764532475560873,
+      "resource_need": {
+        "A_aircraft": 5,
+        "B_aircraft": 4,
+        "C_aircraft": 4,
+        "A_batteries": 6,
+        "B_batteries": 6,
+        "C_batteries": 5,
+        "relay_aircraft": 3,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 1,
+        "B_aircraft": 2,
+        "C_aircraft": 2,
+        "A_batteries": 0,
+        "B_batteries": 2,
+        "C_batteries": 1,
+        "relay_aircraft": 1,
+        "relay_components": 0
+      },
+      "shares": [
+        0.43286430005505505,
+        0.5459321438193597,
+        0.02120355612558518
+      ],
+      "zones": [
+        [
+          "S001",
+          "S003",
+          "S005",
+          "S007",
+          "S015"
+        ],
+        [
+          "S002",
+          "S004",
+          "S006",
+          "S008",
+          "S009",
+          "S010",
+          "S012",
+          "S013",
+          "S014"
+        ],
+        [
+          "S011"
+        ]
+      ]
+    },
+    {
+      "id": "P13_246_5",
+      "group_count": 3,
+      "shortage_total": 12,
+      "resource_total": 39,
+      "workload_cv": 0.31400067624242833,
+      "resource_need": {
+        "A_aircraft": 5,
+        "B_aircraft": 5,
+        "C_aircraft": 4,
+        "A_batteries": 6,
+        "B_batteries": 8,
+        "C_batteries": 5,
+        "relay_aircraft": 3,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 1,
+        "B_aircraft": 3,
+        "C_aircraft": 2,
+        "A_batteries": 0,
+        "B_batteries": 4,
+        "C_batteries": 1,
+        "relay_aircraft": 1,
+        "relay_components": 0
+      },
+      "shares": [
+        0.43286430005505505,
+        0.37845160750959456,
+        0.18868409243535042
+      ],
+      "zones": [
+        [
+          "S001",
+          "S003",
+          "S005",
+          "S007",
+          "S015"
+        ],
+        [
+          "S002",
+          "S004",
+          "S006",
+          "S008",
+          "S009",
+          "S011"
+        ],
+        [
+          "S010",
+          "S012",
+          "S013",
+          "S014"
+        ]
+      ]
+    },
+    {
+      "id": "P13_24_56",
+      "group_count": 3,
+      "shortage_total": 10,
+      "resource_total": 37,
+      "workload_cv": 0.2777615749069514,
+      "resource_need": {
+        "A_aircraft": 5,
+        "B_aircraft": 4,
+        "C_aircraft": 4,
+        "A_batteries": 6,
+        "B_batteries": 7,
+        "C_batteries": 5,
+        "relay_aircraft": 3,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 1,
+        "B_aircraft": 2,
+        "C_aircraft": 2,
+        "A_batteries": 0,
+        "B_batteries": 3,
+        "C_batteries": 1,
+        "relay_aircraft": 1,
+        "relay_components": 0
+      },
+      "shares": [
+        0.43286430005505505,
+        0.3572480513840093,
+        0.2098876485609356
+      ],
+      "zones": [
+        [
+          "S001",
+          "S003",
+          "S005",
+          "S007",
+          "S015"
+        ],
+        [
+          "S002",
+          "S004",
+          "S006",
+          "S008",
+          "S009"
+        ],
+        [
+          "S010",
+          "S011",
+          "S012",
+          "S013",
+          "S014"
+        ]
+      ]
+    },
+    {
+      "id": "P13_256_4",
+      "group_count": 3,
+      "shortage_total": 10,
+      "resource_total": 37,
+      "workload_cv": 0.6121410555300073,
+      "resource_need": {
+        "A_aircraft": 6,
+        "B_aircraft": 3,
+        "C_aircraft": 5,
+        "A_batteries": 6,
+        "B_batteries": 5,
+        "C_batteries": 6,
+        "relay_aircraft": 3,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 2,
+        "B_aircraft": 1,
+        "C_aircraft": 3,
+        "A_batteries": 0,
+        "B_batteries": 1,
+        "C_batteries": 2,
+        "relay_aircraft": 1,
+        "relay_components": 0
+      },
+      "shares": [
+        0.43286430005505505,
+        0.5181376021610519,
+        0.04899809778389301
+      ],
+      "zones": [
+        [
+          "S001",
+          "S003",
+          "S005",
+          "S007",
+          "S015"
+        ],
+        [
+          "S002",
+          "S004",
+          "S008",
+          "S009",
+          "S010",
+          "S011",
+          "S012",
+          "S013",
+          "S014"
+        ],
+        [
+          "S006"
+        ]
+      ]
+    },
+    {
+      "id": "P13_25_46",
+      "group_count": 3,
+      "shortage_total": 12,
+      "resource_total": 39,
+      "workload_cv": 0.5636751384874756,
+      "resource_need": {
+        "A_aircraft": 6,
+        "B_aircraft": 4,
+        "C_aircraft": 5,
+        "A_batteries": 6,
+        "B_batteries": 6,
+        "C_batteries": 6,
+        "relay_aircraft": 3,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 2,
+        "B_aircraft": 2,
+        "C_aircraft": 3,
+        "A_batteries": 0,
+        "B_batteries": 2,
+        "C_batteries": 2,
+        "relay_aircraft": 1,
+        "relay_components": 0
+      },
+      "shares": [
+        0.43286430005505505,
+        0.49693404603546676,
+        0.07020165390947819
+      ],
+      "zones": [
+        [
+          "S001",
+          "S003",
+          "S005",
+          "S007",
+          "S015"
+        ],
+        [
+          "S002",
+          "S004",
+          "S008",
+          "S009",
+          "S010",
+          "S012",
+          "S013",
+          "S014"
+        ],
+        [
+          "S006",
+          "S011"
+        ]
+      ]
+    },
+    {
+      "id": "P13_26_45",
+      "group_count": 3,
+      "shortage_total": 15,
+      "resource_total": 42,
+      "workload_cv": 0.23918993005654882,
+      "resource_need": {
+        "A_aircraft": 6,
+        "B_aircraft": 5,
+        "C_aircraft": 5,
+        "A_batteries": 6,
+        "B_batteries": 8,
+        "C_batteries": 6,
+        "relay_aircraft": 3,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 2,
+        "B_aircraft": 3,
+        "C_aircraft": 3,
+        "A_batteries": 0,
+        "B_batteries": 4,
+        "C_batteries": 2,
+        "relay_aircraft": 1,
+        "relay_components": 0
+      },
+      "shares": [
+        0.43286430005505505,
+        0.3294535097257015,
+        0.23768219021924347
+      ],
+      "zones": [
+        [
+          "S001",
+          "S003",
+          "S005",
+          "S007",
+          "S015"
+        ],
+        [
+          "S002",
+          "S004",
+          "S008",
+          "S009",
+          "S011"
+        ],
+        [
+          "S006",
+          "S010",
+          "S012",
+          "S013",
+          "S014"
+        ]
+      ]
+    },
+    {
+      "id": "P13_2_456",
+      "group_count": 3,
+      "shortage_total": 13,
+      "resource_total": 40,
+      "workload_cv": 0.21962262509003166,
+      "resource_need": {
+        "A_aircraft": 6,
+        "B_aircraft": 4,
+        "C_aircraft": 5,
+        "A_batteries": 6,
+        "B_batteries": 7,
+        "C_batteries": 6,
+        "relay_aircraft": 3,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 2,
+        "B_aircraft": 2,
+        "C_aircraft": 3,
+        "A_batteries": 0,
+        "B_batteries": 3,
+        "C_batteries": 2,
+        "relay_aircraft": 1,
+        "relay_components": 0
+      },
+      "shares": [
+        0.43286430005505505,
+        0.3082499536001163,
+        0.25888574634482864
+      ],
+      "zones": [
+        [
+          "S001",
+          "S003",
+          "S005",
+          "S007",
+          "S015"
+        ],
+        [
+          "S002",
+          "S004",
+          "S008",
+          "S009"
+        ],
+        [
+          "S006",
+          "S010",
+          "S011",
+          "S012",
+          "S013",
+          "S014"
+        ]
+      ]
+    },
+    {
+      "id": "P1456_2_3",
+      "group_count": 3,
+      "shortage_total": 16,
+      "resource_total": 43,
+      "workload_cv": 0.05887606937853872,
+      "resource_need": {
+        "A_aircraft": 7,
+        "B_aircraft": 4,
+        "C_aircraft": 5,
+        "A_batteries": 7,
+        "B_batteries": 7,
+        "C_batteries": 7,
+        "relay_aircraft": 3,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 3,
+        "B_aircraft": 2,
+        "C_aircraft": 3,
+        "A_batteries": 1,
+        "B_batteries": 3,
+        "C_batteries": 3,
+        "relay_aircraft": 1,
+        "relay_components": 0
+      },
+      "shares": [
+        0.3355866817342902,
+        0.3082499536001163,
+        0.3561633646655934
+      ],
+      "zones": [
+        [
+          "S001",
+          "S006",
+          "S010",
+          "S011",
+          "S012",
+          "S013",
+          "S014"
+        ],
+        [
+          "S002",
+          "S004",
+          "S008",
+          "S009"
+        ],
+        [
+          "S003",
+          "S005",
+          "S007",
+          "S015"
+        ]
+      ]
+    },
+    {
+      "id": "P145_23_6",
+      "group_count": 3,
+      "shortage_total": 16,
+      "resource_total": 43,
+      "workload_cv": 0.7887928713205788,
+      "resource_need": {
+        "A_aircraft": 6,
+        "B_aircraft": 5,
+        "C_aircraft": 4,
+        "A_batteries": 7,
+        "B_batteries": 8,
+        "C_batteries": 7,
+        "relay_aircraft": 3,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 2,
+        "B_aircraft": 3,
+        "C_aircraft": 2,
+        "A_batteries": 1,
+        "B_batteries": 4,
+        "C_batteries": 3,
+        "relay_aircraft": 1,
+        "relay_components": 0
+      },
+      "shares": [
+        0.314383125608705,
+        0.6644133182657098,
+        0.02120355612558518
+      ],
+      "zones": [
+        [
+          "S001",
+          "S006",
+          "S010",
+          "S012",
+          "S013",
+          "S014"
+        ],
+        [
+          "S002",
+          "S003",
+          "S004",
+          "S005",
+          "S007",
+          "S008",
+          "S009",
+          "S015"
+        ],
+        [
+          "S011"
+        ]
+      ]
+    },
+    {
+      "id": "P145_26_3",
+      "group_count": 3,
+      "shortage_total": 18,
+      "resource_total": 45,
+      "workload_cv": 0.051827803387705235,
+      "resource_need": {
+        "A_aircraft": 7,
+        "B_aircraft": 5,
+        "C_aircraft": 5,
+        "A_batteries": 7,
+        "B_batteries": 8,
+        "C_batteries": 7,
+        "relay_aircraft": 3,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 3,
+        "B_aircraft": 3,
+        "C_aircraft": 3,
+        "A_batteries": 1,
+        "B_batteries": 4,
+        "C_batteries": 3,
+        "relay_aircraft": 1,
+        "relay_components": 0
+      },
+      "shares": [
+        0.314383125608705,
+        0.3294535097257015,
+        0.3561633646655934
+      ],
+      "zones": [
+        [
+          "S001",
+          "S006",
+          "S010",
+          "S012",
+          "S013",
+          "S014"
+        ],
+        [
+          "S002",
+          "S004",
+          "S008",
+          "S009",
+          "S011"
+        ],
+        [
+          "S003",
+          "S005",
+          "S007",
+          "S015"
+        ]
+      ]
+    },
+    {
+      "id": "P145_2_36",
+      "group_count": 3,
+      "shortage_total": 17,
+      "resource_total": 44,
+      "workload_cv": 0.0937108820157249,
+      "resource_need": {
+        "A_aircraft": 7,
+        "B_aircraft": 4,
+        "C_aircraft": 5,
+        "A_batteries": 7,
+        "B_batteries": 8,
+        "C_batteries": 7,
+        "relay_aircraft": 3,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 3,
+        "B_aircraft": 2,
+        "C_aircraft": 3,
+        "A_batteries": 1,
+        "B_batteries": 4,
+        "C_batteries": 3,
+        "relay_aircraft": 1,
+        "relay_components": 0
+      },
+      "shares": [
+        0.314383125608705,
+        0.3082499536001163,
+        0.3773669207911787
+      ],
+      "zones": [
+        [
+          "S001",
+          "S006",
+          "S010",
+          "S012",
+          "S013",
+          "S014"
+        ],
+        [
+          "S002",
+          "S004",
+          "S008",
+          "S009"
+        ],
+        [
+          "S003",
+          "S005",
+          "S007",
+          "S011",
+          "S015"
+        ]
+      ]
+    },
+    {
+      "id": "P146_23_5",
+      "group_count": 3,
+      "shortage_total": 16,
+      "resource_total": 43,
+      "workload_cv": 0.7041884299739727,
+      "resource_need": {
+        "A_aircraft": 6,
+        "B_aircraft": 5,
+        "C_aircraft": 4,
+        "A_batteries": 7,
+        "B_batteries": 8,
+        "C_batteries": 7,
+        "relay_aircraft": 3,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 2,
+        "B_aircraft": 3,
+        "C_aircraft": 2,
+        "A_batteries": 1,
+        "B_batteries": 4,
+        "C_batteries": 3,
+        "relay_aircraft": 1,
+        "relay_components": 0
+      },
+      "shares": [
+        0.14690258929893973,
+        0.6644133182657098,
+        0.18868409243535042
+      ],
+      "zones": [
+        [
+          "S001",
+          "S006",
+          "S011"
+        ],
+        [
+          "S002",
+          "S003",
+          "S004",
+          "S005",
+          "S007",
+          "S008",
+          "S009",
+          "S015"
+        ],
+        [
+          "S010",
+          "S012",
+          "S013",
+          "S014"
+        ]
+      ]
+    },
+    {
+      "id": "P146_25_3",
+      "group_count": 3,
+      "shortage_total": 15,
+      "resource_total": 42,
+      "workload_cv": 0.4314260974320941,
+      "resource_need": {
+        "A_aircraft": 7,
+        "B_aircraft": 4,
+        "C_aircraft": 5,
+        "A_batteries": 7,
+        "B_batteries": 6,
+        "C_batteries": 7,
+        "relay_aircraft": 3,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 3,
+        "B_aircraft": 2,
+        "C_aircraft": 3,
+        "A_batteries": 1,
+        "B_batteries": 2,
+        "C_batteries": 3,
+        "relay_aircraft": 1,
+        "relay_components": 0
+      },
+      "shares": [
+        0.14690258929893973,
+        0.49693404603546676,
+        0.3561633646655934
+      ],
+      "zones": [
+        [
+          "S001",
+          "S006",
+          "S011"
+        ],
+        [
+          "S002",
+          "S004",
+          "S008",
+          "S009",
+          "S010",
+          "S012",
+          "S013",
+          "S014"
+        ],
+        [
+          "S003",
+          "S005",
+          "S007",
+          "S015"
+        ]
+      ]
+    },
+    {
+      "id": "P146_2_35",
+      "group_count": 3,
+      "shortage_total": 16,
+      "resource_total": 43,
+      "workload_cv": 0.49027693035642145,
+      "resource_need": {
+        "A_aircraft": 7,
+        "B_aircraft": 4,
+        "C_aircraft": 5,
+        "A_batteries": 7,
+        "B_batteries": 7,
+        "C_batteries": 7,
+        "relay_aircraft": 3,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 3,
+        "B_aircraft": 2,
+        "C_aircraft": 3,
+        "A_batteries": 1,
+        "B_batteries": 3,
+        "C_batteries": 3,
+        "relay_aircraft": 1,
+        "relay_components": 0
+      },
+      "shares": [
+        0.14690258929893973,
+        0.3082499536001163,
+        0.544847457100944
+      ],
+      "zones": [
+        [
+          "S001",
+          "S006",
+          "S011"
+        ],
+        [
+          "S002",
+          "S004",
+          "S008",
+          "S009"
+        ],
+        [
+          "S003",
+          "S005",
+          "S007",
+          "S010",
+          "S012",
+          "S013",
+          "S014",
+          "S015"
+        ]
+      ]
+    },
+    {
+      "id": "P14_235_6",
+      "group_count": 3,
+      "shortage_total": 10,
+      "resource_total": 37,
+      "workload_cv": 1.109988779057618,
+      "resource_need": {
+        "A_aircraft": 6,
+        "B_aircraft": 3,
+        "C_aircraft": 4,
+        "A_batteries": 7,
+        "B_batteries": 5,
+        "C_batteries": 7,
+        "relay_aircraft": 2,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 2,
+        "B_aircraft": 1,
+        "C_aircraft": 2,
+        "A_batteries": 1,
+        "B_batteries": 1,
+        "C_batteries": 3,
+        "relay_aircraft": 0,
+        "relay_components": 0
+      },
+      "shares": [
+        0.12569903317335457,
+        0.8530974107010603,
+        0.02120355612558518
+      ],
+      "zones": [
+        [
+          "S001",
+          "S006"
+        ],
+        [
+          "S002",
+          "S003",
+          "S004",
+          "S005",
+          "S007",
+          "S008",
+          "S009",
+          "S010",
+          "S012",
+          "S013",
+          "S014",
+          "S015"
+        ],
+        [
+          "S011"
+        ]
+      ]
+    },
+    {
+      "id": "P14_236_5",
+      "group_count": 3,
+      "shortage_total": 15,
+      "resource_total": 42,
+      "workload_cv": 0.7512771102508515,
+      "resource_need": {
+        "A_aircraft": 6,
+        "B_aircraft": 4,
+        "C_aircraft": 4,
+        "A_batteries": 7,
+        "B_batteries": 8,
+        "C_batteries": 7,
+        "relay_aircraft": 3,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 2,
+        "B_aircraft": 2,
+        "C_aircraft": 2,
+        "A_batteries": 1,
+        "B_batteries": 4,
+        "C_batteries": 3,
+        "relay_aircraft": 1,
+        "relay_components": 0
+      },
+      "shares": [
+        0.12569903317335457,
+        0.6856168743912949,
+        0.18868409243535042
+      ],
+      "zones": [
+        [
+          "S001",
+          "S006"
+        ],
+        [
+          "S002",
+          "S003",
+          "S004",
+          "S005",
+          "S007",
+          "S008",
+          "S009",
+          "S011",
+          "S015"
+        ],
+        [
+          "S010",
+          "S012",
+          "S013",
+          "S014"
+        ]
+      ]
+    },
+    {
+      "id": "P14_23_56",
+      "group_count": 3,
+      "shortage_total": 14,
+      "resource_total": 41,
+      "workload_cv": 0.7098551882912592,
+      "resource_need": {
+        "A_aircraft": 6,
+        "B_aircraft": 4,
+        "C_aircraft": 4,
+        "A_batteries": 7,
+        "B_batteries": 7,
+        "C_batteries": 7,
+        "relay_aircraft": 3,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 2,
+        "B_aircraft": 2,
+        "C_aircraft": 2,
+        "A_batteries": 1,
+        "B_batteries": 3,
+        "C_batteries": 3,
+        "relay_aircraft": 1,
+        "relay_components": 0
+      },
+      "shares": [
+        0.12569903317335457,
+        0.6644133182657098,
+        0.2098876485609356
+      ],
+      "zones": [
+        [
+          "S001",
+          "S006"
+        ],
+        [
+          "S002",
+          "S003",
+          "S004",
+          "S005",
+          "S007",
+          "S008",
+          "S009",
+          "S015"
+        ],
+        [
+          "S010",
+          "S011",
+          "S012",
+          "S013",
+          "S014"
+        ]
+      ]
+    },
+    {
+      "id": "P14_256_3",
+      "group_count": 3,
+      "shortage_total": 13,
+      "resource_total": 40,
+      "workload_cv": 0.48307089762426336,
+      "resource_need": {
+        "A_aircraft": 7,
+        "B_aircraft": 3,
+        "C_aircraft": 5,
+        "A_batteries": 7,
+        "B_batteries": 5,
+        "C_batteries": 7,
+        "relay_aircraft": 3,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 3,
+        "B_aircraft": 1,
+        "C_aircraft": 3,
+        "A_batteries": 1,
+        "B_batteries": 1,
+        "C_batteries": 3,
+        "relay_aircraft": 1,
+        "relay_components": 0
+      },
+      "shares": [
+        0.12569903317335457,
+        0.5181376021610519,
+        0.3561633646655934
+      ],
+      "zones": [
+        [
+          "S001",
+          "S006"
+        ],
+        [
+          "S002",
+          "S004",
+          "S008",
+          "S009",
+          "S010",
+          "S011",
+          "S012",
+          "S013",
+          "S014"
+        ],
+        [
+          "S003",
+          "S005",
+          "S007",
+          "S015"
+        ]
+      ]
+    },
+    {
+      "id": "P14_25_36",
+      "group_count": 3,
+      "shortage_total": 14,
+      "resource_total": 41,
+      "workload_cv": 0.46416425742611156,
+      "resource_need": {
+        "A_aircraft": 7,
+        "B_aircraft": 3,
+        "C_aircraft": 5,
+        "A_batteries": 7,
+        "B_batteries": 6,
+        "C_batteries": 7,
+        "relay_aircraft": 3,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 3,
+        "B_aircraft": 1,
+        "C_aircraft": 3,
+        "A_batteries": 1,
+        "B_batteries": 2,
+        "C_batteries": 3,
+        "relay_aircraft": 1,
+        "relay_components": 0
+      },
+      "shares": [
+        0.12569903317335457,
+        0.49693404603546676,
+        0.3773669207911787
+      ],
+      "zones": [
+        [
+          "S001",
+          "S006"
+        ],
+        [
+          "S002",
+          "S004",
+          "S008",
+          "S009",
+          "S010",
+          "S012",
+          "S013",
+          "S014"
+        ],
+        [
+          "S003",
+          "S005",
+          "S007",
+          "S011",
+          "S015"
+        ]
+      ]
+    },
+    {
+      "id": "P14_26_35",
+      "group_count": 3,
+      "shortage_total": 16,
+      "resource_total": 43,
+      "workload_cv": 0.5134158553862471,
+      "resource_need": {
+        "A_aircraft": 7,
+        "B_aircraft": 4,
+        "C_aircraft": 5,
+        "A_batteries": 7,
+        "B_batteries": 7,
+        "C_batteries": 7,
+        "relay_aircraft": 3,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 3,
+        "B_aircraft": 2,
+        "C_aircraft": 3,
+        "A_batteries": 1,
+        "B_batteries": 3,
+        "C_batteries": 3,
+        "relay_aircraft": 1,
+        "relay_components": 0
+      },
+      "shares": [
+        0.12569903317335457,
+        0.3294535097257015,
+        0.544847457100944
+      ],
+      "zones": [
+        [
+          "S001",
+          "S006"
+        ],
+        [
+          "S002",
+          "S004",
+          "S008",
+          "S009",
+          "S011"
+        ],
+        [
+          "S003",
+          "S005",
+          "S007",
+          "S010",
+          "S012",
+          "S013",
+          "S014",
+          "S015"
+        ]
+      ]
+    },
+    {
+      "id": "P14_2_356",
+      "group_count": 3,
+      "shortage_total": 14,
+      "resource_total": 41,
+      "workload_cv": 0.5419373499122482,
+      "resource_need": {
+        "A_aircraft": 7,
+        "B_aircraft": 3,
+        "C_aircraft": 5,
+        "A_batteries": 7,
+        "B_batteries": 6,
+        "C_batteries": 7,
+        "relay_aircraft": 3,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 3,
+        "B_aircraft": 1,
+        "C_aircraft": 3,
+        "A_batteries": 1,
+        "B_batteries": 2,
+        "C_batteries": 3,
+        "relay_aircraft": 1,
+        "relay_components": 0
+      },
+      "shares": [
+        0.12569903317335457,
+        0.3082499536001163,
+        0.5660510132265291
+      ],
+      "zones": [
+        [
+          "S001",
+          "S006"
+        ],
+        [
+          "S002",
+          "S004",
+          "S008",
+          "S009"
+        ],
+        [
+          "S003",
+          "S005",
+          "S007",
+          "S010",
+          "S011",
+          "S012",
+          "S013",
+          "S014",
+          "S015"
+        ]
+      ]
+    },
+    {
+      "id": "P156_23_4",
+      "group_count": 3,
+      "shortage_total": 15,
+      "resource_total": 42,
+      "workload_cv": 0.7602214562730755,
+      "resource_need": {
+        "A_aircraft": 6,
+        "B_aircraft": 4,
+        "C_aircraft": 5,
+        "A_batteries": 7,
+        "B_batteries": 7,
+        "C_batteries": 7,
+        "relay_aircraft": 3,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 2,
+        "B_aircraft": 2,
+        "C_aircraft": 3,
+        "A_batteries": 1,
+        "B_batteries": 3,
+        "C_batteries": 3,
+        "relay_aircraft": 1,
+        "relay_components": 0
+      },
+      "shares": [
+        0.2865885839503972,
+        0.6644133182657098,
+        0.04899809778389301
+      ],
+      "zones": [
+        [
+          "S001",
+          "S010",
+          "S011",
+          "S012",
+          "S013",
+          "S014"
+        ],
+        [
+          "S002",
+          "S003",
+          "S004",
+          "S005",
+          "S007",
+          "S008",
+          "S009",
+          "S015"
+        ],
+        [
+          "S006"
+        ]
+      ]
+    },
+    {
+      "id": "P156_24_3",
+      "group_count": 3,
+      "shortage_total": 14,
+      "resource_total": 41,
+      "workload_cv": 0.09916948620844233,
+      "resource_need": {
+        "A_aircraft": 6,
+        "B_aircraft": 4,
+        "C_aircraft": 5,
+        "A_batteries": 7,
+        "B_batteries": 7,
+        "C_batteries": 6,
+        "relay_aircraft": 3,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 2,
+        "B_aircraft": 2,
+        "C_aircraft": 3,
+        "A_batteries": 1,
+        "B_batteries": 3,
+        "C_batteries": 2,
+        "relay_aircraft": 1,
+        "relay_components": 0
+      },
+      "shares": [
+        0.2865885839503972,
+        0.3572480513840093,
+        0.3561633646655934
+      ],
+      "zones": [
+        [
+          "S001",
+          "S010",
+          "S011",
+          "S012",
+          "S013",
+          "S014"
+        ],
+        [
+          "S002",
+          "S004",
+          "S006",
+          "S008",
+          "S009"
+        ],
+        [
+          "S003",
+          "S005",
+          "S007",
+          "S015"
+        ]
+      ]
+    },
+    {
+      "id": "P156_2_34",
+      "group_count": 3,
+      "shortage_total": 13,
+      "resource_total": 40,
+      "workload_cv": 0.15466280418420936,
+      "resource_need": {
+        "A_aircraft": 6,
+        "B_aircraft": 4,
+        "C_aircraft": 5,
+        "A_batteries": 6,
+        "B_batteries": 7,
+        "C_batteries": 6,
+        "relay_aircraft": 3,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 2,
+        "B_aircraft": 2,
+        "C_aircraft": 3,
+        "A_batteries": 0,
+        "B_batteries": 3,
+        "C_batteries": 2,
+        "relay_aircraft": 1,
+        "relay_components": 0
+      },
+      "shares": [
+        0.2865885839503972,
+        0.3082499536001163,
+        0.4051614624494864
+      ],
+      "zones": [
+        [
+          "S001",
+          "S010",
+          "S011",
+          "S012",
+          "S013",
+          "S014"
+        ],
+        [
+          "S002",
+          "S004",
+          "S008",
+          "S009"
+        ],
+        [
+          "S003",
+          "S005",
+          "S006",
+          "S007",
+          "S015"
+        ]
+      ]
+    },
+    {
+      "id": "P15_234_6",
+      "group_count": 3,
+      "shortage_total": 13,
+      "resource_total": 40,
+      "workload_cv": 0.8599441592379936,
+      "resource_need": {
+        "A_aircraft": 5,
+        "B_aircraft": 5,
+        "C_aircraft": 4,
+        "A_batteries": 6,
+        "B_batteries": 8,
+        "C_batteries": 6,
+        "relay_aircraft": 3,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 1,
+        "B_aircraft": 3,
+        "C_aircraft": 2,
+        "A_batteries": 0,
+        "B_batteries": 4,
+        "C_batteries": 2,
+        "relay_aircraft": 1,
+        "relay_components": 0
+      },
+      "shares": [
+        0.26538502782481205,
+        0.7134114160496027,
+        0.02120355612558518
+      ],
+      "zones": [
+        [
+          "S001",
+          "S010",
+          "S012",
+          "S013",
+          "S014"
+        ],
+        [
+          "S002",
+          "S003",
+          "S004",
+          "S005",
+          "S006",
+          "S007",
+          "S008",
+          "S009",
+          "S015"
+        ],
+        [
+          "S011"
+        ]
+      ]
+    },
+    {
+      "id": "P15_236_4",
+      "group_count": 3,
+      "shortage_total": 16,
+      "resource_total": 43,
+      "workload_cv": 0.7929070406361106,
+      "resource_need": {
+        "A_aircraft": 6,
+        "B_aircraft": 4,
+        "C_aircraft": 5,
+        "A_batteries": 7,
+        "B_batteries": 8,
+        "C_batteries": 7,
+        "relay_aircraft": 3,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 2,
+        "B_aircraft": 2,
+        "C_aircraft": 3,
+        "A_batteries": 1,
+        "B_batteries": 4,
+        "C_batteries": 3,
+        "relay_aircraft": 1,
+        "relay_components": 0
+      },
+      "shares": [
+        0.26538502782481205,
+        0.6856168743912949,
+        0.04899809778389301
+      ],
+      "zones": [
+        [
+          "S001",
+          "S010",
+          "S012",
+          "S013",
+          "S014"
+        ],
+        [
+          "S002",
+          "S003",
+          "S004",
+          "S005",
+          "S007",
+          "S008",
+          "S009",
+          "S011",
+          "S015"
+        ],
+        [
+          "S006"
+        ]
+      ]
+    },
+    {
+      "id": "P15_23_46",
+      "group_count": 3,
+      "shortage_total": 17,
+      "resource_total": 44,
+      "workload_cv": 0.7418946206046796,
+      "resource_need": {
+        "A_aircraft": 6,
+        "B_aircraft": 5,
+        "C_aircraft": 5,
+        "A_batteries": 7,
+        "B_batteries": 8,
+        "C_batteries": 7,
+        "relay_aircraft": 3,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 2,
+        "B_aircraft": 3,
+        "C_aircraft": 3,
+        "A_batteries": 1,
+        "B_batteries": 4,
+        "C_batteries": 3,
+        "relay_aircraft": 1,
+        "relay_components": 0
+      },
+      "shares": [
+        0.26538502782481205,
+        0.6644133182657098,
+        0.07020165390947819
+      ],
+      "zones": [
+        [
+          "S001",
+          "S010",
+          "S012",
+          "S013",
+          "S014"
+        ],
+        [
+          "S002",
+          "S003",
+          "S004",
+          "S005",
+          "S007",
+          "S008",
+          "S009",
+          "S015"
+        ],
+        [
+          "S006",
+          "S011"
+        ]
+      ]
+    },
+    {
+      "id": "P15_246_3",
+      "group_count": 3,
+      "shortage_total": 16,
+      "resource_total": 43,
+      "workload_cv": 0.1467021596646307,
+      "resource_need": {
+        "A_aircraft": 6,
+        "B_aircraft": 5,
+        "C_aircraft": 5,
+        "A_batteries": 7,
+        "B_batteries": 8,
+        "C_batteries": 6,
+        "relay_aircraft": 3,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 2,
+        "B_aircraft": 3,
+        "C_aircraft": 3,
+        "A_batteries": 1,
+        "B_batteries": 4,
+        "C_batteries": 2,
+        "relay_aircraft": 1,
+        "relay_components": 0
+      },
+      "shares": [
+        0.26538502782481205,
+        0.37845160750959456,
+        0.3561633646655934
+      ],
+      "zones": [
+        [
+          "S001",
+          "S010",
+          "S012",
+          "S013",
+          "S014"
+        ],
+        [
+          "S002",
+          "S004",
+          "S006",
+          "S008",
+          "S009",
+          "S011"
+        ],
+        [
+          "S003",
+          "S005",
+          "S007",
+          "S015"
+        ]
+      ]
+    },
+    {
+      "id": "P15_24_36",
+      "group_count": 3,
+      "shortage_total": 15,
+      "resource_total": 42,
+      "workload_cv": 0.14623107862554782,
+      "resource_need": {
+        "A_aircraft": 6,
+        "B_aircraft": 4,
+        "C_aircraft": 5,
+        "A_batteries": 7,
+        "B_batteries": 8,
+        "C_batteries": 6,
+        "relay_aircraft": 3,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 2,
+        "B_aircraft": 2,
+        "C_aircraft": 3,
+        "A_batteries": 1,
+        "B_batteries": 4,
+        "C_batteries": 2,
+        "relay_aircraft": 1,
+        "relay_components": 0
+      },
+      "shares": [
+        0.26538502782481205,
+        0.3572480513840093,
+        0.3773669207911787
+      ],
+      "zones": [
+        [
+          "S001",
+          "S010",
+          "S012",
+          "S013",
+          "S014"
+        ],
+        [
+          "S002",
+          "S004",
+          "S006",
+          "S008",
+          "S009"
+        ],
+        [
+          "S003",
+          "S005",
+          "S007",
+          "S011",
+          "S015"
+        ]
+      ]
+    },
+    {
+      "id": "P15_26_34",
+      "group_count": 3,
+      "shortage_total": 15,
+      "resource_total": 42,
+      "workload_cv": 0.17138820308030925,
+      "resource_need": {
+        "A_aircraft": 6,
+        "B_aircraft": 5,
+        "C_aircraft": 5,
+        "A_batteries": 6,
+        "B_batteries": 8,
+        "C_batteries": 6,
+        "relay_aircraft": 3,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 2,
+        "B_aircraft": 3,
+        "C_aircraft": 3,
+        "A_batteries": 0,
+        "B_batteries": 4,
+        "C_batteries": 2,
+        "relay_aircraft": 1,
+        "relay_components": 0
+      },
+      "shares": [
+        0.26538502782481205,
+        0.3294535097257015,
+        0.4051614624494864
+      ],
+      "zones": [
+        [
+          "S001",
+          "S010",
+          "S012",
+          "S013",
+          "S014"
+        ],
+        [
+          "S002",
+          "S004",
+          "S008",
+          "S009",
+          "S011"
+        ],
+        [
+          "S003",
+          "S005",
+          "S006",
+          "S007",
+          "S015"
+        ]
+      ]
+    },
+    {
+      "id": "P15_2_346",
+      "group_count": 3,
+      "shortage_total": 14,
+      "resource_total": 41,
+      "workload_cv": 0.2042134370155743,
+      "resource_need": {
+        "A_aircraft": 6,
+        "B_aircraft": 4,
+        "C_aircraft": 5,
+        "A_batteries": 6,
+        "B_batteries": 8,
+        "C_batteries": 6,
+        "relay_aircraft": 3,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 2,
+        "B_aircraft": 2,
+        "C_aircraft": 3,
+        "A_batteries": 0,
+        "B_batteries": 4,
+        "C_batteries": 2,
+        "relay_aircraft": 1,
+        "relay_components": 0
+      },
+      "shares": [
+        0.26538502782481205,
+        0.3082499536001163,
+        0.42636501857507164
+      ],
+      "zones": [
+        [
+          "S001",
+          "S010",
+          "S012",
+          "S013",
+          "S014"
+        ],
+        [
+          "S002",
+          "S004",
+          "S008",
+          "S009"
+        ],
+        [
+          "S003",
+          "S005",
+          "S006",
+          "S007",
+          "S011",
+          "S015"
+        ]
+      ]
+    },
+    {
+      "id": "P16_234_5",
+      "group_count": 3,
+      "shortage_total": 13,
+      "resource_total": 40,
+      "workload_cv": 0.8138970906942803,
+      "resource_need": {
+        "A_aircraft": 5,
+        "B_aircraft": 5,
+        "C_aircraft": 4,
+        "A_batteries": 6,
+        "B_batteries": 8,
+        "C_batteries": 6,
+        "relay_aircraft": 3,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 1,
+        "B_aircraft": 3,
+        "C_aircraft": 2,
+        "A_batteries": 0,
+        "B_batteries": 4,
+        "C_batteries": 2,
+        "relay_aircraft": 1,
+        "relay_components": 0
+      },
+      "shares": [
+        0.09790449151504674,
+        0.7134114160496027,
+        0.18868409243535042
+      ],
+      "zones": [
+        [
+          "S001",
+          "S011"
+        ],
+        [
+          "S002",
+          "S003",
+          "S004",
+          "S005",
+          "S006",
+          "S007",
+          "S008",
+          "S009",
+          "S015"
+        ],
+        [
+          "S010",
+          "S012",
+          "S013",
+          "S014"
+        ]
+      ]
+    },
+    {
+      "id": "P16_235_4",
+      "group_count": 3,
+      "shortage_total": 11,
+      "resource_total": 38,
+      "workload_cv": 1.1042118843638389,
+      "resource_need": {
+        "A_aircraft": 6,
+        "B_aircraft": 3,
+        "C_aircraft": 5,
+        "A_batteries": 7,
+        "B_batteries": 5,
+        "C_batteries": 7,
+        "relay_aircraft": 2,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 2,
+        "B_aircraft": 1,
+        "C_aircraft": 3,
+        "A_batteries": 1,
+        "B_batteries": 1,
+        "C_batteries": 3,
+        "relay_aircraft": 0,
+        "relay_components": 0
+      },
+      "shares": [
+        0.09790449151504674,
+        0.8530974107010603,
+        0.04899809778389301
+      ],
+      "zones": [
+        [
+          "S001",
+          "S011"
+        ],
+        [
+          "S002",
+          "S003",
+          "S004",
+          "S005",
+          "S007",
+          "S008",
+          "S009",
+          "S010",
+          "S012",
+          "S013",
+          "S014",
+          "S015"
+        ],
+        [
+          "S006"
+        ]
+      ]
+    },
+    {
+      "id": "P16_23_45",
+      "group_count": 3,
+      "shortage_total": 17,
+      "resource_total": 44,
+      "workload_cv": 0.7228896952407495,
+      "resource_need": {
+        "A_aircraft": 6,
+        "B_aircraft": 5,
+        "C_aircraft": 5,
+        "A_batteries": 7,
+        "B_batteries": 8,
+        "C_batteries": 7,
+        "relay_aircraft": 3,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 2,
+        "B_aircraft": 3,
+        "C_aircraft": 3,
+        "A_batteries": 1,
+        "B_batteries": 4,
+        "C_batteries": 3,
+        "relay_aircraft": 1,
+        "relay_components": 0
+      },
+      "shares": [
+        0.09790449151504674,
+        0.6644133182657098,
+        0.23768219021924347
+      ],
+      "zones": [
+        [
+          "S001",
+          "S011"
+        ],
+        [
+          "S002",
+          "S003",
+          "S004",
+          "S005",
+          "S007",
+          "S008",
+          "S009",
+          "S015"
+        ],
+        [
+          "S006",
+          "S010",
+          "S012",
+          "S013",
+          "S014"
+        ]
+      ]
+    },
+    {
+      "id": "P16_245_3",
+      "group_count": 3,
+      "shortage_total": 13,
+      "resource_total": 40,
+      "workload_cv": 0.5508526230597578,
+      "resource_need": {
+        "A_aircraft": 6,
+        "B_aircraft": 4,
+        "C_aircraft": 5,
+        "A_batteries": 7,
+        "B_batteries": 6,
+        "C_batteries": 6,
+        "relay_aircraft": 3,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 2,
+        "B_aircraft": 2,
+        "C_aircraft": 3,
+        "A_batteries": 1,
+        "B_batteries": 2,
+        "C_batteries": 2,
+        "relay_aircraft": 1,
+        "relay_components": 0
+      },
+      "shares": [
+        0.09790449151504674,
+        0.5459321438193597,
+        0.3561633646655934
+      ],
+      "zones": [
+        [
+          "S001",
+          "S011"
+        ],
+        [
+          "S002",
+          "S004",
+          "S006",
+          "S008",
+          "S009",
+          "S010",
+          "S012",
+          "S013",
+          "S014"
+        ],
+        [
+          "S003",
+          "S005",
+          "S007",
+          "S015"
+        ]
+      ]
+    },
+    {
+      "id": "P16_24_35",
+      "group_count": 3,
+      "shortage_total": 14,
+      "resource_total": 41,
+      "workload_cv": 0.5497368766578878,
+      "resource_need": {
+        "A_aircraft": 6,
+        "B_aircraft": 4,
+        "C_aircraft": 5,
+        "A_batteries": 7,
+        "B_batteries": 7,
+        "C_batteries": 6,
+        "relay_aircraft": 3,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 2,
+        "B_aircraft": 2,
+        "C_aircraft": 3,
+        "A_batteries": 1,
+        "B_batteries": 3,
+        "C_batteries": 2,
+        "relay_aircraft": 1,
+        "relay_components": 0
+      },
+      "shares": [
+        0.09790449151504674,
+        0.3572480513840093,
+        0.544847457100944
+      ],
+      "zones": [
+        [
+          "S001",
+          "S011"
+        ],
+        [
+          "S002",
+          "S004",
+          "S006",
+          "S008",
+          "S009"
+        ],
+        [
+          "S003",
+          "S005",
+          "S007",
+          "S010",
+          "S012",
+          "S013",
+          "S014",
+          "S015"
+        ]
+      ]
+    },
+    {
+      "id": "P16_25_34",
+      "group_count": 3,
+      "shortage_total": 12,
+      "resource_total": 39,
+      "workload_cv": 0.5119117489046503,
+      "resource_need": {
+        "A_aircraft": 6,
+        "B_aircraft": 4,
+        "C_aircraft": 5,
+        "A_batteries": 6,
+        "B_batteries": 6,
+        "C_batteries": 6,
+        "relay_aircraft": 3,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 2,
+        "B_aircraft": 2,
+        "C_aircraft": 3,
+        "A_batteries": 0,
+        "B_batteries": 2,
+        "C_batteries": 2,
+        "relay_aircraft": 1,
+        "relay_components": 0
+      },
+      "shares": [
+        0.09790449151504674,
+        0.49693404603546676,
+        0.4051614624494864
+      ],
+      "zones": [
+        [
+          "S001",
+          "S011"
+        ],
+        [
+          "S002",
+          "S004",
+          "S008",
+          "S009",
+          "S010",
+          "S012",
+          "S013",
+          "S014"
+        ],
+        [
+          "S003",
+          "S005",
+          "S006",
+          "S007",
+          "S015"
+        ]
+      ]
+    },
+    {
+      "id": "P16_2_345",
+      "group_count": 3,
+      "shortage_total": 13,
+      "resource_total": 40,
+      "workload_cv": 0.6097274794769552,
+      "resource_need": {
+        "A_aircraft": 6,
+        "B_aircraft": 4,
+        "C_aircraft": 5,
+        "A_batteries": 6,
+        "B_batteries": 7,
+        "C_batteries": 6,
+        "relay_aircraft": 3,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 2,
+        "B_aircraft": 2,
+        "C_aircraft": 3,
+        "A_batteries": 0,
+        "B_batteries": 3,
+        "C_batteries": 2,
+        "relay_aircraft": 1,
+        "relay_components": 0
+      },
+      "shares": [
+        0.09790449151504674,
+        0.3082499536001163,
+        0.5938455548848369
+      ],
+      "zones": [
+        [
+          "S001",
+          "S011"
+        ],
+        [
+          "S002",
+          "S004",
+          "S008",
+          "S009"
+        ],
+        [
+          "S003",
+          "S005",
+          "S006",
+          "S007",
+          "S010",
+          "S012",
+          "S013",
+          "S014",
+          "S015"
+        ]
+      ]
+    },
+    {
+      "id": "P1_2345_6",
+      "group_count": 3,
+      "shortage_total": 7,
+      "resource_total": 34,
+      "workload_cv": 1.2084398173397575,
+      "resource_need": {
+        "A_aircraft": 5,
+        "B_aircraft": 3,
+        "C_aircraft": 4,
+        "A_batteries": 6,
+        "B_batteries": 5,
+        "C_batteries": 6,
+        "relay_aircraft": 2,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 1,
+        "B_aircraft": 1,
+        "C_aircraft": 2,
+        "A_batteries": 0,
+        "B_batteries": 1,
+        "C_batteries": 2,
+        "relay_aircraft": 0,
+        "relay_components": 0
+      },
+      "shares": [
+        0.07670093538946156,
+        0.9020955084849532,
+        0.02120355612558518
+      ],
+      "zones": [
+        [
+          "S001"
+        ],
+        [
+          "S002",
+          "S003",
+          "S004",
+          "S005",
+          "S006",
+          "S007",
+          "S008",
+          "S009",
+          "S010",
+          "S012",
+          "S013",
+          "S014",
+          "S015"
+        ],
+        [
+          "S011"
+        ]
+      ]
+    },
+    {
+      "id": "P1_2346_5",
+      "group_count": 3,
+      "shortage_total": 12,
+      "resource_total": 39,
+      "workload_cv": 0.8622248156456453,
+      "resource_need": {
+        "A_aircraft": 5,
+        "B_aircraft": 4,
+        "C_aircraft": 4,
+        "A_batteries": 6,
+        "B_batteries": 8,
+        "C_batteries": 6,
+        "relay_aircraft": 3,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 1,
+        "B_aircraft": 2,
+        "C_aircraft": 2,
+        "A_batteries": 0,
+        "B_batteries": 4,
+        "C_batteries": 2,
+        "relay_aircraft": 1,
+        "relay_components": 0
+      },
+      "shares": [
+        0.07670093538946156,
+        0.734614972175188,
+        0.18868409243535042
+      ],
+      "zones": [
+        [
+          "S001"
+        ],
+        [
+          "S002",
+          "S003",
+          "S004",
+          "S005",
+          "S006",
+          "S007",
+          "S008",
+          "S009",
+          "S011",
+          "S015"
+        ],
+        [
+          "S010",
+          "S012",
+          "S013",
+          "S014"
+        ]
+      ]
+    },
+    {
+      "id": "P1_234_56",
+      "group_count": 3,
+      "shortage_total": 11,
+      "resource_total": 38,
+      "workload_cv": 0.8226026508429631,
+      "resource_need": {
+        "A_aircraft": 5,
+        "B_aircraft": 4,
+        "C_aircraft": 4,
+        "A_batteries": 6,
+        "B_batteries": 7,
+        "C_batteries": 6,
+        "relay_aircraft": 3,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 1,
+        "B_aircraft": 2,
+        "C_aircraft": 2,
+        "A_batteries": 0,
+        "B_batteries": 3,
+        "C_batteries": 2,
+        "relay_aircraft": 1,
+        "relay_components": 0
+      },
+      "shares": [
+        0.07670093538946156,
+        0.7134114160496027,
+        0.2098876485609356
+      ],
+      "zones": [
+        [
+          "S001"
+        ],
+        [
+          "S002",
+          "S003",
+          "S004",
+          "S005",
+          "S006",
+          "S007",
+          "S008",
+          "S009",
+          "S015"
+        ],
+        [
+          "S010",
+          "S011",
+          "S012",
+          "S013",
+          "S014"
+        ]
+      ]
+    },
+    {
+      "id": "P1_2356_4",
+      "group_count": 3,
+      "shortage_total": 9,
+      "resource_total": 36,
+      "workload_cv": 1.1480671073635877,
+      "resource_need": {
+        "A_aircraft": 6,
+        "B_aircraft": 2,
+        "C_aircraft": 5,
+        "A_batteries": 7,
+        "B_batteries": 4,
+        "C_batteries": 7,
+        "relay_aircraft": 2,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 2,
+        "B_aircraft": 0,
+        "C_aircraft": 3,
+        "A_batteries": 1,
+        "B_batteries": 0,
+        "C_batteries": 3,
+        "relay_aircraft": 0,
+        "relay_components": 0
+      },
+      "shares": [
+        0.07670093538946156,
+        0.8743009668266454,
+        0.04899809778389301
+      ],
+      "zones": [
+        [
+          "S001"
+        ],
+        [
+          "S002",
+          "S003",
+          "S004",
+          "S005",
+          "S007",
+          "S008",
+          "S009",
+          "S010",
+          "S011",
+          "S012",
+          "S013",
+          "S014",
+          "S015"
+        ],
+        [
+          "S006"
+        ]
+      ]
+    },
+    {
+      "id": "P1_235_46",
+      "group_count": 3,
+      "shortage_total": 11,
+      "resource_total": 38,
+      "workload_cv": 1.1026148436957912,
+      "resource_need": {
+        "A_aircraft": 6,
+        "B_aircraft": 3,
+        "C_aircraft": 5,
+        "A_batteries": 7,
+        "B_batteries": 5,
+        "C_batteries": 7,
+        "relay_aircraft": 2,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 2,
+        "B_aircraft": 1,
+        "C_aircraft": 3,
+        "A_batteries": 1,
+        "B_batteries": 1,
+        "C_batteries": 3,
+        "relay_aircraft": 0,
+        "relay_components": 0
+      },
+      "shares": [
+        0.07670093538946156,
+        0.8530974107010603,
+        0.07020165390947819
+      ],
+      "zones": [
+        [
+          "S001"
+        ],
+        [
+          "S002",
+          "S003",
+          "S004",
+          "S005",
+          "S007",
+          "S008",
+          "S009",
+          "S010",
+          "S012",
+          "S013",
+          "S014",
+          "S015"
+        ],
+        [
+          "S006",
+          "S011"
+        ]
+      ]
+    },
+    {
+      "id": "P1_236_45",
+      "group_count": 3,
+      "shortage_total": 16,
+      "resource_total": 43,
+      "workload_cv": 0.7728771354241055,
+      "resource_need": {
+        "A_aircraft": 6,
+        "B_aircraft": 4,
+        "C_aircraft": 5,
+        "A_batteries": 7,
+        "B_batteries": 8,
+        "C_batteries": 7,
+        "relay_aircraft": 3,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 2,
+        "B_aircraft": 2,
+        "C_aircraft": 3,
+        "A_batteries": 1,
+        "B_batteries": 4,
+        "C_batteries": 3,
+        "relay_aircraft": 1,
+        "relay_components": 0
+      },
+      "shares": [
+        0.07670093538946156,
+        0.6856168743912949,
+        0.23768219021924347
+      ],
+      "zones": [
+        [
+          "S001"
+        ],
+        [
+          "S002",
+          "S003",
+          "S004",
+          "S005",
+          "S007",
+          "S008",
+          "S009",
+          "S011",
+          "S015"
+        ],
+        [
+          "S006",
+          "S010",
+          "S012",
+          "S013",
+          "S014"
+        ]
+      ]
+    },
+    {
+      "id": "P1_23_456",
+      "group_count": 3,
+      "shortage_total": 15,
+      "resource_total": 42,
+      "workload_cv": 0.7369191013381091,
+      "resource_need": {
+        "A_aircraft": 6,
+        "B_aircraft": 4,
+        "C_aircraft": 5,
+        "A_batteries": 7,
+        "B_batteries": 7,
+        "C_batteries": 7,
+        "relay_aircraft": 3,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 2,
+        "B_aircraft": 2,
+        "C_aircraft": 3,
+        "A_batteries": 1,
+        "B_batteries": 3,
+        "C_batteries": 3,
+        "relay_aircraft": 1,
+        "relay_components": 0
+      },
+      "shares": [
+        0.07670093538946156,
+        0.6644133182657098,
+        0.25888574634482864
+      ],
+      "zones": [
+        [
+          "S001"
+        ],
+        [
+          "S002",
+          "S003",
+          "S004",
+          "S005",
+          "S007",
+          "S008",
+          "S009",
+          "S015"
+        ],
+        [
+          "S006",
+          "S010",
+          "S011",
+          "S012",
+          "S013",
+          "S014"
+        ]
+      ]
+    },
+    {
+      "id": "P1_2456_3",
+      "group_count": 3,
+      "shortage_total": 11,
+      "resource_total": 38,
+      "workload_cv": 0.6026066991950327,
+      "resource_need": {
+        "A_aircraft": 6,
+        "B_aircraft": 3,
+        "C_aircraft": 5,
+        "A_batteries": 7,
+        "B_batteries": 5,
+        "C_batteries": 6,
+        "relay_aircraft": 3,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 2,
+        "B_aircraft": 1,
+        "C_aircraft": 3,
+        "A_batteries": 1,
+        "B_batteries": 1,
+        "C_batteries": 2,
+        "relay_aircraft": 1,
+        "relay_components": 0
+      },
+      "shares": [
+        0.07670093538946156,
+        0.567135699944945,
+        0.3561633646655934
+      ],
+      "zones": [
+        [
+          "S001"
+        ],
+        [
+          "S002",
+          "S004",
+          "S006",
+          "S008",
+          "S009",
+          "S010",
+          "S011",
+          "S012",
+          "S013",
+          "S014"
+        ],
+        [
+          "S003",
+          "S005",
+          "S007",
+          "S015"
+        ]
+      ]
+    },
+    {
+      "id": "P1_245_36",
+      "group_count": 3,
+      "shortage_total": 12,
+      "resource_total": 39,
+      "workload_cv": 0.5822303634788455,
+      "resource_need": {
+        "A_aircraft": 6,
+        "B_aircraft": 3,
+        "C_aircraft": 5,
+        "A_batteries": 7,
+        "B_batteries": 6,
+        "C_batteries": 6,
+        "relay_aircraft": 3,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 2,
+        "B_aircraft": 1,
+        "C_aircraft": 3,
+        "A_batteries": 1,
+        "B_batteries": 2,
+        "C_batteries": 2,
+        "relay_aircraft": 1,
+        "relay_components": 0
+      },
+      "shares": [
+        0.07670093538946156,
+        0.5459321438193597,
+        0.3773669207911787
+      ],
+      "zones": [
+        [
+          "S001"
+        ],
+        [
+          "S002",
+          "S004",
+          "S006",
+          "S008",
+          "S009",
+          "S010",
+          "S012",
+          "S013",
+          "S014"
+        ],
+        [
+          "S003",
+          "S005",
+          "S007",
+          "S011",
+          "S015"
+        ]
+      ]
+    },
+    {
+      "id": "P1_246_35",
+      "group_count": 3,
+      "shortage_total": 14,
+      "resource_total": 41,
+      "workload_cv": 0.5812935684116405,
+      "resource_need": {
+        "A_aircraft": 6,
+        "B_aircraft": 4,
+        "C_aircraft": 5,
+        "A_batteries": 7,
+        "B_batteries": 7,
+        "C_batteries": 6,
+        "relay_aircraft": 3,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 2,
+        "B_aircraft": 2,
+        "C_aircraft": 3,
+        "A_batteries": 1,
+        "B_batteries": 3,
+        "C_batteries": 2,
+        "relay_aircraft": 1,
+        "relay_components": 0
+      },
+      "shares": [
+        0.07670093538946156,
+        0.37845160750959456,
+        0.544847457100944
+      ],
+      "zones": [
+        [
+          "S001"
+        ],
+        [
+          "S002",
+          "S004",
+          "S006",
+          "S008",
+          "S009",
+          "S011"
+        ],
+        [
+          "S003",
+          "S005",
+          "S007",
+          "S010",
+          "S012",
+          "S013",
+          "S014",
+          "S015"
+        ]
+      ]
+    },
+    {
+      "id": "P1_24_356",
+      "group_count": 3,
+      "shortage_total": 12,
+      "resource_total": 39,
+      "workload_cv": 0.6014722436207768,
+      "resource_need": {
+        "A_aircraft": 6,
+        "B_aircraft": 3,
+        "C_aircraft": 5,
+        "A_batteries": 7,
+        "B_batteries": 6,
+        "C_batteries": 6,
+        "relay_aircraft": 3,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 2,
+        "B_aircraft": 1,
+        "C_aircraft": 3,
+        "A_batteries": 1,
+        "B_batteries": 2,
+        "C_batteries": 2,
+        "relay_aircraft": 1,
+        "relay_components": 0
+      },
+      "shares": [
+        0.07670093538946156,
+        0.3572480513840093,
+        0.5660510132265291
+      ],
+      "zones": [
+        [
+          "S001"
+        ],
+        [
+          "S002",
+          "S004",
+          "S006",
+          "S008",
+          "S009"
+        ],
+        [
+          "S003",
+          "S005",
+          "S007",
+          "S010",
+          "S011",
+          "S012",
+          "S013",
+          "S014",
+          "S015"
+        ]
+      ]
+    },
+    {
+      "id": "P1_256_34",
+      "group_count": 3,
+      "shortage_total": 10,
+      "resource_total": 37,
+      "workload_cv": 0.5617083377973738,
+      "resource_need": {
+        "A_aircraft": 6,
+        "B_aircraft": 3,
+        "C_aircraft": 5,
+        "A_batteries": 6,
+        "B_batteries": 5,
+        "C_batteries": 6,
+        "relay_aircraft": 3,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 2,
+        "B_aircraft": 1,
+        "C_aircraft": 3,
+        "A_batteries": 0,
+        "B_batteries": 1,
+        "C_batteries": 2,
+        "relay_aircraft": 1,
+        "relay_components": 0
+      },
+      "shares": [
+        0.07670093538946156,
+        0.5181376021610519,
+        0.4051614624494864
+      ],
+      "zones": [
+        [
+          "S001"
+        ],
+        [
+          "S002",
+          "S004",
+          "S008",
+          "S009",
+          "S010",
+          "S011",
+          "S012",
+          "S013",
+          "S014"
+        ],
+        [
+          "S003",
+          "S005",
+          "S006",
+          "S007",
+          "S015"
+        ]
+      ]
+    },
+    {
+      "id": "P1_25_346",
+      "group_count": 3,
+      "shortage_total": 11,
+      "resource_total": 38,
+      "workload_cv": 0.5512175849788873,
+      "resource_need": {
+        "A_aircraft": 6,
+        "B_aircraft": 3,
+        "C_aircraft": 5,
+        "A_batteries": 6,
+        "B_batteries": 6,
+        "C_batteries": 6,
+        "relay_aircraft": 3,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 2,
+        "B_aircraft": 1,
+        "C_aircraft": 3,
+        "A_batteries": 0,
+        "B_batteries": 2,
+        "C_batteries": 2,
+        "relay_aircraft": 1,
+        "relay_components": 0
+      },
+      "shares": [
+        0.07670093538946156,
+        0.49693404603546676,
+        0.42636501857507164
+      ],
+      "zones": [
+        [
+          "S001"
+        ],
+        [
+          "S002",
+          "S004",
+          "S008",
+          "S009",
+          "S010",
+          "S012",
+          "S013",
+          "S014"
+        ],
+        [
+          "S003",
+          "S005",
+          "S006",
+          "S007",
+          "S011",
+          "S015"
+        ]
+      ]
+    },
+    {
+      "id": "P1_26_345",
+      "group_count": 3,
+      "shortage_total": 13,
+      "resource_total": 40,
+      "workload_cv": 0.6334236929970677,
+      "resource_need": {
+        "A_aircraft": 6,
+        "B_aircraft": 4,
+        "C_aircraft": 5,
+        "A_batteries": 6,
+        "B_batteries": 7,
+        "C_batteries": 6,
+        "relay_aircraft": 3,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 2,
+        "B_aircraft": 2,
+        "C_aircraft": 3,
+        "A_batteries": 0,
+        "B_batteries": 3,
+        "C_batteries": 2,
+        "relay_aircraft": 1,
+        "relay_components": 0
+      },
+      "shares": [
+        0.07670093538946156,
+        0.3294535097257015,
+        0.5938455548848369
+      ],
+      "zones": [
+        [
+          "S001"
+        ],
+        [
+          "S002",
+          "S004",
+          "S008",
+          "S009",
+          "S011"
+        ],
+        [
+          "S003",
+          "S005",
+          "S006",
+          "S007",
+          "S010",
+          "S012",
+          "S013",
+          "S014",
+          "S015"
+        ]
+      ]
+    },
+    {
+      "id": "P1_2_3456",
+      "group_count": 3,
+      "shortage_total": 11,
+      "resource_total": 38,
+      "workload_cv": 0.66148275035439,
+      "resource_need": {
+        "A_aircraft": 6,
+        "B_aircraft": 3,
+        "C_aircraft": 5,
+        "A_batteries": 6,
+        "B_batteries": 6,
+        "C_batteries": 6,
+        "relay_aircraft": 3,
+        "relay_components": 3
+      },
+      "shortage": {
+        "A_aircraft": 2,
+        "B_aircraft": 1,
+        "C_aircraft": 3,
+        "A_batteries": 0,
+        "B_batteries": 2,
+        "C_batteries": 2,
+        "relay_aircraft": 1,
+        "relay_components": 0
+      },
+      "shares": [
+        0.07670093538946156,
+        0.3082499536001163,
+        0.615049111010422
+      ],
+      "zones": [
+        [
+          "S001"
+        ],
+        [
+          "S002",
+          "S004",
+          "S008",
+          "S009"
+        ],
+        [
+          "S003",
+          "S005",
+          "S006",
+          "S007",
+          "S010",
+          "S011",
+          "S012",
+          "S013",
+          "S014",
+          "S015"
+        ]
+      ]
+    }
+  ]
+}

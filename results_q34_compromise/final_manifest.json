@@ -1,0 +1,38 @@
+{
+  "source_commit": {
+    "sha": "c01be7730f5b5ed70e731d5c6c88bcd6fc9c2cd5",
+    "message": "Optimize Q3 Q4 shortage and workload balance",
+    "date": "2026-09-25T16:53:57Z"
+  },
+  "changed_or_added_files": {
+    "Q3_Q4_折中优化交付说明.md": "bcc9f2e0c7287163a8fd12ee7c86b9ee56b86eee02a4575870f0aa20ebdf0bad",
+    "README.md": "375ef0b54b2432165b74072406184c48fd128f359bdfd404b15fd09844a5aecf",
+    "q3_joint.py": "b6a2f11907c6e9ab0f57d4c26e2b937958a4cecd41df3bfec94ce6786c598ff7",
+    "search_q34_compromise.py": "11fdf413ac82ba1079857bd353e863b80178920141b4dc6a2e8fb8b994d02577",
+    "build_q34_compromise_seeds.py": "ac2437331bd639e3d0ae9d9fdca15d49a249a5eb3416134dc4600b085313316e",
+    "polish_q34_compromise.py": "a4ac5199cfa77faed665e6ccfb6bb44f4808ffa1936c3e69a5b29c34c93ac48c",
+    "deliver_q34_compromise.py": "a25da7670a889e767ede9e7c9d68b1f2530ddb151b51080e7bdb9683029e2c9d",
+    "build_q34_compromise_report.py": "8bf336e5c3073e561662bdc308cfaee4c3f89a2a70c9b8b132ea98d7d4a89e24",
+    "tests/test_q34_compromise.py": "0ada9aa10a70494e075923203b30d91e48fa1e54f06fcb124de0641c9d6d070f",
+    "tests/test_q4_exact.py": "dcef069193e67a45919c2da2e0d42bdae876f7a80de53848efb7d3073bbe05e5"
+  },
+  "final_plan_sha256": "d76ca8cee0319385d09c06268877c639d6a9a69a0a67eff047cc1dc160342c06",
+  "tests": {
+    "tests": 67,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "passed": true,
+    "seconds": 20.857
+  },
+  "reproduction": "PASS: all objective fields identical",
+  "csv_rows": {
+    "transport": 24,
+    "relay": 4,
+    "boxes": 80,
+    "communication_intervals": 280
+  },
+  "q4_partitions": 121,
+  "q4_assignment_rows": 6776,
+  "github_updated": true
+}

@@ -1,0 +1,59 @@
+{
+  "stages": [
+    {
+      "target": "soft",
+      "status": "OPTIMAL",
+      "value": 19260.0,
+      "lower_bound": 19260.0,
+      "relative_gap": 0.0
+    },
+    {
+      "target": "weighted",
+      "status": "OPTIMAL",
+      "value": 3183998.0,
+      "lower_bound": 3183998.0,
+      "relative_gap": 0.0
+    },
+    {
+      "target": "makespan",
+      "status": "OPTIMAL",
+      "value": 7996.0,
+      "lower_bound": 7996.0,
+      "relative_gap": 0.0
+    },
+    {
+      "target": "energy",
+      "status": "OPTIMAL",
+      "value": 68728418.0,
+      "lower_bound": 68728418.0,
+      "relative_gap": 0.0
+    },
+    {
+      "target": "sorties",
+      "status": "OPTIMAL",
+      "value": 5.0,
+      "lower_bound": 5.0,
+      "relative_gap": 0.0
+    }
+  ],
+  "policy": "timely",
+  "seed": 2065,
+  "scale_seconds": 1,
+  "coverage_max_interval_seconds": 12,
+  "stage_budget_seconds": 90.0,
+  "search_workers": 8,
+  "candidate_sites": 3,
+  "route_modes": 47,
+  "session_slots": 18,
+  "q4_constraint": true,
+  "independent_groups": false,
+  "resource_buffer_seconds": 5.0,
+  "objective_caps": {
+    "soft": 150000.0,
+    "makespan": 8000.0,
+    "energy": 79000000.0
+  },
+  "max_partition_shortage": 8,
+  "elapsed_seconds": 234.81640039989725,
+  "bound_scope": "Finite sites, fixed box groups/visit orders, optional type modes and bounded relay sessions; later bounds conditional on earlier attained caps."
+}

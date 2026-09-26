@@ -1,0 +1,38 @@
+{
+  "input": "D:\\Program Files\\shumo\\q34-balanced-optimization\\results_q3_q4_balance\\selection\\two_zero_shortage\\q3_plan.json",
+  "name": "two_s8_zero",
+  "groups": "two",
+  "shortage": 8,
+  "soft": 0,
+  "makespan": 8000.0,
+  "energy": 82.0,
+  "seconds": 30.0,
+  "seed": 2061,
+  "interval": 12,
+  "fixed_models": false,
+  "policy": "timely",
+  "slots": 2,
+  "data_dir": "C:\\Users\\user\\Desktop\\建模\\第二十三届中国研究生数学建模竞赛 - 中文题目\\中文题目\\D题\\数据",
+  "source_sha256": "181614c082d5c4d018aa80583524616d409d6883a842b0e871ea6ae18a07cde5",
+  "q4_groups": [
+    [
+      "S001",
+      "S002",
+      "S004",
+      "S006",
+      "S008",
+      "S009",
+      "S011"
+    ],
+    [
+      "S003",
+      "S005",
+      "S007",
+      "S010",
+      "S012",
+      "S013",
+      "S014",
+      "S015"
+    ]
+  ]
+}

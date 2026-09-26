@@ -22,31 +22,43 @@ def independent_clear(s, fixed, p0, p1):
     ymin=max(0,floor(vertices[:,1].min()-1e-9)); ymax=min(dem.nrows-1,floor(vertices[:,1].max()+1e-9))
     xx,yy=np.meshgrid(np.arange(xmin,xmax+1),np.arange(ymin,ymax+1))
     heights=dem.values[yy,xx]
-    area=np.linalg.det(np.column_stack((vertices[:,:2],np.ones(3))))
+    # Radial cruise legs can produce almost collinear XY vertices. Testing a
+    # determinant against a fixed absolute epsilon can send this ill-conditioned
+    # case into a plane inversion and falsely certify terrain clearance.
+    edges=vertices[1:,:2]-vertices[0,:2]
+    area=edges[0,0]*edges[1,1]-edges[0,1]*edges[1,0]
+    area_tolerance=1e-10*max(1.,np.linalg.norm(edges[0])*np.linalg.norm(edges[1]))
     minimum=np.full(xx.shape,np.inf)
-    if abs(area)<1e-10:
-        if not np.allclose(vertices[1,:2],vertices[2,:2],atol=1e-10,rtol=0): return False
-        low=vertices[1] if vertices[1,2]<=vertices[2,2] else vertices[2]
-        enter=np.zeros(xx.shape); leave=np.ones(xx.shape); valid=np.ones(xx.shape,dtype=bool)
-        for origin,delta,lo in ((vertices[0,0],low[0]-vertices[0,0],xx),
-                                (vertices[0,1],low[1]-vertices[0,1],yy)):
-            if abs(delta)<1e-12:
-                valid &= (origin>=lo-1e-9)&(origin<=lo+1+1e-9)
-            else:
-                a,b=(lo-origin)/delta,(lo+1-origin)/delta
-                enter=np.maximum(enter,np.minimum(a,b));leave=np.minimum(leave,np.maximum(a,b))
-        valid &= enter<=leave+1e-9
-        minimum[valid]=np.minimum(vertices[0,2]+enter*(low[2]-vertices[0,2]),
-                                  vertices[0,2]+leave*(low[2]-vertices[0,2]))[valid]
+    if abs(area)<=area_tolerance:
+        # A collapsed XY triangle has a piecewise-linear lower altitude
+        # envelope on its three edges. Clip all edges against slightly padded
+        # cells, taking their minimum; never invert the near-singular plane.
+        padding=1e-8 + 1e-10*max(np.linalg.norm(edges[0]),np.linalg.norm(edges[1]))
+        for first,last in zip(vertices,np.roll(vertices,-1,axis=0)):
+            enter=np.zeros(xx.shape); leave=np.ones(xx.shape); valid=np.ones(xx.shape,dtype=bool)
+            for origin,delta,lo in ((first[0],last[0]-first[0],xx),
+                                    (first[1],last[1]-first[1],yy)):
+                if abs(delta)<1e-12:
+                    valid &= (origin>=lo-padding)&(origin<=lo+1+padding)
+                else:
+                    a,b=(lo-padding-origin)/delta,(lo+1+padding-origin)/delta
+                    enter=np.maximum(enter,np.minimum(a,b));leave=np.minimum(leave,np.maximum(a,b))
+            valid &= enter<=leave+1e-9
+            lower=np.minimum(first[2]+enter*(last[2]-first[2]),
+                             first[2]+leave*(last[2]-first[2]))-1e-4
+            np.minimum(minimum,np.where(valid,lower,np.inf),out=minimum)
     else:
-        matrix=np.column_stack((vertices[:,:2],np.ones(3)))
+        # Local coordinates avoid cancellation from a large pixel origin.
+        origin=vertices[0,:2].copy()
+        matrix=np.column_stack((vertices[:,:2]-origin,np.ones(3)))
         coefficients=np.linalg.solve(matrix,vertices[:,2])
         inverse=np.linalg.inv(matrix.T)
         def offer(x,y,extra=True):
-            bary=[inverse[k,0]*x+inverse[k,1]*y+inverse[k,2] for k in range(3)]
+            local_x,local_y=x-origin[0],y-origin[1]
+            bary=[inverse[k,0]*local_x+inverse[k,1]*local_y+inverse[k,2] for k in range(3)]
             valid=(x>=xx-1e-9)&(x<=xx+1+1e-9)&(y>=yy-1e-9)&(y<=yy+1+1e-9)&extra
             for value in bary: valid &= value>=-1e-9
-            z=coefficients[0]*x+coefficients[1]*y+coefficients[2]
+            z=coefficients[0]*local_x+coefficients[1]*local_y+coefficients[2]
             np.minimum(minimum,np.where(valid,z,np.inf),out=minimum)
         for x,y,z in vertices: offer(x,y)
         for dx,dy in ((0,0),(0,1),(1,0),(1,1)): offer(xx+dx,yy+dy)
@@ -183,12 +195,24 @@ def certify(s,plan,extra=0.,minimum_interval=.25,kernel=margin,stop_on_failure=F
         raise ValueError('Invalid communication loss or minimum interval')
     home=s.nodes['O01'];gateway=(home.lon,home.lat,home.ground+s.gateway_agl)
     relays=plan['relay_sorties'];intervals=[]
+    # Saved boundaries are subdivision hints only. Every resulting interval
+    # is still independently proved; stored modes/margins are never trusted.
+    from collections import defaultdict
+    cuts=defaultdict(set)
+    for row in plan.get('communication_intervals', []):
+        cuts[row['sortie'],row['phase_index']].update((row['start'],row['end']))
     backhaul={r['id']:kernel(s,gateway,(r['lon'],r['lat'],r['altitude']),
         (r['lon'],r['lat'],r['altitude']),'relay_backhaul','gateway',extra)[0] for r in relays}
     for row in plan['transport_sorties']:
         for pi,ph in enumerate(row['route']['phases']):
             left,right=row['start']+ph['t0'],row['start']+ph['t1']
-            events=sorted({left,right,*[r[k] for r in relays for k in ('established','service_end') if left<r[k]<right]})
+            service_events={left,right,
+                *[r[k] for r in relays for k in ('established','service_end') if left<r[k]<right]}
+            # A translated saved cut can differ from a phase/service event by
+            # floating-point noise. Do not create spurious near-zero intervals.
+            hints=[v for v in cuts[row['id'],pi] if left<v<right
+                   and all(abs(v-event)>1e-7 for event in service_events)]
+            events=sorted(service_events | set(hints))
             stack=list(zip(events,events[1:])) if right>left else [(left,right)]
             while stack:
                 a,b=stack.pop();p0=phase_position(ph,a-row['start']);p1=phase_position(ph,b-row['start'])
@@ -234,6 +258,7 @@ def certify(s,plan,extra=0.,minimum_interval=.25,kernel=margin,stop_on_failure=F
         unknown_seconds=unknown,outage_seconds=0. if not bad else None,
         minimum_certified_margin_db=min((x['margin_lower_db'] for x in intervals),default=0.))
     certificate=dict(status='PASS' if not bad else 'UNKNOWN',unknown_interval_count=bad,
+        geometry_version=2,
         minimum_interval_seconds=minimum_interval,extra_loss_db=extra,
         dem_model='piecewise_constant_closed_cells',
         time_method='phase and service events; recursive interval lower bounds',

@@ -1,0 +1,63 @@
+{
+  "stages": [
+    {
+      "target": "soft",
+      "status": "INFEASIBLE",
+      "value": null,
+      "lower_bound": 0.0,
+      "relative_gap": null
+    }
+  ],
+  "policy": "makespan",
+  "seed": 2153,
+  "scale_seconds": 1,
+  "coverage_max_interval_seconds": 12.0,
+  "stage_budget_seconds": 120.0,
+  "search_workers": 8,
+  "candidate_sites": 3,
+  "route_modes": 52,
+  "session_slots": 18,
+  "q4_constraint": true,
+  "independent_groups": false,
+  "resource_buffer_seconds": 5.0,
+  "objective_caps": {
+    "soft": 0,
+    "makespan": 7444.455885352581,
+    "energy": 71410698.16888128,
+    "weighted": 3027012.702909077,
+    "sorties": 4
+  },
+  "max_partition_shortage": null,
+  "partition_resource_limits": [
+    {
+      "blocks": [
+        [
+          0,
+          2
+        ],
+        [
+          1
+        ]
+      ],
+      "shortage_total": 4,
+      "resource_total": 31
+    },
+    {
+      "blocks": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ]
+      ],
+      "shortage_total": 7,
+      "resource_total": 34
+    }
+  ],
+  "elapsed_seconds": 96.99045390001265,
+  "bound_scope": "Finite sites, fixed box groups/visit orders, optional type modes and bounded relay sessions; later bounds conditional on earlier attained caps."
+}

@@ -1,0 +1,21 @@
+{
+  "arguments": {
+    "input": "results_q3_q4_balance\\two_polish\\plans\\g2_000.json",
+    "output": "results_q3_q4_balance\\two_zero_deep",
+    "groups": 2,
+    "shortage": 0,
+    "seconds": 90.0,
+    "limit": 1,
+    "offset": 2,
+    "buffer": 5.0,
+    "soft_cap": 1000000.0,
+    "rebatch": false,
+    "regional": true,
+    "fixed_models": false,
+    "policy": "timely",
+    "extra_loss": 1.0
+  },
+  "input_sha256": "32e2c1f369be20c078c748c49635ea98e66667e09134263c0014215e9023b99e",
+  "box_transfers": [],
+  "ranking_scope": "transport-only workload plus finite-site count heuristic; final CV includes relay work"
+}

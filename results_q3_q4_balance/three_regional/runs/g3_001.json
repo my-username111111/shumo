@@ -1,0 +1,54 @@
+{
+  "stages": [
+    {
+      "target": "soft",
+      "status": "UNKNOWN",
+      "value": null,
+      "lower_bound": 3840.0,
+      "relative_gap": null
+    }
+  ],
+  "policy": "timely",
+  "seed": 2038,
+  "scale_seconds": 1,
+  "coverage_max_interval_seconds": 90.0,
+  "stage_budget_seconds": 15.0,
+  "search_workers": 8,
+  "candidate_sites": 3,
+  "route_modes": 62,
+  "session_slots": 18,
+  "q4_constraint": true,
+  "independent_groups": false,
+  "resource_buffer_seconds": 5.0,
+  "objective_caps": {
+    "soft": 300000.0
+  },
+  "max_partition_shortage": 4,
+  "elapsed_seconds": 15.470391200011363,
+  "bound_scope": "Finite sites, fixed box groups/visit orders, optional type modes and bounded relay sessions; later bounds conditional on earlier attained caps.",
+  "status": "NO_INCUMBENT_WITHIN_BUDGET",
+  "label": "g3_001",
+  "requested_groups": [
+    [
+      "S003",
+      "S005",
+      "S007",
+      "S015"
+    ],
+    [
+      "S002",
+      "S004",
+      "S006",
+      "S008",
+      "S009"
+    ],
+    [
+      "S001",
+      "S010",
+      "S011",
+      "S012",
+      "S013",
+      "S014"
+    ]
+  ]
+}

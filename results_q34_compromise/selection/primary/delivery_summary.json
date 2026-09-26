@@ -1,0 +1,166 @@
+{
+  "objective": {
+    "weighted_soft_delay": 0,
+    "weighted_delivery_seconds": 2938847.2843777444,
+    "makespan": 7444.455885352581,
+    "energy_kwh": 69.33077492124396,
+    "transport_energy_kwh": 65.50481867026501,
+    "relay_energy_kwh": 3.8259562509789493,
+    "transport_sorties": 24,
+    "relay_sorties": 4,
+    "total_sorties": 28
+  },
+  "communication": {
+    "direct_seconds": 15795.75766342986,
+    "relay_seconds": 17540.99737875445,
+    "total_transport_seconds": 33336.75504218431,
+    "relay_share": 0.5261759087397103,
+    "unknown_seconds": 0,
+    "outage_seconds": 0.0,
+    "minimum_certified_margin_db": 0.05058481752191746
+  },
+  "minimum_hard_margin_seconds": 38.01401255121618,
+  "minimum_handoff_seconds": {
+    "aircraft": 5.000099999999293,
+    "battery": 5.000100000000202,
+    "relay": 5.000099999998838,
+    "component": null
+  },
+  "q4": {
+    "2": {
+      "partition": "P1256_34",
+      "cv": 0.18278601886340515,
+      "shortage": 4,
+      "resource_total": 31,
+      "need": {
+        "A_aircraft": 4,
+        "B_aircraft": 3,
+        "C_aircraft": 3,
+        "A_batteries": 6,
+        "B_batteries": 5,
+        "C_batteries": 4,
+        "relay_aircraft": 3,
+        "relay_components": 3
+      },
+      "deficit": {
+        "A_aircraft": 0,
+        "B_aircraft": 1,
+        "C_aircraft": 1,
+        "A_batteries": 0,
+        "B_batteries": 1,
+        "C_batteries": 0,
+        "relay_aircraft": 1,
+        "relay_components": 0
+      },
+      "groups": [
+        {
+          "id": "G1",
+          "zones": [
+            "S001",
+            "S002",
+            "S004",
+            "S008",
+            "S009",
+            "S010",
+            "S011",
+            "S012",
+            "S013",
+            "S014"
+          ],
+          "boxes": 52,
+          "share": 0.5913930094317026
+        },
+        {
+          "id": "G2",
+          "zones": [
+            "S003",
+            "S005",
+            "S006",
+            "S007",
+            "S015"
+          ],
+          "boxes": 28,
+          "share": 0.4086069905682974
+        }
+      ]
+    },
+    "3": {
+      "partition": "P12_34_56",
+      "cv": 0.2765450370598209,
+      "shortage": 7,
+      "resource_total": 34,
+      "need": {
+        "A_aircraft": 4,
+        "B_aircraft": 4,
+        "C_aircraft": 3,
+        "A_batteries": 6,
+        "B_batteries": 7,
+        "C_batteries": 4,
+        "relay_aircraft": 3,
+        "relay_components": 3
+      },
+      "deficit": {
+        "A_aircraft": 0,
+        "B_aircraft": 2,
+        "C_aircraft": 1,
+        "A_batteries": 0,
+        "B_batteries": 3,
+        "C_batteries": 0,
+        "relay_aircraft": 1,
+        "relay_components": 0
+      },
+      "groups": [
+        {
+          "id": "G1",
+          "zones": [
+            "S001",
+            "S002",
+            "S004",
+            "S008",
+            "S009"
+          ],
+          "boxes": 37,
+          "share": 0.3878735100656554
+        },
+        {
+          "id": "G2",
+          "zones": [
+            "S003",
+            "S005",
+            "S006",
+            "S007",
+            "S015"
+          ],
+          "boxes": 28,
+          "share": 0.4086069905682974
+        },
+        {
+          "id": "G3",
+          "zones": [
+            "S010",
+            "S011",
+            "S012",
+            "S013",
+            "S014"
+          ],
+          "boxes": 15,
+          "share": 0.20351949936604724
+        }
+      ]
+    }
+  },
+  "legal_partition_count": 121,
+  "source_commit": "c01be7730f5b5ed70e731d5c6c88bcd6fc9c2cd5",
+  "source_candidate": "results_q34_compromise\\repack24_s7_timely\\q3_plan.json",
+  "source_sha256": "d76ca8cee0319385d09c06268877c639d6a9a69a0a67eff047cc1dc160342c06",
+  "plan_sha256": "d76ca8cee0319385d09c06268877c639d6a9a69a0a67eff047cc1dc160342c06",
+  "code_sha256": {
+    "model.py": "8bf3f851e2e7a2907c1d7341090db05fb4385c54e2f177a9e3a80626463ea33a",
+    "q3_joint.py": "b6a2f11907c6e9ab0f57d4c26e2b937958a4cecd41df3bfec94ce6786c598ff7",
+    "q3_certificate.py": "e202b30894c4907e8db6cef112ee76c336f5cf16a9afb2dce6c9734bbba5a2a8",
+    "q4_exact.py": "7d58014dd10bb152142698434ab0472379159fc2043f2bb26fb7589f9deb7387",
+    "q4_audit.py": "561f353d30a7ed0d9fe7a5f1f1946dd9bb6dde1b27c72a1700fccb82b0015500",
+    "search_q34_compromise.py": "11fdf413ac82ba1079857bd353e863b80178920141b4dc6a2e8fb8b994d02577"
+  },
+  "optimality_scope": "Q3: feasible finite-candidate search, not global optimum. Q4: exhaustive partitions and minimum interval resources for this frozen Q3."
+}

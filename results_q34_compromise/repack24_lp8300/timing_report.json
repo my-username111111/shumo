@@ -1,0 +1,904 @@
+{
+  "status": "PASS",
+  "scope": "fixed routes, resource order, relay sites and original relay coverage obligations, plus complete selected Q4 partition resource chains",
+  "buffer_seconds": 5.0,
+  "policy": "timely",
+  "allow_soft_delay": false,
+  "preserved_partition": "P12_3_456",
+  "delivery_cap": null,
+  "makespan_cap": 8300,
+  "fixed_relay_intervals": 111,
+  "input_sha256": "d94ba060ff6e3ba0b7b499f8a54c16dfef7ec079f930f27183b882512cb353e5",
+  "lp_stages": [
+    {
+      "objective": "weighted_start",
+      "value": 1824622.260591664,
+      "status": "OPTIMAL"
+    },
+    {
+      "objective": "makespan",
+      "value": 8277.324367973764,
+      "status": "OPTIMAL"
+    },
+    {
+      "objective": "relay_service_seconds",
+      "value": 10536.96300219178,
+      "status": "OPTIMAL"
+    }
+  ],
+  "old_objective": {
+    "weighted_soft_delay": 0,
+    "weighted_delivery_seconds": 3046358.5367284114,
+    "makespan": 8278.297538856334,
+    "energy_kwh": 69.67325175950567,
+    "transport_energy_kwh": 65.50481867026501,
+    "relay_energy_kwh": 4.16843308924066,
+    "transport_sorties": 24,
+    "relay_sorties": 4,
+    "total_sorties": 28
+  },
+  "new_objective": {
+    "weighted_soft_delay": 0,
+    "weighted_delivery_seconds": 3035402.7973300754,
+    "makespan": 8277.324367973764,
+    "energy_kwh": 69.67293489906427,
+    "transport_energy_kwh": 65.50481867026501,
+    "relay_energy_kwh": 4.168116228799259,
+    "transport_sorties": 24,
+    "relay_sorties": 4,
+    "total_sorties": 28
+  },
+  "recertified_relation_changed_seconds": 0.0,
+  "recertified_relation_changed_intervals": 0,
+  "q3_independent_validation": "PASS",
+  "q4_independent_validation": "PASS",
+  "q4": [
+    {
+      "id": "P12345_6",
+      "groups": 2,
+      "shortage": 2,
+      "resources": 27,
+      "cv": 0.9588511425575066
+    },
+    {
+      "id": "P12346_5",
+      "groups": 2,
+      "shortage": 7,
+      "resources": 32,
+      "cv": 0.6438606852580735
+    },
+    {
+      "id": "P1234_56",
+      "groups": 2,
+      "shortage": 6,
+      "resources": 31,
+      "cv": 0.6027118278155797
+    },
+    {
+      "id": "P1234_5_6",
+      "groups": 3,
+      "shortage": 8,
+      "resources": 33,
+      "cv": 1.0113902472563308
+    },
+    {
+      "id": "P12356_4",
+      "groups": 2,
+      "shortage": 1,
+      "resources": 28,
+      "cv": 0.9049114342556004
+    },
+    {
+      "id": "P1235_46",
+      "groups": 2,
+      "shortage": 3,
+      "resources": 30,
+      "cv": 0.8637625768131069
+    },
+    {
+      "id": "P1235_4_6",
+      "groups": 3,
+      "shortage": 3,
+      "resources": 30,
+      "cv": 1.2701415294760996
+    },
+    {
+      "id": "P1236_45",
+      "groups": 2,
+      "shortage": 8,
+      "resources": 35,
+      "cv": 0.5487721195136739
+    },
+    {
+      "id": "P1236_4_5",
+      "groups": 3,
+      "shortage": 8,
+      "resources": 35,
+      "cv": 0.9491728471502386
+    },
+    {
+      "id": "P123_456",
+      "groups": 2,
+      "shortage": 7,
+      "resources": 34,
+      "cv": 0.5076232620711802
+    },
+    {
+      "id": "P123_45_6",
+      "groups": 3,
+      "shortage": 9,
+      "resources": 36,
+      "cv": 0.9266449140319952
+    },
+    {
+      "id": "P123_46_5",
+      "groups": 3,
+      "shortage": 9,
+      "resources": 36,
+      "cv": 0.9020769426660346
+    },
+    {
+      "id": "P123_4_56",
+      "groups": 3,
+      "shortage": 7,
+      "resources": 34,
+      "cv": 0.9109641708504967
+    },
+    {
+      "id": "P12456_3",
+      "groups": 2,
+      "shortage": 5,
+      "resources": 32,
+      "cv": 0.25512714651290613
+    },
+    {
+      "id": "P1245_36",
+      "groups": 2,
+      "shortage": 6,
+      "resources": 33,
+      "cv": 0.21397828907041255
+    },
+    {
+      "id": "P1245_3_6",
+      "groups": 3,
+      "shortage": 7,
+      "resources": 34,
+      "cv": 0.7229827535971144
+    },
+    {
+      "id": "P1246_35",
+      "groups": 2,
+      "shortage": 8,
+      "resources": 35,
+      "cv": 0.10101216822902043
+    },
+    {
+      "id": "P1246_3_5",
+      "groups": 3,
+      "shortage": 10,
+      "resources": 37,
+      "cv": 0.34261848429318037
+    },
+    {
+      "id": "P124_356",
+      "groups": 2,
+      "shortage": 6,
+      "resources": 33,
+      "cv": 0.142161025671514
+    },
+    {
+      "id": "P124_35_6",
+      "groups": 3,
+      "shortage": 8,
+      "resources": 35,
+      "cv": 0.6799680482938926
+    },
+    {
+      "id": "P124_36_5",
+      "groups": 3,
+      "shortage": 9,
+      "resources": 36,
+      "cv": 0.3322872034488469
+    },
+    {
+      "id": "P124_3_56",
+      "groups": 3,
+      "shortage": 8,
+      "resources": 35,
+      "cv": 0.2939742745929377
+    },
+    {
+      "id": "P1256_34",
+      "groups": 2,
+      "shortage": 5,
+      "resources": 30,
+      "cv": 0.16003858076850652
+    },
+    {
+      "id": "P1256_3_4",
+      "groups": 3,
+      "shortage": 6,
+      "resources": 33,
+      "cv": 0.657400322521641
+    },
+    {
+      "id": "P125_346",
+      "groups": 2,
+      "shortage": 6,
+      "resources": 31,
+      "cv": 0.118889723326013
+    },
+    {
+      "id": "P125_34_6",
+      "groups": 3,
+      "shortage": 7,
+      "resources": 32,
+      "cv": 0.6850963220037579
+    },
+    {
+      "id": "P125_36_4",
+      "groups": 3,
+      "shortage": 7,
+      "resources": 34,
+      "cv": 0.6396011520974798
+    },
+    {
+      "id": "P125_3_46",
+      "groups": 3,
+      "shortage": 8,
+      "resources": 35,
+      "cv": 0.6074395543816512
+    },
+    {
+      "id": "P126_345",
+      "groups": 2,
+      "shortage": 8,
+      "resources": 33,
+      "cv": 0.19610073397342
+    },
+    {
+      "id": "P126_34_5",
+      "groups": 3,
+      "shortage": 10,
+      "resources": 35,
+      "cv": 0.33010349955011203
+    },
+    {
+      "id": "P126_35_4",
+      "groups": 3,
+      "shortage": 9,
+      "resources": 36,
+      "cv": 0.632963462516856
+    },
+    {
+      "id": "P126_3_45",
+      "groups": 3,
+      "shortage": 11,
+      "resources": 38,
+      "cv": 0.23134854317932582
+    },
+    {
+      "id": "P12_3456",
+      "groups": 2,
+      "shortage": 6,
+      "resources": 31,
+      "cv": 0.23724959141591362
+    },
+    {
+      "id": "P12_345_6",
+      "groups": 3,
+      "shortage": 8,
+      "resources": 33,
+      "cv": 0.7145654519054401
+    },
+    {
+      "id": "P12_346_5",
+      "groups": 3,
+      "shortage": 9,
+      "resources": 34,
+      "cv": 0.33724477419288845
+    },
+    {
+      "id": "P12_34_56",
+      "groups": 3,
+      "shortage": 8,
+      "resources": 33,
+      "cv": 0.28960481265452015
+    },
+    {
+      "id": "P12_356_4",
+      "groups": 3,
+      "shortage": 7,
+      "resources": 34,
+      "cv": 0.6492467730148083
+    },
+    {
+      "id": "P12_35_46",
+      "groups": 3,
+      "shortage": 9,
+      "resources": 36,
+      "cv": 0.599526865032021
+    },
+    {
+      "id": "P12_36_45",
+      "groups": 3,
+      "shortage": 10,
+      "resources": 37,
+      "cv": 0.22895127643679272
+    },
+    {
+      "id": "P12_3_456",
+      "groups": 3,
+      "shortage": 9,
+      "resources": 36,
+      "cv": 0.18518626915342962
+    },
+    {
+      "id": "P13456_2",
+      "groups": 2,
+      "shortage": 6,
+      "resources": 33,
+      "cv": 0.38609989923001187
+    },
+    {
+      "id": "P1345_26",
+      "groups": 2,
+      "shortage": 8,
+      "resources": 35,
+      "cv": 0.34495104178751834
+    },
+    {
+      "id": "P1345_2_6",
+      "groups": 3,
+      "shortage": 8,
+      "resources": 35,
+      "cv": 0.8003717262932682
+    },
+    {
+      "id": "P1346_25",
+      "groups": 2,
+      "shortage": 6,
+      "resources": 33,
+      "cv": 0.029960584488085345
+    },
+    {
+      "id": "P1346_2_5",
+      "groups": 3,
+      "shortage": 9,
+      "resources": 36,
+      "cv": 0.4164078687080333
+    },
+    {
+      "id": "P134_256",
+      "groups": 2,
+      "shortage": 5,
+      "resources": 32,
+      "cv": 0.011188272954408161
+    },
+    {
+      "id": "P134_25_6",
+      "groups": 3,
+      "shortage": 7,
+      "resources": 34,
+      "cv": 0.66356141068013
+    },
+    {
+      "id": "P134_26_5",
+      "groups": 3,
+      "shortage": 10,
+      "resources": 37,
+      "cv": 0.3876270572692834
+    },
+    {
+      "id": "P134_2_56",
+      "groups": 3,
+      "shortage": 8,
+      "resources": 35,
+      "cv": 0.3665308892432446
+    },
+    {
+      "id": "P1356_24",
+      "groups": 2,
+      "shortage": 8,
+      "resources": 34,
+      "cv": 0.29101133348561226
+    },
+    {
+      "id": "P1356_2_4",
+      "groups": 3,
+      "shortage": 8,
+      "resources": 35,
+      "cv": 0.7344855847372163
+    },
+    {
+      "id": "P135_246",
+      "groups": 2,
+      "shortage": 10,
+      "resources": 36,
+      "cv": 0.24986247604311873
+    },
+    {
+      "id": "P135_24_6",
+      "groups": 3,
+      "shortage": 10,
+      "resources": 36,
+      "cv": 0.7415428342661541
+    },
+    {
+      "id": "P135_26_4",
+      "groups": 3,
+      "shortage": 10,
+      "resources": 37,
+      "cv": 0.7072590660489374
+    },
+    {
+      "id": "P135_2_46",
+      "groups": 3,
+      "shortage": 10,
+      "resources": 37,
+      "cv": 0.6842460329932363
+    },
+    {
+      "id": "P136_245",
+      "groups": 2,
+      "shortage": 8,
+      "resources": 34,
+      "cv": 0.0651279812563143
+    },
+    {
+      "id": "P136_24_5",
+      "groups": 3,
+      "shortage": 11,
+      "resources": 37,
+      "cv": 0.357231541350207
+    },
+    {
+      "id": "P136_25_4",
+      "groups": 3,
+      "shortage": 8,
+      "resources": 35,
+      "cv": 0.606632504741494
+    },
+    {
+      "id": "P136_2_45",
+      "groups": 3,
+      "shortage": 11,
+      "resources": 38,
+      "cv": 0.3014120418341121
+    },
+    {
+      "id": "P13_2456",
+      "groups": 2,
+      "shortage": 7,
+      "resources": 33,
+      "cv": 0.1062768386988078
+    },
+    {
+      "id": "P13_245_6",
+      "groups": 3,
+      "shortage": 9,
+      "resources": 35,
+      "cv": 0.6717134437225655
+    },
+    {
+      "id": "P13_246_5",
+      "groups": 3,
+      "shortage": 12,
+      "resources": 38,
+      "cv": 0.34089874457000396
+    },
+    {
+      "id": "P13_24_56",
+      "groups": 3,
+      "shortage": 10,
+      "resources": 36,
+      "cv": 0.3072994183809382
+    },
+    {
+      "id": "P13_256_4",
+      "groups": 3,
+      "shortage": 7,
+      "resources": 34,
+      "cv": 0.6105026501224478
+    },
+    {
+      "id": "P13_25_46",
+      "groups": 3,
+      "shortage": 9,
+      "resources": 36,
+      "cv": 0.5645428629671301
+    },
+    {
+      "id": "P13_26_45",
+      "groups": 3,
+      "shortage": 12,
+      "resources": 39,
+      "cv": 0.27125194952705395
+    },
+    {
+      "id": "P13_2_456",
+      "groups": 3,
+      "shortage": 10,
+      "resources": 37,
+      "cv": 0.25206538064313383
+    },
+    {
+      "id": "P1456_23",
+      "groups": 2,
+      "shortage": 11,
+      "resources": 38,
+      "cv": 0.35877295425708194
+    },
+    {
+      "id": "P1456_2_3",
+      "groups": 3,
+      "shortage": 11,
+      "resources": 38,
+      "cv": 0.08462132907664635
+    },
+    {
+      "id": "P145_236",
+      "groups": 2,
+      "shortage": 12,
+      "resources": 39,
+      "cv": 0.3999218116995756
+    },
+    {
+      "id": "P145_23_6",
+      "groups": 3,
+      "shortage": 13,
+      "resources": 40,
+      "cv": 0.8099618826355012
+    },
+    {
+      "id": "P145_26_3",
+      "groups": 3,
+      "shortage": 13,
+      "resources": 40,
+      "cv": 0.08952040657518895
+    },
+    {
+      "id": "P145_2_36",
+      "groups": 3,
+      "shortage": 12,
+      "resources": 39,
+      "cv": 0.12687778327586685
+    },
+    {
+      "id": "P146_235",
+      "groups": 2,
+      "shortage": 7,
+      "resources": 34,
+      "cv": 0.7149122689990086
+    },
+    {
+      "id": "P146_23_5",
+      "groups": 3,
+      "shortage": 13,
+      "resources": 40,
+      "cv": 0.7353778792699001
+    },
+    {
+      "id": "P146_25_3",
+      "groups": 3,
+      "shortage": 10,
+      "resources": 37,
+      "cv": 0.4275690440232983
+    },
+    {
+      "id": "P146_2_35",
+      "groups": 3,
+      "shortage": 11,
+      "resources": 38,
+      "cv": 0.5027744096618264
+    },
+    {
+      "id": "P14_2356",
+      "groups": 2,
+      "shortage": 5,
+      "resources": 32,
+      "cv": 0.756061126441502
+    },
+    {
+      "id": "P14_235_6",
+      "groups": 3,
+      "shortage": 7,
+      "resources": 34,
+      "cv": 1.1187460031878793
+    },
+    {
+      "id": "P14_236_5",
+      "groups": 3,
+      "shortage": 12,
+      "resources": 39,
+      "cv": 0.780763631522079
+    },
+    {
+      "id": "P14_23_56",
+      "groups": 3,
+      "shortage": 11,
+      "resources": 38,
+      "cv": 0.7400716217085738
+    },
+    {
+      "id": "P14_256_3",
+      "groups": 3,
+      "shortage": 8,
+      "resources": 35,
+      "cv": 0.4771085819199178
+    },
+    {
+      "id": "P14_25_36",
+      "groups": 3,
+      "shortage": 9,
+      "resources": 36,
+      "cv": 0.46231437226120414
+    },
+    {
+      "id": "P14_26_35",
+      "groups": 3,
+      "shortage": 11,
+      "resources": 38,
+      "cv": 0.5249926949086638
+    },
+    {
+      "id": "P14_2_356",
+      "groups": 3,
+      "shortage": 9,
+      "resources": 36,
+      "cv": 0.5528865048461992
+    },
+    {
+      "id": "P156_234",
+      "groups": 2,
+      "shortage": 10,
+      "resources": 37,
+      "cv": 0.45386152000148156
+    },
+    {
+      "id": "P156_23_4",
+      "groups": 3,
+      "shortage": 13,
+      "resources": 40,
+      "cv": 0.7843339607069192
+    },
+    {
+      "id": "P156_24_3",
+      "groups": 3,
+      "shortage": 12,
+      "resources": 39,
+      "cv": 0.12971431043724718
+    },
+    {
+      "id": "P156_2_34",
+      "groups": 3,
+      "shortage": 10,
+      "resources": 37,
+      "cv": 0.1884325320729114
+    },
+    {
+      "id": "P15_2346",
+      "groups": 2,
+      "shortage": 11,
+      "resources": 38,
+      "cv": 0.49501037744397514
+    },
+    {
+      "id": "P15_234_6",
+      "groups": 3,
+      "shortage": 12,
+      "resources": 39,
+      "cv": 0.8819386600123266
+    },
+    {
+      "id": "P15_236_4",
+      "groups": 3,
+      "shortage": 14,
+      "resources": 41,
+      "cv": 0.8172380771982047
+    },
+    {
+      "id": "P15_23_46",
+      "groups": 3,
+      "shortage": 15,
+      "resources": 42,
+      "cv": 0.7680360158806353
+    },
+    {
+      "id": "P15_246_3",
+      "groups": 3,
+      "shortage": 14,
+      "resources": 41,
+      "cv": 0.17151470403315866
+    },
+    {
+      "id": "P15_24_36",
+      "groups": 3,
+      "shortage": 13,
+      "resources": 40,
+      "cv": 0.17785438887149094
+    },
+    {
+      "id": "P15_26_34",
+      "groups": 3,
+      "shortage": 12,
+      "resources": 39,
+      "cv": 0.2054972791947355
+    },
+    {
+      "id": "P15_2_346",
+      "groups": 3,
+      "shortage": 11,
+      "resources": 38,
+      "cv": 0.23702822449318342
+    },
+    {
+      "id": "P16_2345",
+      "groups": 2,
+      "shortage": 6,
+      "resources": 33,
+      "cv": 0.8100008347434081
+    },
+    {
+      "id": "P16_234_5",
+      "groups": 3,
+      "shortage": 12,
+      "resources": 39,
+      "cv": 0.8411219651352898
+    },
+    {
+      "id": "P16_235_4",
+      "groups": 3,
+      "shortage": 9,
+      "resources": 36,
+      "cv": 1.1133504418522688
+    },
+    {
+      "id": "P16_23_45",
+      "groups": 3,
+      "shortage": 15,
+      "resources": 42,
+      "cv": 0.751317288573993
+    },
+    {
+      "id": "P16_245_3",
+      "groups": 3,
+      "shortage": 11,
+      "resources": 38,
+      "cv": 0.5422865020784853
+    },
+    {
+      "id": "P16_24_35",
+      "groups": 3,
+      "shortage": 12,
+      "resources": 39,
+      "cv": 0.5596823250508408
+    },
+    {
+      "id": "P16_25_34",
+      "groups": 3,
+      "shortage": 9,
+      "resources": 36,
+      "cv": 0.5118188177291966
+    },
+    {
+      "id": "P16_2_345",
+      "groups": 3,
+      "shortage": 10,
+      "resources": 37,
+      "cv": 0.618645687572069
+    },
+    {
+      "id": "P1_23456",
+      "groups": 2,
+      "shortage": 4,
+      "resources": 31,
+      "cv": 0.8511496921859018
+    },
+    {
+      "id": "P1_2345_6",
+      "groups": 3,
+      "shortage": 6,
+      "resources": 33,
+      "cv": 1.2144811642354756
+    },
+    {
+      "id": "P1_2346_5",
+      "groups": 3,
+      "shortage": 11,
+      "resources": 38,
+      "cv": 0.8877137718486647
+    },
+    {
+      "id": "P1_234_56",
+      "groups": 3,
+      "shortage": 10,
+      "resources": 37,
+      "cv": 0.8486935365173083
+    },
+    {
+      "id": "P1_2356_4",
+      "groups": 3,
+      "shortage": 7,
+      "resources": 34,
+      "cv": 1.1559462344560005
+    },
+    {
+      "id": "P1_235_46",
+      "groups": 3,
+      "shortage": 9,
+      "resources": 36,
+      "cv": 1.1118591884686717
+    },
+    {
+      "id": "P1_236_45",
+      "groups": 3,
+      "shortage": 14,
+      "resources": 41,
+      "cv": 0.7994736204857336
+    },
+    {
+      "id": "P1_23_456",
+      "groups": 3,
+      "shortage": 13,
+      "resources": 40,
+      "cv": 0.7636369592664578
+    },
+    {
+      "id": "P1_2456_3",
+      "groups": 3,
+      "shortage": 9,
+      "resources": 36,
+      "cv": 0.5921404557871713
+    },
+    {
+      "id": "P1_245_36",
+      "groups": 3,
+      "shortage": 10,
+      "resources": 37,
+      "cv": 0.575207024021034
+    },
+    {
+      "id": "P1_246_35",
+      "groups": 3,
+      "shortage": 12,
+      "resources": 39,
+      "cv": 0.5897608711839578
+    },
+    {
+      "id": "P1_24_356",
+      "groups": 3,
+      "shortage": 10,
+      "resources": 37,
+      "cv": 0.6099302123676976
+    },
+    {
+      "id": "P1_256_34",
+      "groups": 3,
+      "shortage": 7,
+      "resources": 34,
+      "cv": 0.5591466645440097
+    },
+    {
+      "id": "P1_25_346",
+      "groups": 3,
+      "shortage": 8,
+      "resources": 35,
+      "cv": 0.5519204209690642
+    },
+    {
+      "id": "P1_26_345",
+      "groups": 3,
+      "shortage": 10,
+      "resources": 37,
+      "cv": 0.6414256684936475
+    },
+    {
+      "id": "P1_2_3456",
+      "groups": 3,
+      "shortage": 8,
+      "resources": 35,
+      "cv": 0.6688514218348113
+    }
+  ]
+}

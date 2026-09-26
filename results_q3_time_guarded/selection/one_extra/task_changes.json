@@ -1,0 +1,696 @@
+[
+  {
+    "task": "T001",
+    "before_model": "C",
+    "after_model": "C",
+    "before_start": 0.0,
+    "after_start": 0.0,
+    "before_visits": [
+      [
+        "S001",
+        [
+          "S001-FOD-01",
+          "S001-FOD-02",
+          "S001-FOD-03",
+          "S001-HYG-01",
+          "S001-WAT-06",
+          "S001-WAT-07",
+          "S001-WAT-08"
+        ]
+      ]
+    ],
+    "after_visits": [
+      [
+        "S001",
+        [
+          "S001-FOD-01",
+          "S001-FOD-02",
+          "S001-FOD-03",
+          "S001-HYG-01",
+          "S001-WAT-06",
+          "S001-WAT-07",
+          "S001-WAT-08"
+        ]
+      ]
+    ]
+  },
+  {
+    "task": "T007_HARD",
+    "before_model": "A",
+    "after_model": "A",
+    "before_start": 0.0,
+    "after_start": 0.0,
+    "before_visits": [
+      [
+        "S007",
+        [
+          "S007-MED-01",
+          "S007-WAT-01"
+        ]
+      ]
+    ],
+    "after_visits": [
+      [
+        "S007",
+        [
+          "S007-MED-01",
+          "S007-WAT-01"
+        ]
+      ]
+    ]
+  },
+  {
+    "task": "T007_SOFT",
+    "before_model": "A",
+    "after_model": "A",
+    "before_start": 0.0,
+    "after_start": 0.0,
+    "before_visits": [
+      [
+        "S007",
+        [
+          "S007-FOD-01",
+          "S007-WAT-02"
+        ]
+      ]
+    ],
+    "after_visits": [
+      [
+        "S007",
+        [
+          "S007-FOD-01",
+          "S007-WAT-02"
+        ]
+      ]
+    ]
+  },
+  {
+    "task": "T002_2",
+    "before_model": "B",
+    "after_model": "B",
+    "before_start": 0.0,
+    "after_start": 0.0,
+    "before_visits": [
+      [
+        "S013",
+        [
+          "S013-MED-01",
+          "S013-WAT-01",
+          "S013-FOD-01"
+        ]
+      ]
+    ],
+    "after_visits": [
+      [
+        "S013",
+        [
+          "S013-MED-01",
+          "S013-WAT-01",
+          "S013-FOD-01"
+        ]
+      ]
+    ]
+  },
+  {
+    "task": "T003",
+    "before_model": "C",
+    "after_model": "C",
+    "before_start": 1438.035182877992,
+    "after_start": 0.0,
+    "before_visits": [
+      [
+        "S001",
+        [
+          "S001-HYG-02",
+          "S001-WAT-02",
+          "S001-WAT-03",
+          "S001-WAT-04",
+          "S001-WAT-05"
+        ]
+      ]
+    ],
+    "after_visits": [
+      [
+        "S001",
+        [
+          "S001-HYG-02",
+          "S001-WAT-02",
+          "S001-WAT-03",
+          "S001-WAT-04",
+          "S001-WAT-05"
+        ]
+      ]
+    ]
+  },
+  {
+    "task": "T004",
+    "before_model": "A",
+    "after_model": "A",
+    "before_start": 2004.1116402878897,
+    "after_start": 2004.1116402352563,
+    "before_visits": [
+      [
+        "S009",
+        [
+          "S009-MED-01"
+        ]
+      ],
+      [
+        "S002",
+        [
+          "S002-MED-01",
+          "S002-WAT-01"
+        ]
+      ]
+    ],
+    "after_visits": [
+      [
+        "S009",
+        [
+          "S009-MED-01"
+        ]
+      ],
+      [
+        "S002",
+        [
+          "S002-MED-01",
+          "S002-WAT-01"
+        ]
+      ]
+    ]
+  },
+  {
+    "task": "T005",
+    "before_model": "A",
+    "after_model": "A",
+    "before_start": 0.0,
+    "after_start": 0.0,
+    "before_visits": [
+      [
+        "S001",
+        [
+          "S001-MED-01",
+          "S001-MED-02",
+          "S001-WAT-01"
+        ]
+      ]
+    ],
+    "after_visits": [
+      [
+        "S001",
+        [
+          "S001-MED-01",
+          "S001-MED-02",
+          "S001-WAT-01"
+        ]
+      ]
+    ]
+  },
+  {
+    "task": "T009",
+    "before_model": "A",
+    "after_model": "A",
+    "before_start": 0.0,
+    "after_start": 0.0,
+    "before_visits": [
+      [
+        "S006",
+        [
+          "S006-FOD-01",
+          "S006-WAT-01"
+        ]
+      ]
+    ],
+    "after_visits": [
+      [
+        "S006",
+        [
+          "S006-FOD-01",
+          "S006-WAT-01"
+        ]
+      ]
+    ]
+  },
+  {
+    "task": "T011",
+    "before_model": "B",
+    "after_model": "B",
+    "before_start": 1559.571459127682,
+    "after_start": 0.0,
+    "before_visits": [
+      [
+        "S012",
+        [
+          "S012-MED-01",
+          "S012-WAT-01",
+          "S012-FOD-01"
+        ]
+      ]
+    ],
+    "after_visits": [
+      [
+        "S012",
+        [
+          "S012-MED-01",
+          "S012-WAT-01",
+          "S012-FOD-01"
+        ]
+      ]
+    ]
+  },
+  {
+    "task": "T015",
+    "before_model": "B",
+    "after_model": "B",
+    "before_start": 0.0,
+    "after_start": 1505.9694925601793,
+    "before_visits": [
+      [
+        "S010",
+        [
+          "S010-FOD-01",
+          "S010-MED-01",
+          "S010-WAT-01"
+        ]
+      ]
+    ],
+    "after_visits": [
+      [
+        "S010",
+        [
+          "S010-FOD-01",
+          "S010-MED-01",
+          "S010-WAT-01"
+        ]
+      ]
+    ]
+  },
+  {
+    "task": "T006",
+    "before_model": "B",
+    "after_model": "B",
+    "before_start": 3508.596003149672,
+    "after_start": 3813.131421767112,
+    "before_visits": [
+      [
+        "S011",
+        [
+          "S011-FOD-01",
+          "S011-MED-01",
+          "S011-WAT-01"
+        ]
+      ]
+    ],
+    "after_visits": [
+      [
+        "S011",
+        [
+          "S011-FOD-01",
+          "S011-MED-01",
+          "S011-WAT-01"
+        ]
+      ]
+    ]
+  },
+  {
+    "task": "T007",
+    "before_model": "A",
+    "after_model": "A",
+    "before_start": 3667.074199969267,
+    "after_start": 3902.1292515473606,
+    "before_visits": [
+      [
+        "S003",
+        [
+          "S003-MED-01",
+          "S003-WAT-01"
+        ]
+      ],
+      [
+        "S015",
+        [
+          "S015-MED-01"
+        ]
+      ]
+    ],
+    "after_visits": [
+      [
+        "S003",
+        [
+          "S003-MED-01",
+          "S003-WAT-01"
+        ]
+      ],
+      [
+        "S015",
+        [
+          "S015-MED-01"
+        ]
+      ]
+    ]
+  },
+  {
+    "task": "T010_2",
+    "before_model": "C",
+    "after_model": "C",
+    "before_start": 0.0,
+    "after_start": 1434.4262775174655,
+    "before_visits": [
+      [
+        "S006",
+        [
+          "S006-HYG-01",
+          "S006-WAT-02",
+          "S006-WAT-03",
+          "S006-MED-01"
+        ]
+      ]
+    ],
+    "after_visits": [
+      [
+        "S006",
+        [
+          "S006-HYG-01",
+          "S006-WAT-02",
+          "S006-WAT-03",
+          "S006-MED-01"
+        ]
+      ]
+    ]
+  },
+  {
+    "task": "T008",
+    "before_model": "B",
+    "after_model": "B",
+    "before_start": 1505.9694925601796,
+    "after_start": 1949.0245440219892,
+    "before_visits": [
+      [
+        "S014",
+        [
+          "S014-FOD-01",
+          "S014-MED-01",
+          "S014-WAT-01"
+        ]
+      ]
+    ],
+    "after_visits": [
+      [
+        "S014",
+        [
+          "S014-FOD-01",
+          "S014-MED-01",
+          "S014-WAT-01"
+        ]
+      ]
+    ]
+  },
+  {
+    "task": "T012",
+    "before_model": "C",
+    "after_model": "C",
+    "before_start": 1954.1116402878895,
+    "after_start": 1954.111640235256,
+    "before_visits": [
+      [
+        "S002",
+        [
+          "S002-FOD-01",
+          "S002-FOD-02",
+          "S002-HYG-01",
+          "S002-WAT-02",
+          "S002-WAT-03",
+          "S002-WAT-04"
+        ]
+      ]
+    ],
+    "after_visits": [
+      [
+        "S002",
+        [
+          "S002-FOD-01",
+          "S002-FOD-02",
+          "S002-HYG-01",
+          "S002-WAT-02",
+          "S002-WAT-03",
+          "S002-WAT-04"
+        ]
+      ]
+    ]
+  },
+  {
+    "task": "T014_1",
+    "before_model": "A",
+    "after_model": "A",
+    "before_start": 3769.074199969265,
+    "after_start": 4004.1292515473606,
+    "before_visits": [
+      [
+        "S005",
+        [
+          "S005-MED-01",
+          "S005-WAT-01"
+        ]
+      ]
+    ],
+    "after_visits": [
+      [
+        "S005",
+        [
+          "S005-MED-01",
+          "S005-WAT-01"
+        ]
+      ]
+    ]
+  },
+  {
+    "task": "T014_2",
+    "before_model": "C",
+    "after_model": "C",
+    "before_start": 3155.0929537629518,
+    "after_start": 2952.606730665684,
+    "before_visits": [
+      [
+        "S004",
+        [
+          "S004-MED-01",
+          "S004-FOD-01",
+          "S004-HYG-01",
+          "S004-WAT-01",
+          "S004-WAT-02",
+          "S004-WAT-03"
+        ]
+      ]
+    ],
+    "after_visits": [
+      [
+        "S004",
+        [
+          "S004-MED-01",
+          "S004-FOD-01",
+          "S004-HYG-01",
+          "S004-WAT-01",
+          "S004-WAT-02",
+          "S004-WAT-03"
+        ]
+      ]
+    ]
+  },
+  {
+    "task": "T016",
+    "before_model": "A",
+    "after_model": "A",
+    "before_start": 5469.832404637729,
+    "after_start": 4290.571699071648,
+    "before_visits": [
+      [
+        "S005",
+        [
+          "S005-FOD-01",
+          "S005-WAT-02"
+        ]
+      ]
+    ],
+    "after_visits": [
+      [
+        "S005",
+        [
+          "S005-FOD-01",
+          "S005-WAT-02"
+        ]
+      ]
+    ]
+  },
+  {
+    "task": "T013",
+    "before_model": "B",
+    "after_model": "B",
+    "before_start": 3355.5084827157466,
+    "after_start": 3065.540951687861,
+    "before_visits": [
+      [
+        "S008",
+        [
+          "S008-FOD-01",
+          "S008-MED-01",
+          "S008-WAT-01"
+        ]
+      ]
+    ],
+    "after_visits": [
+      [
+        "S008",
+        [
+          "S008-FOD-01",
+          "S008-MED-01",
+          "S008-WAT-01"
+        ]
+      ]
+    ]
+  },
+  {
+    "task": "T021",
+    "before_model": "B",
+    "after_model": "B",
+    "before_start": 5313.549854202742,
+    "after_start": 5028.582323174855,
+    "before_visits": [
+      [
+        "S008",
+        [
+          "S008-HYG-01",
+          "S008-WAT-02"
+        ]
+      ]
+    ],
+    "after_visits": [
+      [
+        "S008",
+        [
+          "S008-HYG-01",
+          "S008-WAT-02"
+        ]
+      ]
+    ]
+  },
+  {
+    "task": "T018",
+    "before_model": "C",
+    "after_model": "C",
+    "before_start": 4074.1933815663424,
+    "after_start": 4320.234653593916,
+    "before_visits": [
+      [
+        "S007",
+        [
+          "S007-HYG-01"
+        ]
+      ],
+      [
+        "S003",
+        [
+          "S003-FOD-01",
+          "S003-FOD-02",
+          "S003-HYG-01",
+          "S003-WAT-02",
+          "S003-WAT-03",
+          "S003-WAT-04"
+        ]
+      ]
+    ],
+    "after_visits": [
+      [
+        "S007",
+        [
+          "S007-HYG-01"
+        ]
+      ],
+      [
+        "S003",
+        [
+          "S003-FOD-01",
+          "S003-FOD-02",
+          "S003-HYG-01",
+          "S003-WAT-02",
+          "S003-WAT-03",
+          "S003-WAT-04"
+        ]
+      ]
+    ]
+  },
+  {
+    "task": "T019_1",
+    "before_model": "B",
+    "after_model": "B",
+    "before_start": 5372.702880894794,
+    "after_start": 5387.225497256939,
+    "before_visits": [
+      [
+        "S005",
+        [
+          "S005-HYG-01",
+          "S005-WAT-03"
+        ]
+      ]
+    ],
+    "after_visits": [
+      [
+        "S005",
+        [
+          "S005-HYG-01",
+          "S005-WAT-03"
+        ]
+      ]
+    ]
+  },
+  {
+    "task": "T022",
+    "before_model": "A",
+    "after_model": "C",
+    "before_start": 4290.571699124282,
+    "after_start": 5262.790895633525,
+    "before_visits": [
+      [
+        "S009",
+        [
+          "S009-FOD-01",
+          "S009-WAT-01"
+        ]
+      ]
+    ],
+    "after_visits": [
+      [
+        "S009",
+        [
+          "S009-FOD-01",
+          "S009-WAT-01"
+        ]
+      ]
+    ]
+  },
+  {
+    "task": "T020",
+    "before_model": "A",
+    "after_model": "A",
+    "before_start": 3687.0741999692646,
+    "after_start": 3922.1292515473606,
+    "before_visits": [
+      [
+        "S015",
+        [
+          "S015-FOD-01",
+          "S015-WAT-01"
+        ]
+      ]
+    ],
+    "after_visits": [
+      [
+        "S015",
+        [
+          "S015-FOD-01",
+          "S015-WAT-01"
+        ]
+      ]
+    ]
+  }
+]

@@ -1,0 +1,38 @@
+{
+  "input": "results_q34_compromise\\seeds\\compact23.json",
+  "name": "compact23_two",
+  "groups": "two",
+  "shortage": 6,
+  "soft": 150000.0,
+  "makespan": 8000.0,
+  "energy": 79.0,
+  "seconds": 45.0,
+  "seed": 2066,
+  "interval": 12,
+  "fixed_models": false,
+  "policy": "timely",
+  "slots": 2,
+  "data_dir": "C:\\Users\\user\\Desktop\\建模\\第二十三届中国研究生数学建模竞赛 - 中文题目\\中文题目\\D题\\数据",
+  "source_sha256": "6f4c53debcfd9e1fd5cbb4251248153e46fa05af692162c69b0694f81c9dd4c6",
+  "q4_groups": [
+    [
+      "S001",
+      "S002",
+      "S004",
+      "S006",
+      "S008",
+      "S009",
+      "S011"
+    ],
+    [
+      "S003",
+      "S005",
+      "S007",
+      "S010",
+      "S012",
+      "S013",
+      "S014",
+      "S015"
+    ]
+  ]
+}

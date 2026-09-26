@@ -15,8 +15,10 @@ PRIMARY = ROOT / 'results_q3_q4_resilience/selection/primary/q3_plan.json'
 class Q3TimingTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
+        from q3_certificate import accept
         cls.scenario = Scenario()
-        cls.primary = json.loads(PRIMARY.read_text(encoding='utf8'))
+        # Historical margins must be recomputed after the collinearity fix.
+        cls.primary = accept(cls.scenario,json.loads(PRIMARY.read_text(encoding='utf8')))
 
     def test_buffer_five_replays_q3_and_q4(self):
         plan, q4, report = optimize(self.scenario, self.primary, 5.)
@@ -35,6 +37,24 @@ class Q3TimingTests(unittest.TestCase):
     def test_invalid_cap_is_rejected(self):
         with self.assertRaisesRegex(ValueError,'caps'):
             optimize(self.scenario,self.primary,5.,delivery_cap=float('nan'))
+
+    def test_makespan_policy_is_certified_and_optimizes_completion_first(self):
+        plan, _, report = optimize(self.scenario,self.primary,5.,policy='makespan')
+        self.assertEqual(report['lp_stages'][0]['objective'],'makespan')
+        self.assertEqual(report['q3_independent_validation'],'PASS')
+        self.assertEqual(report['q4_independent_validation'],'PASS')
+        self.assertEqual(plan['objective']['weighted_soft_delay'],0)
+        self.assertAlmostEqual(report['lp_stages'][0]['value'],plan['objective']['makespan'],places=3)
+
+    def test_protected_partition_does_not_increase_any_resource_type(self):
+        from q4_exact import solve
+        before=solve(self.scenario,self.primary,json.dumps(self.primary).encode('utf8'))
+        old=next(p for p in before['partitions'] if p['id']=='P3')
+        _,after,report=optimize(self.scenario,self.primary,5.,preserve_partition='P3')
+        new=next(p for p in after['partitions'] if p['id']=='P3')
+        self.assertEqual(report['preserved_partition'],'P3')
+        for key,value in old['resource_need'].items():
+            self.assertLessEqual(new['resource_need'][key],value)
 
 
 if __name__ == '__main__':

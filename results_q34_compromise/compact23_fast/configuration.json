@@ -1,0 +1,41 @@
+{
+  "input": "results_q34_compromise\\compact23_deep\\q3_plan.json",
+  "name": "compact23_fast",
+  "groups": "three",
+  "shortage": 8,
+  "soft": 20000.0,
+  "makespan": 7800.0,
+  "energy": 73.0,
+  "seconds": 35.0,
+  "seed": 2070,
+  "interval": 12,
+  "fixed_models": false,
+  "policy": "makespan",
+  "slots": 2,
+  "data_dir": "C:\\Users\\user\\Desktop\\建模\\第二十三届中国研究生数学建模竞赛 - 中文题目\\中文题目\\D题\\数据",
+  "groups_file": null,
+  "source_sha256": "9a8fdc2863431dd0e05d8d0f55c4336486f2a40c348f2b8a9c1e7bf744c0483d",
+  "q4_groups": [
+    [
+      "S001",
+      "S006",
+      "S010",
+      "S011",
+      "S012",
+      "S013",
+      "S014"
+    ],
+    [
+      "S002",
+      "S004",
+      "S008",
+      "S009"
+    ],
+    [
+      "S003",
+      "S005",
+      "S007",
+      "S015"
+    ]
+  ]
+}

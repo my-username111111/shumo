@@ -1,0 +1,39 @@
+{
+  "plans": [
+    {
+      "case": "baseline_2",
+      "sha256": "85b7b066856e5859b216eb5750549b63daecfa08f7a63d90ee04c436910596d8"
+    },
+    {
+      "case": "baseline_3",
+      "sha256": "85b7b066856e5859b216eb5750549b63daecfa08f7a63d90ee04c436910596d8"
+    },
+    {
+      "case": "two_zero_shortage",
+      "sha256": "010d0c51718022d6945f06d11f531b29a24d1f77280aaa6af4dd71b19316506f"
+    },
+    {
+      "case": "same_q3_three_groups",
+      "sha256": "010d0c51718022d6945f06d11f531b29a24d1f77280aaa6af4dd71b19316506f"
+    },
+    {
+      "case": "three_balanced",
+      "sha256": "243595d205b634b1b4768aa1326dab8166d529bc87ee308c945f7f538892bad1"
+    },
+    {
+      "case": "two_one_shortage",
+      "sha256": "558630b4d8c3684c8829144877c5afdf47e0ee2d1cf71bda4a792905aa9e32fe"
+    }
+  ],
+  "code": {
+    "q3_joint.py": "b331fb2085156f4fde51d4ee41cf8a3eda2337ded2515cefc5e9c50240ca6204",
+    "q3_certificate.py": "e202b30894c4907e8db6cef112ee76c336f5cf16a9afb2dce6c9734bbba5a2a8",
+    "q3_upgrade.py": "f627221548c3889cbb12ca7687d2275d67bb71a63b5d565ac39385b14d3a1e02",
+    "optimize_q3_timing.py": "85f5461eb7c698ffcc888e2042aeda6e888b8b7a53da6dd8060e6b4b5ce7c74b",
+    "optimize_q3_q4_balance.py": "774f968fed08ae941a0c2643f594ec786320b563fa95aa4734afff2cf6def321",
+    "deliver_q3_q4_balance.py": "7cfd5a6202bc627915b2e9900ad4ac746e8f01e6d1668b0690b3078d5645fade",
+    "build_q3_q4_balance_report.py": "d6cd0a0c1ece29a80b32fc825c4cf70bbcff40134b75e45822dfab47d3d76a87",
+    "q4_delivery.py": "edd1111bab80047bafe7c8a29281862f097c762f94dbe8114b8ed1047bbf658e"
+  },
+  "note": "Final validation supersedes historical search certificates."
+}

@@ -14,6 +14,8 @@ ROOT=Path(__file__).resolve().parent
 
 
 def default_plan_path():
+    balanced=ROOT/'results_q3_q4_balance/selection/two_zero_shortage/q3_plan.json'
+    if balanced.is_file():return balanced
     robust=ROOT/'results_q3_q4_resilience/selection/primary/q3_plan.json'
     if robust.is_file():return robust
     latest=ROOT/'results_q3_q4_frontier/selection/primary/q3_plan.json'

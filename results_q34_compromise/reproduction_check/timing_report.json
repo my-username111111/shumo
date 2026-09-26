@@ -1,0 +1,978 @@
+{
+  "status": "PASS",
+  "scope": "fixed routes, resource order, relay sites and original relay coverage obligations, plus selected Q4 group resource chains, plus complete selected Q4 partition resource chains",
+  "buffer_seconds": 5.0,
+  "policy": "timely",
+  "allow_soft_delay": false,
+  "preserved_partition": "P12_34_56",
+  "delivery_cap": 3000000.0,
+  "makespan_cap": 7451.0,
+  "fixed_relay_intervals": 113,
+  "input_sha256": "5b4bdd937b8051a2023bc3e995b7aa2609cc45d1648d62cb5328807ab963cc44",
+  "lp_stages": [
+    {
+      "objective": "weighted_start",
+      "value": 1728066.747639333,
+      "status": "OPTIMAL"
+    },
+    {
+      "objective": "makespan",
+      "value": 7444.455885352581,
+      "status": "OPTIMAL"
+    },
+    {
+      "objective": "relay_service_seconds",
+      "value": 9417.166711143494,
+      "status": "OPTIMAL"
+    }
+  ],
+  "old_objective": {
+    "weighted_soft_delay": 0,
+    "weighted_delivery_seconds": 2939486.5367284114,
+    "makespan": 7450.905931149839,
+    "energy_kwh": 69.33255731506122,
+    "transport_energy_kwh": 65.50481867026501,
+    "relay_energy_kwh": 3.8277386447962147,
+    "transport_sorties": 24,
+    "relay_sorties": 4,
+    "total_sorties": 28
+  },
+  "new_objective": {
+    "weighted_soft_delay": 0,
+    "weighted_delivery_seconds": 2938847.2843777444,
+    "makespan": 7444.455885352581,
+    "energy_kwh": 69.33077492124396,
+    "transport_energy_kwh": 65.50481867026501,
+    "relay_energy_kwh": 3.8259562509789493,
+    "transport_sorties": 24,
+    "relay_sorties": 4,
+    "total_sorties": 28
+  },
+  "recertified_relation_changed_seconds": 0.0,
+  "recertified_relation_changed_intervals": 0,
+  "q3_independent_validation": "PASS",
+  "q4_independent_validation": "PASS",
+  "q4": [
+    {
+      "id": "P12345_6",
+      "groups": 2,
+      "shortage": 2,
+      "resources": 29,
+      "cv": 0.9580384880926992
+    },
+    {
+      "id": "P12346_5",
+      "groups": 2,
+      "shortage": 7,
+      "resources": 34,
+      "cv": 0.6349225131752062
+    },
+    {
+      "id": "P1234_56",
+      "groups": 2,
+      "shortage": 6,
+      "resources": 33,
+      "cv": 0.5929610012679055
+    },
+    {
+      "id": "P1234_5_6",
+      "groups": 3,
+      "shortage": 8,
+      "resources": 35,
+      "cv": 1.002210216756558
+    },
+    {
+      "id": "P12356_4",
+      "groups": 2,
+      "shortage": 4,
+      "resources": 31,
+      "cv": 0.9030335170470296
+    },
+    {
+      "id": "P1235_46",
+      "groups": 2,
+      "shortage": 6,
+      "resources": 33,
+      "cv": 0.8610720051397288
+    },
+    {
+      "id": "P1235_4_6",
+      "groups": 3,
+      "shortage": 6,
+      "resources": 33,
+      "cv": 1.2673058852185093
+    },
+    {
+      "id": "P1236_45",
+      "groups": 2,
+      "shortage": 11,
+      "resources": 38,
+      "cv": 0.5379560302222358
+    },
+    {
+      "id": "P1236_4_5",
+      "groups": 3,
+      "shortage": 11,
+      "resources": 38,
+      "cv": 0.9386131342702573
+    },
+    {
+      "id": "P123_456",
+      "groups": 2,
+      "shortage": 10,
+      "resources": 37,
+      "cv": 0.495994518314935
+    },
+    {
+      "id": "P123_45_6",
+      "groups": 3,
+      "shortage": 12,
+      "resources": 39,
+      "cv": 0.9164789948429846
+    },
+    {
+      "id": "P123_46_5",
+      "groups": 3,
+      "shortage": 12,
+      "resources": 39,
+      "cv": 0.8904698863397367
+    },
+    {
+      "id": "P123_4_56",
+      "groups": 3,
+      "shortage": 10,
+      "resources": 37,
+      "cv": 0.8998956234475595
+    },
+    {
+      "id": "P12456_3",
+      "groups": 2,
+      "shortage": 7,
+      "resources": 34,
+      "cv": 0.27975250181637557
+    },
+    {
+      "id": "P1245_36",
+      "groups": 2,
+      "shortage": 8,
+      "resources": 35,
+      "cv": 0.23779098990907488
+    },
+    {
+      "id": "P1245_3_6",
+      "groups": 3,
+      "shortage": 9,
+      "resources": 36,
+      "cv": 0.7344949430500207
+    },
+    {
+      "id": "P1246_35",
+      "groups": 2,
+      "shortage": 10,
+      "resources": 37,
+      "cv": 0.08532498500841827
+    },
+    {
+      "id": "P1246_3_5",
+      "groups": 3,
+      "shortage": 12,
+      "resources": 39,
+      "cv": 0.34132288204418104
+    },
+    {
+      "id": "P124_356",
+      "groups": 2,
+      "shortage": 8,
+      "resources": 35,
+      "cv": 0.12728649691571878
+    },
+    {
+      "id": "P124_35_6",
+      "groups": 3,
+      "shortage": 10,
+      "resources": 37,
+      "cv": 0.6752702884941929
+    },
+    {
+      "id": "P124_36_5",
+      "groups": 3,
+      "shortage": 11,
+      "resources": 38,
+      "cv": 0.32696292402472754
+    },
+    {
+      "id": "P124_3_56",
+      "groups": 3,
+      "shortage": 10,
+      "resources": 37,
+      "cv": 0.2907740492129159
+    },
+    {
+      "id": "P1256_34",
+      "groups": 2,
+      "shortage": 4,
+      "resources": 31,
+      "cv": 0.18278601886340515
+    },
+    {
+      "id": "P1256_3_4",
+      "groups": 3,
+      "shortage": 8,
+      "resources": 35,
+      "cv": 0.6673502025968724
+    },
+    {
+      "id": "P125_346",
+      "groups": 2,
+      "shortage": 5,
+      "resources": 32,
+      "cv": 0.14082450695610438
+    },
+    {
+      "id": "P125_34_6",
+      "groups": 3,
+      "shortage": 6,
+      "resources": 33,
+      "cv": 0.6915996033390499
+    },
+    {
+      "id": "P125_36_4",
+      "groups": 3,
+      "shortage": 9,
+      "resources": 36,
+      "cv": 0.6472126560596383
+    },
+    {
+      "id": "P125_3_46",
+      "groups": 3,
+      "shortage": 10,
+      "resources": 37,
+      "cv": 0.61616028884575
+    },
+    {
+      "id": "P126_345",
+      "groups": 2,
+      "shortage": 7,
+      "resources": 34,
+      "cv": 0.1822914679613887
+    },
+    {
+      "id": "P126_34_5",
+      "groups": 3,
+      "shortage": 9,
+      "resources": 36,
+      "cv": 0.3198837746590599
+    },
+    {
+      "id": "P126_35_4",
+      "groups": 3,
+      "shortage": 11,
+      "resources": 38,
+      "cv": 0.626087093742875
+    },
+    {
+      "id": "P126_3_45",
+      "groups": 3,
+      "shortage": 13,
+      "resources": 40,
+      "cv": 0.22509164580761248
+    },
+    {
+      "id": "P12_3456",
+      "groups": 2,
+      "shortage": 5,
+      "resources": 32,
+      "cv": 0.2242529798686892
+    },
+    {
+      "id": "P12_345_6",
+      "groups": 3,
+      "shortage": 7,
+      "resources": 34,
+      "cv": 0.7078262443593324
+    },
+    {
+      "id": "P12_346_5",
+      "groups": 3,
+      "shortage": 8,
+      "resources": 35,
+      "cv": 0.3239377314502009
+    },
+    {
+      "id": "P12_34_56",
+      "groups": 3,
+      "shortage": 7,
+      "resources": 34,
+      "cv": 0.2765450370598209
+    },
+    {
+      "id": "P12_356_4",
+      "groups": 3,
+      "shortage": 9,
+      "resources": 36,
+      "cv": 0.6414597322829723
+    },
+    {
+      "id": "P12_35_46",
+      "groups": 3,
+      "shortage": 11,
+      "resources": 38,
+      "cv": 0.5909831322140422
+    },
+    {
+      "id": "P12_36_45",
+      "groups": 3,
+      "shortage": 12,
+      "resources": 39,
+      "cv": 0.2171934235555803
+    },
+    {
+      "id": "P12_3_456",
+      "groups": 3,
+      "shortage": 11,
+      "resources": 38,
+      "cv": 0.17584387276282726
+    },
+    {
+      "id": "P13456_2",
+      "groups": 2,
+      "shortage": 8,
+      "resources": 35,
+      "cv": 0.3760429529554403
+    },
+    {
+      "id": "P1345_26",
+      "groups": 2,
+      "shortage": 10,
+      "resources": 37,
+      "cv": 0.33408144104813964
+    },
+    {
+      "id": "P1345_2_6",
+      "groups": 3,
+      "shortage": 10,
+      "resources": 37,
+      "cv": 0.792554315041181
+    },
+    {
+      "id": "P1346_25",
+      "groups": 2,
+      "shortage": 8,
+      "resources": 35,
+      "cv": 0.010965466130646473
+    },
+    {
+      "id": "P1346_2_5",
+      "groups": 3,
+      "shortage": 11,
+      "resources": 38,
+      "cv": 0.39810972889232726
+    },
+    {
+      "id": "P134_256",
+      "groups": 2,
+      "shortage": 7,
+      "resources": 34,
+      "cv": 0.03099604577665404
+    },
+    {
+      "id": "P134_25_6",
+      "groups": 3,
+      "shortage": 9,
+      "resources": 36,
+      "cv": 0.6627134039131447
+    },
+    {
+      "id": "P134_26_5",
+      "groups": 3,
+      "shortage": 12,
+      "resources": 39,
+      "cv": 0.36982877305921247
+    },
+    {
+      "id": "P134_2_56",
+      "groups": 3,
+      "shortage": 10,
+      "resources": 37,
+      "cv": 0.34710064067847063
+    },
+    {
+      "id": "P1356_24",
+      "groups": 2,
+      "shortage": 6,
+      "resources": 33,
+      "cv": 0.2790764700024699
+    },
+    {
+      "id": "P1356_2_4",
+      "groups": 3,
+      "shortage": 10,
+      "resources": 37,
+      "cv": 0.725307613096065
+    },
+    {
+      "id": "P135_246",
+      "groups": 2,
+      "shortage": 8,
+      "resources": 35,
+      "cv": 0.2371149580951691
+    },
+    {
+      "id": "P135_24_6",
+      "groups": 3,
+      "shortage": 8,
+      "resources": 35,
+      "cv": 0.7341380613320249
+    },
+    {
+      "id": "P135_26_4",
+      "groups": 3,
+      "shortage": 12,
+      "resources": 39,
+      "cv": 0.6981959496707943
+    },
+    {
+      "id": "P135_2_46",
+      "groups": 3,
+      "shortage": 12,
+      "resources": 39,
+      "cv": 0.6740234438737691
+    },
+    {
+      "id": "P136_245",
+      "groups": 2,
+      "shortage": 6,
+      "resources": 33,
+      "cv": 0.08600101682232396
+    },
+    {
+      "id": "P136_24_5",
+      "groups": 3,
+      "shortage": 9,
+      "resources": 36,
+      "cv": 0.3410349491696925
+    },
+    {
+      "id": "P136_25_4",
+      "groups": 3,
+      "shortage": 10,
+      "resources": 37,
+      "cv": 0.606002856378745
+    },
+    {
+      "id": "P136_2_45",
+      "groups": 3,
+      "shortage": 13,
+      "resources": 40,
+      "cv": 0.28044763479264917
+    },
+    {
+      "id": "P13_2456",
+      "groups": 2,
+      "shortage": 5,
+      "resources": 32,
+      "cv": 0.12796252872962458
+    },
+    {
+      "id": "P13_245_6",
+      "groups": 3,
+      "shortage": 7,
+      "resources": 34,
+      "cv": 0.6754304155427294
+    },
+    {
+      "id": "P13_246_5",
+      "groups": 3,
+      "shortage": 10,
+      "resources": 37,
+      "cv": 0.3267925678256091
+    },
+    {
+      "id": "P13_24_56",
+      "groups": 3,
+      "shortage": 8,
+      "resources": 35,
+      "cv": 0.2905092518654396
+    },
+    {
+      "id": "P13_256_4",
+      "groups": 3,
+      "shortage": 9,
+      "resources": 36,
+      "cv": 0.6120486274735425
+    },
+    {
+      "id": "P13_25_46",
+      "groups": 3,
+      "shortage": 11,
+      "resources": 38,
+      "cv": 0.5643179389149983
+    },
+    {
+      "id": "P13_26_45",
+      "groups": 3,
+      "shortage": 14,
+      "resources": 41,
+      "cv": 0.2510699730117313
+    },
+    {
+      "id": "P13_2_456",
+      "groups": 3,
+      "shortage": 12,
+      "resources": 39,
+      "cv": 0.22988030596071957
+    },
+    {
+      "id": "P1456_23",
+      "groups": 2,
+      "shortage": 14,
+      "resources": 41,
+      "cv": 0.3442045452281841
+    },
+    {
+      "id": "P1456_2_3",
+      "groups": 3,
+      "shortage": 15,
+      "resources": 42,
+      "cv": 0.060082445620849356
+    },
+    {
+      "id": "P145_236",
+      "groups": 2,
+      "shortage": 15,
+      "resources": 42,
+      "cv": 0.3861660571354847
+    },
+    {
+      "id": "P145_23_6",
+      "groups": 3,
+      "shortage": 16,
+      "resources": 43,
+      "cv": 0.7994242008969266
+    },
+    {
+      "id": "P145_26_3",
+      "groups": 3,
+      "shortage": 17,
+      "resources": 44,
+      "cv": 0.06516955889575278
+    },
+    {
+      "id": "P145_2_36",
+      "groups": 3,
+      "shortage": 16,
+      "resources": 43,
+      "cv": 0.10152738928345313
+    },
+    {
+      "id": "P146_235",
+      "groups": 2,
+      "shortage": 10,
+      "resources": 37,
+      "cv": 0.709282032052978
+    },
+    {
+      "id": "P146_23_5",
+      "groups": 3,
+      "shortage": 16,
+      "resources": 43,
+      "cv": 0.7200786594284315
+    },
+    {
+      "id": "P146_25_3",
+      "groups": 3,
+      "shortage": 14,
+      "resources": 41,
+      "cv": 0.4313896481545297
+    },
+    {
+      "id": "P146_2_35",
+      "groups": 3,
+      "shortage": 15,
+      "resources": 42,
+      "cv": 0.48869954204552096
+    },
+    {
+      "id": "P14_2356",
+      "groups": 2,
+      "shortage": 8,
+      "resources": 35,
+      "cv": 0.7512435439602785
+    },
+    {
+      "id": "P14_235_6",
+      "groups": 3,
+      "shortage": 10,
+      "resources": 37,
+      "cv": 1.1130876901671356
+    },
+    {
+      "id": "P14_236_5",
+      "groups": 3,
+      "shortage": 15,
+      "resources": 42,
+      "cv": 0.7664615207704258
+    },
+    {
+      "id": "P14_23_56",
+      "groups": 3,
+      "shortage": 14,
+      "resources": 41,
+      "cv": 0.7251446650440054
+    },
+    {
+      "id": "P14_256_3",
+      "groups": 3,
+      "shortage": 12,
+      "resources": 39,
+      "cv": 0.48238139433567645
+    },
+    {
+      "id": "P14_25_36",
+      "groups": 3,
+      "shortage": 13,
+      "resources": 40,
+      "cv": 0.4645145250727358
+    },
+    {
+      "id": "P14_26_35",
+      "groups": 3,
+      "shortage": 15,
+      "resources": 42,
+      "cv": 0.5122921222272654
+    },
+    {
+      "id": "P14_2_356",
+      "groups": 3,
+      "shortage": 13,
+      "resources": 40,
+      "cv": 0.53989143615165
+    },
+    {
+      "id": "P156_234",
+      "groups": 2,
+      "shortage": 11,
+      "resources": 38,
+      "cv": 0.44117102818115456
+    },
+    {
+      "id": "P156_23_4",
+      "groups": 3,
+      "shortage": 15,
+      "resources": 42,
+      "cv": 0.7722911584884061
+    },
+    {
+      "id": "P156_24_3",
+      "groups": 3,
+      "shortage": 12,
+      "resources": 39,
+      "cv": 0.1143798971235038
+    },
+    {
+      "id": "P156_2_34",
+      "groups": 3,
+      "shortage": 12,
+      "resources": 39,
+      "cv": 0.16458487308786382
+    },
+    {
+      "id": "P15_2346",
+      "groups": 2,
+      "shortage": 12,
+      "resources": 39,
+      "cv": 0.48313254008845524
+    },
+    {
+      "id": "P15_234_6",
+      "groups": 3,
+      "shortage": 13,
+      "resources": 40,
+      "cv": 0.8714442059301697
+    },
+    {
+      "id": "P15_236_4",
+      "groups": 3,
+      "shortage": 16,
+      "resources": 43,
+      "cv": 0.8053000098812012
+    },
+    {
+      "id": "P15_23_46",
+      "groups": 3,
+      "shortage": 17,
+      "resources": 44,
+      "cv": 0.7549861678948581
+    },
+    {
+      "id": "P15_246_3",
+      "groups": 3,
+      "shortage": 14,
+      "resources": 41,
+      "cv": 0.1610171192388822
+    },
+    {
+      "id": "P15_24_36",
+      "groups": 3,
+      "shortage": 13,
+      "resources": 40,
+      "cv": 0.16088493314314745
+    },
+    {
+      "id": "P15_26_34",
+      "groups": 3,
+      "shortage": 14,
+      "resources": 41,
+      "cv": 0.18392564238787673
+    },
+    {
+      "id": "P15_2_346",
+      "groups": 3,
+      "shortage": 13,
+      "resources": 40,
+      "cv": 0.21445902088604288
+    },
+    {
+      "id": "P16_2345",
+      "groups": 2,
+      "shortage": 7,
+      "resources": 34,
+      "cv": 0.8062485150059484
+    },
+    {
+      "id": "P16_234_5",
+      "groups": 3,
+      "shortage": 13,
+      "resources": 40,
+      "cv": 0.8281584125904449
+    },
+    {
+      "id": "P16_235_4",
+      "groups": 3,
+      "shortage": 11,
+      "resources": 38,
+      "cv": 1.107447696909258
+    },
+    {
+      "id": "P16_23_45",
+      "groups": 3,
+      "shortage": 17,
+      "resources": 44,
+      "cv": 0.7371788083756401
+    },
+    {
+      "id": "P16_245_3",
+      "groups": 3,
+      "shortage": 11,
+      "resources": 38,
+      "cv": 0.5493366261566935
+    },
+    {
+      "id": "P16_24_35",
+      "groups": 3,
+      "shortage": 12,
+      "resources": 39,
+      "cv": 0.5489995654313101
+    },
+    {
+      "id": "P16_25_34",
+      "groups": 3,
+      "shortage": 11,
+      "resources": 38,
+      "cv": 0.51251900312722
+    },
+    {
+      "id": "P16_2_345",
+      "groups": 3,
+      "shortage": 12,
+      "resources": 39,
+      "cv": 0.6070472488045695
+    },
+    {
+      "id": "P1_23456",
+      "groups": 2,
+      "shortage": 5,
+      "resources": 32,
+      "cv": 0.8482100269132489
+    },
+    {
+      "id": "P1_2345_6",
+      "groups": 3,
+      "shortage": 7,
+      "resources": 34,
+      "cv": 1.2105787858620822
+    },
+    {
+      "id": "P1_2346_5",
+      "groups": 3,
+      "shortage": 12,
+      "resources": 39,
+      "cv": 0.8757870312404228
+    },
+    {
+      "id": "P1_234_56",
+      "groups": 3,
+      "shortage": 11,
+      "resources": 38,
+      "cv": 0.8362243455947822
+    },
+    {
+      "id": "P1_2356_4",
+      "groups": 3,
+      "shortage": 9,
+      "resources": 36,
+      "cv": 1.1508572820972962
+    },
+    {
+      "id": "P1_235_46",
+      "groups": 3,
+      "shortage": 11,
+      "resources": 38,
+      "cv": 1.1058886411337026
+    },
+    {
+      "id": "P1_236_45",
+      "groups": 3,
+      "shortage": 16,
+      "resources": 43,
+      "cv": 0.7864387280132865
+    },
+    {
+      "id": "P1_23_456",
+      "groups": 3,
+      "shortage": 15,
+      "resources": 42,
+      "cv": 0.7503070609309133
+    },
+    {
+      "id": "P1_2456_3",
+      "groups": 3,
+      "shortage": 9,
+      "resources": 36,
+      "cv": 0.6004765529066742
+    },
+    {
+      "id": "P1_245_36",
+      "groups": 3,
+      "shortage": 10,
+      "resources": 37,
+      "cv": 0.580991165724092
+    },
+    {
+      "id": "P1_246_35",
+      "groups": 3,
+      "shortage": 12,
+      "resources": 39,
+      "cv": 0.5807091179166222
+    },
+    {
+      "id": "P1_24_356",
+      "groups": 3,
+      "shortage": 10,
+      "resources": 37,
+      "cv": 0.6001327633296795
+    },
+    {
+      "id": "P1_256_34",
+      "groups": 3,
+      "shortage": 9,
+      "resources": 36,
+      "cv": 0.5615815167688677
+    },
+    {
+      "id": "P1_25_346",
+      "groups": 3,
+      "shortage": 10,
+      "resources": 37,
+      "cv": 0.5518686661899732
+    },
+    {
+      "id": "P1_26_345",
+      "groups": 3,
+      "shortage": 12,
+      "resources": 39,
+      "cv": 0.6310512092733604
+    },
+    {
+      "id": "P1_2_3456",
+      "groups": 3,
+      "shortage": 10,
+      "resources": 37,
+      "cv": 0.6583072712667746
+    }
+  ],
+  "preserved_q4_resources": [
+    {
+      "partition": "P1256_34",
+      "group": "G1",
+      "resource": "A_aircraft",
+      "maximum": 1
+    },
+    {
+      "partition": "P1256_34",
+      "group": "G1",
+      "resource": "B_aircraft",
+      "maximum": 2
+    },
+    {
+      "partition": "P1256_34",
+      "group": "G1",
+      "resource": "C_aircraft",
+      "maximum": 2
+    },
+    {
+      "partition": "P1256_34",
+      "group": "G1",
+      "resource": "A_batteries",
+      "maximum": 2
+    },
+    {
+      "partition": "P1256_34",
+      "group": "G1",
+      "resource": "B_batteries",
+      "maximum": 4
+    },
+    {
+      "partition": "P1256_34",
+      "group": "G1",
+      "resource": "C_batteries",
+      "maximum": 3
+    },
+    {
+      "partition": "P1256_34",
+      "group": "G2",
+      "resource": "A_aircraft",
+      "maximum": 3
+    },
+    {
+      "partition": "P1256_34",
+      "group": "G2",
+      "resource": "B_aircraft",
+      "maximum": 1
+    },
+    {
+      "partition": "P1256_34",
+      "group": "G2",
+      "resource": "C_aircraft",
+      "maximum": 1
+    },
+    {
+      "partition": "P1256_34",
+      "group": "G2",
+      "resource": "A_batteries",
+      "maximum": 4
+    },
+    {
+      "partition": "P1256_34",
+      "group": "G2",
+      "resource": "B_batteries",
+      "maximum": 1
+    },
+    {
+      "partition": "P1256_34",
+      "group": "G2",
+      "resource": "C_batteries",
+      "maximum": 1
+    }
+  ]
+}
